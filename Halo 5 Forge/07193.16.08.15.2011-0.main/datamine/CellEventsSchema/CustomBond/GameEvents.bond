@@ -1,0 +1,139 @@
+namespace Microsoft.Halo.Telemetry.Corinth.Osiris
+
+[Description("A 3d float coordinate position in the game world.")]
+[FormatString("")]
+[Version("1")]
+struct WorldLocation
+{
+	0: float x;
+	1: float y;
+	2: float z;
+};
+
+[Description("Team state for the match.")]
+[FormatString("")]
+[Version("2")]
+struct TeamState
+{
+	0: uint16 TeamId;
+	1: uint32 Score;
+	2: uint16 Rank;
+
+	// 0 = Win, 1 = Tie, 2 = Loss
+	3: uint8 MatchOutcome;
+};
+
+[Description("Player state for the match.")]
+[FormatString("")]
+[Version("5")]
+struct PlayerState
+{
+	0: uint64 PlayerXuid;
+	1: uint16 Rank;
+	2: uint32 WarzoneTotalPie;
+	3: uint32 WarzoneLevel;
+	4: uint32 CampaignScore;				
+	5: uint32 CampaignBiggestKillScore;
+
+	// 0 = Win, 1 = Tie, 2 = Loss
+	6: uint8 MatchOutcome;
+
+	7: int32 PlayerScore;
+};
+
+[Description("Player stats for a PvE Round.")]
+[FormatString("")]
+[Version("1")]
+struct PvEPlayerRoundStats
+{
+	0: uint64 PlayerXuid;
+	1: uint32 PvERoundSpeedBonus;
+	2: uint32 PvERoundSurviveBonus;
+	3: uint32 PvERoundKillBonus;				
+	4: uint32 PvERoundAssistBonus;
+};
+
+[Description("Event statistics for a single histogram event")]
+[FormatString("")]
+[Version("1")]
+struct CellEventFrequency
+{
+	0: uint32 EventTypeId;
+	1: uint32 ReservationFailures;
+	2: uint32 Ignored;
+	3: uint32 SerializationFailures;
+	4: uint32 Serialized;
+};
+
+[Description("Histogram events range")]
+[FormatString("EventsRange {2}: [{0}, {1}]")]
+[Version("1")]
+struct EventsRange
+{
+	0: uint64 MinIndex;
+	1: uint64 MaxIndex;
+	2: uint32 RangeId;
+};
+
+[Description("Resource Identity")]
+[FormatString("")]
+[Version("1")]
+struct ResourceIdentity
+{
+	0: uint32 ResourceType;
+	1: bond.GUID ResourceId;
+	2: uint32 OwnerType;
+	3: wstring Owner;
+};
+
+[Description("A 3d Geography coordinate position in the world.")]
+[FormatString("")]
+[Version("1")]
+struct GeoLocation
+{
+	0: double Altitude;
+	1: double Latitude;
+	2: double Longitude;
+};
+
+[Description("SYSTEM_INFO information")]
+[FormatString("")]
+[Version("1")]
+struct Cell_System_Info
+{
+	0: uint32 OemId;
+	1: uint32 PageSize;
+	2: uint64 LpMinimumApplicationAddress;
+	3: uint64 LpMaximumApplicationAddress;
+	4: uint64 ActiveProcessorMask;
+	5: uint32 NumberOfProcessors;
+	6: uint32 ProcessorType;
+	7: uint32 AllocationGranularity;
+	8: uint16 ProcessorLevel;
+	9: uint16 ProcessorRevision;
+};
+
+[Description("D3D DXGI_ADAPTER_DESC information")]
+[FormatString("")]
+[Version("1")]
+struct Cell_DXGI_Adapter_Desc
+{
+	0: wstring Description;
+	1: uint32 VendorId;
+	2: uint32 DeviceId;
+	3: uint32 SubSysId;
+	4: uint32 Revision;
+	5: uint64 DedicatedVideoMemory;
+	6: uint64 DedicatedSystemMemory;
+	7: uint64 SharedSystemMemory;
+	8: int64  AdapterLuid;
+};	
+
+[Description("Screen resolution")]
+[FormatString("")]
+[Version("1")]
+struct Cell_ScreenResolution
+{
+	0: uint32 Width;
+	1: uint32 Height;
+};
