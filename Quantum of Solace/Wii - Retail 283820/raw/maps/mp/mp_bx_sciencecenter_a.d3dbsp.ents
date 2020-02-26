@@ -1,0 +1,650 @@
+{
+"radiosityscale" ".5"
+"sunradiosity" ".5"
+"northyaw" "90"
+"_color" "0.203922 0.243137 0.372549"
+"ambient" ".2"
+"sundiffusecolor" "0.00784314 0.196078 0.423529"
+"diffusefraction" ".3"
+"classname" "worldspawn"
+"sundirection" "-120 180 0"
+"suncolor" "0.00392157 0.235294 0.403922"
+"sunlight" ".3"
+}
+{
+"targetname" "ledge_1_d"
+"classname" "script_brushmodel"
+"origin" "-569 2073 711"
+"model" "*1"
+}
+{
+"targetname" "ledge_2_d"
+"classname" "script_brushmodel"
+"origin" "-564 2560 711"
+"model" "*2"
+}
+{
+"classname" "script_model"
+"model" "p_msc_cctv_box"
+"origin" "1064 627.5 60"
+"targetname" "alley_camera01_hack_box"
+"script_alert" "enable_hack"
+"angles" "-0 2.50448e-006 0"
+}
+{
+"classname" "mp_global_intermission"
+"angles" "16.8001 225 6.70778e-005"
+"origin" "1951.5 2656.2 393.8"
+}
+{
+"origin" "824 784 8"
+"angles" "-0 45 0"
+"classname" "mp_dm_spawn"
+}
+{
+"origin" "1176 320 8"
+"angles" "-0 45 0"
+"classname" "mp_dm_spawn"
+}
+{
+"origin" "-584 1992 8"
+"angles" "-0 225 0"
+"classname" "mp_dm_spawn"
+}
+{
+"origin" "-896 2456 16"
+"angles" "-0 2.50448e-006 0"
+"classname" "mp_dm_spawn"
+}
+{
+"targetname" "mp_00rush_goldengun_part"
+"classname" "trigger_multiple"
+"origin" "1709 776 78"
+"model" "*3"
+}
+{
+"targetname" "mp_00rush_goldengun_part"
+"classname" "trigger_multiple"
+"origin" "1810 294 31"
+"model" "*4"
+}
+{
+"targetname" "mp_00rush_goldengun_part"
+"classname" "trigger_multiple"
+"origin" "1256 620 18"
+"model" "*5"
+}
+{
+"targetname" "mp_00rush_goldengun_part"
+"classname" "trigger_multiple"
+"origin" "1400 832 18"
+"model" "*6"
+}
+{
+"targetname" "mp_00rush_goldengun_part"
+"classname" "trigger_multiple"
+"origin" "856 832 18"
+"model" "*7"
+}
+{
+"targetname" "mp_00rush_goldengun_part"
+"classname" "trigger_multiple"
+"origin" "960 1559 22"
+"model" "*8"
+}
+{
+"targetname" "mp_00rush_goldengun_part"
+"classname" "trigger_multiple"
+"origin" "686 1584 78"
+"model" "*9"
+}
+{
+"targetname" "mp_00rush_goldengun_part"
+"classname" "trigger_multiple"
+"origin" "976 2143 18"
+"model" "*10"
+}
+{
+"targetname" "mp_00rush_goldengun_part"
+"classname" "trigger_multiple"
+"origin" "1078 2592 78"
+"model" "*11"
+}
+{
+"targetname" "mp_00rush_goldengun_part"
+"classname" "trigger_multiple"
+"origin" "324 2015 18"
+"model" "*12"
+}
+{
+"targetname" "mp_00rush_goldengun_part"
+"classname" "trigger_multiple"
+"origin" "-368 2136 18"
+"model" "*13"
+}
+{
+"targetname" "mp_00rush_goldengun_part"
+"classname" "trigger_multiple"
+"origin" "-876 2456 18"
+"model" "*14"
+}
+{
+"targetname" "mp_00rush_goldengun_part"
+"classname" "trigger_multiple"
+"origin" "-340 1632 18"
+"model" "*15"
+}
+{
+"targetname" "mp_00rush_goldengun_part"
+"classname" "trigger_multiple"
+"origin" "-836 1692 18"
+"model" "*16"
+}
+{
+"targetname" "mp_00rush_goldengun_part"
+"classname" "trigger_multiple"
+"origin" "72 1384 18"
+"model" "*17"
+}
+{
+"targetname" "mp_00rush_goldengun_part"
+"classname" "trigger_multiple"
+"origin" "434 1807 18"
+"model" "*18"
+}
+{
+"targetname" "mp_00rush_intel_pickup"
+"classname" "trigger_multiple"
+"origin" "1720 724 84"
+"model" "*19"
+}
+{
+"targetname" "mp_00rush_intel_pickup"
+"classname" "trigger_multiple"
+"origin" "718 1688 84"
+"model" "*20"
+}
+{
+"targetname" "mp_00rush_intel_pickup"
+"classname" "trigger_multiple"
+"origin" "664 1842 84"
+"model" "*21"
+}
+{
+"targetname" "mp_00rush_intel_pickup"
+"classname" "trigger_multiple"
+"origin" "1040 2612 84"
+"model" "*22"
+}
+{
+"targetname" "mp_00rush_intel_pickup"
+"classname" "trigger_multiple"
+"origin" "1084 584 26"
+"model" "*23"
+}
+{
+"targetname" "mp_00rush_intel_pickup"
+"classname" "trigger_multiple"
+"origin" "1420 962 26"
+"model" "*24"
+}
+{
+"targetname" "mp_00rush_intel_pickup"
+"classname" "trigger_multiple"
+"origin" "688 1204 26"
+"model" "*25"
+}
+{
+"targetname" "mp_00rush_intel_pickup"
+"classname" "trigger_multiple"
+"origin" "780 1575 30"
+"model" "*26"
+}
+{
+"targetname" "mp_00rush_intel_pickup"
+"classname" "trigger_multiple"
+"origin" "1188 2339 26"
+"model" "*27"
+}
+{
+"targetname" "mp_00rush_intel_pickup"
+"classname" "trigger_multiple"
+"origin" "2175 1904 10"
+"model" "*28"
+}
+{
+"targetname" "mp_00rush_intel_pickup"
+"classname" "trigger_multiple"
+"origin" "-200 2690 26"
+"model" "*29"
+}
+{
+"targetname" "mp_00rush_intel_pickup"
+"classname" "trigger_multiple"
+"origin" "-656 2462 26"
+"model" "*30"
+}
+{
+"targetname" "mp_00rush_intel_pickup"
+"classname" "trigger_multiple"
+"origin" "-700 1922 26"
+"model" "*31"
+}
+{
+"targetname" "mp_00rush_intel_pickup"
+"classname" "trigger_multiple"
+"origin" "28 1556 26"
+"model" "*32"
+}
+{
+"targetname" "mp_00rush_intel_pickup"
+"classname" "trigger_multiple"
+"origin" "1150 1177 306"
+"model" "*33"
+}
+{
+"targetname" "mp_00rush_goldengun_part"
+"classname" "trigger_multiple"
+"origin" "2134 1843 2"
+"model" "*34"
+}
+{
+"targetname" "mp_00rush_intel_extract"
+"classname" "trigger_multiple"
+"origin" "2510 1288 -66"
+"model" "*35"
+}
+{
+"targetname" "mp_00rush_intel_extract"
+"classname" "trigger_multiple"
+"origin" "1256 314 58"
+"model" "*36"
+}
+{
+"targetname" "mp_00rush_intel_extract"
+"classname" "trigger_multiple"
+"origin" "856 794 58"
+"model" "*37"
+}
+{
+"targetname" "mp_00rush_intel_extract"
+"classname" "trigger_multiple"
+"origin" "1096 2586 114"
+"model" "*38"
+}
+{
+"targetname" "mp_00rush_intel_extract"
+"classname" "trigger_multiple"
+"origin" "72 1370 58"
+"model" "*39"
+}
+{
+"targetname" "mp_00rush_intel_extract"
+"classname" "trigger_multiple"
+"origin" "-902 2456 58"
+"model" "*40"
+}
+{
+"targetname" "mp_00rush_intel_extract"
+"classname" "trigger_multiple"
+"origin" "1024 1178 338"
+"model" "*41"
+}
+{
+"targetname" "mp_00rush_intel_extract"
+"classname" "trigger_multiple"
+"origin" "1594 2298 90"
+"model" "*42"
+}
+{
+"target" "signal_reception_zone_08"
+"targetname" "mp_00rush_signal_zone"
+"classname" "trigger_multiple"
+"origin" "1130 1600 113"
+"model" "*43"
+}
+{
+"target" "signal_reception_zone_07"
+"targetname" "mp_00rush_signal_zone"
+"classname" "trigger_multiple"
+"origin" "686 1659 124"
+"model" "*44"
+}
+{
+"target" "signal_reception_zone_10"
+"targetname" "mp_00rush_signal_zone"
+"classname" "trigger_multiple"
+"origin" "1077 2668 124"
+"model" "*45"
+}
+{
+"target" "signal_reception_zone_06"
+"targetname" "mp_00rush_signal_zone"
+"classname" "trigger_multiple"
+"origin" "1721 784 125"
+"model" "*46"
+}
+{
+"target" "signal_reception_zone_01"
+"targetname" "mp_00rush_signal_zone"
+"classname" "trigger_multiple"
+"origin" "-701 1853 70"
+"model" "*47"
+}
+{
+"target" "signal_reception_zone_02"
+"targetname" "mp_00rush_signal_zone"
+"classname" "trigger_multiple"
+"origin" "0 1455 333"
+"model" "*48"
+}
+{
+"target" "signal_reception_zone_09"
+"targetname" "mp_00rush_signal_zone"
+"classname" "trigger_multiple"
+"origin" "2266 1436 -12"
+"model" "*49"
+}
+{
+"target" "signal_reception_zone_04"
+"targetname" "mp_00rush_signal_zone"
+"classname" "trigger_multiple"
+"origin" "1191 595 70"
+"model" "*50"
+}
+{
+"target" "signal_reception_zone_05"
+"targetname" "mp_00rush_signal_zone"
+"classname" "trigger_multiple"
+"origin" "1319 1074 70"
+"model" "*51"
+}
+{
+"target" "signal_reception_zone_03"
+"targetname" "mp_00rush_signal_zone"
+"classname" "trigger_multiple"
+"origin" "791 1071 70"
+"model" "*52"
+}
+{
+"origin" "1088 584 8"
+"angles" "-0 0 0"
+"classname" "mp_dm_spawn"
+}
+{
+"origin" "-200 2680 16"
+"angles" "-0 270 0"
+"classname" "mp_dm_spawn"
+}
+{
+"targetname" "signal_reception_zone_01"
+"classname" "script_brushmodel"
+"origin" "-701 1853 70"
+"model" "*53"
+}
+{
+"targetname" "signal_reception_zone_02"
+"classname" "script_brushmodel"
+"origin" "0 1455 339"
+"model" "*54"
+}
+{
+"targetname" "signal_reception_zone_03"
+"classname" "script_brushmodel"
+"origin" "791 1071 70"
+"model" "*55"
+}
+{
+"targetname" "signal_reception_zone_04"
+"classname" "script_brushmodel"
+"origin" "1191 595 70"
+"model" "*56"
+}
+{
+"targetname" "signal_reception_zone_05"
+"classname" "script_brushmodel"
+"origin" "1319 1074 70"
+"model" "*57"
+}
+{
+"targetname" "signal_reception_zone_06"
+"classname" "script_brushmodel"
+"origin" "1720 784 125"
+"model" "*58"
+}
+{
+"targetname" "signal_reception_zone_07"
+"classname" "script_brushmodel"
+"origin" "686 1659 124"
+"model" "*59"
+}
+{
+"targetname" "signal_reception_zone_08"
+"classname" "script_brushmodel"
+"origin" "1130 1600 69"
+"model" "*60"
+}
+{
+"targetname" "signal_reception_zone_09"
+"classname" "script_brushmodel"
+"origin" "2266 1436 -12"
+"model" "*61"
+}
+{
+"targetname" "signal_reception_zone_10"
+"classname" "script_brushmodel"
+"origin" "1077 2668 124"
+"model" "*62"
+}
+{
+"angles" "-0 351.2 0"
+"origin" "-947.1 2294.1 45.8"
+"targetname" "computer_01"
+"model" "p_dec_laptop_mp_bx"
+"classname" "script_model"
+}
+{
+"angles" "-0 287.2 0"
+"origin" "1162.5 506.9 49.8"
+"targetname" "computer_02"
+"model" "p_dec_laptop_mp_bx"
+"classname" "script_model"
+}
+{
+"angles" "-0 270 0"
+"origin" "780.1 1198.3 49.8"
+"targetname" "computer_03"
+"model" "p_dec_laptop_mp_bx"
+"classname" "script_model"
+}
+{
+"gndLt" "141b200000"
+"angles" "-0 96.6 0"
+"origin" "1316.6 1713.9 44"
+"targetname" "computer_04"
+"model" "p_dec_laptop_mp_bx"
+"classname" "script_model"
+}
+{
+"classname" "script_model"
+"model" "p_dec_laptop_mp_bx"
+"targetname" "computer_07"
+"origin" "-689.5 2018.8 47"
+"angles" "-0 45 0"
+}
+{
+"classname" "mp_dm_spawn"
+"angles" "-0 90 0"
+"origin" "72 1376 16"
+}
+{
+"classname" "mp_dm_spawn"
+"angles" "-0 270 0"
+"origin" "1056 2728 64"
+}
+{
+"classname" "mp_dm_spawn"
+"angles" "-0 180 0"
+"origin" "2512 1288 -112"
+}
+{
+"classname" "mp_dm_spawn"
+"angles" "-0 225 0"
+"origin" "1952 2616 8"
+}
+{
+"classname" "mp_tdm_spawn"
+"angles" "-0 90 0"
+"origin" "72 1376 16"
+}
+{
+"classname" "mp_tdm_spawn"
+"angles" "-0 270 0"
+"origin" "1056 2728 64"
+}
+{
+"classname" "mp_tdm_spawn"
+"angles" "-0 45 0"
+"origin" "824 784 8"
+}
+{
+"classname" "mp_tdm_spawn"
+"angles" "-0 45 0"
+"origin" "1176 320 8"
+}
+{
+"classname" "mp_tdm_spawn"
+"angles" "-0 225 0"
+"origin" "-584 1992 8"
+}
+{
+"classname" "mp_tdm_spawn"
+"angles" "-0 2.50448e-006 0"
+"origin" "-896 2456 16"
+}
+{
+"classname" "mp_tdm_spawn"
+"angles" "-0 180 0"
+"origin" "2512 1288 -112"
+}
+{
+"classname" "mp_tdm_spawn"
+"angles" "-0 0 0"
+"origin" "1088 584 8"
+}
+{
+"classname" "mp_tdm_spawn"
+"angles" "-0 135 0"
+"origin" "1820 294 29"
+}
+{
+"classname" "mp_tdm_spawn"
+"angles" "-0 225 0"
+"origin" "1952 2616 8"
+}
+{
+"classname" "mp_tdm_spawn"
+"angles" "-0 270 0"
+"origin" "-200 2680 16"
+}
+{
+"gndLt" "211d1f0000"
+"angles" "-0 174.4 0"
+"origin" "1680.9 668.6 98.3"
+"targetname" "computer_08"
+"model" "p_dec_laptop_mp_bx"
+"classname" "script_model"
+}
+{
+"classname" "trigger_use"
+"targetname" "mp_00rush_computer"
+"target" "computer_08"
+"origin" "1682 676 116"
+"model" "*63"
+}
+{
+"classname" "trigger_use"
+"targetname" "mp_00rush_computer"
+"target" "computer_04"
+"origin" "1332 1715 48"
+"model" "*64"
+}
+{
+"classname" "trigger_use"
+"targetname" "mp_00rush_computer"
+"target" "computer_05"
+"origin" "655 1625 112"
+"model" "*65"
+}
+{
+"classname" "trigger_use"
+"targetname" "mp_00rush_computer"
+"target" "computer_01"
+"origin" "-952 2281 64"
+"model" "*66"
+}
+{
+"classname" "trigger_use"
+"targetname" "mp_00rush_computer"
+"target" "computer_02"
+"origin" "1153 505 62"
+"model" "*67"
+}
+{
+"classname" "trigger_use"
+"targetname" "mp_00rush_computer"
+"target" "computer_03"
+"origin" "766 1200 66"
+"model" "*68"
+}
+{
+"classname" "trigger_use"
+"targetname" "mp_00rush_computer"
+"target" "computer_07"
+"origin" "-680 2011 52"
+"model" "*69"
+}
+{
+"origin" "1820 294 29"
+"angles" "-0 135 0"
+"classname" "mp_dm_spawn"
+}
+{
+"gndLt" "16151b0000"
+"angles" "-0 3.8 0"
+"origin" "649.3 1635.1 96"
+"targetname" "computer_05"
+"model" "p_dec_laptop_mp_bx"
+"classname" "script_model"
+}
+{
+"targetname" "mp_00rush_intel_pickup"
+"classname" "trigger_multiple"
+"origin" "1356 1710 30"
+"model" "*70"
+}
+{
+"targetname" "mp_00rush_intel_pickup"
+"classname" "trigger_multiple"
+"origin" "1031 1595 245"
+"model" "*71"
+}
+{
+"targetname" "mp_00rush_intel_extract"
+"classname" "trigger_multiple"
+"origin" "-142 1688 338"
+"model" "*72"
+}
+{
+"targetname" "signal_reception_zone_30"
+"classname" "script_brushmodel"
+"origin" "-872 2298 49"
+"model" "*73"
+}
+{
+"target" "signal_reception_zone_30"
+"targetname" "mp_00rush_signal_zone"
+"classname" "trigger_multiple"
+"origin" "-872 2298 70"
+"model" "*74"
+}
