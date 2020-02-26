@@ -1,2 +1,0 @@
--- object knight_taint
-
