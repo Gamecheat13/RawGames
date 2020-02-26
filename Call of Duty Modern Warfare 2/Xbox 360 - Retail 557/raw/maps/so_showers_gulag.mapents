@@ -1,0 +1,134 @@
+{
+"origin" "0 0 0"
+"sunlight" "0.74"
+"suncolor" "0.88 0.93 1"
+"sundirection" "-70 72 0"
+"classname" "worldspawn"
+"ambient" ".116"
+"_color" "0.5 0.5 .62 1"
+"skylight" "0.56"
+"skycolor" "0.87 0.94 1"
+}
+{
+"origin" "-1428.7 -2011.9 576"
+"angles" "0 130 0"
+"classname" "info_player_start_so"
+}
+{
+"model" "?0"
+"origin" "-2352 -1968 720"
+"classname" "trigger_multiple_flag_set_touching"
+"script_flag" "player_trying_to_escape"
+"script_noteworthy" "player_trying_to_escape"
+}
+{
+"model" "?1"
+"origin" "-2528 -2224 720"
+"classname" "trigger_multiple_flag_set_touching"
+"script_flag" "player_has_escaped"
+}
+{
+"classname" "weapon_ak47_acog"
+"model" "weapon_ak47_tactical"
+"angles" "320.895 241.463 0.910643"
+"origin" "-1744.6 -1901.6 596.5"
+"spawnflags" "1"
+"count" "330"
+"targetname" "so_weapons"
+}
+{
+"classname" "weapon_ak47_acog"
+"model" "weapon_ak47_tactical"
+"angles" "286.895 35.7082 -179.18"
+"origin" "-1691.9 -1767.4 598"
+"spawnflags" "1"
+"count" "330"
+"targetname" "so_weapons"
+}
+{
+"spawnflags" "1"
+"origin" "-1760.8 -1891.8 593.8"
+"angles" "313.4 239.5 -80"
+"model" "weapon_aa12"
+"classname" "weapon_aa12"
+"count" "78"
+"targetname" "so_weapons"
+}
+{
+"classname" "script_model"
+"model" "mil_frame_charge_obj"
+"origin" "-1506 -1891 644"
+"angles" "10 324.4 90"
+"targetname" "breach_hint_model"
+}
+{
+"classname" "weapon_kriss"
+"model" "weapon_kriss"
+"angles" "0 299.6 99.1"
+"origin" "-1741.3 -1868.3 582.8"
+"spawnflags" "0"
+"count" "450"
+"targetname" "so_weapons"
+}
+{
+"classname" "script_model"
+"model" "mil_ammo_case_2"
+"angles" "0 283.8 0"
+"origin" "-1771.1 -1858 576.5"
+}
+{
+"classname" "weapon_glock"
+"model" "weapon_glock_green"
+"angles" "0 284.5 89.9997"
+"origin" "-1718.8 -1885.6 581.5"
+"spawnflags" "0"
+"count" "352"
+"targetname" "so_weapons"
+}
+{
+"classname" "weapon_aa12"
+"model" "weapon_aa12"
+"angles" "289.2 72.5 -180"
+"origin" "-1675.1 -1781.2 598.3"
+"spawnflags" "1"
+"count" "78"
+"targetname" "so_weapons"
+}
+{
+"spawnflags" "0"
+"angles" "2.07648 356.931 -89.4899"
+"origin" "-1761.4 -1763.9 579"
+"model" "weapon_m14ebr_tan"
+"classname" "weapon_m14ebr"
+"count" "77"
+"targetname" "so_weapons"
+}
+{
+"origin" "-1778.8 -1742.8 580"
+"angles" "271.1 352.5 0"
+"model" "mil_ammo_case_2"
+"classname" "script_model"
+}
+{
+"classname" "script_model"
+"model" "mil_ammo_case_2"
+"angles" "0 145.9 0"
+"origin" "-1770 -1741 576"
+}
+{
+"classname" "weapon_glock"
+"model" "weapon_glock_green"
+"angles" "0 100 90.0004"
+"origin" "-1753.7 -1744.5 579"
+"spawnflags" "0"
+"count" "352"
+}
+{
+"spawnflags" "0"
+"origin" "-1727.3 -1774.5 581.3"
+"classname" "weapon_striker"
+"model" "weapon_striker"
+"angles" "0 90 60"
+"count" "72"
+"targetname" "so_weapons"
+}

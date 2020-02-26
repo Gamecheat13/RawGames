@@ -1,0 +1,161 @@
+#include common_scripts\utility;
+#include maps\_utility;
+#include maps\_anim;
+
+#using_animtree( "generic_human" );
+
+clear_animation( blend_time )
+{
+	self clearanim( %root, blend_time );
+}
+
+enemy_animation_attack( type )
+{
+	assert( isdefined( self.enemy ) );
+
+	dist = distance( self.enemy.origin, self.origin );
+
+	if ( dist < 512 )
+		anime = "_stealth_behavior_spotted_short";
+	else
+		anime = "_stealth_behavior_spotted_long";
+
+	self.allowdeath = true;
+	self thread anim_generic_custom_animmode( self, "gravity", anime );
+
+	if ( dist < 200 )
+		wait .5;
+	else
+		self waittill_notify_or_timeout( anime, randomfloatrange( 1.5, 3 ) );
+
+	self notify( "stop_animmode" );
+}
+
+enemy_animation_nothing( type )
+{
+	// these dont actually do anything, however their existance
+	// allows for custom reaction animations to be played even
+	// at this alert stage
+}
+
+enemy_animation_generic( type )
+{
+	self.allowdeath = true;
+
+	target = level.player;
+	if ( isdefined( self.enemy ) )
+		target = self.enemy;
+	else if ( isdefined( self.favoriteenemy ) )
+		target = self.favoriteenemy;
+
+	dist = ( distance( self.origin, target.origin ) );
+	max = 4;
+	range = 1024;
+
+	for ( i = 1; i < max; i++ )
+	{
+		test = range * ( i / max );
+		if ( dist < test )
+			break;
+	}
+
+	anime = "_stealth_behavior_generic" + i;
+
+	self anim_generic_custom_animmode( self, "gravity", anime );
+}
+
+dog_animation_generic( type )
+{
+	self.allowdeath = true;
+
+	anime = undefined;
+
+	if ( self ent_flag( "_stealth_behavior_asleep" ) )
+	{
+		if ( randomint( 100 ) < 50 )
+			anime = "_stealth_dog_wakeup_fast";
+		else
+			anime = "_stealth_dog_wakeup_slow";
+	}
+	else
+		anime = "_stealth_dog_growl";
+
+	self anim_generic_custom_animmode( self, "gravity", anime );
+}
+
+dog_animation_wakeup_fast( type )
+{
+	self.allowdeath = true;
+
+	anime = undefined;
+
+	if ( self ent_flag( "_stealth_behavior_asleep" ) )
+		anime = "_stealth_dog_wakeup_fast";
+	else
+		anime = "_stealth_dog_growl";
+
+	self anim_generic_custom_animmode( self, "gravity", anime );
+}
+dog_animation_wakeup_slow( type )
+{
+	self.allowdeath = true;
+
+	anime = undefined;
+
+	if ( self ent_flag( "_stealth_behavior_asleep" ) )
+		anime = "_stealth_dog_wakeup_slow";
+	else
+		anime = "_stealth_dog_growl";
+
+	self anim_generic_custom_animmode( self, "gravity", anime );
+}
+
+enemy_animation_sawcorpse( type )
+{
+	self.allowdeath = true;
+
+	anime = "_stealth_behavior_saw_corpse";
+
+	self anim_generic_custom_animmode( self, "gravity", anime );
+}
+
+dog_animation_sawcorpse( type )
+{
+	self.allowdeath = true;
+
+	anime = "_stealth_dog_saw_corpse";
+
+	self anim_generic_custom_animmode( self, "gravity", anime );
+}
+
+dog_animation_howl( type )
+{
+	self.allowdeath = true;
+
+	anime = "_stealth_dog_howl";
+
+	self anim_generic_custom_animmode( self, "gravity", anime );
+	self anim_generic_custom_animmode( self, "gravity", anime );
+	self anim_generic_custom_animmode( self, "gravity", anime );
+	self anim_generic_custom_animmode( self, "gravity", anime );
+	self anim_generic_custom_animmode( self, "gravity", anime );
+	self anim_generic_custom_animmode( self, "gravity", anime );
+}
+
+enemy_animation_foundcorpse( type )
+{
+	self.allowdeath = true;
+
+	anime = "_stealth_find_jog";
+
+	self anim_generic_custom_animmode( self, "gravity", anime );
+}
+
+dog_animation_foundcorpse( type )
+{
+	self.allowdeath = true;
+
+	anime = "_stealth_dog_find";
+
+	self anim_generic_custom_animmode( self, "gravity", anime );
+}

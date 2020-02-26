@@ -1,0 +1,1586 @@
+{
+"contrastGain" "0.425"
+"diffusefraction" "0.5"
+"_color" ".8 .9 1"
+"sunlight" "1"
+"sundirection" "-50 136 0"
+"sundiffusecolor" ".7 0.88 .75"
+"suncolor" "0.8 0.92 0.88"
+"ambient" ".1"
+"bouncefraction" ".7"
+"classname" "worldspawn"
+}
+{
+"classname" "info_player_start"
+"angles" "-0 90 0"
+"origin" "4736 -1792 0"
+}
+{
+"angles" "-0 0 0"
+"classname" "weapon_at4"
+"model" "weapon_at4"
+"origin" "4736 -1664 32"
+}
+{
+"gndLt" "4c5c53b801"
+"destructible_type" "vehicle_bus_destructible"
+"targetname" "destructible"
+"origin" "4727.8 -961.5 0"
+"model" "vehicle_bus_destructable"
+"classname" "script_model"
+}
+{
+"gndLt" "4c5c53be01"
+"destructible_type" "vehicle_80s_sedan1_red"
+"targetname" "destructible"
+"origin" "4736 -1344 0"
+"model" "vehicle_80s_sedan1_red_destructible"
+"classname" "script_model"
+"angles" "-0 270 0"
+}
+{
+"gndLt" "4c5c53be01"
+"origin" "4758 -1294 12"
+"targetname" "delete_on_load"
+"model" "vehicle_80s_sedan1_red_wheel_lf"
+"classname" "script_model"
+"angles" "-0 270 0"
+}
+{
+"gndLt" "4c5c53bf01"
+"origin" "4758 -1395.5 12"
+"targetname" "delete_on_load"
+"model" "vehicle_80s_sedan1_red_wheel_lf"
+"classname" "script_model"
+"angles" "-0 270 0"
+}
+{
+"angles" "-0 270 -180"
+"origin" "4713.5 -1294 12"
+"targetname" "delete_on_load"
+"model" "vehicle_80s_sedan1_red_wheel_lf"
+"classname" "script_model"
+}
+{
+"angles" "-0 270 -180"
+"origin" "4713.5 -1395.5 12"
+"targetname" "delete_on_load"
+"model" "vehicle_80s_sedan1_red_wheel_lf"
+"classname" "script_model"
+}
+{
+"gndLt" "4c5c53bc01"
+"destructible_type" "vehicle_80s_wagon1_silv"
+"targetname" "destructible"
+"origin" "4543.3 -1342.1 0"
+"model" "vehicle_80s_wagon1_silv_destructible"
+"classname" "script_model"
+"angles" "-0 270 0"
+}
+{
+"gndLt" "4c5c53bd01"
+"targetname" "delete_on_load"
+"origin" "4565.3 -1393.6 12"
+"model" "vehicle_80s_sedan1_silv_wheel_lf"
+"classname" "script_model"
+"angles" "-0 270 0"
+}
+{
+"gndLt" "4c5c53bc01"
+"targetname" "delete_on_load"
+"origin" "4565.3 -1292.1 12"
+"model" "vehicle_80s_sedan1_silv_wheel_lf"
+"classname" "script_model"
+"angles" "-0 270 0"
+}
+{
+"angles" "-0 270 -180"
+"targetname" "delete_on_load"
+"origin" "4520.8 -1393.6 12"
+"model" "vehicle_80s_sedan1_silv_wheel_lf"
+"classname" "script_model"
+}
+{
+"angles" "-0 270 -180"
+"targetname" "delete_on_load"
+"origin" "4520.8 -1292.1 12"
+"model" "vehicle_80s_sedan1_silv_wheel_lf"
+"classname" "script_model"
+}
+{
+"gndLt" "4c5c53bd01"
+"destructible_type" "vehicle_80s_hatch1_green"
+"targetname" "destructible"
+"origin" "4352 -1344 0"
+"model" "vehicle_80s_hatch1_green_destructible"
+"classname" "script_model"
+"angles" "-0 270 0"
+}
+{
+"gndLt" "4c5c53be01"
+"targetname" "delete_on_load"
+"origin" "4374 -1391.5 12"
+"model" "vehicle_80s_sedan1_green_wheel_lf"
+"classname" "script_model"
+"angles" "-0 270 0"
+}
+{
+"gndLt" "4c5c53bd01"
+"targetname" "delete_on_load"
+"origin" "4374 -1306 12"
+"model" "vehicle_80s_sedan1_green_wheel_lf"
+"classname" "script_model"
+"angles" "-0 270 0"
+}
+{
+"angles" "-0 270 -180"
+"targetname" "delete_on_load"
+"origin" "4329.5 -1391.5 12"
+"model" "vehicle_80s_sedan1_green_wheel_lf"
+"classname" "script_model"
+}
+{
+"angles" "-0 270 -180"
+"targetname" "delete_on_load"
+"origin" "4329.5 -1306 12"
+"model" "vehicle_80s_sedan1_green_wheel_lf"
+"classname" "script_model"
+}
+{
+"gndLt" "4c5c53c001"
+"destructible_type" "vehicle_small_wagon_white"
+"targetname" "destructible"
+"origin" "4927.3 -1342.1 0"
+"model" "vehicle_small_wagon_white_destructible"
+"classname" "script_model"
+"angles" "-0 270 0"
+}
+{
+"gndLt" "4c5c53c001"
+"targetname" "delete_on_load"
+"origin" "4949.3 -1393.6 12"
+"model" "vehicle_small_wagon_white_wheel_lf"
+"classname" "script_model"
+"angles" "-0 270 0"
+}
+{
+"gndLt" "4c5c53bf01"
+"targetname" "delete_on_load"
+"origin" "4949.3 -1299.1 12"
+"model" "vehicle_small_wagon_white_wheel_lf"
+"classname" "script_model"
+"angles" "-0 270 0"
+}
+{
+"angles" "-0 270 -180"
+"targetname" "delete_on_load"
+"origin" "4904.8 -1393.6 12"
+"model" "vehicle_small_wagon_white_wheel_lf"
+"classname" "script_model"
+}
+{
+"angles" "-0 270 -180"
+"targetname" "delete_on_load"
+"origin" "4904.8 -1299.1 12"
+"model" "vehicle_small_wagon_white_wheel_lf"
+"classname" "script_model"
+}
+{
+"gndLt" "4c5c53c101"
+"destructible_type" "vehicle_small_hatch_blue"
+"targetname" "destructible"
+"origin" "5119.3 -1342.1 0"
+"model" "vehicle_small_hatch_blue_destructible"
+"classname" "script_model"
+"angles" "-0 270 0"
+}
+{
+"gndLt" "4c5c53c101"
+"targetname" "delete_on_load"
+"origin" "5141.3 -1393.6 12"
+"model" "vehicle_small_hatch_blue_wheel_lf"
+"classname" "script_model"
+"angles" "-0 270 0"
+}
+{
+"gndLt" "4c5c53c101"
+"targetname" "delete_on_load"
+"origin" "5141.3 -1299.1 12"
+"model" "vehicle_small_hatch_blue_wheel_lf"
+"classname" "script_model"
+"angles" "-0 270 0"
+}
+{
+"angles" "-0 270 -180"
+"targetname" "delete_on_load"
+"origin" "5096.8 -1393.6 12"
+"model" "vehicle_small_hatch_blue_wheel_lf"
+"classname" "script_model"
+}
+{
+"angles" "-0 270 -180"
+"targetname" "delete_on_load"
+"origin" "5096.8 -1299.1 12"
+"model" "vehicle_small_hatch_blue_wheel_lf"
+"classname" "script_model"
+}
+{
+"origin" "4736 -1728 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4864 -1728 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4992 -1728 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4480 -1728 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4608 -1728 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5376 -1728 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5504 -1728 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5632 -1728 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5120 -1728 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5248 -1728 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4096 -1728 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4224 -1728 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4352 -1728 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "3840 -1728 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "3968 -1728 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4736 -1600 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4864 -1600 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4992 -1600 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4480 -1600 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4608 -1600 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5376 -1600 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5504 -1600 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5632 -1600 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5120 -1600 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5248 -1600 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4096 -1600 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4224 -1600 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4352 -1600 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "3840 -1600 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "3968 -1600 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4736 -1472 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4864 -1472 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4992 -1472 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4480 -1472 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4608 -1472 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5376 -1472 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5504 -1472 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5632 -1472 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5120 -1472 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5248 -1472 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4096 -1472 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4224 -1472 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4352 -1472 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "3840 -1472 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "3968 -1472 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4736 -1216 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4864 -1216 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4992 -1216 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4480 -1216 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4608 -1216 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5376 -1216 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5504 -1216 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5632 -1216 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5120 -1216 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5248 -1216 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4096 -1216 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4224 -1216 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4352 -1216 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "3840 -1216 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "3968 -1216 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4736 -1088 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4864 -1088 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4992 -1088 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4480 -1088 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4608 -1088 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5376 -1088 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5504 -1088 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5632 -1088 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5120 -1088 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5248 -1088 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4096 -1088 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4224 -1088 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4352 -1088 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "3840 -1088 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "3968 -1088 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4992 -960 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5376 -960 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5504 -960 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5632 -960 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5120 -960 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5248 -960 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4096 -960 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4224 -960 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4352 -960 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "3840 -960 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "3968 -960 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4736 -832 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4864 -832 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4992 -832 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4480 -832 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4608 -832 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5376 -832 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5504 -832 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5632 -832 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5120 -832 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5248 -832 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4096 -832 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4224 -832 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4352 -832 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "3840 -832 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "3968 -832 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4736 -704 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4864 -704 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4992 -704 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4480 -704 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4608 -704 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5376 -704 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5504 -704 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5632 -704 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5120 -704 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5248 -704 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4096 -704 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4224 -704 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4352 -704 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "3840 -704 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "3968 -704 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4736 -576 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4864 -576 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4992 -576 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4480 -576 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4608 -576 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5376 -576 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5504 -576 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5632 -576 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5120 -576 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5248 -576 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4096 -576 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4224 -576 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4352 -576 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "3840 -576 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "3968 -576 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4864 -1344 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4992 -1344 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4480 -1344 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4608 -1344 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5376 -1344 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5504 -1344 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5632 -1344 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "5248 -1344 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4096 -1344 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "4224 -1344 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "3840 -1344 32"
+"classname" "node_pathnode"
+}
+{
+"origin" "3968 -1344 32"
+"classname" "node_pathnode"
+}
+{
+"gndLt" "4c5c53c001"
+"origin" "5610.8 -441.1 5"
+"target" "auto13"
+"angles" "-0 270 0"
+"model" "vehicle_80s_sedan1_red_destructible"
+"classname" "script_model"
+"script_vehiclespawngroup" "0"
+}
+{
+"gndLt" "4c5c53c201"
+"target" "auto51"
+"origin" "5354.8 1350.9 5"
+"angles" "-0 270 0"
+"model" "vehicle_80s_hatch1_green_destructible"
+"classname" "script_model"
+"script_vehiclespawngroup" "0"
+}
+{
+"lookahead" "2"
+"spawnflags" "1"
+"targetname" "auto13"
+"speed" "5"
+"target" "auto1"
+"origin" "5352 -40 24"
+"classname" "info_vehicle_node"
+}
+{
+"script_vehicledetour" "0"
+"target" "auto14"
+"targetname" "auto1"
+"origin" "5096 -88 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto15"
+"targetname" "auto14"
+"origin" "4536 -104 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto16"
+"targetname" "auto15"
+"origin" "4360 -120 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto17"
+"targetname" "auto16"
+"origin" "4120 -168 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto18"
+"targetname" "auto17"
+"origin" "3896 -88 24"
+"classname" "info_vehicle_node"
+}
+{
+"script_vehicledetour" "3"
+"target" "auto19"
+"targetname" "auto18"
+"origin" "3736 136 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto20"
+"targetname" "auto19"
+"origin" "3784 392 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto21"
+"targetname" "auto20"
+"origin" "3848 584 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto22"
+"targetname" "auto21"
+"origin" "4040 808 24"
+"classname" "info_vehicle_node"
+}
+{
+"script_vehicledetour" "2"
+"target" "auto23"
+"targetname" "auto22"
+"origin" "4152 920 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto24"
+"targetname" "auto23"
+"origin" "4600 984 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto25"
+"targetname" "auto24"
+"origin" "5064 936 24"
+"classname" "info_vehicle_node"
+}
+{
+"script_vehicledetour" "1"
+"target" "auto26"
+"targetname" "auto25"
+"origin" "5416 760 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto27"
+"targetname" "auto26"
+"origin" "5496 616 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto28"
+"targetname" "auto27"
+"origin" "5496 424 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto30"
+"targetname" "auto28"
+"origin" "5384 328 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto31"
+"targetname" "auto30"
+"origin" "5224 328 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto32"
+"targetname" "auto31"
+"origin" "5064 328 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto33"
+"targetname" "auto32"
+"origin" "4872 328 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto34"
+"targetname" "auto33"
+"origin" "4520 328 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto35"
+"targetname" "auto34"
+"origin" "4216 360 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto36"
+"targetname" "auto35"
+"origin" "4040 376 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto37"
+"targetname" "auto36"
+"origin" "3976 248 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto38"
+"targetname" "auto37"
+"origin" "3976 56 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto39"
+"targetname" "auto38"
+"origin" "4120 -8 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto40"
+"targetname" "auto39"
+"origin" "4280 8 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto41"
+"targetname" "auto40"
+"origin" "4520 -8 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto42"
+"targetname" "auto41"
+"origin" "4776 24 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto43"
+"targetname" "auto42"
+"origin" "5144 56 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto44"
+"targetname" "auto43"
+"origin" "5352 88 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto45"
+"targetname" "auto44"
+"origin" "5576 216 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto46"
+"targetname" "auto45"
+"origin" "5880 24 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto47"
+"targetname" "auto46"
+"origin" "5832 -328 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto48"
+"targetname" "auto47"
+"origin" "5672 -440 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto49"
+"targetname" "auto48"
+"origin" "5320 -440 24"
+"classname" "info_vehicle_node"
+}
+{
+"script_vehicledetour" "0"
+"targetname" "auto49"
+"origin" "5160 -152 24"
+"classname" "info_vehicle_node"
+}
+{
+"targetname" "auto51"
+"angles" "-0 90 0"
+"lookahead" "2"
+"spawnflags" "1"
+"speed" "5"
+"target" "auto50"
+"origin" "5344 1136 24"
+"classname" "info_vehicle_node"
+}
+{
+"angles" "-0 90 0"
+"script_vehicledetour" "1"
+"targetname" "auto50"
+"origin" "5392 880 24"
+"classname" "info_vehicle_node"
+}
+{
+"gndLt" "4c5c53b901"
+"target" "auto2064"
+"origin" "3866.2 1208.3 5"
+"angles" "-0 310 0"
+"model" "vehicle_bus_destructable"
+"classname" "script_model"
+"script_vehiclespawngroup" "0"
+}
+{
+"targetname" "auto2064"
+"angles" "-0 90 0"
+"lookahead" "2"
+"spawnflags" "1"
+"speed" "5"
+"target" "auto2065"
+"origin" "3920 1120 24"
+"classname" "info_vehicle_node"
+}
+{
+"angles" "-0 90 0"
+"script_vehicledetour" "2"
+"targetname" "auto2065"
+"origin" "4064 976 24"
+"classname" "info_vehicle_node"
+}
+{
+"gndLt" "4c5c53c301"
+"target" "auto2066"
+"origin" "3649.1 -415.2 5"
+"angles" "-0 76 0"
+"model" "vehicle_bm21_Mobile_bed_destructible"
+"classname" "script_model"
+"script_vehiclespawngroup" "0"
+}
+{
+"targetname" "auto2066"
+"angles" "0 256 0"
+"lookahead" "2"
+"spawnflags" "1"
+"speed" "5"
+"target" "auto2067"
+"origin" "3711.6 -209.3 24"
+"classname" "info_vehicle_node"
+}
+{
+"angles" "0 256 0"
+"script_vehicledetour" "3"
+"targetname" "auto2067"
+"origin" "3726.9 50.7 24"
+"classname" "info_vehicle_node"
+}
+{
+"gndLt" "4c5c53b701"
+"target" "auto2068"
+"origin" "4854.1 -661.2 5"
+"angles" "-0 136 0"
+"model" "vehicle_bm21_Mobile_bed_destructible"
+"classname" "script_model"
+"script_vehiclespawngroup" "0"
+}
+{
+"targetname" "auto2068"
+"angles" "-0 346 0"
+"lookahead" "2"
+"spawnflags" "1"
+"speed" "5"
+"target" "auto2069"
+"origin" "4584.3 -456.1 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto2070"
+"angles" "-0 346 0"
+"targetname" "auto2069"
+"origin" "4324.3 -440.8 24"
+"classname" "info_vehicle_node"
+}
+{
+"script_vehicledetour" "4"
+"target" "auto2071"
+"angles" "-0 346 0"
+"targetname" "auto2070"
+"origin" "4020.3 -440.8 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto2072"
+"angles" "-0 346 0"
+"targetname" "auto2071"
+"origin" "3812.3 -344.8 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto2073"
+"angles" "-0 346 0"
+"targetname" "auto2072"
+"origin" "3588.3 -184.8 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto2074"
+"angles" "-0 346 0"
+"targetname" "auto2073"
+"origin" "3524.3 167.2 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto2075"
+"angles" "-0 346 0"
+"targetname" "auto2074"
+"origin" "3492.3 487.2 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto2076"
+"angles" "-0 346 0"
+"targetname" "auto2075"
+"origin" "3604.3 775.2 24"
+"classname" "info_vehicle_node"
+}
+{
+"script_vehicledetour" "5"
+"target" "auto2077"
+"angles" "-0 346 0"
+"targetname" "auto2076"
+"origin" "3716.3 983.2 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto2078"
+"angles" "-0 346 0"
+"targetname" "auto2077"
+"origin" "4164.3 1223.2 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto2079"
+"angles" "-0 346 0"
+"targetname" "auto2078"
+"origin" "4676.3 1271.2 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto2080"
+"angles" "-0 346 0"
+"targetname" "auto2079"
+"origin" "5252.3 1239.2 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto2081"
+"angles" "-0 346 0"
+"targetname" "auto2080"
+"origin" "5796.3 935.2 24"
+"classname" "info_vehicle_node"
+}
+{
+"script_vehicledetour" "6"
+"target" "auto2082"
+"angles" "-0 346 0"
+"targetname" "auto2081"
+"origin" "5988.3 359.2 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto2083"
+"angles" "-0 346 0"
+"targetname" "auto2082"
+"origin" "6100.3 -40.8 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto2084"
+"angles" "-0 346 0"
+"targetname" "auto2083"
+"origin" "6084.3 -248.8 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto2085"
+"angles" "-0 346 0"
+"targetname" "auto2084"
+"origin" "6004.3 -536.8 24"
+"classname" "info_vehicle_node"
+}
+{
+"script_vehicledetour" "7"
+"target" "auto2086"
+"angles" "-0 346 0"
+"targetname" "auto2085"
+"origin" "5684.3 -712.8 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto2087"
+"angles" "-0 346 0"
+"targetname" "auto2086"
+"origin" "5540.3 -744.8 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto2088"
+"angles" "-0 346 0"
+"targetname" "auto2087"
+"origin" "5268.3 -680.8 24"
+"classname" "info_vehicle_node"
+}
+{
+"script_vehicledetour" "8"
+"target" "auto2089"
+"angles" "-0 346 0"
+"targetname" "auto2088"
+"origin" "5108.3 -568.8 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto2090"
+"angles" "-0 346 0"
+"targetname" "auto2089"
+"origin" "4868.3 -440.8 24"
+"classname" "info_vehicle_node"
+}
+{
+"target" "auto2091"
+"angles" "-0 346 0"
+"targetname" "auto2090"
+"origin" "4628.3 -312.8 24"
+"classname" "info_vehicle_node"
+}
+{
+"script_vehicledetour" "4"
+"angles" "-0 346 0"
+"targetname" "auto2091"
+"origin" "4196.3 -424.8 24"
+"classname" "info_vehicle_node"
+}
+{
+"gndLt" "4c5c53c001"
+"target" "auto2092"
+"origin" "3416.6 613.5 5"
+"angles" "-0 346 0"
+"model" "vehicle_uaz_fabric_destructible"
+"classname" "script_model"
+"script_vehiclespawngroup" "0"
+}
+{
+"targetname" "auto2092"
+"angles" "0 196 0"
+"lookahead" "2"
+"spawnflags" "1"
+"speed" "5"
+"target" "auto2093"
+"origin" "3448.8 810.8 24"
+"classname" "info_vehicle_node"
+}
+{
+"script_vehicledetour" "5"
+"angles" "0 196 0"
+"targetname" "auto2093"
+"origin" "3633.6 959.5 24"
+"classname" "info_vehicle_node"
+}
+{
+"gndLt" "4c5c53c101"
+"target" "auto2094"
+"origin" "6058.5 1021.4 5"
+"angles" "0 226 0"
+"model" "vehicle_uaz_open_destructible"
+"classname" "script_model"
+"script_vehiclespawngroup" "0"
+}
+{
+"targetname" "auto2094"
+"angles" "-0 76 0"
+"lookahead" "2"
+"spawnflags" "1"
+"speed" "5"
+"target" "auto2095"
+"origin" "5973.3 686.9 24"
+"classname" "info_vehicle_node"
+}
+{
+"script_vehicledetour" "6"
+"angles" "-0 76 0"
+"targetname" "auto2095"
+"origin" "5977.6 452.5 24"
+"classname" "info_vehicle_node"
+}
+{
+"gndLt" "4c5c53bf01"
+"target" "auto2096"
+"origin" "6171.9 -707.5 5"
+"angles" "-0 136 0"
+"model" "vehicle_uaz_hardtop_destructible"
+"classname" "script_model"
+"script_vehiclespawngroup" "0"
+}
+{
+"targetname" "auto2096"
+"angles" "-0 346 0"
+"lookahead" "2"
+"spawnflags" "1"
+"speed" "5"
+"target" "auto2097"
+"origin" "5997.4 -686.3 24"
+"classname" "info_vehicle_node"
+}
+{
+"script_vehicledetour" "7"
+"angles" "-0 346 0"
+"targetname" "auto2097"
+"origin" "5763 -690.6 24"
+"classname" "info_vehicle_node"
+}
+{
+"gndLt" "4c5c53c001"
+"target" "auto2098"
+"origin" "5349.4 -980.9 5"
+"angles" "-0 76 0"
+"model" "vehicle_uaz_light_destructible"
+"classname" "script_model"
+"script_vehiclespawngroup" "0"
+}
+{
+"targetname" "auto2098"
+"angles" "-0 286 0"
+"lookahead" "2"
+"spawnflags" "1"
+"speed" "5"
+"target" "auto2099"
+"origin" "5280.5 -819.1 24"
+"classname" "info_vehicle_node"
+}
+{
+"script_vehicledetour" "8"
+"angles" "-0 286 0"
+"targetname" "auto2099"
+"origin" "5159.6 -618.3 24"
+"classname" "info_vehicle_node"
+}
+{
+"classname" "script_vehicle"
+"model" "vehicle_uaz_light_destructible"
+"origin" "5776 -1584 400"
+"vehicletype" "uaz"
+"targetname" "colmap_vehicle"
+}
+{
+"classname" "script_vehicle"
+"model" "vehicle_uaz_hardtop_destructible"
+"origin" "5776 -1584 400"
+"vehicletype" "uaz"
+"targetname" "colmap_vehicle"
+}
+{
+"classname" "script_vehicle"
+"model" "vehicle_uaz_open_destructible"
+"origin" "5776 -1584 400"
+"vehicletype" "uaz"
+"targetname" "colmap_vehicle"
+}
+{
+"classname" "script_vehicle"
+"model" "vehicle_uaz_fabric_destructible"
+"origin" "5776 -1584 400"
+"vehicletype" "uaz"
+"targetname" "colmap_vehicle"
+}
+{
+"classname" "script_vehicle"
+"model" "vehicle_bm21_mobile_bed_destructible"
+"origin" "5776 -1584 464"
+"vehicletype" "bm21_troops"
+"targetname" "colmap_vehicle"
+}
+{
+"classname" "script_vehicle"
+"model" "vehicle_bus_destructable"
+"origin" "5776 -1584 528"
+"vehicletype" "bus"
+"targetname" "colmap_vehicle"
+}
+{
+"classname" "script_vehicle"
+"model" "vehicle_80s_hatch1_green_destructible"
+"origin" "5776 -1584 592"
+"vehicletype" "80s_hatch1"
+"targetname" "colmap_vehicle"
+}
+{
+"classname" "script_vehicle"
+"model" "vehicle_80s_sedan1_red_destructible"
+"origin" "5776 -1584 656"
+"vehicletype" "80s_sedan1"
+"targetname" "colmap_vehicle"
+}
+{
+"origin" "4448 -1136 0"
+"export" "1"
+"model" "body_complete_sp_usmc_vasquez"
+"classname" "actor_ally_hero_price_desert"
+}
+{
+"targetname" "brushmodel"
+"classname" "script_brushmodel"
+"origin" "4096 -2368 44"
+"model" "*1"
+}
+{
+"targetname" "speedbump"
+"classname" "script_brushmodel"
+"origin" "4752 -2336 0"
+"model" "*2"
+}
+{
+"targetname" "speedbump"
+"classname" "script_brushmodel"
+"origin" "4656 -2336 0"
+"model" "*3"
+}
+{
+"targetname" "speedbump"
+"classname" "script_brushmodel"
+"origin" "4568 -2336 0"
+"model" "*4"
+}
+{
+"targetname" "speedbump"
+"classname" "script_brushmodel"
+"origin" "4568 -2424 0"
+"model" "*5"
+}
+{
+"targetname" "speedbump"
+"classname" "script_brushmodel"
+"origin" "4656 -2424 0"
+"model" "*6"
+}
+{
+"targetname" "speedbump"
+"classname" "script_brushmodel"
+"origin" "4752 -2424 0"
+"model" "*7"
+}
+{
+"gndLt" "4c5c53bf01"
+"destructible_type" "vehicle_80s_hatch2_tan"
+"targetname" "destructible"
+"origin" "4156 -1344 0"
+"model" "vehicle_80s_hatch2_tan_destructible"
+"classname" "script_model"
+"angles" "-0 270 0"
+}
+{
+"gndLt" "4c5c53bf01"
+"targetname" "delete_on_load"
+"origin" "4178 -1385.5 11"
+"model" "vehicle_80s_hatch2_tan_wheel_lf"
+"classname" "script_model"
+"angles" "-0 270 0"
+}
+{
+"gndLt" "4c5c53bf01"
+"targetname" "delete_on_load"
+"origin" "4178 -1304 11"
+"model" "vehicle_80s_hatch2_tan_wheel_lf"
+"classname" "script_model"
+"angles" "-0 270 0"
+}
+{
+"angles" "-0 270 -180"
+"targetname" "delete_on_load"
+"origin" "4133.5 -1385.5 11"
+"model" "vehicle_80s_hatch2_tan_wheel_lf"
+"classname" "script_model"
+}
+{
+"angles" "-0 270 -180"
+"targetname" "delete_on_load"
+"origin" "4133.5 -1304 11"
+"model" "vehicle_80s_hatch2_tan_wheel_lf"
+"classname" "script_model"
+}
+{
+"targetname" "vehicle_uaz_light_destructible"
+"classname" "script_vehicle_collmap"
+"model" "*8"
+}
+{
+"targetname" "vehicle_uaz_hardtop_destructible"
+"classname" "script_vehicle_collmap"
+"model" "*9"
+}
+{
+"targetname" "vehicle_uaz_open_destructible"
+"classname" "script_vehicle_collmap"
+"model" "*10"
+}
+{
+"targetname" "vehicle_uaz_fabric_destructible"
+"classname" "script_vehicle_collmap"
+"model" "*11"
+}
+{
+"targetname" "vehicle_bm21_mobile_bed_destructible"
+"classname" "script_vehicle_collmap"
+"model" "*12"
+}
+{
+"targetname" "vehicle_bus_destructable"
+"classname" "script_vehicle_collmap"
+"model" "*13"
+}
+{
+"targetname" "vehicle_80s_hatch1_green_destructible"
+"classname" "script_vehicle_collmap"
+"model" "*14"
+}
+{
+"targetname" "vehicle_80s_sedan1_red_destructible"
+"classname" "script_vehicle_collmap"
+"model" "*15"
+}

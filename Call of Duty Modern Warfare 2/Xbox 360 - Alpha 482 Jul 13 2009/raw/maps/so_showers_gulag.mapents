@@ -1,0 +1,29 @@
+{
+"origin" "0 0 0"
+"sunlight" "0.74"
+"suncolor" "0.88 0.93 1"
+"sundirection" "-70 72 0"
+"classname" "worldspawn"
+"ambient" ".116"
+"_color" "0.5 0.5 .62 1"
+"skylight" "0.56"
+"skycolor" "0.87 0.94 1"
+}
+{
+"origin" "-1441.7 -2015.9 576"
+"angles" "0 130 0"
+"classname" "info_player_start_so"
+}
+{
+"model" "?0"
+"origin" "-2352 -1968 720"
+"classname" "trigger_multiple_flag_set_touching"
+"script_flag" "player_trying_to_escape"
+"script_noteworthy" "player_trying_to_escape"
+}
+{
+"model" "?1"
+"origin" "-2528 -2224 720"
+"classname" "trigger_multiple_flag_set_touching"
+"script_flag" "player_has_escaped"
+}

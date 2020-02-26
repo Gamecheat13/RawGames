@@ -1,0 +1,130 @@
+version 13
+
+settings
+setdvar scr_maxlevel 11
+
+// Base gamemodes
+gametype hs_war
+name english "WAR"
+script twar
+teambased
+
+gametype hs_ffa
+name english "FREE-FOR-ALL"
+script dm
+rule scr_allowbattlechatter	0
+
+gametype hs_tdm
+name english "TEAM DEATHMATCH"
+script tdm
+teambased
+
+gametype hs_ctf
+name english "CAPTURE THE FLAG"
+script ctf
+teambased
+
+// Be sure that each category here is referenced by at least one playlist
+
+category infantry
+name english "BETA"
+description english "3 maps and several gamemodes from the full version of Call of Duty: World at War."
+icon playlist_infantry
+unlockxp 0
+
+// START ACTUAL PLAYLISTS WE WANT IN THE DEMO AND NO OTHERS
+
+playlist 1
+name english "War"
+description english "Capture battlefield command points. Secure and hold all positions to achieve victory.\nPlayers: 6-12"
+unlockxp 0
+maxparty 6
+categories infantry
+icon playlist_war
+rule party_minplayers 6 
+rule party_maxplayers 12
+rule party_matchedplayercount 4
+rule party_gameStartTimerLength 10
+rule scr_xpscale 1
+rule scr_game_perks 1
+mp_roundhouse,hs_war,1
+mp_makin,hs_war,1
+mp_castle,hs_war,1
+
+playlist 2 // hs_ctf gametype
+name english "Capture The Flag"
+description english "Get the enemy flag and return it to your base.\nPlayers: 6-12"
+unlockxp 0
+maxparty 6
+categories infantry
+icon playlist_ctf
+rule party_minplayers 6 //Should be 6 in release.
+rule party_maxplayers 12
+rule party_matchedplayercount 4
+rule party_gameStartTimerLength 10
+rule scr_xpscale 1
+rule scr_game_perks 1
+rule scr_vehicles_enabled 0
+mp_roundhouse,hs_ctf,1
+mp_makin,hs_ctf,1
+mp_castle,hs_ctf,1
+
+playlist 3 // hs_tdm gametype
+name english "Team Deathmatch"
+description english "Straight up Team Deathmatch. Use teamwork to kill enemy players and reach the score limit.\nPlayers: 6-12"
+unlockxp 0
+maxparty 6
+categories infantry
+icon playlist_tdm
+rule party_minplayers 6 //Should be 6 in release.
+rule party_maxplayers 12
+rule party_matchedplayercount 4
+rule party_readypercentrequired 0
+rule party_gameStartTimerLength 10
+rule scr_xpscale 1
+rule scr_game_perks 1
+mp_makin,hs_tdm,1
+mp_castle,hs_tdm,1
+mp_roundhouse,hs_tdm,1
+
+playlist 4 // hs_tdm gametype
+name english "Pick Up TDM"
+description english "Straight up Team Deathmatch with no parties allowed.\nPlayers: 6-12"
+unlockxp 0
+maxparty 1
+categories infantry
+icon playlist_tdm
+rule party_minplayers 6 
+rule party_maxplayers 12
+rule party_matchedplayercount 4
+rule party_gameStartTimerLength 10
+rule scr_xpscale 1
+rule scr_game_perks 1
+mp_makin,hs_tdm,1
+mp_castle,hs_tdm,1
+mp_roundhouse,hs_tdm,1
+
+playlist 5 // hs_tdm gametype
+name english "Free For All"
+description english "Kill or be killed. You are alone. Everyone wants you dead.\nPlayers: 6-12"
+unlockxp 0
+maxparty 6
+categories infantry
+icon playlist_ffa
+rule party_minplayers 6 
+rule party_maxplayers 12
+rule party_matchedplayercount 4
+rule party_gameStartTimerLength 10
+rule scr_xpscale 1
+rule scr_game_perks 1
+mp_makin,hs_ffa,1
+mp_castle,hs_ffa,1
+mp_roundhouse,hs_ffa,1
+
+// make sure their is a hard return after this line
+
+
+
+
+
+

@@ -1,0 +1,251 @@
+{
+"origin" "0 0 0"
+"sunlight" "0.74"
+"suncolor" "0.88 0.93 1"
+"sundirection" "-70 72 0"
+"classname" "worldspawn"
+"ambient" ".116"
+"_color" "0.5 0.5 .62 1"
+"skylight" "0.56"
+"skycolor" "0.87 0.94 1"
+}
+{
+"script_ammo_max" "1"
+"spawnflags" "1"
+"angles" "1.07037 340.724 98.1094"
+"origin" "10621 30020 -125.5"
+"model" "weapon_m79"
+"classname" "weapon_m79"
+}
+{
+"classname" "info_player_start_so"
+"angles" "0 195 0"
+"origin" "10720 29952 -131.1"
+}
+{
+"origin" "10611.5 29938.5 -131.2"
+"angles" "359.071 16.4742 93.1647"
+"spawnflags" "1"
+"model" "weapon_ak47_tactical"
+"classname" "weapon_ak47_grenadier"
+"script_ammo_max" "1"
+}
+{
+"model" "?0"
+"origin" "10400 28992 -64"
+"classname" "trigger_multiple_flag_set_touching"
+"script_flag" "player_trying_to_escape"
+"script_noteworthy" "player_trying_to_escape"
+}
+{
+"model" "?1"
+"origin" "10400 28608 -64"
+"classname" "trigger_multiple_flag_set_touching"
+"script_flag" "player_has_escaped"
+}
+{
+"model" "?2"
+"origin" "10496 43392 1072"
+"classname" "trigger_multiple_flag_set_touching"
+"script_flag" "player_trying_to_escape"
+"script_noteworthy" "player_trying_to_escape"
+}
+{
+"angles" "357.48 76.4539 89.9207"
+"origin" "10269.5 38947.5 773.5"
+"spawnflags" "1"
+"model" "weapon_rpg7"
+"classname" "weapon_rpg_player"
+"script_ammo_max" "1"
+}
+{
+"classname" "weapon_ak47_grenadier"
+"model" "weapon_ak47_tactical"
+"spawnflags" "1"
+"angles" "357.135 104.491 92.6644"
+"origin" "10282.5 38897.5 769.8"
+"script_ammo_max" "1"
+}
+{
+"classname" "weapon_m4_grenadier"
+"model" "weapon_m4"
+"origin" "10579 29963 -129.6"
+"angles" "359.328 12.0817 93.1296"
+"spawnflags" "1"
+"script_ammo_max" "1"
+}
+{
+"classname" "weapon_m16_grenadier"
+"model" "weapon_m16"
+"origin" "10610 29989 -127.3"
+"angles" "2.34576 203.151 92.5983"
+"spawnflags" "1"
+"script_ammo_max" "1"
+}
+{
+"classname" "script_model_pickup_sentry_minigun"
+"model" "sentry_minigun_folded"
+"angles" "359.357 190.736 -4.66933"
+"origin" "10611 29770 -141.8"
+}
+{
+"script_ammo_max" "1"
+"spawnflags" "1"
+"angles" "359.947 0.697695 94.9"
+"origin" "10582 30025 -125.5"
+"model" "weapon_m79"
+"classname" "weapon_m79"
+}
+{
+"angles" "356.559 88.5978 86.2282"
+"origin" "10598.5 34308.5 186.5"
+"spawnflags" "1"
+"model" "weapon_rpg7"
+"classname" "weapon_rpg_player"
+"script_ammo_max" "1"
+}
+{
+"origin" "10529.5 34206.5 179.8"
+"angles" "357.135 104.491 92.6644"
+"spawnflags" "1"
+"model" "weapon_ak47_tactical"
+"classname" "weapon_ak47_grenadier"
+"script_ammo_max" "1"
+}
+{
+"model" "?3"
+"origin" "10496 43776 1072"
+"classname" "trigger_multiple_flag_set_touching"
+"script_flag" "player_has_escaped"
+}
+{
+"classname" "weapon_rpg_player"
+"model" "weapon_rpg7"
+"spawnflags" "1"
+"origin" "10633.6 34280.8 184.5"
+"angles" "4.41486 259.086 84.7152"
+"script_ammo_max" "1"
+}
+{
+"classname" "weapon_m79"
+"model" "weapon_m79"
+"origin" "10639.2 34352.3 188.5"
+"angles" "356.98 56.91 94.4462"
+"count" "999"
+"spawnflags" "1"
+"script_ammo_max" "1"
+}
+{
+"classname" "weapon_m79"
+"model" "weapon_m79"
+"origin" "10786 41422 856.5"
+"angles" "0.6697 5.20311 94.7824"
+"count" "999"
+"script_ammo_max" "1"
+}
+{
+"angles" "1.45855 191.398 86.1077"
+"origin" "10750.5 41441.5 857.5"
+"spawnflags" "1"
+"model" "weapon_rpg7"
+"classname" "weapon_rpg_player"
+"script_ammo_max" "1"
+}
+{
+"classname" "weapon_m4_grenadier"
+"model" "weapon_m4"
+"origin" "10501 34255 183.4"
+"angles" "2.9783 286.103 94.183"
+"spawnflags" "1"
+"script_ammo_max" "1"
+}
+{
+"classname" "weapon_m16_grenadier"
+"model" "weapon_m16"
+"origin" "10487 34199 179.7"
+"angles" "3.48534 288.271 92.975"
+"spawnflags" "1"
+"script_ammo_max" "1"
+}
+{
+"classname" "weapon_m79"
+"model" "weapon_m79"
+"origin" "10595 34357 188.5"
+"angles" "356.98 98.7101 94.4462"
+"count" "999"
+"spawnflags" "1"
+"script_ammo_max" "1"
+}
+{
+"classname" "script_model_pickup_sentry_minigun"
+"model" "sentry_minigun_folded"
+"angles" "359.357 215.736 -4.66933"
+"origin" "10589 29825 -136.8"
+}
+{
+"spawnflags" "1"
+"angles" "1.58554 288.243 92.3479"
+"origin" "10228 38888 769.7"
+"model" "weapon_m16"
+"classname" "weapon_m16_grenadier"
+"script_ammo_max" "1"
+}
+{
+"classname" "weapon_m79"
+"model" "weapon_m79"
+"origin" "10226 38959 772.5"
+"angles" "356.98 98.7101 94.4462"
+"count" "999"
+"spawnflags" "1"
+"script_ammo_max" "1"
+}
+{
+"angles" "1.45855 331.898 86.1077"
+"origin" "10775.5 41479.5 858.5"
+"spawnflags" "1"
+"model" "weapon_rpg7"
+"classname" "weapon_rpg_player"
+"script_ammo_max" "1"
+}
+{
+"origin" "10710.5 41353.5 853.8"
+"angles" "357.135 104.491 92.6644"
+"spawnflags" "1"
+"model" "weapon_ak47_tactical"
+"classname" "weapon_ak47_grenadier"
+"script_ammo_max" "1"
+}
+{
+"classname" "weapon_m4_grenadier"
+"model" "weapon_m4"
+"origin" "10668 41360 854.4"
+"angles" "2.20958 286.095 93.9609"
+"script_ammo_max" "1"
+}
+{
+"classname" "weapon_m16_grenadier"
+"model" "weapon_m16"
+"origin" "10646 41312 852.7"
+"angles" "2.25064 288.25 92.5671"
+"script_ammo_max" "1"
+}
+{
+"classname" "weapon_m79"
+"model" "weapon_m79"
+"origin" "10788 41512 858.5"
+"angles" "0.6697 5.20311 94.7824"
+"count" "999"
+"script_ammo_max" "1"
+}
+{
+"classname" "script_model_pickup_sentry_minigun"
+"model" "sentry_minigun_folded"
+"angles" "359.357 201.736 -4.66933"
+"origin" "10239 39117 778.2"
+}
+{
+"classname" "script_model_pickup_sentry_minigun"
+"model" "sentry_minigun_folded"
+"angles" "1.31519 281.737 -4.26254"
+"origin" "10257 39049 776.2"
+}

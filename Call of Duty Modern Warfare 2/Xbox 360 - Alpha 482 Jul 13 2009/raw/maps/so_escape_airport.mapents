@@ -1,0 +1,551 @@
+{
+"origin" "0 0 0"
+"sunlight" "0.74"
+"suncolor" "0.88 0.93 1"
+"sundirection" "-70 72 0"
+"classname" "worldspawn"
+"ambient" ".116"
+"_color" "0.5 0.5 .62 1"
+"skylight" "0.56"
+"skycolor" "0.87 0.94 1"
+}
+{
+"model" "?0"
+"script_specialops" "1"
+"origin" "5088 1928 320"
+"classname" "trigger_multiple_spawn"
+"target" "me1_auto2"
+}
+{
+"script_specialops" "1"
+"classname" "script_struct"
+"targetname" "me1_auto4"
+"origin" "4296 2680 320"
+"radius" "32"
+}
+{
+"script_specialops" "1"
+"classname" "info_player_start_so"
+"angles" "0 180 0"
+"origin" "6576 1648 64"
+}
+{
+"script_specialops" "1"
+"targetname" "me1_auto1"
+"export" "3"
+"script_noteworthy" "security_stairs"
+"classname" "actor_enemy_airport_security_SMG"
+"model" "body_secret_service_smg"
+"angles" "0 0 0"
+"spawnflags" "7"
+"origin" "4080 2088 336"
+}
+{
+"script_specialops" "1"
+"targetname" "me1_auto1"
+"script_noteworthy" "security_stairs"
+"spawnflags" "7"
+"origin" "3776 3384 332"
+"angles" "0 270 0"
+"export" "1"
+"model" "body_secret_service_smg"
+"classname" "actor_enemy_airport_security_SMG"
+}
+{
+"model" "?1"
+"script_specialops" "1"
+"origin" "5912 1632 176"
+"classname" "trigger_multiple_spawn"
+"target" "me1_auto1"
+}
+{
+"script_specialops" "1"
+"targetname" "me1_auto1"
+"export" "4"
+"script_noteworthy" "security_stairs"
+"classname" "actor_enemy_airport_security_SMG"
+"model" "body_secret_service_smg"
+"angles" "0 180 0"
+"spawnflags" "7"
+"origin" "5472 2704 336"
+}
+{
+"script_specialops" "1"
+"angles" "0 330 0"
+"export" "41"
+"model" "body_opforce_fsb_assault_a"
+"classname" "actor_enemy_FSB_riotshield"
+"spawnflags" "11"
+"origin" "4037.1 2908.8 320"
+"script_noteworthy" "riotshield_shops"
+"targetname" "me1_auto2"
+"target" "me1_auto23"
+}
+{
+"script_specialops" "1"
+"classname" "script_struct"
+"targetname" "me1_auto3"
+"origin" "4232 2512 320"
+"radius" "32"
+}
+{
+"model" "?2"
+"script_specialops" "1"
+"origin" "2600 3036 64"
+"script_noteworthy" "escaped_trigger"
+"classname" "trigger_multiple"
+}
+{
+"model" "?3"
+"script_specialops" "1"
+"origin" "3424 3428 432"
+"classname" "trigger_multiple_flag_set"
+"script_flag" "security_accompanying_riotshield_shops_kill"
+}
+{
+"script_specialops" "1"
+"angles" "0 330 0"
+"export" "6"
+"model" "body_opforce_fsb_assault_a"
+"classname" "actor_enemy_FSB_riotshield"
+"spawnflags" "11"
+"origin" "3919 2564.8 320"
+"script_noteworthy" "riotshield_shops"
+"targetname" "me1_auto2"
+"target" "me1_auto3"
+}
+{
+"script_specialops" "1"
+"classname" "script_struct"
+"targetname" "me1_auto23"
+"origin" "4272 2776 320"
+"radius" "32"
+}
+{
+"script_specialops" "1"
+"angles" "0 330 0"
+"export" "9"
+"model" "body_opforce_fsb_assault_a"
+"classname" "actor_enemy_FSB_riotshield"
+"spawnflags" "11"
+"origin" "4069.7 2807.5 320"
+"script_noteworthy" "riotshield_shops"
+"targetname" "me1_auto2"
+"target" "me1_auto4"
+}
+{
+"script_specialops" "1"
+"angles" "0 330 0"
+"export" "10"
+"model" "body_opforce_fsb_assault_a"
+"classname" "actor_enemy_FSB_riotshield"
+"spawnflags" "11"
+"origin" "3957.1 3148.8 320"
+"script_noteworthy" "riotshield_shops"
+"targetname" "me1_auto2"
+"target" "me1_auto6"
+}
+{
+"script_specialops" "1"
+"classname" "script_struct"
+"targetname" "me1_auto6"
+"origin" "4272 2856 320"
+"radius" "32"
+}
+{
+"script_specialops" "1"
+"targetname" "me1_auto8"
+"export" "42"
+"script_noteworthy" "security_shops"
+"classname" "actor_enemy_airport_security_SMG"
+"model" "body_secret_service_smg"
+"angles" "0 270 0"
+"spawnflags" "7"
+"origin" "3600 4920 320"
+}
+{
+"model" "?4"
+"script_specialops" "1"
+"origin" "5024 2232 448"
+"classname" "trigger_multiple"
+"targetname" "riotshield_shops_movein_trig"
+}
+{
+"model" "?5"
+"script_specialops" "1"
+"origin" "3768 3000 448"
+"classname" "trigger_multiple_spawn"
+"target" "me1_auto10"
+}
+{
+"script_specialops" "1"
+"classname" "weapon_rpg_player"
+"model" "weapon_rpg7"
+"angles" "0 147.8 90"
+"origin" "6038 1700 96"
+"script_ammo_clip" "999"
+"script_ammo_extra" "999"
+}
+{
+"model" "?6"
+"script_specialops" "1"
+"origin" "4416 2800 432"
+"classname" "trigger_multiple_spawn"
+"target" "me1_auto8"
+}
+{
+"script_specialops" "1"
+"targetname" "me1_auto8"
+"export" "13"
+"script_noteworthy" "security_shops"
+"classname" "actor_enemy_airport_security_SMG"
+"model" "body_secret_service_smg"
+"angles" "0 0 0"
+"spawnflags" "7"
+"origin" "2772 3290 324"
+}
+{
+"script_specialops" "1"
+"targetname" "me1_auto8"
+"export" "14"
+"script_noteworthy" "security_shops"
+"classname" "actor_enemy_airport_security_SMG"
+"model" "body_secret_service_smg"
+"angles" "0 180 0"
+"spawnflags" "7"
+"origin" "2632 5216 320"
+}
+{
+"model" "?7"
+"script_specialops" "1"
+"origin" "3840 2984 432"
+"classname" "trigger_multiple_flag_set"
+"script_flag" "security_stairs_kill"
+}
+{
+"script_specialops" "1"
+"targetname" "me1_auto9"
+"export" "15"
+"script_noteworthy" "security_shops_ambush"
+"classname" "actor_enemy_airport_security_SMG"
+"model" "body_secret_service_smg"
+"angles" "0 270 0"
+"spawnflags" "15"
+"origin" "3904 4544 320"
+"script_combatmode" "ambush"
+}
+{
+"script_specialops" "1"
+"targetname" "me1_auto9"
+"script_noteworthy" "security_shops_ambush"
+"spawnflags" "15"
+"origin" "3892 3672 332"
+"angles" "0 178 0"
+"export" "16"
+"model" "body_secret_service_smg"
+"classname" "actor_enemy_airport_security_SMG"
+"script_combatmode" "ambush"
+}
+{
+"model" "?8"
+"script_specialops" "1"
+"origin" "4368 2800 432"
+"classname" "trigger_multiple_spawn"
+"target" "me1_auto9"
+}
+{
+"model" "?9"
+"script_specialops" "1"
+"origin" "3424 3420 432"
+"classname" "trigger_multiple_flag_set"
+"script_flag" "riotshield_shops_kill"
+}
+{
+"script_specialops" "1"
+"targetname" "me1_auto9"
+"export" "18"
+"script_noteworthy" "security_shops_ambush"
+"classname" "actor_enemy_airport_security_SMG"
+"model" "body_secret_service_smg"
+"angles" "0 270 0"
+"spawnflags" "15"
+"origin" "3680 4928 320"
+"script_combatmode" "ambush"
+}
+{
+"model" "?10"
+"script_specialops" "1"
+"origin" "2336 4352 160"
+"classname" "trigger_multiple_spawn"
+"target" "me1_auto19"
+}
+{
+"model" "?11"
+"script_specialops" "1"
+"origin" "3936 2984 432"
+"classname" "trigger_multiple_spawn"
+"target" "me1_auto16"
+}
+{
+"script_specialops" "1"
+"radius" "32"
+"origin" "2425.3 4505.2 320"
+"targetname" "me1_auto13"
+"classname" "script_struct"
+"angles" "0 15 0"
+}
+{
+"script_specialops" "1"
+"target" "me1_auto13"
+"targetname" "me1_auto10"
+"script_noteworthy" "riotshield_ground"
+"origin" "2138 4040 64"
+"spawnflags" "11"
+"classname" "actor_enemy_FSB_riotshield"
+"model" "body_opforce_fsb_assault_a"
+"export" "20"
+"angles" "0 90 0"
+"script_forcegoal" "1"
+}
+{
+"script_specialops" "1"
+"target" "me1_auto14"
+"targetname" "me1_auto10"
+"script_noteworthy" "riotshield_ground"
+"origin" "2144 3994 64"
+"spawnflags" "11"
+"classname" "actor_enemy_FSB_riotshield"
+"model" "body_opforce_fsb_assault_a"
+"export" "21"
+"angles" "0 90 0"
+"script_forcegoal" "1"
+}
+{
+"script_specialops" "1"
+"targetname" "me1_auto16"
+"export" "25"
+"script_noteworthy" "security_ground"
+"classname" "actor_enemy_airport_security_SMG"
+"model" "body_secret_service_smg"
+"angles" "0 90 0"
+"spawnflags" "7"
+"origin" "2096 4076 64"
+}
+{
+"script_specialops" "1"
+"classname" "weapon_rpg_player"
+"model" "weapon_rpg7"
+"angles" "0 287.7 90"
+"origin" "6068 1935 96"
+"spawnflags" "0"
+"script_ammo_clip" "999"
+"script_ammo_extra" "999"
+}
+{
+"script_specialops" "1"
+"classname" "weapon_masada_grenadier_acog"
+"model" "weapon_magpul_masada_dust"
+"angles" "0.0939251 138.3 89.9658"
+"origin" "6008 1695 96"
+}
+{
+"script_specialops" "1"
+"radius" "32"
+"origin" "2406.7 4574.8 320"
+"targetname" "me1_auto14"
+"classname" "script_struct"
+"angles" "0 15 0"
+}
+{
+"script_specialops" "1"
+"targetname" "me1_auto16"
+"export" "26"
+"script_noteworthy" "security_ground"
+"classname" "actor_enemy_airport_security_SMG"
+"model" "body_secret_service_smg"
+"angles" "0 90 0"
+"spawnflags" "7"
+"origin" "2144 4076 64"
+}
+{
+"script_specialops" "1"
+"origin" "6007 1947 96"
+"angles" "0.0939251 340 89.9658"
+"model" "weapon_magpul_masada_dust"
+"classname" "weapon_masada_grenadier_acog"
+}
+{
+"script_specialops" "1"
+"targetname" "me1_auto2"
+"script_noteworthy" "security_accompanying_riotshield_shops"
+"spawnflags" "7"
+"origin" "3748 3344 320"
+"angles" "0 223 0"
+"export" "34"
+"model" "body_secret_service_smg"
+"classname" "actor_enemy_airport_security_SMG"
+}
+{
+"model" "?12"
+"script_specialops" "1"
+"origin" "2656 4856 408"
+"classname" "trigger_multiple_spawn"
+"target" "me1_auto17"
+}
+{
+"script_specialops" "1"
+"targetname" "me1_auto17"
+"export" "29"
+"script_noteworthy" "security_elevator"
+"classname" "actor_enemy_airport_security_SMG"
+"model" "body_secret_service_smg"
+"angles" "0 180 0"
+"spawnflags" "15"
+"origin" "3084 4558 72"
+}
+{
+"model" "?13"
+"script_specialops" "1"
+"origin" "5904 1632 176"
+"classname" "trigger_multiple"
+"script_noteworthy" "start_terminal"
+}
+{
+"script_specialops" "1"
+"targetname" "me1_auto17"
+"export" "31"
+"script_noteworthy" "security_elevator"
+"classname" "actor_enemy_airport_security_SMG"
+"model" "body_secret_service_smg"
+"angles" "0 0 0"
+"spawnflags" "15"
+"origin" "2392 4432 64"
+}
+{
+"model" "?14"
+"script_specialops" "1"
+"origin" "2696 4744 408"
+"classname" "trigger_multiple_flag_set"
+"script_flag" "security_shops_kill"
+}
+{
+"model" "?15"
+"script_specialops" "1"
+"origin" "2712 4744 408"
+"script_flag" "security_shops_ambush_kill"
+"classname" "trigger_multiple_flag_set"
+}
+{
+"script_specialops" "1"
+"targetname" "me1_auto17"
+"script_noteworthy" "security_elevator"
+"spawnflags" "15"
+"origin" "2976 3112 64"
+"angles" "0 358 0"
+"export" "32"
+"model" "body_secret_service_smg"
+"classname" "actor_enemy_airport_security_SMG"
+}
+{
+"script_specialops" "1"
+"targetname" "me1_auto17"
+"export" "33"
+"script_noteworthy" "security_elevator"
+"classname" "actor_enemy_airport_security_SMG"
+"model" "body_secret_service_smg"
+"angles" "0 0 0"
+"spawnflags" "15"
+"origin" "2992 3158 64"
+}
+{
+"script_specialops" "1"
+"targetname" "me1_auto2"
+"script_noteworthy" "security_accompanying_riotshield_shops"
+"spawnflags" "7"
+"origin" "3332 3192 320"
+"angles" "0 358 0"
+"export" "36"
+"model" "body_secret_service_smg"
+"classname" "actor_enemy_airport_security_SMG"
+}
+{
+"script_specialops" "1"
+"radius" "32"
+"origin" "2975.4 3391.6 64"
+"targetname" "me1_auto18"
+"classname" "script_struct"
+"angles" "0 129 0"
+}
+{
+"script_specialops" "1"
+"target" "me1_auto18"
+"targetname" "me1_auto19"
+"script_noteworthy" "riotshield_exit"
+"origin" "2952 3158 64"
+"spawnflags" "15"
+"classname" "actor_enemy_FSB_riotshield"
+"model" "body_opforce_fsb_assault_a"
+"export" "37"
+"angles" "0 0 0"
+"script_forcegoal" "1"
+"script_moveoverride" "1"
+"script_forcespawn" "1"
+}
+{
+"script_specialops" "1"
+"target" "me1_auto20"
+"targetname" "me1_auto19"
+"script_noteworthy" "riotshield_exit"
+"origin" "2954 3064 64"
+"spawnflags" "15"
+"classname" "actor_enemy_FSB_riotshield"
+"model" "body_opforce_fsb_assault_a"
+"export" "38"
+"angles" "0 0 0"
+"script_forcegoal" "1"
+"script_moveoverride" "1"
+"script_forcespawn" "1"
+}
+{
+"script_specialops" "1"
+"radius" "32"
+"origin" "3053.7 3435.9 64"
+"targetname" "me1_auto20"
+"classname" "script_struct"
+"angles" "0 105 0"
+}
+{
+"script_specialops" "1"
+"radius" "32"
+"origin" "2946.3 3348.1 64"
+"targetname" "me1_auto22"
+"classname" "script_struct"
+"angles" "0 156 0"
+}
+{
+"script_specialops" "1"
+"target" "me1_auto22"
+"targetname" "me1_auto19"
+"script_noteworthy" "riotshield_exit"
+"origin" "2930 3116 64"
+"spawnflags" "15"
+"classname" "actor_enemy_FSB_riotshield"
+"model" "body_opforce_fsb_assault_a"
+"export" "40"
+"angles" "0 0 0"
+"script_forcegoal" "1"
+"script_moveoverride" "1"
+"script_forcespawn" "1"
+}
+{
+"script_specialops" "1"
+"classname" "script_struct"
+"script_noteworthy" "terminal_objective"
+"origin" "2504 3080 -32"
+}
+{
+"script_specialops" "1"
+"classname" "info_player_start_soPlayer2"
+"angles" "0 180 0"
+"origin" "6576 1552 64"
+}

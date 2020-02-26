@@ -1,0 +1,2274 @@
+{
+"contrastGain" "0.425"
+"diffusefraction" "0.5"
+"_color" ".8 .9 1"
+"sunlight" "1"
+"sundirection" "-45 -144 0"
+"sundiffusecolor" ".9 0.88 .75"
+"suncolor" "1 0.94 0.80"
+"ambient" ".02"
+"bouncefraction" ".7"
+"classname" "worldspawn"
+}
+{
+"origin" "312 -4 108"
+"angles" "0 186 0"
+"classname" "mp_global_intermission"
+}
+{
+"angles" "0 2.50448e-006 0"
+"origin" "62 -1098 49.5"
+"classname" "mp_tdm_spawn"
+}
+{
+"dmg" "100000"
+"classname" "trigger_hurt"
+"origin" "956 668 -160"
+"model" "*1"
+}
+{
+"origin" "328 -136 72"
+"angles" "0 180 0"
+"classname" "info_player_start"
+}
+{
+"gndLt" "4f4c417a01"
+"destructible_type" "vehicle_80s_sedan1_brn"
+"targetname" "destructible"
+"origin" "74 4 8"
+"model" "vehicle_80s_sedan1_brn_destructible_mp"
+"classname" "script_model"
+"angles" "0 340 0"
+}
+{
+"gndLt" "4c4a3f6501"
+"destructible_type" "vehicle_80s_sedan1_green"
+"targetname" "destructible"
+"origin" "564.2 -13.1 8"
+"model" "vehicle_80s_sedan1_green_destructible_mp"
+"classname" "script_model"
+"angles" "0 230 0"
+}
+{
+"angles" "0 180 0"
+"origin" "-609 -1093 87"
+"classname" "mp_tdm_spawn"
+}
+{
+"angles" "0 2.50448e-006 0"
+"origin" "-2106 -1497 36"
+"classname" "mp_tdm_spawn"
+}
+{
+"angles" "0 2.50448e-006 0"
+"origin" "-2447 -1379 70"
+"classname" "mp_tdm_spawn"
+}
+{
+"angles" "0 180 0"
+"origin" "-1448 473 39"
+"classname" "mp_tdm_spawn"
+}
+{
+"angles" "0 270 0"
+"origin" "-1284 2105 53"
+"classname" "mp_tdm_spawn"
+}
+{
+"angles" "0 322 0"
+"origin" "153 1927.5 41"
+"classname" "mp_tdm_spawn"
+}
+{
+"angles" "0 180 0"
+"origin" "1965 779 44"
+"classname" "mp_tdm_spawn"
+}
+{
+"angles" "0 180 0"
+"origin" "1940 303 44"
+"classname" "mp_tdm_spawn"
+}
+{
+"angles" "0 2.50448e-006 0"
+"origin" "1213 -7 44"
+"classname" "mp_tdm_spawn"
+}
+{
+"angles" "0 90 0"
+"origin" "1955 -1496 52"
+"classname" "mp_tdm_spawn"
+}
+{
+"angles" "0 180 0"
+"origin" "1342 -1211 80"
+"classname" "mp_tdm_spawn"
+}
+{
+"angles" "0 90 0"
+"origin" "-50 -2108 148"
+"classname" "mp_tdm_spawn"
+}
+{
+"gndLt" "48463c5e01"
+"destructible_type" "vehicle_80s_sedan1_brn"
+"targetname" "destructible"
+"origin" "556.8 -627.5 7.5"
+"model" "vehicle_80s_sedan1_brn_destructible_mp"
+"classname" "script_model"
+"angles" "0 311.4 0"
+}
+{
+"angles" "0 90 0"
+"origin" "347 701 44"
+"classname" "mp_tdm_spawn"
+}
+{
+"script_label" "_c"
+"model" "prop_flag_neutral"
+"script_gameobjectname" "dom onslaught"
+"origin" "1236 480 16"
+"targetname" "flag_primary"
+"height" "128"
+"radius" "160"
+"classname" "trigger_radius"
+"angles" "0 90 0"
+}
+{
+"gndLt" "37352c0e01"
+"destructible_type" "vehicle_80s_sedan1_green"
+"targetname" "destructible"
+"origin" "-576 -944 17"
+"model" "vehicle_80s_sedan1_green_destructible_mp"
+"classname" "script_model"
+"angles" "1.78991 0 0"
+}
+{
+"targetname" "flag_descriptor"
+"origin" "-1478 -873 72"
+"script_linkto" "flag2"
+"script_linkname" "flag1"
+"classname" "script_origin"
+}
+{
+"targetname" "flag_descriptor"
+"origin" "1282 471 72"
+"script_linkto" "flag2"
+"script_linkname" "flag3"
+"classname" "script_origin"
+}
+{
+"classname" "mp_tdm_spawn"
+"origin" "-416 -2349 236"
+"angles" "0 180 0"
+}
+{
+"angles" "0 2.50448e-006 0"
+"origin" "-2428 -385 39"
+"classname" "mp_tdm_spawn"
+}
+{
+"gndLt" "49473c7101"
+"destructible_type" "vehicle_80s_sedan1_brn"
+"targetname" "destructible"
+"origin" "-1055.4 -699.6 12"
+"model" "vehicle_80s_sedan1_brn_destructible_mp"
+"classname" "script_model"
+"angles" "0 326.1 0"
+}
+{
+"origin" "3032 -3528 8"
+"targetname" "minimap_corner"
+"classname" "script_origin"
+}
+{
+"origin" "-2856 2904 8"
+"targetname" "minimap_corner"
+"classname" "script_origin"
+}
+{
+"targetname" "flag_descriptor"
+"origin" "-604 531 100"
+"script_linkto" "flag1 flag3"
+"script_linkname" "flag2"
+"classname" "script_origin"
+}
+{
+"classname" "trigger_radius"
+"radius" "160"
+"height" "128"
+"targetname" "flag_primary"
+"origin" "-1524 -874 7"
+"script_gameobjectname" "dom onslaught"
+"model" "prop_flag_neutral"
+"script_label" "_a"
+"angles" "0 180 0"
+}
+{
+"script_label" "_b"
+"model" "prop_flag_neutral"
+"script_gameobjectname" "dom onslaught"
+"origin" "-640.5 500.2 16"
+"targetname" "flag_primary"
+"height" "128"
+"radius" "160"
+"classname" "trigger_radius"
+"angles" "0 2.50448e-006 0"
+}
+{
+"gndLt" "4d4a3f4401"
+"destructible_type" "vehicle_80s_sedan1_brn"
+"targetname" "destructible"
+"origin" "-961.1 -166 8"
+"model" "vehicle_80s_sedan1_brn_destructible_mp"
+"classname" "script_model"
+"angles" "0 220.5 0"
+}
+{
+"script_label" "_a"
+"script_bombmode_original" "1"
+"target" "pf1239_auto1"
+"script_gameobjectname" "bombzone"
+"targetname" "bombzone"
+"classname" "trigger_use_touch"
+"origin" "-648 1672 8"
+"model" "*2"
+}
+{
+"targetname" "pf1239_auto2"
+"classname" "trigger_use_touch"
+"script_gameobjectname" "bombzone"
+"origin" "-648 1672 8"
+"model" "*3"
+}
+{
+"script_exploder" "12391"
+"targetname" "exploder"
+"spawnflags" "4"
+"origin" "-648 1672 0.1"
+"angles" "0 90 0"
+"model" "com_bomb_objective_d"
+"classname" "script_model"
+}
+{
+"script_gameobjectname" "bombzone"
+"classname" "script_brushmodel"
+"origin" "-647 1672 28"
+"model" "*4"
+}
+{
+"classname" "script_model"
+"model" "com_bomb_objective"
+"angles" "0 270 0"
+"origin" "-648 1672 0.1"
+"script_exploder" "12391"
+"script_gameobjectname" "bombzone"
+"spawnflags" "4"
+"targetname" "pf1239_auto1"
+"target" "pf1239_auto2"
+}
+{
+"script_label" "_b"
+"script_bombmode_original" "1"
+"target" "pf1244_auto1"
+"script_gameobjectname" "bombzone"
+"targetname" "bombzone"
+"classname" "trigger_use_touch"
+"origin" "1514 440 24"
+"model" "*5"
+}
+{
+"targetname" "pf1244_auto2"
+"classname" "trigger_use_touch"
+"script_gameobjectname" "bombzone"
+"origin" "1514 440 24"
+"model" "*6"
+}
+{
+"target" "pf1244_auto2"
+"targetname" "pf1244_auto1"
+"spawnflags" "4"
+"script_gameobjectname" "bombzone"
+"script_exploder" "12442"
+"origin" "1514 440 16.1"
+"angles" "0 180 0"
+"model" "com_bomb_objective"
+"classname" "script_model"
+}
+{
+"script_exploder" "12442"
+"targetname" "exploder"
+"spawnflags" "4"
+"origin" "1514 440 16.1"
+"angles" "0 3.18772e-006 0"
+"model" "com_bomb_objective_d"
+"classname" "script_model"
+}
+{
+"script_gameobjectname" "bombzone"
+"classname" "script_brushmodel"
+"origin" "1514 440 44"
+"model" "*7"
+}
+{
+"script_gameobjectname" "bombzone"
+"classname" "trigger_use_touch"
+"targetname" "bombtrigger"
+"origin" "-3792 4816 2208"
+"model" "*8"
+}
+{
+"origin" "1600 1778 32"
+"angles" "0 270 0"
+"classname" "mp_sd_spawn_defender"
+}
+{
+"origin" "1696 1778 32"
+"angles" "0 270 0"
+"classname" "mp_sd_spawn_defender"
+}
+{
+"origin" "1696 1890 32"
+"angles" "0 270 0"
+"classname" "mp_sd_spawn_defender"
+}
+{
+"origin" "1600 2018 32"
+"angles" "0 270 0"
+"classname" "mp_sd_spawn_defender"
+}
+{
+"origin" "1712 1970 32"
+"angles" "0 270 0"
+"classname" "mp_sd_spawn_defender"
+}
+{
+"origin" "1712 2034 32"
+"angles" "0 270 0"
+"classname" "mp_sd_spawn_defender"
+}
+{
+"origin" "1600 2098 32"
+"angles" "0 270 0"
+"classname" "mp_sd_spawn_defender"
+}
+{
+"origin" "1792 1922 32"
+"angles" "0 270 0"
+"classname" "mp_sd_spawn_defender"
+}
+{
+"origin" "1792 2002 32"
+"angles" "0 270 0"
+"classname" "mp_sd_spawn_defender"
+}
+{
+"origin" "1600 1890 32"
+"angles" "0 270 0"
+"classname" "mp_sd_spawn_defender"
+}
+{
+"origin" "-1360 -2176 236"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_sd_spawn_attacker"
+}
+{
+"origin" "-1360 -2224 236"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_sd_spawn_attacker"
+}
+{
+"origin" "-1360 -2272 236"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_sd_spawn_attacker"
+}
+{
+"origin" "-1360 -2320 236"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_sd_spawn_attacker"
+}
+{
+"origin" "-1264 -2192 236"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_sd_spawn_attacker"
+}
+{
+"origin" "-1264 -2240 236"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_sd_spawn_attacker"
+}
+{
+"origin" "-1264 -2288 236"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_sd_spawn_attacker"
+}
+{
+"origin" "-1264 -2336 236"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_sd_spawn_attacker"
+}
+{
+"origin" "-1168 -2224 236"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_sd_spawn_attacker"
+}
+{
+"origin" "-1168 -2272 236"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_sd_spawn_attacker"
+}
+{
+"spawnflags" "4"
+"script_gameobjectname" "sd"
+"origin" "-976 -2160 208"
+"targetname" "sd_bomb"
+"model" "mil_tntbomb_mp"
+"classname" "script_model"
+}
+{
+"script_gameobjectname" "sd"
+"targetname" "sd_bomb_pickup_trig"
+"classname" "trigger_multiple"
+"origin" "-976 -2160 208"
+"model" "*9"
+}
+{
+"classname" "trigger_use_touch"
+"targetname" "sab_bomb_allies"
+"script_gameobjectname" "sab"
+"target" "pf1272_auto1"
+"origin" "-1555 -873 15"
+"model" "*10"
+}
+{
+"targetname" "sab_bomb_defuse_allies"
+"script_gameobjectname" "sab"
+"classname" "trigger_use_touch"
+"origin" "-1555 -873 15"
+"model" "*11"
+}
+{
+"script_gameobjectname" "sab"
+"classname" "script_brushmodel"
+"origin" "-1555 -873 35"
+"model" "*12"
+}
+{
+"targetname" "pf1272_auto1"
+"spawnflags" "4"
+"script_gameobjectname" "sab"
+"script_exploder" "12721"
+"origin" "-1555.2 -873 7"
+"angles" "0 359.971 0"
+"model" "com_bomb_objective"
+"classname" "script_model"
+}
+{
+"script_exploder" "12721"
+"targetname" "exploder"
+"spawnflags" "4"
+"origin" "-1555.2 -873 7"
+"angles" "0 179.971 0"
+"model" "com_bomb_objective_d"
+"classname" "script_model"
+}
+{
+"spawnflags" "4"
+"script_gameobjectname" "sab"
+"origin" "-244 -118 8"
+"targetname" "sab_bomb"
+"model" "mil_tntbomb_mp"
+"classname" "script_model"
+}
+{
+"script_gameobjectname" "sab"
+"targetname" "sab_bomb_pickup_trig"
+"classname" "trigger_multiple"
+"origin" "-244 -118 8"
+"model" "*13"
+}
+{
+"classname" "trigger_use_touch"
+"targetname" "sab_bomb_axis"
+"script_gameobjectname" "sab"
+"target" "pf1279_auto1"
+"origin" "1470 440 24"
+"model" "*14"
+}
+{
+"targetname" "sab_bomb_defuse_axis"
+"script_gameobjectname" "sab"
+"classname" "trigger_use_touch"
+"origin" "1470 440 24"
+"model" "*15"
+}
+{
+"targetname" "pf1279_auto1"
+"spawnflags" "4"
+"script_gameobjectname" "sab"
+"script_exploder" "12792"
+"origin" "1470 440 16"
+"angles" "0 180 0"
+"model" "com_bomb_objective"
+"classname" "script_model"
+}
+{
+"script_exploder" "12792"
+"targetname" "exploder"
+"spawnflags" "4"
+"origin" "1470 440 16"
+"angles" "0 3.18772e-006 0"
+"model" "com_bomb_objective_d"
+"classname" "script_model"
+}
+{
+"script_gameobjectname" "sab"
+"classname" "script_brushmodel"
+"origin" "1470 440 44"
+"model" "*16"
+}
+{
+"classname" "mp_sab_spawn_axis"
+"origin" "392 704 44"
+"_color" "0.501961 0.000000 0.000000"
+"angles" "0 90 0"
+}
+{
+"classname" "mp_sab_spawn_axis"
+"origin" "157.9 1903.6 41.6"
+"_color" "0.501961 0.000000 0.000000"
+"angles" "0 322 0"
+}
+{
+"classname" "mp_sab_spawn_axis"
+"origin" "992 -664 44"
+"_color" "0.501961 0.000000 0.000000"
+"angles" "0 90 0"
+}
+{
+"classname" "mp_sab_spawn_axis"
+"origin" "62 -1050 49.3"
+"_color" "0.501961 0.000000 0.000000"
+"angles" "0 2.50448e-006 0"
+}
+{
+"classname" "mp_sab_spawn_allies"
+"origin" "-2428 -432 32.9"
+"_color" "0.023529 0.584314 0.356863"
+"angles" "0 2.50448e-006 0"
+}
+{
+"classname" "mp_sab_spawn_allies"
+"origin" "-963.9 84.6 44"
+"_color" "0.023529 0.584314 0.356863"
+"angles" "0 2.50448e-006 0"
+}
+{
+"classname" "mp_sab_spawn_allies"
+"origin" "52.1 -1171.4 87"
+"_color" "0.023529 0.584314 0.356863"
+"angles" "0 2.50448e-006 0"
+}
+{
+"classname" "mp_sab_spawn_allies"
+"origin" "-36.7 -2092.4 156"
+"_color" "0.023529 0.584314 0.356863"
+"angles" "0 90 0"
+}
+{
+"classname" "mp_sab_spawn_allies"
+"origin" "-138.6 1433.9 52"
+"_color" "0.023529 0.584314 0.356863"
+"angles" "0 180 0"
+}
+{
+"classname" "mp_sab_spawn_allies"
+"origin" "-1065.4 257.9 45"
+"_color" "0.023529 0.584314 0.356863"
+"angles" "0 270 0"
+}
+{
+"origin" "-1024 -2648 232"
+"angles" "0 90 0"
+"classname" "mp_dom_spawn_allies_start"
+}
+{
+"origin" "-992 -2576 232"
+"angles" "0 90 0"
+"classname" "mp_dom_spawn_allies_start"
+}
+{
+"origin" "-944 -2648 232"
+"angles" "0 90 0"
+"classname" "mp_dom_spawn_allies_start"
+}
+{
+"origin" "-912 -2576 232"
+"angles" "0 90 0"
+"classname" "mp_dom_spawn_allies_start"
+}
+{
+"origin" "-760 -2656 232"
+"angles" "0 90 0"
+"classname" "mp_dom_spawn_allies_start"
+}
+{
+"origin" "-680 -2656 232"
+"angles" "0 90 0"
+"classname" "mp_dom_spawn_allies_start"
+}
+{
+"origin" "-792 -2592 232"
+"angles" "0 90 0"
+"classname" "mp_dom_spawn_allies_start"
+}
+{
+"origin" "-712 -2592 232"
+"angles" "0 90 0"
+"classname" "mp_dom_spawn_allies_start"
+}
+{
+"origin" "-752 -2520 232"
+"angles" "0 90 0"
+"classname" "mp_dom_spawn_allies_start"
+}
+{
+"origin" "-672 -2520 232"
+"angles" "0 90 0"
+"classname" "mp_dom_spawn_allies_start"
+}
+{
+"origin" "-952 -2504 232"
+"angles" "0 90 0"
+"classname" "mp_dom_spawn_allies_start"
+}
+{
+"origin" "-872 -2504 232"
+"angles" "0 90 0"
+"classname" "mp_dom_spawn_allies_start"
+}
+{
+"_color" "0.501961 0.501961 1.000000"
+"angles" "0 2.50448e-006 0"
+"origin" "-2086 -1521 36"
+"classname" "mp_dom_spawn"
+}
+{
+"_color" "0.501961 0.501961 1.000000"
+"angles" "0 180 0"
+"origin" "1973 763 44"
+"classname" "mp_dom_spawn"
+}
+{
+"_color" "0.501961 0.501961 1.000000"
+"angles" "0 2.50448e-006 0"
+"origin" "1221 -15 44"
+"classname" "mp_dom_spawn"
+}
+{
+"_color" "0.501961 0.501961 1.000000"
+"angles" "0 90 0"
+"origin" "355 709 44"
+"classname" "mp_dom_spawn"
+}
+{
+"_color" "0.501961 0.501961 1.000000"
+"classname" "mp_dom_spawn"
+"origin" "-408 -2357 236"
+"angles" "0 180 0"
+}
+{
+"_color" "0.501961 0.501961 1.000000"
+"angles" "0 2.50448e-006 0"
+"origin" "-2420 -393 39"
+"classname" "mp_dom_spawn"
+}
+{
+"origin" "2496 2456 44"
+"angles" "0 180 0"
+"classname" "mp_dom_spawn_axis_start"
+}
+{
+"origin" "2584 2456 44"
+"angles" "0 180 0"
+"classname" "mp_dom_spawn_axis_start"
+}
+{
+"origin" "2640 2456 44"
+"angles" "0 180 0"
+"classname" "mp_dom_spawn_axis_start"
+}
+{
+"origin" "2704 2456 44"
+"angles" "0 180 0"
+"classname" "mp_dom_spawn_axis_start"
+}
+{
+"origin" "2488 2360 44"
+"angles" "0 180 0"
+"classname" "mp_dom_spawn_axis_start"
+}
+{
+"origin" "2576 2360 44"
+"angles" "0 180 0"
+"classname" "mp_dom_spawn_axis_start"
+}
+{
+"origin" "2640 2360 44"
+"angles" "0 180 0"
+"classname" "mp_dom_spawn_axis_start"
+}
+{
+"origin" "2712 2360 44"
+"angles" "0 180 0"
+"classname" "mp_dom_spawn_axis_start"
+}
+{
+"origin" "1608 1788 44"
+"angles" "0 270 0"
+"classname" "mp_sab_spawn_axis_start"
+}
+{
+"origin" "1708 1780 44"
+"angles" "0 270 0"
+"classname" "mp_sab_spawn_axis_start"
+}
+{
+"origin" "1624 1876 44"
+"angles" "0 270 0"
+"classname" "mp_sab_spawn_axis_start"
+}
+{
+"origin" "1724 1868 44"
+"angles" "0 270 0"
+"classname" "mp_sab_spawn_axis_start"
+}
+{
+"origin" "1628 1932 44"
+"angles" "0 270 0"
+"classname" "mp_sab_spawn_axis_start"
+}
+{
+"origin" "1728 1924 44"
+"angles" "0 270 0"
+"classname" "mp_sab_spawn_axis_start"
+}
+{
+"origin" "1632 2004 44"
+"angles" "0 270 0"
+"classname" "mp_sab_spawn_axis_start"
+}
+{
+"origin" "1732 1996 44"
+"angles" "0 270 0"
+"classname" "mp_sab_spawn_axis_start"
+}
+{
+"origin" "-1272 -2332 236"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_sab_spawn_allies_start"
+}
+{
+"origin" "-1268 -2284 236"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_sab_spawn_allies_start"
+}
+{
+"origin" "-1268 -2236 236"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_sab_spawn_allies_start"
+}
+{
+"origin" "-1268 -2188 236"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_sab_spawn_allies_start"
+}
+{
+"origin" "-1372 -2324 236"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_sab_spawn_allies_start"
+}
+{
+"origin" "-1368 -2276 236"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_sab_spawn_allies_start"
+}
+{
+"origin" "-1368 -2228 236"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_sab_spawn_allies_start"
+}
+{
+"origin" "-1368 -2180 236"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_sab_spawn_allies_start"
+}
+{
+"origin" "-1172 -2268 236"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_sab_spawn_allies_start"
+}
+{
+"origin" "-1172 -2220 236"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_sab_spawn_allies_start"
+}
+{
+"gndLt" "4e4b408001"
+"destructible_type" "vehicle_80s_sedan1_green"
+"targetname" "destructible"
+"origin" "-419.5 21 8"
+"model" "vehicle_80s_sedan1_green_destructible_mp"
+"classname" "script_model"
+"angles" "0 1.09678 0"
+}
+{
+"_color" "0.501961 0.501961 1.000000"
+"angles" "0 2.50448e-006 0"
+"origin" "1313.7 1488.2 52"
+"classname" "mp_dom_spawn"
+}
+{
+"_color" "0.501961 0.501961 1.000000"
+"angles" "0 180 0"
+"origin" "149.7 -797 52"
+"classname" "mp_dom_spawn"
+}
+{
+"script_linkto" "flag2"
+"_color" "0.501961 0.501961 1.000000"
+"angles" "0 2.50448e-006 0"
+"origin" "-792.8 -803.4 52"
+"classname" "mp_dom_spawn"
+}
+{
+"angles" "0 2.50448e-006 0"
+"origin" "58 -1090 49.5"
+"classname" "mp_dm_spawn"
+}
+{
+"angles" "0 180 0"
+"origin" "-609 -1073 87"
+"classname" "mp_dm_spawn"
+}
+{
+"angles" "0 2.50448e-006 0"
+"origin" "-2094 -1505 36"
+"classname" "mp_dm_spawn"
+}
+{
+"angles" "0 2.50448e-006 0"
+"origin" "-2447 -1379 70"
+"classname" "mp_dm_spawn"
+}
+{
+"angles" "0 180 0"
+"origin" "-1448 473 39"
+"classname" "mp_dm_spawn"
+}
+{
+"angles" "0 270 0"
+"origin" "-1284 2105 53"
+"classname" "mp_dm_spawn"
+}
+{
+"angles" "0 322 0"
+"origin" "145 1927.5 41"
+"classname" "mp_dm_spawn"
+}
+{
+"angles" "0 180 0"
+"origin" "1965 771 44"
+"classname" "mp_dm_spawn"
+}
+{
+"angles" "0 180 0"
+"origin" "1940 303 44"
+"classname" "mp_dm_spawn"
+}
+{
+"angles" "0 2.50448e-006 0"
+"origin" "1213 -7 44"
+"classname" "mp_dm_spawn"
+}
+{
+"angles" "0 90 0"
+"origin" "1939 -1496 52"
+"classname" "mp_dm_spawn"
+}
+{
+"angles" "0 180 0"
+"origin" "1342 -1211 80"
+"classname" "mp_dm_spawn"
+}
+{
+"angles" "0 90 0"
+"origin" "-56 -2100 148"
+"classname" "mp_dm_spawn"
+}
+{
+"angles" "0 90 0"
+"origin" "363 717 44"
+"classname" "mp_dm_spawn"
+}
+{
+"classname" "mp_dm_spawn"
+"origin" "-416 -2349 236"
+"angles" "0 180 0"
+}
+{
+"angles" "0 2.50448e-006 0"
+"origin" "-2428 -385 39"
+"classname" "mp_dm_spawn"
+}
+{
+"gndLt" "403e344c01"
+"destructible_type" "vehicle_80s_sedan1_brn"
+"targetname" "destructible"
+"origin" "710.5 1201.4 8"
+"model" "vehicle_80s_sedan1_brn_destructible_mp"
+"classname" "script_model"
+"angles" "0 291.403 0"
+}
+{
+"angles" "0 180 0"
+"origin" "2293 1811 50.9"
+"classname" "mp_tdm_spawn"
+}
+{
+"_color" "0.501961 0.501961 1.000000"
+"angles" "0 180 0"
+"origin" "2293 1795 51"
+"classname" "mp_dom_spawn"
+}
+{
+"angles" "0 180 0"
+"origin" "2285 1803 50.9"
+"classname" "mp_dm_spawn"
+}
+{
+"target" "auto460"
+"angles" "0 345 0"
+"_color" "0 1 .5"
+"origin" "-3450.6 -1065.7 632"
+"targetname" "heli_start"
+"classname" "script_origin"
+}
+{
+"origin" "-8528.5 3998.5 242"
+"targetname" "heli_leave"
+"classname" "script_origin"
+}
+{
+"angles" "0 100 0"
+"script_accel" "20"
+"script_airspeed" "40"
+"target" "auto42"
+"origin" "261.3 -725.9 1080"
+"targetname" "auto482"
+"classname" "script_origin"
+}
+{
+"angles" "0 100 0"
+"script_accel" "30"
+"script_airspeed" "50"
+"targetname" "auto43"
+"origin" "-58.2 2708.4 232"
+"classname" "script_origin"
+}
+{
+"angles" "0 100 0"
+"script_accel" "30"
+"script_airspeed" "50"
+"target" "auto44"
+"origin" "274 722.3 1020"
+"targetname" "auto42"
+"classname" "script_origin"
+}
+{
+"angles" "0 100 0"
+"classname" "script_origin"
+"targetname" "auto44"
+"origin" "97.2 1918.3 768"
+"target" "auto43"
+"script_airspeed" "50"
+"script_accel" "30"
+}
+{
+"origin" "-630.6 814 1104"
+"targetname" "auto465"
+"script_airspeed" "50"
+"script_accel" "20"
+"angles" "0 345 0"
+"_color" "0 1 .5"
+"classname" "script_origin"
+}
+{
+"script_airspeed" "60"
+"script_accel" "20"
+"target" "auto461"
+"angles" "0 345 0"
+"_color" "0 1 .5"
+"origin" "-3408.1 -1104.1 640"
+"targetname" "auto460"
+"classname" "script_origin"
+}
+{
+"script_airspeed" "40"
+"script_accel" "20"
+"target" "auto462"
+"angles" "0 345 0"
+"_color" "0 1 .5"
+"origin" "-2646.2 -2186.4 1012"
+"targetname" "auto461"
+"classname" "script_origin"
+}
+{
+"script_airspeed" "40"
+"script_accel" "20"
+"target" "auto463"
+"angles" "0 45 0"
+"_color" "0 1 .5"
+"origin" "-911.8 -2177.2 1014"
+"targetname" "auto462"
+"classname" "script_origin"
+}
+{
+"target" "auto467"
+"script_airspeed" "60"
+"script_accel" "20"
+"angles" "0 45 0"
+"_color" "0 1 .5"
+"origin" "-1138 -244.6 1079"
+"targetname" "auto463"
+"classname" "script_origin"
+}
+{
+"script_airspeed" "30"
+"script_accel" "10"
+"target" "auto465"
+"angles" "0 45 0"
+"_color" "0 1 .5"
+"origin" "339.6 141.6 1055.5"
+"targetname" "auto467"
+"classname" "script_origin"
+}
+{
+"target" "auto466"
+"angles" "0 345 0"
+"_color" "0 1 .5"
+"origin" "-725.8 2860.7 536"
+"targetname" "heli_start"
+"classname" "script_origin"
+}
+{
+"target" "auto468"
+"script_airspeed" "40"
+"script_accel" "20"
+"targetname" "auto466"
+"angles" "0 4.99999 0"
+"_color" "0 1 .5"
+"origin" "-672 2856.2 544"
+"classname" "script_origin"
+}
+{
+"target" "auto467"
+"targetname" "auto484"
+"script_airspeed" "60"
+"script_accel" "20"
+"angles" "0 225 0"
+"_color" "0 1 .5"
+"origin" "539.9 629.3 1076"
+"classname" "script_origin"
+}
+{
+"target" "auto467"
+"targetname" "auto475"
+"script_airspeed" "60"
+"script_accel" "20"
+"angles" "0 175 0"
+"_color" "0 1 .5"
+"origin" "632.7 -877.8 988"
+"classname" "script_origin"
+}
+{
+"target" "auto469"
+"script_airspeed" "60"
+"script_accel" "20"
+"targetname" "auto468"
+"angles" "0 4.99999 0"
+"_color" "0 1 .5"
+"origin" "496.5 3322 906"
+"classname" "script_origin"
+}
+{
+"target" "auto470"
+"script_airspeed" "60"
+"script_accel" "20"
+"targetname" "auto469"
+"angles" "0 4.99999 0"
+"_color" "0 1 .5"
+"origin" "1711.7 2964.9 1035"
+"classname" "script_origin"
+}
+{
+"target" "auto471"
+"script_airspeed" "40"
+"script_accel" "15"
+"targetname" "auto470"
+"angles" "0 4.99999 0"
+"_color" "0 1 .5"
+"origin" "1677.5 1328.6 1071.5"
+"classname" "script_origin"
+}
+{
+"target" "auto472"
+"angles" "0 270 0"
+"_color" "0 1 .5"
+"origin" "3805.3 1047.7 360"
+"targetname" "heli_start"
+"classname" "script_origin"
+}
+{
+"target" "auto473"
+"script_airspeed" "60"
+"script_accel" "20"
+"targetname" "auto472"
+"angles" "0 260 0"
+"_color" "0 1 .5"
+"origin" "3806.2 994.9 368"
+"classname" "script_origin"
+}
+{
+"target" "auto474"
+"script_airspeed" "60"
+"script_accel" "20"
+"targetname" "auto473"
+"angles" "0 125 0"
+"_color" "0 1 .5"
+"origin" "2565.3 628.2 1082"
+"classname" "script_origin"
+}
+{
+"target" "auto475"
+"script_airspeed" "60"
+"script_accel" "20"
+"targetname" "auto474"
+"angles" "0 125 0"
+"_color" "0 1 .5"
+"origin" "1914.7 -789.3 1003"
+"classname" "script_origin"
+}
+{
+"target" "auto476"
+"origin" "-1990 -214 1152"
+"targetname" "heli_loop_start"
+"_color" ".5 1 1"
+"angles" "0 1.00179e-005 0"
+"classname" "script_origin"
+}
+{
+"target" "auto477"
+"script_airspeed" "40"
+"script_accel" "15"
+"targetname" "auto476"
+"origin" "-1930 -210 1040"
+"_color" ".5 1 1"
+"angles" "0 340 0"
+"classname" "script_origin"
+}
+{
+"script_delay" "2"
+"target" "auto478"
+"script_airspeed" "40"
+"script_accel" "20"
+"targetname" "auto477"
+"origin" "-1492 -1060 1112"
+"_color" ".5 1 1"
+"angles" "0 62 0"
+"classname" "script_origin"
+}
+{
+"target" "auto479"
+"targetname" "auto478"
+"script_airspeed" "60"
+"script_accel" "20"
+"origin" "468 -1034 1112"
+"_color" ".5 1 1"
+"angles" "0 45 0"
+"classname" "script_origin"
+}
+{
+"target" "auto476"
+"script_delay" "2"
+"targetname" "auto483"
+"script_airspeed" "40"
+"script_accel" "15"
+"origin" "486 -104 940"
+"_color" ".5 1 1"
+"angles" "0 181 0"
+"classname" "script_origin"
+}
+{
+"angles" "0 100 0"
+"target" "auto482"
+"origin" "266.2 -753.5 1080"
+"targetname" "heli_crash_start"
+"classname" "script_origin"
+}
+{
+"script_delay" "2"
+"target" "auto483"
+"targetname" "auto481"
+"script_airspeed" "60"
+"script_accel" "20"
+"origin" "486 1176 1080"
+"_color" ".5 1 1"
+"angles" "0 260 0"
+"classname" "script_origin"
+}
+{
+"target" "auto465"
+"classname" "script_origin"
+"_color" "0 1 .5"
+"angles" "0 345 0"
+"origin" "-687.2 825.3 1104"
+"targetname" "heli_dest"
+}
+{
+"target" "auto484"
+"script_airspeed" "40"
+"script_accel" "15"
+"targetname" "auto471"
+"angles" "0 305 0"
+"_color" "0 1 .5"
+"origin" "764.8 938.9 1073.8"
+"classname" "script_origin"
+}
+{
+"origin" "-3180.5 12794.5 242"
+"targetname" "heli_leave"
+"classname" "script_origin"
+}
+{
+"origin" "8631.5 -997.5 242"
+"targetname" "heli_leave"
+"classname" "script_origin"
+}
+{
+"script_delay" "2"
+"target" "auto480"
+"targetname" "auto479"
+"script_airspeed" "40"
+"script_accel" "20"
+"origin" "1692 -816 1012"
+"_color" ".5 1 1"
+"angles" "0 170 0"
+"classname" "script_origin"
+}
+{
+"script_delay" "2"
+"target" "auto481"
+"targetname" "auto480"
+"script_airspeed" "40"
+"script_accel" "20"
+"origin" "1692 1248 1080"
+"_color" ".5 1 1"
+"angles" "0 260 0"
+"classname" "script_origin"
+}
+{
+"origin" "2580 2448 52"
+"angles" "0 180 0"
+"classname" "mp_tdm_spawn_axis_start"
+}
+{
+"origin" "2572 2348 52"
+"angles" "0 180 0"
+"classname" "mp_tdm_spawn_axis_start"
+}
+{
+"origin" "2668 2432 52"
+"angles" "0 180 0"
+"classname" "mp_tdm_spawn_axis_start"
+}
+{
+"origin" "2660 2332 52"
+"angles" "0 180 0"
+"classname" "mp_tdm_spawn_axis_start"
+}
+{
+"origin" "2724 2428 52"
+"angles" "0 180 0"
+"classname" "mp_tdm_spawn_axis_start"
+}
+{
+"origin" "2716 2328 52"
+"angles" "0 180 0"
+"classname" "mp_tdm_spawn_axis_start"
+}
+{
+"origin" "2796 2424 52"
+"angles" "0 180 0"
+"classname" "mp_tdm_spawn_axis_start"
+}
+{
+"origin" "2788 2324 52"
+"angles" "0 180 0"
+"classname" "mp_tdm_spawn_axis_start"
+}
+{
+"origin" "-1272 -2332 244"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_tdm_spawn_allies_start"
+}
+{
+"origin" "-1268 -2284 244"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_tdm_spawn_allies_start"
+}
+{
+"origin" "-1268 -2236 244"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_tdm_spawn_allies_start"
+}
+{
+"origin" "-1268 -2188 244"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_tdm_spawn_allies_start"
+}
+{
+"origin" "-1372 -2324 244"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_tdm_spawn_allies_start"
+}
+{
+"origin" "-1368 -2276 244"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_tdm_spawn_allies_start"
+}
+{
+"origin" "-1368 -2228 244"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_tdm_spawn_allies_start"
+}
+{
+"origin" "-1368 -2180 244"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_tdm_spawn_allies_start"
+}
+{
+"origin" "-1172 -2268 244"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_tdm_spawn_allies_start"
+}
+{
+"origin" "-1172 -2220 244"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_tdm_spawn_allies_start"
+}
+{
+"spawnflags" "4"
+"targetname" "pf3722_auto1"
+"script_gameobjectname" "hq"
+"origin" "1340 754 158"
+"angles" "0 180 0"
+"model" "com_plasticcase_beige_big"
+"classname" "script_model"
+}
+{
+"spawnflags" "4"
+"target" "pf3722_auto1"
+"script_gameobjectname" "hq"
+"targetname" "hq_hardpoint"
+"origin" "1336 758 188"
+"angles" "0 90 0"
+"model" "com_laptop_2_open"
+"classname" "script_model"
+}
+{
+"spawnflags" "4"
+"targetname" "pf3722_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_model"
+"model" "com_cellphone_on"
+"angles" "1.00179e-005 220 -89.9997"
+"origin" "1321.3 762.7 188"
+}
+{
+"targetname" "pf3722_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_brushmodel"
+"origin" "1341 754 174"
+"model" "*17"
+}
+{
+"targetname" "pf3722_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_brushmodel"
+"origin" "1336 751 197"
+"model" "*18"
+}
+{
+"spawnflags" "4"
+"targetname" "pf3727_auto1"
+"script_gameobjectname" "hq"
+"origin" "-2494 -1178 42"
+"angles" "0 90 0"
+"model" "com_plasticcase_beige_big"
+"classname" "script_model"
+}
+{
+"spawnflags" "4"
+"target" "pf3727_auto1"
+"script_gameobjectname" "hq"
+"targetname" "hq_hardpoint"
+"origin" "-2490 -1174 72"
+"angles" "0 3.18772e-006 0"
+"model" "com_laptop_2_open"
+"classname" "script_model"
+}
+{
+"spawnflags" "4"
+"targetname" "pf3727_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_model"
+"model" "com_cellphone_on"
+"angles" "1.00179e-005 130 -89.9997"
+"origin" "-2485.3 -1159.3 72"
+}
+{
+"targetname" "pf3727_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_brushmodel"
+"origin" "-2494 -1178 58"
+"model" "*19"
+}
+{
+"targetname" "pf3727_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_brushmodel"
+"origin" "-2497 -1174 81"
+"model" "*20"
+}
+{
+"targetname" "radiotrigger"
+"classname" "trigger_multiple"
+"origin" "1380 844 216"
+"model" "*21"
+}
+{
+"targetname" "radiotrigger"
+"classname" "trigger_multiple"
+"origin" "-2382 -1270 110"
+"model" "*22"
+}
+{
+"angles" "0 90 0"
+"origin" "798 -2300 148"
+"classname" "mp_tdm_spawn"
+}
+{
+"angles" "0 90 0"
+"origin" "792 -2292 148"
+"classname" "mp_dm_spawn"
+}
+{
+"script_gameobjectname" "ctf"
+"target" "ctf_flag_allies"
+"targetname" "ctf_trig_allies"
+"origin" "-1574 -872 23"
+"height" "128"
+"radius" "64"
+"classname" "trigger_radius"
+}
+{
+"spawnflags" "4"
+"script_gameobjectname" "ctf"
+"origin" "-1574 -872 7"
+"targetname" "ctf_flag_allies"
+"model" "prop_flag_neutral"
+"classname" "script_model"
+}
+{
+"script_gameobjectname" "ctf"
+"targetname" "ctf_zone_allies"
+"origin" "-1574 -872 23"
+"height" "128"
+"radius" "64"
+"classname" "trigger_radius"
+}
+{
+"script_gameobjectname" "ctf"
+"target" "ctf_flag_axis"
+"targetname" "ctf_trig_axis"
+"origin" "1720 570 32"
+"height" "128"
+"radius" "64"
+"classname" "trigger_radius"
+"angles" "0 270 0"
+}
+{
+"spawnflags" "4"
+"script_gameobjectname" "ctf"
+"origin" "1720 570 16"
+"targetname" "ctf_flag_axis"
+"model" "prop_flag_neutral"
+"classname" "script_model"
+"angles" "0 270 0"
+}
+{
+"script_gameobjectname" "ctf"
+"targetname" "ctf_zone_axis"
+"origin" "1720 570 32"
+"height" "128"
+"radius" "64"
+"classname" "trigger_radius"
+"angles" "0 270 0"
+}
+{
+"origin" "2598 2452 52"
+"angles" "0 180 0"
+"classname" "mp_ctf_spawn_axis_start"
+}
+{
+"origin" "2598 2408 52"
+"angles" "0 180 0"
+"classname" "mp_ctf_spawn_axis_start"
+}
+{
+"origin" "2598 2348 52"
+"angles" "0 180 0"
+"classname" "mp_ctf_spawn_axis_start"
+}
+{
+"origin" "2598 2312 52"
+"angles" "0 180 0"
+"classname" "mp_ctf_spawn_axis_start"
+}
+{
+"origin" "2682 2452 52"
+"angles" "0 180 0"
+"classname" "mp_ctf_spawn_axis_start"
+}
+{
+"origin" "2682 2408 52"
+"angles" "0 180 0"
+"classname" "mp_ctf_spawn_axis_start"
+}
+{
+"origin" "2682 2348 52"
+"angles" "0 180 0"
+"classname" "mp_ctf_spawn_axis_start"
+}
+{
+"origin" "2682 2312 52"
+"angles" "0 180 0"
+"classname" "mp_ctf_spawn_axis_start"
+}
+{
+"origin" "2738 2460 52"
+"angles" "0 180 0"
+"classname" "mp_ctf_spawn_axis_start"
+}
+{
+"origin" "2738 2416 52"
+"angles" "0 180 0"
+"classname" "mp_ctf_spawn_axis_start"
+}
+{
+"origin" "2738 2356 52"
+"angles" "0 180 0"
+"classname" "mp_ctf_spawn_axis_start"
+}
+{
+"origin" "2738 2320 52"
+"angles" "0 180 0"
+"classname" "mp_ctf_spawn_axis_start"
+}
+{
+"classname" "mp_sab_spawn_axis"
+"origin" "1936 -1472 44"
+"_color" "0.501961 0.000000 0.000000"
+"angles" "0 90 0"
+}
+{
+"classname" "mp_sab_spawn_axis"
+"origin" "1312 1524 44"
+"_color" "0.501961 0.000000 0.000000"
+"angles" "0 2.50448e-006 0"
+}
+{
+"classname" "mp_sab_spawn_axis"
+"origin" "820 -2292 154.7"
+"_color" "0.501961 0.000000 0.000000"
+"angles" "0 90 0"
+}
+{
+"classname" "mp_sab_spawn_axis"
+"origin" "1936 312 44"
+"_color" "0.501961 0.000000 0.000000"
+"angles" "0 180 0"
+}
+{
+"classname" "mp_ctf_spawn_axis"
+"origin" "344 716 52"
+"_color" "0.501961 0.000000 0.501961"
+"angles" "0 90 0"
+}
+{
+"classname" "mp_ctf_spawn_axis"
+"origin" "157.9 1899.6 49.6"
+"_color" "0.501961 0.000000 0.501961"
+"angles" "0 322 0"
+}
+{
+"classname" "mp_ctf_spawn_axis"
+"origin" "-1271.9 2093.1 52"
+"_color" "0.501961 0.000000 0.501961"
+"angles" "0 270 0"
+}
+{
+"classname" "mp_ctf_spawn_axis"
+"origin" "992 -660 52"
+"_color" "0.501961 0.000000 0.501961"
+"angles" "0 90 0"
+}
+{
+"classname" "mp_ctf_spawn_axis"
+"origin" "62 -1054 57.3"
+"_color" "0.501961 0.000000 0.501961"
+"angles" "0 2.50448e-006 0"
+}
+{
+"classname" "mp_ctf_spawn_axis"
+"origin" "1936 -1476 52"
+"_color" "0.501961 0.000000 0.501961"
+"angles" "0 90 0"
+}
+{
+"classname" "mp_ctf_spawn_axis"
+"origin" "1312 1520 52"
+"_color" "0.501961 0.000000 0.501961"
+"angles" "0 2.50448e-006 0"
+}
+{
+"classname" "mp_ctf_spawn_axis"
+"origin" "820 -2296 162.7"
+"_color" "0.501961 0.000000 0.501961"
+"angles" "0 90 0"
+}
+{
+"classname" "mp_ctf_spawn_axis"
+"origin" "1936 308 52"
+"_color" "0.501961 0.000000 0.501961"
+"angles" "0 180 0"
+}
+{
+"origin" "-1020 -2656 232"
+"angles" "0 90 0"
+"classname" "mp_ctf_spawn_allies_start"
+}
+{
+"origin" "-940 -2656 232"
+"angles" "0 90 0"
+"classname" "mp_ctf_spawn_allies_start"
+}
+{
+"origin" "-988 -2584 232"
+"angles" "0 90 0"
+"classname" "mp_ctf_spawn_allies_start"
+}
+{
+"origin" "-908 -2584 232"
+"angles" "0 90 0"
+"classname" "mp_ctf_spawn_allies_start"
+}
+{
+"origin" "-948 -2508 232"
+"angles" "0 90 0"
+"classname" "mp_ctf_spawn_allies_start"
+}
+{
+"origin" "-868 -2508 232"
+"angles" "0 90 0"
+"classname" "mp_ctf_spawn_allies_start"
+}
+{
+"origin" "-760 -2524 232"
+"angles" "0 90 0"
+"classname" "mp_ctf_spawn_allies_start"
+}
+{
+"origin" "-800 -2596 232"
+"angles" "0 90 0"
+"classname" "mp_ctf_spawn_allies_start"
+}
+{
+"origin" "-764 -2660 232"
+"angles" "0 90 0"
+"classname" "mp_ctf_spawn_allies_start"
+}
+{
+"origin" "-688 -2660 232"
+"angles" "0 90 0"
+"classname" "mp_ctf_spawn_allies_start"
+}
+{
+"origin" "-716 -2596 232"
+"angles" "0 90 0"
+"classname" "mp_ctf_spawn_allies_start"
+}
+{
+"origin" "-676 -2524 232"
+"angles" "0 90 0"
+"classname" "mp_ctf_spawn_allies_start"
+}
+{
+"classname" "mp_sab_spawn_allies"
+"origin" "-2444 -1344 72.9"
+"_color" "0.023529 0.584314 0.356863"
+"angles" "0 2.50448e-006 0"
+}
+{
+"classname" "mp_sab_spawn_allies"
+"origin" "-1168 -2020 244.9"
+"_color" "0.023529 0.584314 0.356863"
+"angles" "0 2.50448e-006 0"
+}
+{
+"classname" "mp_sab_spawn_allies"
+"origin" "-1597.4 1135.9 108"
+"_color" "0.023529 0.584314 0.356863"
+"angles" "0 270 0"
+}
+{
+"classname" "mp_ctf_spawn_allies"
+"origin" "-2424 -436 36.9"
+"_color" "0.000000 0.501961 0.000000"
+"angles" "0 2.50448e-006 0"
+}
+{
+"classname" "mp_ctf_spawn_allies"
+"origin" "-959.9 80.6 48"
+"_color" "0.000000 0.501961 0.000000"
+"angles" "0 2.50448e-006 0"
+}
+{
+"classname" "mp_ctf_spawn_allies"
+"origin" "56.1 -1175.4 91"
+"_color" "0.000000 0.501961 0.000000"
+"angles" "0 2.50448e-006 0"
+}
+{
+"classname" "mp_ctf_spawn_allies"
+"origin" "-32.7 -2096.4 160"
+"_color" "0.000000 0.501961 0.000000"
+"angles" "0 90 0"
+}
+{
+"classname" "mp_ctf_spawn_allies"
+"origin" "-132.6 1439.9 56"
+"_color" "0.000000 0.501961 0.000000"
+"angles" "0 180 0"
+}
+{
+"classname" "mp_ctf_spawn_allies"
+"origin" "-1061.4 253.9 49"
+"_color" "0.000000 0.501961 0.000000"
+"angles" "0 270 0"
+}
+{
+"classname" "mp_ctf_spawn_allies"
+"origin" "-2440 -1348 76.9"
+"_color" "0.000000 0.501961 0.000000"
+"angles" "0 2.50448e-006 0"
+}
+{
+"classname" "mp_ctf_spawn_allies"
+"origin" "-1164 -2024 248.9"
+"_color" "0.000000 0.501961 0.000000"
+"angles" "0 2.50448e-006 0"
+}
+{
+"classname" "mp_ctf_spawn_allies"
+"origin" "-1593.4 1131.9 112"
+"_color" "0.000000 0.501961 0.000000"
+"angles" "0 270 0"
+}
+{
+"angles" "0 270 0"
+"targetname" "oldschool_pickup"
+"origin" "-321 -470 52"
+"spawnflags" "3"
+"model" "weapon_rpd"
+"classname" "weapon_rpd_mp"
+}
+{
+"targetname" "oldschool_pickup"
+"origin" "-642 1334 60"
+"spawnflags" "3"
+"model" "weapon_ak47"
+"classname" "weapon_ak47_mp"
+}
+{
+"origin" "-1596 908 108"
+"spawnflags" "3"
+"targetname" "oldschool_pickup"
+"model" "weapon_m4_mp"
+"classname" "weapon_m4_mp"
+}
+{
+"origin" "1730 422 44"
+"spawnflags" "3"
+"targetname" "oldschool_pickup"
+"model" "weapon_benelli_super_90"
+"classname" "weapon_m1014_mp"
+}
+{
+"origin" "-2252 -974 54"
+"spawnflags" "3"
+"targetname" "oldschool_pickup"
+"model" "weapon_dragunov"
+"classname" "weapon_dragunov_mp"
+}
+{
+"spawnflags" "3"
+"targetname" "oldschool_pickup"
+"origin" "1128 -1256 52"
+"model" "weapon_m14_scout_mp"
+"classname" "weapon_m14_mp"
+}
+{
+"origin" "1032 -458 62"
+"spawnflags" "3"
+"targetname" "oldschool_pickup"
+"model" "weapon_p90"
+"classname" "weapon_p90_mp"
+}
+{
+"targetname" "pf3881_auto1"
+"classname" "trigger_use"
+"origin" "-320 -688 52"
+"model" "*23"
+}
+{
+"gndLt" "5b65510001"
+"targetname" "oldschool_pickup"
+"script_noteworthy" "specialty_bulletdamage"
+"classname" "script_model"
+"model" "perc_stoppingpower"
+"origin" "-320 -688 52"
+"target" "pf3881_auto1"
+}
+{
+"gndLt" "514b3db401"
+"targetname" "oldschool_pickup"
+"script_noteworthy" "specialty_armorvest"
+"target" "pf3883_auto1"
+"origin" "-640 1760 28"
+"model" "perc_juggernaut"
+"classname" "script_model"
+}
+{
+"targetname" "pf3883_auto1"
+"classname" "trigger_use"
+"origin" "-640 1760 28"
+"model" "*24"
+}
+{
+"angles" "0 180 0"
+"origin" "-133 1436 53"
+"classname" "mp_tdm_spawn"
+}
+{
+"angles" "0 180 0"
+"origin" "-133 1436 53"
+"classname" "mp_dm_spawn"
+}
+{
+"angles" "0 2.50448e-006 0"
+"origin" "-2436 1031 39"
+"classname" "mp_tdm_spawn"
+}
+{
+"classname" "mp_sab_spawn_allies"
+"origin" "-2428 1008 32.9"
+"_color" "0.023529 0.584314 0.356863"
+"angles" "0 2.50448e-006 0"
+}
+{
+"script_linkto" "flag1"
+"_color" "0.501961 0.501961 1.000000"
+"angles" "0 2.50448e-006 0"
+"origin" "-2428 1023 39"
+"classname" "mp_dom_spawn"
+}
+{
+"angles" "0 2.50448e-006 0"
+"origin" "-2436 1031 39"
+"classname" "mp_dm_spawn"
+}
+{
+"classname" "mp_ctf_spawn_allies"
+"origin" "-2428 1012 36.9"
+"_color" "0.000000 0.501961 0.000000"
+"angles" "0 2.50448e-006 0"
+}
+{
+"spawnflags" "4"
+"targetname" "pf4785_auto1"
+"script_gameobjectname" "hq"
+"origin" "-322 -822 24"
+"angles" "0 180 0"
+"model" "com_plasticcase_beige_big"
+"classname" "script_model"
+}
+{
+"spawnflags" "4"
+"target" "pf4785_auto1"
+"script_gameobjectname" "hq"
+"targetname" "hq_hardpoint"
+"origin" "-326 -818 54"
+"angles" "0 90 0"
+"model" "com_laptop_2_open"
+"classname" "script_model"
+}
+{
+"spawnflags" "4"
+"targetname" "pf4785_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_model"
+"model" "com_cellphone_on"
+"angles" "1.00179e-005 220 -89.9997"
+"origin" "-340.7 -813.3 54"
+}
+{
+"targetname" "pf4785_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_brushmodel"
+"origin" "-321 -822 40"
+"model" "*25"
+}
+{
+"targetname" "pf4785_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_brushmodel"
+"origin" "-326 -825 63"
+"model" "*26"
+}
+{
+"targetname" "radiotrigger"
+"classname" "trigger_multiple"
+"origin" "-276 -698 87"
+"model" "*27"
+}
+{
+"spawnflags" "4"
+"targetname" "pf4791_auto1"
+"script_gameobjectname" "hq"
+"origin" "-642.7 1884.7 16"
+"angles" "0 5.00896e-006 0"
+"model" "com_plasticcase_beige_big"
+"classname" "script_model"
+}
+{
+"spawnflags" "4"
+"target" "pf4791_auto1"
+"script_gameobjectname" "hq"
+"targetname" "hq_hardpoint"
+"origin" "-638.7 1880.7 46"
+"angles" "0 270 0"
+"model" "com_laptop_2_open"
+"classname" "script_model"
+}
+{
+"spawnflags" "4"
+"targetname" "pf4791_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_model"
+"model" "com_cellphone_on"
+"angles" "1.00179e-005 40 -89.9997"
+"origin" "-624 1876 46"
+}
+{
+"targetname" "pf4791_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_brushmodel"
+"origin" "-643 1885 32"
+"model" "*28"
+}
+{
+"targetname" "pf4791_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_brushmodel"
+"origin" "-639 1888 55"
+"model" "*29"
+}
+{
+"targetname" "radiotrigger"
+"classname" "trigger_multiple"
+"origin" "-639 1684 91"
+"model" "*30"
+}
+{
+"spawnflags" "4"
+"targetname" "pf4797_auto1"
+"script_gameobjectname" "hq"
+"origin" "1146.2 -495 24"
+"angles" "0 270 0"
+"model" "com_plasticcase_beige_big"
+"classname" "script_model"
+}
+{
+"spawnflags" "4"
+"target" "pf4797_auto1"
+"script_gameobjectname" "hq"
+"targetname" "hq_hardpoint"
+"origin" "1142.2 -499 54"
+"angles" "0 180 0"
+"model" "com_laptop_2_open"
+"classname" "script_model"
+}
+{
+"spawnflags" "4"
+"targetname" "pf4797_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_model"
+"model" "com_cellphone_on"
+"angles" "1.00179e-005 310 -89.9997"
+"origin" "1137.5 -513.7 54"
+}
+{
+"targetname" "pf4797_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_brushmodel"
+"origin" "1146 -494 40"
+"model" "*31"
+}
+{
+"targetname" "pf4797_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_brushmodel"
+"origin" "1150 -499 63"
+"model" "*32"
+}
+{
+"targetname" "radiotrigger"
+"classname" "trigger_multiple"
+"origin" "1053 -460 87"
+"model" "*33"
+}
+{
+"spawnflags" "4"
+"targetname" "pf4803_auto1"
+"script_gameobjectname" "hq"
+"origin" "661.4 -1324.9 196"
+"angles" "0 90 0"
+"model" "com_plasticcase_beige_big"
+"classname" "script_model"
+}
+{
+"spawnflags" "4"
+"target" "pf4803_auto1"
+"script_gameobjectname" "hq"
+"targetname" "hq_hardpoint"
+"origin" "665.4 -1320.9 226"
+"angles" "0 3.18772e-006 0"
+"model" "com_laptop_2_open"
+"classname" "script_model"
+}
+{
+"spawnflags" "4"
+"targetname" "pf4803_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_model"
+"model" "com_cellphone_on"
+"angles" "1.00179e-005 130 -89.9997"
+"origin" "670.1 -1306.2 226"
+}
+{
+"targetname" "pf4803_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_brushmodel"
+"origin" "661 -1325 212"
+"model" "*34"
+}
+{
+"targetname" "pf4803_auto1"
+"script_gameobjectname" "hq"
+"classname" "script_brushmodel"
+"origin" "658 -1321 235"
+"model" "*35"
+}
+{
+"targetname" "radiotrigger"
+"classname" "trigger_multiple"
+"origin" "799 -1329 258"
+"model" "*36"
+}
+{
+"gndLt" "4b483d4001"
+"destructible_type" "vehicle_80s_sedan1_green"
+"targetname" "destructible"
+"origin" "1807.3 1723.6 16"
+"model" "vehicle_80s_sedan1_green_destructible_mp"
+"classname" "script_model"
+"angles" "0 240 0"
+}
+{
+"origin" "1572 1964 44"
+"angles" "0 270 0"
+"classname" "mp_sab_spawn_axis_start"
+}
+{
+"origin" "1572 1836 44"
+"angles" "0 270 0"
+"classname" "mp_sab_spawn_axis_start"
+}
+{
+"origin" "1668 1836 44"
+"angles" "0 270 0"
+"classname" "mp_sab_spawn_axis_start"
+}
+{
+"origin" "1668 2060 44"
+"angles" "0 270 0"
+"classname" "mp_sab_spawn_axis_start"
+}
+{
+"origin" "2792 2424 44"
+"angles" "0 180 0"
+"classname" "mp_dom_spawn_axis_start"
+}
+{
+"origin" "2784 2328 44"
+"angles" "0 180 0"
+"classname" "mp_dom_spawn_axis_start"
+}
+{
+"origin" "-1184 -2336 236"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_sd_spawn_attacker"
+}
+{
+"origin" "-1188 -2332 236"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_sab_spawn_allies_start"
+}
+{
+"origin" "-1176 -2168 236"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_sd_spawn_attacker"
+}
+{
+"origin" "-1180 -2164 236"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_sab_spawn_allies_start"
+}
+{
+"origin" "-1464 -2160 236"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_sd_spawn_attacker"
+}
+{
+"origin" "-1464 -2208 236"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_sd_spawn_attacker"
+}
+{
+"origin" "-1464 -2256 236"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_sd_spawn_attacker"
+}
+{
+"origin" "-1464 -2304 236"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_sd_spawn_attacker"
+}
+{
+"origin" "-1476 -2308 236"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_sab_spawn_allies_start"
+}
+{
+"origin" "-1472 -2260 236"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_sab_spawn_allies_start"
+}
+{
+"origin" "-1472 -2212 236"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_sab_spawn_allies_start"
+}
+{
+"origin" "-1472 -2164 236"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_sab_spawn_allies_start"
+}
+{
+"origin" "-1476 -2308 244"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_tdm_spawn_allies_start"
+}
+{
+"origin" "-1472 -2260 244"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_tdm_spawn_allies_start"
+}
+{
+"origin" "-1472 -2212 244"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_tdm_spawn_allies_start"
+}
+{
+"origin" "-1472 -2164 244"
+"angles" "0 2.50448e-006 0"
+"classname" "mp_tdm_spawn_allies_start"
+}
+{
+"angles" "0 2.50448e-006 0"
+"origin" "-1401 1252 53"
+"classname" "mp_tdm_spawn"
+}
+{
+"classname" "mp_sab_spawn_axis"
+"origin" "-1401.1 1256.1 44"
+"_color" "0.501961 0.000000 0.000000"
+"angles" "0 2.50448e-006 0"
+}
+{
+"angles" "0 2.50448e-006 0"
+"origin" "-1401 1252 53"
+"classname" "mp_dm_spawn"
+}
+{
+"_color" "0.501961 0.501961 1.000000"
+"angles" "0 180 0"
+"origin" "-135.2 1439.4 52"
+"classname" "mp_dom_spawn"
+}
+{
+"_color" "0.501961 0.501961 1.000000"
+"angles" "0 270 0"
+"origin" "-1293.4 2106.8 52"
+"classname" "mp_dom_spawn"
+}
+{
+"_color" "0.501961 0.501961 1.000000"
+"angles" "0 2.50448e-006 0"
+"origin" "-1394.8 1258.6 52"
+"classname" "mp_dom_spawn"
+}
+{
+"classname" "mp_dom_spawn"
+"origin" "1948 295 44"
+"angles" "0 180 0"
+"_color" "0.501961 0.501961 1.000000"
+}
+{
+"classname" "mp_dom_spawn"
+"origin" "1951 -1492 44"
+"angles" "0 90 0"
+"_color" "0.501961 0.501961 1.000000"
+}

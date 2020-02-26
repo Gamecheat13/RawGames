@@ -1,0 +1,4 @@
+pcserver()
+{
+	pcServerUpdatePlaylist();
+}

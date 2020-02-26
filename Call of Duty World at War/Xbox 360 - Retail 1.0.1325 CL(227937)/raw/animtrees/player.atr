@@ -1,0 +1,128 @@
+knockdown : nonloopsync
+{
+	player_view_dog_knockdown
+}
+knockdown_late : nonloopsync
+{
+	player_view_dog_knockdown_late
+}
+
+player_view_dog_knockdown_saved
+player_view_dog_knockdown_neck_snap
+player_view_dog_knockdown_neck_miss
+coup_opening_playerview
+coup_opening_playerview_idle
+coup_opening_playerview_idle_bumpy
+coup_opening_playerview_idle_static
+coup_opening_playerview_idle_normal
+coup_opening_playerview_idle_smooth
+coup_ending_drag_playerview
+coup_ending_player
+coup_ending_zakhaev_intro_playerview
+hunted_opening_player
+hunted_opening_player_idle
+sniper_escape_player_getup
+sniper_escape_player_putdown
+sniper_escape_player_rappel
+launchfacility_a_player_rappel
+airlift_player_getout
+airlift_player_putdown
+cargoship_ch46_rescue_load_player
+cargoship_explosion_player
+jeepride_drag_player
+jeepride_player_pickup_player
+blackout_bh_evac_player
+sniper_escape_crash_pickup_player
+
+// MikeD (11/14/2007): Testing out player view animation
+player_test
+
+// Makin Raid Player Animations
+int_makinraid_intro
+int_makinraid_hatch
+int_makinraid_outro
+int_makinraid_outro_raft_jumpin
+
+// Seelow 1 Player Animations
+int_seelow1_intro_player
+int_seelow1_outro_player
+
+// PBY animations
+int_pby_Front_to_Rear
+int_pby_Front_to_Rgun
+int_pby_Front_to_Lgun
+int_pby_Rgun_to_Front
+int_pby_Rgun_to_Lgun
+int_pby_Rgun_to_Rear
+int_pby_Rgun_to_Rseat
+int_pby_rgun_to_pistol
+int_pby_rgun_to_lpistol
+int_pby_rgun_to_end
+int_pby_rgun_to_flak
+int_pby_Lgun_to_Front
+int_pby_Lgun_to_Rgun
+int_pby_Lgun_to_Rear
+int_pby_Rear_to_Front
+int_pby_Rear_to_Rgun
+int_pby_Rear_to_Lgun
+//int_pby_Rgun_rescue
+//int_pby_Lgun_rescue
+int_pby_rescue_left
+int_pby_rescue_right
+int_pby_player1_crash
+int_pby_bank_loop
+int_pby_bank_thrown
+int_pby_bank_to_Rgun
+int_pby_close_hatch
+int_pby_open_hatch
+int_pby_intro_traverse
+int_pby_intro_loop
+int_pby_fgun_to_die
+int_pby_lgun_to_die
+int_pby_rgun_to_die
+int_pby_vgun_to_die
+
+
+// Tank mantle Animations //
+// King Tiger
+int_mantle_king_tiger_right
+int_mantle_king_tiger_left
+int_mantle_king_tiger_rear
+
+int_mantle_chiha_right
+int_mantle_chiha_left
+int_mantle_chiha_rear
+
+
+// ber3b player interactives
+int_ber3_outro_player_last_stand
+int_ber3_player_plant
+
+// prologue player interactives
+int_prologue_beheaded
+
+// hands on the plunger
+int_player_plunger
+
+// sniper beam falling
+int_sniper_beam_fall
+int_sniper_beam_move
+
+// pel1 tip anim
+int_pel1_intro_LVT_explosion
+
+// banzai
+int_bonzai_attack_player_impact
+int_bonzai_attack_player
+int_bonzai_attack_player_intro
+int_bonzai_attack_player_fail
+int_bonzai_attack_player_success
+
+// Ber3 Intro animation for player
+int_berlin3_intro
+
+// oki2 outro animation
+int_oki2_outro_player
+
+// OKI3 Intro animation
+int_oki3_outro2_player

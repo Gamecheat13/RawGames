@@ -1,0 +1,26 @@
+main()
+{
+	level._effect["church_roof_exp"]				= loadfx ("explosions/belltower_explosion");	
+		
+	level._effect["dust_wind_leaves_chernobyl"]		= loadfx ("dust/dust_wind_leaves_chernobyl");	
+	level._effect["thin_black_smoke_M"]				= loadfx ("smoke/thin_black_smoke_M");
+	level._effect["thin_black_smoke_L"]				= loadfx ("smoke/thin_black_smoke_L");
+
+	level._effect[ "dust_ceiling_ash_large" ]	= loadfx ( "dust/dust_ceiling_ash_large" );
+	level._effect[ "light_shaft_dust_med" ]		= loadfx ( "dust/light_shaft_dust_med" );	
+	level._effect[ "light_shaft_dust_large" ]	= loadfx ( "dust/light_shaft_dust_large" );	
+	level._effect[ "room_dust_200" ]			= loadfx ( "dust/room_dust_200" );	
+	level._effect[ "room_dust_100" ]			= loadfx ( "dust/room_dust_100" );	
+	
+	level._effect["bird"]							= loadfx ("misc/bird");
+	level._effect["bird_takeoff"]					= loadfx ("misc/bird_takeoff");
+	
+	level._effect["dog_bite_blood"] 				= loadfx ("impacts/flesh_hit_body_fatal_exit");
+	
+	level.flare_fx["hind"] 							= loadfx( "misc/flares_cobra" );
+	
+	level._effect["glass_break"] 					= loadfx( "props/car_glass_large" );
+
+
+	maps\createfx\scoutsniper_fx::main();
+}

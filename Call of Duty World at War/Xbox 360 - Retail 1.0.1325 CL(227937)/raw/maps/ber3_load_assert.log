@@ -1,0 +1,13 @@
+^1ERROR: File techniques/lm_sun_r0c0n0s0b1c1s1b2c2s2b3c3s3_nc_w_sm3_sco.tech, line 8: compiler message(s) for shaders/lm_sun_r0c0n0s0b1c1s1b2c2s2b3c3s3_nc_sm3_sco.hlsl (entryPoint="ps_main", target="ps_3_0"):
+(313): error X3568: Microcode Compiler out of sampler registers, default limit is 16; consider using the /Xsampreg switch
+
+globals.hlsl(242)
+^1ERROR: File techniques/lm_sun_r0c0n0s0b1c1s1b2c2s2b3c3s3_nc_w_sm3_sco.tech, line 8: shaders/lm_sun_r0c0n0s0b1c1s1b2c2s2b3c3s3_nc_sm3_sco.hlsl compilation failed - (error message unavailable)
+^1ERROR: File techniques/lm_sun_r0c0n0s0b1c1s1b2c2s2b3c3s3_nc_w_sm3_sco.tech, line 8: Error loading pass for dx9 technique 'lm_sun_r0c0n0s0b1c1s1b2c2s2b3c3s3_nc_w_sm3_sco'
+^1ERROR: File techsets/l_sm_r0c0n0s0_sco_b1c1s1_b2c2s2_b3c3s3.techset, line 26: Couldn't register technique 'lm_sun_r0c0n0s0b1c1s1b2c2s2b3c3s3_nc_w_sm3_sco'
+Cannot create technique set. The offending 4-layer combination is:
+wc/berlin_floors_concrete_tile4
+wc/decal_blood_foot_prints_blend
+wc/decal_blood_foot_prints_blend
+wc/decal_blood_pool_big
+	failed loading material '*56n_96_96_97' for asset 'sp/stielhandgranate' found in source file '../xenon/main_shared/aitype/axis_ger_ber_sshonor_reg_stg44.csv'

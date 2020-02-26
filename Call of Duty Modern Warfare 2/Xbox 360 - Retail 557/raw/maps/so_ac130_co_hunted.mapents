@@ -1,0 +1,39 @@
+{
+"origin" "0 0 0"
+"sunlight" "0.74"
+"suncolor" "0.88 0.93 1"
+"sundirection" "-70 72 0"
+"classname" "worldspawn"
+"ambient" ".116"
+"_color" "0.5 0.5 .62 1"
+"skylight" "0.56"
+"skycolor" "0.87 0.94 1"
+}
+{
+"classname" "script_origin"
+"targetname" "initial_ac130_location"
+"origin" "3450 -5500 -648"
+}
+{
+"model" "?0"
+"origin" "7230 7843 155"
+"classname" "info_volume"
+"targetname" "barn_volume"
+}
+{
+"model" "?1"
+"origin" "7219 7816 146"
+"classname" "trigger_multiple_flag_set"
+"script_flag" "checkpoint_barn"
+}
+{
+"classname" "script_origin"
+"targetname" "checkpoint_barn"
+"origin" "7164 7837 71"
+}
+{
+"model" "?2"
+"origin" "3076 -7816 200"
+"classname" "trigger_multiple_flag_set"
+"script_flag" "leaving_crash_site"
+}

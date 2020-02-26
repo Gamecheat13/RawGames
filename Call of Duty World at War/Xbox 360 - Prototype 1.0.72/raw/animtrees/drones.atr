@@ -1,0 +1,33 @@
+// Deaths
+death_run_forward_crumple
+death_run_onfront
+death_run_onleft
+death_explosion_up10			// Flies up 10 feet in the air.
+death_explosion_back13			// Flies back 13 feet.
+death_explosion_forward13		// etc.
+death_explosion_left11
+death_explosion_right13
+
+walk_run : loopsync
+{
+	// Walking before they enter the combat area
+
+	// Walks in combat
+
+	// Runs in combat - pick one of these for each guy.
+	pistol_crouchrun_loop_forward_1	// (Pistol runs are also good for unarmed)
+	crouchrun_loop_forward_2
+
+
+	combatrun
+	precombatrun1
+}
+
+
+
+
+
+// Facial animations
+facial
+{
+}

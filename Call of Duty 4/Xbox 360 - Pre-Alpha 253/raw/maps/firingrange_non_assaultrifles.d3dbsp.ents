@@ -1,0 +1,414 @@
+{
+"sunlight" "1.6"
+"sundirection" "-40 225 0"
+"sundiffusecolor" "0.717647 0.776471 1.000000"
+"suncolor" "0.996078 0.921569 0.9"
+"northyaw" "90"
+"diffusefraction" ".2"
+"ambient" "0.4"
+"_color" "0.717647 0.776471 1.000000"
+"classname" "worldspawn"
+"reflection_color_correction" "daylight"
+}
+{
+"targetname" "targetwall"
+"classname" "script_brushmodel"
+"origin" "1584 -2292 84"
+"model" "*1"
+}
+{
+"targetname" "targetwall"
+"classname" "script_brushmodel"
+"origin" "1084 -1908 84"
+"model" "*2"
+}
+{
+"targetname" "targetwall"
+"classname" "script_brushmodel"
+"origin" "584 -1524 84"
+"model" "*3"
+}
+{
+"targetname" "targetwall"
+"classname" "script_brushmodel"
+"origin" "84 -1140 84"
+"model" "*4"
+}
+{
+"targetname" "targetwall"
+"classname" "script_brushmodel"
+"origin" "-416 -756 84"
+"model" "*5"
+}
+{
+"targetname" "targetwall"
+"classname" "script_brushmodel"
+"origin" "-918 -372 84"
+"model" "*6"
+}
+{
+"targetname" "targetwall"
+"classname" "script_brushmodel"
+"origin" "-1418 12 84"
+"model" "*7"
+}
+{
+"targetname" "targetwall"
+"classname" "script_brushmodel"
+"origin" "-1918 396 84"
+"model" "*8"
+}
+{
+"angles" "0 180 0"
+"targetname" "weapontableorg"
+"origin" "2227 590 36"
+"classname" "script_origin"
+}
+{
+"targetname" "weapontableorg_1"
+"origin" "2435 398 36"
+"classname" "script_origin"
+}
+{
+"targetname" "weapontableorg_2"
+"origin" "2819 398 36"
+"classname" "script_origin"
+}
+{
+"targetname" "weapontableorg_3"
+"origin" "2435 -674 36"
+"classname" "script_origin"
+}
+{
+"targetname" "weapontableorg_4"
+"origin" "2819 -674 36"
+"classname" "script_origin"
+}
+{
+"angles" "0 270 0"
+"origin" "2640 -512 48"
+"classname" "info_player_start"
+}
+{
+"target" "pf1_auto1"
+"classname" "trigger_lookat"
+"origin" "1593 -2292 258"
+"model" "*9"
+}
+{
+"target" "pf1_auto10"
+"angles" "0 180 0"
+"targetname" "pf1_auto1"
+"origin" "2144 -2292 -8"
+"classname" "script_origin"
+}
+{
+"target" "pf1_auto11"
+"angles" "0 180 0"
+"targetname" "pf1_auto2"
+"origin" "2144 -1908 -8"
+"classname" "script_origin"
+}
+{
+"target" "pf1_auto12"
+"angles" "0 180 0"
+"targetname" "pf1_auto3"
+"origin" "2144 -1524 -8"
+"classname" "script_origin"
+}
+{
+"target" "pf1_auto13"
+"angles" "0 180 0"
+"targetname" "pf1_auto4"
+"origin" "2144 -1140 -8"
+"classname" "script_origin"
+}
+{
+"target" "pf1_auto14"
+"angles" "0 180 0"
+"targetname" "pf1_auto5"
+"origin" "2144 -756 -8"
+"classname" "script_origin"
+}
+{
+"target" "pf1_auto15"
+"angles" "0 180 0"
+"targetname" "pf1_auto6"
+"origin" "2144 -372 -8"
+"classname" "script_origin"
+}
+{
+"target" "pf1_auto16"
+"angles" "0 180 0"
+"targetname" "pf1_auto7"
+"origin" "2144 12 -8"
+"classname" "script_origin"
+}
+{
+"target" "pf1_auto17"
+"angles" "0 180 0"
+"targetname" "pf1_auto8"
+"origin" "2144 396 -8"
+"classname" "script_origin"
+}
+{
+"target" "pf1_auto2"
+"classname" "trigger_lookat"
+"origin" "1075 -1908 258"
+"model" "*10"
+}
+{
+"target" "pf1_auto3"
+"classname" "trigger_lookat"
+"origin" "575 -1524 258"
+"model" "*11"
+}
+{
+"target" "pf1_auto4"
+"classname" "trigger_lookat"
+"origin" "75 -1140 258"
+"model" "*12"
+}
+{
+"target" "pf1_auto5"
+"classname" "trigger_lookat"
+"origin" "-425 -756 258"
+"model" "*13"
+}
+{
+"target" "pf1_auto6"
+"classname" "trigger_lookat"
+"origin" "-927 -372 258"
+"model" "*14"
+}
+{
+"target" "pf1_auto7"
+"classname" "trigger_lookat"
+"origin" "-1427 12 258"
+"model" "*15"
+}
+{
+"target" "pf1_auto8"
+"classname" "trigger_lookat"
+"origin" "-1927 396 258"
+"model" "*16"
+}
+{
+"target" "pf1_auto9"
+"classname" "trigger_lookat"
+"origin" "2460 639 122"
+"model" "*17"
+}
+{
+"target" "pf1_auto18"
+"angles" "0 90 0"
+"origin" "2336 496 -8"
+"targetname" "pf1_auto9"
+"classname" "script_origin"
+}
+{
+"targetname" "pf1_auto10"
+"classname" "script_brushmodel"
+"origin" "1596 -2292 258"
+"model" "*18"
+}
+{
+"targetname" "pf1_auto11"
+"classname" "script_brushmodel"
+"origin" "1096 -1908 258"
+"model" "*19"
+}
+{
+"targetname" "pf1_auto12"
+"classname" "script_brushmodel"
+"origin" "596 -1524 258"
+"model" "*20"
+}
+{
+"targetname" "pf1_auto13"
+"classname" "script_brushmodel"
+"origin" "96 -1140 258"
+"model" "*21"
+}
+{
+"targetname" "pf1_auto14"
+"classname" "script_brushmodel"
+"origin" "-404 -756 258"
+"model" "*22"
+}
+{
+"targetname" "pf1_auto15"
+"classname" "script_brushmodel"
+"origin" "-906 -372 258"
+"model" "*23"
+}
+{
+"targetname" "pf1_auto16"
+"classname" "script_brushmodel"
+"origin" "-1406 12 258"
+"model" "*24"
+}
+{
+"targetname" "pf1_auto17"
+"classname" "script_brushmodel"
+"origin" "-1906 396 258"
+"model" "*25"
+}
+{
+"targetname" "pf1_auto18"
+"classname" "script_brushmodel"
+"origin" "2460 618 122"
+"model" "*26"
+}
+{
+"target" "pf1_auto19"
+"classname" "trigger_lookat"
+"origin" "3655 -12 258"
+"model" "*27"
+}
+{
+"target" "pf1_auto20"
+"angles" "0 2.50448e-006 0"
+"targetname" "pf1_auto19"
+"origin" "3104 -12 -8"
+"classname" "script_origin"
+}
+{
+"target" "pf1_auto21"
+"angles" "0 2.50448e-006 0"
+"targetname" "pf1_auto22"
+"origin" "3104 -396 -8"
+"classname" "script_origin"
+}
+{
+"target" "pf1_auto23"
+"angles" "0 2.50448e-006 0"
+"targetname" "pf1_auto24"
+"origin" "3104 -780 -8"
+"classname" "script_origin"
+}
+{
+"target" "pf1_auto25"
+"angles" "0 2.50448e-006 0"
+"targetname" "pf1_auto26"
+"origin" "3104 -1164 -8"
+"classname" "script_origin"
+}
+{
+"target" "pf1_auto27"
+"angles" "0 2.50448e-006 0"
+"targetname" "pf1_auto28"
+"origin" "3104 -1548 -8"
+"classname" "script_origin"
+}
+{
+"target" "pf1_auto29"
+"angles" "0 2.50448e-006 0"
+"targetname" "pf1_auto30"
+"origin" "3104 -1932 -8"
+"classname" "script_origin"
+}
+{
+"target" "pf1_auto31"
+"angles" "0 2.50448e-006 0"
+"targetname" "pf1_auto32"
+"origin" "3104 -2316 -8"
+"classname" "script_origin"
+}
+{
+"target" "pf1_auto33"
+"angles" "0 2.50448e-006 0"
+"targetname" "pf1_auto34"
+"origin" "3104 -2700 -8"
+"classname" "script_origin"
+}
+{
+"target" "pf1_auto22"
+"classname" "trigger_lookat"
+"origin" "4173 -396 258"
+"model" "*28"
+}
+{
+"target" "pf1_auto26"
+"classname" "trigger_lookat"
+"origin" "5173 -1164 258"
+"model" "*29"
+}
+{
+"target" "pf1_auto28"
+"classname" "trigger_lookat"
+"origin" "5673 -1548 258"
+"model" "*30"
+}
+{
+"target" "pf1_auto30"
+"classname" "trigger_lookat"
+"origin" "6175 -1932 258"
+"model" "*31"
+}
+{
+"target" "pf1_auto32"
+"classname" "trigger_lookat"
+"origin" "6675 -2316 258"
+"model" "*32"
+}
+{
+"target" "pf1_auto34"
+"classname" "trigger_lookat"
+"origin" "7175 -2700 258"
+"model" "*33"
+}
+{
+"targetname" "pf1_auto20"
+"classname" "script_brushmodel"
+"origin" "3652 -12 258"
+"model" "*34"
+}
+{
+"targetname" "pf1_auto21"
+"classname" "script_brushmodel"
+"origin" "4152 -396 258"
+"model" "*35"
+}
+{
+"targetname" "pf1_auto23"
+"classname" "script_brushmodel"
+"origin" "4652 -780 258"
+"model" "*36"
+}
+{
+"targetname" "pf1_auto25"
+"classname" "script_brushmodel"
+"origin" "5152 -1164 258"
+"model" "*37"
+}
+{
+"targetname" "pf1_auto27"
+"classname" "script_brushmodel"
+"origin" "5652 -1548 258"
+"model" "*38"
+}
+{
+"targetname" "pf1_auto29"
+"classname" "script_brushmodel"
+"origin" "6154 -1932 258"
+"model" "*39"
+}
+{
+"targetname" "pf1_auto31"
+"classname" "script_brushmodel"
+"origin" "6654 -2316 258"
+"model" "*40"
+}
+{
+"targetname" "pf1_auto33"
+"classname" "script_brushmodel"
+"origin" "7154 -2700 258"
+"model" "*41"
+}
+{
+"classname" "trigger_lookat"
+"target" "pf1_auto24"
+"origin" "4673 -780 258"
+"model" "*42"
+}

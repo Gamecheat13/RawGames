@@ -1,0 +1,1909 @@
+{
+"classname" "worldspawn"
+"ambientcolor" "1 1 1 1"
+"suncolor" "1 1 0.882353 1"
+"sundiffusecolor" "0.9098041 1 1"
+"sundirection" "-45 200 0"
+"ambient" "0.1"
+"sunlight" "1.5"
+"diffusefraction" "0.5"
+}
+{
+"classname" "info_player_start"
+"origin" "-586 62 0"
+"angles" "0 0 0"
+}
+{
+"classname" "node_cover_left"
+"origin" "-592 -528 16"
+"angles" "0 180 0"
+}
+{
+"classname" "node_cover_left"
+"origin" "-656 -560 16"
+"angles" "0 90 0"
+"targetname" "auto18"
+}
+{
+"classname" "node_cover_left"
+"origin" "-688 -496 16"
+"angles" "0 1.00179e-005 0"
+}
+{
+"classname" "node_cover_left"
+"origin" "-624 -464 16"
+"angles" "0 270 0"
+}
+{
+"classname" "node_cover_right"
+"angles" "0 270 0"
+"origin" "-656 -464 16"
+}
+{
+"classname" "node_cover_right"
+"angles" "0 1.00179e-005 0"
+"origin" "-688 -528 16"
+}
+{
+"classname" "node_cover_right"
+"angles" "0 90 0"
+"origin" "-624 -560 16"
+"targetname" "auto19"
+}
+{
+"classname" "node_cover_right"
+"angles" "0 180 0"
+"origin" "-592 -496 16"
+}
+{
+"origin" "-740 180 16"
+"angles" "0 270 0"
+"classname" "node_cover_right"
+}
+{
+"origin" "-484 148 16"
+"angles" "0 180 0"
+"classname" "node_cover_right"
+}
+{
+"origin" "-516 -268 16"
+"angles" "0 90 0"
+"classname" "node_cover_right"
+}
+{
+"classname" "node_cover_right"
+"angles" "0 1.00179e-005 0"
+"origin" "-772 -236 16"
+}
+{
+"origin" "-740 -268 16"
+"angles" "0 90 0"
+"classname" "node_cover_left"
+}
+{
+"origin" "-516 180 16"
+"angles" "0 270 0"
+"classname" "node_cover_left"
+}
+{
+"origin" "-532 -108 16"
+"angles" "0 1.00179e-005 0"
+"classname" "node_cover_crouch"
+"targetname" "auto24"
+}
+{
+"origin" "-532 4 16"
+"angles" "0 1.00179e-005 0"
+"classname" "node_cover_left"
+}
+{
+"origin" "-772 148 16"
+"angles" "0 1.00179e-005 0"
+"classname" "node_cover_left"
+}
+{
+"classname" "node_cover_left"
+"angles" "0 180 0"
+"origin" "-484 -236 16"
+}
+{
+"origin" "-628 -108 16"
+"angles" "0 1.00179e-005 0"
+"classname" "node_concealment_stand"
+}
+{
+"origin" "-628 68 16"
+"angles" "0 1.00179e-005 0"
+"classname" "node_concealment_crouch"
+}
+{
+"classname" "node_cover_crouch"
+"angles" "0 180 0"
+"origin" "-228 -140 16"
+}
+{
+"classname" "node_cover_crouch"
+"angles" "0 180 0"
+"origin" "-228 -204 16"
+}
+{
+"classname" "node_cover_crouch"
+"angles" "0 1.00179e-005 0"
+"origin" "-276 -204 16"
+"targetname" "auto22"
+}
+{
+"classname" "node_cover_crouch"
+"angles" "0 1.00179e-005 0"
+"origin" "-276 -140 16"
+"targetname" "auto16"
+}
+{
+"origin" "-484 -108 16"
+"angles" "0 180 0"
+"classname" "node_cover_crouch"
+}
+{
+"origin" "-484 4 16"
+"angles" "0 180 0"
+"classname" "node_cover_right"
+}
+{
+"origin" "624 528 16"
+"angles" "0 180 0"
+"classname" "node_cover_right"
+"targetname" "auto14"
+}
+{
+"origin" "592 464 16"
+"angles" "0 90 0"
+"classname" "node_cover_right"
+}
+{
+"origin" "528 496 16"
+"angles" "0 1.00179e-005 0"
+"classname" "node_cover_right"
+}
+{
+"origin" "560 560 16"
+"angles" "0 270 0"
+"classname" "node_cover_right"
+}
+{
+"angles" "0 270 0"
+"origin" "592 560 16"
+"classname" "node_cover_left"
+}
+{
+"angles" "0 1.00179e-005 0"
+"origin" "528 528 16"
+"classname" "node_cover_left"
+}
+{
+"angles" "0 90 0"
+"origin" "560 464 16"
+"classname" "node_cover_left"
+}
+{
+"angles" "0 180 0"
+"origin" "624 496 16"
+"classname" "node_cover_left"
+}
+{
+"classname" "node_pathnode"
+"origin" "-896 896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-896 768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-896 640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-896 512 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-896 -512 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-896 -640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-896 -768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-896 -896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-256 896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-640 896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-768 896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "384 896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "256 896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "128 896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "0 896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-128 896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "896 896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "896 768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "896 640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "896 512 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "896 384 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "896 256 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "896 128 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "896 0 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "896 -128 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "896 -256 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "896 -384 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "896 -512 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "896 -640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "896 -768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-512 -896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-640 -896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-768 -896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "384 -896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "256 -896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "128 -896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "0 -896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "512 -896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "384 -768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "256 -768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "128 -768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "0 -768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-128 -768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "768 -768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "640 -768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "512 -768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "768 -640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "640 -640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "512 -640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "768 -512 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "768 -384 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "768 -256 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "640 -256 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "640 -384 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "512 -384 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "512 -256 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "384 -256 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "384 -384 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "380 -516 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-384 -768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-512 -768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-640 -768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-768 -768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-384 -640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-512 -640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-640 -640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-768 -640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-384 -384 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-512 -384 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-640 -384 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-768 -384 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-372 -300 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-500 -300 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-628 -300 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-764 -308 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-768 -512 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-512 -512 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-384 -512 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-284 -288 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-256 -384 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-128 -256 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-128 -384 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "256 -384 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "128 -384 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "0 -384 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "0 -256 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "128 -256 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "256 -256 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-372 -44 16"
+"targetname" "auto17"
+}
+{
+"classname" "node_pathnode"
+"origin" "-372 84 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-372 -172 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-384 288 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-768 768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-640 768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-512 768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-384 768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-256 768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-784 288 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-640 288 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-512 288 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-256 288 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "256 512 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "256 384 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-128 256 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "0 256 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "128 256 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "256 256 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "384 512 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "384 384 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "384 256 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "128 0 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "384 0 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "384 -128 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "128 128 16"
+"targetname" "auto11"
+}
+{
+"classname" "node_pathnode"
+"origin" "128 -128 16"
+"targetname" "auto10"
+}
+{
+"classname" "node_pathnode"
+"origin" "-128 128 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-128 0 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-128 -128 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "768 768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "768 640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "768 512 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "640 768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "640 640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "512 768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "512 640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "384 768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "384 640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "256 768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "256 640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "768 256 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "640 256 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "512 256 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "512 384 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "640 384 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "768 384 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "640 128 16"
+"targetname" "auto34"
+}
+{
+"classname" "node_pathnode"
+"origin" "258 126 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "624 -24 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "760 -16 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "696 -120 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "512 -128 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "496 -32 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-684 84 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-684 -20 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-580 -28 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-580 -156 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-692 -132 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-548 68 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "0 0 16"
+"radius" "1600"
+"targetname" "auto9"
+}
+{
+"classname" "node_pathnode"
+"origin" "256 0 16"
+"targetname" "auto33"
+}
+{
+"classname" "node_pathnode"
+"origin" "-244 -44 16"
+}
+{
+"classname" "node_cover_right"
+"angles" "0 1.00179e-005 0"
+"origin" "-772 -76 16"
+}
+{
+"classname" "node_cover_right"
+"angles" "0 180 0"
+"origin" "-724 -188 16"
+}
+{
+"origin" "-772 -188 16"
+"angles" "0 1.00179e-005 0"
+"classname" "node_cover_left"
+}
+{
+"origin" "-724 -76 16"
+"angles" "0 180 0"
+"classname" "node_cover_left"
+}
+{
+"classname" "node_cover_crouch"
+"angles" "0 270 0"
+"origin" "-628 180 16"
+}
+{
+"classname" "node_cover_crouch"
+"angles" "0 90 0"
+"origin" "-628 132 16"
+}
+{
+"classname" "node_cover_crouch"
+"angles" "0 90 0"
+"origin" "-628 -268 16"
+}
+{
+"classname" "node_cover_crouch"
+"angles" "0 270 0"
+"origin" "-628 -220 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "776 128 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-468 68 16"
+}
+{
+"classname" "node_negotiation_end"
+"angles" "0 0 0"
+"targetname" "pf197_auto2108"
+"origin" "-480 -80 52"
+}
+{
+"target" "pf197_auto2108"
+"origin" "-550 -80 52"
+"animscript" "wall_hop"
+"angles" "0 0 0"
+"classname" "node_negotiation_begin"
+"targetname" "traverse"
+}
+{
+"classname" "script_origin"
+"origin" "-510 -80 44"
+"targetname" "pf197_auto2108"
+}
+{
+"classname" "node_negotiation_end"
+"angles" "0 180 0"
+"targetname" "pf200_auto2108"
+"origin" "-536 -136 52"
+}
+{
+"target" "pf200_auto2108"
+"origin" "-466 -136 52"
+"animscript" "wall_hop"
+"angles" "0 180 0"
+"classname" "node_negotiation_begin"
+"targetname" "traverse"
+}
+{
+"angles" "0 180 0"
+"classname" "script_origin"
+"origin" "-506 -136 44"
+"targetname" "pf200_auto2108"
+}
+{
+"classname" "node_cover_stand"
+"angles" "0 180 0"
+"origin" "-228 116 16"
+}
+{
+"classname" "node_cover_stand"
+"angles" "0 180 0"
+"origin" "-228 52 16"
+}
+{
+"classname" "node_cover_stand"
+"angles" "0 1.00179e-005 0"
+"origin" "-276 52 16"
+"targetname" "auto15"
+}
+{
+"classname" "node_cover_stand"
+"angles" "0 1.00179e-005 0"
+"origin" "-276 116 16"
+}
+{
+"classname" "actor_enemy_dog"
+"model" "german_sheperd_dog"
+"export" "1"
+"angles" "0 90 0"
+"origin" "1444 -170 0"
+"spawnflags" "1"
+"target" "auto10"
+"count" "1000"
+"targetname" "dogspawner"
+}
+{
+"classname" "node_pathnode"
+"origin" "640 -512 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "512 125 16"
+}
+{
+"origin" "376 -638 16"
+"classname" "node_pathnode"
+}
+{
+"classname" "node_pathnode"
+"origin" "1024 896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1024 768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1024 640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1024 512 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1024 384 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1024 256 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1024 128 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1024 0 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1024 -128 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1024 -256 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1024 -384 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1024 -512 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1024 -640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1024 -768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1024 -896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1152 896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1152 768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1152 640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1152 128 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1152 0 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1152 -128 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1152 -256 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1152 -768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1152 -896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1280 896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1280 768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1280 640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1280 128 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1280 0 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1280 -128 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1280 -256 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1280 -768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1280 -896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1408 896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1408 768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1408 640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1408 128 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1408 0 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1408 -128 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1408 -256 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1408 -768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1408 -896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1536 896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1536 768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1536 640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1536 128 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1536 0 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1536 -128 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1536 -256 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1536 -768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1536 -896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1664 896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1664 768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1664 640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1664 128 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1664 0 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1664 -128 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1664 -256 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1664 -768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1664 -896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1792 896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1792 768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1792 640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1792 128 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1792 0 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1792 -128 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1792 -256 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1792 -768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "1792 -896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-1776 896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-1776 768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-1776 640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-1776 512 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-1776 -512 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-1776 -640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-1776 -768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-1776 -896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-1648 896 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-1648 768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-1648 640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-1648 512 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-1648 -512 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-1648 -640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-1648 -768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-1648 -896 16"
+}
+{
+"origin" "824 -96 16"
+"angles" "0 180 0"
+"classname" "node_cover_crouch"
+"targetname" "auto13"
+}
+{
+"origin" "824 -160 16"
+"angles" "0 180 0"
+"classname" "node_cover_crouch"
+}
+{
+"origin" "776 -160 16"
+"angles" "0 1.00179e-005 0"
+"classname" "node_cover_crouch"
+}
+{
+"origin" "776 -96 16"
+"angles" "0 1.00179e-005 0"
+"classname" "node_cover_crouch"
+}
+{
+"classname" "node_pathnode"
+"origin" "-256 -512 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-128 -512 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "256 -512 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "128 -512 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "0 -512 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-256 -640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-128 -640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "256 -640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "128 -640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "0 -640 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-256 -768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "128 768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "0 768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-128 768 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "0 128 16"
+"targetname" "auto12"
+}
+{
+"classname" "node_pathnode"
+"origin" "0 -128 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "256 -128 16"
+}
+{
+"origin" "432 144 16"
+"angles" "0 180 0"
+"classname" "node_cover_right"
+}
+{
+"origin" "400 80 16"
+"angles" "0 90 0"
+"classname" "node_cover_right"
+}
+{
+"origin" "336 112 16"
+"angles" "0 1.00179e-005 0"
+"classname" "node_cover_right"
+}
+{
+"origin" "368 176 16"
+"angles" "0 270 0"
+"classname" "node_cover_right"
+}
+{
+"angles" "0 270 0"
+"origin" "400 176 16"
+"classname" "node_cover_left"
+}
+{
+"angles" "0 1.00179e-005 0"
+"origin" "336 144 16"
+"classname" "node_cover_left"
+}
+{
+"angles" "0 90 0"
+"origin" "368 80 16"
+"classname" "node_cover_left"
+}
+{
+"angles" "0 180 0"
+"origin" "432 112 16"
+"classname" "node_cover_left"
+}
+{
+"classname" "actor_enemy_dog"
+"model" "german_sheperd_dog"
+"export" "13"
+"angles" "0 90 0"
+"origin" "1444 -938 0"
+"spawnflags" "1"
+"count" "1000"
+"targetname" "dogspawner"
+"target" "auto33"
+}
+{
+"classname" "actor_enemy_dog"
+"model" "german_sheperd_dog"
+"export" "14"
+"angles" "0 90 0"
+"origin" "532 -906 0"
+"spawnflags" "1"
+"target" "auto9"
+"count" "1000"
+"targetname" "dogspawner"
+}
+{
+"classname" "actor_enemy_dog"
+"model" "german_sheperd_dog"
+"export" "15"
+"angles" "0 90 0"
+"origin" "-1212 -938 0"
+"spawnflags" "1"
+"target" "auto9"
+"count" "1000"
+"targetname" "dogspawner"
+}
+{
+"classname" "actor_enemy_dog"
+"model" "german_sheperd_dog"
+"export" "16"
+"angles" "0 90 0"
+"origin" "-1196 870 0"
+"spawnflags" "1"
+"target" "auto12"
+"count" "1000"
+"targetname" "dogspawner"
+}
+{
+"classname" "actor_enemy_dog"
+"model" "german_sheperd_dog"
+"export" "17"
+"angles" "0 90 0"
+"origin" "-284 950 0"
+"spawnflags" "1"
+"target" "auto11"
+"count" "1000"
+"targetname" "dogspawner"
+}
+{
+"classname" "actor_enemy_dog"
+"model" "german_sheperd_dog"
+"export" "18"
+"angles" "0 90 0"
+"origin" "1476 886 0"
+"spawnflags" "1"
+"count" "1000"
+"targetname" "dogspawner"
+"target" "auto34"
+}
+{
+"classname" "actor_enemy_merc_AR_ak47"
+"model" "body_complete_sp_spetsnaz_boris"
+"export" "19"
+"angles" "0 180 0"
+"origin" "1328 -112 0"
+"spawnflags" "1"
+"target" "auto13"
+"count" "1000"
+"targetname" "auto20"
+}
+{
+"classname" "actor_ally_marine_AR_m16basic"
+"model" "body_complete_sp_usmc_zach"
+"export" "20"
+"origin" "-792 -136 0"
+"spawnflags" "1"
+"count" "1000"
+"targetname" "auto21"
+"target" "auto22"
+}
+{
+"classname" "actor_ally_marine_LMG_saw"
+"model" "body_complete_sp_usmc_zach"
+"export" "21"
+"origin" "-792 -236 0"
+"spawnflags" "1"
+"count" "1000"
+"targetname" "auto21"
+"target" "auto24"
+}
+{
+"count" "1000"
+"spawnflags" "1"
+"origin" "-704 -912 0"
+"angles" "0 180 0"
+"export" "22"
+"model" "body_complete_sp_spetsnaz_boris"
+"classname" "actor_enemy_merc_AR_ak47"
+"target" "auto19"
+"targetname" "auto23"
+}
+{
+"model" "*1"
+"origin" "-608 52 48"
+"classname" "trigger_multiple"
+"target" "auto20"
+"spawnflags" "32"
+"targetname" "flood_spawner"
+}
+{
+"model" "*2"
+"origin" "-596 52 48"
+"classname" "trigger_multiple"
+"target" "auto21"
+"spawnflags" "32"
+"targetname" "flood_spawner"
+}
+{
+"model" "*3"
+"origin" "-372 -276 56"
+"classname" "trigger_multiple"
+"target" "auto23"
+"targetname" "flood_spawner"
+}
+{
+"origin" "-1520 896 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1520 768 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1520 640 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1520 512 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1520 -512 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1520 -640 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1520 -768 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1520 -896 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1392 896 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1392 768 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1392 640 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1392 512 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1392 -512 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1392 -640 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1392 -768 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1392 -896 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1264 896 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1264 768 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1264 640 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1264 512 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1264 -512 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1264 -640 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1264 -768 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1264 -896 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1136 896 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1136 768 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1136 640 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1136 512 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1136 -512 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1136 -640 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1136 -768 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1136 -896 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1008 896 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1008 768 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1008 640 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1008 512 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1008 -512 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1008 -640 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1008 -768 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-1008 -896 16"
+"classname" "node_pathnode"
+}
+{
+"classname" "node_pathnode"
+"origin" "508 -516 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "608 -120 16"
+}
+{
+"classname" "node_negotiation_end"
+"origin" "72 572 96"
+"targetname" "auto28"
+"angles" "0 270 0"
+}
+{
+"classname" "node_negotiation_end"
+"origin" "-440 300 16"
+"targetname" "auto31"
+"angles" "0 270 0"
+}
+{
+"classname" "node_negotiation_end"
+"origin" "-440 568 96"
+"targetname" "auto27"
+"angles" "0 270 0"
+}
+{
+"classname" "node_negotiation_begin"
+"origin" "-440 728 56"
+"target" "auto25"
+"animscript" "step_up"
+"angles" "0 270 0"
+}
+{
+"classname" "node_negotiation_begin"
+"origin" "72 728 56"
+"target" "auto26"
+"animscript" "step_up"
+"angles" "0 270 0"
+}
+{
+"classname" "node_negotiation_end"
+"origin" "-440 660 56"
+"targetname" "auto25"
+"angles" "0 270 0"
+}
+{
+"classname" "node_negotiation_begin"
+"origin" "-440 636 56"
+"target" "auto27"
+"animscript" "step_up"
+"angles" "0 270 0"
+}
+{
+"classname" "node_negotiation_begin"
+"origin" "72 624 56"
+"target" "auto28"
+"animscript" "step_up"
+"angles" "0 270 0"
+}
+{
+"classname" "node_negotiation_begin"
+"origin" "-440 368 56"
+"target" "auto31"
+"animscript" "step_down"
+"angles" "0 270 0"
+}
+{
+"classname" "node_negotiation_begin"
+"origin" "-440 480 96"
+"target" "auto30"
+"animscript" "step_down"
+"angles" "0 270 0"
+"targetname" "auto35"
+"script_radius" "32"
+}
+{
+"classname" "node_negotiation_end"
+"origin" "72 664 56"
+"targetname" "auto26"
+"angles" "0 270 0"
+}
+{
+"classname" "node_negotiation_end"
+"origin" "-131.1 437.8 56"
+"targetname" "auto29"
+"angles" "0 205 0"
+}
+{
+"classname" "node_pathnode"
+"origin" "200 696 16"
+}
+{
+"origin" "192 344 16"
+"classname" "node_pathnode"
+}
+{
+"classname" "node_pathnode"
+"origin" "8 524 96"
+}
+{
+"classname" "node_pathnode"
+"origin" "-384 200 16"
+}
+{
+"angles" "0 240 0"
+"targetname" "auto32"
+"origin" "-224 340.3 16"
+"classname" "node_negotiation_end"
+}
+{
+"angles" "0 240 0"
+"animscript" "step_down"
+"target" "auto32"
+"origin" "-180 407.7 56"
+"classname" "node_negotiation_begin"
+}
+{
+"angles" "0 205 0"
+"animscript" "step_down"
+"target" "auto29"
+"origin" "-52.9 470.2 96"
+"classname" "node_negotiation_begin"
+}
+{
+"angles" "0 180 0"
+"origin" "184 400 16"
+"classname" "node_cover_left"
+}
+{
+"classname" "node_pathnode"
+"origin" "-292 184 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-220 -288 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-216 184 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-640 636 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-640 508 16"
+}
+{
+"origin" "-764 636 16"
+"classname" "node_pathnode"
+}
+{
+"origin" "-764 508 16"
+"classname" "node_pathnode"
+}
+{
+"classname" "node_pathnode"
+"origin" "-636 392 16"
+}
+{
+"origin" "-760 392 16"
+"classname" "node_pathnode"
+}
+{
+"classname" "node_pathnode"
+"origin" "-536 364 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-536 716 16"
+}
+{
+"classname" "actor_enemy_dog"
+"model" "german_sheperd_dog"
+"export" "23"
+"angles" "0 270 0"
+"origin" "-32 898 0"
+"spawnflags" "1"
+"count" "1000"
+"targetname" "dogspecialspawn"
+"target" "auto36"
+"script_radius" "32"
+"radius" "32"
+}
+{
+"angles" "0 270 0"
+"targetname" "auto30"
+"origin" "-440 404 56"
+"classname" "node_negotiation_end"
+"script_radius" "32"
+}
+{
+"classname" "node_pathnode"
+"origin" "-540 572 16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-440 500 96"
+"targetname" "auto36"
+"script_radius" "32"
+"radius" "32"
+}
+{
+"targetname" "auto20"
+"count" "1000"
+"target" "auto14"
+"spawnflags" "1"
+"origin" "1416 848 0"
+"angles" "0 180 0"
+"export" "12"
+"model" "body_complete_sp_spetsnaz_boris"
+"classname" "actor_enemy_merc_AR_ak47"
+}

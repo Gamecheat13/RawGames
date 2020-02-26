@@ -1,0 +1,4 @@
+precache()
+{
+	level.supportsPistolAnimations = true;
+}

@@ -1,0 +1,180 @@
+{
+"_color" "0.5 0.5 .62 1"
+"ambient" ".15"
+"sundiffusecolor" "0.75 0.82 0.85"
+"diffusefraction" ".5"
+"classname" "worldspawn"
+"sundirection" "-130  40 0"
+"suncolor" "0.9 0.95 1"
+"sunlight" "1.5"
+}
+{
+"classname" "info_player_start"
+"angles" "-0 90 0"
+"origin" "-224 -600 -32"
+}
+{
+"angles" "-0 270 0"
+"target" "auto2"
+"targetname" "auto1"
+"origin" "-456 -8 44"
+"classname" "script_origin"
+}
+{
+"angles" "0 180 0"
+"target" "auto3"
+"targetname" "auto2"
+"origin" "-456 -504 44"
+"classname" "script_origin"
+}
+{
+"angles" "-0 90 0"
+"target" "effect3"
+"targetname" "auto3"
+"origin" "-888 -504 44"
+"classname" "script_origin"
+}
+{
+"angles" "-0 270 0"
+"target" "auto11"
+"targetname" "auto9"
+"origin" "-456 696 44"
+"classname" "script_origin"
+}
+{
+"angles" "0 180 0"
+"target" "auto12"
+"targetname" "auto11"
+"origin" "-456 200 44"
+"classname" "script_origin"
+}
+{
+"angles" "-0 90 0"
+"target" "effect1"
+"targetname" "auto12"
+"origin" "-888 200 44"
+"classname" "script_origin"
+}
+{
+"angles" "-0 270 0"
+"target" "auto15"
+"targetname" "auto13"
+"origin" "440 696 -60"
+"classname" "script_origin"
+}
+{
+"angles" "0 180 0"
+"target" "auto16"
+"targetname" "auto15"
+"origin" "440 200 -60"
+"classname" "script_origin"
+}
+{
+"angles" "-0 90 0"
+"target" "effect2"
+"targetname" "auto16"
+"origin" "8 200 -60"
+"classname" "script_origin"
+}
+{
+"angles" "-0 0 0"
+"classname" "script_origin"
+"origin" "-888 696 44"
+"target" "auto9"
+"targetname" "effect1"
+}
+{
+"angles" "-0 0 0"
+"classname" "script_origin"
+"origin" "8 696 -60"
+"target" "auto13"
+"targetname" "effect2"
+}
+{
+"angles" "-0 0 0"
+"classname" "script_origin"
+"origin" "-888 -8 44"
+"target" "auto1"
+"targetname" "effect3"
+}
+{
+"origin" "1000 -968 -32"
+"model" "viewmodel_ussmokegrenade"
+"classname" "script_model"
+}
+{
+"targetname" "static1"
+"origin" "-888 1096 -36"
+"angles" "-0 90 0"
+"classname" "script_origin"
+}
+{
+"targetname" "static2"
+"origin" "-456 1096 -36"
+"angles" "-0 90 0"
+"classname" "script_origin"
+}
+{
+"targetname" "static3"
+"origin" "8 1096 -36"
+"angles" "-0 90 0"
+"classname" "script_origin"
+}
+{
+"targetname" "static4"
+"origin" "456 1096 -36"
+"angles" "-0 90 0"
+"classname" "script_origin"
+}
+{
+"targetname" "spawned1"
+"origin" "-888 1592 -36"
+"angles" "-0 90 0"
+"classname" "script_origin"
+}
+{
+"targetname" "spawned2"
+"origin" "-456 1592 -36"
+"angles" "-0 90 0"
+"classname" "script_origin"
+}
+{
+"targetname" "spawned3"
+"origin" "8 1592 -36"
+"angles" "-0 90 0"
+"classname" "script_origin"
+}
+{
+"targetname" "spawned4"
+"origin" "456 1592 -36"
+"angles" "-0 90 0"
+"classname" "script_origin"
+}
+{
+"classname" "script_origin"
+"origin" "8 -496 -60"
+"targetname" "auto8"
+"target" "effect4"
+"angles" "-0 90 0"
+}
+{
+"classname" "script_origin"
+"origin" "440 -496 -60"
+"targetname" "auto7"
+"target" "auto8"
+"angles" "0 180 0"
+}
+{
+"classname" "script_origin"
+"origin" "440 0 -60"
+"targetname" "auto5"
+"target" "auto7"
+"angles" "-0 270 0"
+}
+{
+"targetname" "effect4"
+"target" "auto5"
+"origin" "8 0 -60"
+"classname" "script_origin"
+"angles" "-0 0 0"
+}

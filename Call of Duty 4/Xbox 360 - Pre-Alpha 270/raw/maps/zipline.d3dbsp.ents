@@ -1,0 +1,779 @@
+{
+"origin" "0 0 0"
+"classname" "worldspawn"
+"_color" "0.717647 0.776471 1.000000"
+"ambient" "0.1"
+"diffusefraction" "0.6"
+"suncolor" "0.8 0.9 1"
+"sundiffusecolor" "0.4 0.6 1"
+"sundirection" "-30 91 0"
+"sunlight" ".8"
+"brightness" "0.1"
+"sunRadiosity" "0.8"
+"contrastGain" ".5"
+}
+{
+"classname" "node_negotiation_end"
+"angles" "0 344 0"
+"targetname" "pf2_auto2108"
+"origin" "-554.083 -391.531 32"
+}
+{
+"target" "pf2_auto2108"
+"origin" "-611.758 -374.993 76"
+"animscript" "crouch_jump_down_40"
+"angles" "0 344 0"
+"classname" "node_negotiation_begin"
+"targetname" "traverse"
+}
+{
+"angles" "0 344 0"
+"classname" "script_origin"
+"origin" "-588.688 -381.608 48"
+"targetname" "pf2_auto2108"
+"_color" "0.000000 1.000000 0.250980"
+}
+{
+"classname" "node_negotiation_end"
+"angles" "0 74 0"
+"targetname" "pf5_auto2108"
+"origin" "-841.813 -204.995 82"
+}
+{
+"target" "pf5_auto2108"
+"origin" "-859.454 -266.516 82"
+"animscript" "window_2"
+"angles" "0 74 0"
+"classname" "node_negotiation_begin"
+"targetname" "traverse"
+}
+{
+"angles" "0 74 0"
+"classname" "script_origin"
+"origin" "-850.082 -233.833 82"
+"targetname" "pf5_auto2108"
+}
+{
+"classname" "node_negotiation_end"
+"angles" "0 90 0"
+"targetname" "pf29_auto2108"
+"origin" "-907.3 -780.1 202.2"
+}
+{
+"target" "pf29_auto2108"
+"origin" "-907.3 -844.1 202.2"
+"animscript" "window_2"
+"angles" "0 90 0"
+"classname" "node_negotiation_begin"
+"targetname" "traverse"
+}
+{
+"angles" "0 90 0"
+"classname" "script_origin"
+"origin" "-907.3 -810.1 202.2"
+"targetname" "pf29_auto2108"
+}
+{
+"classname" "script_struct"
+"origin" "-4573.42 -296.711 250"
+"targetname" "ch_streetlight_02_FX_origin"
+"angles" "90 285 180"
+}
+{
+"classname" "script_struct"
+"origin" "-888.527 -2404.33 662.6"
+"targetname" "ch_streetlight_02_FX_origin"
+"angles" "90 225 180"
+}
+{
+"classname" "script_struct"
+"angles" "24.5 213.1 -0.000178916"
+"origin" "-1906.07 -2892.25 558.882"
+"targetname" "cs_cargoship_spotlight_on_FX_origin"
+}
+{
+"classname" "weapon_ak47"
+"model" "weapon_ak47"
+"angles" "1.12003e-006 122.1 -90.0001"
+"origin" "-1514.6 -2654.08 417.2"
+}
+{
+"classname" "weapon_ak47"
+"model" "weapon_ak47"
+"angles" "1.12003e-006 122.1 -90.0001"
+"origin" "-1507.53 -2649.84 417.2"
+}
+{
+"classname" "weapon_ak47"
+"model" "weapon_ak47"
+"angles" "1.12003e-006 122.1 -90.0001"
+"origin" "-1499.04 -2644.18 417.2"
+}
+{
+"classname" "weapon_ak47"
+"model" "weapon_ak47"
+"angles" "1.12003e-006 122.1 -90.0001"
+"origin" "-1491.97 -2639.94 417.2"
+}
+{
+"classname" "weapon_ak47"
+"model" "weapon_ak47"
+"angles" "1.12003e-006 150.7 -90.0001"
+"origin" "-1481.01 -2614.13 420.8"
+}
+{
+"angles" "0 45 0"
+"classname" "weapon_fraggrenade"
+"model" "weapon_m67_grenade"
+"origin" "-1430.67 -2589.81 420.2"
+}
+{
+"angles" "0 45 0"
+"classname" "weapon_fraggrenade"
+"model" "weapon_m67_grenade"
+"origin" "-1427.84 -2579.91 420.2"
+}
+{
+"angles" "0 45 0"
+"classname" "weapon_fraggrenade"
+"model" "weapon_m67_grenade"
+"origin" "-1417.94 -2578.49 420.2"
+}
+{
+"angles" "0 45 0"
+"classname" "weapon_fraggrenade"
+"model" "weapon_m67_grenade"
+"origin" "-1425.01 -2574.25 420.2"
+}
+{
+"angles" "0 45 0"
+"classname" "weapon_fraggrenade"
+"model" "weapon_m67_grenade"
+"origin" "-1436.32 -2579.91 420.2"
+}
+{
+"classname" "weapon_uzi"
+"model" "weapon_mini_uzi"
+"angles" "1.00179e-005 2.70002 90"
+"origin" "-1448.06 -2611.45 420.2"
+}
+{
+"classname" "weapon_uzi"
+"model" "weapon_mini_uzi"
+"angles" "1.00179e-005 248.6 90"
+"origin" "-1451.1 -2606.71 420.2"
+}
+{
+"classname" "node_negotiation_end"
+"angles" "0 180 0"
+"targetname" "pf1712_auto2108"
+"origin" "923 -132 -82"
+}
+{
+"target" "pf1712_auto2108"
+"origin" "969 -132 -42"
+"animscript" "jump_down_56"
+"angles" "0 180 0"
+"classname" "node_negotiation_begin"
+"targetname" "traverse"
+}
+{
+"angles" "0 180 0"
+"classname" "script_origin"
+"origin" "953 -132 -74"
+"targetname" "pf1712_auto2108"
+}
+{
+"angles" "346.051 86.8939 2.17522"
+"classname" "script_model"
+"model" "vehicle_80s_sedan1_green_destructible"
+"origin" "-5305.1 -69.9 153.4"
+"targetname" "destructible"
+"destructible_type" "vehicle_80s_sedan1_green"
+}
+{
+"angles" "346.051 86.8939 2.17522"
+"classname" "script_model"
+"model" "vehicle_80s_sedan1_green_wheel_lf"
+"origin" "-5324.06 -21.913 178.263"
+"targetname" "delete_on_load"
+}
+{
+"angles" "346.051 86.8939 2.17522"
+"classname" "script_model"
+"model" "vehicle_80s_sedan1_green_wheel_lf"
+"origin" "-5329.39 -120.275 153.795"
+"targetname" "delete_on_load"
+}
+{
+"classname" "script_model"
+"model" "vehicle_80s_sedan1_green_wheel_lf"
+"origin" "-5279.63 -23.9159 176.623"
+"targetname" "delete_on_load"
+"angles" "346.051 86.8939 -177.825"
+}
+{
+"classname" "script_model"
+"model" "vehicle_80s_sedan1_green_wheel_lf"
+"origin" "-5284.97 -122.278 152.156"
+"targetname" "delete_on_load"
+"angles" "346.051 86.8939 -177.825"
+}
+{
+"angles" "358.856 170.848 3.61262"
+"classname" "script_model"
+"model" "vehicle_80s_sedan1_green_destructible"
+"origin" "-5488.4 -1721.4 181.9"
+"targetname" "destructible"
+"destructible_type" "vehicle_80s_sedan1_green"
+}
+{
+"angles" "358.856 170.848 3.61262"
+"classname" "script_model"
+"model" "vehicle_80s_sedan1_green_wheel_lf"
+"origin" "-5542.34 -1734.18 196.288"
+"targetname" "delete_on_load"
+}
+{
+"angles" "358.856 170.848 3.61262"
+"classname" "script_model"
+"model" "vehicle_80s_sedan1_green_wheel_lf"
+"origin" "-5442.15 -1750.32 194.261"
+"targetname" "delete_on_load"
+}
+{
+"classname" "script_model"
+"model" "vehicle_80s_sedan1_green_wheel_lf"
+"origin" "-5535.33 -1690.33 193.485"
+"targetname" "delete_on_load"
+"angles" "358.856 170.848 -176.387"
+}
+{
+"classname" "script_model"
+"model" "vehicle_80s_sedan1_green_wheel_lf"
+"origin" "-5435.15 -1706.47 191.458"
+"targetname" "delete_on_load"
+"angles" "358.856 170.848 -176.387"
+}
+{
+"angles" "2.4076 218.056 0.568663"
+"classname" "script_model"
+"model" "vehicle_80s_sedan1_green_destructible"
+"origin" "-4583.3 -1218.9 91.7"
+"targetname" "destructible"
+"destructible_type" "vehicle_80s_sedan1_green"
+}
+{
+"angles" "2.4076 218.056 0.568663"
+"classname" "script_model"
+"model" "vehicle_80s_sedan1_green_wheel_lf"
+"origin" "-4610.73 -1268.16 101.744"
+"targetname" "delete_on_load"
+}
+{
+"angles" "2.4076 218.056 0.568663"
+"classname" "script_model"
+"model" "vehicle_80s_sedan1_green_wheel_lf"
+"origin" "-4530.88 -1205.65 106.007"
+"targetname" "delete_on_load"
+}
+{
+"classname" "script_model"
+"model" "vehicle_80s_sedan1_green_wheel_lf"
+"origin" "-4638.15 -1233.11 101.302"
+"targetname" "delete_on_load"
+"angles" "2.4076 218.056 -179.431"
+}
+{
+"classname" "script_model"
+"model" "vehicle_80s_sedan1_green_wheel_lf"
+"origin" "-4558.3 -1170.6 105.566"
+"targetname" "delete_on_load"
+"angles" "2.4076 218.056 -179.431"
+}
+{
+"classname" "script_struct"
+"angles" "270 247.822 22.1777"
+"origin" "-4890.9 221.3 204.8"
+"targetname" "me_dumpster_fire_FX_origin"
+}
+{
+"classname" "script_struct"
+"origin" "-155 656.5 208"
+"targetname" "ch_streetlight_02_FX_origin"
+"angles" "90 270 180"
+}
+{
+"classname" "script_struct"
+"origin" "-865.6 663.9 296.2"
+"targetname" "ch_streetlight_02_FX_origin"
+"angles" "90 270 180"
+}
+{
+"classname" "script_struct"
+"origin" "-2199.15 964.706 402.9"
+"targetname" "ch_streetlight_02_FX_origin"
+"angles" "90 241.9 180"
+}
+{
+"classname" "script_struct"
+"origin" "-3188.07 1614.87 558.9"
+"targetname" "ch_streetlight_02_FX_origin"
+"angles" "90 223.9 180"
+}
+{
+"classname" "script_struct"
+"origin" "-2882.4 -3206.8 485.4"
+"targetname" "ch_streetlight_02_FX_origin"
+"angles" "90 270 180"
+}
+{
+"classname" "script_struct"
+"origin" "-3710.21 -2996.05 394"
+"targetname" "ch_streetlight_02_FX_origin"
+"angles" "90 240.8 -180"
+}
+{
+"classname" "script_struct"
+"origin" "-4469.31 -2363.05 293.7"
+"targetname" "ch_streetlight_02_FX_origin"
+"angles" "90 240.8 -180"
+}
+{
+"classname" "script_struct"
+"origin" "-7195.88 -26.0351 496.7"
+"targetname" "ch_streetlight_02_FX_origin"
+"angles" "90 200.2 -180"
+}
+{
+"classname" "script_struct"
+"origin" "-7157.91 -1024.36 487.6"
+"targetname" "ch_streetlight_02_FX_origin"
+"angles" "90 190.3 180"
+}
+{
+"classname" "script_struct"
+"origin" "-6563.61 -1772.46 459.3"
+"targetname" "ch_streetlight_02_FX_origin"
+"angles" "90 190.3 180"
+}
+{
+"classname" "script_struct"
+"origin" "-5308.82 -1812.95 319.6"
+"targetname" "ch_streetlight_02_FX_origin"
+"angles" "90 83.2 180"
+}
+{
+"classname" "script_struct"
+"origin" "-4605.69 -1057.87 256.7"
+"targetname" "ch_streetlight_02_FX_origin"
+"angles" "90 24.8 -180"
+}
+{
+"classname" "script_struct"
+"targetname" "barrel_fireFX_origin"
+"origin" "-650.756 -507.728 56.598"
+"angles" "276.441 9.16232 -25.2869"
+}
+{
+"angles" "8.96811 142.107 9.09288"
+"classname" "script_model"
+"model" "vehicle_80s_sedan1_green_destructible"
+"origin" "-3612.6 -2798.3 186"
+"targetname" "destructible"
+"destructible_type" "vehicle_80s_sedan1_green"
+}
+{
+"angles" "8.96811 142.107 9.09288"
+"classname" "script_model"
+"model" "vehicle_80s_sedan1_green_wheel_lf"
+"origin" "-3666.81 -2781.24 193.111"
+"targetname" "delete_on_load"
+}
+{
+"angles" "8.96811 142.107 9.09288"
+"classname" "script_model"
+"model" "vehicle_80s_sedan1_green_wheel_lf"
+"origin" "-3587.69 -2842.81 208.933"
+"targetname" "delete_on_load"
+}
+{
+"classname" "script_model"
+"model" "vehicle_80s_sedan1_green_wheel_lf"
+"origin" "-3638.95 -2747.23 186.164"
+"targetname" "delete_on_load"
+"angles" "8.96811 142.107 -170.907"
+}
+{
+"classname" "script_model"
+"model" "vehicle_80s_sedan1_green_wheel_lf"
+"origin" "-3559.83 -2808.81 201.986"
+"targetname" "delete_on_load"
+"angles" "8.96811 142.107 -170.907"
+}
+{
+"angles" "7.44956 296.249 -4.19255"
+"classname" "script_model"
+"model" "vehicle_80s_sedan1_green_destructible"
+"origin" "-1783 -2093.1 385.5"
+"targetname" "destructible"
+"destructible_type" "vehicle_80s_sedan1_green"
+}
+{
+"angles" "7.44956 296.249 -4.19255"
+"classname" "script_model"
+"model" "vehicle_80s_sedan1_green_wheel_lf"
+"origin" "-1739.36 -2130.01 389.095"
+"targetname" "delete_on_load"
+}
+{
+"angles" "7.44956 296.249 -4.19255"
+"classname" "script_model"
+"model" "vehicle_80s_sedan1_green_wheel_lf"
+"origin" "-1783.87 -2039.75 402.255"
+"targetname" "delete_on_load"
+}
+{
+"classname" "script_model"
+"model" "vehicle_80s_sedan1_green_wheel_lf"
+"origin" "-1778.97 -2150.02 392.321"
+"targetname" "delete_on_load"
+"angles" "7.44956 296.249 175.807"
+}
+{
+"classname" "script_model"
+"model" "vehicle_80s_sedan1_green_wheel_lf"
+"origin" "-1823.49 -2059.75 405.481"
+"targetname" "delete_on_load"
+"angles" "7.44956 296.249 175.807"
+}
+{
+"classname" "node_negotiation_end"
+"angles" "0 164 0"
+"targetname" "pf7291_auto2108"
+"origin" "-11221.9 -6520.47 552"
+}
+{
+"target" "pf7291_auto2108"
+"origin" "-11164.2 -6537.01 596"
+"animscript" "crouch_jump_down_40"
+"angles" "0 164 0"
+"classname" "node_negotiation_begin"
+"targetname" "traverse"
+}
+{
+"angles" "0 164 0"
+"classname" "script_origin"
+"origin" "-11187.3 -6530.39 568"
+"targetname" "pf7291_auto2108"
+"_color" "0.000000 1.000000 0.250980"
+}
+{
+"classname" "node_negotiation_end"
+"angles" "0 254 0"
+"targetname" "pf7294_auto2108"
+"origin" "-10934.2 -6707 602"
+}
+{
+"target" "pf7294_auto2108"
+"origin" "-10916.5 -6645.48 602"
+"animscript" "window_2"
+"angles" "0 254 0"
+"classname" "node_negotiation_begin"
+"targetname" "traverse"
+}
+{
+"angles" "0 254 0"
+"classname" "script_origin"
+"origin" "-10925.9 -6678.17 602"
+"targetname" "pf7294_auto2108"
+}
+{
+"classname" "node_negotiation_end"
+"angles" "0 270 0"
+"targetname" "pf7318_auto2108"
+"origin" "-10868.7 -6131.9 722.2"
+}
+{
+"target" "pf7318_auto2108"
+"origin" "-10868.7 -6067.9 722.2"
+"animscript" "window_2"
+"angles" "0 270 0"
+"classname" "node_negotiation_begin"
+"targetname" "traverse"
+}
+{
+"angles" "0 270 0"
+"classname" "script_origin"
+"origin" "-10868.7 -6101.9 722.2"
+"targetname" "pf7318_auto2108"
+}
+{
+"classname" "node_negotiation_end"
+"angles" "0 1.00179e-005 0"
+"targetname" "pf8348_auto2108"
+"origin" "-12699 -6780 438"
+}
+{
+"target" "pf8348_auto2108"
+"origin" "-12745 -6780 478"
+"animscript" "jump_down_56"
+"angles" "0 1.00179e-005 0"
+"classname" "node_negotiation_begin"
+"targetname" "traverse"
+}
+{
+"angles" "0 1.00179e-005 0"
+"classname" "script_origin"
+"origin" "-12729 -6780 446"
+"targetname" "pf8348_auto2108"
+}
+{
+"classname" "script_struct"
+"origin" "-11621 -7568.5 728"
+"targetname" "ch_streetlight_02_FX_origin"
+"angles" "90 90 -180"
+}
+{
+"classname" "script_struct"
+"origin" "-10910.4 -7575.9 816.2"
+"targetname" "ch_streetlight_02_FX_origin"
+"angles" "90 90 -180"
+}
+{
+"classname" "script_struct"
+"origin" "-9576.85 -7876.71 922.9"
+"targetname" "ch_streetlight_02_FX_origin"
+"angles" "90 61.9 -180"
+}
+{
+"classname" "script_struct"
+"targetname" "barrel_fireFX_origin"
+"origin" "-11125.2 -6404.27 576.598"
+"angles" "276.441 189.162 -25.2869"
+}
+{
+"classname" "node_negotiation_end"
+"angles" "0 20 0"
+"targetname" "pf9678_auto2108"
+"origin" "-15408.7 -8711.93 575.5"
+}
+{
+"target" "pf9678_auto2108"
+"origin" "-15468.9 -8733.82 575.5"
+"animscript" "window_2"
+"angles" "0 20 0"
+"classname" "node_negotiation_begin"
+"targetname" "traverse"
+}
+{
+"angles" "0 20 0"
+"classname" "script_origin"
+"origin" "-15436.9 -8722.19 575.5"
+"targetname" "pf9678_auto2108"
+}
+{
+"classname" "node_negotiation_end"
+"angles" "0 290 0"
+"targetname" "pf9700_auto2108"
+"origin" "-15566.5 -9618.86 446.5"
+}
+{
+"target" "pf9700_auto2108"
+"origin" "-15582.2 -9575.63 486.5"
+"animscript" "jump_down_56"
+"angles" "0 290 0"
+"classname" "node_negotiation_begin"
+"targetname" "traverse"
+}
+{
+"angles" "0 290 0"
+"classname" "script_origin"
+"origin" "-15576.7 -9590.67 454.5"
+"targetname" "pf9700_auto2108"
+}
+{
+"angles" "355.732 2.40618 -1.51002"
+"classname" "script_model"
+"model" "vehicle_80s_sedan1_green_destructible"
+"origin" "-9059 -2452.7 1274.7"
+"targetname" "destructible"
+"destructible_type" "vehicle_80s_sedan1_green"
+}
+{
+"angles" "355.732 2.40618 -1.51002"
+"classname" "script_model"
+"model" "vehicle_80s_sedan1_green_wheel_lf"
+"origin" "-9009.47 -2428.29 1289.92"
+"targetname" "delete_on_load"
+}
+{
+"angles" "355.732 2.40618 -1.51002"
+"classname" "script_model"
+"model" "vehicle_80s_sedan1_green_wheel_lf"
+"origin" "-9110.6 -2432.54 1282.36"
+"targetname" "delete_on_load"
+}
+{
+"classname" "script_model"
+"model" "vehicle_80s_sedan1_green_wheel_lf"
+"origin" "-9007.69 -2472.74 1291.09"
+"targetname" "delete_on_load"
+"angles" "355.732 2.40618 178.49"
+}
+{
+"classname" "script_model"
+"model" "vehicle_80s_sedan1_green_wheel_lf"
+"origin" "-9108.82 -2476.99 1283.53"
+"targetname" "delete_on_load"
+"angles" "355.732 2.40618 178.49"
+}
+{
+"classname" "script_struct"
+"origin" "-7837.13 -4552.52 1702.6"
+"targetname" "ch_streetlight_02_FX_origin"
+"angles" "90 104 180"
+}
+{
+"classname" "node_negotiation_end"
+"angles" "0 292 0"
+"targetname" "pf10033_auto2108"
+"origin" "-17159 -10401.1 438"
+}
+{
+"target" "pf10033_auto2108"
+"origin" "-17176.2 -10358.5 478"
+"animscript" "jump_down_56"
+"angles" "0 292 0"
+"classname" "node_negotiation_begin"
+"targetname" "traverse"
+}
+{
+"angles" "0 292 0"
+"classname" "script_origin"
+"origin" "-17170.2 -10373.3 446"
+"targetname" "pf10033_auto2108"
+}
+{
+"classname" "script_struct"
+"targetname" "barrel_fireFX_origin"
+"origin" "-15359.8 -8840.87 548.298"
+"angles" "276.441 189.162 -25.2869"
+}
+{
+"classname" "script_struct"
+"origin" "-7985.77 -1690.46 1451.97"
+"targetname" "ch_streetlight_02_FX_origin"
+"angles" "85 180 165"
+}
+{
+"classname" "script_struct"
+"origin" "-8185.6 -721.094 1453.17"
+"targetname" "ch_streetlight_02_FX_origin"
+"angles" "85 145 165"
+}
+{
+"classname" "info_player_start"
+"angles" "0 90 0"
+"origin" "-7880 -2616 1264"
+}
+{
+"classname" "script_vehicle"
+"model" "vehicle_bm21_mobile"
+"angles" "350.626 61.2986 -0.469589"
+"origin" "-3088.9 -420.3 67.4"
+"vehicletype" "bm21"
+"targetname" "bm21_02"
+"script_linkTo" "43 44 45 46"
+"script_vehiclespawngroup" "200"
+}
+{
+"classname" "script_vehicle"
+"model" "vehicle_bm21_mobile"
+"angles" "2.98944 55.0766 -1.11193"
+"origin" "-6975.9 -836.1 290.6"
+"vehicletype" "bm21"
+"targetname" "bm21_03"
+"script_linkTo" "43 48 2 46"
+"modelscale" "1.032245"
+"script_vehiclespawngroup" "300"
+}
+{
+"targetname" "bm21_01"
+"script_turret" "0"
+"vehicletype" "bm21"
+"origin" "-3657.7 -670.8 69.3"
+"angles" "0 68 0"
+"model" "vehicle_bm21_mobile"
+"classname" "script_vehicle"
+"script_linkTo" "43 44 47 45 46"
+"script_vehiclespawngroup" "100"
+}
+{
+"classname" "script_origin"
+"origin" "-1466.7 3303.5 2046"
+"angles" "0 158 0"
+"script_noteworthy" "bm21_target"
+"script_linkName" "43"
+}
+{
+"classname" "script_origin"
+"origin" "140.4 4970.4 2143.7"
+"angles" "0 158 0"
+"script_noteworthy" "bm21_target"
+"script_linkName" "44"
+}
+{
+"classname" "script_origin"
+"origin" "-1230.6 5057.9 1741.1"
+"angles" "0 158 0"
+"script_noteworthy" "bm21_target"
+"script_linkName" "45"
+}
+{
+"classname" "script_origin"
+"origin" "-1811.5 4942.5 2247.7"
+"angles" "0 158 0"
+"script_noteworthy" "bm21_target"
+"script_linkName" "46"
+}
+{
+"classname" "script_origin"
+"origin" "-2644.8 3387 1727.3"
+"angles" "0 158 0"
+"script_noteworthy" "bm21_target"
+"script_linkName" "47"
+}
+{
+"classname" "script_origin"
+"origin" "-1213.5 4830.5 2393.7"
+"angles" "0 158 0"
+"script_noteworthy" "bm21_target"
+"script_linkName" "48"
+}
+{
+"script_linkName" "2"
+"script_noteworthy" "bm21_target"
+"angles" "0 158 0"
+"origin" "-1833.5 4814.5 2489.7"
+"classname" "script_origin"
+}
+{
+"script_linkTo" "47 43 45 48"
+"targetname" "bm21_04"
+"vehicletype" "bm21"
+"origin" "-6171.6 -2145 258"
+"angles" "0 62.1218 0"
+"model" "vehicle_bm21_mobile"
+"classname" "script_vehicle"
+"script_vehiclespawngroup" "400"
+}
+{
+"classname" "script_origin"
+"origin" "-8039.1 1649.3 1466"
+}
+{
+"model" "*1"
+"classname" "script_vehicle_collmap"
+"targetname" "vehicle_bm21_mobile"
+}

@@ -1,0 +1,439 @@
+{
+"origin" "0 0 0"
+"sunlight" "1.5"
+"suncolor" "0.9 0.95 1"
+"sundirection" "-130  40 0"
+"classname" "worldspawn"
+"diffusefraction" ".5"
+"sundiffusecolor" "0.75 0.82 0.85"
+"ambient" ".15"
+"_color" "0.5 0.5 .62 1"
+}
+{
+"classname" "info_player_start"
+"origin" "4653.9 -7718.7 -340"
+"angles" "-0 165 0"
+}
+{
+"classname" "script_struct"
+"angles" "-0 165 0"
+"origin" "4736 -7712 -319.6"
+"targetname" "beach_start_points"
+}
+{
+"classname" "script_struct"
+"angles" "-0 165 0"
+"origin" "4712 -7800 -321.5"
+"targetname" "beach_start_points"
+}
+{
+"classname" "script_struct"
+"angles" "-0 165 0"
+"origin" "4920 -7744 -316.4"
+"targetname" "beach_start_points"
+}
+{
+"classname" "script_struct"
+"angles" "-0 165 0"
+"origin" "4896 -7840 -318.4"
+"targetname" "beach_start_points"
+}
+{
+"classname" "misc_turret"
+"export" "1"
+"model" "weapon_mg42"
+"angles" "-0 300 0"
+"origin" "2960.5 -6583.1 -131"
+"weaponinfo" "saw_bipod_stand"
+"targetname" "auto15"
+}
+{
+"classname" "misc_turret"
+"export" "2"
+"model" "weapon_mg42"
+"angles" "-0 227.8 0"
+"origin" "2756 -6578.7 -131"
+"weaponinfo" "saw_bipod_stand"
+"targetname" "auto14"
+}
+{
+"classname" "misc_turret"
+"export" "3"
+"model" "weapon_mg42"
+"angles" "-0 270 0"
+"origin" "4110 -5733.7 -193"
+"weaponinfo" "saw_bipod_stand"
+"targetname" "auto13"
+}
+{
+"classname" "misc_turret"
+"export" "4"
+"model" "weapon_mg42"
+"angles" "-0 270 0"
+"origin" "2052 -6084.7 -166"
+"weaponinfo" "saw_bipod_stand"
+"targetname" "auto11"
+}
+{
+"classname" "misc_turret"
+"export" "5"
+"model" "weapon_mg42"
+"angles" "-0 270 0"
+"origin" "781 -6544.7 -166"
+"weaponinfo" "saw_bipod_stand"
+"targetname" "auto16"
+}
+{
+"classname" "misc_turret"
+"export" "6"
+"model" "weapon_mg42"
+"angles" "-0 300 0"
+"origin" "1154.5 -4423.1 -111"
+"weaponinfo" "saw_bipod_stand"
+"targetname" "auto7"
+}
+{
+"classname" "misc_turret"
+"export" "7"
+"model" "weapon_mg42"
+"angles" "-0 227.8 0"
+"origin" "950 -4418.7 -111"
+"weaponinfo" "saw_bipod_stand"
+"targetname" "auto6"
+}
+{
+"classname" "misc_turret"
+"export" "8"
+"model" "weapon_mg42"
+"angles" "-0 270 0"
+"origin" "4004.5 -3925.1 -130"
+"weaponinfo" "saw_bipod_stand"
+"targetname" "auto9"
+}
+{
+"classname" "misc_turret"
+"export" "9"
+"model" "weapon_mg42"
+"angles" "-0 270 0"
+"origin" "2551.5 -3813.1 -110"
+"weaponinfo" "saw_bipod_stand"
+"targetname" "auto10"
+}
+{
+"classname" "actor__axis_nation_localle_uniform_kar98k"
+"model" "body_complete_sp_arab_regular_asad"
+"export" "10"
+"spawnflags" "3"
+"angles" "-0 270 0"
+"origin" "2900 -6228 -164"
+"target" "auto2"
+"targetname" "auto12"
+"script_forcegoal" "1"
+}
+{
+"classname" "actor__axis_nation_localle_uniform_kar98k"
+"model" "body_complete_sp_arab_regular_asad"
+"export" "11"
+"spawnflags" "3"
+"angles" "-0 270 0"
+"origin" "2829 -6229 -164"
+"script_forcespawn" "1"
+"count" "1"
+"target" "auto1"
+"targetname" "auto12"
+"script_forcegoal" "1"
+}
+{
+"classname" "node_turret"
+"angles" "0 225 0"
+"origin" "2799 -6528 -132"
+"targetname" "auto1"
+"target" "auto14"
+"radius" "32"
+}
+{
+"classname" "node_turret"
+"angles" "-0 315 0"
+"origin" "2922 -6527 -132"
+"targetname" "auto2"
+"target" "auto15"
+"radius" "32"
+}
+{
+"classname" "node_pathnode"
+"origin" "2814 -6272 -132"
+}
+{
+"classname" "node_pathnode"
+"origin" "2805 -6372 -132"
+}
+{
+"classname" "node_pathnode"
+"origin" "2803 -6474 -132"
+}
+{
+"classname" "node_pathnode"
+"origin" "2911 -6272 -132"
+}
+{
+"classname" "node_pathnode"
+"origin" "2916 -6380 -132"
+}
+{
+"classname" "node_pathnode"
+"origin" "2919 -6472 -132"
+}
+{
+"classname" "actor__axis_nation_localle_uniform_kar98k"
+"model" "body_complete_sp_arab_regular_asad"
+"export" "12"
+"spawnflags" "3"
+"angles" "-0 270 0"
+"origin" "742 -6231 -185"
+"script_forcespawn" "1"
+"count" "1"
+"target" "auto3"
+"targetname" "auto12"
+"script_forcegoal" "1"
+}
+{
+"classname" "node_turret"
+"angles" "-0 270 0"
+"origin" "781 -6478 -169"
+"targetname" "auto3"
+"target" "auto16"
+"radius" "32"
+}
+{
+"classname" "node_turret"
+"angles" "-0 270 0"
+"origin" "2052 -6021 -183"
+"target" "auto11"
+"radius" "32"
+}
+{
+"classname" "node_turret"
+"angles" "-0 270 0"
+"origin" "4005 -3884 -149"
+"target" "auto9"
+"radius" "32"
+}
+{
+"classname" "node_turret"
+"angles" "-0 270 0"
+"origin" "2551 -3764 -127"
+"target" "auto10"
+"radius" "32"
+}
+{
+"classname" "actor__axis_nation_localle_uniform_kar98k"
+"model" "body_complete_sp_arab_regular_asad"
+"export" "13"
+"spawnflags" "3"
+"angles" "-0 270 0"
+"origin" "1093 -4078 -122.2"
+"target" "auto4"
+"targetname" "auto12"
+"script_forcegoal" "1"
+}
+{
+"classname" "actor__axis_nation_localle_uniform_kar98k"
+"model" "body_complete_sp_arab_regular_asad"
+"export" "14"
+"spawnflags" "3"
+"angles" "-0 270 0"
+"origin" "1022 -4079 -121.5"
+"script_forcespawn" "1"
+"count" "1"
+"target" "auto5"
+"targetname" "auto12"
+"script_forcegoal" "1"
+}
+{
+"classname" "node_turret"
+"angles" "0 225 0"
+"origin" "992 -4378 -112.3"
+"targetname" "auto5"
+"target" "auto6"
+"radius" "32"
+}
+{
+"classname" "node_turret"
+"angles" "-0 315 0"
+"origin" "1115 -4377 -112.4"
+"targetname" "auto4"
+"target" "auto7"
+"radius" "32"
+}
+{
+"classname" "node_pathnode"
+"origin" "1007 -4122 -117.5"
+}
+{
+"classname" "node_pathnode"
+"origin" "998 -4222 -116"
+}
+{
+"classname" "node_pathnode"
+"origin" "996 -4324 -114.2"
+}
+{
+"classname" "node_pathnode"
+"origin" "1104 -4122 -117.4"
+}
+{
+"classname" "node_pathnode"
+"origin" "1109 -4230 -116"
+}
+{
+"classname" "node_pathnode"
+"origin" "1112 -4322 -114.3"
+}
+{
+"classname" "node_pathnode"
+"origin" "743 -6289 -184"
+}
+{
+"classname" "node_pathnode"
+"origin" "745 -6353 -184"
+}
+{
+"classname" "node_pathnode"
+"origin" "861 -6351 -184"
+}
+{
+"classname" "node_pathnode"
+"origin" "859 -6457 -184"
+}
+{
+"classname" "node_pathnode"
+"origin" "2020 -5829 -183"
+}
+{
+"classname" "node_pathnode"
+"origin" "2022 -5893 -183"
+}
+{
+"classname" "node_pathnode"
+"origin" "2138 -5891 -183"
+}
+{
+"classname" "node_pathnode"
+"origin" "2136 -5997 -183"
+}
+{
+"classname" "node_pathnode"
+"origin" "4081 -5475 -211"
+}
+{
+"classname" "node_pathnode"
+"origin" "4083 -5539 -211"
+}
+{
+"classname" "node_pathnode"
+"origin" "4199 -5537 -211"
+}
+{
+"classname" "node_pathnode"
+"origin" "4197 -5643 -211"
+}
+{
+"classname" "node_pathnode"
+"origin" "3973 -3669 -149"
+}
+{
+"classname" "node_pathnode"
+"origin" "3975 -3733 -149"
+}
+{
+"classname" "node_pathnode"
+"origin" "4091 -3731 -149"
+}
+{
+"classname" "node_pathnode"
+"origin" "4089 -3837 -149"
+}
+{
+"classname" "node_pathnode"
+"origin" "2527 -3559 -127"
+}
+{
+"classname" "node_pathnode"
+"origin" "2529 -3623 -127"
+}
+{
+"classname" "node_pathnode"
+"origin" "2645 -3621 -127"
+}
+{
+"classname" "node_pathnode"
+"origin" "2643 -3727 -127"
+}
+{
+"classname" "actor__axis_nation_localle_uniform_kar98k"
+"model" "body_complete_sp_arab_regular_asad"
+"export" "16"
+"spawnflags" "3"
+"angles" "-0 270 0"
+"origin" "3972 -3615 -149.9"
+"script_forcespawn" "1"
+"count" "1"
+"target" "auto9"
+"targetname" "auto12"
+"script_forcegoal" "1"
+}
+{
+"classname" "actor__axis_nation_localle_uniform_kar98k"
+"model" "body_complete_sp_arab_regular_asad"
+"export" "17"
+"spawnflags" "3"
+"angles" "-0 270 0"
+"origin" "2527 -3509 -127.8"
+"script_forcespawn" "1"
+"count" "1"
+"target" "auto10"
+"targetname" "auto12"
+"script_forcegoal" "1"
+}
+{
+"classname" "actor__axis_nation_localle_uniform_kar98k"
+"model" "body_complete_sp_arab_regular_asad"
+"export" "18"
+"spawnflags" "3"
+"angles" "-0 270 0"
+"origin" "2018 -5778 -183.8"
+"script_forcespawn" "1"
+"count" "1"
+"target" "auto11"
+"targetname" "auto12"
+"script_forcegoal" "1"
+}
+{
+"classname" "trigger_radius"
+"radius" "253.440002"
+"height" "481.219238"
+"targetname" "flood_spawner"
+"target" "auto12"
+"origin" "4385 -7736 -331.5"
+}
+{
+"targetname" "auto12"
+"target" "auto8"
+"count" "1"
+"script_forcespawn" "1"
+"origin" "4081 -5426 -211.8"
+"angles" "-0 270 0"
+"spawnflags" "3"
+"export" "15"
+"model" "body_complete_sp_arab_regular_asad"
+"classname" "actor__axis_nation_localle_uniform_kar98k"
+"script_forcegoal" "1"
+}
+{
+"targetname" "auto8"
+"origin" "4110 -5682 -211"
+"angles" "-0 270 0"
+"classname" "node_turret"
+"target" "auto13"
+"radius" "32"
+}

@@ -1,0 +1,424 @@
+{
+"sunlight" "1.5"
+"suncolor" "0.9 0.95 1"
+"sundirection" "-130  40 0"
+"classname" "worldspawn"
+"diffusefraction" ".5"
+"sundiffusecolor" "0.75 0.82 0.85"
+"ambient" ".15"
+"_color" "0.5 0.5 .62 1"
+}
+{
+"origin" "-182.5 -901.5 -32"
+"angles" "-0 90 0"
+"classname" "info_player_start"
+}
+{
+"model" "*1"
+"origin" "-208 -782 -9"
+"classname" "trigger_multiple"
+"script_vehiclespawngroup" "0"
+"targetname" "trig_tiger_spawn"
+}
+{
+"classname" "info_vehicle_node"
+"origin" "-196 -362 -8"
+"target" "dgauto1"
+"spawnflags" "1"
+"speed" "3"
+"lookahead" "1"
+"targetname" "dgauto3"
+}
+{
+"classname" "info_vehicle_node"
+"origin" "-187 -124 -8"
+"targetname" "dgauto1"
+"target" "node_wait"
+}
+{
+"classname" "info_vehicle_node"
+"origin" "-177 130.5 -8"
+"targetname" "node_wait"
+"target" "auto200"
+}
+{
+"model" "*2"
+"origin" "-209 -646 -4"
+"classname" "trigger_multiple"
+"script_vehiclestartmove" "0"
+"targetname" "trig_tiger_start"
+}
+{
+"script_vehiclestartmove" "0"
+"script_vehiclespawngroup" "0"
+"target" "dgauto3"
+"origin" "-196 -378 -32"
+"vehicletype" "tiger"
+"angles" "-0 90 0"
+"model" "vehicle_tiger_woodland"
+"classname" "script_vehicle"
+"targetname" "tiger"
+}
+{
+"classname" "script_vehicle"
+"model" "vehicle_stuka_flying"
+"angles" "-0 90 0"
+"vehicletype" "stuka"
+"script_vehiclestartmove" "2"
+"script_vehiclespawngroup" "2"
+"origin" "632 -350 -40"
+"target" "dgauto176"
+}
+{
+"model" "*3"
+"origin" "628 -782 -9"
+"classname" "trigger_multiple"
+"script_vehiclespawngroup" "2"
+}
+{
+"model" "*4"
+"origin" "628 -650 -4"
+"classname" "trigger_multiple"
+"script_vehiclestartmove" "2"
+}
+{
+"classname" "info_vehicle_node"
+"origin" "632 -308 -8"
+"target" "dgauto177"
+"spawnflags" "1"
+"speed" "10"
+"lookahead" "1"
+"targetname" "dgauto176"
+}
+{
+"classname" "info_vehicle_node"
+"origin" "636 60 -8"
+"targetname" "dgauto177"
+"target" "dgauto178"
+"speed" "45"
+}
+{
+"classname" "info_vehicle_node_rotate"
+"origin" "630 796 -8"
+"targetname" "dgauto178"
+"speed" "80"
+"angles" "350 90 -20"
+"target" "dgauto198"
+}
+{
+"classname" "actor__ally_nation_localle_uniform_m1garand"
+"model" "body_complete_sp_usmc_zach"
+"export" "1"
+"spawnflags" "1"
+"origin" "60 -482 -36"
+"script_vehiclewalk" "0"
+"script_forcespawn" "1"
+}
+{
+"classname" "actor__ally_nation_localle_uniform_m1garand"
+"model" "body_complete_sp_usmc_zach"
+"export" "2"
+"spawnflags" "1"
+"origin" "268 -482 -36"
+"script_vehiclewalk" "0"
+"script_forcespawn" "1"
+}
+{
+"classname" "node_pathnode"
+"origin" "268 -378 -16"
+}
+{
+"classname" "node_pathnode"
+"origin" "52 -370 -16"
+}
+{
+"classname" "node_pathnode"
+"origin" "68 -226 -16"
+}
+{
+"classname" "node_pathnode"
+"origin" "260 -202 -16"
+}
+{
+"classname" "node_pathnode"
+"origin" "276 -18 -16"
+}
+{
+"classname" "node_pathnode"
+"origin" "60 -2 -16"
+}
+{
+"classname" "node_pathnode"
+"origin" "44 166 -16"
+}
+{
+"classname" "node_pathnode"
+"origin" "300 182 -16"
+}
+{
+"classname" "node_pathnode"
+"origin" "308 366 -16"
+}
+{
+"classname" "node_pathnode"
+"origin" "68 358 -16"
+}
+{
+"classname" "node_pathnode"
+"origin" "164 -194 -16"
+}
+{
+"classname" "node_pathnode"
+"origin" "172 70 -16"
+}
+{
+"classname" "node_pathnode"
+"origin" "196 374 -16"
+}
+{
+"classname" "node_pathnode"
+"origin" "484 334 -16"
+}
+{
+"classname" "node_pathnode"
+"origin" "436 94 -16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-124 422 -16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-108 158 -16"
+}
+{
+"classname" "node_pathnode"
+"origin" "460 -130 -16"
+}
+{
+"classname" "node_pathnode"
+"origin" "-108 -106 -16"
+}
+{
+"classname" "node_concealment_crouch"
+"angles" "-0 135 0"
+"origin" "12 -18 -16"
+}
+{
+"classname" "node_concealment_crouch"
+"angles" "-0 45 0"
+"origin" "324 -82 -16"
+}
+{
+"classname" "node_concealment_crouch"
+"angles" "-0 45 0"
+"origin" "316 246 -16"
+}
+{
+"classname" "node_concealment_crouch"
+"angles" "-0 135 -0"
+"origin" "20 422 -16"
+}
+{
+"classname" "script_vehicle"
+"model" "vehicle_stuka_flying"
+"angles" "0 180 0"
+"vehicletype" "stuka"
+"script_vehiclestartmove" "2"
+"script_vehiclespawngroup" "2"
+"origin" "6434 2285.5 1552"
+"target" "dgauto188"
+"speed" "150"
+}
+{
+"classname" "script_vehicle"
+"model" "vehicle_stuka_flying"
+"angles" "0 180 0"
+"vehicletype" "stuka"
+"script_vehiclestartmove" "2"
+"script_vehiclespawngroup" "2"
+"origin" "6162 3839.5 1552"
+"target" "dgauto190"
+"spawnflags" "0"
+}
+{
+"classname" "info_vehicle_node_rotate"
+"origin" "6336 2287.5 1520"
+"target" "dgauto183"
+"spawnflags" "1"
+"speed" "150"
+"lookahead" "1"
+"targetname" "dgauto188"
+"angles" "0 180 0"
+}
+{
+"classname" "info_vehicle_node_rotate"
+"origin" "5586 2333.5 1520"
+"targetname" "dgauto183"
+"target" "dgauto184"
+"speed" "150"
+}
+{
+"classname" "info_vehicle_node_rotate"
+"origin" "2798 2354 1520"
+"targetname" "dgauto184"
+"target" "dgauto185"
+"speed" "150"
+"angles" "0 180 -50"
+}
+{
+"classname" "info_vehicle_node_rotate"
+"origin" "-3386 2230 1520"
+"targetname" "dgauto186"
+"target" "dgauto187"
+"speed" "150"
+"angles" "0 180 -50"
+}
+{
+"classname" "info_vehicle_node_rotate"
+"origin" "-6883.5 1423 1520"
+"targetname" "dgauto187"
+"speed" "150"
+}
+{
+"classname" "info_vehicle_node_rotate"
+"origin" "6110 3861.5 1520"
+"spawnflags" "1"
+"speed" "150"
+"lookahead" "1"
+"targetname" "dgauto190"
+"angles" "0 180 0"
+"target" "dgauto191"
+}
+{
+"classname" "info_vehicle_node_rotate"
+"origin" "3092 3870 1520"
+"spawnflags" "0"
+"speed" "150"
+"lookahead" "1"
+"targetname" "dgauto191"
+"angles" "0 180 -50"
+"target" "dgauto192"
+}
+{
+"classname" "info_vehicle_node_rotate"
+"origin" "88 3852 1520"
+"spawnflags" "0"
+"speed" "150"
+"lookahead" "1"
+"targetname" "dgauto192"
+"angles" "0 180 -50"
+"target" "dgauto193"
+}
+{
+"classname" "info_vehicle_node_rotate"
+"origin" "-3564 3642 1520"
+"spawnflags" "0"
+"speed" "150"
+"lookahead" "1"
+"targetname" "dgauto193"
+"angles" "0 180 -50"
+"target" "dgauto194"
+}
+{
+"classname" "info_vehicle_node_rotate"
+"origin" "-7137.5 2943 1520"
+"spawnflags" "0"
+"speed" "150"
+"lookahead" "1"
+"targetname" "dgauto194"
+"angles" "0 180 0"
+}
+{
+"speed" "150"
+"target" "dgauto186"
+"targetname" "dgauto185"
+"origin" "216 2454 1520"
+"classname" "info_vehicle_node_rotate"
+"angles" "0 180 -50"
+}
+{
+"classname" "info_vehicle_node_rotate"
+"origin" "-696 3950 1246"
+"targetname" "dgauto195"
+"speed" "130"
+"angles" "340 145 -50"
+"target" "dgauto196"
+}
+{
+"classname" "info_vehicle_node_rotate"
+"origin" "-3178 5489 2172.5"
+"targetname" "dgauto196"
+"speed" "135"
+"angles" "0 180 0"
+"target" "dgauto197"
+}
+{
+"target" "dgauto195"
+"angles" "340 125 -50"
+"speed" "110"
+"targetname" "dgauto180"
+"origin" "298 2580 532"
+"classname" "info_vehicle_node_rotate"
+}
+{
+"classname" "info_vehicle_node_rotate"
+"origin" "-8509 5569 2293"
+"targetname" "dgauto197"
+"speed" "135"
+"angles" "340 180 -4.67213e-006"
+}
+{
+"classname" "info_vehicle_node_rotate"
+"origin" "638 1208 82"
+"targetname" "dgauto198"
+"speed" "90"
+"angles" "345 100 -25"
+"target" "dgauto179"
+}
+{
+"angles" "343 105 -30"
+"speed" "100"
+"target" "dgauto180"
+"targetname" "dgauto179"
+"origin" "620 1646 200"
+"classname" "info_vehicle_node_rotate"
+}
+{
+"classname" "script_vehicle"
+"model" "vehicle_american_sherman"
+"angles" "-0 270 0"
+"script_vehiclespawngroup" "0"
+"origin" "-32 1968 -36"
+"vehicletype" "sherman"
+"targetname" "sherman_1"
+}
+{
+"classname" "info_vehicle_node"
+"origin" "-192.5 418 -8"
+"targetname" "auto200"
+}
+{
+"classname" "script_vehicle"
+"model" "vehicle_american_sherman"
+"angles" "-0 270 0"
+"script_vehiclespawngroup" "0"
+"origin" "-626.5 1952 -36"
+"vehicletype" "sherman"
+"targetname" "sherman_2"
+}
+{
+"classname" "script_origin"
+"origin" "136 802.5 -57.5"
+"targetname" "mortar"
+}
+{
+"classname" "script_origin"
+"origin" "-241 865.5 -57.5"
+"targetname" "mortar"
+}
+{
+"classname" "script_origin"
+"origin" "108 1153.5 -57.5"
+"targetname" "mortar"
+}

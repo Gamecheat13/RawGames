@@ -1,0 +1,164 @@
+{
+"northyaw" "225"
+"radiosityScale" "1"
+"sunRadiosity" "2"
+"contrastGain" "0.15"
+"diffusefraction" "0.05"
+"_color" "0.90 0.90 1"
+"sunlight" "1.5"
+"sundirection" "-155 136 0"
+"sundiffusecolor" ".43 .39 1"
+"suncolor" ".9 .98 1"
+"ambient" ".1"
+"bouncefraction" ".1"
+"classname" "worldspawn"
+}
+{
+"classname" "mp_dm_spawn"
+"origin" "2878 -131 -1398"
+"angles" "0 90 0"
+}
+{
+"classname" "mp_tdm_spawn"
+"origin" "2942 -131 -1398"
+"angles" "0 90 0"
+}
+{
+"angles" "0 0 0"
+"origin" "3087 -434 -1398"
+"classname" "info_player_start"
+}
+{
+"origin" "4928 -2176 -1200"
+"angles" "30 170 -6.60253e-006"
+"classname" "mp_global_intermission"
+}
+{
+"script_vehiclestartmove" "0"
+"script_vehiclespawngroup" "0"
+"classname" "trigger_multiple"
+"origin" "2920 -280 -1340"
+"model" "*1"
+}
+{
+"classname" "info_vehicle_node"
+"origin" "9906 -1432 -1690"
+"targetname" "auto4"
+"target" "auto5"
+}
+{
+"classname" "info_vehicle_node"
+"origin" "10878 -2030 -1690"
+"targetname" "auto3"
+"target" "auto4"
+}
+{
+"classname" "info_vehicle_node"
+"origin" "11530 -1594 -1690"
+"targetname" "auto2"
+"target" "auto3"
+}
+{
+"classname" "info_vehicle_node"
+"origin" "11362 1438 -1690"
+"targetname" "auto1"
+"target" "auto2"
+"script_vehicledetour" "0"
+}
+{
+"classname" "info_vehicle_node"
+"origin" "11364 1562 -1690"
+"targetname" "auto8"
+"script_vehicledetour" "0"
+}
+{
+"classname" "info_vehicle_node"
+"origin" "10820 1758 -1638"
+"target" "auto1"
+"spawnflags" "1"
+"speed" "15"
+"lookahead" "1"
+"targetname" "blar"
+}
+{
+"classname" "info_vehicle_node"
+"origin" "10916 1942 -1690"
+"targetname" "auto7"
+"target" "auto8"
+}
+{
+"classname" "info_vehicle_node"
+"origin" "10028 2342 -1706"
+"targetname" "auto6"
+"target" "auto7"
+}
+{
+"classname" "info_vehicle_node"
+"origin" "9568 1790 -1614"
+"targetname" "auto5"
+"target" "auto6"
+}
+{
+"targetname" "tank3"
+"script_targettype" "ground"
+"script_turret" "0"
+"script_turretmg" "0"
+"script_team" "axis"
+"vehicletype" "t72"
+"origin" "-862.8 1474.8 -1402"
+"angles" "0 90 0"
+"model" "vehicle_t72_tank"
+"classname" "script_vehicle"
+}
+{
+"classname" "script_vehicle"
+"model" "vehicle_t72_tank"
+"angles" "0 90 0"
+"origin" "11161.2 -1053.2 -1670"
+"vehicletype" "t72"
+"script_team" "axis"
+"script_turretmg" "0"
+"script_turret" "0"
+"script_targettype" "ground"
+"script_vehiclestartmove" "0"
+"targetname" "tank2"
+"target" "auto2"
+"script_vehiclespawngroup" "0"
+}
+{
+"classname" "script_vehicle"
+"model" "vehicle_t72_tank"
+"angles" "0 90 0"
+"origin" "9865.2 1650.8 -1670"
+"vehicletype" "t72"
+"script_team" "axis"
+"script_turretmg" "0"
+"script_turret" "0"
+"script_targettype" "ground"
+"target" "blar"
+"targetname" "tank1"
+"script_vehiclespawngroup" "0"
+"script_vehiclestartmove" "0"
+}
+{
+"origin" "10992 2464 -1552"
+"targetname" "building1"
+"model" "com_cardboardbox01"
+"classname" "script_model"
+}
+{
+"origin" "10992 2464 -1232"
+"targetname" "building2"
+"model" "com_cardboardbox01"
+"classname" "script_model"
+}
+{
+"origin" "3128 -136 -1384"
+"targetname" "spawn_javelin"
+"classname" "script_origin"
+}
+{
+"targetname" "vehicle_t72_tank"
+"classname" "script_vehicle_collmap"
+"model" "*2"
+}

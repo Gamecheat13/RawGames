@@ -1,0 +1,104 @@
+{
+"origin" "0 0 0"
+"sunlight" "0.74"
+"suncolor" "0.88 0.93 1"
+"sundirection" "-70 72 0"
+"classname" "worldspawn"
+"ambient" ".116"
+"_color" "0.5 0.5 .62 1"
+"skylight" "0.56"
+"skycolor" "0.87 0.94 1"
+}
+{
+"model" "?0"
+"origin" "3072 -3424 2464"
+"classname" "trigger_multiple_flag_set_touching"
+"script_flag" "so_player_near_bank"
+}
+{
+"model" "?1"
+"origin" "-416 -5920 2464"
+"classname" "trigger_multiple_flag_set_touching"
+"script_flag" "so_player_near_taco"
+}
+{
+"model" "?2"
+"origin" "-2208 -1664 2464"
+"classname" "trigger_multiple_flag_set_touching"
+"script_flag" "so_player_near_gas_station"
+}
+{
+"classname" "info_player_start_so"
+"angles" "0 175 0"
+"origin" "941.7 -4287.3 2310"
+}
+{
+"model" "?3"
+"origin" "1200 -688 2352"
+"classname" "trigger_multiple_flag_set_touching"
+"script_flag" "player_trying_to_escape"
+"script_noteworthy" "player_trying_to_escape"
+}
+{
+"model" "?4"
+"origin" "1656 -712 2352"
+"classname" "trigger_multiple_flag_set_touching"
+"script_flag" "player_has_escaped"
+}
+{
+"classname" "weapon_rpg_player"
+"model" "weapon_rpg7"
+"spawnflags" "1"
+"origin" "605.4 -4329.8 2314"
+"angles" "0 98.2 90"
+"script_ammo_max" "1"
+}
+{
+"classname" "weapon_m14ebr_thermal"
+"model" "weapon_m14ebr_tan"
+"origin" "789 -4308.7 2312"
+"spawnflags" "1"
+"angles" "0 107 90"
+"script_ammo_max" "1"
+}
+{
+"angles" "350 103 1.1446e-006"
+"spawnflags" "1"
+"origin" "745.5 -4313.7 2318"
+"model" "weapon_cheytac"
+"classname" "weapon_cheytac"
+"script_ammo_max" "1"
+}
+{
+"classname" "weapon_ak47_grenadier"
+"model" "weapon_ak47_tactical"
+"spawnflags" "1"
+"angles" "0 125.7 90"
+"origin" "822.7 -4282.9 2312"
+"script_ammo_max" "1"
+}
+{
+"model" "?5"
+"origin" "760 -4328 2360"
+"classname" "trigger_multiple_flag_set"
+"script_flag" "challenge_start"
+}
+{
+"classname" "weapon_aa12_reflex"
+"model" "weapon_aa12"
+"angles" "0 93.2 90"
+"origin" "674 -4302 2313"
+"script_ammo_max" "1"
+}
+{
+"classname" "weapon_m1014_eotech"
+"model" "weapon_benelli_super_90"
+"angles" "0 297.5 90"
+"origin" "644.5 -4336 2312"
+"script_ammo_max" "1"
+}
+{
+"classname" "info_player_start_soPlayer2"
+"angles" "0 4.99996 0"
+"origin" "536 -4376 2312"
+}

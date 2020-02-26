@@ -1,0 +1,1501 @@
+{
+"diffusefraction" "0.2"
+"_color" ".8 .9 1"
+"sunlight" "1.4"
+"sundirection" "-30 136 0"
+"sundiffusecolor" ".9 1 .75"
+"suncolor" "1 1 0.95"
+"ambient" ".05"
+"bouncefraction" ".7"
+"classname" "worldspawn"
+}
+{
+"classname" "info_player_start"
+"angles" "0 122.531 0"
+"origin" "5893 33071 400"
+}
+{
+"origin" "26768 4240 -996"
+"classname" "node_pathnode"
+}
+{
+"origin" "26768 3984 -996"
+"classname" "node_pathnode"
+}
+{
+"origin" "27024 3984 -996"
+"classname" "node_pathnode"
+}
+{
+"origin" "27024 4240 -996"
+"classname" "node_pathnode"
+}
+{
+"origin" "26512 4240 -996"
+"classname" "node_pathnode"
+}
+{
+"origin" "26512 3984 -996"
+"classname" "node_pathnode"
+}
+{
+"origin" "26256 3984 -996"
+"classname" "node_pathnode"
+}
+{
+"origin" "26256 4240 -996"
+"classname" "node_pathnode"
+}
+{
+"origin" "26000 4240 -996"
+"classname" "node_pathnode"
+}
+{
+"origin" "26000 3984 -996"
+"classname" "node_pathnode"
+}
+{
+"origin" "25744 4240 -996"
+"classname" "node_pathnode"
+}
+{
+"origin" "25744 3984 -996"
+"classname" "node_pathnode"
+}
+{
+"origin" "25488 4240 -996"
+"classname" "node_pathnode"
+}
+{
+"origin" "25488 3984 -996"
+"classname" "node_pathnode"
+}
+{
+"origin" "25232 4240 -996"
+"classname" "node_pathnode"
+}
+{
+"origin" "25232 3984 -996"
+"classname" "node_pathnode"
+}
+{
+"script_turretmg" "0"
+"script_attackai" "0"
+"angles" "0 1.00179e-005 0"
+"script_noteworthy" "startinside"
+"script_badplace" "0"
+"script_turret" "0"
+"vehicletype" "cobra_player"
+"targetname" "cobra"
+"origin" "-22269.1 59873.9 720"
+"spawnflags" "1"
+"model" "vehicle_cobra_helicopter_fly"
+"classname" "script_vehicle"
+}
+{
+"spawnflags" "16"
+"targetname" "border_outer"
+"target" "pf1_auto127"
+"classname" "trigger_multiple"
+"origin" "-8640 -38848 5344"
+"model" "*1"
+}
+{
+"spawnflags" "16"
+"targetname" "border_outer"
+"target" "pf1_auto127"
+"classname" "trigger_multiple"
+"origin" "-41536 13218 5344"
+"model" "*2"
+}
+{
+"spawnflags" "16"
+"targetname" "border_outer"
+"target" "pf1_auto127"
+"classname" "trigger_multiple"
+"origin" "5122 65312 5344"
+"model" "*3"
+}
+{
+"spawnflags" "16"
+"targetname" "border_outer"
+"target" "pf1_auto127"
+"classname" "trigger_multiple"
+"origin" "38080 13216 5344"
+"model" "*4"
+}
+{
+"origin" "-1656 16712 -120"
+"targetname" "pf1_auto127"
+"classname" "script_origin"
+}
+{
+"origin" "-92696 -91208 8"
+"targetname" "minimap_corner"
+"classname" "script_origin"
+}
+{
+"origin" "100600 114312 8"
+"targetname" "minimap_corner"
+"classname" "script_origin"
+}
+{
+"script_noteworthy" "minimap_line"
+"targetname" "pf1_auto131"
+"target" "pf1_auto128"
+"origin" "-40768 -38080 -952"
+"classname" "script_origin"
+}
+{
+"target" "pf1_auto129"
+"targetname" "pf1_auto128"
+"origin" "-40768 64576 -952"
+"classname" "script_origin"
+}
+{
+"target" "pf1_auto130"
+"targetname" "pf1_auto129"
+"origin" "49780 64576 -952"
+"classname" "script_origin"
+}
+{
+"target" "pf1_auto131"
+"targetname" "pf1_auto130"
+"origin" "23032 -38080 -952"
+"classname" "script_origin"
+}
+{
+"spawnflags" "16"
+"targetname" "border_inner"
+"classname" "trigger_multiple"
+"origin" "-40000 13282 5344"
+"model" "*5"
+}
+{
+"spawnflags" "16"
+"targetname" "border_inner"
+"classname" "trigger_multiple"
+"origin" "4610 63904 5344"
+"model" "*6"
+}
+{
+"spawnflags" "16"
+"targetname" "border_inner"
+"classname" "trigger_multiple"
+"origin" "36032 13280 5344"
+"model" "*7"
+}
+{
+"spawnflags" "16"
+"targetname" "border_inner"
+"classname" "trigger_multiple"
+"origin" "-8640 -37312 5344"
+"model" "*8"
+}
+{
+"script_vehiclestartmove" "0"
+"script_vehiclespawngroup" "0"
+"script_targetoffset_z" "20"
+"script_targettype" "ground"
+"script_cobratarget" "1"
+"script_avoidvehicles" "0"
+"script_badplace" "0"
+"script_attackai" "0"
+"script_turret" "0"
+"script_turretmg" "0"
+"script_team" "axis"
+"target" "pf1_auto133"
+"vehicletype" "technical"
+"origin" "6784 30400 -960"
+"angles" "0 270 0"
+"model" "vehicle_pickup_technical"
+"classname" "script_vehicle"
+}
+{
+"lookahead" ".5"
+"speed" "80"
+"spawnflags" "1"
+"target" "pf1_auto134"
+"targetname" "pf1_auto133"
+"origin" "6920 30360 -960"
+"classname" "info_vehicle_node"
+}
+{
+"script_vehicledetour" "1"
+"target" "pf1_auto137"
+"targetname" "pf1_auto134"
+"origin" "6872 25944 -960"
+"classname" "info_vehicle_node"
+}
+{
+"script_vehiclestartmove" "0"
+"script_vehiclespawngroup" "0"
+"target" "pf1_auto136"
+"script_targetoffset_z" "20"
+"script_targettype" "ground"
+"script_cobratarget" "1"
+"script_avoidvehicles" "0"
+"script_badplace" "0"
+"script_attackai" "0"
+"script_turret" "0"
+"script_turretmg" "0"
+"script_team" "axis"
+"vehicletype" "t72"
+"origin" "7159.2 32856.8 -960"
+"angles" "0 0 0"
+"model" "vehicle_t72_tank"
+"classname" "script_vehicle"
+}
+{
+"targetname" "pf1_auto136"
+"target" "pf1_auto135"
+"lookahead" ".5"
+"speed" "40"
+"spawnflags" "1"
+"origin" "7192 32840 -960"
+"classname" "info_vehicle_node"
+}
+{
+"targetname" "pf1_auto189"
+"target" "pf1_auto148"
+"origin" "14664 32840 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto138"
+"targetname" "pf1_auto137"
+"origin" "6952 25432 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto139"
+"targetname" "pf1_auto138"
+"origin" "6856 22936 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto140"
+"targetname" "pf1_auto139"
+"origin" "6840 7368 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto141"
+"targetname" "pf1_auto140"
+"origin" "6968 6760 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto142"
+"targetname" "pf1_auto141"
+"origin" "6808 4056 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto143"
+"targetname" "pf1_auto142"
+"origin" "6808 -12664 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto144"
+"targetname" "pf1_auto143"
+"origin" "7048 -13336 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto145"
+"targetname" "pf1_auto144"
+"origin" "6824 -13656 -960"
+"classname" "info_vehicle_node"
+}
+{
+"speed" "80"
+"target" "pf1_auto146"
+"targetname" "pf1_auto145"
+"origin" "6776 -31448 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto147"
+"targetname" "pf1_auto146"
+"origin" "7000 -31976 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto195"
+"speed" "20"
+"targetname" "pf1_auto147"
+"origin" "6872 -34168 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto149"
+"targetname" "pf1_auto148"
+"origin" "15096 33048 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto150"
+"targetname" "pf1_auto149"
+"origin" "15208 34040 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto151"
+"targetname" "pf1_auto150"
+"origin" "15224 41976 -960"
+"classname" "info_vehicle_node"
+}
+{
+"speed" "20"
+"target" "pf1_auto152"
+"targetname" "pf1_auto151"
+"origin" "15256 42472 -960"
+"classname" "info_vehicle_node"
+}
+{
+"speed" "20"
+"target" "pf1_auto153"
+"targetname" "pf1_auto152"
+"origin" "14824 42712 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto154"
+"speed" "40"
+"targetname" "pf1_auto153"
+"origin" "14456 42488 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto155"
+"targetname" "pf1_auto154"
+"origin" "7304 42440 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto156"
+"targetname" "pf1_auto155"
+"origin" "6920 42568 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto157"
+"targetname" "pf1_auto156"
+"origin" "6792 43080 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto158"
+"targetname" "pf1_auto157"
+"origin" "7000 43992 -960"
+"classname" "info_vehicle_node"
+}
+{
+"speed" "40"
+"target" "pf1_auto159"
+"targetname" "pf1_auto158"
+"origin" "6968 51528 -960"
+"classname" "info_vehicle_node"
+}
+{
+"speed" "15"
+"target" "pf1_auto160"
+"targetname" "pf1_auto159"
+"origin" "7080 51848 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto161"
+"speed" "40"
+"targetname" "pf1_auto160"
+"origin" "7624 51880 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto163"
+"speed" "40"
+"targetname" "pf1_auto161"
+"origin" "10936 52040 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto164"
+"speed" "40"
+"targetname" "pf1_auto162"
+"origin" "11304 51512 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto162"
+"speed" "15"
+"targetname" "pf1_auto163"
+"origin" "11304 51960 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto165"
+"targetname" "pf1_auto164"
+"origin" "11288 49624 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto166"
+"targetname" "pf1_auto165"
+"origin" "11608 47592 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto167"
+"targetname" "pf1_auto166"
+"origin" "11752 46632 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto168"
+"targetname" "pf1_auto167"
+"origin" "12120 45992 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto169"
+"targetname" "pf1_auto168"
+"origin" "12696 45480 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto170"
+"targetname" "pf1_auto169"
+"origin" "13448 45288 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto172"
+"speed" "40"
+"targetname" "pf1_auto170"
+"origin" "14424 45416 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto173"
+"speed" "40"
+"targetname" "pf1_auto171"
+"origin" "15032 44744 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto171"
+"speed" "20"
+"targetname" "pf1_auto172"
+"origin" "14968 45224 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto174"
+"targetname" "pf1_auto173"
+"origin" "15160 43160 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto175"
+"targetname" "pf1_auto174"
+"origin" "15128 42824 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto176"
+"targetname" "pf1_auto175"
+"origin" "14920 42504 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto177"
+"targetname" "pf1_auto176"
+"origin" "14136 42312 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto178"
+"targetname" "pf1_auto177"
+"origin" "12888 42552 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto179"
+"targetname" "pf1_auto178"
+"origin" "12184 42600 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto180"
+"targetname" "pf1_auto179"
+"origin" "11656 42264 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto181"
+"targetname" "pf1_auto180"
+"origin" "11608 41704 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto183"
+"speed" "40"
+"targetname" "pf1_auto181"
+"origin" "11784 38504 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto184"
+"speed" "40"
+"targetname" "pf1_auto182"
+"origin" "11064 37800 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto182"
+"speed" "15"
+"targetname" "pf1_auto183"
+"origin" "11704 37960 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto185"
+"targetname" "pf1_auto184"
+"origin" "10264 37784 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto187"
+"speed" "40"
+"targetname" "pf1_auto185"
+"origin" "7576 37880 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto188"
+"speed" "40"
+"targetname" "pf1_auto186"
+"origin" "6792 37224 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto186"
+"speed" "15"
+"targetname" "pf1_auto187"
+"origin" "6904 37800 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto190"
+"targetname" "pf1_auto188"
+"origin" "6872 33032 -960"
+"classname" "info_vehicle_node"
+}
+{
+"script_vehicledetour" "0"
+"targetname" "pf1_auto135"
+"target" "pf1_auto189"
+"origin" "7672 32840 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto191"
+"targetname" "pf1_auto190"
+"origin" "7080 32792 -960"
+"classname" "info_vehicle_node"
+}
+{
+"script_vehicledetour" "0"
+"targetname" "pf1_auto191"
+"origin" "7640 32856 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto196"
+"speed" "20"
+"targetname" "pf1_auto195"
+"origin" "7272 -34392 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto197"
+"targetname" "pf1_auto196"
+"speed" "60"
+"origin" "7960 -34392 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto198"
+"targetname" "pf1_auto197"
+"origin" "10664 -34232 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto199"
+"targetname" "pf1_auto198"
+"origin" "12792 -34216 -960"
+"classname" "info_vehicle_node"
+}
+{
+"targetname" "pf1_auto199"
+"target" "pf1_auto193"
+"speed" "20"
+"origin" "14520 -34376 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto194"
+"targetname" "pf1_auto193"
+"origin" "14904 -34280 -960"
+"classname" "info_vehicle_node"
+}
+{
+"targetname" "pf1_auto194"
+"target" "pf1_auto192"
+"speed" "20"
+"origin" "15064 -33896 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto200"
+"targetname" "pf1_auto192"
+"speed" "80"
+"origin" "15016 -31976 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto201"
+"targetname" "pf1_auto200"
+"origin" "15000 -30264 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto202"
+"targetname" "pf1_auto201"
+"origin" "15144 -29512 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto203"
+"targetname" "pf1_auto202"
+"origin" "15208 -14328 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto204"
+"targetname" "pf1_auto203"
+"origin" "15000 -12904 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto205"
+"targetname" "pf1_auto204"
+"origin" "15000 -11608 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto206"
+"targetname" "pf1_auto205"
+"origin" "15224 -10488 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto207"
+"targetname" "pf1_auto206"
+"origin" "15176 5704 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto208"
+"targetname" "pf1_auto207"
+"origin" "14936 6504 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto209"
+"targetname" "pf1_auto208"
+"origin" "14968 7960 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto210"
+"targetname" "pf1_auto209"
+"origin" "15192 8616 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto211"
+"targetname" "pf1_auto210"
+"origin" "15192 23736 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto212"
+"targetname" "pf1_auto211"
+"origin" "14984 25384 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto213"
+"targetname" "pf1_auto212"
+"origin" "14952 26984 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto214"
+"targetname" "pf1_auto213"
+"origin" "15224 27896 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto215"
+"speed" "80"
+"targetname" "pf1_auto214"
+"origin" "15160 30280 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto217"
+"speed" "20"
+"targetname" "pf1_auto215"
+"origin" "15240 32056 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto218"
+"speed" "20"
+"targetname" "pf1_auto216"
+"origin" "14440 32456 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto216"
+"targetname" "pf1_auto217"
+"origin" "15032 32472 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto219"
+"speed" "60"
+"targetname" "pf1_auto218"
+"origin" "13272 32440 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto220"
+"speed" "60"
+"targetname" "pf1_auto219"
+"origin" "9208 32424 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto222"
+"speed" "20"
+"targetname" "pf1_auto220"
+"origin" "7496 32472 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto223"
+"speed" "20"
+"targetname" "pf1_auto221"
+"origin" "6808 31816 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto221"
+"targetname" "pf1_auto222"
+"origin" "7000 32376 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto224"
+"speed" "80"
+"targetname" "pf1_auto223"
+"origin" "6920 30424 -960"
+"classname" "info_vehicle_node"
+}
+{
+"script_vehicledetour" "1"
+"targetname" "pf1_auto224"
+"origin" "6856 25992 -960"
+"classname" "info_vehicle_node"
+}
+{
+"script_vehiclestartmove" "0"
+"script_vehiclespawngroup" "0"
+"target" "pf1_auto225"
+"script_targetoffset_z" "20"
+"script_targettype" "ground"
+"script_cobratarget" "1"
+"script_avoidvehicles" "0"
+"script_badplace" "0"
+"script_attackai" "0"
+"script_turret" "0"
+"script_turretmg" "0"
+"script_team" "axis"
+"vehicletype" "bmp"
+"origin" "-10828.4 46659.9 -960.1"
+"angles" "0 78.8 0"
+"model" "vehicle_bmp"
+"classname" "script_vehicle"
+}
+{
+"target" "pf1_auto234"
+"spawnflags" "1"
+"lookahead" "1"
+"speed" "20"
+"targetname" "pf1_auto225"
+"origin" "-10841 46701 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto233"
+"targetname" "pf1_auto232"
+"origin" "-11465 44620 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto227"
+"targetname" "pf1_auto226"
+"origin" "-8620 53473 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto229"
+"targetname" "pf1_auto228"
+"origin" "-16502 56138 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto231"
+"targetname" "pf1_auto230"
+"origin" "-19357 47127 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"targetname" "pf1_auto235"
+"target" "pf1_auto226"
+"origin" "-9037 52729 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto236"
+"targetname" "pf1_auto227"
+"origin" "-8903 53866 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"targetname" "pf1_auto236"
+"target" "pf1_auto228"
+"origin" "-15989 56023 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto237"
+"targetname" "pf1_auto229"
+"origin" "-16671 55924 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"targetname" "pf1_auto237"
+"target" "pf1_auto230"
+"origin" "-19279 47635 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto238"
+"targetname" "pf1_auto231"
+"origin" "-19211 47030 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"targetname" "pf1_auto238"
+"target" "pf1_auto232"
+"origin" "-11849 44813 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto239"
+"targetname" "pf1_auto233"
+"origin" "-11185 45102 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"script_vehicledetour" "2"
+"target" "pf1_auto235"
+"targetname" "pf1_auto234"
+"origin" "-10727 47366 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"script_vehicledetour" "2"
+"targetname" "pf1_auto239"
+"origin" "-10704 47339 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"export" "1"
+"script_dont_link_turret" "1"
+"origin" "4704 34272 -1024"
+"targetname" "turret"
+"weaponinfo" "50cal_turret_technical"
+"model" "weapon_pickup_technical_mg50cal"
+"classname" "misc_turret"
+}
+{
+"spawnflags" "16"
+"script_vehiclestartmove" "0"
+"script_vehiclespawngroup" "0"
+"classname" "trigger_multiple"
+"origin" "-22272 59872 632"
+"model" "*9"
+}
+{
+"origin" "4296 33716 -736"
+"targetname" "ammo_viewpoint"
+"angles" "34.3927 45 6.93256"
+"model" "tag_origin"
+"classname" "script_model"
+}
+{
+"targetname" "ammo_reload"
+"spawnflags" "16"
+"classname" "trigger_multiple"
+"origin" "5312 34368 -980"
+"model" "*10"
+}
+{
+"origin" "-9439 -1776 -736"
+"targetname" "ammo_viewpoint"
+"angles" "34.3927 45 6.93256"
+"model" "tag_origin"
+"classname" "script_model"
+}
+{
+"targetname" "ammo_reload"
+"spawnflags" "16"
+"classname" "trigger_multiple"
+"origin" "-8423 -1124 -980"
+"model" "*11"
+}
+{
+"script_vehiclestartmove" "0"
+"script_vehiclespawngroup" "0"
+"target" "pf1_auto240"
+"script_targetoffset_z" "20"
+"script_targettype" "ground"
+"script_cobratarget" "1"
+"script_avoidvehicles" "0"
+"script_badplace" "0"
+"script_attackai" "0"
+"script_turret" "0"
+"script_turretmg" "0"
+"script_team" "axis"
+"vehicletype" "technical"
+"origin" "-22075.4 9898.9 -960.1"
+"angles" "0 78.8 0"
+"model" "vehicle_pickup_technical"
+"classname" "script_vehicle"
+}
+{
+"target" "pf1_auto241"
+"spawnflags" "1"
+"lookahead" "1"
+"speed" "20"
+"targetname" "pf1_auto240"
+"origin" "-22088 9940 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto242"
+"targetname" "pf1_auto243"
+"origin" "-22712 7859 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto244"
+"targetname" "pf1_auto245"
+"origin" "-19867 16712 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto246"
+"targetname" "pf1_auto247"
+"origin" "-27749 19377 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto248"
+"targetname" "pf1_auto249"
+"origin" "-30604 10366 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"targetname" "pf1_auto250"
+"target" "pf1_auto245"
+"origin" "-20284 15968 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto251"
+"targetname" "pf1_auto244"
+"origin" "-20150 17105 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"targetname" "pf1_auto251"
+"target" "pf1_auto247"
+"origin" "-27236 19262 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto252"
+"targetname" "pf1_auto246"
+"origin" "-27870 19015 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"targetname" "pf1_auto252"
+"target" "pf1_auto249"
+"origin" "-30440 10879 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto253"
+"targetname" "pf1_auto248"
+"origin" "-30425 10298 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"targetname" "pf1_auto253"
+"target" "pf1_auto243"
+"origin" "-23215 8100 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto254"
+"targetname" "pf1_auto242"
+"origin" "-22432 8341 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"script_vehicledetour" "2"
+"target" "pf1_auto250"
+"targetname" "pf1_auto241"
+"origin" "-21937 10593 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"script_vehicledetour" "2"
+"targetname" "pf1_auto254"
+"origin" "-21914 10566 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"script_turretmg" "1"
+"script_turret" "0"
+"script_attackai" "0"
+"target" "pf1_auto303"
+"script_vehiclestartmove" "0"
+"angles" "0 270 0"
+"script_targettype" "air"
+"script_targetoffset_z" "0"
+"script_cobratarget" "1"
+"origin" "2376.9 53903.3 615"
+"script_vehiclespawngroup" "0"
+"script_team" "axis"
+"vehicletype" "hind"
+"model" "vehicle_mi24p_hind_desert"
+"classname" "script_vehicle"
+}
+{
+"radius" "32000"
+"script_vehiclespawngroup" "0"
+"script_avoidvehicles" "0"
+"script_badplace" "0"
+"script_attackai" "0"
+"script_turret" "1"
+"script_turretmg" "0"
+"script_team" "axis"
+"script_targettype" "ground"
+"script_targetoffset_z" "64"
+"script_cobratarget" "1"
+"origin" "-8784 464 -1024"
+"targetname" "slamraam"
+"vehicletype" "slamraam"
+"model" "vehicle_slamraam"
+"classname" "script_vehicle"
+}
+{
+"targetname" "hind_point2"
+"origin" "-22872 -17592 6008"
+"classname" "script_origin"
+}
+{
+"targetname" "hind_point3"
+"origin" "14632 14520 2456"
+"classname" "script_origin"
+}
+{
+"targetname" "hind_point1"
+"origin" "-22120 50120 6008"
+"classname" "script_origin"
+}
+{
+"targetname" "hind_point4"
+"origin" "16200 45816 2456"
+"classname" "script_origin"
+}
+{
+"radius" "17000"
+"angles" "0 300 0"
+"script_vehiclespawngroup" "0"
+"script_avoidvehicles" "0"
+"script_badplace" "0"
+"script_attackai" "0"
+"script_turret" "1"
+"script_turretmg" "0"
+"script_team" "axis"
+"script_targettype" "ground"
+"script_targetoffset_z" "64"
+"script_cobratarget" "1"
+"origin" "23307.1 42515.3 -1024"
+"targetname" "slamraam"
+"vehicletype" "slamraam"
+"model" "vehicle_slamraam"
+"classname" "script_vehicle"
+}
+{
+"radius" "17000"
+"angles" "0 150 0"
+"script_vehiclespawngroup" "0"
+"script_avoidvehicles" "0"
+"script_badplace" "0"
+"script_attackai" "0"
+"script_turret" "1"
+"script_turretmg" "0"
+"script_team" "axis"
+"script_targettype" "ground"
+"script_targetoffset_z" "64"
+"script_cobratarget" "1"
+"origin" "11241.6 -19451.1 -1024"
+"targetname" "slamraam"
+"vehicletype" "slamraam"
+"model" "vehicle_slamraam"
+"classname" "script_vehicle"
+}
+{
+"radius" "20000"
+"angles" "0 157.1 0"
+"script_vehiclestartmove" "0"
+"target" "pf1_auto264"
+"script_targettype" "ground"
+"script_targetoffset_z" "64"
+"script_cobratarget" "1"
+"vehicletype" "sa6"
+"origin" "-16369.1 35922.4 -960.1"
+"script_avoidvehicles" "1"
+"script_badplace" "0"
+"script_attackai" "0"
+"script_turret" "1"
+"script_turretmg" "0"
+"script_team" "axis"
+"script_vehiclespawngroup" "0"
+"model" "vehicle_sa6_no_missiles_desert"
+"classname" "script_vehicle"
+}
+{
+"angles" "0 90 0"
+"speed" "10"
+"lookahead" ".2"
+"spawnflags" "1"
+"targetname" "pf1_auto264"
+"target" "pf1_auto262"
+"origin" "-16367.3 35909.8 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"script_vehicledetour" "4"
+"target" "pf1_auto297"
+"targetname" "pf1_auto262"
+"origin" "-16337 35913 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto265"
+"targetname" "pf1_auto296"
+"origin" "-24045 38278 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto266"
+"targetname" "pf1_auto265"
+"origin" "-29508 39981 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto267"
+"targetname" "pf1_auto266"
+"origin" "-29810 39986 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto268"
+"targetname" "pf1_auto267"
+"origin" "-30092 39676 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto269"
+"targetname" "pf1_auto268"
+"origin" "-31773 34527 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto270"
+"targetname" "pf1_auto269"
+"origin" "-32084 33128 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto271"
+"targetname" "pf1_auto270"
+"origin" "-32921 30778 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto272"
+"targetname" "pf1_auto271"
+"origin" "-34257 26408 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto273"
+"targetname" "pf1_auto272"
+"origin" "-34186 26237 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto274"
+"targetname" "pf1_auto273"
+"origin" "-33953 26215 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto275"
+"targetname" "pf1_auto274"
+"origin" "-32955 25900 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto276"
+"targetname" "pf1_auto275"
+"origin" "-30142 25063 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto277"
+"targetname" "pf1_auto276"
+"origin" "-29724 25092 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto278"
+"targetname" "pf1_auto277"
+"origin" "-29369 25475 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto279"
+"targetname" "pf1_auto278"
+"origin" "-29268 26149 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto280"
+"targetname" "pf1_auto279"
+"origin" "-28469 28712 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto282"
+"targetname" "pf1_auto280"
+"origin" "-28261 29028 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto283"
+"targetname" "pf1_auto281"
+"origin" "-27163 29198 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto281"
+"targetname" "pf1_auto282"
+"origin" "-27944 29285 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto284"
+"targetname" "pf1_auto283"
+"origin" "-26738 28920 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto285"
+"targetname" "pf1_auto284"
+"origin" "-25741 28543 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto286"
+"targetname" "pf1_auto285"
+"origin" "-25143 28577 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto287"
+"targetname" "pf1_auto286"
+"origin" "-24709 28413 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto288"
+"targetname" "pf1_auto287"
+"origin" "-17857 26276 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto289"
+"targetname" "pf1_auto288"
+"origin" "-17288 26218 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto290"
+"targetname" "pf1_auto289"
+"origin" "-16927 26497 -960"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto291"
+"targetname" "pf1_auto290"
+"origin" "-16778 26858 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto292"
+"targetname" "pf1_auto291"
+"origin" "-16655 27595 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto293"
+"targetname" "pf1_auto292"
+"origin" "-16399 28428 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto294"
+"targetname" "pf1_auto293"
+"origin" "-16206 29430 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto299"
+"targetname" "pf1_auto294"
+"origin" "-15460 31662 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"script_vehicledetour" "4"
+"targetname" "pf1_auto302"
+"origin" "-16368 35886 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto296"
+"targetname" "pf1_auto297"
+"origin" "-18892 36793 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto298"
+"targetname" "pf1_auto299"
+"origin" "-14596 34174 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto300"
+"targetname" "pf1_auto298"
+"origin" "-14484 35038 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"target" "pf1_auto302"
+"targetname" "pf1_auto300"
+"origin" "-14884 35518 -960.1"
+"classname" "info_vehicle_node"
+}
+{
+"speed" "75"
+"target" "pf1_auto304"
+"origin" "2368 51328 720"
+"targetname" "pf1_auto303"
+"classname" "script_origin"
+}
+{
+"target" "pf1_auto308"
+"speed" "100"
+"origin" "2392 44488 712"
+"targetname" "pf1_auto307"
+"classname" "script_origin"
+}
+{
+"speed" "10"
+"target" "pf1_auto305"
+"origin" "2368 49184 720"
+"targetname" "pf1_auto304"
+"classname" "script_origin"
+}
+{
+"speed" "10"
+"target" "pf1_auto307"
+"origin" "2416 45792 720"
+"targetname" "pf1_auto305"
+"classname" "script_origin"
+}
+{
+"speed" "100"
+"origin" "2408 -34952 712"
+"targetname" "pf1_auto308"
+"classname" "script_origin"
+}
+{
+"script_turretmg" "1"
+"script_attackai" "0"
+"script_wingman" "1"
+"script_vehiclespawngroup" "0"
+"script_team" "allies"
+"angles" "0 1.00179e-005 0"
+"script_badplace" "0"
+"script_turret" "0"
+"vehicletype" "cobra"
+"targetname" "friendly_cobra"
+"origin" "-20285.1 57857.9 720"
+"model" "vehicle_cobra_helicopter_fly"
+"classname" "script_vehicle"
+}
+{
+"targetname" "vehicle_t72_tank"
+"classname" "script_vehicle_collmap"
+"model" "*12"
+}
+{
+"targetname" "vehicle_bmp"
+"classname" "script_vehicle_collmap"
+"model" "*13"
+}

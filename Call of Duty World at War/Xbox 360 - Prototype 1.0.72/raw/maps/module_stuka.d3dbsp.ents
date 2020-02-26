@@ -1,0 +1,75 @@
+{
+"_color" "0.5 0.5 .62 1"
+"ambient" ".15"
+"sundiffusecolor" "0.75 0.82 0.85"
+"diffusefraction" ".5"
+"classname" "worldspawn"
+"sundirection" "-130  40 0"
+"suncolor" "0.9 0.95 1"
+"sunlight" "1.5"
+}
+{
+"classname" "info_player_start"
+"angles" "-0 90 0"
+"origin" "-1890 -2296 -32"
+}
+{
+"script_vehicle_selfremove" "1"
+"script_numbombs" "2"
+"targetname" "my_stuka"
+"script_vehiclespawngroup" "0"
+"script_vehiclestartmove" "0"
+"target" "mystuka_startNode_1"
+"vehicletype" "stuka"
+"angles" "-0 90 0"
+"origin" "-2274 -1800 160"
+"model" "vehicle_stuka_flying"
+"classname" "script_vehicle"
+}
+{
+"script_vehiclespawngroup" "0"
+"script_vehiclestartmove" "0"
+"classname" "trigger_multiple"
+"origin" "-1890 -2056 36"
+"model" "*1"
+}
+{
+"targetname" "mystuka_startNode_1"
+"target" "ss_auto52"
+"origin" "-2274 -1800 160"
+"speed" "40"
+"lookahead" "0.75"
+"spawnflags" "1"
+"angles" "-0 90 0"
+"classname" "info_vehicle_node_rotate"
+}
+{
+"target" "vnode_stuka_curve"
+"angles" "2.57594 70.3342 14.7822"
+"targetname" "ss_auto52"
+"origin" "-2274 -1032 160"
+"classname" "info_vehicle_node_rotate"
+}
+{
+"script_dropbombs_delaytrace" "0.1"
+"script_dropbombs_delay" "1.2"
+"script_dropbombs" "2"
+"angles" "351.658 27.4802 35.9945"
+"target" "ss_auto54"
+"targetname" "vnode_stuka_curve"
+"origin" "-1866 -384 160"
+"classname" "info_vehicle_node_rotate"
+}
+{
+"angles" "2.48203e-006 4.99998 40"
+"target" "ss_auto55"
+"targetname" "ss_auto54"
+"origin" "-1194 -248 160"
+"classname" "info_vehicle_node_rotate"
+}
+{
+"angles" "-0 0 0"
+"targetname" "ss_auto55"
+"origin" "438 -248 160"
+"classname" "info_vehicle_node_rotate"
+}

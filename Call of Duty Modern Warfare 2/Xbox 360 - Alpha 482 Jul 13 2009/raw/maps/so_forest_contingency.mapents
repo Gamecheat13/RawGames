@@ -1,0 +1,378 @@
+{
+"origin" "0 0 0"
+"sunlight" "0.74"
+"suncolor" "0.88 0.93 1"
+"sundirection" "-70 72 0"
+"classname" "worldspawn"
+"ambient" ".116"
+"_color" "0.5 0.5 .62 1"
+"skylight" "0.56"
+"skycolor" "0.87 0.94 1"
+}
+{
+"model" "?0"
+"origin" "-30624 -7920 1024"
+"classname" "trigger_multiple_flag_set_touching"
+"script_flag" "player_trying_to_escape"
+"script_noteworthy" "player_trying_to_escape"
+}
+{
+"model" "?1"
+"origin" "-32021 -9685 1024"
+"classname" "trigger_multiple_flag_set_touching"
+"script_flag" "player_has_escaped"
+}
+{
+"model" "?2"
+"origin" "-31360 -7189 1024"
+"classname" "trigger_multiple_flag_set_touching"
+"script_flag" "player_has_escaped"
+}
+{
+"classname" "info_player_start_so"
+"angles" "0 15 0"
+"origin" "-28864 -8976 816"
+}
+{
+"model" "?3"
+"origin" "-19625 -4932 1024"
+"script_noteworthy" "escaped_trigger"
+"classname" "trigger_multiple"
+"target" "me0_auto3253"
+}
+{
+"classname" "info_player_start_soPlayer2"
+"angles" "0 355 0"
+"origin" "-28832 -8528 800"
+}
+{
+"classname" "actor_enemy_arctic_AR"
+"model" "body_opforce_arctic_assault_a"
+"export" "12"
+"angles" "0 350 0"
+"origin" "-23092.7 -5824.2 1103.5"
+"script_stealthgroup" "69"
+"script_stealth" "1"
+"script_patroller" "1"
+"script_idlereach" "1"
+"spawnflags" "3"
+"script_forcespawn" "1"
+"target" "me0_auto3248"
+"script_stealth_function" "woods"
+"targetname" "end_forest_smokers"
+"script_deathflag" "first_stationary_dead"
+"script_pet" "20"
+}
+{
+"targetname" "me0_auto3248"
+"script_animation" "smoke"
+"classname" "script_struct"
+"angles" "0 337.2 0"
+"origin" "-23078.4 -5828.7 1116.2"
+}
+{
+"model" "?4"
+"origin" "-23122 -8198 1198"
+"classname" "trigger_multiple_spawn"
+"target" "end_forest_smokers"
+}
+{
+"classname" "actor_enemy_arctic_AR"
+"model" "body_opforce_arctic_assault_a"
+"export" "13"
+"angles" "0 175 0"
+"origin" "-22571 -5935.3 1087.5"
+"script_stealthgroup" "69"
+"script_stealth" "1"
+"script_patroller" "1"
+"script_idlereach" "1"
+"spawnflags" "3"
+"script_forcespawn" "1"
+"target" "me0_auto3250"
+"script_stealth_function" "woods"
+"targetname" "end_forest_smokers"
+"script_deathflag" "first_stationary_dead"
+}
+{
+"targetname" "me0_auto3250"
+"script_animation" "smoke"
+"classname" "script_struct"
+"angles" "0 162.2 0"
+"origin" "-22585.6 -5932 1100.2"
+}
+{
+"classname" "script_struct"
+"origin" "-21310.9 -5164 1509.1"
+"targetname" "me0_auto3236"
+"target" "me0_auto3235"
+"radius" "90"
+"_color" "1.000000 0.501961 0.501961"
+"angles" "0 70 0"
+}
+{
+"angles" "0 70 0"
+"_color" "1.000000 0.501961 0.501961"
+"radius" "90"
+"targetname" "me0_auto3235"
+"origin" "-21608.5 -5251.7 1395.1"
+"classname" "script_struct"
+}
+{
+"classname" "actor_enemy_arctic_AR"
+"model" "body_opforce_arctic_assault_a"
+"export" "14"
+"angles" "0 345 0"
+"origin" "-22643.9 -5902.6 1087.5"
+"script_stealthgroup" "69"
+"script_stealth" "1"
+"script_patroller" "1"
+"script_idlereach" "1"
+"spawnflags" "3"
+"script_forcespawn" "1"
+"target" "me0_auto3251"
+"script_stealth_function" "woods"
+"targetname" "end_forest_smokers"
+"script_deathflag" "first_stationary_dead"
+}
+{
+"targetname" "me0_auto3251"
+"script_animation" "smoke"
+"classname" "script_struct"
+"angles" "0 332.2 0"
+"origin" "-22630 -5908.3 1100.2"
+}
+{
+"classname" "actor_enemy_arctic_AR"
+"model" "body_opforce_arctic_assault_a"
+"export" "15"
+"angles" "0 220 0"
+"origin" "-23011.5 -5799.7 1103.5"
+"script_stealthgroup" "69"
+"script_stealth" "1"
+"script_patroller" "1"
+"script_idlereach" "1"
+"spawnflags" "3"
+"script_forcespawn" "1"
+"target" "me0_auto3252"
+"script_stealth_function" "woods"
+"targetname" "end_forest_smokers"
+"script_deathflag" "first_stationary_dead"
+}
+{
+"targetname" "me0_auto3252"
+"script_animation" "smoke"
+"classname" "script_struct"
+"angles" "0 207.2 0"
+"origin" "-23024.2 -5807.8 1116.2"
+}
+{
+"script_deathflag" "first_woods_dog_patrol_dead"
+"targetname" "fourth_patrol_cqb_and_dog"
+"_color" "1.000000 0.501961 0.501961"
+"script_pet" "21"
+"script_noteworthy" "cqb_patrol"
+"script_stealthgroup" "99"
+"script_stealth_function" "woods"
+"script_stealth" "1"
+"script_forcespawn" "1"
+"script_patroller" "1"
+"target" "me0_auto3236"
+"angles" "0 190 0"
+"classname" "actor_enemy_arctic_AR"
+"model" "body_opforce_arctic_assault_a"
+"export" "6"
+"origin" "-21088.9 -5064.4 1391.8"
+"spawnflags" "1"
+}
+{
+"script_deathflag" "first_woods_dog_patrol_dead"
+"script_startinghealth" "70"
+"targetname" "fourth_patrol_cqb_and_dog"
+"script_pet" "21"
+"script_stealthgroup" "99"
+"script_stealth_function" "woods"
+"script_stealth" "1"
+"script_forcespawn" "1"
+"origin" "-21097.3 -5013.1 1393.8"
+"spawnflags" "1"
+"angles" "0 190 0"
+"export" "7"
+"model" "german_sheperd_dog"
+"classname" "actor_enemy_dog"
+}
+{
+"script_deathflag" "first_woods_dog_patrol_dead"
+"script_startinghealth" "70"
+"targetname" "end_forest_smokers"
+"script_pet" "20"
+"script_stealthgroup" "69"
+"script_stealth_function" "woods"
+"script_stealth" "1"
+"script_forcespawn" "1"
+"origin" "-23106.7 -5862.9 1109.8"
+"spawnflags" "1"
+"angles" "0 320 0"
+"export" "16"
+"model" "german_sheperd_dog"
+"classname" "actor_enemy_dog"
+}
+{
+"script_deathflag" "first_woods_dog_patrol_dead"
+"targetname" "fourth_patrol_cqb_and_dog"
+"_color" "1.000000 0.501961 0.501961"
+"script_pet" "5"
+"script_noteworthy" "cqb_patrol"
+"script_stealthgroup" "99"
+"script_stealth_function" "woods"
+"script_stealth" "1"
+"script_forcespawn" "1"
+"script_patroller" "1"
+"angles" "0 190 0"
+"classname" "actor_enemy_arctic_AR"
+"model" "body_opforce_arctic_assault_a"
+"export" "8"
+"origin" "-21092.9 -4928.4 1411.8"
+"spawnflags" "1"
+"target" "me0_auto3246"
+}
+{
+"target" "me0_auto3239"
+"targetname" "me0_auto3245"
+"angles" "0 70 0"
+"_color" "1.000000 0.501961 0.501961"
+"radius" "90"
+"origin" "-21298.9 -4844 1497.1"
+"classname" "script_struct"
+}
+{
+"model" "?5"
+"origin" "-22239 -5530 1298"
+"classname" "trigger_multiple_spawn"
+"target" "fourth_patrol_cqb_and_dog"
+"targetname" "break_stealth"
+}
+{
+"model" "?6"
+"origin" "-28264 -9080 928"
+"classname" "trigger_multiple_flag_set"
+"script_flag" "so_forest_contingency_start"
+}
+{
+"classname" "script_origin"
+"targetname" "me0_auto3253"
+"origin" "-19720 -5152 744"
+}
+{
+"target" "me0_auto3240"
+"targetname" "me0_auto3239"
+"angles" "0 70 0"
+"_color" "1.000000 0.501961 0.501961"
+"radius" "90"
+"origin" "-21698.9 -4740 1361.1"
+"classname" "script_struct"
+}
+{
+"targetname" "me0_auto3240"
+"angles" "0 70 0"
+"_color" "1.000000 0.501961 0.501961"
+"radius" "90"
+"origin" "-21944.9 -4866 1327.1"
+"classname" "script_struct"
+}
+{
+"classname" "actor_enemy_arctic_AR"
+"model" "body_opforce_arctic_assault_a"
+"export" "9"
+"angles" "0 270 0"
+"origin" "-24402.8 -8443.9 987.5"
+"script_stealthgroup" "99"
+"script_stealth" "1"
+"script_patroller" "1"
+"script_idlereach" "1"
+"spawnflags" "3"
+"script_forcespawn" "1"
+"target" "me0_auto3242"
+"script_stealth_function" "woods"
+"targetname" "mid_forest_smokers"
+"script_deathflag" "first_stationary_dead"
+}
+{
+"targetname" "me0_auto3242"
+"script_animation" "smoke"
+"classname" "script_struct"
+"angles" "0 257.2 0"
+"origin" "-24404.8 -8458.8 1000.2"
+}
+{
+"model" "?7"
+"origin" "-26590 -8416 918"
+"classname" "trigger_multiple_spawn"
+"target" "mid_forest_smokers"
+}
+{
+"classname" "actor_enemy_arctic_AR"
+"model" "body_opforce_arctic_assault_a"
+"export" "10"
+"angles" "0 130 0"
+"origin" "-24396.2 -8530.1 987.5"
+"script_stealthgroup" "99"
+"script_stealth" "1"
+"script_patroller" "1"
+"script_idlereach" "1"
+"spawnflags" "3"
+"script_forcespawn" "1"
+"target" "me0_auto3244"
+"script_stealth_function" "woods"
+"targetname" "mid_forest_smokers"
+"script_deathflag" "first_stationary_dead"
+}
+{
+"targetname" "me0_auto3244"
+"script_animation" "smoke"
+"classname" "script_struct"
+"angles" "0 117.2 0"
+"origin" "-24404.2 -8517.4 1000.2"
+}
+{
+"script_deathflag" "first_woods_dog_patrol_dead"
+"targetname" "fourth_patrol_cqb_and_dog"
+"_color" "1.000000 0.501961 0.501961"
+"script_pet" "5"
+"script_noteworthy" "cqb_patrol"
+"script_stealthgroup" "99"
+"script_stealth_function" "woods"
+"script_stealth" "1"
+"script_forcespawn" "1"
+"script_patroller" "1"
+"target" "me0_auto3245"
+"angles" "0 190 0"
+"classname" "actor_enemy_arctic_AR"
+"model" "body_opforce_arctic_assault_a"
+"export" "11"
+"origin" "-21108.9 -4832.4 1411.8"
+"spawnflags" "1"
+}
+{
+"angles" "0 70 0"
+"_color" "1.000000 0.501961 0.501961"
+"radius" "90"
+"origin" "-21306.9 -4992 1493.1"
+"classname" "script_struct"
+"targetname" "me0_auto3246"
+"target" "me0_auto3247"
+}
+{
+"angles" "0 70 0"
+"_color" "1.000000 0.501961 0.501961"
+"radius" "90"
+"origin" "-21386.9 -5080 1497.1"
+"classname" "script_struct"
+}
+{
+"angles" "0 70 0"
+"_color" "1.000000 0.501961 0.501961"
+"radius" "90"
+"origin" "-21582.9 -5164 1429.1"
+"classname" "script_struct"
+"targetname" "me0_auto3247"
+}

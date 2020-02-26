@@ -1,0 +1,181 @@
+{
+"origin" "0 0 0"
+"sunlight" "0.74"
+"suncolor" "0.88 0.93 1"
+"sundirection" "-70 72 0"
+"classname" "worldspawn"
+"ambient" ".116"
+"_color" "0.5 0.5 .62 1"
+"skylight" "0.56"
+"skycolor" "0.87 0.94 1"
+}
+{
+"model" "?0"
+"origin" "10496 43104 1024"
+"classname" "trigger_multiple"
+"script_flag_true" "so_obj_crossing"
+"script_noteworthy" "so_obj_crossing"
+}
+{
+"classname" "script_origin"
+"targetname" "so_obj_crossing"
+"origin" "10496 43184 904.3"
+}
+{
+"classname" "info_player_start_so"
+"angles" "0 75 0"
+"origin" "10356 31725 -2.6"
+}
+{
+"classname" "weapon_scar_h_shotgun"
+"model" "weapon_scar_h"
+"angles" "355.392 82.878 -85.9417"
+"origin" "10296.5 31897.3 14.3"
+"spawnflags" "0"
+"script_ammo_max" "1"
+}
+{
+"classname" "weapon_scar_h_shotgun"
+"model" "weapon_scar_h"
+"angles" "355.392 52.878 -85.9417"
+"origin" "10440.3 31887.5 13.5"
+"spawnflags" "0"
+"script_ammo_max" "1"
+}
+{
+"model" "?1"
+"origin" "10400 28992 -64"
+"classname" "trigger_multiple_flag_set_touching"
+"script_flag" "player_trying_to_escape"
+"script_noteworthy" "player_trying_to_escape"
+}
+{
+"model" "?2"
+"origin" "10400 28608 -64"
+"classname" "trigger_multiple_flag_set_touching"
+"script_flag" "player_has_escaped"
+}
+{
+"model" "?3"
+"origin" "10496 43712 1088"
+"classname" "trigger_multiple_flag_set_touching"
+"script_flag" "player_trying_to_escape"
+"script_noteworthy" "player_trying_to_escape"
+}
+{
+"model" "?4"
+"origin" "10496 44096 1088"
+"classname" "trigger_multiple_flag_set_touching"
+"script_flag" "player_has_escaped"
+}
+{
+"classname" "weapon_masada_grenadier_acog"
+"model" "weapon_magpul_masada_dust"
+"angles" "355.392 112.878 -85.9417"
+"origin" "10264 31876 12.6"
+"spawnflags" "0"
+"script_ammo_max" "1"
+}
+{
+"classname" "weapon_m21_scoped_cloth"
+"model" "weapon_m14ebr_tan"
+"origin" "10336 31896 14.1"
+"angles" "355.392 67.878 -85.9417"
+"spawnflags" "0"
+"script_ammo_max" "1"
+}
+{
+"classname" "weapon_tavor_eotech"
+"model" "weapon_tavor"
+"angles" "355.392 37.878 -85.9417"
+"origin" "10260 31916 15.8"
+"spawnflags" "0"
+"script_ammo_max" "1"
+}
+{
+"classname" "weapon_p90_eotech"
+"model" "weapon_p90"
+"angles" "355.392 172.878 -85.9417"
+"origin" "10324 31860 11.3"
+"spawnflags" "0"
+"script_ammo_max" "1"
+}
+{
+"classname" "weapon_m21_scoped_cloth"
+"model" "weapon_m14ebr_tan"
+"origin" "10473.9 31866.6 11.9"
+"angles" "355.392 37.878 -85.9417"
+"spawnflags" "0"
+"script_ammo_max" "1"
+}
+{
+"classname" "weapon_masada_grenadier_acog"
+"model" "weapon_magpul_masada_dust"
+"angles" "355.392 82.878 -85.9417"
+"origin" "10401.5 31885.3 13.3"
+"spawnflags" "0"
+"script_ammo_max" "1"
+}
+{
+"classname" "weapon_tavor_eotech"
+"model" "weapon_tavor"
+"angles" "355.392 7.87798 -85.9417"
+"origin" "10418.1 31921.9 16.2"
+"spawnflags" "0"
+"script_ammo_max" "1"
+}
+{
+"classname" "weapon_p90_eotech"
+"model" "weapon_p90"
+"angles" "355.392 142.878 -85.9417"
+"origin" "10445.5 31841.4 9.8"
+"spawnflags" "0"
+"script_ammo_max" "1"
+}
+{
+"angles" "2.21042 234.528 88.6768"
+"origin" "10604.5 38879.5 769.4"
+"spawnflags" "0"
+"model" "weapon_rpg7"
+"classname" "weapon_rpg_player"
+"script_ammo_max" "1"
+}
+{
+"classname" "weapon_m79"
+"model" "weapon_m79"
+"origin" "10531 38921 771"
+"angles" "1.01019 274.514 87.6212"
+"count" "999"
+"spawnflags" "0"
+"script_ammo_max" "1"
+}
+{
+"angles" "358.055 44.5385 91.6805"
+"origin" "10612.5 38921.5 771.3"
+"spawnflags" "0"
+"model" "weapon_rpg7"
+"classname" "weapon_rpg_player"
+"script_ammo_max" "1"
+}
+{
+"angles" "1.88846 222.529 88.2553"
+"origin" "10568.5 38907.5 770.5"
+"spawnflags" "0"
+"model" "weapon_rpg7"
+"classname" "weapon_rpg_player"
+"script_ammo_max" "1"
+}
+{
+"angles" "357.7 58.5393 91.1696"
+"origin" "10564.5 38947.5 772.3"
+"spawnflags" "0"
+"model" "weapon_rpg7"
+"classname" "weapon_rpg_player"
+"script_ammo_max" "1"
+}
+{
+"classname" "script_model"
+"model" "weapon_us_smoke_grenade_burnt"
+"origin" "10480 43169 894.3"
+"angles" "90 300 180"
+}

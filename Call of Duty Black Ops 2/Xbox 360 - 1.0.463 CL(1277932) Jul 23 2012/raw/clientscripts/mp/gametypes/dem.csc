@@ -1,0 +1,11 @@
+main()
+{
+}
+
+onPrecacheGameType()
+{
+}
+
+onStartGameType()
+{	
+}

@@ -1,0 +1,80 @@
+//
+// file: mp_nightclub_amb.csc
+// description: clientside ambient script for mp_nightclub: setup ambient sounds, etc.
+// scripter: 		(initial clientside work - laufer)
+//
+
+#include clientscripts\mp\_utility; 
+#include clientscripts\mp\_ambientpackage;
+#include clientscripts\mp\_audio;
+
+main()
+{
+	declareAmbientRoom("nightclub_outdoor", true );
+		setAmbientRoomtone ("nightclub_outdoor", "amb_wind_extreior_2d", .55, 1);
+		setAmbientRoomReverb( "nightclub_outdoor", "nightclub_outdoor", 1, 1 );
+		setAmbientRoomContext( "nightclub_outdoor", "ringoff_plr", "outdoor" );
+		
+	declareAmbientRoom("nightclub_partial_room" );
+		setAmbientRoomReverb( "nightclub_partial_room", "nightclub_partial_room", 1, 1 );
+		setAmbientRoomContext( "nightclub_partial_room", "ringoff_plr", "outdoor" );				
+		
+	declareAmbientRoom("nightclub_small_room" );
+		setAmbientRoomReverb( "nightclub_small_room", "nightclub_small_room", 1, 1 );
+		setAmbientRoomContext( "nightclub_small_room", "ringoff_plr", "indoor" );	
+		
+	declareAmbientRoom("nightclub_medium_room" );
+		setAmbientRoomReverb( "nightclub_medium_room", "nightclub_medium_room", 1, 1 );
+		setAmbientRoomContext( "nightclub_medium_room", "ringoff_plr", "indoor" );		
+		
+	declareAmbientRoom("nightclub_large_room" );
+		setAmbientRoomReverb( "nightclub_large_room", "nightclub_large_room", 1, 1 );
+		setAmbientRoomContext( "nightclub_large_room", "ringoff_plr", "indoor" );	
+		
+	declareAmbientRoom("nightclub_open_room" );
+		setAmbientRoomReverb( "nightclub_open_room", "nightclub_open_room", 1, 1 );
+		setAmbientRoomContext( "nightclub_open_room", "ringoff_plr", "indoor" );	
+		
+	declareAmbientRoom("nightclub_dense_hallway" );
+		setAmbientRoomReverb( "nightclub_dense_hallway", "nightclub_dense_hallway", 1, 1 );
+		setAmbientRoomContext( "nightclub_dense_hallway", "ringoff_plr", "indoor" );		
+		
+	declareAmbientRoom("nightclub_stone_room" );
+		setAmbientRoomReverb( "nightclub_stone_room", "nightclub_stone_room", 1, 1 );
+		setAmbientRoomContext( "nightclub_stone_room", "ringoff_plr", "indoor" );	
+		
+	declareAmbientRoom("nightclub_container" );
+		setAmbientRoomReverb( "nightclub_container", "nightclub_container", 1, 1 );
+		setAmbientRoomContext( "nightclub_container", "ringoff_plr", "indoor" );	
+		
+		
+		
+	//Plays default outdoor 2D alias
+	activateAmbientRoom( 0, "nightclub_outdoor", 0 );	
+		
+	//	thread snd_start_autofnightclub_audio();
+	//	thread snd_play_loopers();
+		
+}
+
+
+//Play looping sound at position: (fadein, alias name, coord, fadeout)
+snd_play_loopers()
+{
+
+	//playloopat ( "amb_flag", (-68, 3130, 182), );
+
+}	
+
+
+//Play looping sound on looping effects using createfx ents: (effect name, alias name, coord, snap to ground T/F)
+snd_start_autofnightclub_audio()
+{
+
+	//snd_play_auto_fx ( "fnightclub_fire_sm", "amb_fire_med", 0, 0, 0, true );
+	//snd_play_auto_fx ( "fnightclub_fire_md", "amb_fire_sml", 0, 0, 0, true );		
+	//snd_play_auto_fx ( "fnightclub_fire_lg", "amb_fire_lrg", 0, 0, 0, true );		
+	
+
+}
+

@@ -1,0 +1,52 @@
+{
+"radiosityScale" "1"
+"sunRadiosity" "1"
+"contrastGain" "0.15"
+"diffusefraction" "0.3"
+"_color" "1 .8 .8"
+"sunlight" "1.6"
+"sundirection" "-35 320 0"
+"sundiffusecolor" "0.87 0.77 .65"
+"suncolor" "1 .85 .65"
+"ambient" ".3"
+"bouncefraction" ".2"
+"classname" "worldspawn"
+}
+{
+"origin" "-374 -1278 314"
+"angles" "0 142 0"
+"classname" "info_player_start"
+}
+{
+"targetname" "pf7336_auto1"
+"classname" "trigger_use"
+"origin" "-2296 2474 244"
+"model" "*1"
+}
+{
+"gndLt" "4f433b0001"
+"target" "pf7336_auto1"
+"angles" "0.345239 0.0239795 3.97327"
+"origin" "-2302.2 2474.9 232.4"
+"model" "com_tv1"
+"classname" "script_model"
+"targetname" "interactive_tv"
+}
+{
+"targetname" "sunset_01"
+"classname" "trigger_multiple"
+"origin" "-4648 2533 240"
+"model" "*2"
+}
+{
+"targetname" "sunset_02"
+"classname" "trigger_multiple"
+"origin" "-2624 4992 240"
+"model" "*3"
+}
+{
+"targetname" "sunset_03"
+"classname" "trigger_multiple"
+"origin" "-4344 4976 344"
+"model" "*4"
+}

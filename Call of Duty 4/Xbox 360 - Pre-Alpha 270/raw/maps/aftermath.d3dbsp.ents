@@ -1,0 +1,29 @@
+{
+"contrastGain" "0.15"
+"diffusefraction" "0.45"
+"_color" "0.90 0.90 1"
+"sunlight" "1"
+"sundirection" "240 248 0"
+"sundiffusecolor" "1 1 1"
+"suncolor" "1 1 1"
+"ambient" ".15"
+"classname" "worldspawn"
+}
+{
+"angles" "0 2.50448e-006 0"
+"origin" "-836 8442 640"
+"classname" "info_player_start"
+}
+{
+"targetname" "pf599_auto2861"
+"classname" "trigger_use"
+"origin" "-1294 8550 664"
+"model" "*1"
+}
+{
+"targetname" "debris"
+"target" "pf599_auto2861"
+"classname" "script_brushmodel"
+"origin" "-1290 8515 631"
+"model" "*2"
+}
