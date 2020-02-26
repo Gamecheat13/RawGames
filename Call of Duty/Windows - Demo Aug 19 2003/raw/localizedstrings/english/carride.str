@@ -1,0 +1,34 @@
+// Note to translators:
+// If a sentence is the same in your language then please change it to "#same"
+//
+// eg:
+// LANG_ENGLISH  "HALT"
+// LANG_GERMAN   "#same"
+//
+// (This is so we can tell which strings have been signed-off as ok to be the same words for QA
+//  and because we do not store duplicate strings, which will then get exported again next time
+//  as being untranslated.)
+//
+VERSION             "1"
+CONFIG              "F:\projects\mk\bin\StringEd\StringEd.cfg"
+FILENOTES           ""
+
+REFERENCE           OBJECTIVE_HQ
+LANG_ENGLISH        "Report the Village's Capture to Regimental HQ"
+
+REFERENCE           OBJECTIVE_NEWCAR
+LANG_ENGLISH        "Get to a New Car"
+
+REFERENCE           OBJECTIVE_DEFEND_ELDER
+LANG_ENGLISH        "Defend Private Elder"
+
+REFERENCE           HINT_GETINCAR
+LANG_ENGLISH        "Press USE [%s] to get in the car."
+
+REFERENCE           OBJECTIVE_GETINCAR
+LANG_ENGLISH        "Get In The Car"
+
+
+ENDMARKER
+
+

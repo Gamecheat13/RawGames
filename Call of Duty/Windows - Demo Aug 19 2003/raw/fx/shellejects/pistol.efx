@@ -1,0 +1,63 @@
+Emitter
+{
+	flags				useModel usePhysics
+
+	life				5000
+
+	cullrange			100
+
+	bounce				0.5
+
+	angle				360 360 360 -360 -360 -360
+
+	angleDelta			133 133 133 -133 -133 -133
+
+	velocity			100 0 0
+
+	acceleration		132 132 132 -132 -132 -132
+
+	gravity				-800
+
+	size
+	{
+		start			0.09
+		end				0.09
+		flags			linear
+	}
+
+	models
+	[
+		xmodel/shellcasing
+	]
+}
+
+Emitter
+{
+	name				Copy of Unnamed Emitter 0
+
+	flags				usePhysics impactKills impactFx
+
+	life				5000
+
+	bounce				0.6
+
+	angle				360 360 360 -360 -360 -360
+
+	angleDelta			133 133 133 -133 -133 -133
+
+	velocity			100 0 0
+
+	gravity				-800
+
+	size
+	{
+		start			0.09
+		end				0.09
+		flags			linear
+	}
+
+	impactfx
+	[
+		fx/shellejects/shelleject_pistolsound
+	]
+}

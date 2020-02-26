@@ -1,0 +1,548 @@
+#include "ui/menudef.h"
+{
+menuDef 
+{
+	name options_move
+	fullScreen 0				
+	rect OPTIONS_WINDOW_POS OPTIONS_WINDOW_SIZE				// Size and position of the menu
+	visible 1				// Visible on open
+	focusColor .9 .85 1 .8			// Menu focus color for text and items
+	soundloop ""
+	onOpen
+	{
+		uiScript loadControls
+	}
+	onESC 
+	{ 
+		open main;
+		close options_menu;		
+	}
+/*
+	itemDef 
+	{
+		name keyBindStatus
+		rect 0 322 640 30 
+		ownerdraw UI_KEYBINDSTATUS
+		text "-"      
+		forecolor 1 .75 0 1
+		textscale .23
+		textalignx 221
+		textalign 1
+		textaligny 20
+		visible 1
+		decoration 
+	}
+*/
+	itemDef 
+	{
+		name look_back
+		rect 0 0 OPTIONS_WINDOW_SIZE	
+		style WINDOW_STYLE_FILLED
+		border 1
+		bordercolor .5 .5 .5 .5
+		forecolor 1 1 1 1
+		backcolor OPTIONS_WINDOW_BACKCOLOR
+		visible 1
+		decoration
+	}
+	itemDef {
+		name keyBindStatus
+		rect 0 324 360 15 
+		ownerdraw UI_KEYBINDSTATUS
+		text " "      
+		style WINDOW_STYLE_FILLED
+		backcolor OPTIONS_WINDOW_BACKCOLOR
+		forecolor .9 .9 1 1
+		border 1
+		bordercolor .5 .5 .5 .5
+		textscale .20
+		textalignx 168
+		textalign 1
+		textaligny 12
+		visible 0
+		decoration 
+	}
+
+	itemDef 
+	{
+		name ctr_look
+		text "@MENU_OPTIONS_CONTROLS"
+		textscale .23
+		group grpControlbutton
+		type ITEM_TYPE_BUTTON
+		style 0
+		rect 102.5 5 120 10
+		textalign 1
+		textalignx 60
+		textaligny 10
+		forecolor 0.75 0.75 0.75 1
+		visible 1
+		decoration 
+	}
+	itemDef 
+	{
+		name look
+		group grpControls
+		text "@MENU_MOVE"
+		type 1
+		textscale .2
+		group grpControls
+		rect 145 20 35 10
+		textalign 1
+		textalignx 17
+		textaligny 10
+		forecolor 1 1 1 .9
+		visible 1
+		decoration
+	}
+
+
+	itemDef 
+	{
+		name move
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "@MENU_FORWARD"
+		cvar "+forward"
+		rect		5 40 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+	}
+
+	itemDef 
+	{
+		name move
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "@MENU_BACKPEDAL"
+		cvar "+back"
+		rect		5 55 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+	}
+
+	itemDef 
+	{
+		name move
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "@MENU_MOVE_LEFT"
+		cvar "+moveleft"
+		rect		5 70 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+	}
+
+	itemDef 
+	{
+		name move
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "@MENU_MOVE_RIGHT"
+		cvar "+moveright"
+		rect		5 85 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+	}
+
+	itemDef 
+	{
+		name move
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "@MENU_LEAN_LEFT"
+		cvar "+leanleft"
+		rect		5 100 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+	}
+
+	itemDef 
+	{
+		name move
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "@MENU_LEAN_RIGHT"
+		cvar "+leanright"
+		rect		5 115 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+	}
+	itemDef 
+	{
+		name move
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "@MENU_STANDJUMP"
+		cvar "+gostand"
+		rect		5 130 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+	}
+	itemDef 
+	{
+		name move
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "@MENU_GO_TO_CROUCH"
+		cvar "gocrouch"
+		rect		5 145 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+	}
+	itemDef 
+	{
+		name move
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "@MENU_GO_TO_PRONE"
+		cvar "goprone"
+		rect		5 160 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+	}
+
+	itemDef 
+	{
+		name move
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "@MENU_JUMP_STANCE_UP"
+		cvar "+moveup"
+		rect		5 175 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+	}
+	itemDef 
+	{
+		name move
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "@MENU_STANCE_DOWN"
+		cvar "lowerstance"
+		rect		5 190 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+	}
+	itemDef 
+	{
+		name move
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "@MENU_STANCE_UP"
+		cvar "raisestance"
+		rect		5 205 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+	}
+	itemDef 
+	{
+		name move
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "@MENU_TOGGLE_CROUCH"
+		cvar "togglecrouch"
+		rect		5 220 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+	}
+	itemDef 
+	{
+		name move
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "@MENU_TOGGLE_PRONE"
+		cvar "toggleprone"
+		rect		5 235 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+	}
+	itemDef 
+	{
+		name move
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "@MENU_CROUCH"
+		cvar "+movedown"
+		rect		5 250 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+	}
+	itemDef 
+	{
+		name move
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "@MENU_PRONE"
+		cvar "+prone"
+		rect		5 265 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+	}
+	itemDef 
+	{
+		name move
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "@MENU_TURN_LEFT"
+		cvar "+left"
+		rect		5 280 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+	}
+
+	itemDef 
+	{
+		name move
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "@MENU_TURN_RIGHT"
+		cvar "+right"
+		rect		5 295 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+	}
+
+	itemDef 
+	{
+		name move
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "@MENU_STRAFE"
+		cvar "+strafe"
+		rect		5 310 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+	}
+
+}
+
+}//

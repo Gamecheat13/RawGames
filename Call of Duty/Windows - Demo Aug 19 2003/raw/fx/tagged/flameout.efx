@@ -1,0 +1,203 @@
+Particle
+{
+	count				3 4
+
+	life				900
+
+	origin				0 0 0 33 0 0
+
+	radius				10
+
+	height				100
+
+	rotation			350 -321
+
+	rotationDelta		2 -2
+
+	velocity			323 23 32 23 -46 64
+
+	rgb
+	{
+		start			0.8353 0.5176 0.1686 0.8549 0.7098 0.2706
+		end				0.6392 0.5176 0.2627 0.6706 0.4157 0.1373
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.8
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			10
+		end				300 350
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/explosion1
+	]
+}
+
+Particle
+{
+	name				Copy of Unnamed Particle 2
+
+	count				7 13
+
+	life				900 800
+
+	delay				3 6
+
+	origin				-32 0 50 75 0 0
+
+	radius				50 100
+
+	height				50 1
+
+	rotation			360 -360
+
+	rotationDelta		2 -2
+
+	velocity			500 143 0 100 -175 0
+
+	rgb
+	{
+		start			0.8549 0.7098 0.2706 0.9765 0.949 0.651
+		end				0.6706 0.4157 0.1373 0.7608 0.4353 0.2392
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.4 0.8
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			0 25
+		end				300 150
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/explosion1b
+	]
+}
+
+Particle
+{
+	name				Copy of Unnamed Particle 0
+
+	count				6
+
+	life				700
+
+	radius				100
+
+	rotation			120 -321
+
+	rotationDelta		3 -3
+
+	velocity			1323 23 32 223 -46 -64
+
+	gravity				100 -600
+
+	rgb
+	{
+		start			0.9686 0.8235 0.03529
+		end				0.8353 0.5176 0.1686 0.7608 0.4353 0.2392
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.7 0.5
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			10
+		end				300 400
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/explosion1a
+	]
+}
+
+Particle
+{
+	name				Copy of Unnamed Particle 0
+
+	flags				useAlpha
+
+	count				5
+
+	life				1700
+
+	origin				0 23 0 20 -36 0
+
+	radius				100
+
+	rotation			350 -321
+
+	rotationDelta		3 -3
+
+	velocity			100 246 32 923 -292 64
+
+	rgb
+	{
+		start			0.03529 0.02745 0.02353
+		end				0.03529 0.02745 0.02353
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			10 100
+		end				500
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/dark_smoke
+	]
+}
+
+Light
+{
+	life				500
+
+	rgb
+	{
+		start			0.9686 0.8235 0.03529 0.9765 0.949 0.651
+		end				0.8549 0.7098 0.2706 0.7412 0.5961 0.2588
+		flags			random linear
+	}
+
+	size
+	{
+		start			1700
+		end				1400
+		flags			random linear
+	}
+}

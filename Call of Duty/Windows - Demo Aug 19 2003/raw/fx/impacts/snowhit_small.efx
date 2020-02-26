@@ -1,0 +1,120 @@
+Particle
+{
+	name				Copy of Unnamed Particle 5
+
+	flags				useAlpha
+
+	spawnFlags			orgOnCylinder axisFromSphere
+
+	nonUniformScale		1
+
+	count				12
+
+	life				400 300
+
+	rotation			-360 360
+
+	rotationDelta		12 -12
+
+	velocity			153 0 154 152 0 145
+
+	gravity				-400 -350
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.2
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			12
+		end				122 12
+		flags			linear
+	}
+
+	size2
+	{
+		end				33 23
+		flags			linear
+	}
+
+	length
+	{
+		start			122
+		end				12
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/misc/snowsheet1
+	]
+}
+
+Particle
+{
+	flags				useAlpha
+
+	spawnFlags			orgOnCylinder
+
+	count				2 3
+
+	life				300 150
+
+	radius				12 3
+
+	rotation			360 -360
+
+	rotationDelta		23 -23
+
+	velocity			22 0 0 54 0 0
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.5 0.7
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				40 50
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/impact/snow1
+	]
+}
+
+Decal
+{
+	life				1e+004
+
+	cullrange			1600
+
+	rotation			360 -360
+
+	size
+	{
+		start			5
+	}
+
+	shaders
+	[
+		gfx/impact/bullethit_snow
+	]
+}

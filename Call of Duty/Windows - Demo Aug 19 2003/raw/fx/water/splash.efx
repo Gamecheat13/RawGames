@@ -1,0 +1,93 @@
+FxRunner
+{
+	spawnFlags			orgOnCylinder randrotaroundfwd
+
+	count				5
+
+	radius				4
+
+	height				35
+
+	playfx
+	[
+		fx/water/rocksplashes
+	]
+}
+
+Emitter
+{
+	flags				emitFx
+
+	life				100
+
+	origin				111 0 0
+
+	velocity			15 0 0
+
+	density				4
+
+	size
+	{
+		end				122
+		flags			random linear
+	}
+
+	emitfx
+	[
+		fx/water/rocksplashes
+	]
+}
+
+Particle
+{
+	nonUniformScale		1
+
+	count				15
+
+	life				800
+
+	rotation			12 -12
+
+	velocity			287 22 22 187 -22 -22
+
+	acceleration		123 -123 -123 0 123 123
+
+	gravity				-600 -800
+
+	rgb
+	{
+		start			0.7529 0.7529 0.7608
+		end				0.6275 0.6275 0.6431
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.3
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				56
+		flags			linear
+	}
+
+	size2
+	{
+		end				700 100
+		flags			linear
+	}
+
+	length
+	{
+		end				43
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/riverspray1
+	]
+}

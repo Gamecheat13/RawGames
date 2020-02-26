@@ -1,0 +1,142 @@
+#include "ui/menudef.h"
+
+{
+\\ LANGUAGE RESTART POPUP MENU \\
+
+	menuDef 
+	{
+		name "language_restart_popmenu"
+		visible 0
+		fullscreen 0
+		//rect 217 200 210 85
+		rect 217.5 170 205 140
+		//outOfBoundsClick			// this closes the window if it gets a click out of the rectangle
+		focusColor 1 .75 0 1
+		style WINDOW_STYLE_FILLED
+		backcolor 0 0 0 0.5
+		bordercolor 1 1 1 .5
+		border 1
+		popup
+		onESC 
+		{
+			close language_restart_popmenu;
+			open setup_menu;
+			open system_menu 
+		}
+
+// LANGUAGE RESTART	//
+		itemDef 
+		{
+			name backimage2fade
+			style WINDOW_STYLE_SHADER
+			rect -219 -172 642 482
+	 		background "ui/assets/fadebox.tga"
+			forecolor 0 0 0 0.7
+			backcolor 0 0 0 0.7
+			visible 1
+			decoration
+		}
+		itemDef 
+		{
+			name confirm
+			text "@MENU_THIS_WILL_APPLY_THE"
+			style 0
+			textscale .23 
+			textstyle 3
+			rect 0 25 110 20
+			textalign 1
+			textalignx 100
+			textaligny 15
+			decoration
+			forecolor 1 1 1 1
+			visible 1
+		}
+		itemDef 
+		{
+			name confirm
+			text "@MENU_LANGUAGE_CHANGE_AND_RETURN"
+			style 0
+			textscale .23 
+			textstyle 3
+			rect 0 40 110 20
+			textalign 1
+			textalignx 100
+			textaligny 15
+			decoration
+			forecolor 1 1 1 1
+			visible 1
+		}
+		itemDef 
+		{
+			name confirm
+			text "@MENU_TO_THE_MAIN_MENU" 
+			style 0
+			textscale .23 
+			textstyle 3
+			rect 0 55 110 20
+			textalign 1
+			textalignx 100
+			textaligny 15
+			decoration
+			forecolor 1 1 1 1
+			visible 1
+		}
+
+		itemDef 
+		{
+			name yes
+			text "MENU_YES"
+			type 1
+			textfont UI_FONT_NORMAL
+			textscale .25
+			style WINDOW_STYLE_FILLED
+			rect 20 80 70 26
+			textalign 1
+			textalignx 32
+			textaligny 20
+			forecolor 1 1 1 1
+			backcolor  .1 .1 .1 .1  
+			visible 1
+			border 1
+			bordercolor .5 .5 .5 .5 
+			action 
+			{ 
+				play "mouse_click";
+				close language_restart_popmenu;
+				uiScript updateLanguage; 
+			}
+			mouseEnter { setitemcolor yes backcolor .3 0.5 0.2 .25 } 
+			mouseExit { setitemcolor yes backcolor  .1 .1 .1 .1  } 	
+		}
+	
+		itemDef 
+		{
+			name no
+			text "@MENU_NO"
+			type 1
+			textfont UI_FONT_NORMAL
+			textscale .25
+			style WINDOW_STYLE_FILLED
+			rect 110 80 70 26
+			textalign 1
+			textalignx 35
+			textaligny 20
+			forecolor 1 1 1 1
+			backcolor  .1 .1 .1 .1  
+			visible 1
+			border 1
+			bordercolor .5 .5 .5 .5 
+			action 
+			{ 
+				play "mouse_click";
+				close language_restart_popmenu;
+//				close options_menu;
+//				close options_graphics;
+				open options_menu;
+				open options_graphics;
+			}
+			mouseEnter { setitemcolor no backcolor .3 0.5 0.2 .25 } 
+			mouseExit { setitemcolor no backcolor  .1 .1 .1 .1  } 		
+		}
+	}
+}

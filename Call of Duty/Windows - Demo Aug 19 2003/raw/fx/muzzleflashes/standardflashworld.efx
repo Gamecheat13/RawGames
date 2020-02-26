@@ -1,0 +1,206 @@
+Particle
+{
+	flags				relative
+
+	count				1 2
+
+	life				121 211
+
+	cullrange			100
+
+	origin				0 0 0 7 0 0
+
+	rotation			320 -360
+
+	velocity			33 0 0 22 0 0
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			1 2
+		end				10 8
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/muzflash2
+	]
+}
+
+Particle
+{
+	name				Copy of Unnamed Particle 0
+
+	flags				relative
+
+	count				2 3
+
+	life				100
+
+	cullrange			200
+
+	origin				-3 0 0 0 0 0
+
+	rotation			320 -360
+
+	rotationDelta		44 0
+
+	velocity			56 0 0 100 0 0
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0.4 0.2
+		flags			linear
+	}
+
+	size
+	{
+		start			0
+		end				8
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/muzflash2
+	]
+}
+
+Particle
+{
+	name				Copy of Copy of Unnamed Particl
+
+	flags				relative
+
+	life				100
+
+	cullrange			100
+
+	origin				4 0 0 8 0 0
+
+	rotation			320 -360
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0.4 0
+		flags			linear
+	}
+
+	size
+	{
+		start			0
+		end				10
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/muzflash2a
+	]
+}
+
+Tail
+{
+	flags				relative
+
+	life				100
+
+	origin				14 0 0
+
+	velocity			21 0 0 25 0 0
+
+	size
+	{
+		end				6
+		flags			linear
+	}
+
+	length
+	{
+		start			12
+		end				18
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/mg42a
+	]
+}
+
+Tail
+{
+	name				Copy of Unnamed Tail 5
+
+	flags				relative
+
+	count				2 1
+
+	life				100
+
+	cullrange			500
+
+	origin				21 0 0 19 0 0
+
+	velocity			2 0 0 0 0 0
+
+	size
+	{
+		start			0
+		end				2
+		flags			linear
+	}
+
+	length
+	{
+		start			23
+		end				24
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/muzflash2a
+	]
+}
+
+Light
+{
+	life				100
+
+	origin				6 0 0 9 0 0
+
+	rgb
+	{
+		start			0.9686 0.8235 0.03529 0.8392 0.8118 0.6627
+		end				0.9765 0.949 0.651 0.8549 0.7098 0.2706
+		flags			linear
+	}
+
+	size
+	{
+		start			210 190
+		flags			linear
+	}
+}

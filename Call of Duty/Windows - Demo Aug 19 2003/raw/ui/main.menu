@@ -1,0 +1,2027 @@
+#include "ui/menudef.h"
+
+{
+	assetGlobalDef 
+	{
+		consoleFont "fonts/consoleFont" 18		// font
+		smallFont "fonts/smallFont" 12			// font
+		font "fonts/normalFont" 16				// font
+		bigFont "fonts/bigFont" 24				// font
+		extraBigFont "fonts/extraBigFont" 32	// font
+		boldFont "fonts/boldFont" 30			// font
+
+		cursor "ui/assets/3_cursor3"			// cursor	
+		gradientBar "ui/assets/gradientbar2.tga"	// gradient bar
+		itemFocusSound "sound/misc/menu2.wav"	
+					// sound for item getting focus (via keyboard or mouse )
+
+		fadeClamp 1.0				// sets the fadeup alpha
+		fadeCycle 1					// how often fade happens in milliseconds
+		fadeAmount 0.1				// amount to adjust alpha per cycle
+		
+		shadowColor 0.1 0.1 0.1 0.25			// shadow color
+	}
+
+	menuDef 
+	{
+		name "main"
+//		background "menuback_cw"		// Spinning Circle Background
+		fullScreen MENU_TRUE				
+		rect 0 0 640 480				// Size and position of the menu
+		visible MENU_TRUE				// Visible on open
+		focusColor .9 .85 1 .8			// Menu focus color for text and items
+		soundloop ""
+					
+		onOpen 
+		{ 
+//			setitemcolor fadebox backcolor 0 0 0 1; 
+			play "music_mainmenu";
+//			fadeout fadebox ;
+//			hide resume;
+			savegamehide resume ;
+
+		}
+		
+		onESC 
+		{ 
+//			open quit_popmenu ;
+//			close main ;
+			ingameclose main ;
+//			open quit_popmenu  ;
+		}
+		
+		// Temp full screen backdrop image
+/*
+		itemDef 
+		{
+			name main_back
+			style WINDOW_STYLE_SHADER
+			rect 0 0 640 480
+			background "main_back"
+			visible 1
+			decoration
+		}
+*/
+		#include "ui/menu_background.menu"
+		
+////////// GAMETYPE //////////////////////////////////////////////////////// 
+
+	//	SINGLEPLAYER	// 
+
+		//main menu - load last save game
+/*
+		itemDef 
+		{
+			name butn
+			type ITEM_TYPE_BUTTON
+			rect 385 270 100 15
+			style 0
+			visible 0
+			forecolor 0 0 0 0
+			backcolor 0 0 0 0
+			action { open save_menu; }
+		}
+*/
+
+
+		itemDef 
+		{
+			name resume
+			text "@MENU_RESUMEGAME"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 385 175 150 25 
+			textalign 0
+			textscale .5		
+			textalignx 0
+			textaligny 18
+			forecolor .9 .9 .9 .9
+			visible 1
+			textfont UI_FONT_NORMAL
+			cvarTest "cl_paused"
+			showCVar { "0" }
+//			onFocus { hide resume; show resume_select; }
+//			leaveFocus { hide resume_select; show resume; }
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+
+			action 
+			{ 
+				play "mouse_click";
+//				play "sound/misc/zap.wav";
+				
+//				exec "loadgame_continue";
+//				close main;
+				open resume_popmenu;
+			}
+		}
+	
+		//ingame - return to game
+		itemDef 
+		{
+			name backtogame
+			text "@MENU_BACKTOGAME"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 385 175 150 25 
+			textalign 0
+			textscale .5		
+			textalignx 0
+			textaligny 18
+			forecolor .9 .9 .9 .9
+			visible 1
+			textfont UI_FONT_NORMAL
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			cvarTest "cl_paused"
+			showCVar { "1" }
+			action 
+			{ 
+				play "mouse_click";
+				close main;
+			}
+		}
+
+//game_inprogress
+		itemDef 
+		{
+			name play
+			text "@MENU_PLAY_DEMO_LEVEL"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 385 215 180 25 
+			textalign 0
+			textscale .5		
+			textalignx 0
+			textaligny 18
+			forecolor .9 .9 .9 .9
+			visible 1
+			textfont UI_FONT_NORMAL
+			cvarTest "cl_paused"
+			showCVar { "0" }
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{ 
+				play "mouse_click";
+			//g_gameskill "1"
+			//g_spSkill "2"
+			//g_player_maxhealth "600"
+//				close main;
+//				exec "spmap pathfinder"
+				open newgame_popmenu_training;
+			}
+		}
+		itemDef 
+		{
+			name play
+			text "@MENU_PLAY_DEMO_LEVEL"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 385 215 180 25 
+			textalign 0
+			textscale .5		
+			textalignx 0
+			textaligny 18
+			forecolor .9 .9 .9 .9
+			visible 1
+			textfont UI_FONT_NORMAL
+			cvarTest "cl_paused"
+			showCVar { "1" }
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{ 
+				play "mouse_click";
+			//g_gameskill "1"
+			//g_spSkill "2"
+			//g_player_maxhealth "600"
+//				close main;
+//				exec "spmap pathfinder"
+				open game_inprogress;
+			}
+		}
+		
+
+	//nogame button
+
+		itemDef 
+		{
+			name loadgame
+			text "@MENU_LOADGAME"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY	
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 385 255 120 25 
+			textalign 0
+			textscale .5		
+			textalignx 0
+			textaligny 18
+			forecolor .9 .9 .9 .9
+			visible 1
+			textfont UI_FONT_NORMAL
+			cvarTest "cl_paused"
+			showCVar { "0" }
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{
+				play "mouse_click";
+				open save_load_menu; 
+				close main; 
+//				play "sound/misc/zap.wav";
+			}
+    	}
+
+	//ingame button
+		itemDef 
+		{
+			name loadgame
+			text "@MENU_SAVELOADGAME"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY	
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 385 255 180 25 
+			textalign 0
+			textscale .5		
+			textalignx 0
+			textaligny 18
+			forecolor .9 .9 .9 .9
+			visible 1 
+			textfont UI_FONT_NORMAL
+			cvarTest "cl_paused"
+			showCVar { "1" }
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{
+				play "mouse_click";
+				open save_load_menu; 
+				close main;
+//				play "sound/misc/zap.wav";
+			}
+    	}
+
+		itemDef 
+		{
+			name options
+			text "@MENU_OPTIONS"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY	
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 385 295 85 25 
+			textalign 0
+			textscale .5		
+			textalignx 0
+			textaligny 18
+			forecolor .9 .9 .9 .9
+			visible 1
+			textfont UI_FONT_NORMAL 
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{
+				play "mouse_click"; 
+				open options_menu;
+				open options_look;
+				close main; 
+//				open control_menu;
+			} 
+		}
+		itemDef 
+		{
+			name quit
+			text "@MENU_QUIT"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY	
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 385 335 50 25 
+			textalign 0
+			textscale .5		
+			textalignx 0
+			textaligny 18
+			textfont UI_FONT_NORMAL
+			forecolor .9 .9 .9 .9
+			visible 1 
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{
+				play "mouse_click";
+				open quit_popmenu;
+			}
+		}	
+
+
+//	OPTIONS		// 
+/*
+		itemDef 
+		{
+			name savegame
+			text "SAVE GAME"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY	
+			textstyle ITEM_TEXTSTYLE_SHADOWEDMORE
+			rect 80 230 70 14 
+			textalign 0
+			textscale .25		
+			textalignx 0
+			textaligny 14
+			textfont UI_FONT_NORMAL
+			forecolor .9 .9 .9 .9
+			visible 1 
+
+			cvarTest "cl_paused"
+			showCVar { "1" }
+
+			mouseEnter 
+			{
+				fadein message_accept
+			}
+			action 
+			{
+				close main;
+				play "sound/misc/zap.wav";
+				open save_menu;
+			}
+		}
+*/
+
+/*
+		itemDef 
+		{
+			name options_ingame
+			text "OPTIONS"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY	
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 385 305 100 15 
+			textalign 0
+			textscale .4		
+			textalignx 0
+			textaligny 14
+			forecolor .9 .9 .9 1
+			visible 1
+			textfont UI_FONT_NORMAL 
+			
+			cvarTest "cl_paused"
+			showCVar { "1" }
+
+			mouseEnter 
+			{
+				fadein message_accept 
+			}
+			action 
+			{
+				play "sound/misc/zap.wav"; 
+				close main; 
+				open setup_menu;
+				open control_menu;
+			} 
+		}
+*/
+
+
+   
+/*
+		itemDef 
+		{
+			name credits
+			text "CREDITS"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY	
+			textstyle ITEM_TEXTSTYLE_SHADOWEDMORE
+			rect 80 230 58 14 
+			textalign 0
+			textscale .25		
+			textalignx 0
+			textaligny 14
+			textfont UI_FONT_NORMAL
+			forecolor .9 .9 .9 .9
+			visible 1 
+
+			cvarTest "cl_paused"
+			showCVar { "0" }
+
+			mouseEnter { fadein message_accept }
+			//action {	close main; open credit} 
+	   	}
+
+*/
+//	QUIT	//
+
+
+/*
+		itemDef 
+		{
+			name savegame
+			text "SAVE GAME"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY	
+			textstyle ITEM_TEXTSTYLE_SHADOWEDMORE
+			rect 180 290 70 14 
+			textalign 0
+			textscale .25		
+			textalignx 0
+			textaligny 14
+			textfont UI_FONT_NORMAL
+			forecolor .9 .9 .9 .9
+			visible 0 
+
+			mouseEnter 
+			{
+				fadein message_accept
+			}
+			action 
+			{
+				close main;
+				play "sound/misc/zap.wav";
+				open save_menu;
+			}
+		}
+*/
+/*		itemDef 
+		{
+			name savegame
+			text "SAVE GAME-orig"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY	
+			textstyle ITEM_TEXTSTYLE_SHADOWEDMORE
+			rect 80 330 70 14 
+			textalign 0
+			textscale .25		
+			textalignx 0
+			textaligny 14
+			textfont UI_FONT_NORMAL
+			forecolor .9 .9 .9 .9
+			visible 1 
+			mouseEnter 
+			{
+				fadein message_accept
+			}
+			action 
+			{
+				close main;
+				play "sound/misc/zap.wav";
+				open save_menu_orig;
+			}
+		}
+*/
+		// Temp name display
+/*		
+		itemDef 
+		{
+			name project_name
+			text "Call of Duty - Infinity Ward"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			textstyle ITEM_TEXTSTYLE_NORMAL
+//			textscale .15
+			textscale .2
+			rect 475 465 150 9
+			textalign 0	
+			textaligny 10
+			textalignx 0 
+			forecolor .7 .7 .7 .9      
+			visible 1 
+			//decoration 
+			mouseEnter	{ fadein message_accept }
+			action		{ close main; open credit}
+		}
+*/
+		//
+		// Back button for when in-game
+		//
+/*
+		itemDef 
+		{
+			name auwindow
+			rect 250 377 146 45
+			style WINDOW_STYLE_FILLED
+			border 1
+			bordercolor .5 .5 .5 .5
+			forecolor 1 1 1 1
+			backcolor 0 0 0 0
+			visible 1
+			decoration
+
+			cvarTest "cl_paused"
+			showCVar { "1" }
+		}
+
+		itemDef 
+		{
+			name auwindow2
+			rect 252 379 142 41	
+			style WINDOW_STYLE_FILLED
+			border 1
+			bordercolor .1 .1 .1 .2
+			forecolor 1 1 1 1
+			backcolor .3 0.2 0.5 .55
+			visible 1
+			decoration
+
+			cvarTest "cl_paused"
+			showCVar { "1" }
+		}
+*/
+
+
+				
+
+		//
+		// Box for fading in menus
+		//
+		itemDef 	
+		{
+	      	name fadebox
+	      	style WINDOW_STYLE_FILLED
+	 		background "ui/assets/fadebox.tga"
+			forecolor 0 0 0 1
+			backcolor 0 0 0 1
+			rect 0 0 640 480
+	      	visible 0 
+			decoration
+    		}
+
+	}
+
+	menuDef 
+	{
+		name "game_inprogress"
+	    	visible 0
+    		fullscreen 0
+	    	//rect 217 200 210 85
+		rect 204 160 235 120
+		focusColor 1 .75 0 1
+    		style 1
+    		border 1
+		popup
+		onESC { open main; close game_inprogress; }
+		itemDef 
+		{
+			name newgame_window
+			group newgame_grpControlbutton
+			rect 0 2 235 120
+			style WINDOW_STYLE_FILLED
+			border 1
+			bordercolor .5 .5 .5 .5
+			forecolor 1 1 1 1
+			backcolor 0 0 0 .7
+			visible 1
+			decoration
+		}
+		itemDef 
+		{
+			name newgame_backimage2fade
+			style WINDOW_STYLE_SHADER
+			rect -206 -162 642 482
+	 		background "ui/assets/fadebox.tga"
+			forecolor 0 0 0 0.5
+			backcolor 0 0 0 0.5
+			visible 1
+			decoration
+		}
+		itemDef 
+		{
+			name newgame_window2
+			group newgame_grpControlbutton
+			rect 2 3 231 40	
+			style WINDOW_STYLE_FILLED
+			border 1
+			bordercolor .1 .1 .1 .2
+			forecolor 1 1 1 1
+			backcolor 1 1 .3 .3
+			visible 1
+			decoration
+		}
+		itemDef 
+		{
+			name newgame_title
+			group newgame_grpControlbutton
+			text "@MENU_ALL_CURRENT_PROGRESS_WILL_BE_LOST" 
+			style 0
+			textscale .25 
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 45 7 150 15
+			textalign 1
+			textalignx 75
+			textaligny 13
+			decoration
+			forecolor 1 1 1 1
+			visible 1
+		}	
+		itemDef 
+		{
+			name newgame_title
+			group newgame_grpControlbutton
+			text "@MENU_ARE_YOU_SURE" 
+			style 0
+			textscale .25 
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 45 22 100 15
+			textalign 1
+			textalignx 75
+			textaligny 13
+			decoration
+			forecolor 1 1 1 1
+			visible 1
+		}
+		itemDef 
+		{
+			name inprogress_yes
+			text "@MENU_YES"
+			type 1
+			textscale .4
+			style WINDOW_STYLE_FILLED
+			textfont UI_FONT_NORMAL
+//			background "ui/assets/button_back.tga"
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 42 75 50 16
+			textalign 1
+			textalignx 27
+			textaligny 13
+			forecolor 1 1 1 .9
+//			backcolor 0 0 0 .5 
+			visible 1
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action { 
+				play "mouse_click";
+				open newgame_popmenu_training;
+				close game_inprogress; 
+
+			}
+
+	
+		}
+		itemDef 
+		{
+			name inprogress_no
+			text "@MENU_NO"
+			type 1
+			textscale .4
+			style WINDOW_STYLE_FILLED
+			textfont UI_FONT_NORMAL
+//			background "ui/assets/button_back.tga"
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 142 75 50 16
+			textalign 1
+			textalignx 27
+			textaligny 13
+			forecolor 1 1 1 .9
+//			backcolor 0 0 0 .5 
+			visible 1
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action { 
+				play "mouse_click";
+				close game_inprogress; 
+				open main;
+			}
+	
+		}
+}
+	menuDef 
+	{
+		name "newgame_popmenu"
+	    	visible 0
+    		fullscreen 0
+	    	//rect 217 200 210 85
+		rect 162 140 315 170
+		focusColor 1 .75 0 1
+    		style 1
+    		border 1
+		popup
+		onESC 
+		{ 
+			open main; 
+			close newgame_popmenu; 
+		}
+		onOpen
+		{ 	show newgame_title;
+			show newgame_easy;
+			show newgame_normal;
+			show newgame_hard;
+			show newgame_fu;
+			hide newgame_title_train;
+			hide start_train_yes;
+			hide start_train_no ;
+			hide newgame_veteran_top;
+			hide newgame_hard_top;
+		}
+		itemDef 
+		{
+			name newgame_window
+			group newgame_grpControlbutton
+			rect 0 2 315 170
+			style WINDOW_STYLE_FILLED
+			border 1
+			bordercolor .5 .5 .5 .5
+			forecolor 1 1 1 1
+			backcolor 0 0 0 .8
+			visible 1
+			decoration
+		}
+		itemDef 
+		{
+			name newgame_backimage2fade
+			style WINDOW_STYLE_SHADER
+			rect -163 -141 642 482
+	 		background "ui/assets/fadebox.tga"
+			forecolor 0 0 0 0.6
+			backcolor 0 0 0 0.6
+			visible 1
+			decoration
+		}
+	
+		itemDef 
+		{
+			name newgame_window2
+			group newgame_grpControlbutton
+			rect 2 3 312 20	
+			style WINDOW_STYLE_FILLED
+			border 1
+			bordercolor .1 .1 .1 .2
+			forecolor 1 1 1 1
+			backcolor 1 1 .3 .3
+			visible 1
+			decoration
+		}
+		itemDef 
+		{
+			name newgame_title
+			group newgame_grpControlbutton
+			text "@MENU_CHOOSESKILLLEVEL" 
+			style 0
+			textscale .25 
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 45 7 155 15
+			textalign 2
+			textalignx 180
+			textaligny 13
+			decoration
+			forecolor 1 1 1 1
+			visible 1
+		}
+		itemDef 
+		{
+			name newgame_title_train
+			group newgame_grpControlbutton
+			text "@MENU_STARTTRAINING" 
+			style 0
+			textscale .3 
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 110 50 150 15
+			textalign 1
+			textalignx 30
+			textaligny 13
+			decoration
+			forecolor 1 1 1 1
+			visible 0
+		}
+		itemDef 
+		{
+			name newgame_hard_top
+			text "@MENU_HARDENED"
+			type 1
+			textscale .3
+			style WINDOW_STYLE_FILLED
+			textfont UI_FONT_NORMAL
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 30 30 225 15
+			textalign 1
+			textalignx 110
+			textaligny 13
+			forecolor 1 1 1 .9
+			visible 0
+			decoration
+		}
+		itemDef 
+		{
+			name newgame_veteran_top
+			text "@MENU_VETERAN"
+			type 1
+			textscale .3
+			style WINDOW_STYLE_FILLED
+			textfont UI_FONT_NORMAL
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 25 30 225 15
+			textalign 1
+			textalignx 110
+			textaligny 13
+			forecolor 1 1 1 .9
+			visible 0
+			decoration
+		}
+//ask for training ------------
+		itemDef 
+		{
+			name newgame_easy
+			text "@MENU_GREENHORN"
+			type 1
+			textscale .3
+			style WINDOW_STYLE_FILLED
+			textfont UI_FONT_NORMAL
+//			background "ui/assets/button_back.tga"
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 15 40 220 15
+			textalign 0
+			textalignx 17
+			textaligny 13
+			forecolor 1 1 1 .9
+//			backcolor 0 0 0 .5 
+			visible 1
+			cvartest "ui_finishedtraining"
+			hideCvar { "yes" }
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{ 
+				play "mouse_click";
+				exec "difficultyeasy";
+				close newgame_popmenu; 
+				close main 
+//				exec "spmap pathfinder"
+				setcvar ui_requiredtraining "yes"
+				exec "spmap training"
+			}
+	
+		}
+//training was completed independantly in the current session
+		itemDef 
+		{
+			name newgame_easy
+			text "@MENU_GREENHORN"
+			type 1
+			textscale .3
+			style WINDOW_STYLE_FILLED
+			textfont UI_FONT_NORMAL
+//			background "ui/assets/button_back.tga"
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 15 40 220 15
+			textalign 0
+			textalignx 17
+			textaligny 13
+			forecolor 1 1 1 .9
+//			backcolor 0 0 0 .5 
+			visible 1
+			cvartest "ui_finishedtraining"
+			showCvar { "yes" }
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{ 
+				play "mouse_click";
+				exec "difficultyeasy";
+				close newgame_popmenu; 
+				close main 
+//				exec "spmap pathfinder"
+				setcvar ui_requiredtraining "yes"
+				exec "spmap pathfinder"
+			}
+	
+		}
+		itemDef 
+		{
+			name newgame_normal
+			text "@MENU_REGULAR"
+			type 1
+			textscale .3
+			style WINDOW_STYLE_FILLED
+			textfont UI_FONT_NORMAL
+//			background "ui/assets/button_back.tga"
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 15 65 210 15
+			textalign 0
+			textalignx 17
+			textaligny 13
+			forecolor 1 1 1 .9
+//			backcolor 0 0 0 .5 
+			visible 1
+			cvartest "ui_finishedtraining"
+			hideCvar { "yes" }
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action
+			{ 
+				play "mouse_click";
+				exec "difficultymedium";
+				close newgame_popmenu; 
+				close main 
+//				exec "spmap pathfinder"
+				setcvar ui_requiredtraining "yes"
+				exec "spmap training"
+			}
+		
+		}
+		itemDef 
+		{
+			name newgame_normal
+			text "@MENU_REGULAR"
+			type 1
+			textscale .3
+			style WINDOW_STYLE_FILLED
+			textfont UI_FONT_NORMAL
+//			background "ui/assets/button_back.tga"
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 15 65 210 15
+			textalign 0
+			textalignx 17
+			textaligny 13
+			forecolor 1 1 1 .9
+//			backcolor 0 0 0 .5 
+			visible 1
+			cvartest "ui_finishedtraining"
+			showCvar { "yes" }
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action
+			{ 
+				play "mouse_click";
+				exec "difficultymedium";
+				close newgame_popmenu; 
+				close main 
+//				exec "spmap pathfinder"
+				setcvar ui_requiredtraining "yes"
+				exec "spmap pathfinder"
+			}
+		
+		}
+		itemDef 
+		{
+			name newgame_hard
+			text "@MENU_HARDENED"
+			type 1
+			textscale .3
+			style WINDOW_STYLE_FILLED
+			textfont UI_FONT_NORMAL
+//			background "ui/assets/button_back.tga"
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 15 90 250 15
+			textalign 0
+			textalignx 17
+			textaligny 13
+			forecolor 1 1 1 .9
+//			backcolor 0 0 0 .5 
+			visible 1
+			cvartest "ui_finishedtraining"
+			hideCvar { "yes" }
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{ 
+				play "mouse_click";
+				exec "difficultyhard";
+//				close newgame_popmenu; 
+//				close main;
+//				exec "spmap pathfinder";
+//				hide newgame_title;
+				hide newgame_easy;
+				hide newgame_normal;
+				hide newgame_hard;
+				hide newgame_fu;
+				show newgame_title_train;
+				show start_train_yes;
+				show start_train_no;
+				show newgame_hard_top;
+			}
+		}
+		itemDef 
+		{
+			name newgame_hard
+			text "@MENU_HARDENED"
+			type 1
+			textscale .3
+			style WINDOW_STYLE_FILLED
+			textfont UI_FONT_NORMAL
+//			background "ui/assets/button_back.tga"
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 15 90 250 15
+			textalign 0
+			textalignx 17
+			textaligny 13
+			forecolor 1 1 1 .9
+//			backcolor 0 0 0 .5 
+			visible 1
+			cvartest "ui_finishedtraining"
+			showCvar { "yes" }
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{ 
+				play "mouse_click";
+				exec "difficultyhard";
+//				close newgame_popmenu; 
+//				close main;
+//				exec "spmap pathfinder";
+				close newgame_popmenu; 
+				close main;
+				exec "spmap pathfinder";
+//				hide newgame_easy;
+//				hide newgame_normal;
+//				hide newgame_hard;
+//				hide newgame_fu;
+//				show newgame_title_train;
+//				show start_train_yes;
+//				show start_train_no;
+//				show newgame_hard_top;
+			}
+		}
+		itemDef 
+		{
+			name newgame_fu
+			text "@MENU_VETERAN"
+			type 1
+			textscale .3
+			style WINDOW_STYLE_FILLED
+			textfont UI_FONT_NORMAL
+//			background "ui/assets/button_back.tga"
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 15 115 240 15
+			textalign 0
+			textalignx 17
+			textaligny 13
+			forecolor 1 1 1 .9
+//			backcolor 0 0 0 .5 
+			visible 1
+			cvartest "ui_finishedtraining"
+			hideCvar { "yes" }
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{ 
+				play "mouse_click";
+				exec "difficultyfu";
+//				close newgame_popmenu; 
+//				close main;
+//				exec "spmap pathfinder";
+//				hide newgame_title;
+				hide newgame_easy;
+				hide newgame_normal;
+				hide newgame_hard;
+				hide newgame_fu;
+				show newgame_title_train;
+				show start_train_yes;
+				show start_train_no;
+				show newgame_veteran_top;
+			}
+		
+		}
+		itemDef 
+		{
+			name newgame_fu
+			text "@MENU_VETERAN"
+			type 1
+			textscale .3
+			style WINDOW_STYLE_FILLED
+			textfont UI_FONT_NORMAL
+//			background "ui/assets/button_back.tga"
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 15 115 240 15
+			textalign 0
+			textalignx 17
+			textaligny 13
+			forecolor 1 1 1 .9
+//			backcolor 0 0 0 .5 
+			visible 1
+			cvartest "ui_finishedtraining"
+			showCvar { "yes" }
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{ 
+				play "mouse_click";
+				exec "difficultyfu";
+//				close newgame_popmenu; 
+//				close main;
+//				exec "spmap pathfinder";
+				close newgame_popmenu; 
+				close main;
+				exec "spmap pathfinder";
+//				hide newgame_easy;
+//				hide newgame_normal;
+//				hide newgame_hard;
+//				hide newgame_fu;
+//				show newgame_title_train;
+//				show start_train_yes;
+//				show start_train_no;
+//				show newgame_veteran_top;
+			}
+		
+		}
+		itemDef 
+		{
+			name start_train_yes
+			text "@MENU_YES"
+			type 1
+			textscale .3
+			style WINDOW_STYLE_FILLED
+			textfont UI_FONT_NORMAL
+//			background "ui/assets/button_back.tga"
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 85 90 30 15
+			textalign 0
+			textalignx 5
+			textaligny 13
+			forecolor 1 1 1 .9
+//			backcolor 0 0 0 .5 
+			visible 0
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{
+				play "mouse_click";
+				setcvar ui_requiredtraining "yes";
+				close newgame_popmenu; 
+				close main;
+				exec "spmap training";
+			}
+		
+		}
+		
+		itemDef 
+		{
+			name start_train_no
+			text "@MENU_NO"
+			type 1
+			textscale .3
+			style WINDOW_STYLE_FILLED
+			textfont UI_FONT_NORMAL
+//			background "ui/assets/button_back.tga"
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 165 90 30 15
+			textalign 0
+			textalignx 5
+			textaligny 13
+			forecolor 1 1 1 .9
+//			backcolor 0 0 0 .5 
+			visible 0
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{ 
+				play "mouse_click";
+				setcvar ui_requiredtraining "no";
+				close newgame_popmenu; 
+				close main;
+				exec "spmap pathfinder";
+			}
+		
+		}
+		itemDef 
+		{
+			name back
+			text "@MENU_BACK"
+			type 1
+			textscale .3
+			style WINDOW_STYLE_FILLED
+			textfont UI_FONT_NORMAL
+//			background "ui/assets/button_back.tga"
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 5 150 42 13
+			textalign 1
+			textalignx 20
+			textaligny 12
+			forecolor 1 1 1 .9
+//			backcolor 0 0 0 .5 
+			visible 1
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{ 
+				play "mouse_click";
+				open main;
+				close newgame_popmenu;
+			}
+		}
+	}
+	
+	menuDef 
+	{
+		name "newgame_popmenu_training"
+	    	visible 0
+    		fullscreen 0
+	    	//rect 217 200 210 85
+		rect 204 160 235 160
+		focusColor 1 .75 0 1
+    		style 1
+    		border 1
+		popup
+		onESC { open main; close newgame_popmenu_training; }
+		itemDef 
+		{
+			name newgame_window
+			group newgame_grpControlbutton
+			rect 0 2 235 160
+			style WINDOW_STYLE_FILLED
+			border 1
+			bordercolor .5 .5 .5 .5
+			forecolor 1 1 1 1
+			backcolor 0 0 0 .7
+			visible 1
+			decoration
+		}
+		itemDef 
+		{
+			name newgame_backimage2fade
+			style WINDOW_STYLE_SHADER
+			rect -206 -162 642 482
+	 		background "ui/assets/fadebox.tga"
+			forecolor 0 0 0 0.5
+			backcolor 0 0 0 0.5
+			visible 1
+			decoration
+		}
+	
+		itemDef 
+		{
+			name newgame_window2
+			group newgame_grpControlbutton
+			rect 2 3 231 20	
+			style WINDOW_STYLE_FILLED
+			border 1
+			bordercolor .1 .1 .1 .2
+			forecolor 1 1 1 1
+			backcolor 1 1 .3 .3
+			visible 1
+			decoration
+		}
+
+		itemDef 
+		{
+			name newgame_title
+			group newgame_grpControlbutton
+			text "@MENU_CHOOSESKILLLEVEL" 
+			style 0
+			textscale .25 
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 45 7 150 15
+			textalign 2
+			textalignx 135
+			textaligny 13
+			decoration
+			forecolor 1 1 1 1
+			visible 1
+		}
+
+
+		itemDef 
+		{
+			name newgame_easy
+			text "@MENU_GREENHORN"
+			type 1
+			textscale .3
+			style WINDOW_STYLE_FILLED
+			textfont UI_FONT_NORMAL
+//			background "ui/assets/button_back.tga"
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 92 40 50 15
+			textalign 1
+			textalignx 27
+			textaligny 13
+			forecolor 1 1 1 .9
+//			backcolor 0 0 0 .5 
+			visible 1
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action { 
+				play "mouse_click";
+				close newgame_popmenu_training; 
+				close victoryscreen;
+				close deadscreen;
+				close main 
+				exec "difficultyeasy";
+				exec "spmap burnville"
+			}
+	
+		}
+		itemDef 
+		{
+			name newgame_normal
+			text "@MENU_REGULAR"
+			type 1
+			textscale .3
+			style WINDOW_STYLE_FILLED
+			textfont UI_FONT_NORMAL
+//			background "ui/assets/button_back.tga"
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 92 65 50 15
+			textalign 1
+			textalignx 27
+			textaligny 13
+			forecolor 1 1 1 .9
+//			backcolor 0 0 0 .5 
+			visible 1
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action { 
+				play "mouse_click";
+				close newgame_popmenu_training; 
+				close victoryscreen;
+				close deadscreen;
+				close main 
+				exec "difficultymedium";
+				exec "spmap burnville"
+			}
+		
+		}
+		itemDef 
+		{
+			name newgame_hard
+			text "@MENU_HARDENED"
+			type 1
+			textscale .3
+			style WINDOW_STYLE_FILLED
+			textfont UI_FONT_NORMAL
+//			background "ui/assets/button_back.tga"
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 92 90 50 15
+			textalign 1
+			textalignx 27
+			textaligny 13
+			forecolor 1 1 1 .9
+//			backcolor 0 0 0 .5 
+			visible 1
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action { 
+				play "mouse_click";
+				close newgame_popmenu_training; 
+				close victoryscreen;
+				close deadscreen;
+				close main;
+				exec "difficultyhard";
+				exec "spmap burnville";
+			}
+		}
+		itemDef 
+		{
+			name newgame_fu
+			text "@MENU_VETERAN"
+			type 1
+			textscale .3
+			style WINDOW_STYLE_FILLED
+			textfont UI_FONT_NORMAL
+//			background "ui/assets/button_back.tga"
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 92 115 70 15
+			textalign 1
+			textalignx 27
+			textaligny 13
+			forecolor 1 1 1 .9
+//			backcolor 0 0 0 .5 
+			visible 1
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action { 
+				play "mouse_click";
+				close newgame_popmenu_training; 
+				close victoryscreen;
+				close deadscreen;
+				close main;
+				exec "difficultyfu";
+				exec "spmap burnville";
+			}
+		
+		}
+		itemDef 
+		{
+			name back
+			text "@MENU_BACK"
+			type 1
+			textscale .3
+			style WINDOW_STYLE_FILLED
+			textfont UI_FONT_NORMAL
+//			background "ui/assets/button_back.tga"
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 5 140 42 13
+			textalign 1
+			textalignx 20
+			textaligny 12
+			forecolor 1 1 1 .9
+//			backcolor 0 0 0 .5 
+			visible 1
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action { 
+				play "mouse_click";
+				open main;
+				close newgame_popmenu_training;
+			}
+	}
+	}
+menuDef 
+	{
+		name "training_popmenu"
+	    	visible 0
+    		fullscreen 0
+	    	//rect 217 200 210 85
+		rect 204 160 235 135
+		focusColor 1 .75 0 1
+    		style 1
+    		border 1
+		popup
+		onESC { close training_popmenu ; open main }
+
+		itemDef 
+		{
+			name window
+			group grpControlbutton
+			rect 0 2 235 135
+			style WINDOW_STYLE_FILLED
+			border 1
+			bordercolor .5 .5 .5 .5
+			forecolor 1 1 1 1
+			backcolor 0 0 0 .5
+			visible 1
+			decoration
+		}
+		itemDef 
+		{
+			name backimage2fade
+			style WINDOW_STYLE_SHADER
+			rect -206 -162 642 482
+	 		background "ui/assets/fadebox.tga"
+			forecolor 0 0 0 0.4
+			backcolor 0 0 0 0.4
+			visible 1
+			decoration
+		}
+	
+		itemDef 
+		{
+			name window2
+			group grpControlbutton
+			rect 2 3 231 20	
+			style WINDOW_STYLE_FILLED
+			border 1
+			bordercolor .1 .1 .1 .2
+			forecolor 1 1 1 1
+			backcolor 1 1 .3 .3
+			visible 1
+			decoration
+		}
+
+	// QUIT	//
+
+		itemDef 
+		{
+			name confirm
+			text "@MENU_STARTTRAINING" 
+			style 0
+			textscale .25 
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 126 20 110 20
+			textalign 1
+			textalignx -7
+			textaligny 0
+			decoration
+			forecolor 1 1 1 1
+			visible 1
+		}
+//newgame_popmenu_training
+/*
+		itemDef 
+		{
+			name yes
+			text "YES"
+			type 1
+			textscale .4
+			style WINDOW_STYLE_FILLED
+			textfont UI_FONT_NORMAL
+//			background "ui/assets/button_back.tga"
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 52 60 50 30
+			textalign 1
+			textalignx 27
+			textaligny 22
+			forecolor 1 1 1 .9
+//			backcolor 0 0 0 .5 
+			visible 1
+			border 0
+			bordercolor .5 .5 .5 .5
+			cvarTest "cl_paused"
+			showCVar { "0" }
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action { 
+				play "mouse_click"; 
+				open newgame_popmenu_training;
+//				close main ;
+				close training_popmenu ; 
+//				open newgame_popmenu_training;
+//				open quitCredit  
+//				exec "spmap training";
+			}
+//			mouseEnter { setitemcolor yes backcolor 0 0 0 .75 } 
+//			mouseExit { setitemcolor yes backcolor 0 0 0 .5 } 	
+		}
+*/
+		itemDef 
+		{
+			name yes
+			text "@MENU_YES"
+			type 1
+			textscale .4
+			style WINDOW_STYLE_FILLED
+			textfont UI_FONT_NORMAL
+//			background "ui/assets/button_back.tga"
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 52 60 50 30
+			textalign 1
+			textalignx 27
+			textaligny 22
+			forecolor 1 1 1 .9
+//			backcolor 0 0 0 .5 
+			visible 1
+			border 0
+			bordercolor .5 .5 .5 .5
+//			cvarTest "cl_paused"
+//			showCVar { "1" }
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action { 
+				play "mouse_click"; 
+				close main ;
+				close training_popmenu ; 
+//				open quitCredit  
+				exec "spmap training";
+			}
+//			mouseEnter { setitemcolor yes backcolor 0 0 0 .75 } 
+//			mouseExit { setitemcolor yes backcolor 0 0 0 .5 } 	
+		}
+		itemDef 
+		{
+			name no
+			text "@MENU_NO"
+			type 1
+			textscale .4
+			style WINDOW_STYLE_FILLED
+			textfont UI_FONT_NORMAL
+//			background "ui/assets/button_back.tga"
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 149 60 50 30
+			textalign 1
+			textalignx 27
+			textaligny 22
+			forecolor 1 1 1 .9
+//			backcolor 0 0 0 .5 
+			visible 1
+			border 0
+			bordercolor .5 .5 .5 .5
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action { 
+				play "mouse_click"; 
+				close training_popmenu ; 
+				open main 
+			}
+//			mouseEnter { setitemcolor no backcolor 0 0 0 .75 } 
+//			mouseExit { setitemcolor no backcolor 0 0 0 .5 } 		
+		}	
+
+
+
+	}
+	menuDef 
+	{
+		name "resume_popmenu"
+	    	visible 0
+    		fullscreen 0
+	    	//rect 217 200 210 85
+		rect 204 160 235 135
+		focusColor 1 .75 0 1
+    		style 1
+    		border 1
+		popup
+		onESC { close resume_popmenu ; open main }
+
+		itemDef 
+		{
+			name window
+			group grpControlbutton
+			rect 0 2 235 135
+			style WINDOW_STYLE_FILLED
+			border 1
+			bordercolor .5 .5 .5 .5
+			forecolor 1 1 1 1
+			backcolor 0 0 0 .5
+			visible 1
+			decoration
+		}
+		itemDef 
+		{
+			name backimage2fade
+			style WINDOW_STYLE_SHADER
+			rect -206 -162 642 482
+	 		background "ui/assets/fadebox.tga"
+			forecolor 0 0 0 0.4
+			backcolor 0 0 0 0.4
+			visible 1
+			decoration
+		}
+	
+		itemDef 
+		{
+			name window2
+			group grpControlbutton
+			rect 2 3 231 20	
+			style WINDOW_STYLE_FILLED
+			border 1
+			bordercolor .1 .1 .1 .2
+			forecolor 1 1 1 1
+			backcolor 1 1 .3 .3
+			visible 1
+			decoration
+		}
+
+	// QUIT	//
+
+		itemDef 
+		{
+			name confirm
+			text "@MENU_RESUMEGAME" 
+			style 0
+			textscale .25 
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 126 20 110 20
+			textalign 1
+			textalignx -7
+			textaligny 0
+			decoration
+			forecolor 1 1 1 1
+			visible 1
+		}
+
+		itemDef 
+		{
+			name yes
+			text "@MENU_YES"
+			type 1
+			textscale .4
+			style WINDOW_STYLE_FILLED
+			textfont UI_FONT_NORMAL
+//			background "ui/assets/button_back.tga"
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 52 60 50 30
+			textalign 1
+			textalignx 27
+			textaligny 22
+			forecolor 1 1 1 .9
+//			backcolor 0 0 0 .5 
+			visible 1
+			border 0
+			bordercolor .5 .5 .5 .5
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action { 
+				play "mouse_click";
+				close main ;
+				close resume_popmenu ; 
+//				open quitCredit  
+				exec "loadgame_continue";
+			}
+//			mouseEnter { setitemcolor yes backcolor 0 0 0 .75 } 
+//			mouseExit { setitemcolor yes backcolor 0 0 0 .5 } 	
+		}
+		itemDef 
+		{
+			name no
+			text "@MENU_NO"
+			type 1
+			textscale .4
+			style WINDOW_STYLE_FILLED
+			textfont UI_FONT_NORMAL
+//			background "ui/assets/button_back.tga"
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 149 60 50 30
+			textalign 1
+			textalignx 27
+			textaligny 22
+			forecolor 1 1 1 .9
+//			backcolor 0 0 0 .5 
+			visible 1
+			border 0
+			bordercolor .5 .5 .5 .5
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action { 
+				play "mouse_click"; 
+				close resume_popmenu ; 
+				open main 
+			}
+//			mouseEnter { setitemcolor no backcolor 0 0 0 .75 } 
+//			mouseExit { setitemcolor no backcolor 0 0 0 .5 } 		
+		}	
+
+
+
+	}
+	menuDef 
+	{
+		name "multi_popmenu"
+    		visible 0
+    		fullscreen 0
+		//rect 217 200 210 85
+		rect 204 160 235 135
+		focusColor 1 .75 0 1
+		style 1
+		border 1
+		popup
+		onESC { close multi_popmenu ; open main }
+	
+		itemDef 
+		{
+			name window
+			group grpControlbutton
+			rect 0 2 235 135
+			style WINDOW_STYLE_FILLED
+			border 1
+			bordercolor .5 .5 .5 .5
+			forecolor 1 1 1 1
+			backcolor 0 0 0 .5
+			visible 1
+			decoration
+		}
+		itemDef 
+		{
+			name backimage2fade
+			style WINDOW_STYLE_SHADER
+			rect -206 -162 642 482
+	 		background "ui/assets/fadebox.tga"
+			forecolor 0 0 0 0.4
+			backcolor 0 0 0 0.4
+			visible 1
+			decoration
+		}
+		itemDef 
+		{
+			name window2
+			group grpControlbutton
+			rect 2 4 231 20	
+			style WINDOW_STYLE_FILLED
+			border 1
+			bordercolor .1 .1 .1 .2
+			forecolor 1 1 1 1
+			backcolor 1 1 .3 .3
+			visible 1
+			decoration
+		}
+
+	// QUIT	//
+
+		itemDef 
+		{
+			name confirm
+			text "@MENU_SWITCHTOMULTIPLAYER" 
+			style 0
+			textscale .25 
+			textstyle 3
+			rect 116 20 110 20
+			textalign 1
+			textalignx 0
+			textaligny 0
+			decoration
+			forecolor 1 1 1 1
+			visible 1
+		}
+
+		itemDef 
+		{
+			name yes
+			text "@MENU_YES"
+			type 1
+			textscale .4
+//			style WINDOW_STYLE_FILLED
+//			background "ui/assets/button_back.tga"
+			rect 52 60 36 16
+			textalign 1
+			textalignx 18
+			textaligny 16
+			forecolor 1 1 1 1
+			backcolor .37 .1 .1 1 
+			visible 1
+			action { 
+				play "mouse_click"; 
+				close main ;
+				close multi_popmenu ; 
+				uiScript startMultiplayer;
+				}
+			mouseEnter { setitemcolor yes backcolor .1 .37 .1 1 
+			play "mouse_over"} 
+			mouseExit { setitemcolor yes backcolor .37 .1 .1 1 } 	
+		}
+	
+		itemDef 
+		{
+			name no
+			text "@MENU_NO"
+			type 1
+			textscale .4
+//			style WINDOW_STYLE_FILLED
+//			background "ui/assets/button_back.tga"
+			rect 149 60 26 16
+			textalign 1
+			textalignx 13
+			textaligny 16
+			forecolor 1 1 1 1
+			backcolor .37 .1 .1 1 
+			visible 1
+			action { 
+				play "mouse_click";
+				close multi_popmenu ; 
+				open main;
+			}
+			mouseEnter { setitemcolor no backcolor .1 .37 .1 1 
+			play "mouse_over"} 
+			mouseExit { setitemcolor no backcolor .37 .1 .1 1 } 		
+		}
+	}
+	menuDef 
+	{
+		name "demo_end"
+//		background "menuback_cw"		// Spinning Circle Background
+		fullScreen MENU_TRUE				
+		rect 0 0 640 480				// Size and position of the menu
+		visible MENU_TRUE				// Visible on open
+		focusColor .9 .85 1 .8			// Menu focus color for text and items
+		soundloop ""
+		onopen
+		{
+			close main;
+			hide butn_hintb;
+			hide butn_hintc;
+		}
+		onesc
+		{
+			close demo_end;
+			open demo_endb;
+		}
+		
+		itemDef 
+		{
+			name butn_hinta
+			style WINDOW_STYLE_SHADER
+			rect 0 0 640 480
+			background "ui/assets/cod_end_a.jpg"
+			visible 1
+			decoration
+		}
+	
+		itemDef 
+		{
+			name butn_hinta
+			type ITEM_TYPE_BUTTON
+			rect 0 0 640 480
+			style 0
+			border 0
+			visible 1
+			forecolor 0 0 0 0
+			backcolor 0 0 0 0
+			action { close demo_end; open demo_endb; }
+		}
+
+	}
+	menuDef 
+	{
+		name "demo_endb"
+//		background "menuback_cw"		// Spinning Circle Background
+		fullScreen MENU_TRUE				
+		rect 0 0 640 480				// Size and position of the menu
+		visible MENU_TRUE				// Visible on open
+		focusColor .9 .85 1 .8			// Menu focus color for text and items
+		soundloop ""
+		onesc
+		{
+			close demo_endb;
+			open demo_endc;
+		}
+		
+
+		itemDef 
+		{
+			name butn_hintb
+			style WINDOW_STYLE_SHADER
+			rect 0 0 640 480
+			background "ui/assets/cod_end_b.jpg"
+			visible 1
+			decoration
+		}
+		itemDef 
+		{
+			name butn_hintb
+			type ITEM_TYPE_BUTTON
+			rect 0 0 640 480
+			style 0
+			border 0
+			visible 1
+			forecolor 0 0 0 0
+			backcolor 0 0 0 0
+			action { close demo_endb; open demo_endc; }
+		}
+	}
+menuDef 
+	{
+		name "demo_endc"
+//		background "menuback_cw"		// Spinning Circle Background
+		fullScreen MENU_TRUE				
+		rect 0 0 640 480				// Size and position of the menu
+		visible MENU_TRUE				// Visible on open
+		focusColor .9 .85 1 .8			// Menu focus color for text and items
+		soundloop ""
+		onesc
+		{
+			uiScript "quit";
+		}
+		
+
+		itemDef 
+		{
+			name butn_hintc
+			style WINDOW_STYLE_SHADER
+			rect 0 0 640 480
+			background "ui/assets/cod_end_c.jpg"
+			visible 1
+			decoration
+		}
+		itemDef 
+		{
+			name butn_hintc
+			type ITEM_TYPE_BUTTON
+			rect 0 0 640 480
+			style 0
+			border 0
+			visible 1
+			forecolor 0 0 0 0
+			backcolor 0 0 0 0
+			action { uiScript "quit"; }
+		}
+	}
+}

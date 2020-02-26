@@ -1,0 +1,10 @@
+{
+	nopicmip
+	nomipmaps
+	{
+		map clamp $texturename
+		blendFunc blend
+		alphaGen vertex
+		rgbGen vertex
+	}
+}

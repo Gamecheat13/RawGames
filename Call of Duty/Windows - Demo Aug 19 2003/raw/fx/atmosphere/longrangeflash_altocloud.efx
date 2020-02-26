@@ -1,0 +1,147 @@
+Particle
+{
+	name				cloud
+
+	spawnFlags			cheapOrgCalc
+
+	life				500
+
+	origin				0 0 100
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.5
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			900 920
+		end				990 900
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/cloudflash_highalt1
+	]
+}
+
+Particle
+{
+	name				flare
+
+	count				3 1
+
+	life				200
+
+	origin				-55 150 0 -40 -140 -65
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.2
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			0 34
+		end				190 124
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/flash1
+	]
+}
+
+Particle
+{
+	count				2 1
+
+	life				100
+
+	delay				70 0
+
+	origin				0 360 0 0 -150 0
+
+	rgb
+	{
+		flags			random linear
+	}
+
+	alpha
+	{
+		start			0.9
+		end				0.1
+		flags			linear
+	}
+
+	size
+	{
+		start			30
+		end				600
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/flash1
+	]
+}
+
+Particle
+{
+	spawnFlags			cheapOrgCalc
+
+	count				2 1
+
+	life				500 800
+
+	origin				0 0 1090
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.3 0.4
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			2000
+		end				2000
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/cloudflash_highalt1a
+	]
+}
+
+Sound
+{
+	sounds
+	[
+		cloudflash
+	]
+}

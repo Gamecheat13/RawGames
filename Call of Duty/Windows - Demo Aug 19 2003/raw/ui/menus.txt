@@ -1,0 +1,33 @@
+// single player menu defs
+// 
+{	
+	loadMenu { "ui/main.menu" }
+
+//	loadMenu { "ui/cdkey.menu" }
+
+	loadMenu { "ui/options.menu" }
+	loadMenu { "ui/options_look.menu" }
+	loadMenu { "ui/options_move.menu" }
+	loadMenu { "ui/options_shoot.menu" }
+	loadMenu { "ui/options_misc.menu" }
+	loadMenu { "ui/options_graphics.menu" }
+	loadMenu { "ui/options_sound.menu" }
+	loadMenu { "ui/options_performance.menu" }
+	loadMenu { "ui/options_driverinfo.menu" }
+	loadMenu { "ui/options_credits.menu" }
+	loadMenu { "ui/options_control_defaults.menu" }
+	loadMenu { "ui/options_graphics_defaults.menu" }
+
+
+	loadMenu { "ui/connect.menu" }
+	loadMenu { "ui/quit.menu" }
+	loadMenu { "ui/vid_restart.menu" }
+	loadMenu { "ui/language_restart.menu" }
+	loadMenu { "ui/snd_restart.menu" }
+	loadMenu { "ui/rec_restart.menu" }
+	loadMenu { "ui/error.menu" }
+
+	loadMenu { "ui/save_load.menu" }
+
+	loadMenu { "ui/briefing.menu" }
+}

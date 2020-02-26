@@ -1,0 +1,37 @@
+Particle
+{
+	flags				useAlpha
+
+	count				1 2
+
+	life				500 300
+
+	rotation			32 -64
+
+	rotationDelta		4 -8
+
+	velocity			123 128 0 123 -128 0
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.8 0.7
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				100
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/impact/dustlayer1
+	]
+}

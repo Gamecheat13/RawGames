@@ -1,0 +1,185 @@
+Particle
+{
+	name				spray1
+
+	flags				useAlpha
+
+	spawnFlags			orgOnCylinder axisFromSphere
+
+	count				8 6
+
+	life				200
+
+	radius				20 1
+
+	height				133 14
+
+	rotation			123 -264
+
+	velocity			420 0 0 -420 0 0
+
+	gravity				-200
+
+	rgb
+	{
+		start			0.502 0.502 0.502
+		end				0.6275 0.6275 0.6431
+		flags			random linear
+	}
+
+	alpha
+	{
+		start			0.7 1
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				60 36
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/whitesmoke
+	]
+}
+
+Particle
+{
+	name				solid
+
+	flags				useAlpha
+
+	spawnFlags			orgOnCylinder axisFromSphere
+
+	count				2 3
+
+	life				300
+
+	origin				33 0 0 0 0 0
+
+	radius				13 1
+
+	height				13 1
+
+	rotation			123 -264
+
+	rotationDelta		22 -44
+
+	velocity			-90 0 0 -220 0 0
+
+	rgb
+	{
+		start			0.502 0.502 0.502
+		end				0.6275 0.6275 0.6431
+		flags			random linear
+	}
+
+	alpha
+	{
+		start			0.7 0.8
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			12
+		end				46 57
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/whitesmoke
+	]
+}
+
+Particle
+{
+	name				Copy of dust
+
+	flags				useAlpha
+
+	spawnFlags			orgOnCylinder axisFromSphere
+
+	count				3
+
+	life				500
+
+	rotation			-256 128
+
+	rotationDelta		1 -2
+
+	velocity			2 0 0 33 0 0
+
+	rgb
+	{
+		start			0.7529 0.7529 0.7529
+		end				0.6275 0.6275 0.6431
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.7 0.6
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				6 16
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/whitesmoke
+	]
+}
+
+Particle
+{
+	name				Copy of dust
+
+	flags				useAlpha
+
+	spawnFlags			orgOnCylinder axisFromSphere
+
+	count				6 4
+
+	life				200 300
+
+	rotation			-256 128
+
+	rotationDelta		1 -2
+
+	velocity			23 0 0 59 0 0
+
+	rgb
+	{
+		end				0.7529 0.7529 0.7529 0.6275 0.6275 0.6431
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.7
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				17 26
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/whitesmoke
+	]
+}

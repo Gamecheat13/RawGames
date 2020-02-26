@@ -1,0 +1,137 @@
+Particle
+{
+	count				2
+
+	life				100
+
+	cullrange			1200
+
+	origin				3 3 3 -3 -3 -3
+
+	rotation			-360 360
+
+	rotationDelta		4 -4
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		end				1 0
+		flags			linear
+	}
+
+	size
+	{
+		end				30 22
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/impact/metal_spark1
+	]
+}
+
+Tail
+{
+	spawnFlags			orgOnCylinder axisFromSphere
+
+	count				2 4
+
+	life				200 100
+
+	cullrange			600
+
+	velocity			1023 0 0 1823 0 0
+
+	gravity				-300 -900
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		flags			linear
+	}
+
+	size
+	{
+		end				4 5
+		flags			linear
+	}
+
+	length
+	{
+		start			23 45
+		end				84 85
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/impact/sparktrail
+	]
+}
+
+Particle
+{
+	flags				useAlpha
+
+	count				1 2
+
+	life				300 100
+
+	cullrange			200
+
+	rotation			0 360
+
+	rotationDelta		12 -22
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.7 0.5
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			10
+		end				60 32
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/impact/dustlayer1
+	]
+}
+
+Decal
+{
+	life				8000
+
+	cullrange			1500
+
+	rotation			360 -360
+
+	size
+	{
+		start			3 4
+	}
+
+	shaders
+	[
+		gfx/impact/bullethole2
+	]
+}

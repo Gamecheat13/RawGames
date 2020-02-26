@@ -1,0 +1,140 @@
+Particle
+{
+	name				stonegib
+
+	flags				usePhysics impactKills useAlpha
+
+	spawnFlags			axisFromSphere
+
+	count				2 4
+
+	life				1500 1200
+
+	cullrange			100
+
+	radius				3 6
+
+	rotation			360 -360
+
+	rotationDelta		21 43
+
+	velocity			333 233 233 333 -233 -233
+
+	gravity				-800
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0.3 0.2
+		flags			linear
+	}
+
+	size
+	{
+		end				0.1
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/stonegib1
+		gfx/impact/stone_piece1
+	]
+}
+
+Particle
+{
+	name				puff
+
+	flags				useAlpha
+
+	spawnFlags			orgOnCylinder axisFromSphere
+
+	count				4
+
+	life				300 400
+
+	cullrange			1300
+
+	origin				0 0 0 23 0 0
+
+	rotation			432 -123
+
+	rotationDelta		3 0
+
+	velocity			23 0 0
+
+	rgb
+	{
+		end				0.8392 0.8118 0.6627
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.6 0.9
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			1 3
+		end				22 12
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/impact/dustlayer1
+	]
+}
+
+Emitter
+{
+	flags				emitFx
+
+	life				100
+
+	cullrange			1000
+
+	velocity			222 122 122 322 -122 -122
+
+	density				4
+
+	size
+	{
+		flags			linear
+	}
+
+	emitfx
+	[
+		fx/smoke/gravelimpact_em2
+	]
+}
+
+Decal
+{
+	life				7000
+
+	rotation			360 -360
+
+	rgb
+	{
+		start			0.6824 0.6431 0.5569
+	}
+
+	size
+	{
+		start			2 4
+	}
+
+	shaders
+	[
+		gfx/impact/bullethit_snow
+	]
+}

@@ -1,0 +1,15 @@
+{ 
+	{
+		map $textureName
+		rgbgen constLighting ( 0.40 0.316 0.124 )
+		blendFunc add
+	}
+	{
+		map $whiteImage
+		rgbgen constLighting ( 0.8 0.632 0.252 )
+		alphaGen wave sin -0.1 1.1 0 .5
+		blendFunc GL_SRC_ALPHA GL_ONE
+	}
+}
+
+

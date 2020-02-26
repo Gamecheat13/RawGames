@@ -1,0 +1,79 @@
+// Note to translators:
+// If a sentence is the same in your language then please change it to "#same"
+//
+// eg:
+// LANG_ENGLISH  "HALT"
+// LANG_GERMAN   "#same"
+//
+// (This is so we can tell which strings have been signed-off as ok to be the same words for QA
+//  and because we do not store duplicate strings, which will then get exported again next time
+//  as being untranslated.)
+//
+VERSION             "1"
+CONFIG              "C:\Projects\mk\bin\StringEd\StringEd.cfg"
+FILENOTES           ""
+
+REFERENCE           MATCHSTARTING
+LANG_ENGLISH        "Match starting"
+
+REFERENCE           MATCHRESUMING
+LANG_ENGLISH        "Match resuming"
+
+REFERENCE           ROUNDDRAW
+LANG_ENGLISH        "Round draw"
+
+REFERENCE           ALLIEDMISSIONACCOMPLISHED
+LANG_ENGLISH        "Allied mission accomplished"
+
+REFERENCE           AXISMISSIONACCOMPLISHED
+LANG_ENGLISH        "Axis mission accomplished"
+
+REFERENCE           ALLIESHAVEBEENELIMINATED
+LANG_ENGLISH        "Allies have been eliminated"
+
+REFERENCE           AXISHAVEBEENELIMINATED
+LANG_ENGLISH        "Axis have been eliminated"
+
+REFERENCE           TIMEHASEXPIRED
+LANG_ENGLISH        "Time has expired"
+
+REFERENCE           EXPLOSIVESPLANTED
+LANG_ENGLISH        "Explosives planted"
+
+REFERENCE           EXPLOSIVESDEFUSED
+LANG_ENGLISH        "Explosives defused"
+
+REFERENCE           SEARCH_AND_DESTROY
+LANG_ENGLISH        "Search and Destroy"
+
+REFERENCE           OBJ_ATTACKERS
+LANG_ENGLISH        "Destroy target A or B by planting explosives at either location."
+
+REFERENCE           OBJ_DEFENDERS
+LANG_ENGLISH        "Protect target A and B from being destroyed. If explosives are planted at either location, defuse them before they explode."
+
+REFERENCE           OBJ_SPECTATOR_ALLIESATTACKING
+LANG_ENGLISH        "Allies: Destroy target A or B by planting explosives at either location.\n\nAxis: Protect target A and B from being destroyed. If explosives are planted at either location, defuse them before they explode."
+
+REFERENCE           OBJ_SPECTATOR_AXISATTACKING
+LANG_ENGLISH        "Allies: Protect target A and B from being destroyed. If explosives are planted at either location, defuse them before they explode.\n\nAxis: Destroy target A or B by planting explosives at either location."
+
+REFERENCE           OBJ_TIE
+LANG_ENGLISH        "The match is a tie!"
+
+REFERENCE           OBJ_ALLIES_WIN
+LANG_ENGLISH        "Allies Win!"
+
+REFERENCE           OBJ_AXIS_WIN
+LANG_ENGLISH        "Axis Win!"
+
+REFERENCE           CONNECTED
+LANG_ENGLISH        "%s Connected"
+
+REFERENCE           DISCONNECTED
+LANG_ENGLISH        "%s Disconnected"
+
+
+ENDMARKER
+
+

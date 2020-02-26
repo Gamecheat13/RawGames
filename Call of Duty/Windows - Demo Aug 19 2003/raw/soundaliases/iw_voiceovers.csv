@@ -1,0 +1,1220 @@
+"# If the text in the first column of a row starts with a # character, the row is ignored",,
+,,"If the first column for a row is blank, then the row is ignored"
+# The first non-comment line of a sound alias file specifies the key name for all values appearing in this column.,,
+"# This means it is safe to swap entire columns around, though you should never swap partial columns.",,
+"# You can invent new keys, but the game will ignore them if it doesn't know about them.",,
+"# You can leave out keys, but the ""name"" and ""file"" keys must always be present.",,
+
+,name,name of the alias that is used to play this sound (required)
+,sequence,"used to uniquely identify alias entries when more than one sound goes to an alias, used only to catch unwanted duplicates (default = 0)"
+,file,the name of the file that contains the sound data (required)
+,vol_min,"0 is silent, 1 is full volume (default = 1)"
+,vol_max,"0 is silent, 1 is full volume (default = same as vol_min)"
+,pitch_min,"1 is normal playback, 2 is twice as fast, 0.5 is half as fast (default = 1)"
+,pitch_max,"1 is normal playback, 2 is twice as fast, 0.5 is half as fast (default = same as pitch_min)"
+,dist_min,"within this distance in inches, the sound is always full volume (default = 120)"
+,dist_max,"outside this distance in inches, the sound is not started.  If left blank or set to 0, the sound will play from any distance.  This does not affect sound volume falloff."
+,channel,"auto, menu, weapon, voice, item, body, local, music, announcer (default = auto)",,,,,,,,,,,,,
+,type,streamed / loaded (default = loaded),,,,,,,,,,,,,
+,probability,weight to use for the weighted probability of playing this sound instead of another sound (default = 1),,,,,,,,,,,,,
+,loop,"whether this sound is ""looping"" or ""nonlooping"" (default = ""nonlooping"")",,,,,,,,,,,,,
+,masterslave,"if ""master"", this is a master sound.  If a number, then this sound won't exceed this volume whenever any master sound is playing.  If blank, then neither master nor slave.",,,,,,,,,,,,,
+,loadspec,"space-separated list of which maps should use this alias; eg, ""burnville dawnville"".  If blank, the alias is used on all maps.",,,,,,,,,,,,,
+
+name,sequence,file,vol_min,vol_max,pitch_min,pitch_max,dist_min,dist_max,channel,type,probability,loop,masterslave,loadspec,subtitle
+
+#Stalingrad,,,,,,,,,,,,,,,
+
+#Artillery Spotter,,,,,,,,,,,,,,,
+artilleryspotter_line66,,voiceovers/stalingrad/ArtillerySpotter_Line_66.wav,1.14,1.14,,,80,2500,voice,streamed,,,master,stalingrad stalingrad_nolight,
+artilleryspotter_line68,,voiceovers/stalingrad/ArtillerySpotter_Line_68.wav,1.14,1.14,,,80,2500,voice,streamed,,,master,stalingrad stalingrad_nolight,
+artilleryspotter_line69,,voiceovers/stalingrad/ArtillerySpotter_Line_69.wav,1.14,1.14,,,80,2500,voice,streamed,,,master,stalingrad stalingrad_nolight,
+artilleryspotter_line70,,voiceovers/stalingrad/ArtillerySpotter_Line_70.wav,1.14,1.14,,,80,2500,voice,streamed,,,master,stalingrad stalingrad_nolight,
+artilleryspotter_line71,,voiceovers/stalingrad/ArtillerySpotter_Line_71.wav,1.14,1.14,,,80,2500,voice,streamed,,,master,stalingrad stalingrad_nolight
+,,,1.14,1.14,,,80,2500,voice,,,,,
+#Boatmaster,,,1.14,1.14,,,80,2500,voice,,,,,
+boatmaster01,,voiceovers/stalingrad/boatmaster01.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+boatmaster02,,voiceovers/stalingrad/boatmaster02.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+boatmaster02a,,voiceovers/stalingrad/boatmaster02a.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+boatmaster02b,,voiceovers/stalingrad/boatmaster02b.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+boatmaster,,voiceovers/stalingrad/Boatmaster.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+,,,1.14,1.14,,,80,2500,voice,,,,,
+#Building Commissar,,,1.14,1.14,,,80,2500,voice,,,,,
+BuildingCommissar,,voiceovers/stalingrad/BuildingCommissar.wav,1.14,1.14,,,80,2500,voice,streamed,,,master,stalingrad stalingrad_nolight
+,,,1.14,1.14,,,80,2500,voice,,,,,
+#Captain,,,1.14,1.14,,,80,2500,voice,,,,,
+captain_line57,,voiceovers/stalingrad/Captain_Line_57.wav,1.14,1.14,,,80,2500,voice,streamed,,,master,stalingrad stalingrad_nolight
+captain_line58,,voiceovers/stalingrad/Captain_Line_58.wav,1.14,1.14,,,80,2500,voice,streamed,,,master,stalingrad stalingrad_nolight
+captain_line59,,voiceovers/stalingrad/Captain_Line_59.wav,1.14,1.14,,,80,2500,voice,streamed,,,master,stalingrad stalingrad_nolight
+,,,1.14,1.14,,,80,2500,voice,,,,,
+#Commissar1,,,1.14,1.14,,,80,2500,voice,,,,,
+commissar1_line5,,voiceovers/stalingrad/Commissar1_Line5.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar1_line8,,voiceovers/stalingrad/Commissar1_Line8.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar1_line26,,voiceovers/stalingrad/Commissar1_Line_26.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar1_line29,,voiceovers/stalingrad/Commissar1_Line_29.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar1_line31,,voiceovers/stalingrad/Commissar1_Line_31.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar1_line34,,voiceovers/stalingrad/Commissar1_Line_34.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar1_line37,,voiceovers/stalingrad/Commissar1_Line_37.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar1_line40,,voiceovers/stalingrad/Commissar1_Line_40.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar1_line45,,voiceovers/stalingrad/Commissar1_Line_45.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar1_pain,1,voiceovers/stalingrad/Commissar1_Line_46a.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar1_pain,2,voiceovers/stalingrad/Commissar1_Line_46b.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar1_death,1,voiceovers/stalingrad/Commissar1_Line_46c.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar1_death,2,voiceovers/stalingrad/Commissar1_Line_46d.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar1_charge,,voiceovers/stalingrad/Commissar1_Line_73.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+,,,1.14,1.14,,,80,2500,voice,streamed,,,,
+#Commissar2,,,1.14,1.14,,,80,2500,voice,streamed,,,,
+commissar2_line47,,voiceovers/stalingrad/Commissar2_Line_47.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar2_line51,,voiceovers/stalingrad/Commissar2_Line_51.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar2_line52,,voiceovers/stalingrad/Commissar2_Line_52.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar2_line54,,voiceovers/stalingrad/Commissar2_Line_54.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar2_pain,1,voiceovers/stalingrad/Commissar2_Line_48a.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar2_pain,2,voiceovers/stalingrad/Commissar2_Line_48b.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar2_death,1,voiceovers/stalingrad/Commissar2_Line_48c.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar2_death,2,voiceovers/stalingrad/Commissar2_Line_48d.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+,,,1.14,1.14,,,80,2500,voice,streamed,,,,
+#Commissar3,,,1.14,1.14,,,80,2500,voice,streamed,,,,
+commissar3_line7,,voiceovers/stalingrad/Commissar3_Line_7.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar3_line10,,voiceovers/stalingrad/Commissar3_Line_10.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar3_line28,,voiceovers/stalingrad/Commissar3_Line_28.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar3_line33,,voiceovers/stalingrad/Commissar3_Line_33.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar3_line49,,voiceovers/stalingrad/Commissar3_Line_49.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar3_charge1,,voiceovers/stalingrad/Commissar3_Line_76.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar3_charge2,,voiceovers/stalingrad/Commissar3_Line_77.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+,,,1.14,1.14,,,80,2500,voice,streamed,,,,
+#Commissar4,,,1.14,1.14,,,80,2500,voice,streamed,,,,
+commissar4_line6,,voiceovers/stalingrad/Commissar4_Line_6.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar4_line9,,voiceovers/stalingrad/Commissar4_Line_9.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar4_line27,,voiceovers/stalingrad/Commissar4_Line_27.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar4_line32,,voiceovers/stalingrad/Commissar4_Line_32.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar4_line35,,voiceovers/stalingrad/Commissar4_Line_35.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar4_line41,,voiceovers/stalingrad/Commissar4_Line_41.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar4_line45,,voiceovers/stalingrad/Commissar4_Line_45.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar4_line49,,voiceovers/stalingrad/Commissar4_Line_49.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar4_line50,,voiceovers/stalingrad/Commissar4_Line_50.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar4_line51,,voiceovers/stalingrad/Commissar4_Line_51.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar4_line54,,voiceovers/stalingrad/Commissar4_Line_54.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar4_charge1,,voiceovers/stalingrad/Commissar4_Line_73.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+commissar4_charge2,,voiceovers/stalingrad/Commissar4_Line_74.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+,,,1.14,1.14,,,80,2500,voice,,,,,
+#Conscript1,,,1.14,1.14,,,80,2500,voice,,,,,
+conscript1_line1,,voiceovers/stalingrad/Conscript1_Line_1.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+conscript1_line3,,voiceovers/stalingrad/Conscript1_Line_3.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+conscript1_line11a,,voiceovers/stalingrad/Conscript1_Line_11a.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+conscript1_line11b,,voiceovers/stalingrad/Conscript1_Line_11b.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+conscript1_line11d,,voiceovers/stalingrad/Conscript1_Line_11d.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+conscript1_line11e,,voiceovers/stalingrad/Conscript1_Line_11e.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+conscript1_line11f,,voiceovers/stalingrad/Conscript1_Line_11f.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+conscript1_line20,,voiceovers/stalingrad/Conscript1_Line_20.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+conscript1_pain,1,voiceovers/stalingrad/Conscript1_Line_21a.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+conscript1_pain,2,voiceovers/stalingrad/Conscript1_Line_21b.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+conscript1_death,1,voiceovers/stalingrad/Conscript1_Line_21c.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+conscript1_death,2,voiceovers/stalingrad/Conscript1_Line_21d.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+conscript1_wounded,1,voiceovers/stalingrad/Conscript1_Line_21e.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+conscript1_wounded,2,voiceovers/stalingrad/Conscript1_Line_21f.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+conscript1_wounded,3,voiceovers/stalingrad/Conscript1_Line_21g.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+,,,1.14,1.14,,,80,2500,voice,,,,,
+#Conscript2,,,1.14,1.14,,,80,2500,voice,,,,,
+conscript2_line2,,voiceovers/stalingrad/Conscript2_Line_2.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+conscript2_line4,,voiceovers/stalingrad/Conscript2_Line_4.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+conscript2_line22,,voiceovers/stalingrad/Conscript2_Line_22.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+conscript2_pain,1,voiceovers/stalingrad/Conscript2_Line_23a.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+conscript2_pain,2,voiceovers/stalingrad/Conscript2_Line_23b.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+conscript2_death,1,voiceovers/stalingrad/Conscript2_Line_23c.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+conscript2_death,2,voiceovers/stalingrad/Conscript2_Line_23d.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+conscript2_wounded,1,voiceovers/stalingrad/Conscript2_Line_23e.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+conscript2_wounded,2,voiceovers/stalingrad/Conscript2_Line_23f.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+conscript2_wounded,3,voiceovers/stalingrad/Conscript2_Line_23g.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+,,,1.14,1.14,,,80,2500,voice,,,,,
+#Conscript3,,,1.14,1.14,,,80,2500,voice,,,,,
+conscript3_line11L,,voiceovers/stalingrad/Conscript3_Line_11L.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+conscript3_line11M,,voiceovers/stalingrad/Conscript3_Line_11M.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+conscript3_line11N,,voiceovers/stalingrad/Conscript3_Line_11N.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+conscript3_line11O,,voiceovers/stalingrad/Conscript3_Line_11O.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+conscript3_line11P,,voiceovers/stalingrad/Conscript3_Line_11P.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+conscript3_line24,,voiceovers/stalingrad/Conscript3_Line_24.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+conscript3_wounded,1,voiceovers/stalingrad/Conscript3_Line_25a.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+conscript3_wounded,2,voiceovers/stalingrad/Conscript3_Line_25b.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+conscript3_panic,1,voiceovers/stalingrad/Conscript3_Panic01.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+conscript3_panic,2,voiceovers/stalingrad/Conscript3_Panic02.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+,,,1.14,1.14,,,80,2500,voice,,,,,
+#Dock Commissar,,,1.14,1.14,,,80,2500,voice,,,,,
+dock_commissar_line30,,voiceovers/stalingrad/Dock_Commissar30.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+dock_commissar_line36,,voiceovers/stalingrad/Dock_Commissar36.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+dock_commissar_line38,,voiceovers/stalingrad/Dock_Commissar38.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+dock_commissar_line39,,voiceovers/stalingrad/Dock_Commissar39.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+,,,1.14,1.14,,,80,2500,voice,,,,,
+#Lead Conscript,,,1.14,1.14,,,80,2500,voice,,,,,
+lead_conscript_line11a,,voiceovers/stalingrad/LeadConscript_Line_11a.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+lead_conscript_line11b,,voiceovers/stalingrad/LeadConscript_Line_11b.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+lead_conscript_line55,,voiceovers/stalingrad/LeadConscript_Line_55.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+lead_conscript_line56,,voiceovers/stalingrad/LeadConscript_Line_56.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+lead_conscript_line72,,voiceovers/stalingrad/LeadConscript_Line_72.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+lead_conscript_wounded,1,voiceovers/stalingrad/LeadConscript_Line_56a.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+lead_conscript_wounded,2,voiceovers/stalingrad/LeadConscript_Line_56b.wav,1.14,1.14,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+,,,1.14,1.14,,,80,2500,voice,,,,,
+#Megaphone Commissar,,,1.14,1.14,,,80,2500,voice,,,,,
+megaphonecommissar_line42,,voiceovers/stalingrad/MegaphoneCommissar_Line_42.wav,1.14,1.14,,,80,2500,voice,streamed,,,master,stalingrad stalingrad_nolight
+megaphonecommissar_line43,,voiceovers/stalingrad/MegaphoneCommissar_Line_43.wav,1.14,1.14,,,80,2500,voice,streamed,,,master,stalingrad stalingrad_nolight
+megaphonecommissar_line44,,voiceovers/stalingrad/MegaphoneCommissar_Line_44.wav,1.14,1.14,,,80,2500,voice,streamed,,,master,stalingrad stalingrad_nolight
+,,,1.14,1.14,,,80,2500,voice,,,,master,
+#Shellshock Commissar,,,1.14,1.14,,,80,2500,voice,,,,,
+shellshock_commissar,,voiceovers/stalingrad/Shellshock_Commissar.wav,1.14,1.14,,,80,2500,voice,,,,,stalingrad stalingrad_nolight
+,,,1.14,1.14,,,80,2500,voice,,,,,
+#Sniper,,,1.14,1.14,,,80,2500,voice,,,,,
+sniper_line60,,voiceovers/stalingrad/Sniper_Line_60.wav,1.14,1.14,,,80,2500,voice,streamed,,,master,stalingrad stalingrad_nolight
+sniper_line61,,voiceovers/stalingrad/Sniper_Line_61.wav,1.14,1.14,,,80,2500,voice,streamed,,,master,stalingrad stalingrad_nolight
+sniper_line62,,voiceovers/stalingrad/Sniper_Line_62.wav,1.14,1.14,,,80,2500,voice,streamed,,,master,stalingrad stalingrad_nolight
+sniper_line63,,voiceovers/stalingrad/Sniper_Line_63.wav,1.14,1.14,,,80,2500,voice,streamed,,,master,stalingrad stalingrad_nolight
+sniper_line64,,voiceovers/stalingrad/Sniper_Line_64.wav,1.14,1.14,,,80,2500,voice,streamed,,,master,stalingrad stalingrad_nolight
+sniper_line67,,voiceovers/stalingrad/Sniper_Line_67.wav,1.14,1.14,,,80,2500,voice,streamed,,,master,stalingrad stalingrad_nolight
+,,,,,,,80,2500,voice,,,,,
+#German 1 (Stalingrad),,,0.85,0.85,,,80,2500,voice,,,,,
+german1_the_enemy,,voiceovers/stalingrad/german1_line_83.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_stop_them,,voiceovers/stalingrad/german1_line_84.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_russians,,voiceovers/stalingrad/german1_line_85.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_communist_swine,,voiceovers/stalingrad/german1_line_86.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_they_here,,voiceovers/stalingrad/german1_line_87.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_fire_in_hole,,voiceovers/stalingrad/german1_line_88.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_grenade,,voiceovers/stalingrad/german1_line_89.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_take_cover,,voiceovers/stalingrad/german1_line_90.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_move_in,,voiceovers/stalingrad/german1_line_91.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_flank_them,,voiceovers/stalingrad/german1_line_92.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_soviets,,voiceovers/stalingrad/german1_line_93.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_die_bastard,,voiceovers/stalingrad/german1_line_94.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_crush_fools,,voiceovers/stalingrad/german1_line_95.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_retreat,,voiceovers/stalingrad/german1_line_96.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_find_cover,,voiceovers/stalingrad/german1_line_97.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_cover_me,,voiceovers/stalingrad/german1_line_98.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_suppress_fire,,voiceovers/stalingrad/german1_line_99.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_pinned_down,,voiceovers/stalingrad/german1_line_100.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_coming_left,,voiceovers/stalingrad/german1_line_101.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_coming_right,,voiceovers/stalingrad/german1_line_102.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_smell_cheese,,voiceovers/stalingrad/german1_line_103.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_slaughter_cattle,,voiceovers/stalingrad/german1_line_104.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_fall_back,,voiceovers/stalingrad/german1_line_105.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_cover_fire,,voiceovers/stalingrad/german1_line_106.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_flank_left,,voiceovers/stalingrad/german1_line_107.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_flank_right,,voiceovers/stalingrad/german1_line_108.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_open_fire,,voiceovers/stalingrad/german1_line_109.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_fire_at_will,,voiceovers/stalingrad/german1_line_110.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_fire_command,,voiceovers/stalingrad/german1_line_111.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_now,,voiceovers/stalingrad/german1_line_112.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_go,,voiceovers/stalingrad/german1_line_113.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_move,,voiceovers/stalingrad/german1_line_114.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_fire,,voiceovers/stalingrad/german1_line_115.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_granate,,voiceovers/stalingrad/german1_line_116.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_pain,1,voiceovers/stalingrad/german1_line_117.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_pain,2,voiceovers/stalingrad/german1_line_118.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_die,1,voiceovers/stalingrad/german1_line_119.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german1_die,2,voiceovers/stalingrad/german1_line_120.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+,,,0.85,0.85,,,80,2500,voice,streamed,,,,
+#German 2 (Stalingrad),,,0.85,0.85,,,80,2500,voice,streamed,,,,
+german2_the_enemy,,voiceovers/stalingrad/german2_line_83.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_stop_them,,voiceovers/stalingrad/german2_line_84.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_russians,,voiceovers/stalingrad/german2_line_85.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_communist_swine,,voiceovers/stalingrad/german2_line_86.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_they_here,,voiceovers/stalingrad/german2_line_87.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_fire_in_hole,,voiceovers/stalingrad/german2_line_88.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_grenade,,voiceovers/stalingrad/german2_line_89.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_take_cover,,voiceovers/stalingrad/german2_line_90.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_move_in,,voiceovers/stalingrad/german2_line_91.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_flank_them,,voiceovers/stalingrad/german2_line_92.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_soviets,,voiceovers/stalingrad/german2_line_93.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_die_bastard,,voiceovers/stalingrad/german2_line_94.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_crush_fools,,voiceovers/stalingrad/german2_line_95.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_retreat,,voiceovers/stalingrad/german2_line_96.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_find_cover,,voiceovers/stalingrad/german2_line_97.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_cover_me,,voiceovers/stalingrad/german2_line_98.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_suppress_fire,,voiceovers/stalingrad/german2_line_99.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_pinned_down,,voiceovers/stalingrad/german2_line_100.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_coming_left,,voiceovers/stalingrad/german2_line_101.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_coming_right,,voiceovers/stalingrad/german2_line_102.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_slaughter_cattle,,voiceovers/stalingrad/german2_line_104.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_fall_back,,voiceovers/stalingrad/german2_line_105.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_cover_fire,,voiceovers/stalingrad/german2_line_106.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_flank_left,,voiceovers/stalingrad/german2_line_107.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_flank_right,,voiceovers/stalingrad/german2_line_108.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_open_fire,,voiceovers/stalingrad/german2_line_109.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_fire_at_will,,voiceovers/stalingrad/german2_line_110.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_fire_command,,voiceovers/stalingrad/german2_line_111.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_now,,voiceovers/stalingrad/german2_line_112.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_go,,voiceovers/stalingrad/german2_line_113.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_move,,voiceovers/stalingrad/german2_line_114.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_fire,,voiceovers/stalingrad/german2_line_115.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_granate,,voiceovers/stalingrad/german2_line_116.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_pain,1,voiceovers/stalingrad/german2_line_117.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_pain,2,voiceovers/stalingrad/german2_line_118.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_die,1,voiceovers/stalingrad/german2_line_119.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+german2_die,2,voiceovers/stalingrad/german2_line_120.wav,0.85,0.85,,,80,2500,voice,streamed,,,,
+,,,0.85,0.85,,,80,2500,voice,,,,,
+#Random Stalingrad Battle VO,,,0.85,0.85,,,80,2500,voice,,,,,stalingrad stalingrad_nolight
+russian_random1,,voiceovers/stalingrad/Russian_amb_01.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+russian_random2,,voiceovers/stalingrad/Russian_amb_02.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+russian_random3,,voiceovers/stalingrad/Russian_amb_03.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+russian_random4,,voiceovers/stalingrad/Russian_amb_04.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+russian_random5,,voiceovers/stalingrad/Russian_amb_05.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+russian_random6,,voiceovers/stalingrad/Russian_amb_06.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+russian_random7,,voiceovers/stalingrad/Russian_amb_07.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+russian_random8,,voiceovers/stalingrad/Russian_amb_08.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+russian_random9,,voiceovers/stalingrad/Russian_amb_09.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+russian_random10,,voiceovers/stalingrad/Russian_amb_10.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+russian_random11,,voiceovers/stalingrad/Russian_amb_11.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+russian_random12,,voiceovers/stalingrad/Russian_amb_12.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+russian_random13,,voiceovers/stalingrad/Russian_amb_13.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+russian_random14,,voiceovers/stalingrad/Russian_amb_14.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+russian_random15,,voiceovers/stalingrad/Russian_amb_15.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+russian_random16,,voiceovers/stalingrad/Russian_amb_16.wav,0.85,0.85,,,80,2500,voice,streamed,,,,stalingrad stalingrad_nolight
+,,,0.85,0.85,,,80,5000,voice,,,,,
+stalingrad_wounded_guys,1,voiceovers/stalingrad/conscript1_line_21e.wav,0.8,0.8,,,80,5000,voice,streamed,,,,
+stalingrad_wounded_guys,2,voiceovers/stalingrad/conscript1_line_21f.wav,0.8,0.8,,,80,5000,voice,streamed,,,,
+stalingrad_wounded_guys,3,voiceovers/stalingrad/conscript1_line_21g.wav,0.8,0.8,,,80,5000,voice,streamed,,,,
+stalingrad_wounded_guys,4,voiceovers/stalingrad/conscript2_line_23e.wav,0.8,0.8,,,80,5000,voice,streamed,,,,
+stalingrad_wounded_guys,5,voiceovers/stalingrad/conscript2_line_23f.wav,0.8,0.8,,,80,5000,voice,streamed,,,,,
+stalingrad_wounded_guys,6,voiceovers/stalingrad/conscript2_line_23g.wav,0.8,0.8,,,80,5000,voice,streamed,,,,,
+stalingrad_wounded_guys,7,voiceovers/stalingrad/conscript2_line_23h.wav,0.8,0.8,,,80,5000,voice,streamed,,,,,
+stalingrad_wounded_guys,8,voiceovers/stalingrad/conscript3_line_25a.wav,0.8,0.8,,,80,5000,voice,streamed,,,,,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+#Burnville,,,0.85,0.85,,,80,5000,voice,,,,,,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+#Foley Dialog,,,0.85,0.85,,,80,5000,voice,,,,,,
+burnville_foley_1a,,voiceovers/us/burnville/Burnville_Foley_024alt2.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_GETREADY
+burnville_foley_1b,,voiceovers/us/burnville/Burnville_Foley_025alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_LETSGO
+burnville_foley_2,,voiceovers/us/burnville/Burnville_Foley_026.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_MG42
+burnville_foley_3,,voiceovers/us/burnville/Burnville_Foley_027.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_SUPPRESS
+burnville_foley_4,,voiceovers/us/burnville/Burnville_Foley_028.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_4
+burnville_foley_5,,voiceovers/us/burnville/Burnville_Foley_029.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_5
+burnville_foley_6,,voiceovers/us/burnville/Burnville_Foley_030.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_6
+burnville_foley_7,,voiceovers/us/burnville/Burnville_Foley_031alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_7
+burnville_foley_8,,voiceovers/us/burnville/Burnville_Foley_032.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville pathfinder,SUBTITLE_BURNVILLE_FOLEY_8
+burnville_foley_9,,voiceovers/us/burnville/Burnville_Foley_033.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_9
+burnville_foley_10,,voiceovers/us/burnville/Burnville_Foley_036.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_12
+burnville_foley_11,,voiceovers/us/burnville/Burnville_Foley_035alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_11
+burnville_foley_12,,voiceovers/us/burnville/Burnville_Foley_038.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_CLEARBUILDING
+burnville_foley_13a,,voiceovers/us/burnville/Burnville_Foley_037.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_13
+burnville_foley_13b,,voiceovers/us/burnville/Burnville_Foley_039alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_MOVINGON
+burnville_foley_13c,,voiceovers/us/burnville/Burnville_Foley_040.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_UPATWINDOW
+burnville_foley_14a,,voiceovers/us/burnville/Burnville_Foley_041.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_14
+burnville_foley_14b,,voiceovers/us/burnville/Burnville_Foley_042.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_HOLDRIGHTHERE
+burnville_foley_15,,voiceovers/us/burnville/Burnville_Foley_044.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_15
+burnville_foley_16,,voiceovers/us/burnville/Burnville_Foley_045.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_16
+burnville_foley_17a,,voiceovers/us/burnville/Burnville_Foley_046.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_17
+burnville_foley_17b,,voiceovers/us/burnville/Burnville_Foley_043.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_LEFTFLANK
+burnville_foley_18,,voiceovers/us/burnville/Burnville_Foley_047alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_18
+burnville_foley_19,,voiceovers/us/burnville/Burnville_Foley_048.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_19
+burnville_foley_20,,voiceovers/us/burnville/Burnville_Foley_049alt.wav,1.25,1.25,,,150,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_20
+burnville_foley_21,,voiceovers/us/burnville/Burnville_Foley_050.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_21
+burnville_foley_22,,voiceovers/us/burnville/Burnville_Foley_051alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_22
+burnville_foley_23a,,voiceovers/us/burnville/Burnville_Foley_052alt2.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_23
+burnville_foley_23b,,voiceovers/us/burnville/Burnville_Foley_053alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_STANDBACK
+burnville_foley_24,,voiceovers/us/burnville/Burnville_Foley_054.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_24
+burnville_foley_25a,,voiceovers/us/burnville/Burnville_Foley_055.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_NUMBERNEXT
+burnville_foley_25b,,voiceovers/us/burnville/Burnville_Foley_056.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_TOTHERIGHT
+burnville_foley_25c,,voiceovers/us/burnville/Burnville_Foley_057alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_25
+burnville_foley_26,,voiceovers/us/burnville/Burnville_Foley_058alt3.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_26
+burnville_foley_27,,voiceovers/us/burnville/Burnville_Foley_059.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_WORKTOWARD
+burnville_foley_28,,voiceovers/us/burnville/Burnville_Foley_060.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_EXPLOSIVESGO
+burnville_foley_29,,voiceovers/us/burnville/Burnville_Foley_061alt.wav,1.15,1,,,120,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_ENDING
+burnville_foley_29a,,voiceovers/us/burnville/Burnville_Foley_061alt_a.wav,1.15,1,,,120,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_29A
+burnville_foley_29b,,voiceovers/us/burnville/Burnville_Foley_061alt_b.wav,1.15,1,,,120,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_29B
+burnville_foley_29c,,voiceovers/us/burnville/Burnville_Foley_061alt_c.wav,1.15,1,,,120,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_FOLEY_29C
+,,,,,,,80,5000,voice,,,,,,
+burnville_end_distantfriendly1,,voiceovers/us/burnville/Burnville_Redshts_B_002alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_END_DISTANTFRIENDLY1
+burnville_end_distantfriendly2,,voiceovers/us/burnville/Burnville_Redshirts_C_004.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_END_DISTANTFRIENDLY2
+burnville_end_distantfriendly3,,voiceovers/us/burnville/Burnville_Redshirts_E_005.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_END_DISTANTFRIENDLY3
+burnville_end_distantfriendly4,,voiceovers/us/burnville/Burnville_Redshirts_K_001.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_END_DISTANTFRIENDLY4
+burnville_end_distantfriendly5,,voiceovers/us/burnville/Burnville_Redshirts_E_006.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,burnville,SUBTITLE_BURNVILLE_END_DISTANTFRIENDLY5
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+#Redshirt dialog,,,0.85,0.85,,,80,5000,voice,,,,,,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+#cheerleader,,,0.85,0.85,,,80,5000,voice,,,,,,
+cheerleader_die,,null.wav,0.85,0.85,,,80,5000,voice,,,,,,
+cheerleader_shot,,null.wav,0.85,0.85,,,80,5000,voice,,,,,,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+#Educated,,,0.85,0.85,,,80,5000,voice,,,,,,
+educated_die,,null.wav,0.85,0.85,,,80,5000,voice,,,,,,
+educated_shot,,null.wav,0.85,0.85,,,80,5000,voice,,,,,,
+,,,0.85,0.85,,,80,5000,voice
+#Fearless,,,0.85,0.85,,,80,5000,voice
+fearless_die,,null.wav,0.85,0.85,,,80,5000,voice
+fearless_shot,,null.wav,0.85,0.85,,,80,5000,voice
+,,,0.85,0.85,,,80,5000,voice
+#Friendly,,,0.85,0.85,,,80,5000,voice
+friendly_die,,null.wav,0.85,0.85,,,80,5000,voice
+friendly_shot,,null.wav,0.85,0.85,,,80,5000,voice
+,,,0.85,0.85,,,80,5000,voice
+#Smartass,,,0.85,0.85,,,80,5000,voice
+smartass_die,,null.wav,0.85,0.85,,,80,5000,voice
+smartass_shot,,null.wav,0.85,0.85,,,80,5000,voice
+,,,0.85,0.85,,,80,5000,voice
+#Trained,,,0.85,0.85,,,80,5000,voice
+trained_die,,null.wav,0.85,0.85,,,80,5000,voice
+trained_shot,,null.wav,0.85,0.85,,,80,5000,voice
+,,,0.85,0.85,,,80,5000,voice,,,,,
+#German,,,0.85,0.85,,,80,5000,voice,,,,,
+german_death,1,german/die01.wav,0.85,0.85,,,80,5000,voice,streamed,,,,
+german_death,2,german/die02.wav,0.85,0.85,,,80,5000,voice,streamed,,,,
+german_death,3,voiceovers/stalingrad/german1_line_120.wav,0.85,0.85,,,80,5000,voice,streamed,,,,
+german_death,4,voiceovers/stalingrad/german1_line_117.wav,0.85,0.85,,,80,5000,voice,streamed,,,,
+german_death,5,voiceovers/stalingrad/german1_line_119.wav,0.85,0.85,,,80,5000,voice,streamed,,,,
+german_enemy_sighted,1,voiceovers/stalingrad/german1_line_103.wav,0.85,0.85,,,80,5000,voice,streamed,,,,
+german_enemy_sighted,2,voiceovers/stalingrad/german1_line_87.wav,0.85,0.85,,,80,5000,voice,streamed,,,,
+german_enemy_sighted,3,voiceovers/stalingrad/german1_line_83.wav,0.85,0.85,,,80,5000,voice,streamed,,,,stalingrad stalingrad_nolight
+german_pain,1,voiceovers/stalingrad/german1_line_118.wav,0.85,0.85,,,80,5000,voice,streamed,,,,
+german_pain,2,german/pain02.wav,0.85,0.85,,,80,5000,voice,streamed,,,,
+german_random_chatter,1,german/FallBack.wav,0.85,0.85,,,80,5000,voice,streamed,,,,
+german_random_chatter,2,german/CoverFire.wav,0.85,0.85,,,80,5000,voice,streamed,,,,
+german_random_chatter,3,german/FireAtWill.wav,0.85,0.85,,,80,5000,voice,streamed,,,,
+german_random_chatter,4,german/CoverMe.wav,0.85,0.85,,,80,5000,voice,streamed,,,,
+german_random_chatter,5,german/FireMyCommand.wav,0.85,0.85,,,80,5000,voice,streamed
+german_random_chatter,6,german/FlankThem.wav,0.85,0.85,,,80,5000,voice,streamed
+german_random_chatter,7,german/CoverFire.wav,0.85,0.85,,,80,5000,voice,streamed
+german_random_chatter,8,german/MoveIn.wav,0.85,0.85,,,80,5000,voice,streamed
+german_random_chatter,9,german/ShortTaunt.wav,0.85,0.85,,,80,5000,voice,streamed
+german_random_chatter,10,german/SupressFire.wav,0.85,0.85,,,80,5000,voice,streamed
+german_random_chatter,11,voiceovers/stalingrad/german1_line_111.wav,0.85,0.85,,,80,5000,voice,streamed
+german_random_chatter,12,voiceovers/stalingrad/german1_line_91.wav,0.85,0.85,,,80,5000,voice,streamed
+german_random_chatter,13,voiceovers/stalingrad/german1_line_92.wav,0.85,0.85,,,80,5000,voice,streamed
+german_random_chatter,14,voiceovers/stalingrad/german1_line_110.wav,0.85,0.85,,,80,5000,voice,streamed
+german_random_chatter,15,voiceovers/stalingrad/german1_line_104.wav,0.85,0.85,,,80,5000,voice,streamed
+german_random_chatter,16,voiceovers/stalingrad/german1_line_83.wav,0.85,0.85,,,80,5000,voice,streamed
+german_random_chatter,17,voiceovers/stalingrad/german1_line_100.wav,0.85,0.85,,,80,5000,voice,streamed
+german_random_chatter,18,voiceovers/stalingrad/german1_line_115.wav,0.85,0.85,,,80,5000,voice,streamed
+german_random_chatter,19,voiceovers/stalingrad/german1_line_106.wav,0.85,0.85,,,80,5000,voice,streamed
+german_random_chatter,20,voiceovers/stalingrad/german1_line_105.wav,0.85,0.85,,,80,5000,voice,streamed
+german_random_chatter,21,voiceovers/stalingrad/german1_line_84.wav,0.85,0.85,,,80,5000,voice,streamed,,,,
+german_random_chatter,22,voiceovers/stalingrad/german1_line_94.wav,0.85,0.85,,,80,5000,voice,streamed,,,,
+german_random_chatter,23,voiceovers/stalingrad/german1_line_109.wav,0.85,0.85,,,80,5000,voice,streamed,,,,
+german_random_chatter,24,voiceovers/stalingrad/german1_line_114.wav,0.85,0.85,,,80,5000,voice,streamed,,,,
+german_random_chatter,25,voiceovers/stalingrad/german1_line_95.wav,0.85,0.85,,,80,5000,voice,streamed,,,,
+german_random_chatter,26,voiceovers/stalingrad/german1_line_99.wav,0.85,0.85,,,80,5000,voice,streamed,,,,
+german_random_chatter,27,voiceovers/stalingrad/german1_line_97.wav,0.85,0.85,,,80,5000,voice,streamed,,,,
+german_random_chatter,28,voiceovers/stalingrad/german1_line_98.wav,0.85,0.85,,,80,5000,voice,streamed,,,,
+german_random_chatter,29,voiceovers/stalingrad/german1_line_96.wav,0.85,0.85,,,80,5000,voice,streamed,,,,
+german_random_chatter,30,voiceovers/stalingrad/german1_line_107.wav,0.85,0.85,,,80,5000,voice,streamed,,,,
+german_random_chatter,31,voiceovers/stalingrad/german1_line_108.wav,0.85,0.85,,,80,5000,voice,streamed,,,,
+german_random_chatter,32,voiceovers/stalingrad/german1_line_112.wav,0.85,0.85,,,80,5000,voice,streamed,,,,stalingrad stalingrad_nolight
+german_random_chatter,33,voiceovers/stalingrad/german1_line_113.wav,0.85,0.85,,,80,5000,voice,streamed,,,,stalingrad stalingrad_nolight
+german_random_chatter,34,null.wav,0.85,0.85,,,80,5000,voice,,34,,,
+german_fire_in_the_hole,1,german/FireInHole.wav,0.85,0.85,,,80,5000,voice,streamed,,,,
+german_fire_in_the_hole,2,voiceovers/stalingrad/german1_line_88.wav,0.85,0.85,,,80,5000,voice,streamed,,,,stalingrad stalingrad_nolight
+german_melee_charge,1,german/pain02.wav,0.85,0.85,,,80,5000,voice,streamed,,,,,
+german_melee_charge,2,voiceovers/stalingrad/german1_line_112.wav,0.85,0.85,,,80,5000,voice,streamed,,,,,
+german_melee_attack,1,german/pain02.wav,0.85,0.85,,,80,5000,voice,streamed,,,,,
+german_melee_attack,2,voiceovers/stalingrad/german1_line_118.wav,0.85,0.85,,,80,5000,voice,streamed,,,,,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+#Chateau,,,0.85,0.85,,,80,5000,voice,,,,,,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+chateau_moody_didntseeme,,voiceovers/us/chateau/Chateau_Moody_081.wav,1,1,,,80,5000,voice,streamed,,,master,chateau,SUBTITLE_CHATEAU_MOODY_DIDNTSEEME
+chateau_moody_inbighouse,,voiceovers/us/chateau/Chateau_Moody_082.wav,1,1,,,80,5000,voice,streamed,,,master,chateau,SUBTITLE_CHATEAU_MOODY_INBIGHOUSE
+,,,1,1,,,80,5000,voice,,,,,,
+chateau_foley_letshope,,voiceovers/us/chateau/Chateau_Foley_092.wav,1,1,,,80,5000,voice,streamed,,,master,chateau,SUBTITLE_CHATEAU_FOLEY_LETSHOPE
+chateau_foley_theplan,,voiceovers/us/chateau/Chateau_Foley_093alt2.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,chateau,SUBTITLE_CHATEAU_FOLEY_THEPLAN
+chateau_foley_catchbreath,,voiceovers/us/chateau/Chateau_Foley_094alt.wav,1,1,,,80,5000,voice,streamed,,,master,chateau,SUBTITLE_CHATEAU_FOLEY_CATCHBREATH
+chateau_foley_entry,,voiceovers/us/chateau/Chateau_Foley_095.wav,1,1,,,80,5000,voice,streamed,,,master,chateau,SUBTITLE_CHATEAU_FOLEY_ENTRY
+chateau_foley_blowdoors,,voiceovers/us/chateau/Chateau_Foley_096.wav,1,1,,,80,5000,voice,streamed,,,master,chateau,SUBTITLE_CHATEAU_FOLEY_BLOWDOORS
+chateau_foley_ingram,,voiceovers/us/chateau/Chateau_Foley_097.wav,1,1,,,80,5000,voice,streamed,,,master,chateau,SUBTITLE_CHATEAU_FOLEY_INGRAM
+chateau_foley_helpprice,,voiceovers/us/chateau/Chateau_Foley_098.wav,1,1,,,80,5000,voice,streamed,,,master,chateau,SUBTITLE_CHATEAU_FOLEY_HELPPRICE
+chateau_foley_pilein,,voiceovers/us/chateau/Chateau_Foley_099.wav,1,1,,,80,5000,voice,streamed,,,master,chateau,SUBTITLE_CHATEAU_FOLEY_PILEIN
+chateau_foley_backforhim,,voiceovers/us/chateau/Chateau_Foley_100alt4.wav,1,1,,,80,5000,voice,streamed,,,master,chateau,SUBTITLE_CHATEAU_FOLEY_BACKFORHIM
+,,,1,1,,,80,5000,voice,,,,,,
+chateau_price_goodness,,voiceovers/us/chateau/Chateau_Price_008.wav,1,1,,,80,5000,voice,streamed,,,master,chateau,SUBTITLE_CHATEAU_PRICE_GOODNESS
+chateau_price_movedtocamp,,voiceovers/us/chateau/Chateau_Price_009alt.wav,1,1,,,80,5000,voice,streamed,,,master,chateau,SUBTITLE_CHATEAU_PRICE_MOVEDTOCAMP
+,,,1,1,,,80,5000,voice,,,,,,
+chateau_brooks_truckoutfront,,voiceovers/us/chateau/Chateau_Brooks_001alt.wav,1,1,,,80,5000,voice,streamed,,,master,chateau,SUBTITLE_CHATEAU_BROOKS_TRUCKOUTFRONT
+chateau_brooks_whataboutingram,,voiceovers/us/chateau/Chateau_Brooks_002.wav,1,1,,,80,5000,voice,streamed,,,master,chateau,SUBTITLE_CHATEAU_BROOKS_WHATABOUTINGRAM
+,,,1,1,,,80,5000,voice,,,,,,
+#US,,,0.85,0.85,,,80,5000,voice,,,,,,
+allied_pain,1,allied/pain01.wav,0.85,0.85,,,80,5000,voice,streamed,,,,,
+allied_pain,2,allied/pain02.wav,0.85,0.85,,,80,5000,voice,streamed,,,,,
+allied_pain,3,allied/pain03.wav,0.85,0.85,,,80,5000,voice,streamed,,,,,
+allied_pain,4,allied/pain04.wav,0.85,0.85,,,80,5000,voice,streamed,,,,,
+allied_pain,5,allied/pain05.wav,0.85,0.85,,,80,5000,voice,streamed,,,,,
+allied_pain,6,allied/pain06.wav,0.85,0.85,,,80,5000,voice,streamed
+allied_pain,7,allied/pain07.wav,0.85,0.85,,,80,5000,voice,streamed
+allied_pain,8,allied/pain08.wav,0.85,0.85,,,80,5000,voice,streamed
+allied_pain,9,allied/pain09.wav,0.85,0.85,,,80,5000,voice,streamed
+allied_pain,10,allied/pain10.wav,0.85,0.85,,,80,5000,voice,streamed
+allied_pain,11,allied/pain11.wav,0.85,0.85,,,80,5000,voice,streamed
+allied_pain,12,allied/pain12.wav,0.85,0.85,,,80,5000,voice,streamed
+allied_pain,13,allied/pain13.wav,0.85,0.85,,,80,5000,voice,streamed
+allied_pain,14,allied/pain14.wav,0.85,0.85,,,80,5000,voice,streamed
+allied_pain,15,allied/pain15.wav,0.85,0.85,,,80,5000,voice,streamed
+allied_pain,16,allied/pain16.wav,0.85,0.85,,,80,5000,voice,streamed
+allied_enemy_sighted,1,null.wav,0.85,0.85,,,80,5000,voice,
+allied_death,1,allied/death01.wav,0.85,0.85,,,80,5000,voice,streamed
+allied_death,2,allied/death02.wav,0.85,0.85,,,80,5000,voice,streamed
+allied_death,3,allied/death03.wav,0.85,0.85,,,80,5000,voice,streamed
+allied_death,4,allied/death04.wav,0.85,0.85,,,80,5000,voice,streamed
+allied_death,5,allied/death05.wav,0.85,0.85,,,80,5000,voice,streamed
+allied_death,6,allied/death06.wav,0.85,0.85,,,80,5000,voice,streamed
+allied_death,7,allied/death07.wav,0.85,0.85,,,80,5000,voice,streamed
+allied_death,8,allied/death08.wav,0.85,0.85,,,80,5000,voice,streamed
+allied_death,9,allied/death09.wav,0.85,0.85,,,80,5000,voice,streamed
+allied_death,10,allied/death10.wav,0.85,0.85,,,80,5000,voice,streamed
+allied_death,11,allied/death11.wav,0.85,0.85,,,80,5000,voice,streamed
+allied_fire_in_the_hole,,null.wav,0.85,0.85,,,80,5000,voice,
+allied_random_chatter,,null.wav,0.85,0.85,,,80,5000,voice,
+allied_melee_charge,,null.wav,0.85,0.85,,,80,5000,voice,
+allied_melee_attack,,null.wav,0.85,0.85,,,80,5000,voice,
+,,,0.85,0.85,,,80,5000,voice,
+,,,0.85,0.85,,,80,5000,voice,
+#Pathfinder,,,0.85,0.85,,,80,5000,voice,
+Pathfinder_German_Guard1_wonder,,voiceovers/us/pathfinder/Path_GerGrd1_001alt_wonder.wav,0.85,0.85,,,60,5000,voice,streamed
+Pathfinder_German_Guard1_wrong,,voiceovers/us/pathfinder/Path_GerGrd1_002alt_wrong.wav,0.85,0.85,,,60,5000,voice,streamed
+Pathfinder_German_Guard1_sowhat,,voiceovers/us/pathfinder/Path_GerGrd1_003_sowhat.wav,0.85,0.85,,,60,5000,voice,streamed
+Pathfinder_German_Guard1_USattack,,voiceovers/us/pathfinder/Path_GerGrd1_004_USAttack.wav,0.85,0.85,,,60,5000,voice,streamed
+Pathfinder_German_Guard1_hmm,1,voiceovers/us/pathfinder/Path_GerGrd1_005_alt_hmm.wav,0.85,0.85,,,60,5000,voice,streamed
+Pathfinder_German_Guard1_hmm,2,voiceovers/us/pathfinder/Path_GerGrd1_005_alt2_hmm.wav,0.85,0.85,,,60,5000,voice,streamed
+Pathfinder_German_Guard1_hmm,3,voiceovers/us/pathfinder/Path_GerGrd1_005_alt3_hmm.wav,0.85,0.85,,,60,5000,voice,streamed
+Pathfinder_German_Guard1_hmm,4,voiceovers/us/pathfinder/Path_GerGrd1_005_alt4_hmm.wav,0.85,0.85,,,60,5000,voice,streamed
+Pathfinder_German_Guard1_hmm,5,voiceovers/us/pathfinder/Path_GerGrd1_005_alt5_hmm.wav,0.85,0.85,,,60,5000,voice,streamed
+Pathfinder_German_Guard1_hmm,6,voiceovers/us/pathfinder/Path_GerGrd1_005_alt6_hmm.wav,0.85,0.85,,,60,5000,voice,streamed
+Pathfinder_German_Guard1_hmm,7,voiceovers/us/pathfinder/Path_GerGrd1_006_hmm.wav,0.85,0.85,,,60,5000,voice,streamed
+,,,0.85,0.85,,,60,5000,voice,
+Pathfinder_German_Guard2_1sttoknow,,voiceovers/us/pathfinder/PathGerGrd2_001_1sttoknow.wav,0.85,0.85,,,60,5000,voice,streamed
+Pathfinder_German_Guard2_thepointis,,voiceovers/us/pathfinder/PathGerGrd2_002_pointis.wav,0.85,0.85,,,60,5000,voice,streamed
+Pathfinder_German_Guard2_getonradio,,voiceovers/us/pathfinder/PathGerGrd2_003_getonradio.wav,0.85,0.85,,,60,5000,voice,streamed
+Pathfinder_German_Guard2_deathphrase,,voiceovers/us/pathfinder/PathGerGrd2_004_deathphrase.wav,0.85,0.85,,,60,5000,voice,streamed
+Pathfinder_German_Guard2_kibitz1,,voiceovers/us/pathfinder/PathGerGrd2_006_alt2_toobad.wav,0.85,0.85,,,60,5000,voice,streamed
+Pathfinder_German_Guard2_kibitz2,,voiceovers/us/pathfinder/PathGerGrd2_005_alt_lookout.wav,0.85,0.85,,,60,5000,voice,streamed
+,,,1,1,,,40,5000,voice,,,,,,
+Pathfinder_German_Radio_1,,voiceovers/us/pathfinder/Path_GerRadio_001_Panzer.wav,0.75,0.75,,,40,2500,voice,streamed,,,,,
+Pathfinder_German_Radio_2,,voiceovers/us/pathfinder/Path_GerRadio_002_Comein.wav,0.75,0.75,,,40,2500,voice,streamed,,,,,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+Pathfinder_USA_Para1_Perimeter,,voiceovers/us/pathfinder/Path_Paratroop1_001.wav,0.85,0.85,,,80,5000,voice,streamed,,,,,SUBTITLE_PATHFINDER_USA_PARA1_PERIMETER
+Pathfinder_USA_Para2_Defensive,,voiceovers/us/pathfinder/Path_Para2_001alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,,,SUBTITLE_PATHFINDER_USA_PARA2_DEFENSIVE
+Pathfinder_USA_Para3_Jerries,,voiceovers/us/pathfinder/Path_Para3_001_Gerries.wav,0.85,0.85,,,80,5000,voice,streamed,,,,,SUBTITLE_PATHFINDER_USA_PARA3_JERRIES
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+#Generic voice channel stopper,,,0.85,0.85,,,80,5000,voice,,,,,,
+stop_voice,,null.wav,0.85,0.85,,,80,5000,voice,,,,,,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+#Brecourt,,,0.85,0.85,,,80,5000,voice,,,,,,
+#Moody Dialog,,,0.85,0.85,,,80,5000,voice,,,,,,
+brecourt_moody_067,,voiceovers/us/brecourt/brecourt_moody_067.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,brecourt,SUBTITLE_BRECOURT_MOODY_067
+brecourt_moody_068,,voiceovers/us/brecourt/brecourt_moody_068.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,brecourt,SUBTITLE_BRECOURT_MOODY_068
+brecourt_moody_069,,voiceovers/us/brecourt/brecourt_moody_069.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,brecourt,SUBTITLE_BRECOURT_MOODY_069
+brecourt_moody_070,,voiceovers/us/brecourt/brecourt_moody_070.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,brecourt,SUBTITLE_BRECOURT_MOODY_070
+brecourt_moody_071,,voiceovers/us/brecourt/brecourt_moody_071.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,brecourt,SUBTITLE_BRECOURT_MOODY_071
+brecourt_moody_071b,,voiceovers/us/brecourt/brecourt_moody_071b.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,brecourt,SUBTITLE_BRECOURT_MOODY_071B
+brecourt_moody_072,,voiceovers/us/brecourt/brecourt_moody_072.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,brecourt,SUBTITLE_BRECOURT_MOODY_072
+brecourt_moody_073,,voiceovers/us/brecourt/brecourt_moody_073.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,brecourt,SUBTITLE_BRECOURT_MOODY_073
+brecourt_moody_074,,voiceovers/us/brecourt/brecourt_moody_074.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,brecourt,SUBTITLE_BRECOURT_MOODY_074
+brecourt_moody_075,,voiceovers/us/brecourt/brecourt_moody_075.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,brecourt,SUBTITLE_BRECOURT_MOODY_075
+brecourt_moody_076,,voiceovers/us/brecourt/brecourt_moody_076.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,brecourt,SUBTITLE_BRECOURT_MOODY_076
+brecourt_moody_077_alt2,,voiceovers/us/brecourt/brecourt_moody_077alt2.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,brecourt,SUBTITLE_BRECOURT_MOODY_077_ALT2
+brecourt_moody_079,,voiceovers/us/brecourt/brecourt_moody_079.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,brecourt,SUBTITLE_BRECOURT_MOODY_079
+brecourt_moody_080,,voiceovers/us/brecourt/brecourt_moody_080.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,brecourt,SUBTITLE_BRECOURT_MOODY_080
+brecourt_elder_sargedown,,voiceovers/us/brecourt/Brecourt_Elder_018.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,brecourt,SUBTITLE_BRECOURT_ELDER_SARGEDOWN
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+brecourt_medic_sorry,,voiceovers/us/brecourt/Brecourt_Medic_001alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,brecourt,SUBTITLE_BRECOURT_MEDIC_SORRY
+brecourt_medic_norules,,voiceovers/us/brecourt/Brecourt_Medic_002.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,brecourt,SUBTITLE_BRECOURT_MEDIC_NORULES
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+brecourt_30cal_gunner,,voiceovers/us/brecourt/Brecourt_30CalGunner_001.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,brecourt,SUBTITLE_BRECOURT_30CAL_GUNNER
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+brecourt_lieut_movein,,voiceovers/us/brecourt/Brecourt_Lieutenant_001.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,brecourt,SUBTITLE_BRECOURT_LIEUT_MOVEIN
+brecourt_lieut_grabdocs,,voiceovers/us/brecourt/Brecourt_Lieutenant_002.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,brecourt,SUBTITLE_BRECOURT_LIEUT_GRABDOCS
+brecourt_lieut_headsup,,voiceovers/us/brecourt/Brecourt_Lieutenant_003alt3.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,brecourt,SUBTITLE_BRECOURT_LIEUT_HEADSUP
+brecourt_lieut_outtahere,,voiceovers/us/brecourt/Brecourt_Lieutenant_004.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,brecourt,SUBTITLE_BRECOURT_LIEUT_OUTTAHERE
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+#Carride,,,,,,,80,5000,voice,,,,,,
+#Moody Dialog,,,,,,,80,5000,voice,,,,,,
+carride_Moody_047,,voiceovers/us/carride/carride_moody_047.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_MOODY_047
+carride_Moody_048,,voiceovers/us/carride/carride_moody_048.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_MOODY_048
+carride_Moody_049,,voiceovers/us/carride/carride_moody_049.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_MOODY_049
+carride_Moody_050,,voiceovers/us/carride/carride_moody_050.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_MOODY_050
+carride_Moody_051,,voiceovers/us/carride/carride_moody_051.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_MOODY_051
+carride_Moody_052,,voiceovers/us/carride/carride_moody_052.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_MOODY_052
+carride_Moody_053,,voiceovers/us/carride/carride_moody_053.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_MOODY_053
+carride_Moody_054,,voiceovers/us/carride/carride_moody_054.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_MOODY_054
+carride_Moody_055,,voiceovers/us/carride/carride_moody_055.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_MOODY_055
+carride_Moody_056,,voiceovers/us/carride/carride_moody_056.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_MOODY_056
+carride_Moody_057,,voiceovers/us/carride/carride_moody_057.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_MOODY_057
+carride_Moody_058,,voiceovers/us/carride/carride_moody_058.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_MOODY_058
+carride_Moody_059,,voiceovers/us/carride/carride_moody_059.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_MOODY_059
+carride_Moody_060,,voiceovers/us/carride/carride_moody_060.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_MOODY_060
+carride_Moody_061,,voiceovers/us/carride/carride_moody_061.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_MOODY_061
+carride_Moody_062,,voiceovers/us/carride/carride_moody_062.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_MOODY_062
+carride_Moody_063,,voiceovers/us/carride/carride_moody_063.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_MOODY_063
+carride_Moody_064,,voiceovers/us/carride/carride_moody_064.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_MOODY_064
+carride_Moody_065,,voiceovers/us/carride/carride_moody_065.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_MOODY_065
+carride_Moody_066,,voiceovers/us/carride/carride_moody_066.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_MOODY_066
+,,,,,,,80,5000,voice,,,,,,
+carride_elder_roadblock,,voiceovers/us/carride/Carride_Elder_003.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_ELDER_ROADBLOCK
+carride_elder_whatthehell,,voiceovers/us/carride/Carride_Elder_004.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_ELDER_WHATTHEHELL
+carride_elder_hitit,,voiceovers/us/carride/Carride_Elder_005.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_ELDER_HITIT
+carride_elder_goodmove,,voiceovers/us/carride/Carride_Elder_006.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_ELDER_GOODMOVE
+carride_elder_cantbelieve,,voiceovers/us/carride/Carride_Elder_007.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_ELDER_CANTBELIEVE
+carride_elder_onlywhen,,voiceovers/us/carride/Carride_Elder_008.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_ELDER_ONLYWHEN
+carride_elder_workin,,voiceovers/us/carride/Carride_Elder_009.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_ELDER_WORKIN
+carride_elder_ourfather,,voiceovers/us/carride/Carride_Elder_010.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_ELDER_OURFATHER
+carride_elder_igotit,,voiceovers/us/carride/Carride_Elder_011.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_ELDER_IGOTIT
+carride_elder_drivingfaster,,voiceovers/us/carride/Carride_Elder_012.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_ELDER_DRIVINGFASTER
+carride_elder_whatsitlook,,voiceovers/us/carride/Carride_Elder_013.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_ELDER_WHATSITLOOK
+carride_elder_finishjob,,voiceovers/us/carride/Carride_Elder_014.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_ELDER_FINISHJOB
+carride_elder_sorrysarge,,voiceovers/us/carride/Carride_Elder_015.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_ELDER_SORRYSARGE
+carride_elder_yougotit,,voiceovers/us/carride/Carride_Elder_016.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_ELDER_YOUGOTIT
+carride_elder_okiedoke,,voiceovers/us/carride/Carride_Elder_017.wav,1.25,1.25,,,80,5000,voice,streamed,,,master,carride,SUBTITLE_CARRIDE_ELDER_OKIEDOKE
+,,,,,,,80,5000,voice,,,,,,
+#Training,,,0.85,0.85,,,80,5000,voice,,,,,,
+training_foley_start1,,voiceovers/us/training/Training_Foley_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_FOLEY_START1
+training_foley_start2,,voiceovers/us/training/Training_Foley_02.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_FOLEY_START2
+training_foley_move01,,voiceovers/us/training/Training_Foley_03.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_FOLEY_MOVE01
+training_foley_move02,,voiceovers/us/training/Training_Foley_04.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_FOLEY_MOVE02
+training_foley_move03,,voiceovers/us/training/Training_Foley_05.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_FOLEY_MOVE03
+training_foley_move04,,voiceovers/us/training/Training_Foley_06.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_FOLEY_MOVE04
+training_foley_move05,,voiceovers/us/training/Training_Foley_07.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_FOLEY_MOVE05
+training_foley_move06,,voiceovers/us/training/Training_Foley_08.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_FOLEY_MOVE06
+training_foley_move07,,voiceovers/us/training/Training_Foley_09.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_FOLEY_MOVE07
+training_foley_move08,,voiceovers/us/training/Training_Foley_10.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_FOLEY_MOVE08
+training_foley_move09,,voiceovers/us/training/Training_Foley_11.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_FOLEY_MOVE09
+training_foley_move10,,voiceovers/us/training/Training_Foley_12.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_FOLEY_MOVE10
+training_foley_move11,,voiceovers/us/training/Training_Foley_13.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_FOLEY_MOVE11
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+training_elder1,,voiceovers/us/training/Training_Elder_001.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_ELDER1
+training_elder2,,voiceovers/us/training/Training_Elder_002.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_ELDER2
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+training_foley_obstacle01,,voiceovers/us/training/Training_Foley_15.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_FOLEY_OBSTACLE01
+training_foley_obstacle02,,voiceovers/us/training/Training_Foley_16.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_FOLEY_OBSTACLE02
+training_foley_obstacle03,,voiceovers/us/training/Training_Foley_17.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_FOLEY_OBSTACLE03
+training_foley_obstacle04,,voiceovers/us/training/Training_Foley_18.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_FOLEY_OBSTACLE04
+training_foley_obstacle05,,voiceovers/us/training/Training_Foley_19.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_FOLEY_OBSTACLE05
+training_foley_obstacle06,,voiceovers/us/training/Training_Foley_20.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_FOLEY_OBSTACLE06
+training_foley_obstacle07,,voiceovers/us/training/Training_Foley_21.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_FOLEY_OBSTACLE07
+training_foley_obstacle08,,voiceovers/us/training/Training_Foley_22.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_FOLEY_OBSTACLE08
+training_foley_obstacle09,,voiceovers/us/training/Training_Foley_23.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_FOLEY_OBSTACLE09
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+training_moody_carbine01,,voiceovers/us/training/Training_Moody_001.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_CARBINE01
+training_moody_carbine02,,voiceovers/us/training/Training_Moody_002.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_CARBINE02
+training_moody_carbine03,,voiceovers/us/training/Training_Moody_003.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_CARBINE03
+training_moody_carbine04,,voiceovers/us/training/Training_Moody_004.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_CARBINE04
+training_moody_carbine05,,voiceovers/us/training/Training_Moody_005.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_CARBINE05
+training_moody_carbine06,,voiceovers/us/training/Training_Moody_006.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_CARBINE06
+training_moody_carbine07,,voiceovers/us/training/Training_Moody_007.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_CARBINE07
+training_moody_carbine08,,voiceovers/us/training/Training_Moody_008.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_CARBINE08
+training_moody_carbine09,,voiceovers/us/training/Training_Moody_009.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_CARBINE09
+training_moody_carbine09_2,,voiceovers/us/training/Training_Moody_009_2.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_CARBINE09_2
+training_moody_carbine10,,voiceovers/us/training/Training_Moody_010.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_CARBINE10
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+training_moody_sniper01,,voiceovers/us/training/Training_Moody_011.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_SNIPER01
+training_moody_sniper02,,voiceovers/us/training/Training_Moody_012.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_SNIPER02
+training_moody_sniper03,,voiceovers/us/training/Training_Moody_013.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_SNIPER03
+training_moody_sniper04,,voiceovers/us/training/Training_Moody_014.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_SNIPER04
+training_moody_sniper05,,voiceovers/us/training/Training_Moody_015.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_SNIPER05
+training_moody_sniper06,,voiceovers/us/training/Training_Moody_016.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_SNIPER06
+training_moody_sniper07,,voiceovers/us/training/Training_Moody_017.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_SNIPER07
+training_moody_sniper08,,voiceovers/us/training/Training_Moody_018.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_SNIPER08
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+training_moody_smg01,,voiceovers/us/training/Training_Moody_019.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_SMG01
+training_moody_smg02,,voiceovers/us/training/Training_Moody_020.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_SMG02
+training_moody_smg03,,voiceovers/us/training/Training_Moody_021.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_SMG03
+training_moody_smg04,,voiceovers/us/training/Training_Moody_022.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_SMG04
+training_moody_smg05,,voiceovers/us/training/Training_Moody_023.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_SMG05
+training_moody_smg06,,voiceovers/us/training/Training_Moody_024.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_SMG06
+training_moody_smg07,,voiceovers/us/training/Training_Moody_025.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_SMG07
+training_moody_smg08,,voiceovers/us/training/Training_Moody_026.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_SMG08
+training_moody_smg09,,voiceovers/us/training/Training_Moody_027.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_SMG09
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+training_moody_grenade01,,voiceovers/us/training/Training_Moody_028.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_GRENADE01
+training_moody_grenade02,,voiceovers/us/training/Training_Moody_029.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_GRENADE02
+training_moody_grenade03,,null.wav,0.85,0.85,,,80,5000,voice,,,,master,training,SUBTITLE_TRAINING_MOODY_GRENADE03
+training_moody_grenade04,,voiceovers/us/training/Training_Moody_030.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_GRENADE04
+training_moody_grenade05,,voiceovers/us/training/Training_Moody_031.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_SNIPER08
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+training_moody_health01,,voiceovers/us/training/Training_Moody_032.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_HEALTH01
+training_moody_mg01,,voiceovers/us/training/Training_Moody_033.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_MG01
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+training_moody_explosives01,,voiceovers/us/training/Training_Moody_034.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_EXPLOSIVES01
+training_moody_explosives02a,,voiceovers/us/training/Training_Moody_035a.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_EXPLOSIVES02A
+training_moody_explosives02b,,voiceovers/us/training/Training_Moody_035b.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_EXPLOSIVES02B
+training_moody_explosives03,,voiceovers/us/training/Training_Moody_036.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_EXPLOSIVES03
+training_moody_explosives04,,voiceovers/us/training/Training_Moody_037.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_EXPLOSIVES04
+training_moody_explosives05,,voiceovers/us/training/Training_Moody_038.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_EXPLOSIVES05
+training_moody_explosives06,,voiceovers/us/training/Training_Moody_039.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_EXPLOSIVES06
+training_moody_explosives07,,voiceovers/us/training/Training_Moody_040.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,training,SUBTITLE_TRAINING_MOODY_EXPLOSIVES07
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+#Dawnville,,,0.85,0.85,,,80,5000,voice,,,,,,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+dawnville_friendly1_wakeit,,voiceovers/us/dawnville/Dawnville_Friend1_001.wav,0.75,0.75,,,35,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FRIENDLY1_WAKEIT
+dawnville_friendly3_gotcompany,,voiceovers/us/dawnville/Dawnville_friendly3_001.wav,0.85,0.85,,,35,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FRIENDLY3_GOTCOMPANY
+dawnville_friendly1_incoming,,voiceovers/us/dawnville/Dawnville_Friend1_001alt2.wav,0.75,0.75,,,35,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FRIENDLY1_INCOMING
+dawnville_friendly3_takecover,,voiceovers/us/burnville/Burnville_Foley_030.wav,0.85,0.85,,,35,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FRIENDLY3_TAKECOVER
+dawnville_foley_offstreets,,voiceovers/us/dawnville/Dawnville_Foley_062.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FOLEY_OFFSTREETS
+dawnville_foley_takingbreak,,voiceovers/us/dawnville/Dawnville_Foley_063.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FOLEY_TAKINGBREAK
+dawnville_johnson_rightcaptain,,voiceovers/us/dawnville/Dawnville_Johnson_001.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_JOHNSON_RIGHTCAPTAIN
+dawnville_foley_theygothimdamn,,voiceovers/us/dawnville/Dawnville_Foley_064alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FOLEY_THEYGOTHIMDAMN
+dawnville_foley_jackson,,voiceovers/us/dawnville/Dawnville_Foley_067alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FOLEY_JACKSON
+dawnville_foley_getpanzerfaust,,voiceovers/us/dawnville/Dawnville_Foley_085.wav,1,1,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FOLEY_GETPANZERFAUST
+dawnville_foley_faustremind,,voiceovers/us/dawnville/Dawnville_Foley_086alt.wav,1,1,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FOLEY_FAUSTREMIND
+dawnville_foley_goremind,,voiceovers/us/dawnville/Dawnville_Foley_068.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FOLEY_GOREMIND
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+dawnville_friendly1_enemytank,,voiceovers/us/dawnville/Dawnville_Friend1_005alt6.wav,1,1,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FRIENDLY1_ENEMYTANK
+dawnville_friendly1_areacovered1,,voiceovers/us/dawnville/Dawnville_Friend1_003.wav,1,1,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FRIENDLY1_AREACOVERED1
+dawnville_friendly1_areacovered2,,voiceovers/us/dawnville/Dawnville_Friend1_004alt.wav,1,1,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FRIENDLY1_AREACOVERED2
+dawnville_friendly1_areacovered3,,voiceovers/us/dawnville/Dawnville_Friend1_005alt.wav,1,1,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FRIENDLY1_AREACOVERED3
+dawnville_friendly1_churchfall,,voiceovers/us/dawnville/Dawnville_Friend1_006alt.wav,1,1,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FRIENDLY1_CHURCHFALL
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+dawnville_foley_backtochurch,,voiceovers/us/dawnville/Dawnville_Foley_069.wav,1,1,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FOLEY_BACKTOCHURCH
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+dawnville_friendly3_getwithit,,voiceovers/us/dawnville/Dawnville_Friendly3_003.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FRIENDLY3_GETWITHIT
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+dawnville_elder_thisisnuts,,voiceovers/us/dawnville/Dawnville_Elder_002.wav,0.7,0.7,,,20,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_ELDER_THISISNUTS
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+dawnville_foley_pullingback,,voiceovers/us/dawnville/Dawnville_Foley_070alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FOLEY_PULLINGBACK
+dawnville_foley_lewisfrank,,voiceovers/us/dawnville/Dawnville_Foley_071alt3.wav,1,1,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FOLEY_LEWISFRANK
+dawnville_foley_lewis,,voiceovers/us/dawnville/Dawnville_Foley_072.wav,1,1,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FOLEY_LEWIS
+dawnville_foley_franklin,,voiceovers/us/dawnville/Dawnville_Foley_073.wav,1,1,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FOLEY_FRANKLIN
+dawnville_foley_elsefollow,,voiceovers/us/dawnville/Dawnville_Foley_074alt.wav,1,1,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FOLEY_ELSEFOLLOW
+dawnville_foley_everyonefollow,,voiceovers/us/dawnville/Dawnville_Foley_075.wav,1,1,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FOLEY_EVERYONEFOLLOW
+dawnville_foley_behindyou,,voiceovers/us/dawnville/Dawnville_Foley_076alt.wav,1,1,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FOLEY_BEHINDYOU
+dawnville_foley_gottagettank,,voiceovers/us/dawnville/Dawnville_Foley_077alt.wav,1,1,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FOLEY_GOTTAGETTANK
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+dawnville_friendly1_grenadeinthere,,voiceovers/us/dawnville/Dawnville_Friend1_007alt2.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FRIENDLY1_GRENADEINTHERE
+dawnville_friendly3_fireinhole,,voiceovers/us/dawnville/Dawnville_Friendly3_004.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_TRAINING_MOODY_EXPLOSIVES06
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+dawnville_foley_pushemout,,voiceovers/us/dawnville/Dawnville_Foley_078.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FOLEY_PUSHEMOUT
+dawnville_foley_regroup,,voiceovers/us/dawnville/Dawnville_Foley_079.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FOLEY_REGROUP
+dawnville_foley_tigertankcover,,voiceovers/us/dawnville/Dawnville_Foley_087alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FOLEY_TIGERTANKCOVER
+dawnville_foley_holdoffinfantry,,voiceovers/us/dawnville/Dawnville_Foley_089.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FOLEY_HOLDOFFINFANTRY
+dawnville_foley_niceshot,,voiceovers/us/dawnville/Dawnville_Foley_091.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FOLEY_NICESHOT
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+dawnville_parker_teams,,voiceovers/us/dawnville/Dawnville_Parker_South.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_PARKER_TEAMS
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+dawnville_foley_getmortars,,voiceovers/us/dawnville/Dawnville_Foley_090alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FOLEY_GETMORTARS
+dawnville_foley_handthis,,voiceovers/us/dawnville/Dawnville_Foley_083alt.wav,0.85,0.85,,,40,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FOLEY_HANDTHIS
+dawnville_foley_prettysure,,voiceovers/us/dawnville/Dawnville_Foley_084alt.wav,0.85,0.85,,,40,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FOLEY_PRETTYSURE
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+dawnville_moody_assup,,voiceovers/us/dawnville/Dawnville_Moody_041.wav,0.75,0.75,,,25,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_MOODY_ASSUP
+dawnville_moody_getchurch,,voiceovers/us/dawnville/Dawnville_Moody_042.wav,0.75,0.75,,,25,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_MOODY_GETCHURCH
+dawnville_moody_getincar,,voiceovers/us/dawnville/Dawnville_Moody_043.wav,0.75,0.75,,,25,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_MOODY_GETINCAR
+dawnville_moody_rollingjunkyard,,voiceovers/us/dawnville/Dawnville_Moody_044.wav,0.75,0.75,,,25,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_MOODY_ROLLINGJUNKYARD
+dawnville_moody_tincan,,voiceovers/us/dawnville/Dawnville_Moody_045.wav,0.75,0.75,,,25,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_MOODY_TINCAN
+dawnville_moody_sproutwings,,voiceovers/us/dawnville/Dawnville_Moody_046.wav,0.75,0.75,,,25,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_MOODY_SPROUTWINGS
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+dawnville_defensive_german_1,,voiceovers/generic/axis/a/BA_Ger_A_7alt_Defensive.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,dawnville,
+dawnville_defensive_german_2,,voiceovers/generic/axis/a/BA_Ger_A_05_FallBack.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,dawnville,
+dawnville_defensive_german_3,,voiceovers/generic/axis/b/BA_Ger_B_011alt3_GoGoGo.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,dawnville,
+dawnville_defensive_german_4,,voiceovers/generic/axis/b/UNS_Ger_B_003alt2_FallBack.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,dawnville,
+dawnville_defensive_german_5,,voiceovers/generic/axis/a/UNS_Ger_A_001alt_PinnedDown.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,dawnville,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+dawnville_friendly2_herethey,,voiceovers/us/dawnville/Dawnville_Friend2_HereThey.wav,0.85,0.85,,,100,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FRIENDLY2_HERETHEY
+dawnville_friendly2_tankeast,,voiceovers/us/dawnville/Dawnville_Friend2_TankEast.wav,0.85,0.85,,,100,5000,voice,streamed,,,master,dawnville,
+dawnville_friendly2_tanknorth,,voiceovers/us/dawnville/Dawnville_Friend2_TankNorth.wav,0.85,0.85,,,100,5000,voice,streamed,,,master,dawnville,
+dawnville_friendly2_tankquick,,voiceovers/us/dawnville/Dawnville_Friend2_TankQuick.wav,0.85,0.85,,,100,5000,voice,streamed,,,master,dawnville,
+dawnville_friendly2_tankwest,,voiceovers/us/dawnville/Dawnville_Friend2_TankWest.wav,0.85,0.85,,,100,5000,voice,streamed,,,master,dawnville,
+dawnville_friendly2_tanksouth,,voiceovers/us/dawnville/Dawnville_Friend2_TankSouth.wav,0.85,0.85,,,100,5000,voice,streamed,,,master,dawnville,
+dawnville_friendly2_withfoley,,voiceovers/us/dawnville/Dawnville_Friend2_WithFoley.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,dawnville,SUBTITLE_DAWNVILLE_FRIENDLY2_WITHFOLEY
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+#POW Camp,,,0.85,0.85,,,80,5000,voice,,,,,,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+powcamp_foley_readytoram1,,voiceovers/us/powcamp/POWCamp_Foley01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,powcamp,SUBTITLE_POWCAMP_FOLEY_READYTORAM1
+powcamp_foley_readytoram2,,voiceovers/us/powcamp/POWCamp_Foley02.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,powcamp,SUBTITLE_POWCAMP_FOLEY_READYTORAM2
+powcamp_foley_readytoram3,,voiceovers/us/powcamp/POWCamp_Foley03.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,powcamp,SUBTITLE_POWCAMP_FOLEY_READYTORAM3
+powcamp_foley_gogetingram,,voiceovers/us/powcamp/POWCamp_Foley_102alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,powcamp,SUBTITLE_POWCAMP_FOLEY_GOGETINGRAM
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+powcamp_german_PA_underattack,,voiceovers/us/powcamp/POWCamp_GermanRadio_003.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,powcamp,
+powcamp_german_PA_gatebreach,,voiceovers/us/powcamp/POWCamp_GermanRadio_004.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,powcamp,
+powcamp_german_PA_battlestations,,voiceovers/us/powcamp/POWCamp_GermanRadio_005.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,powcamp,
+powcamp_german_PA_enemyeast,,voiceovers/us/powcamp/POWCamp_GermanRadio_006.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,powcamp,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+powcamp_ingram1,,voiceovers/us/powcamp/POWCamp_Ingram_001.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,powcamp,SUBTITLE_POWCAMP_INGRAM1
+powcamp_ingram2,,voiceovers/us/powcamp/POWCamp_Ingram_002.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,powcamp,SUBTITLE_POWCAMP_INGRAM2
+powcamp_ingram3,,voiceovers/us/powcamp/POWCamp_Ingram_003alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,powcamp,SUBTITLE_POWCAMP_INGRAM3
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+#Eder Dam,,,0.85,0.85,,,80,5000,voice,,,,,,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+dam_german_PA_shootintruders,,voiceovers/uk/dam/EderDam_PA_01_FX.wav,0.85,0.85,,,80,5000,voice,streamed,,,,dam,
+dam_german_PA_sectionlevel,,voiceovers/uk/dam/EderDam_PA_02_FX.wav,0.85,0.85,,,80,5000,voice,streamed,,,,dam,
+dam_german_PA_noprisoners,,voiceovers/uk/dam/EderDam_PA_03_FX.wav,0.85,0.85,,,80,5000,voice,streamed,,,,dam,
+dam_german_PA_turbines,,voiceovers/uk/dam/EderDam_PA_04_FX.wav,0.85,0.85,,,80,5000,voice,streamed,,,,dam,
+dam_german_PA_footofdam,,voiceovers/uk/dam/EderDam_PA_05_FX.wav,0.85,0.85,,,80,5000,voice,streamed,,,,dam,
+dam_german_PA_truckpark,,voiceovers/uk/dam/EderDam_PA_06_FX.wav,0.85,0.85,,,80,5000,voice,streamed,,,,dam,
+dam_german_PA_graff,,voiceovers/uk/dam/EderDam_PA_07_FX.wav,0.85,0.85,,,80,5000,voice,streamed,,,,dam,
+dam_german_PA_SASinside,,voiceovers/uk/dam/EderDam_PA_08_FX.wav,0.85,0.85,,,80,5000,voice,streamed,,,,dam,
+dam_PA_lies,,voiceovers/uk/dam/EderDam_PA_09_FX.wav,0.85,0.85,,,80,5000,voice,streamed,,,,dam,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+dam_price_goodman,,voiceovers/uk/dam/EderDam_Price_030alt2.wav,0.85,0.85,,,80,5000,voice,streamed,,,,dam,SUBTITLE_DAM_PRICE_GOODMAN
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+#Truckride,,,0.85,0.85,,,80,5000,voice,,,,,,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+truckride_waters_readymate,,voiceovers/uk/truckride/Truckride_Waters_014.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,truckride,SUBTITLE_TRUCKRIDE_WATERS_READYMATE
+truckride_waters_knowwhattodo,,voiceovers/uk/truckride/Truckride_Waters_014b.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,truckride,SUBTITLE_TRUCKRIDE_WATERS_KNOWWHATTODO
+truckride_waters_germanlorry,,voiceovers/uk/truckride/Truckride_Waters_015.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,truckride,SUBTITLE_TRUCKRIDE_WATERS_GERMANLORRY
+truckride_waters_fireitdammit,,voiceovers/uk/truckride/Truckride_Waters_016alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,truckride,SUBTITLE_TRUCKRIDE_WATERS_FIREITDAMMIT
+truckride_waters_comingupfast,,voiceovers/uk/truckride/Truckride_Waters_017alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,truckride,SUBTITLE_TRUCKRIDE_WATERS_COMINGUPFAST
+truckride_waters_insights,,voiceovers/uk/truckride/Truckride_Waters_018alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,truckride,SUBTITLE_TRUCKRIDE_WATERS_INSIGHTS
+truckride_waters_anotherlorry,,voiceovers/uk/truckride/Truckride_Waters_019.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,truckride,SUBTITLE_TRUCKRIDE_WATERS_ANOTHERLORRY
+truckride_waters_onedown,,voiceovers/uk/truckride/Truckride_Waters_020.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,truckride,SUBTITLE_TRUCKRIDE_WATERS_ONEDOWN
+truckride_waters_kubelstill,,voiceovers/uk/truckride/Truckride_Waters_021.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,truckride,SUBTITLE_TRUCKRIDE_WATERS_KUBELSTILL
+truckride_waters_lorrystill,,voiceovers/uk/truckride/Truckride_Waters_022.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,truckride,SUBTITLE_TRUCKRIDE_WATERS_LORRYSTILL
+truckride_waters_hereyougo,,voiceovers/uk/truckride/Truckride_Waters_023.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,truckride,SUBTITLE_TRUCKRIDE_WATERS_HEREYOUGO
+truckride_waters_takeit,,voiceovers/uk/truckride/Truckride_Waters_024alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,truckride,SUBTITLE_TRUCKRIDE_WATERS_TAKEIT
+truckride_waters_keepfiring,,voiceovers/uk/truckride/Truckride_Waters_025.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,truckride,SUBTITLE_TRUCKRIDE_WATERS_KEEPFIRING
+truckride_waters_lockandload,,voiceovers/uk/truckride/Truckride_Waters_026alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,truckride,SUBTITLE_TRUCKRIDE_WATERS_LOCKANDLOAD
+truckride_waters_couldyougo,,voiceovers/uk/truckride/Truckride_Waters_027alt2.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,truckride,SUBTITLE_TRUCKRIDE_WATERS_COULDYOUGO
+truckride_waters_makeitacross,,voiceovers/uk/truckride/Truckride_Waters_028.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,truckride,SUBTITLE_TRUCKRIDE_WATERS_MAKEITACROSS
+truckride_waters_soggybastard,,voiceovers/uk/truckride/Truckride_Waters_029.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,truckride,SUBTITLE_TRUCKRIDE_WATERS_SOGGYBASTARD
+truckride_waters_bloodybikes,,voiceovers/uk/truckride/Truckride_Waters_030alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,truckride,SUBTITLE_TRUCKRIDE_WATERS_BLOODYBIKES
+truckride_waters_lastfausts,,voiceovers/uk/truckride/Truckride_Waters_031alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,truckride,SUBTITLE_TRUCKRIDE_WATERS_LASTFAUSTS
+truckride_waters_struggle1,,voiceovers/uk/truckride/Truckride_Waters_032_a.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,truckride,
+truckride_waters_struggle2,,voiceovers/uk/truckride/Truckride_Waters_032_b.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,truckride,
+truckride_waters_struggle3,,voiceovers/uk/truckride/Truckride_Waters_032_c.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,truckride,
+truckride_waters_roadblockahead,,voiceovers/uk/truckride/Truckride_Waters_033.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,truckride,SUBTITLE_TRUCKRIDE_WATERS_ROADBLOCKAHEAD
+truckride_waters_hellhedoing,,voiceovers/uk/truckride/Truckride_Waters_034.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,truckride,SUBTITLE_TRUCKRIDE_WATERS_HELLHEDOING
+truckride_waters_wemadeit,,voiceovers/uk/truckride/Truckride_Waters_035alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,truckride,SUBTITLE_TRUCKRIDE_WATERS_WEMADEIT
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+truckride_price_beautiful,,voiceovers/uk/truckride/Truckride_Price_031alt2.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,truckride,SUBTITLE_TRUCKRIDE_PRICE_BEAUTIFUL
+truckride_price_braceyourselves,,voiceovers/uk/truckride/Truckride_Price_032alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,truckride,SUBTITLE_TRUCKRIDE_PRICE_BRACEYOURSELVES
+truckride_price_hangon,,voiceovers/uk/truckride/Truckride_Price_033alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,truckride,SUBTITLE_TRUCKRIDE_PRICE_HANGON
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+#Airfield,,,0.85,0.85,,,80,5000,voice,,,,,,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+airfield_waters_comingupairfield,,voiceovers/uk/airfield/Airfield_Waters_036.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,airfield,SUBTITLE_AIRFIELD_WATERS_COMINGUPAIRFIELD
+airfield_waters_blimeybeauty,,voiceovers/uk/airfield/Airfield_Waters_037alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,airfield,SUBTITLE_AIRFIELD_WATERS_BLIMEYBEAUTY
+airfield_waters_dontshootplane,,voiceovers/uk/airfield/Airfield_Waters_038.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,airfield,SUBTITLE_AIRFIELD_WATERS_DONTSHOOTPLANE
+airfield_waters_lightupstukas,,voiceovers/uk/airfield/Airfield_Waters_039alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,airfield,SUBTITLE_AIRFIELD_WATERS_LIGHTUPSTUKAS
+airfield_waters_divebombers,,voiceovers/uk/airfield/Airfield_Waters_040.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,airfield,SUBTITLE_AIRFIELD_WATERS_DIVEBOMBERS
+airfield_waters_keepstukasoff,,voiceovers/uk/airfield/Airfield_Waters_041alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,airfield,SUBTITLE_AIRFIELD_WATERS_KEEPSTUKASOFF
+airfield_waters_outoftime,,voiceovers/uk/airfield/Airfield_Waters_044.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,airfield,SUBTITLE_AIRFIELD_WATERS_OUTOFTIME
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+airfield_price_bloodystukas,,voiceovers/uk/airfield/Airfield_Price_037alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,airfield,SUBTITLE_AIRFIELD_PRICE_BLOODYSTUKAS
+airfield_price_planeisready,,voiceovers/uk/airfield/Airfield_Price_038alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,airfield,SUBTITLE_AIRFIELD_PRICE_PLANEISREADY
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+#Ship,,,0.85,0.85,,,80,5000,voice,,,,,,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+ship_price_holdrighthere,,voiceovers/uk/ship/Ship_Price_040.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,ship,SUBTITLE_SHIP_PRICE_HOLDRIGHTHERE
+ship_price_werecleartoapproach,,voiceovers/uk/ship/Ship_Price_041.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,ship,SUBTITLE_SHIP_PRICE_WERECLEARTOAPPROACH
+ship_price_ger_permission,,voiceovers/uk/ship/Ship_Price_042alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,ship,SUBTITLE_SHIP_PRICE_GER_PERMISSION
+ship_price_ger_donitz,,voiceovers/uk/ship/Ship_Price_043alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,ship,SUBTITLE_SHIP_PRICE_GER_DONITZ
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+ship_warrant_granted,,voiceovers/uk/ship/Ship_WarrantOfficer_001.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,ship,SUBTITLE_SHIP_WARRANT_GRANTED
+ship_warrant_seeyourpapers,,voiceovers/uk/ship/Ship_WarrantOfficer_002.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,ship,SUBTITLE_SHIP_WARRANT_SEEYOURPAPERS
+ship_warrant_schmidt,,voiceovers/uk/ship/Ship_WarrantOfficer_003.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,ship,SUBTITLE_SHIP_WARRANT_SCHMIDT
+ship_warrant_welcomeaboard,,voiceovers/uk/ship/Ship_WarrantOfficer_004.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,ship,SUBTITLE_SHIP_WARRANT_WELCOMEABOARD
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+ship_price_throughhangar,,voiceovers/uk/ship/Ship_Price_044alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,ship,SUBTITLE_SHIP_PRICE_THROUGHHANGAR
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+ship_armory_showmepapers,,voiceovers/uk/ship/Ship_ArmoryGuard_001alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,ship,SUBTITLE_SHIP_ARMORY_SHOWMEPAPERS
+ship_armory_havetocheckthis,,voiceovers/uk/ship/Ship_ArmoryGuard_002.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,ship,SUBTITLE_SHIP_ARMORY_HAVETOCHECKTHIS
+ship_armory_officerswithme,,voiceovers/uk/ship/Ship_ArmoryGuard_003.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,ship,SUBTITLE_SHIP_ARMORY_OFFICERSWITHME
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+ship_phone_soundthealarm,,voiceovers/uk/ship/Ship_ArmoryGuard_004alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,ship,SUBTITLE_SHIP_PHONE_SOUNDTHEALARM
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+ship_price_boilersline,,voiceovers/uk/ship/Ship_Price_045alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,ship,SUBTITLE_SHIP_PRICE_BOILERSLINE
+ship_price_conningtower,,voiceovers/uk/ship/Ship_Price_046.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,ship,SUBTITLE_SHIP_PRICE_CONNINGTOWER
+ship_price_mortalwound,,voiceovers/uk/ship/Ship_Price_047.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,ship,SUBTITLE_SHIP_PRICE_MORTALWOUND
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+ship_waters_fineman,,voiceovers/uk/ship/Ship_Waters_045.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,ship,SUBTITLE_SHIP_WATERS_FINEMAN
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+ship_price_ger_asyouwere1,,voiceovers/uk/ship/Ship_Price_048.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,ship,SUBTITLE_SHIP_PRICE_GER_ASYOUWERE1
+ship_price_ger_asyouwere2,,voiceovers/uk/ship/Ship_Price_048alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,ship,SUBTITLE_SHIP_PRICE_GER_ASYOUWERE1
+ship_price_ger_asyouwere3,,voiceovers/uk/ship/Ship_Price_048alt2.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,ship,SUBTITLE_SHIP_PRICE_GER_ASYOUWERE1
+ship_price_ger_asyouwere4,,voiceovers/uk/ship/Ship_Price_048alt4.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,ship,SUBTITLE_SHIP_PRICE_GER_ASYOUWERE1
+ship_price_ger_asyouwere5,,voiceovers/uk/ship/Ship_Price_048alt5.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,ship,SUBTITLE_SHIP_PRICE_GER_ASYOUWERE1
+ship_price_ger_asyouwere6,,voiceovers/uk/ship/Ship_Price_048alt6.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,ship,SUBTITLE_SHIP_PRICE_GER_ASYOUWERE1
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+#Sewer,,,0.85,0.85,,,80,5000,voice,,,,,,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+sewer_propaganda1,,voiceovers/ru/sewer/Sewer_GerLoud_1_FX.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,sewer,
+sewer_propaganda2,,voiceovers/ru/sewer/Sewer_GerLoud_2_FX.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,sewer,
+sewer_propaganda3,,voiceovers/ru/sewer/Sewer_GerLoud_3_FX.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,sewer,
+sewer_propaganda4,,voiceovers/ru/sewer/Sewer_GerLoud_4alt_FX.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,sewer,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+#Factory,,,0.85,0.85,,,80,5000,voice,,,,,,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+factory_private2_blastthisdoor,,voiceovers/ru/factory/Factory_RusPriv2_001.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,factory,SUBTITLE_FACTORY_PRIVATE2_BLASTTHISDOOR
+factory_private1_generalsracing,,voiceovers/ru/factory/Factory_RusPriv1_001.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,factory,SUBTITLE_FACTORY_PRIVATE1_GENERALSRACING
+factory_private2_womenchampagne,,voiceovers/ru/factory/Factory_RusPriv2_002.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,factory,SUBTITLE_FACTORY_PRIVATE2_WOMENCHAMPAGNE
+factory_private1_thelastgeneral,,voiceovers/ru/factory/Factory_RusPriv1_002.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,factory,SUBTITLE_FACTORY_PRIVATE1_THELASTGENERAL
+factory_private2_nkvd,,voiceovers/ru/factory/Factory_RusPriv2_003.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,factory,SUBTITLE_FACTORY_PRIVATE2_NKVD
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+factory_private1_idiot,,voiceovers/ru/factory/Factory_A_Idiot_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,factory,SUBTITLE_FACTORY_PRIVATE1_IDIOT
+factory_private1_overhere1,,voiceovers/ru/factory/Factory_A_OverHere_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,factory trainstation,SUBTITLE_FACTORY_PRIVATE1_OVERHERE1
+factory_private1_overhere2,,voiceovers/ru/factory/Factory_A_OverHere_02.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,factory trainstation,SUBTITLE_FACTORY_PRIVATE1_OVERHERE1
+factory_private1_thisway,,voiceovers/ru/factory/Factory_A_ThisWay_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,factory trainstation,SUBTITLE_FACTORY_PRIVATE1_THISWAY
+factory_private1_wrongway,,voiceovers/ru/factory/Factory_A_WrongWay_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,factory trainstation,SUBTITLE_FACTORY_PRIVATE1_WRONGWAY
+factory_private2_overhere,,voiceovers/ru/factory/Factory_B_OverHere_03.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,factory trainstation,SUBTITLE_FACTORY_PRIVATE1_OVERHERE1
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+#Railyard,,,0.85,0.85,,,80,5000,voice,,,,,,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+railyard_private1_whosearty,,voiceovers/ru/railyard/Railyard_RusPriv1_3alt2.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,railyard,SUBTITLE_RAILYARD_PRIVATE1_WHOSEARTY
+railyard_private2_matters,,voiceovers/ru/railyard/Railyard_RusPriv2_004.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,railyard,SUBTITLE_RAILYARD_PRIVATE2_MATTERS
+railyard_private1_iftheydidknow,,voiceovers/ru/railyard/Railyard_RusPriv1_04alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,railyard,SUBTITLE_RAILYARD_PRIVATE1_IFTHEYDIDKNOW
+railyard_private2_hardtosay,,voiceovers/ru/railyard/Railyard_RusPriv2_5alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,railyard,SUBTITLE_RAILYARD_PRIVATE2_HARDTOSAY
+railyard_captain_goodforyou,,voiceovers/ru/railyard/Railyard_RusArmyCapt_001.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,railyard,SUBTITLE_RAILYARD_CAPTAIN_GOODFORYOU
+railyard_captain_beforetheartystarts,,voiceovers/ru/railyard/Railyard_RusArmyCapt_002.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,railyard,SUBTITLE_RAILYARD_CAPTAIN_BEFORETHEARTYSTARTS
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+#Hurtgen,,,0.85,0.85,,,80,5000,voice,,,,,,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+hurtgen_foley_indulgeme,,voiceovers/us/hurtgen/Hurtgen_Foley_103alt2.wav,0.9,0.9,,,80,5000,voice,streamed,,,master,hurtgen,SUBTITLE_HURTGEN_FOLEY_INDULGEME
+,,,0.9,0.9,,,80,5000,voice,,,,,,
+hurtgen_paratrooper_mines,,voiceovers/us/hurtgen/Hurtgen_Para1_002alt5.wav,0.9,0.9,,,80,5000,voice,streamed,,,master,hurtgen,SUBTITLE_HURTGEN_PARATROOPER_MINES
+,,,0.9,0.9,,,80,5000,voice,,,,,,
+hurtgen_foley_keepmovingguys,,voiceovers/us/hurtgen/Hurtgen_Foley_104alt.wav,0.9,0.9,,,80,5000,voice,streamed,,,master,hurtgen,SUBTITLE_HURTGEN_FOLEY_KEEPMOVINGGUYS
+hurtgen_foley_thatbunkersyours,,voiceovers/us/hurtgen/Hurtgen_Foley_105.wav,0.9,0.9,,,80,5000,voice,streamed,,,master,hurtgen,SUBTITLE_HURTGEN_FOLEY_THATBUNKERSYOURS
+hurtgen_foley_samedrilldocs,,voiceovers/us/hurtgen/Hurtgen_Foley_106.wav,0.9,0.9,,,80,5000,voice,streamed,,,master,hurtgen,SUBTITLE_HURTGEN_FOLEY_SAMEDRILLDOCS
+hurtgen_foley_quickpanzers,,voiceovers/us/hurtgen/Hurtgen_Foley_107alt.wav,0.9,0.9,,,80,5000,voice,streamed,,,master,hurtgen,SUBTITLE_HURTGEN_FOLEY_QUICKPANZERS
+hurtgen_foley_proudbelieve,,voiceovers/us/hurtgen/Hurtgen_Foley_109.wav,0.9,0.9,,,80,5000,voice,streamed,,,master,hurtgen,SUBTITLE_HURTGEN_FOLEY_PROUDBELIEVE
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+#Rocket,,,0.85,0.85,,,80,5000,voice,,,,,,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+rocket_waters_brensupport,,voiceovers/uk/rocket/Rocket_Waters_054alt3.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,rocket,SUBTITLE_ROCKET_WATERS_BRENSUPPORT
+rocket_waters_needtoblowup,,voiceovers/uk/rocket/Rocket_Waters_047.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,rocket,SUBTITLE_ROCKET_WATERS_NEEDTOBLOWUP
+rocket_waters_deafdumbblind1,,voiceovers/uk/rocket/Rocket_Waters_048.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,rocket,SUBTITLE_ROCKET_WATERS_DEAFDUMBBLIND1
+rocket_waters_deafdumbblind2,,voiceovers/uk/rocket/Rocket_Waters_048alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,rocket,SUBTITLE_ROCKET_WATERS_DEAFDUMBBLIND1
+rocket_waters_foundcareer,,voiceovers/uk/rocket/Rocket_Waters_049.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,rocket,SUBTITLE_ROCKET_WATERS_FOUNDCAREER
+rocket_waters_helloboys,,voiceovers/uk/rocket/Rocket_Waters_050.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,rocket,SUBTITLE_ROCKET_WATERS_HELLOBOYS
+rocket_waters_v2fuel,,voiceovers/uk/rocket/Rocket_Waters_051alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,rocket,SUBTITLE_ROCKET_WATERS_V2FUEL
+rocket_waters_placebombs,,voiceovers/uk/rocket/Rocket_Waters_052.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,rocket,SUBTITLE_ROCKET_WATERS_PLACEBOMBS
+rocket_waters_brilliant,,voiceovers/uk/rocket/Rocket_Waters_053.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,rocket,SUBTITLE_ROCKET_WATERS_BRILLIANT
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+#Berlin,,,0.85,0.85,,,80,5000,voice,,,,,,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+berlin_russian5_victorydeath,,voiceovers/stalingrad/Commissar4_Line_9.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,berlin,SUBTITLE_BERLIN_RUSSIAN5_VICTORYDEATH
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+berlin_russian1_ontoreichstag,,voiceovers/ru/berlin/Berlin_RusSoldier1_001.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,berlin,SUBTITLE_BERLIN_RUSSIAN1_ONTOREICHSTAG
+berlin_russian3_deathtofascists,,voiceovers/stalingrad/Commissar3_line_76.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,berlin,SUBTITLE_BERLIN_RUSSIAN3_DEATHTOFASCISTS
+berlin_russian1_noretreat,,voiceovers/ru/berlin/Berlin_RusSoldier1_002.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,berlin,SUBTITLE_BERLIN_RUSSIAN1_NORETREAT
+berlin_russian4_needtogetflaks,,voiceovers/ru/berlin/Berlin_RusSoldier4_001.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,berlin,SUBTITLE_BERLIN_RUSSIAN4_NEEDTOGETFLAKS
+berlin_russian3_letsgetthenextone,,voiceovers/ru/berlin/Berlin_RusSoldier3_002alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,berlin,SUBTITLE_BERLIN_RUSSIAN3_LETSGETTHENEXTONE
+berlin_russian1_tothenextgun,,voiceovers/ru/berlin/Berlin_RusSoldier1_003alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,berlin,SUBTITLE_BERLIN_RUSSIAN1_TOTHENEXTGUN
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+berlin_russian4_holdtheline,,voiceovers/ru/berlin/Berlin_RusSoldier4_002.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,berlin,SUBTITLE_BERLIN_RUSSIAN4_HOLDTHELINE
+berlin_russian2_untiltanksthru,,voiceovers/ru/berlin/Berlin_RusSoldier2_003.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,berlin,SUBTITLE_BERLIN_RUSSIAN2_UNTILTANKSTHRU
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+berlin_russian1_comeonletsgo,,voiceovers/ru/berlin/Berlin_RusSoldier1_004.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,berlin,SUBTITLE_BERLIN_RUSSIAN1_COMEONLETSGO
+berlin_russian2_forwardreichstag,,voiceovers/ru/berlin/Berlin_RusSoldier2_004alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,berlin,SUBTITLE_BERLIN_RUSSIAN2_FORWARDREICHSTAG
+berlin_russian3_downwithfascism,,voiceovers/ru/berlin/Berlin_RusSoldier3_003.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,berlin,SUBTITLE_BERLIN_RUSSIAN3_DOWNWITHFASCISM
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+berlin_russian3_watchoutgetdown,,voiceovers/ru/berlin/Berlin_RusSoldier3_004.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,berlin,SUBTITLE_BERLIN_RUSSIAN3_WATCHOUTGETDOWN
+berlin_russian4_supresswindows,,voiceovers/ru/berlin/Berlin_RusSoldier4_003alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,berlin,SUBTITLE_BERLIN_RUSSIAN4_SUPRESSWINDOWS
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+berlin_russian1_uptotherooftop,,voiceovers/ru/berlin/Berlin_RusSoldier1_005.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,berlin,SUBTITLE_BERLIN_RUSSIAN1_UPTOTHEROOFTOP
+berlin_russian2_flagtoroof,,voiceovers/ru/berlin/Berlin_RusSoldier2_005alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,berlin,SUBTITLE_BERLIN_RUSSIAN2_FLAGTOROOF
+berlin_russian1_berlinisours,,voiceovers/ru/berlin/Berlin_RusSoldier1_006.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,berlin,SUBTITLE_BERLIN_RUSSIAN1_BERLINISOURS
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+#Tank Drive Series,,,0.85,0.85,,,80,5000,voice,,,,,,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+tankdrive_damaged,1,voiceovers/ru/tankdrive/a/Tank_A_Damaged_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_DAMAGED_1
+tankdrive_damaged,2,voiceovers/ru/tankdrive/a/Tank_A_Damaged_02.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_DAMAGED_1
+tankdrive_damaged,3,voiceovers/ru/tankdrive/a/Tank_A_Damaged_03.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_DAMAGED_3
+tankdrive_damaged,4,voiceovers/ru/tankdrive/a/Tank_A_Damaged_04.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_DAMAGED_4
+tankdrive_damaged,5,voiceovers/ru/tankdrive/a/Tank_A_Damaged_05.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_DAMAGED_4
+tankdrive_damaged,6,voiceovers/ru/tankdrive/a/Tank_A_Damaged_06.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_DAMAGED_6
+tankdrive_damaged,7,voiceovers/ru/tankdrive/a/Tank_A_Damaged_07.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_DAMAGED_7
+tankdrive_damaged,8,voiceovers/ru/tankdrive/a/Tank_A_Damaged_08.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_DAMAGED_8
+tankdrive_damaged,9,voiceovers/ru/tankdrive/a/Tank_A_Damaged_09.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_DAMAGED_9
+tankdrive_damaged,10,voiceovers/ru/tankdrive/a/Tank_A_Damaged_10.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_DAMAGED_9
+tankdrive_damaged,11,voiceovers/ru/tankdrive/b/Tank_B_Damaged_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_DAMAGED_9
+tankdrive_damaged,12,voiceovers/ru/tankdrive/b/Tank_B_Damaged_02.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_DAMAGED_12
+tankdrive_damaged,13,voiceovers/ru/tankdrive/b/Tank_B_Damaged_03.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_DAMAGED_4
+tankdrive_damaged,14,voiceovers/ru/tankdrive/b/Tank_B_Damaged_04.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_DAMAGED_4
+tankdrive_damaged,15,voiceovers/ru/tankdrive/b/Tank_B_Damaged_05.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_DAMAGED_6
+tankdrive_damaged,16,voiceovers/ru/tankdrive/c/Tank_C_Damaged_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_DAMAGED_7
+tankdrive_damaged,17,voiceovers/ru/tankdrive/c/Tank_C_Damaged_02.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_DAMAGED_4
+tankdrive_damaged,18,voiceovers/ru/tankdrive/c/Tank_C_Damaged_03.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_DAMAGED_8
+tankdrive_damaged,19,voiceovers/ru/tankdrive/c/Tank_C_Damaged_04.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_DAMAGED_6
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+tankdrive_kill,1,voiceovers/ru/tankdrive/a/Tank_A_Kill_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_KILL_1
+tankdrive_kill,2,voiceovers/ru/tankdrive/a/Tank_A_Kill_02.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_KILL_2
+tankdrive_kill,3,voiceovers/ru/tankdrive/a/Tank_A_Kill_03.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_KILL_3
+tankdrive_kill,4,voiceovers/ru/tankdrive/a/Tank_A_Kill_04.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_KILL_4
+tankdrive_kill,5,voiceovers/ru/tankdrive/a/Tank_A_Kill_05.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_KILL_5
+tankdrive_kill,6,voiceovers/ru/tankdrive/b/Tank_B_Kill_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_KILL_3
+tankdrive_kill,7,voiceovers/ru/tankdrive/b/Tank_B_Kill_02.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_KILL_4
+tankdrive_kill,8,voiceovers/ru/tankdrive/b/Tank_B_Kill_03.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_KILL_5
+tankdrive_kill,9,voiceovers/ru/tankdrive/b/Tank_B_Kill_04.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_KILL_9
+tankdrive_kill,10,voiceovers/ru/tankdrive/b/Tank_B_Kill_05.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_KILL_10
+tankdrive_kill,11,voiceovers/ru/tankdrive/b/Tank_B_Kill_06.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_KILL_2
+tankdrive_kill,12,voiceovers/ru/tankdrive/b/Tank_B_Kill_07.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_KILL_2
+tankdrive_kill,13,voiceovers/ru/tankdrive/c/Tank_C_Kill_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_KILL_2
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+tankdrive_sighted_east,1,voiceovers/ru/tankdrive/a/Tank_A_Sighted_East.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_SIGHTED_EAST_1
+tankdrive_sighted_east,2,voiceovers/ru/tankdrive/b/Tank_B_Sighted_East.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_SIGHTED_EAST_1
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+tankdrive_sighted_west,1,voiceovers/ru/tankdrive/a/Tank_A_Sighted_West.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_SIGHTED_WEST_1
+tankdrive_sighted_west,2,voiceovers/ru/tankdrive/b/Tank_B_Sighted_West.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_SIGHTED_WEST_1
+tankdrive_sighted_west,3,voiceovers/ru/tankdrive/c/Tank_C_Sighted_West.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_SIGHTED_WEST_1
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+tankdrive_sighted_north,1,voiceovers/ru/tankdrive/a/Tank_A_Sighted_North.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_SIGHTED_NORTH_1
+tankdrive_sighted_north,2,voiceovers/ru/tankdrive/b/Tank_B_Sighted_North.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_SIGHTED_NORTH_1
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+tankdrive_sighted_south,1,voiceovers/ru/tankdrive/a/Tank_A_Sighted_South.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_SIGHTED_SOUTH_1
+tankdrive_sighted_south,2,voiceovers/ru/tankdrive/b/Tank_B_Sighted_South.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_SIGHTED_SOUTH_1
+tankdrive_sighted_south,3,voiceovers/ru/tankdrive/c/Tank_C_Sighted_South.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_SIGHTED_SOUTH_1
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+tankdrive_sighted_stream,1,voiceovers/ru/tankdrive/a/Tank_A_Sighted_Stream.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_SIGHTED_STREAM_1
+tankdrive_sighted_stream,2,voiceovers/ru/tankdrive/b/Tank_B_Sighted_Stream.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_SIGHTED_STREAM_1
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+tankdrive_sighted_enemy,1,voiceovers/ru/tankdrive/a/Tank_A_Sighted_Enemy.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_SIGHTED_ENEMY_1
+tankdrive_sighted_enemy,2,voiceovers/ru/tankdrive/b/Tank_B_Sighted_Enemy.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_SIGHTED_ENEMY_1
+tankdrive_sighted_enemy,3,voiceovers/ru/tankdrive/c/Tank_C_Sighted_Enemy.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_SIGHTED_ENEMY_1
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+tankdrive_sighted_german,1,voiceovers/ru/tankdrive/a/Tank_A_Sighted_German.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_SIGHTED_GERMAN_1
+tankdrive_sighted_german,2,voiceovers/ru/tankdrive/b/Tank_B_Sighted_German.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_SIGHTED_GERMAN_1
+tankdrive_sighted_german,3,voiceovers/ru/tankdrive/c/Tank_C_Sighted_German.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_SIGHTED_GERMAN_1
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+tankdrive_sighted_panzer,1,voiceovers/ru/tankdrive/a/Tank_A_Sighted_Panzer.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_SIGHTED_PANZER_1
+tankdrive_sighted_panzer,2,voiceovers/ru/tankdrive/b/Tank_B_Sighted_Panzer.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_SIGHTED_PANZER_1
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+tankdrive_sighted_tiger,1,voiceovers/ru/tankdrive/a/Tank_A_Sighted_Tiger.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_SIGHTED_TIGER_1
+tankdrive_sighted_tiger,2,voiceovers/ru/tankdrive/b/Tank_B_Sighted_Tiger.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_SIGHTED_TIGER_1
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+tankdrive_wrongway,1,voiceovers/ru/tankdrive/a/Tank_A_WrongWay_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_WRONGWAY_1
+tankdrive_wrongway,2,voiceovers/ru/tankdrive/a/Tank_A_WrongWay_02.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_FACTORY_PRIVATE1_IDIOT
+tankdrive_wrongway,3,voiceovers/ru/tankdrive/a/Tank_A_WrongWay_03.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_FACTORY_PRIVATE1_IDIOT
+tankdrive_wrongway,4,voiceovers/ru/tankdrive/a/Tank_A_WrongWay_04.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_WRONGWAY_4
+tankdrive_wrongway,5,voiceovers/ru/tankdrive/a/Tank_A_WrongWay_05.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_WRONGWAY_5
+tankdrive_wrongway,6,voiceovers/ru/tankdrive/a/Tank_A_WrongWay_06.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_WRONGWAY_6
+tankdrive_wrongway,7,voiceovers/ru/tankdrive/a/Tank_A_WrongWay_07.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_WRONGWAY_7
+tankdrive_wrongway,8,voiceovers/ru/tankdrive/a/Tank_A_WrongWay_08.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_FACTORY_PRIVATE1_WRONGWAY
+tankdrive_wrongway,9,voiceovers/ru/tankdrive/a/Tank_A_WrongWay_09.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_WRONGWAY_9
+tankdrive_wrongway,10,voiceovers/ru/tankdrive/a/Tank_A_WrongWay_10.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_WRONGWAY_10
+tankdrive_wrongway,11,voiceovers/ru/tankdrive/b/Tank_B_WrongWay_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_WRONGWAY_11
+tankdrive_wrongway,12,voiceovers/ru/tankdrive/b/Tank_B_WrongWay_02.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_FACTORY_PRIVATE1_IDIOT
+tankdrive_wrongway,13,voiceovers/ru/tankdrive/b/Tank_B_WrongWay_03.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_WRONGWAY_4
+tankdrive_wrongway,14,voiceovers/ru/tankdrive/b/Tank_B_WrongWay_04.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_FACTORY_PRIVATE1_WRONGWAY
+tankdrive_wrongway,15,voiceovers/ru/tankdrive/b/Tank_B_WrongWay_05.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_WRONGWAY_7
+tankdrive_wrongway,16,voiceovers/ru/tankdrive/b/Tank_B_WrongWay_06.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_WRONGWAY_1
+tankdrive_wrongway,17,voiceovers/ru/tankdrive/b/Tank_B_WrongWay_07.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_WRONGWAY_10
+tankdrive_wrongway,18,voiceovers/ru/tankdrive/b/Tank_B_WrongWay_08.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_WRONGWAY_5
+tankdrive_wrongway,19,voiceovers/ru/tankdrive/b/Tank_B_WrongWay_09.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_WRONGWAY_9
+tankdrive_wrongway,20,voiceovers/ru/tankdrive/c/Tank_C_WrongWay_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_WRONGWAY_6
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+tankdrive_hurryup,9,voiceovers/ru/tankdrive/a/Tank_A_WrongWay_09.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,tankdrivecountry tankdrivetown,SUBTITLE_TANKDRIVE_WRONGWAY_9
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+#US Campaign Intro Briefing,,,0.85,0.85,,,80,5000,voice,,,,,,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+us_introbrief_foley1,,voiceovers/us/intro/Intro_Brief_Foley_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,us_intro,
+us_introbrief_foley2,,voiceovers/us/intro/Intro_Brief_Foley_02.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,us_intro,
+us_introbrief_foley3,,voiceovers/us/intro/Intro_Brief_Foley_03.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,us_intro,
+us_introbrief_foley4,,voiceovers/us/intro/Intro_Brief_Foley_04.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,us_intro,
+us_introbrief_foley5,,voiceovers/us/intro/Intro_Brief_Foley_05.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,us_intro,
+us_introbrief_foley6,,voiceovers/us/intro/Intro_Brief_Foley_06.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,us_intro
+us_introbrief_foley7,,voiceovers/us/intro/Intro_Brief_Foley_07.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,us_intro
+us_introbrief_foley8,,voiceovers/us/intro/Intro_Brief_Foley_08.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,us_intro
+us_introbrief_foley9,,voiceovers/us/intro/Intro_Brief_Foley_09.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,us_intro
+us_introbrief_foley10,,voiceovers/us/intro/Intro_Brief_Foley_10.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,us_intro
+us_introbrief_foley11,,voiceovers/us/intro/Intro_Brief_Foley_11.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,us_intro
+us_introbrief_foley12,,voiceovers/us/intro/Intro_Brief_Foley_12.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,us_intro
+us_introbrief_foley13,,voiceovers/us/intro/Intro_Brief_Foley_13.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,us_intro
+us_introbrief_foley14,,voiceovers/us/intro/Intro_Brief_Foley_14.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,us_intro
+us_introbrief_foley15,,voiceovers/us/intro/Intro_Brief_Foley_15.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,us_intro
+us_introbrief_foley16,,voiceovers/us/intro/Intro_Brief_Foley_16.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,us_intro
+us_introbrief_foley17,,voiceovers/us/intro/Intro_Brief_Foley_17.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,us_intro
+us_introbrief_foley18,,voiceovers/us/intro/Intro_Brief_Foley_18.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,us_intro
+us_introbrief_foley19,,voiceovers/us/intro/Intro_Brief_Foley_19.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,us_intro
+us_introbrief_foley20,,voiceovers/us/intro/Intro_Brief_Foley_20.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,us_intro
+us_introbrief_foley21,,voiceovers/us/intro/Intro_Brief_Foley_21.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,us_intro
+us_introbrief_foley22,,voiceovers/us/intro/Intro_Brief_Foley_22.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,us_intro
+,,,0.85,0.85,,,80,5000,voice,,,,,
+#US Campaign Mid Briefing,,,0.85,0.85,,,80,5000,voice,,,,,
+,,,0.85,0.85,,,80,5000,voice,,,,,
+us_midbrief_foley1,,voiceovers/us/mid/Mid_Brief_Foley_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,us_mid
+us_midbrief_foley2,,voiceovers/us/mid/Mid_Brief_Foley_02.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,us_mid
+us_midbrief_foley3,,voiceovers/us/mid/Mid_Brief_Foley_03.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,us_mid
+us_midbrief_foley4,,voiceovers/us/mid/Mid_Brief_Foley_04.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,us_mid
+us_midbrief_foley5,,voiceovers/us/mid/Mid_Brief_Foley_05.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,us_mid
+us_midbrief_foley6,,voiceovers/us/mid/Mid_Brief_Foley_06.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,us_mid
+us_midbrief_foley7,,voiceovers/us/mid/Mid_Brief_Foley_07.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,us_mid
+us_midbrief_foley8,,voiceovers/us/mid/Mid_Brief_Foley_08.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,us_mid
+us_midbrief_foley9,,voiceovers/us/mid/Mid_Brief_Foley_09.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,us_mid
+,,,0.85,0.85,,,80,5000,voice,,,,,
+#Narrator Allied Briefing,,,0.85,0.85,,,80,5000,voice,,,,,
+,,,0.85,0.85,,,80,5000,voice,,,,,
+allied_brief_narrator1,,voiceovers/narrator/AlliedBrief_Narr_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,allied_start
+allied_brief_narrator2,,voiceovers/narrator/AlliedBrief_Narr_02.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,allied_start
+allied_brief_narrator3,,voiceovers/narrator/AlliedBrief_Narr_03.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,allied_start
+allied_brief_narrator4,,voiceovers/narrator/AlliedBrief_Narr_04a.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,allied_start
+allied_brief_narrator5,,voiceovers/narrator/AlliedBrief_Narr_04b.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,allied_start
+allied_brief_narrator6,,voiceovers/narrator/AlliedBrief_Narr_04c.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,allied_start
+allied_brief_narrator7,,voiceovers/narrator/AlliedBrief_Narr_05.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,allied_start
+allied_brief_narrator8,,voiceovers/narrator/AlliedBrief_Narr_06.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,allied_start
+allied_brief_narrator9,,voiceovers/narrator/AlliedBrief_Narr_07.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,allied_start
+allied_brief_narrator10,,voiceovers/narrator/AlliedBrief_Narr_08.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,allied_start
+,,,0.85,0.85,,,80,5000,voice,,,,,
+#UK Campaign 6th Airborne,,,0.85,0.85,,,80,5000,voice,,,,,
+,,,0.85,0.85,,,80,5000,voice,,,,,
+uk_brief_price1,,voiceovers/uk/brief6ab/Brief_Price_001.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,uk_6ab
+uk_brief_price2,,voiceovers/uk/brief6ab/Brief_Price_002.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,uk_6ab
+uk_brief_price3,,voiceovers/uk/brief6ab/Brief_Price_003alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,uk_6ab
+uk_brief_price4,,voiceovers/uk/brief6ab/Brief_Price_004alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,uk_6ab
+uk_brief_price5,,voiceovers/uk/brief6ab/Brief_Price_005alt.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,uk_6ab
+uk_brief_price6,,voiceovers/uk/brief6ab/Brief_Price_006.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,uk_6ab
+uk_brief_price7,,voiceovers/uk/brief6ab/Brief_Price_007.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,uk_6ab
+,,,0.85,0.85,,,80,5000,voice,,,,,
+#UK Campaign SAS,,,0.85,0.85,,,80,5000,voice,,,,,
+,,,0.85,0.85,,,80,5000,voice,,,,,
+uk_brief_waters1,,voiceovers/uk/BriefSAS/SASBrief_Waters_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,uk_SAS
+uk_brief_waters2,,voiceovers/uk/BriefSAS/SASBrief_Waters_02.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,uk_SAS
+uk_brief_waters3,,voiceovers/uk/BriefSAS/SASBrief_Waters_03.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,uk_SAS
+uk_brief_waters4,,voiceovers/uk/BriefSAS/SASBrief_Waters_04.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,uk_SAS
+uk_brief_waters5,,voiceovers/uk/BriefSAS/SASBrief_Waters_05.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,uk_SAS
+uk_brief_waters6,,voiceovers/uk/BriefSAS/SASBrief_Waters_06.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,uk_SAS
+uk_brief_waters7,,voiceovers/uk/BriefSAS/SASBrief_Waters_07.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,uk_SAS
+uk_brief_waters8,,voiceovers/uk/BriefSAS/SASBrief_Waters_08.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,uk_SAS
+uk_brief_waters9,,voiceovers/uk/BriefSAS/SASBrief_Waters_09.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,uk_SAS
+uk_brief_waters10,,voiceovers/uk/BriefSAS/SASBrief_Waters_10.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,uk_SAS,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+#End Game,,,0.85,0.85,,,80,5000,voice,,,,,,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+end_alexei1,,voiceovers/narrator/Endgame_Narr_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,allied_end,
+end_alexei2,,voiceovers/narrator/Endgame_Narr_02.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,allied_end,
+end_alexei3,,voiceovers/narrator/Endgame_Narr_03.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,allied_end,
+end_alexei4,,voiceovers/narrator/Endgame_Narr_04.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,allied_end,
+end_alexei5,,voiceovers/narrator/Endgame_Narr_05.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,allied_end,
+end_alexei6,,voiceovers/narrator/Endgame_Narr_06.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,allied_end,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+#Pegasus Night,,,0.85,0.85,,,80,5000,voice,,,,,,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+pegnight_glider1,,voiceovers/uk/pegnight/PegNight_Glider_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,SUBTITLE_PEGNIGHT_GLIDER1
+pegnight_glider2,,voiceovers/uk/pegnight/PegNight_Glider_02.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,SUBTITLE_PEGNIGHT_GLIDER2
+pegnight_glider3,,voiceovers/uk/pegnight/PegNight_Copilot_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,SUBTITLE_PEGNIGHT_GLIDER3
+pegnight_glider4,,voiceovers/uk/pegnight/PegNight_Glider_03.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,SUBTITLE_PEGNIGHT_GLIDER4
+pegnight_glider5,,voiceovers/uk/pegnight/PegNight_Copilot_02.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,SUBTITLE_PEGNIGHT_GLIDER5
+pegnight_glider6,,voiceovers/uk/pegnight/PegNight_Glider_04.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,SUBTITLE_PEGNIGHT_GLIDER6
+pegnight_glider7,,voiceovers/uk/pegnight/PegNight_Glider_05.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,SUBTITLE_PEGNIGHT_GLIDER7
+pegnight_glider8,,voiceovers/uk/pegnight/PegNight_Glider_06.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,SUBTITLE_PEGNIGHT_GLIDER8
+pegnight_glider9,,voiceovers/uk/pegnight/PegNight_Glider_07.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,SUBTITLE_PEGNIGHT_GLIDER9
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+pegnight_crash1,,voiceovers/uk/pegnight/PegNight_Crash_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,SUBTITLE_PEGNIGHT_CRASH1
+pegnight_crash2,,voiceovers/uk/pegnight/PegNight_Crash_02.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,SUBTITLE_PEGNIGHT_CRASH2
+pegnight_crash3,,voiceovers/uk/pegnight/PegNight_Crash_03.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,SUBTITLE_PEGNIGHT_CRASH3
+pegnight_crash4,,voiceovers/uk/pegnight/PegNight_Crash_04.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,SUBTITLE_PEGNIGHT_CRASH4
+pegnight_crash5,,voiceovers/uk/pegnight/PegNight_Crash_05.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,SUBTITLE_PEGNIGHT_CRASH5
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+pegnight_guard1,,voiceovers/uk/pegnight/PegNight_Ger_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,
+pegnight_guard2,,voiceovers/uk/pegnight/PegNight_Ger_02.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,
+pegnight_guard3,,voiceovers/uk/pegnight/PegNight_Ger_03.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,
+pegnight_guard4,,voiceovers/uk/pegnight/PegNight_Ger_04.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+pegasusnight_enemy_alerted,,null2.wav,0.85,0.85,,,80,5000,voice,streamed,,,,pegasusnight,
+pegasusnight_enemy_openfire,,null2.wav,0.85,0.85,,,80,5000,voice,streamed,,,,pegasusnight,
+pegasusnight_enemy_sighted,,null2.wav,0.85,0.85,,,80,5000,voice,streamed,,,,pegasusnight,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+pegnight_price1,,voiceovers/uk/pegnight/PegNight_Price_01a.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,SUBTITLE_PEGNIGHT_PRICE1
+pegnight_price2,,voiceovers/uk/pegnight/PegNight_Price_01b.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,SUBTITLE_PEGNIGHT_PRICE2
+pegnight_price3,,voiceovers/uk/pegnight/PegNight_Price_02a.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,SUBTITLE_PEGNIGHT_PRICE3
+pegnight_price4,,voiceovers/uk/pegnight/PegNight_Price_02b.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,SUBTITLE_PEGNIGHT_PRICE4
+pegnight_price5,,voiceovers/uk/pegnight/PegNight_Price_03.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,SUBTITLE_PEGNIGHT_PRICE5
+pegnight_price6,,voiceovers/uk/pegnight/PegNight_Price_04.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,SUBTITLE_PEGNIGHT_PRICE6
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+pegnight_mills1,,voiceovers/uk/pegnight/PegNight_Mills_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,SUBTITLE_PEGNIGHT_MILLS1
+pegnight_mills2,,voiceovers/uk/pegnight/PegNight_Mills_02.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,SUBTITLE_PEGNIGHT_MILLS2
+pegnight_mills3,,voiceovers/uk/pegnight/PegNight_Mills_03.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,SUBTITLE_PEGNIGHT_MILLS3
+pegnight_mills4,,voiceovers/uk/pegnight/PegNight_Mills_04.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,SUBTITLE_PEGNIGHT_MILLS4
+pegnight_mills5,,voiceovers/uk/pegnight/PegNight_Mills_05.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,SUBTITLE_PEGNIGHT_MILLS5
+pegnight_mills6,,voiceovers/uk/pegnight/PegNight_Mills_06.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,SUBTITLE_PEGNIGHT_MILLS6
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+pegnight_victory1,,voiceovers/uk/pegnight/PegNight_Victory_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,SUBTITLE_PEGNIGHT_VICTORY1
+pegnight_victory2,,voiceovers/uk/pegnight/PegNight_Victory_02.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,SUBTITLE_PEGNIGHT_VICTORY2
+pegnight_victory3,,voiceovers/uk/pegnight/PegNight_Victory_03.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,SUBTITLE_PEGNIGHT_VICTORY3
+pegnight_victory4,,voiceovers/uk/pegnight/PegNight_Victory_04.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,SUBTITLE_PEGNIGHT_VICTORY3
+pegnight_victory5,,voiceovers/uk/pegnight/PegNight_Victory_05.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusnight,SUBTITLE_PEGNIGHT_VICTORY5
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+#Pegasus Day,,,0.85,0.85,,,80,5000,voice,,,,,,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+pegday_intro1,,voiceovers/uk/pegday/PegDay_Lieut_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusday,SUBTITLE_PEGDAY_INTRO1
+pegday_intro2,,voiceovers/uk/pegday/PegDay_Price_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusday,SUBTITLE_PEGDAY_INTRO2
+pegday_intro3,,voiceovers/uk/pegday/PegDay_Friend1_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusday,SUBTITLE_PEGDAY_INTRO3
+pegday_intro4,,voiceovers/uk/pegday/PegDay_Friend2_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusday,SUBTITLE_PEGDAY_INTRO4
+pegday_intro5,,voiceovers/uk/pegday/PegDay_Price_02.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusday,SUBTITLE_PEGDAY_INTRO5
+pegday_intro6,,voiceovers/uk/pegday/PegDay_Lieut_02.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusday,SUBTITLE_PEGDAY_INTRO6
+pegday_intro7,,voiceovers/uk/pegday/PegDay_Friend1_02.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusday,SUBTITLE_PEGDAY_INTRO7
+pegday_intro8,,voiceovers/uk/pegday/PegDay_Friend2_02.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusday,SUBTITLE_PEGDAY_INTRO8
+pegday_intro9,,voiceovers/uk/pegday/PegDay_Price_03.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusday,SUBTITLE_PEGDAY_INTRO9
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+pegday_retreat1,,voiceovers/uk/pegday/PegDay_Price_04a.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusday,SUBTITLE_PEGDAY_RETREAT1
+pegday_retreat2,,voiceovers/uk/pegday/PegDay_Price_04b.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusday,SUBTITLE_PEGDAY_RETREAT2
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+pegday_tank_southwest1,,voiceovers/uk/pegday/PegDay_Price_05a.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusday,SUBTITLE_PEGDAY_TANK_SOUTHWEST1
+pegday_tank_southwest2,,voiceovers/uk/pegday/PegDay_Price_05b.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusday,SUBTITLE_PEGDAY_TANK_SOUTHWEST2
+pegday_tank_southeast1,,voiceovers/uk/pegday/PegDay_Price_05c.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusday,SUBTITLE_PEGDAY_TANK_SOUTHEAST1
+pegday_tank_southeast2,,voiceovers/uk/pegday/PegDay_Price_05d.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusday,SUBTITLE_PEGDAY_TANK_SOUTHEAST2
+pegday_tank_northeast1,,voiceovers/uk/pegday/PegDay_Price_05e.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusday,SUBTITLE_PEGDAY_TANK_NORTHEAST1
+pegday_tank_northeast2,,voiceovers/uk/pegday/PegDay_Price_05f.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusday,SUBTITLE_PEGDAY_TANK_NORTHEAST2
+pegday_tank_northeast3,,voiceovers/uk/pegday/PegDay_Price_05g.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusday,SUBTITLE_PEGDAY_TANK_NORTHEAST3
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+pegday_victory1,,voiceovers/uk/pegday/PegDay_Price_06.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusday,SUBTITLE_PEGDAY_VICTORY1
+pegday_victory2,,voiceovers/uk/pegday/PegDay_Price_07.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pegasusday,SUBTITLE_PEGDAY_VICTORY2
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+#Pavlov's House,,,0.85,0.85,,,80,5000,voice,,,,,,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+ph_pavlov1,,voiceovers/ru/ph/Pavlov_Kamarov_001_StayInDitch.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pavlov,SUBTITLE_PH_PAVLOV1
+ph_pavlov2,,voiceovers/ru/ph/Pavlov_Kamarov_003PvtKolavenkoFastest.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pavlov,SUBTITLE_PH_PAVLOV2
+ph_pavlov3,,voiceovers/ru/ph/Pavlov_Kovalenko_001alt_MeNoThankYou.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pavlov,SUBTITLE_PH_PAVLOV3
+ph_pavlov4,,voiceovers/ru/ph/Pavlov_Kamarov_012_ThatIsAnOrder.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pavlov,SUBTITLE_PH_PAVLOV4
+ph_pavlov5,,voiceovers/ru/ph/Pavlov_Kamarov_006 alt_SnipWindows.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pavlov,SUBTITLE_PH_PAVLOV5
+ph_pavlov6,,voiceovers/ru/ph/Pavlov_Kamarov_005_TheyveGotUsZeroed.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pavlov,SUBTITLE_PH_PAVLOV6
+ph_pavlov7,,voiceovers/ru/ph/Pavlov_Kamarov_007_SecureTheBuilding.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pavlov,SUBTITLE_PH_PAVLOV7
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+ph_pavlov_basement,,voiceovers/ru/ph/Pavlov_Clear_0.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pavlov,SUBTITLE_PH_PAVLOV_BASEMENT
+ph_pavlov_firstfloor,,voiceovers/ru/ph/Pavlov_Clear_1.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pavlov,SUBTITLE_PH_PAVLOV_FIRSTFLOOR
+ph_pavlov_secondfloor,,voiceovers/ru/ph/Pavlov_Clear_2.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pavlov,SUBTITLE_PH_PAVLOV_SECONDFLOOR
+ph_pavlov_thirdfloor,,voiceovers/ru/ph/Pavlov_Clear_3.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pavlov,SUBTITLE_PH_PAVLOV_THIRDFLOOR
+ph_pavlov_fourthfloor,,voiceovers/ru/ph/Pavlov_Clear_4.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pavlov,SUBTITLE_PH_PAVLOV_FOURTHFLOOR
+ph_pavlov_topfloor,,voiceovers/ru/ph/Pavlov_Clear_Top.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pavlov,SUBTITLE_PH_PAVLOV_TOPFLOOR
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+ph_pavlov_looking1,,voiceovers/ru/ph/Pavlov_Looking1.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pavlov,SUBTITLE_PH_PAVLOV_LOOKING1
+ph_pavlov_looking2,,voiceovers/ru/ph/Pavlov_Looking2.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pavlov,SUBTITLE_PH_PAVLOV_LOOKING2
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+ph_pavlov_defend1,,voiceovers/ru/ph/Pavlov_Kamarov_009_ComradeAlexi.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pavlov,SUBTITLE_PH_PAVLOV_DEFEND1
+ph_pavlov_defend2,,voiceovers/ru/ph/Pavlov_Kamarov_010_HereTheyCome.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pavlov,SUBTITLE_PH_PAVLOV_DEFEND2
+ph_pavlov_defend3,,voiceovers/ru/ph/Pavlov_ATRiflesReady.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pavlov,SUBTITLE_PH_PAVLOV_DEFEND3
+ph_pavlov_defend4,,voiceovers/ru/ph/Pavlov_Kamarov_011_MachineGuns.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pavlov,SUBTITLE_PH_PAVLOV_DEFEND4
+ph_pavlov_defend5,,voiceovers/ru/ph/Pavlov_MGReady.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pavlov,SUBTITLE_PH_PAVLOV_DEFEND5
+ph_pavlov_defend6,,voiceovers/ru/ph/Pavlov_ReadyComrades.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pavlov,SUBTITLE_PH_PAVLOV_DEFEND6
+ph_pavlov_defend7,,voiceovers/ru/ph/Pavlov_HoldThisPos.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,pavlov,SUBTITLE_PH_PAVLOV_DEFEND7
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+#Red Square,,,0.85,0.85,,,80,5000,voice,,,,,,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+redsquare_clever1,,voiceovers/ru/redsquare/Redsquare_Clever_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,SUBTITLE_REDSQUARE_CLEVER1
+redsquare_clever2,,voiceovers/ru/redsquare/Redsquare_Clever_02.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,SUBTITLE_REDSQUARE_CLEVER2
+redsquare_clever3,,voiceovers/ru/redsquare/Redsquare_Clever_03.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,SUBTITLE_REDSQUARE_CLEVER3
+redsquare_clever4,,voiceovers/ru/redsquare/Redsquare_Clever_04.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,SUBTITLE_REDSQUARE_CLEVER4
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+redsquare_commissar1_01,,voiceovers/ru/redsquare/Redsquare_Comm1_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,SUBTITLE_REDSQUARE_COMMISSAR1_01
+redsquare_commissar2_02,,voiceovers/ru/redsquare/Redsquare_Comm2_02.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,SUBTITLE_REDSQUARE_COMMISSAR2_02
+redsquare_commissar2_03,,voiceovers/ru/redsquare/Redsquare_Comm2_03.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,SUBTITLE_REDSQUARE_COMMISSAR2_03
+redsquare_commissar1_04,,voiceovers/ru/redsquare/Redsquare_Comm1_04.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,SUBTITLE_REDSQUARE_COMMISSAR1_04
+redsquare_commissar2_05,,voiceovers/ru/redsquare/Redsquare_Comm2_05.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,SUBTITLE_REDSQUARE_COMMISSAR2_05
+redsquare_commissar1_06,,voiceovers/ru/redsquare/Redsquare_Comm1_06.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,SUBTITLE_REDSQUARE_COMMISSAR1_06
+redsquare_commissar1_07,,voiceovers/ru/redsquare/Redsquare_Comm1_07.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,SUBTITLE_REDSQUARE_COMMISSAR1_07
+redsquare_commissar3_08,,voiceovers/stalingrad/Commissar1_line_86.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,SUBTITLE_REDSQUARE_COMMISSAR3_08
+redsquare_commissar3_09,,voiceovers/stalingrad/Commissar2_line_52.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,SUBTITLE_REDSQUARE_COMMISSAR3_09
+redsquare_commissar1_10,,voiceovers/stalingrad/Commissar3_Amb16.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,SUBTITLE_REDSQUARE_COMMISSAR1_10
+redsquare_commissar1_11,,voiceovers/stalingrad/Commissar4_Line_50.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,SUBTITLE_REDSQUARE_COMMISSAR1_11
+redsquare_commissar2_12,,voiceovers/stalingrad/Commissar4_Line_9.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,SUBTITLE_REDSQUARE_COMMISSAR2_12
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+redsquare_comm_defend,1,voiceovers/stalingrad/Commissar1_Line_29.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,SUBTITLE_REDSQUARE_COMM_DEFEND_1
+redsquare_comm_defend,2,voiceovers/stalingrad/Commissar1_Line_40.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,SUBTITLE_REDSQUARE_COMM_DEFEND_2
+redsquare_comm_defend,3,voiceovers/stalingrad/Commissar1_Line_26.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,SUBTITLE_REDSQUARE_COMM_DEFEND_3
+redsquare_comm_defend,4,voiceovers/stalingrad/Commissar4_Line_41.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,SUBTITLE_REDSQUARE_COMM_DEFEND_4
+redsquare_comm_defend,5,voiceovers/stalingrad/Commissar4_Line_49.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,SUBTITLE_REDSQUARE_COMM_DEFEND_5
+redsquare_comm_defend,6,voiceovers/ru/redsquare/Redsquare_Comm1a.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,SUBTITLE_REDSQUARE_COMMISSAR2_03
+redsquare_comm_defend,7,voiceovers/ru/redsquare/Redsquare_Comm1b.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,SUBTITLE_REDSQUARE_COMMISSAR2_05
+redsquare_comm_defend,8,voiceovers/ru/redsquare/Redsquare_Comm3a.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,SUBTITLE_REDSQUARE_COMMISSAR1_01
+redsquare_comm_defend,9,voiceovers/ru/redsquare/Redsquare_Comm3b.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,SUBTITLE_REDSQUARE_COMMISSAR2_03
+redsquare_comm_defend,10,voiceovers/ru/redsquare/Redsquare_Comm4a.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,SUBTITLE_REDSQUARE_COMMISSAR1_01
+redsquare_comm_defend,11,voiceovers/ru/redsquare/Redsquare_Comm4b.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,SUBTITLE_REDSQUARE_COMMISSAR1_07
+redsquare_comm_defend,12,voiceovers/ru/redsquare/Redsquare_Comm4c.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,SUBTITLE_REDSQUARE_COMM_DEFEND_12
+redsquare_comm_defend,13,voiceovers/ru/redsquare/Redsquare_Comm4d.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,SUBTITLE_REDSQUARE_COMM_DEFEND_13
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+redsquare_conscript_intro1,,voiceovers/ru/redsquare/Redsquare_Consc1_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,SUBTITLE_REDSQUARE_CONSCRIPT_INTRO1
+redsquare_conscript_intro2,,voiceovers/ru/redsquare/Redsquare_Consc2_02.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,SUBTITLE_REDSQUARE_CONSCRIPT_INTRO2
+redsquare_conscript_intro3,,voiceovers/ru/redsquare/Redsquare_Consc1_03.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,SUBTITLE_REDSQUARE_CONSCRIPT_INTRO3
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+redsquare_conscript_gen,1,voiceovers/ru/redsquare/Redsquare_Consc_Gen_01.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,
+redsquare_conscript_gen,2,voiceovers/ru/redsquare/Redsquare_Consc_Gen_02.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,
+redsquare_conscript_gen,3,voiceovers/ru/redsquare/Redsquare_Consc_Gen_03.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,
+redsquare_conscript_gen,4,voiceovers/ru/redsquare/Redsquare_Consc_Gen_04.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,
+redsquare_conscript_gen,5,voiceovers/ru/redsquare/Redsquare_Consc_Gen_05.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,
+redsquare_conscript_gen,6,voiceovers/ru/redsquare/Redsquare_Consc_Gen_06.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,
+redsquare_conscript_gen,7,voiceovers/ru/redsquare/Redsquare_Consc_Gen_07.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,
+redsquare_conscript_gen,9,voiceovers/stalingrad/Conscript1_Line_11b.wav,0.85,0.85,,,80,5000,voice,streamed,,,master,redsquare,
+,,,0.85,0.85,,,80,5000,voice,,,,,,
+redsquare_charge_walla,,null.wav,0.85,0.85,,,80,5000,voice,,,,master,redsquare,
+
+#Stalingrad Briefing,,,,,,,,,,,,,,
+
+stalingrad_briefing,,voiceovers/ru/stalingrad/stalingrad_briefing.wav,,,,,,,,streamed,,,master,ru_stalingrad

@@ -1,0 +1,34 @@
+// Note to translators:
+// If a sentence is the same in your language then please change it to "#same"
+//
+// eg:
+// LANG_ENGLISH  "HALT"
+// LANG_GERMAN   "#same"
+//
+// (This is so we can tell which strings have been signed-off as ok to be the same words for QA
+//  and because we do not store duplicate strings, which will then get exported again next time
+//  as being untranslated.)
+//
+VERSION             "1"
+CONFIG              "C:\mk\bin\StringEd\StringEd.cfg"
+FILENOTES           ""
+
+REFERENCE           GET_ACROSS_RED_SQUARE
+LANG_ENGLISH        "Get across Red Square."
+
+REFERENCE           FIND_A_GOOD_FLANKING
+LANG_ENGLISH        "Find a good flanking position."
+
+REFERENCE           ELIMINATE_THE_OFFICERS
+LANG_ENGLISH        "Eliminate the officers in the enemy blockade. (%s remaining)"
+
+REFERENCE           ELIMINATE_THE_OFFICERS_DONE
+LANG_ENGLISH        "Eliminate the officers in the enemy blockade."
+
+REFERENCE           RENDEZVOUS_WITH_MAJOR
+LANG_ENGLISH        "Rendezvous with Major Zubov via the train station."
+
+
+ENDMARKER
+
+

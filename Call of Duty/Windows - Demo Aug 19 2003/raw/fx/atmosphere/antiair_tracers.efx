@@ -1,0 +1,30 @@
+Emitter
+{
+	flags				emitFx
+
+	spawnFlags			axisFromSphere
+
+	life				500 1000
+
+	radius				17 1
+
+	angle				60 90 0 0 0 120
+
+	angleDelta			0 2 0 0 14 0
+
+	velocity			220 0 0 0 0 0
+
+	density				4
+
+	size
+	{
+		start			16
+		end				100
+		flags			linear
+	}
+
+	emitfx
+	[
+		fx/atmosphere/antiair_tracers2
+	]
+}

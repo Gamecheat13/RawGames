@@ -1,0 +1,12 @@
+{
+	{
+		map $texturename
+		rgbGen lightingDiffuse
+	}
+	{	// glowing additive layer
+		map $texturename
+		blendFunc add
+//		rgbGen wave sin 0.11 0.05 0 0.45
+		rgbGen wave sin 0.11 0.11 0 0.45
+	}
+}

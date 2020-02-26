@@ -1,0 +1,10 @@
+{
+	surfaceparm metal
+	{
+		map clamp $texturename
+		rgbGen lightingDiffuse
+		tcmod rotate -90
+		alphaFunc GE128
+		depthWrite
+	}
+}

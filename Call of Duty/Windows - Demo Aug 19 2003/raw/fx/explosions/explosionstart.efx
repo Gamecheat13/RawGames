@@ -1,0 +1,29 @@
+Emitter
+{
+	flags				emitFx
+
+	count				3
+
+	life				100
+
+	velocity			2700 3422 3411 2720 -3422 -3411
+
+	gravity				-600
+
+	density				4
+
+	variance			13 122
+
+	emitfx
+	[
+		fx/explosions/explosive_fire1
+	]
+}
+
+FxRunner
+{
+	playfx
+	[
+		fx/explosions/firethrow1
+	]
+}

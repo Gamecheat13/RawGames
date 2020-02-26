@@ -1,0 +1,163 @@
+"# If the text in the first column of a row starts with a # character, the row is ignored",,
+,,"If the first column for a row is blank, then the row is ignored"
+# The first non-comment line of a sound alias file specifies the key name for all values appearing in this column.,,
+"# This means it is safe to swap entire columns around, though you should never swap partial columns.",,
+"# You can invent new keys, but the game will ignore them if it doesn't know about them.",,
+"# You can leave out keys, but the ""name"" and ""file"" keys must always be present.",,
+
+,name,name of the alias that is used to play this sound (required)
+,sequence,"used to uniquely identify alias entries when more than one sound goes to an alias, used only to catch unwanted duplicates (default = 0)"
+,file,the name of the file that contains the sound data (required)
+,vol_min,"0 is silent, 1 is full volume (default = 1)"
+,vol_max,"0 is silent, 1 is full volume (default = same as vol_min)"
+,pitch_min,"1 is normal playback, 2 is twice as fast, 0.5 is half as fast (default = 1)"
+,pitch_max,"1 is normal playback, 2 is twice as fast, 0.5 is half as fast (default = same as pitch_min)"
+,dist_min,"within this distance in inches, the sound is always full volume (default = 120)"
+,dist_max,"outside this distance in inches, the sound is not started.  If left blank or set to 0, the sound will play from any distance.  This does not affect sound volume falloff."
+,channel,"auto, menu, weapon, voice, item, body, local, music, announcer (default = auto)",,,,,,,,,,,,,
+,type,streamed / loaded (default = loaded),,,,,,,,,,,,,
+,probability,weight to use for the weighted probability of playing this sound instead of another sound (default = 1),,,,,,,,,,,,,
+,loop,"whether this sound is ""looping"" or ""nonlooping"" (default = ""nonlooping"")",,,,,,,,,,,,,
+,masterslave,"if ""master"", this is a master sound.  If a number, then this sound won't exceed this volume whenever any master sound is playing.  If blank, then neither master nor slave.",,,,,,,,,,,,,
+,loadspec,"space-separated list of which maps should use this alias; eg, ""burnville dawnville"".  If blank, the alias is used on all maps.",,,,,,,,,,,,,
+
+name,sequence,file,vol_min,vol_max,pitch_min,pitch_max,dist_min,dist_max,channel,type,probability,loop,masterslave,loadspec,subtitle
+
+MP_announcer_allies_win,,voiceovers/mp/announcer/MP_Narr_AlliesWin.wav,1.5,1.5,,,1000000,,announcer,streamed,,,,all_mp,
+MP_announcer_axis_win,,voiceovers/mp/announcer/MP_Narr_AxisWin.wav,1.5,1.5,,,1000000,,announcer,streamed,,,,all_mp,
+MP_announcer_round_draw,,voiceovers/mp/announcer/MP_Narr_Draw.wav,1.5,1.5,,,1000000,,announcer,streamed,,,,all_mp,
+MP_announcer_bomb_planted,,voiceovers/mp/announcer/MP_Narr_Planted.wav,1.5,1.5,,,1000000,,announcer,streamed,,,,all_mp,
+MP_announcer_bomb_defused,,voiceovers/mp/announcer/MP_Narr_Defused.wav,1.5,1.5,,,1000000,,announcer,streamed,,,,all_mp,
+
+#MP American Commands,,,,,,,,,,,,,,,
+american_follow_me,,voiceovers/mp/us/cmds/us_cmd_followme.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+american_move_in,1,voiceovers/mp/us/cmds/us_cmd_movein01.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+american_move_in,2,voiceovers/mp/us/cmds/us_cmd_movein02.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+american_move_in,3,voiceovers/mp/us/cmds/us_cmd_movein03.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+american_fall_back,,voiceovers/mp/us/cmds/us_cmd_fallback.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+american_suppressing_fire,,voiceovers/mp/us/cmds/us_cmd_suppfire.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+american_attack_right_flank,1,voiceovers/mp/us/cmds/us_cmd_rtflank01.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+american_attack_right_flank,2,voiceovers/mp/us/cmds/us_cmd_rtflank02.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+american_attack_left_flank,,voiceovers/mp/us/cmds/us_cmd_ltflank.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+american_hold_position,,voiceovers/mp/us/cmds/us_cmd_holdpos.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+american_regroup,,voiceovers/mp/us/cmds/us_cmd_regroup01.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+american_stick_together,,voiceovers/mp/us/cmds/us_cmd_regroup02.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+,,,1,1,,,45,4800,voice,streamed,,,,
+#MP American Statements,,,1,1,,,45,4800,voice,streamed,,,,
+american_enemy_spotted,,voiceovers/mp/us/stat/us_stat_enemyspot.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+american_enemy_down,,voiceovers/mp/us/stat/us_stat_enemydn.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+american_in_position,,voiceovers/mp/us/stat/us_stat_inpos.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+american_area_secure,,voiceovers/mp/us/stat/us_stat_secure.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+american_enemy_grenade,,voiceovers/mp/us/stat/us_stat_gren01.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+american_grenade,,voiceovers/mp/us/stat/us_stat_gren02.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+american_sniper,,voiceovers/mp/us/stat/us_stat_sniper.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+american_need_reinforcements,,voiceovers/mp/us/stat/us_stat_reinforce.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+american_hold_fire,,voiceovers/mp/us/stat/us_stat_holdfire.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+,,,1,1,,,45,4800,voice,streamed,,,,
+#MP American Responses,,,1,1,,,45,4800,voice,streamed,,,,
+american_yes_sir,,voiceovers/mp/us/resp/us_resp_yessir.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+american_no_sir,,voiceovers/mp/us/resp/us_resp_nosir.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+american_on_my_way,,voiceovers/mp/us/resp/us_resp_onmyway.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+american_sorry,,voiceovers/mp/us/resp/us_resp_sorry.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+american_great_shot,,voiceovers/mp/us/resp/us_resp_greatshot.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+american_took_long_enough,,voiceovers/mp/us/resp/us_resp_tooklong.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+american_youre_crazy,,voiceovers/mp/us/resp/us_resp_crazy01.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+american_you_outta_your_mind,,voiceovers/mp/us/resp/us_resp_crazy02.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+american_youre_nuts,,voiceovers/mp/us/resp/us_resp_crazy03.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+,,,1,1,,,45,4800,voice,streamed,,,,
+#MP British Commands,,,1,1,,,45,4800,voice,streamed,,,,
+british_follow_me,1,voiceovers/mp/uk/cmds/uk_cmd_follow01.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+british_follow_me,2,voiceovers/mp/uk/cmds/uk_cmd_follow02.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+british_move_in,,voiceovers/mp/uk/cmds/uk_cmd_movein.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+british_fall_back,,voiceovers/mp/uk/cmds/uk_cmd_fallback.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+british_suppressing_fire,,voiceovers/mp/uk/cmds/uk_cmd_suppfire.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+british_attack_right_flank,,voiceovers/mp/uk/cmds/uk_cmd_rtflank.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+british_attack_left_flank,,voiceovers/mp/uk/cmds/uk_cmd_ltflank.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+british_hold_position,1,voiceovers/mp/uk/cmds/uk_cmd_holdpos01.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+british_hold_position,2,voiceovers/mp/uk/cmds/uk_cmd_holdpos02.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+british_regroup,,voiceovers/mp/uk/cmds/uk_cmd_regroup01.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+british_stick_together,,voiceovers/mp/uk/cmds/uk_cmd_regroup02.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+,,,1,1,,,45,4800,voice,streamed,,,,
+#MP British Statements,,,1,1,,,45,4800,voice,streamed,,,,
+british_enemy_spotted,,voiceovers/mp/uk/stat/uk_stat_spotted.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+british_enemy_down,,voiceovers/mp/uk/stat/uk_stat_enemydn.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+british_in_position,,voiceovers/mp/uk/stat/uk_stat_inpos.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+british_area_secure,,voiceovers/mp/uk/stat/uk_stat_secure.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+british_grenade,1,voiceovers/mp/uk/stat/uk_stat_gren01.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+british_grenade,2,voiceovers/mp/uk/stat/uk_stat_gren02.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+british_sniper,,voiceovers/mp/uk/stat/uk_stat_sniper.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+british_need_reinforcements,,voiceovers/mp/uk/stat/uk_stat_reinforce.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+british_hold_fire,1,voiceovers/mp/uk/stat/uk_stat_holdfire01.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+british_hold_fire,2,voiceovers/mp/uk/stat/uk_stat_holdfire02.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+,,,1,1,,,45,4800,voice,streamed,,,,
+#MP British Responses,,,1,1,,,45,4800,voice,streamed,,,,
+british_yes_sir,,voiceovers/mp/uk/resp/uk_resp_yessir.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+british_no_sir,1,voiceovers/mp/uk/resp/uk_resp_nosir01.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+british_no_sir,2,voiceovers/mp/uk/resp/uk_resp_nosir02.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+british_on_my_way,,voiceovers/mp/uk/resp/uk_resp_onmyway.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+british_sorry,,voiceovers/mp/uk/resp/uk_resp_sorry.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+british_great_shot,,voiceovers/mp/uk/resp/uk_resp_greatshot.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+british_took_long_enough,,voiceovers/mp/uk/resp/uk_resp_tooklong.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+british_youre_crazy,,voiceovers/mp/uk/resp/uk_resp_crazy.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+,,,1,1,,,45,4800,voice,streamed,,,,
+#MP Russian Commands,,,1,1,,,45,4800,voice,streamed,,,,
+russian_follow_me,,voiceovers/mp/ru/cmds/RU_cmd_followme.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+russian_move_in,,voiceovers/mp/ru/cmds/RU_cmd_movein.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+russian_fall_back,,voiceovers/mp/ru/cmds/RU_cmd_fallback.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+russian_suppressing_fire,,voiceovers/mp/ru/cmds/RU_cmd_suppress.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+russian_attack_right_flank,,voiceovers/mp/ru/cmds/RU_cmd_rightflank.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+russian_attack_left_flank,,voiceovers/mp/ru/cmds/RU_cmd_leftflank.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+russian_hold_position,,voiceovers/mp/ru/cmds/RU_cmd_holdpos.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+russian_regroup,,voiceovers/mp/ru/cmds/RU_cmd_regroup.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+,,,1,1,,,45,4800,voice,streamed,,,,
+#MP Russian Statements,,,1,1,,,45,4800,voice,streamed,,,,
+russian_enemy_spotted,,voiceovers/mp/ru/stat/RU_stat_spotted.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+russian_enemy_down,,voiceovers/mp/ru/stat/RU_stat_enemydn.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+russian_in_position,,voiceovers/mp/ru/stat/RU_stat_inpos.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+russian_area_secure,,voiceovers/mp/ru/stat/RU_stat_secure.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+russian_grenade,,voiceovers/mp/ru/stat/RU_stat_grenade.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+russian_sniper,,voiceovers/mp/ru/stat/RU_stat_sniper.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+russian_need_reinforcements,,voiceovers/mp/ru/stat/RU_stat_reinforce.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+russian_hold_fire,,voiceovers/mp/ru/stat/RU_stat_holdfire.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+,,,1,1,,,45,4800,voice,streamed,,,,
+#MP Russian Responses,,,1,1,,,45,4800,voice,streamed,,,,
+russian_yes_sir,,voiceovers/mp/ru/resp/RU_resp_yessir.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+russian_no_sir,1,voiceovers/mp/ru/resp/RU_resp_nosir_01.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+russian_no_sir,2,voiceovers/mp/ru/resp/RU_resp_nosir_02.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+russian_on_my_way,,voiceovers/mp/ru/resp/RU_resp_onmyway.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+russian_sorry,,voiceovers/mp/ru/resp/RU_resp_sorry.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+russian_great_shot,,voiceovers/mp/ru/resp/RU_resp_greatshot.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+russian_took_long_enough,,voiceovers/mp/ru/resp/RU_resp_longenuf.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+russian_youre_crazy,,voiceovers/mp/ru/resp/RU_resp_crazy.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+,,,1,1,,,45,4800,voice,streamed,,,,
+#MP German Commands,,,1,1,,,45,4800,voice,streamed,,,,
+german_follow_me,,voiceovers/mp/ge/cmds/GE_cmd_followme.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+german_move_in,,voiceovers/mp/ge/cmds/GE_cmd_movein.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+german_fall_back,,voiceovers/mp/ge/cmds/GE_cmd_fallback.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+german_suppressing_fire,,voiceovers/mp/ge/cmds/GE_cmd_suppress.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+german_attack_right_flank,,voiceovers/mp/ge/cmds/GE_cmd_rightflank.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+german_attack_left_flank,,voiceovers/mp/ge/cmds/GE_cmd_leftflank.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+german_hold_position,,voiceovers/mp/ge/cmds/GE_cmd_holdpos.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+german_regroup,,voiceovers/mp/ge/cmds/GE_cmd_regroup.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+,,,1,1,,,45,4800,voice,streamed,,,,
+#MP German Statements,,,1,1,,,45,4800,voice,streamed,,,,
+german_enemy_spotted,,voiceovers/mp/ge/stat/GE_stat_spotted.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+german_enemy_down,,voiceovers/mp/ge/stat/GE_stat_enemydown.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+german_in_position,,voiceovers/mp/ge/stat/GE_stat_inpos.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+german_area_secure,1,voiceovers/mp/ge/stat/GE_stat_secure_01.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+german_area_secure,2,voiceovers/mp/ge/stat/GE_stat_secure_02.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+german_grenade,1,voiceovers/mp/ge/stat/GE_stat_grenade_01.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+german_grenade,2,voiceovers/mp/ge/stat/GE_stat_grenade_02.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+german_sniper,,voiceovers/mp/ge/stat/GE_stat_sniper.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+german_need_reinforcements,,voiceovers/mp/ge/stat/GE_stat_reinforce.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+german_hold_fire,,voiceovers/mp/ge/stat/GE_stat_holdfire.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+,,,1,1,,,45,4800,voice,streamed,,,,
+#MP German Responses,,,1,1,,,45,4800,voice,streamed,,,,
+german_yes_sir,,voiceovers/mp/ge/resp/GE_resp_yessir.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+german_no_sir,,voiceovers/mp/ge/resp/GE_resp_nosir.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+german_on_my_way,,voiceovers/mp/ge/resp/GE_resp_onmyway.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+german_sorry,,voiceovers/mp/ge/resp/GE_resp_sorry.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+german_great_shot,1,voiceovers/mp/ge/resp/GE_resp_goodshot_01.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+german_great_shot,2,voiceovers/mp/ge/resp/GE_resp_goodshot_02.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+german_took_long_enough,,voiceovers/mp/ge/resp/GE_resp_longenuf.wav,1,1,,,45,4800,voice,streamed,,,,all_mp
+german_are_you_crazy,,voiceovers/mp/ge/resp/GE_resp_crazy.wav,1,1,,,45,4800,voice,streamed,,,,all_mp

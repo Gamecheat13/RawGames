@@ -1,0 +1,763 @@
+#include "ui/menudef.h"
+
+{
+\\ SETUP MENU \\
+
+	menuDef 
+	{
+		name "options_menu"
+		fullScreen MENU_TRUE				
+		rect 0 0 640 480				// Size and position of the menu
+		visible MENU_TRUE				// Visible on open
+		focusColor .9 .85 1 .8			// Menu focus color for text and items
+		soundloop ""
+					
+		onOpen 
+		{ 
+			setitemcolor fadebox backcolor 0 0 0 1; 
+//			play "music_mainmenu";
+			fadeout fadebox ;
+		}
+		onClose
+		{
+			close options_look;
+			close options_move;
+			close options_shoot;
+			close options_misc;
+			close options_graphics;
+			close options_sound;
+			close options_performance;
+			close options_view;
+			close options_defaults;
+			close options_driverinfo;
+			close options_credits;
+			close options_multi;
+			close options_graphics_defaults;
+			close options_control_defaults;
+		}
+		onESC 
+		{ 
+			open main;
+			close options_menu;		
+		}
+		#include "ui/menu_background.menu"
+/*		
+		itemDef 
+		{
+			name main_back_top
+			style WINDOW_STYLE_SHADER
+			rect 0 0 640 320
+			background "main_back_top"
+			visible 1
+			decoration
+		}
+		itemDef 
+		{
+			name main_back_bottom
+			style WINDOW_STYLE_SHADER
+			rect 0 320 640 160
+			background "main_back_bottom"
+			visible 1
+			decoration
+		}
+*/
+	//Right Hand Menu items
+
+		itemDef 
+		{
+			name resume
+			text "@MENU_CONTROLS"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 385 150 130 13 
+			textalign 0
+			textscale .35		
+			textalignx 0
+			textaligny 12
+			forecolor .9 .9 .9 1
+			visible 1
+			textfont UI_FONT_NORMAL
+			decoration
+			action 
+			{ 
+//				close main;
+//				exec "loadgame_continue";
+			}
+		}
+		itemDef 
+		{
+			name resume
+			text "@MENU_LOOK"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 400 165 130 13 
+			textalign 0
+			textscale .3		
+			textalignx 0
+			textaligny 12
+			forecolor .9 .9 .9 1
+			visible 1
+			textfont UI_FONT_NORMAL
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{ 
+				play "mouse_click";
+				close options_shoot;
+				close options_move;
+				close options_misc;
+				close options_graphics;
+				close options_sound;
+				close options_performance;
+				close options_view;
+				close options_defaults;
+				close options_driverinfo;
+				close options_credits;
+				close options_multi;
+				close options_graphics_defaults;
+				close options_control_defaults;
+				open options_look;
+//				exec "loadgame_continue";
+			}
+		}
+		itemDef 
+		{
+			name resume
+			text "@MENU_MOVE"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 400 180 130 13 
+			textalign 0
+			textscale .3		
+			textalignx 0
+			textaligny 12
+			forecolor .9 .9 .9 1
+			visible 1
+			textfont UI_FONT_NORMAL
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{ 
+				play "mouse_click";
+				close options_shoot;
+				close options_look;
+				close options_misc;
+				close options_graphics;
+				close options_sound;
+				close options_performance;
+				close options_view;
+				close options_defaults;
+				close options_driverinfo;
+				close options_credits;
+				close options_multi;
+				close options_graphics_defaults;
+				close options_control_defaults;
+				open options_move;
+//				close main;
+//				exec "loadgame_continue";
+			}
+		}
+		itemDef 
+		{
+			name resume
+			text "@MENU_SHOOT"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 400 195 130 13 
+			textalign 0
+			textscale .3		
+			textalignx 0
+			textaligny 12
+			forecolor .9 .9 .9 1
+			visible 1
+			textfont UI_FONT_NORMAL
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{ 
+				play "mouse_click";
+				close options_move;
+				close options_look;
+				close options_misc;
+				close options_graphics;
+				close options_sound;
+				close options_performance;
+				close options_view;
+				close options_defaults;
+				close options_driverinfo;
+				close options_credits;
+				close options_multi;
+				close options_graphics_defaults;
+				close options_control_defaults;
+				open options_shoot;
+//				close main;
+//				exec "loadgame_continue";
+			}
+		}
+		itemDef 
+		{
+			name resume
+			text "@MENU_SAVE_INTERACT"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 400 210 130 13 
+			textalign 0
+			textscale .3		
+			textalignx 0
+			textaligny 12
+			forecolor .9 .9 .9 1
+			visible 1
+			textfont UI_FONT_NORMAL
+			cvartest "ui_multiplayer"
+			showCvar { "0" }
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{ 
+				play "mouse_click";
+				close options_move;
+				close options_look;
+				close options_shoot;
+				close options_graphics;
+				close options_sound;
+				close options_performance;
+				close options_view;
+				close options_defaults;
+				close options_driverinfo;
+				close options_credits;
+				close options_multi;
+				close options_graphics_defaults;
+				close options_control_defaults;
+				open options_misc;
+			}
+		}
+		itemDef 
+		{
+			name resume
+			text "@MENU_INTERACT"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 400 210 130 13 
+			textalign 0
+			textscale .3		
+			textalignx 0
+			textaligny 12
+			forecolor .9 .9 .9 1
+			visible 1
+			textfont UI_FONT_NORMAL
+			cvartest "ui_multiplayer"
+			showCvar { "1" }
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{ 
+				play "mouse_click";
+				close options_move;
+				close options_look;
+				close options_shoot;
+				close options_graphics;
+				close options_sound;
+				close options_performance;
+				close options_view;
+				close options_defaults;
+				close options_driverinfo;
+				close options_credits;
+				close options_multi;
+				close options_graphics_defaults;
+				close options_control_defaults;
+				open options_misc;
+			}
+		}
+		itemDef 
+		{
+			name resume
+			text "@MENU_SET_DEFAULT_CONTROLS"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 400 225 130 13 
+			textalign 0
+			textscale .3		
+			textalignx 0
+			textaligny 12
+			forecolor .9 .9 .9 1
+			visible 1
+			textfont UI_FONT_NORMAL
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{ 
+				play "mouse_click";
+				close options_move;
+				close options_look;
+				close options_shoot;
+				close options_graphics;
+				close options_sound;
+				close options_performance;
+				close options_view;
+				close options_defaults;
+				close options_driverinfo;
+				close options_credits;
+				close options_multi;
+				close options_graphics_defaults;
+				close options_misc;
+				open options_control_defaults;
+			}
+		}
+		itemDef 
+		{
+			name resume
+			text "@MENU_SYSTEM"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 385 245 130 13 
+			textalign 0
+			textscale .35		
+			textalignx 0
+			textaligny 12
+			forecolor .9 .9 .9 1
+			visible 1
+			textfont UI_FONT_NORMAL
+			decoration
+			action 
+			{ 
+//				close main;
+//				exec "loadgame_continue";
+			}
+		}
+		itemDef 
+		{
+			name resume
+			text "@MENU_GRAPHICS"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 400 260 130 13 
+			textalign 0
+			textscale .3		
+			textalignx 0
+			textaligny 12
+			forecolor .9 .9 .9 1
+			visible 1
+			textfont UI_FONT_NORMAL
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{ 
+				play "mouse_click";
+				close options_shoot;
+				close options_move;
+				close options_misc;
+				close options_look;
+				close options_sound;
+				close options_performance;
+				close options_view;
+				close options_defaults;
+				close options_driverinfo;
+				close options_credits;
+				close options_multi;
+				close options_graphics_defaults;
+				close options_control_defaults;
+				open options_graphics;
+				
+//				close main;
+//				exec "loadgame_continue";
+			}
+		}
+		itemDef 
+		{
+			name resume
+			text "@MENU_SOUND"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 400 275 130 13 
+			textalign 0
+			textscale .3		
+			textalignx 0
+			textaligny 12
+			forecolor .9 .9 .9 1
+			visible 1
+			textfont UI_FONT_NORMAL
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{ 
+				play "mouse_click";
+				close options_shoot;
+				close options_move;
+				close options_misc;
+				close options_look;
+				close options_graphics;
+				close options_performance;
+				close options_view;
+				close options_defaults;
+				close options_driverinfo;
+				close options_credits;
+				close options_multi;
+				close options_graphics_defaults;
+				close options_control_defaults;
+				open options_sound;
+				
+//				close main;
+//				exec "loadgame_continue";
+			}
+		}
+		itemDef 
+		{
+			name resume
+			text "@MENU_PERFORMANCE"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 400 290 130 13 
+			textalign 0
+			textscale .3		
+			textalignx 0
+			textaligny 12
+			forecolor .9 .9 .9 1
+			visible 1
+			textfont UI_FONT_NORMAL
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{ 
+				play "mouse_click";
+				close options_shoot;
+				close options_move;
+				close options_misc;
+				close options_look;
+				close options_graphics;
+				close options_sound;
+				close options_view;
+				close options_defaults;
+				close options_driverinfo;
+				close options_credits;
+				close options_multi;
+				close options_graphics_defaults;
+				close options_control_defaults;
+				open options_performance;
+//				close main;
+//				exec "loadgame_continue";
+			}
+		}
+		itemDef 
+		{
+			name resume
+			text "@MENU_DRIVERINFO"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 400 305 130 13 
+			textalign 0
+			textscale .3		
+			textalignx 0
+			textaligny 12
+			forecolor .9 .9 .9 1
+			visible 1
+			textfont UI_FONT_NORMAL
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{ 
+				play "mouse_click";
+				close options_shoot;
+				close options_move;
+				close options_misc;
+				close options_look;
+				close options_graphics;
+				close options_sound;
+				close options_performance;
+				close options_view;
+				close options_defaults;
+				close options_credits;
+				close options_multi;
+				close options_graphics_defaults;
+				close options_control_defaults;
+				open options_driverinfo;
+			}
+		}
+		itemDef 
+		{
+			name resume
+			text "@MENU_RESET_SYSTEM_DEFAULTS"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 400 320 130 13 
+			textalign 0
+			textscale .3		
+			textalignx 0
+			textaligny 12
+			forecolor .9 .9 .9 1
+			visible 1
+			textfont UI_FONT_NORMAL
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{ 
+				play "mouse_click";
+				close options_shoot;
+				close options_move;
+				close options_misc;
+				close options_look;
+				close options_graphics;
+				close options_sound;
+				close options_performance;
+				close options_view;
+				close options_defaults;
+				close options_credits;
+				close options_multi;
+				close options_control_defaults;
+				open options_graphics_defaults;
+			}
+		}
+/* vince'd
+		itemDef 
+		{
+			name resume
+			text "Game Options"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 385 295 130 15 
+			textalign 0
+			textscale .35		
+			textalignx 0
+			textaligny 14
+			forecolor .9 .9 .9 1
+			visible 1
+			textfont UI_FONT_NORMAL
+			decoration
+			action 
+			{ 
+//				close main;
+//				exec "loadgame_continue";
+			}
+		}
+*/
+/*
+		itemDef 
+		{
+			name resume
+			text "@MENU_MULTIPLAYER"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 385 340 130 13 
+			textalign 0
+			textscale .35		
+			textalignx 0
+			textaligny 12
+			forecolor .9 .9 .9 1
+			visible 1
+			textfont UI_FONT_NORMAL
+			cvartest "ui_multiplayer"
+			showCvar { "1" }
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{ 
+				play "mouse_click";
+				close options_shoot;
+				close options_move;
+				close options_misc;
+				close options_look;
+				close options_graphics;
+				close options_sound;
+				close options_performance;
+				close options_view;
+				close options_driverinfo;
+				close options_defaults;
+				close options_credits;
+				close options_graphics_defaults;
+				close options_control_defaults;
+				open options_multi;
+			}
+		}
+*/
+/*
+		itemDef 
+		{
+			name resume
+			text "View"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 400 325 130 15 
+			textalign 0
+			textscale .3		
+			textalignx 0
+			textaligny 14
+			forecolor .9 .9 .9 1
+			visible 0
+			textfont UI_FONT_NORMAL
+			mouseEnter 
+			{
+				fadein message_accept 
+			}
+			action 
+			{ 
+				close options_shoot;
+				close options_move;
+				close options_misc;
+				close options_look;
+				close options_graphics;
+				close options_sound;
+				close options_performance;
+				close options_defaults;
+				close options_driverinfo;
+				close options_credits;
+				open options_view;
+				
+//				close main;
+//				exec "loadgame_continue";
+			}
+		}
+*/
+/* removed for demo
+		itemDef 
+		{
+			name resume
+			text "@MENU_CREDITS"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 385 360 130 13 
+			textalign 0
+			textscale .35		
+			textalignx 0
+			textaligny 12
+			forecolor .9 .9 .9 1
+			visible 1
+			textfont UI_FONT_NORMAL
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{ 
+				play "mouse_click";
+				close options_shoot;
+				close options_move;
+				close options_misc;
+				close options_look;
+				close options_graphics;
+				close options_sound;
+				close options_performance;
+				close options_view;
+				close options_driverinfo;
+				close options_defaults;
+				close options_multi;
+				close options_graphics_defaults;
+				close options_control_defaults;
+				open options_credits;
+			}
+		}
+*/
+/*
+		itemDef 
+		{
+			name resume
+			text "Reset to Defaults"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 385 380 130 15 
+			textalign 0
+			textscale .35		
+			textalignx 0
+			textaligny 14
+			forecolor .9 .9 .9 1
+			visible 0
+			textfont UI_FONT_NORMAL
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{ 
+				play "mouse_click";
+				close options_shoot;
+				close options_move;
+				close options_misc;
+				close options_look;
+				close options_graphics;
+				close options_sound;
+				close options_performance;
+				close options_view;
+				close options_driverinfo;
+				close options_credits;
+				close options_multi;
+				close options_graphics_defaults;
+				close options_control_defaults;
+				open options_defaults;
+
+//				close main;
+//				exec "loadgame_continue";
+			}
+		}
+*/
+		itemDef 
+		{
+			name resume
+			text "@MENU_BACK"
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 385 380 130 13 
+			textalign 0
+			textscale .35		
+			textalignx 0
+			textaligny 12
+			forecolor .9 .9 .9 1
+			visible 1
+			textfont UI_FONT_NORMAL
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{ 
+				play "mouse_click";
+				close options_menu;
+				close main;
+				open main;
+//				exec "loadgame_continue";
+			}
+		}
+
+	}
+
+} //end bracket

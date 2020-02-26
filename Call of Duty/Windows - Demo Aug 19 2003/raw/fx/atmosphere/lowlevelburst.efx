@@ -1,0 +1,93 @@
+OrientedParticle
+{
+	name				Copy of Unnamed OrientedParticl
+
+	spawnFlags			absoluteAccel orgOnCylinder
+
+	life				100
+
+	origin				0 43 0 0 -222 0
+
+	radius				1200 110
+
+	height				32 1
+
+	rotation			234 -12
+
+	rotationDelta		3 2
+
+	velocity			444 0 0 100 0 0
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			23 34
+		end				9000 7200
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/flash1
+	]
+}
+
+OrientedParticle
+{
+	name				Copy of Copy of Unnamed Oriente
+
+	spawnFlags			absoluteAccel orgOnCylinder
+
+	count				2 3
+
+	life				100
+
+	origin				0 43 323 0 -222 444
+
+	radius				400 1100
+
+	height				21 1
+
+	velocity			444 0 0 100 0 0
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			23 34
+		end				8000 7200
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/cloudflash_highalt1
+	]
+}
+
+Sound
+{
+	sounds
+	[
+		cloudflash
+	]
+}

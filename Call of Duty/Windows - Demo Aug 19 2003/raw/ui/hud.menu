@@ -1,0 +1,281 @@
+#include "ui/menudef.h"
+
+// (SA) example HUD
+//
+// fyi, I tried to lay this out so the HUD elements 
+// go left to right so it's easier to find stuff
+//
+// so stamina -> health -> ... -> ammo
+//
+
+// green text from MK mockup	- (61 64 36)	= (.24 .25 .14) (too light, using +0.1 (.34 .35 .24))
+// orange text from MK mockup	- (161 121 65)	= (.63 .47 .25)
+// white text from MK mockup	- (161 150 145)	= (.63 .59 .57)
+
+// 
+// defines from ui_shared.h
+
+{
+	assetGlobalDef 
+	{
+		cursor "ui/assets/3_cursor3"	// cursor	
+		gradientBar "ui/assets/gradientbar2.tga"	// gradient bar
+		fadeClamp 1.0					// sets the fadeup alpha
+		fadeCycle 1						// how often fade happens in milliseconds
+		fadeAmount 0.1					// amount to adjust alpha per cycle
+
+		shadowX  5						// x amount for shadow offset
+		shadowY  5						// y amount for shadow offset
+		shadowColor 0.1 0.1 0.1 0.25	// shadow color
+
+		consoleFont "fonts/consoleFont" 18		// font
+		smallFont "fonts/smallFont" 12			// font
+		font "fonts/normalFont" 16				// font
+		bigFont "fonts/bigFont" 24				// font
+		extraBigFont "fonts/extraBigFont" 32	// font
+		boldFont "fonts/boldFont" 30			// font
+	}
+
+	//	CURSOR HINTS
+	menuDef 
+	{
+    	name "Cursorhints"
+    	fullScreen MENU_FALSE
+    	visible MENU_TRUE
+//    	rect 305 340 30 30
+    	rect 300 325 40 40 // 480,520,64x64
+
+		itemDef 
+		{
+			name "chRect"
+			decoration
+			visible MENU_TRUE
+//			rect 0 0 30 30
+			rect 0 0 40 40 // 64x64
+			textscale .21
+			textstyle ITEM_TEXTSTYLE_SHADOWEDMORE
+			ownerdraw CG_CURSORHINT
+		}
+	}
+
+	//	STANCE
+	menuDef 
+	{
+    	name "stance"
+    	fullScreen MENU_FALSE
+    	visible MENU_TRUE
+//    	rect 98 442 35 30
+		rect 100 434.375 40 40 // 160,695,64x64
+
+		itemDef 
+		{
+			name "chRect"
+			decoration
+			visible MENU_TRUE
+//			rect 0 0 35 30
+			rect 0 0 40 40 // 64x64
+			forecolor 1.0 1.0 1.0 1.0
+//			textscale 0.3
+			textscale .21
+			textstyle ITEM_TEXTSTYLE_SHADOWEDMORE
+			ownerdraw CG_PLAYER_STANCE
+		}
+	}
+	
+	//	TANK STATUS
+	menuDef 
+	{
+    	name "tankstatus"
+    	fullScreen MENU_FALSE
+    	visible MENU_TRUE
+		rect 100 434.375 40 40 // 160,695,64x64
+
+		itemDef 
+		{
+			name "tankbody"
+			rect 0 0 40 40 // 64x64
+			forecolor 1.0 1.0 1.0 1.0
+			background "gfx/hud/hud@tankbody.tga"
+			ownerdraw CG_TANK_BODY_DIR
+			visible MENU_TRUE
+			decoration
+		}
+		
+		itemDef 
+		{
+			name "tankbarrel"
+			rect 20 20 40 40 // 64x64
+			forecolor 1.0 1.0 1.0 1.0
+			background "gfx/hud/hud@tankbarrel.tga"
+			ownerdraw CG_TANK_BARREL_DIR
+			visible MENU_TRUE
+			decoration
+		}
+	}
+
+	// WEAPON INFO
+	menuDef
+	{
+		name "weaponinfo"
+		fullScreen MENU_FALSE
+		visible MENU_TRUE
+//		rect 327 442 229 28
+		rect 0 434.375 640 40 // 0,695,1024x64
+		
+		// weapon name back
+		itemDef
+		{
+			name "weaponnameback"
+//			rect 0 4 229 28
+			rect 242.5 10.625 320 20 // 388,17,512x32
+			textscale .3 // needs to match the weapon name display
+			forecolor 1.0 1.0 1.0 1.0
+			background "gfx/hud/hud@weaponnameback.tga"
+			ownerdraw CG_PLAYER_WEAPON_NAME_BACK
+			visible MENU_TRUE
+			decoration
+		}
+
+		// weapon ammo counter back
+		itemDef
+		{
+			name "ammocounterback"
+//			rect 249 4 62 28
+			rect 557.5 1.25 80 40 // 892,2,128x64
+			forecolor 1.0 1.0 1.0 1.0
+			background "gfx/hud/hud@ammocounterback.tga"
+			ownerdraw CG_PLAYER_AMMO_BACKDROP
+			visible MENU_TRUE
+			decoration
+		}
+
+		// weapon mode
+		itemDef
+		{
+			name "weaponfiremode"
+//			rect 230 0 18 36
+			rect 537.5 10 20 20 // 860,16,32x32
+			forecolor 1.0 1.0 1.0 1.0
+			ownerdraw CG_PLAYER_WEAPON_MODE_ICON
+			visible MENU_TRUE
+			decoration
+		}
+		
+		// weapon name
+		itemDef
+		{
+			name "weapname"
+//			rect 6 23 0 0
+			rect 242.5 25.625 320 30 // 388,41,512x32
+			textstyle ITEM_TEXTSTYLE_SHADOWEDMORE
+			textscale .3
+			forecolor 1.0 1.0 1.0 1.0
+			ownerdraw CG_PLAYER_WEAPON_NAME
+			visible MENU_TRUE
+			decoration
+		}
+		
+		// ammo text
+		itemDef 
+		{
+ 			name "ammotex"
+//			rect 259 21 0 0
+//			rect 559.375 6.25 80 40 // 895,10,128x64
+//			rect 570.375 24.25 80 40 // 895,10,128x64
+			rect 570 24.25 55 40 // 912,2,88x64
+			textstyle ITEM_TEXTSTYLE_SHADOWEDMORE
+			textscale .21
+			forecolor 1.0 1.0 1.0 1.0
+			ownerdraw CG_PLAYER_AMMO_VALUE
+			visible MENU_TRUE
+			decoration
+		}
+	}
+
+	//	COMPASS
+	menuDef
+	{
+		name "Compass"
+    	fullScreen MENU_FALSE
+    	visible MENU_TRUE
+    	rect COMPASS_X COMPASS_Y COMPASS_SIZE COMPASS_SIZE
+
+    	itemDef
+    	{
+			name "compasshealth"
+			rect COMPASS_HEALTH_OFF COMPASS_HEALTH_OFF COMPASS_HEALTH_SIZE COMPASS_HEALTH_SIZE
+			forecolor 1.0 0.0 0.0 0.5
+			background "gfx/hud/hud@health.tga"
+			ownerdraw CG_PLAYER_COMPASS_HEALTH
+			visible MENU_TRUE
+			decoration
+    	}
+		itemDef
+    	{
+			name "compassback"
+			rect 0 0 COMPASS_SIZE COMPASS_SIZE
+			forecolor 1.0 1.0 1.0 1.0
+			background "gfx/hud/hud@compassback.tga"
+			ownerdraw CG_PLAYER_COMPASS
+			visible MENU_TRUE
+			decoration
+    	}
+		itemDef
+		{
+			name "compasshighlight"
+			rect 0 0 COMPASS_SIZE COMPASS_SIZE
+			forecolor 1.0 1.0 1.0 1.0
+			background "gfx/hud/hud@compasshighlight.tga"
+			ownerdraw CG_PLAYER_COMPASS_BACK
+			visible MENU_TRUE
+			decoration
+		}
+		itemDef
+		{
+			name "compassface"
+			rect 0 0 COMPASS_SIZE COMPASS_SIZE
+			forecolor 1.0 1.0 1.0 1.0
+			background "gfx/hud/hud@compassface.tga"
+			ownerdraw CG_PLAYER_COMPASS
+			visible MENU_TRUE
+			decoration
+		}
+		itemDef
+		{
+			name "compassneedle"
+			rect COMPASS_NEEDLE_XOFF COMPASS_NEEDLE_YOFF COMPASS_NEEDLE_WIDTH COMPASS_NEEDLE_HEIGHT
+			forecolor 1.0 1.0 1.0 1.0
+			background "gfx/hud/hud@compass_arrow.tga"
+			ownerdraw CG_PLAYER_COMPASS_BACK
+			visible MENU_TRUE
+			decoration
+		}
+		itemDef // Friendlies pointers
+		{
+			name "compassfrieldlies"
+			visible MENU_TRUE
+			rect 0 0 COMPASS_SIZE COMPASS_SIZE
+			forecolor 1.0 1.0 1.0 1.0
+			background "gfx/hud/hud@objective_friendly.tga"
+			ownerdraw CG_PLAYER_COMPASS_FRIENDS
+		}
+		itemDef // tank pointers
+		{
+			name "compasstanks"
+			visible MENU_TRUE
+			rect 0 0 COMPASS_SIZE COMPASS_SIZE
+			forecolor 1.0 1.0 1.0 1.0
+			background "gfx/hud/hud@objective_tank.tga"
+			ownerdraw CG_PLAYER_COMPASS_TANKS
+		}
+    	itemDef // Objective pointers
+    	{
+			name "compasspointers"
+			decoration
+			visible MENU_TRUE
+			rect 0 0 COMPASS_SIZE COMPASS_SIZE
+			forecolor 1.0 1.0 1.0 1.0
+			ownerdraw CG_PLAYER_COMPASS_POINTERS
+    	}
+	}
+}

@@ -1,0 +1,189 @@
+Tail
+{
+	flags				relative
+
+	count				3 5
+
+	life				100
+
+	cullrange			1200
+
+	origin				29 0 0
+
+	velocity			1 0 0
+
+	rgb
+	{
+		flags			random linear
+	}
+
+	alpha
+	{
+		end				0.6 0.5
+		flags			linear
+	}
+
+	size
+	{
+		end				2
+		flags			linear
+	}
+
+	length
+	{
+		start			12
+		end				35
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/muzzleflashes/thompson_stage1
+	]
+}
+
+Particle
+{
+	flags				relative
+
+	count				6
+
+	life				100
+
+	cullrange			1200
+
+	origin				2 0 0 21 0 0
+
+	rotation			90 -180
+
+	rotationDelta		11 -32
+
+	size
+	{
+		start			3 1
+		end				12
+		flags			linear
+	}
+
+	size2
+	{
+		end				12
+		flags			linear
+	}
+
+	length
+	{
+		start			42
+		end				375
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/muzflash2a
+	]
+}
+
+Light
+{
+	life				100
+
+	origin				18 0 0 21 0 0
+
+	rgb
+	{
+		start			0.9804 0.9373 0.8118
+		end				0.9765 0.949 0.651
+		flags			linear
+	}
+
+	size
+	{
+		start			200
+		flags			random linear
+	}
+}
+
+Particle
+{
+	name				smoke
+
+	flags				useAlpha
+
+	count				3 4
+
+	life				400
+
+	cullrange			200
+
+	rotation			-360 360
+
+	rotationDelta		2 -2
+
+	velocity			42 33 33 0 -33 -33
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.2
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				20
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/whitesmoke
+	]
+}
+
+Particle
+{
+	name				Copy of Unnamed Particle 2
+
+	flags				relative
+
+	count				6
+
+	life				100
+
+	origin				0 0 0 24 0 0
+
+	rotation			90 -180
+
+	rotationDelta		11 -32
+
+	size
+	{
+		start			3 1
+		end				12
+		flags			linear
+	}
+
+	size2
+	{
+		end				12
+		flags			linear
+	}
+
+	length
+	{
+		start			42
+		end				375
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/muzflash2a
+	]
+}

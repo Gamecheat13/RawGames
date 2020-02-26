@@ -1,0 +1,46 @@
+// Note to translators:
+// If a sentence is the same in your language then please change it to "#same"
+//
+// eg:
+// LANG_ENGLISH  "HALT"
+// LANG_GERMAN   "#same"
+//
+// (This is so we can tell which strings have been signed-off as ok to be the same words for QA
+//  and because we do not store duplicate strings, which will then get exported again next time
+//  as being untranslated.)
+//
+VERSION             "1"
+CONFIG              "C:\Projects\mk\bin\StringEd\StringEd.cfg"
+FILENOTES           ""
+
+REFERENCE           TEAM_DEATHMATCH
+LANG_ENGLISH        "Team Deathmatch"
+
+REFERENCE           KILL_AXIS_PLAYERS
+LANG_ENGLISH        "Kill axis players."
+
+REFERENCE           KILL_ALLIED_PLAYERS
+LANG_ENGLISH        "Kill allied players."
+
+REFERENCE           ALLIES_KILL_AXIS_PLAYERS
+LANG_ENGLISH        "Allies: Kill axis players.\nAxis: Kill allied players."
+
+REFERENCE           ALLIES_WIN
+LANG_ENGLISH        "Allies Win!"
+
+REFERENCE           AXIS_WIN
+LANG_ENGLISH        "Axis Win!"
+
+REFERENCE           THE_MATCH_IS_A_TIE
+LANG_ENGLISH        "The match is a tie!"
+
+REFERENCE           CONNECTED
+LANG_ENGLISH        "%s Connected"
+
+REFERENCE           DISCONNECTED
+LANG_ENGLISH        "%s Disconnected"
+
+
+ENDMARKER
+
+

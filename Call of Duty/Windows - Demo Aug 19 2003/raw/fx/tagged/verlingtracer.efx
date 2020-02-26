@@ -1,0 +1,49 @@
+Tail
+{
+	name				aatracertails
+
+	flags				useAlpha
+
+	spawnFlags			cheapOrgCalc absoluteAccel evenDistribution
+
+	life				3700 4300
+
+	delay				300 100
+
+	radius				45 55
+
+	height				100 10
+
+	velocity			1.29e+004 0 0 1.3e+004 0 0
+
+	acceleration		0 60 300 0 -80 122
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		flags			linear
+	}
+
+	size
+	{
+		start			20 30
+		end				40
+		flags			linear
+	}
+
+	length
+	{
+		start			360 390
+		end				320
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/antiaircraft_tracer
+	]
+}

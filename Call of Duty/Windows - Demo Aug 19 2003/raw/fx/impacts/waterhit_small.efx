@@ -1,0 +1,213 @@
+Tail
+{
+	count				3
+
+	life				200
+
+	velocity			322 0 0
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.6
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				6 7
+		flags			linear
+	}
+
+	length
+	{
+		start			3 5
+		end				75 87
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/riverspray1
+	]
+}
+
+OrientedParticle
+{
+	life				200 300
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.4
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				22 43
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/watering1
+	]
+}
+
+Particle
+{
+	flags				useAlpha
+
+	nonUniformScale		1
+
+	life				100
+
+	velocity			200 0 0
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				3
+		flags			linear
+	}
+
+	size2
+	{
+		start			56
+		end				32
+		flags			linear
+	}
+
+	length
+	{
+		start			12
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/misc/watersheet1
+	]
+}
+
+Particle
+{
+	name				Copy of Unnamed Particle 5
+
+	flags				useAlpha
+
+	spawnFlags			orgOnCylinder axisFromSphere
+
+	nonUniformScale		1
+
+	count				3
+
+	life				100 200
+
+	rotation			-360 360
+
+	rotationDelta		12 -12
+
+	velocity			53 0 54 52 0 45
+
+	gravity				-200 -150
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.5
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				12
+		flags			linear
+	}
+
+	size2
+	{
+		end				33 23
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/mist
+	]
+}
+
+Particle
+{
+	count				16 9
+
+	life				500
+
+	rotation			0 360
+
+	rotationDelta		12 -24
+
+	velocity			300 122 122 150 -143 -143
+
+	gravity				-600 -400
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.7 0.5
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			0.5
+		end				1 2
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/raindroplett
+	]
+}

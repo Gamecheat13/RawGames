@@ -1,0 +1,65 @@
+Particle
+{
+	spawnFlags			orgOnCylinder axisFromSphere
+
+	count				20 15
+
+	life				1000
+
+	origin				0 0 0 165 0 0
+
+	rotation			320 -360
+
+	rotationDelta		100 -100
+
+	velocity			1000 0 0 1233 0 0
+
+	gravity				-900
+
+	rgb
+	{
+		start			0.8941 0.8941 0.8941 0.6275 0.6275 0.6431
+		end				0.7529 0.7529 0.7608 0.502 0.502 0.502
+		flags			random linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			12 4
+		end				12 4
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/snowplug
+	]
+}
+
+Emitter
+{
+	flags				emitFx
+
+	life				100
+
+	velocity			123 0 0
+
+	density				4
+
+	size
+	{
+		end				100
+		flags			linear
+	}
+
+	emitfx
+	[
+		fx/smoke/whitesmoke
+	]
+}

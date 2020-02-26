@@ -1,0 +1,90 @@
+Particle
+{
+	flags				useAlpha
+
+	spawnFlags			evenDistribution
+
+	count				2
+
+	life				300 500
+
+	delay				20 30
+
+	rotation			37 -60
+
+	rotationDelta		4 -9
+
+	velocity			5 5 5 -7 -6 -9
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.2 0.4
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			30 42
+		end				155 180
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/cloudflash1
+	]
+}
+
+Particle
+{
+	spawnFlags			absoluteAccel
+
+	count				2 3
+
+	life				100
+
+	delay				120 90
+
+	rotation			32 -60
+
+	rotationDelta		9 -18
+
+	velocity			1 0 0 0 0 0
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.9 0.8
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				900 1000
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/cloudflash1a
+	]
+}
+
+Sound
+{
+	sounds
+	[
+		cloudflash
+	]
+}

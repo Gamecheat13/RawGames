@@ -1,0 +1,174 @@
+Tail
+{
+	flags				useAlpha
+
+	spawnFlags			orgOnCylinder axisFromSphere
+
+	count				6
+
+	life				200
+
+	velocity			21 132 54 22 144 76
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				9 17
+		flags			linear
+	}
+
+	length
+	{
+		start			3 5
+		end				22
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/misc/snowsheet1
+	]
+}
+
+Particle
+{
+	name				Copy of Unnamed Particle 5
+
+	flags				useAlpha
+
+	spawnFlags			orgOnCylinder axisFromSphere
+
+	nonUniformScale		1
+
+	count				12
+
+	life				400 300
+
+	rotation			-360 360
+
+	rotationDelta		12 -12
+
+	velocity			153 0 154 152 0 145
+
+	gravity				-400 -350
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			1 0.2
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			12
+		end				122 12
+		flags			linear
+	}
+
+	size2
+	{
+		end				33 23
+		flags			linear
+	}
+
+	length
+	{
+		start			122
+		end				12
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/misc/snowsheet1
+	]
+}
+
+Particle
+{
+	flags				useAlpha
+
+	nonUniformScale		1
+
+	count				15
+
+	life				500
+
+	origin				42 32 32 3 -32 -32
+
+	rotation			95 -95
+
+	rotationDelta		1 -1
+
+	velocity			400 20 20 0 -20 -20
+
+	gravity				-700
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.5 0.3
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				74
+		flags			linear
+	}
+
+	size2
+	{
+		start			12
+		end				24
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/impact/snowpuff
+	]
+}
+
+Decal
+{
+	life				1e+004
+
+	cullrange			1700
+
+	size
+	{
+		start			12
+	}
+
+	shaders
+	[
+		gfx/impact/bullethit_snow
+	]
+}

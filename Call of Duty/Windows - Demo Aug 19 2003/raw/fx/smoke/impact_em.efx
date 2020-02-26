@@ -1,0 +1,31 @@
+Particle
+{
+	flags				useAlpha
+
+	life				500 600
+
+	rotation			-360 360
+
+	rotationDelta		4 -4
+
+	velocity			23 21 21 21 -21 -21
+
+	alpha
+	{
+		start			0.5
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			3 2
+		end				15 35
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/whitesmoke
+	]
+}

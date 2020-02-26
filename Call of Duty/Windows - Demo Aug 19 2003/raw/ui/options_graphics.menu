@@ -1,0 +1,698 @@
+#include "ui/menudef.h"
+{
+menuDef 
+{
+	name options_graphics
+	fullScreen 0				
+	rect OPTIONS_WINDOW_POS OPTIONS_WINDOW_SIZE				// Size and position of the menu
+	visible 1				// Visible on open
+	focusColor .9 .85 1 .8			// Menu focus color for text and items
+	soundloop ""
+	onOpen
+	{
+		uiScript loadControls;
+		uiScript getLanguage;
+//		hide graphicsapply;
+	}
+	onESC 
+	{ 
+		open main;
+		close options_menu;		
+	}
+/*
+	itemDef 
+	{
+		name keyBindStatus
+		rect 0 322 640 30 
+		ownerdraw UI_KEYBINDSTATUS
+		text "-"      
+		forecolor 1 .75 0 1
+		textscale .23
+		textalignx 221
+		textalign 1
+		textaligny 20
+		visible 1
+		decoration 
+	}
+*/
+	itemDef 
+	{
+		name look_back
+		rect 0 0 OPTIONS_WINDOW_SIZE	
+		style WINDOW_STYLE_FILLED
+		border 1
+		bordercolor .5 .5 .5 .5
+		forecolor 1 1 1 1
+		backcolor OPTIONS_WINDOW_BACKCOLOR
+		visible 1
+		decoration
+	}
+	itemDef 
+	{
+		name ctr_look
+		text "@MENU_OPTIONS_SYSTEM"
+		textscale .23
+		group grpControlbutton
+		type ITEM_TYPE_BUTTON
+		style 0
+		rect 102.5 5 120 10
+		textalign 1
+		textalignx 60
+		textaligny 10
+		forecolor 0.75 0.75 0.75 1
+		visible 1
+		decoration 
+	}
+	itemDef 
+	{
+		name look
+		group grpControls
+		text "@MENU_GRAPHICS"
+		type ITEM_TYPE_BUTTON
+		textscale .23
+		group grpControls
+		rect 145 20 35 10
+		textalign 1
+		textalignx 17
+		textaligny 10
+		forecolor 1 1 1 .9
+		visible 1
+		decoration
+	}
+/*
+	itemDef 
+	{
+		name graphics
+		text "@MENU_SET_RECOMMENDED"
+		type ITEM_TYPE_BUTTON
+		textscale .24
+		group grpsystem
+//			background "ui/assets/button_back.tga"
+		style WINDOW_STYLE_FILLED
+		rect 17.5 40 290 12
+		textalign 1
+		textalignx 145
+		textaligny 12
+		backcolor 0 0 .25 .2
+		forecolor .9 .9 .9 1 
+		visible 0
+		textalign ITEM_ALIGN_CENTER
+		mouseEnter 
+		{
+			play "mouse_over";
+		}
+		action 
+		{ 
+			play "sound/misc/kcaction.wav" ; 
+//			open rec_restart_popmenu ; 
+//			hide graphics ; 
+//			hide graphicsapply 
+		}	
+	}
+*/
+/*
+	itemDef 
+	{
+		name graphics				
+		group grpSystem
+		text "@MENU_QUALITY"
+		type ITEM_TYPE_MULTI	
+		cvar "ui_glCustom"
+		cvarFloatList { "@MENU_HIGHQUALITY" 0 "@MENU_NORMAL" 1 "@MENU_FAST" 2 "@MENU_FASTEST" 3 "@MENU_CUSTOM" 4 }
+		
+		cvarTest		"ui_glCustom"
+		hideCvar		{ "999" }	// 999 is 'recommended'
+		
+		rect		5 65 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+//		mouseenter	{ show keyBindStatus }
+		mouseEnter 
+		{
+			play "mouse_over";
+		}
+//		mouseexit	{ hide keyBindStatus }
+		action { uiScript update "ui_glCustom" }
+	}
+
+	itemDef 
+	{
+		name graphics				
+		group grpSystem
+		text "@MENU_QUALITY_RECOMMENDED"
+		type ITEM_TYPE_BUTTON	
+
+		cvarTest		"ui_glCustom"
+		showCvar		{ "999" }	// 999 is 'recommended'
+
+		rect		5 65 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	244 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+//		mouseenter	{ show keyBindStatus }
+//		mouseexit	{ hide keyBindStatus }
+		mouseEnter 
+		{
+			play "mouse_over";
+		}
+		action 
+		{
+			setcvar ui_glCustom 0;	// go back to regular selection group
+			uiScript update "ui_glCustom" 
+		}
+	}
+*/
+/*
+	itemDef 
+	{
+		name graphics
+		group grpSystem
+		type ITEM_TYPE_YESNO
+		text "GL Extensions:"
+		cvar "r_allowExtensions"
+		rect		5 80 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseenter	{ show keyBindStatus }
+		mouseexit	{ hide keyBindStatus }
+		action { uiScript glCustom }
+	}
+*/
+	itemDef 
+	{
+		name graphics
+		group grpSystem
+		type ITEM_TYPE_MULTI	
+		text "@MENU_VIDEO_MODE"
+		cvar "r_mode"
+		cvarFloatList {  "@MENU_640480" 3 "@MENU_800600" 4 "@MENU_1024768" 6 "@MENU_1152864" 7 "@MENU_12801024" 8 "@MENU_16001200" 9 "@MENU_20481536" 10 }
+//			"320*240" 0 "400*300" 1 "512*384" 2 "856*480 Wide Screen" 11 "960*720" 5
+		rect		5 80 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+//		mouseenter	{ show keyBindStatus }
+//		mouseexit	{ hide keyBindStatus }
+		mouseEnter 
+		{
+			play "mouse_over";
+		}	
+		action { play "mouse_click"; show graphicsapply; }
+	}
+
+
+	itemDef 
+	{
+		name graphics
+		group grpSystem
+		type ITEM_TYPE_YESNO
+		text "@MENU_FULLSCREEN"
+		cvar "r_fullscreen"
+		rect		5 95 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+//		mouseenter	{ show keyBindStatus }
+//		mouseexit	{ hide keyBindStatus }
+		mouseEnter 
+		{
+			play "mouse_over";
+		}
+		action { play "mouse_click"; show graphicsapply; }
+	}
+/*
+	itemDef 
+	{
+		name graphics
+		group grpSystem
+		type ITEM_TYPE_MULTI			
+		text "Lighting:"
+		cvar "r_vertexlight"
+		cvarFloatList { "Light Map (high)" 0 "Vertex (low)" 1  }
+		rect		5 125 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+//		mouseenter	{ show keyBindStatus }
+//		mouseexit	{ hide keyBindStatus } 
+		mouseEnter 
+		{
+			play "mouse_over";
+		}
+		action { uiScript glCustom }
+	}
+*/
+/*
+	itemDef 
+	{
+		name graphics
+		group grpSystem
+		type ITEM_TYPE_MULTI
+		text "@MENU_GEOMETRIC_DETAIL"
+		cvar "r_lodbias"
+		cvarFloatList { "High" 0 "Medium" 1 "Low" 2 }
+		rect		5 125 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+//		mouseenter	{ show keyBindStatus }
+//		mouseexit	{ hide keyBindStatus }
+		mouseEnter 
+		{
+			play "mouse_over";
+		}
+		action { uiScript glCustom ; uiScript update "r_lodbias" }
+	}
+*/
+	itemDef 
+	{
+		name graphics
+		group grpSystem
+		type ITEM_TYPE_MULTI
+		text "@MENU_CHARACTER_TEXTURES"
+		cvar "r_picmip2"
+		cvarFloatList { "@MENU_LOW" 3 "@MENU_NORMAL" 2 "@MENU_HIGH" 1 "@MENU_EXTRA" 0 }
+		rect		5 110 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+//		mouseenter	{ show keyBindStatus }
+//		mouseexit	{ hide keyBindStatus } 
+		mouseEnter 
+		{
+			play "mouse_over";
+		}
+		action { play "mouse_click"; show graphicsapply; }
+	}
+
+	itemDef 
+	{
+		name graphics
+		group grpSystem
+		type ITEM_TYPE_MULTI
+		text "@MENU_GENERAL_TEXTURES"
+		cvar "r_picmip"
+		cvarFloatList { "@MENU_LOW" 2 "@MENU_NORMAL" 1 "@MENU_HIGH" 0 }
+		rect		5 125 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+//		mouseenter	{ show keyBindStatus }
+//		mouseexit	{ hide keyBindStatus }
+		mouseEnter 
+		{
+			play "mouse_over";
+		}
+		action { play "mouse_click"; show graphicsapply; }
+	}
+
+	itemDef 
+	{
+		name graphics
+		group grpSystem
+		type ITEM_TYPE_MULTI
+		text "@MENU_TEXTURE_FILTER"
+		cvar "r_texturemode"
+		cvarStrList { "@MENU_BILINEAR", "GL_LINEAR_MIPMAP_NEAREST", "@MENU_TRILINEAR", "GL_LINEAR_MIPMAP_LINEAR"  }
+		rect		5 140 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+//		mouseenter	{ show keyBindStatus }
+//		mouseexit	{ hide keyBindStatus }
+		mouseEnter 
+		{
+			play "mouse_over";
+		}
+		action { play "mouse_click"; show graphicsapply; }
+	}
+/*
+	itemDef 
+	{
+		name graphics
+		group grpSystem
+		type ITEM_TYPE_YESNO
+		text "Compress Textures:"
+		cvar "r_ext_compressed_textures"
+		rect		5 215 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseenter	{ show keyBindStatus }
+		mouseexit	{ hide keyBindStatus } 
+		action { uiScript glCustom }
+	}
+*/
+	itemDef 
+	{
+		name graphics
+		group grpSystem
+		type ITEM_TYPE_MULTI
+		text "@MENU_TEXTURE_QUALITY"
+		cvar "r_texturebits"
+		cvarFloatList { "@MENU_DEFAULT" 0 "@MENU_16BIT" 16 "@MENU_32BIT" 32 }
+		rect		5 155 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+//		mouseenter	{ show keyBindStatus }
+//		mouseexit	{ hide keyBindStatus }
+		mouseEnter 
+		{
+			play "mouse_over";
+		}
+		action { play "mouse_click"; show graphicsapply; }
+	}
+
+
+
+//
+// Nvidia
+// 
+	itemDef 
+	{
+		name graphics
+		group grpSystem
+		type ITEM_TYPE_YESNO
+
+		text "@MENU_NVIDIA_DISTANCE_FOG"
+		cvar "r_nv_fog_dist"
+
+// would be nice to be able to do an extension check from the menu
+//			extensionTest "GL_NV_fog_distance"
+// does now!
+		cvarTest	"r_nv_fog_available"
+		showCvar	{ "1" }
+		rect		5 170 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+//		mouseenter	{ show keyBindStatus }
+//		mouseexit	{ hide keyBindStatus }
+		mouseEnter 
+		{
+			play "mouse_over";
+		}
+		action { play "mouse_click"; show graphicsapply; }
+	}
+/*
+	itemDef 
+	{
+		name graphics
+		group grpSystem
+		type ITEM_TYPE_YESNO
+
+		text "Trueform:"
+		cvar "r_ati_pntriangles"
+
+// would be nice to be able to do an extension check from the menu
+//			extensionTest "GL_ATIX_pn_triangles"
+
+		rect		5 215 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		0 
+//		mouseenter	{ show keyBindStatus }
+//		mouseexit	{ hide keyBindStatus }
+		mouseEnter 
+		{
+			play "mouse_over";
+		}
+		action { uiScript glCustom }
+	}
+*/
+	itemDef 
+	{
+		name graphics
+		group grpSystem
+		type ITEM_TYPE_SLIDER
+		text "@MENU_BRIGHTNESS"
+		cvarfloat "r_gamma" 1 0.5 3
+
+		cvarTest "r_ignorehwgamma"
+		showcvar { "1" }
+
+		rect		5 185 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+//		mouseenter	{ show keyBindStatus }
+//		mouseexit	{ hide keyBindStatus }
+		mouseEnter 
+		{
+			play "mouse_over";
+		}
+	}
+	itemDef 
+	{
+		// only show this in this menu if "r_ignorehwgamma" is not set.  if it's set, it will require a
+		// vid_restart, so the option shows in the system->graphics location
+		cvarTest "r_ignorehwgamma"
+		showcvar { "0" }
+
+		name view			
+		group grpOptions
+		type ITEM_TYPE_SLIDER
+		text "@MENU_BRIGHTNESS"
+		cvarfloat "r_gamma" 1.3 .5 3
+		rect		5 185 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+//		mouseenter	{ show keyBindStatus }
+//		mouseexit	{ hide keyBindStatus } 
+		mouseEnter 
+		{
+			play "mouse_over";
+		}
+	}
+//
+// ATI
+//
+
+
+
+//cvar_t	*r_ext_ATI_pntriangles;
+//cvar_t	*r_ati_truform_tess;
+//cvar_t	*r_ati_truform_mode;
+
+//
+// LANGUAGE
+//
+
+	itemDef 
+	{
+		name language
+		group grpSystem
+		type ITEM_TYPE_MULTI
+
+		text "@MENU_LANGUAGE"
+		cvar "ui_language"
+		// This list needs to be the complete list of languages supported by the game. The game will weed out unavailable ones itself.
+		cvarFloatList { "@MENU_ENGLISH" 0 "@MENU_FRENCH" 1 "@MENU_GERMAN" 2 "@MENU_ITALIAN" 3 "@MENU_SPANISH" 4 "@MENU_BRITISH" 5 "@MENU_RUSSIAN" 6 "@MENU_KOREAN" 7 "@MENU_TAIWANESE" 8 "@MENU_JAPANESE" 9 "@MENU_CHINESE" 10 "@MENU_THAI" 11 }
+
+		cvarTest		"cl_languagesavailable"
+		hideCvar		{ "1" }
+
+		rect		5 200 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+//		mouseenter	{ show keyBindStatus }
+//		mouseexit	{ hide keyBindStatus }
+		mouseEnter 
+		{
+			play "mouse_over";
+		}
+		action { play "mouse_click"; uiScript verifyLanguage; }
+	}
+	itemDef
+	{
+		name applylanguage
+		group grpSystem
+		type ITEM_TYPE_BUTTON
+
+		text "@MENU_APPLY_LANGUAGE_CHANGE"
+		cvarTest	"ui_languagechanged"
+		showCvar	{ "1" }
+
+		rect		5 275 OPTIONS_CONTROL_SIZE
+//		textalign	ITEM_ALIGN_RIGHT
+		textalign	ITEM_ALIGN_CENTER
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+//		mouseenter	{ show keyBindStatus }
+//		mouseexit	{ hide keyBindStatus }
+		mouseEnter 
+		{
+			play "mouse_over";
+		}
+		action 
+		{ 
+//			uiScript updateLanguage; 
+			play "mouse_click";
+			open language_restart_popmenu;
+		}
+	}
+
+//
+// APPLY
+//
+
+	itemDef 
+	{
+		name graphicsapply
+		text "@MENU_APPLY"
+		type ITEM_TYPE_BUTTON
+		textscale .25
+		style WINDOW_STYLE_FILLED
+		group grpsystem
+		rect 112.5 295 100 20
+		textalign 1
+		textalignx 50
+		textaligny 14
+		forecolor 1 1 1 1
+		backcolor .1 .1 .1 .1 
+		visible 0
+		border 1
+		bordercolor .5 .5 .5 .5
+		action 
+		{
+			play "mouse_click" ; 
+			open vid_restart_popmenu ; 
+//			hide graphics ; 
+//			hide graphicsapply 
+		}
+		mouseEnter { setitemcolor graphicsapply backcolor 1 1 .3 .3 
+		play "mouse_over"}
+		mouseExit { setitemcolor graphicsapply backcolor .1 .1 .1 .1 }
+	}
+/*
+	itemDef 
+	{
+		name graphics
+		group grpSystem
+		style WINDOW_STYLE_SHADER
+		background "ui/assets/framebutton.tga"
+		rect 181 357 100 26
+		visible 1 
+		decoration  	  
+	}
+
+	itemDef 
+	{
+		name graphics
+		group grpSystem
+		style WINDOW_STYLE_SHADER
+		background "ui/assets/leftbutton.tga"
+		rect 169 357 13 26
+		visible 1 
+		decoration  	  
+	}
+
+	itemDef 
+	{
+		name graphics
+		group grpSystem
+		style WINDOW_STYLE_SHADER
+		background "ui/assets/rightbutton.tga"
+		rect 280 357 13 26
+		visible 1 
+		decoration  	  
+	}
+*/
+}
+
+}//

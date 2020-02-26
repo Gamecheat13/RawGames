@@ -1,0 +1,55 @@
+Cylinder
+{
+	spawnFlags			orgOnCylinder
+
+	count				1 2
+
+	life				1000 800
+
+	delay				110 100
+
+	radius				8
+
+	height				25 32
+
+	rgb
+	{
+		start			0.8392 0.8118 0.6627 0.7412 0.5961 0.2588
+		end				0.8353 0.5176 0.1686
+		parm			17 -16
+		flags			random linear
+	}
+
+	alpha
+	{
+		start			0 0.4
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			20 1
+		end				8 3
+		flags			random linear
+	}
+
+	size2
+	{
+		start			45
+		end				2 3
+		flags			linear clamp
+	}
+
+	length
+	{
+		start			25 10
+		end				167
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/weaponfx/88muzflash1
+	]
+}

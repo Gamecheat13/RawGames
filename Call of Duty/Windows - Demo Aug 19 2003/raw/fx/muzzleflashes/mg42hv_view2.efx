@@ -1,0 +1,99 @@
+Particle
+{
+	flags				relative
+
+	count				2
+
+	life				100
+
+	rotation			123 -321
+
+	rotationDelta		4 1
+
+	velocity			500 0 0 300 0 0
+
+	acceleration		1341 0 0 0 0 0
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.3
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			12
+		end				3
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/mg42b
+	]
+}
+
+Light
+{
+	flags				relative
+
+	life				100
+
+	rgb
+	{
+		start			0.9686 0.8235 0.03529
+		end				0.8353 0.5176 0.1686
+		flags			random linear
+	}
+
+	size
+	{
+		start			400
+		end				100
+		flags			random linear
+	}
+}
+
+Particle
+{
+	flags				useAlpha
+
+	life				300 350
+
+	origin				0 0 0 43 0 0
+
+	rotation			360 -360
+
+	rotationDelta		12 -12
+
+	velocity			133 132 132 133 -132 -132
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.5
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				50
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/impact/dusty_puff
+	]
+}

@@ -1,0 +1,48 @@
+Particle
+{
+	flags				useAlpha
+
+	spawnFlags			absoluteAccel orgOnCylinder
+
+	count				1 2
+
+	life				3000 3500
+
+	delay				170 100
+
+	origin				0 100 0 0 -200 0
+
+	radius				120 0
+
+	height				330 185
+
+	rotation			145 -130
+
+	rotationDelta		-4 1
+
+	rgb
+	{
+		start			0.8549 0.7098 0.2706 0.7608 0.4353 0.2392
+		end				0.3608 0.2078 0.1137
+		flags			linear nonlinear
+	}
+
+	alpha
+	{
+		start			0.5
+		end				0.1
+		flags			clamp
+	}
+
+	size
+	{
+		start			100
+		end				500 600
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/cloudflash1a
+	]
+}

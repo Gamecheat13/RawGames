@@ -1,0 +1,52 @@
+// Note to translators:
+// If a sentence is the same in your language then please change it to "#same"
+//
+// eg:
+// LANG_ENGLISH  "HALT"
+// LANG_GERMAN   "#same"
+//
+// (This is so we can tell which strings have been signed-off as ok to be the same words for QA
+//  and because we do not store duplicate strings, which will then get exported again next time
+//  as being untranslated.)
+//
+VERSION             "1"
+CONFIG              "F:\projects\mk\bin\StringEd\StringEd.cfg"
+FILENOTES           ""
+
+REFERENCE           PRESSTHEFORWARDBUTTON
+LANG_ENGLISH        "Hold [%s] to move the tank forward"
+
+REFERENCE           PRESSTHEBACKBUTTON
+LANG_ENGLISH        "Hold [%s] to move the tank backwards"
+
+REFERENCE           PRESSTHESTRAFERIGHT
+LANG_ENGLISH        "Hold [%s] to turn the tank right"
+
+REFERENCE           PRESSTHESTRAFELEFT
+LANG_ENGLISH        "Hold [%s] to turn the tank left"
+
+REFERENCE           PRESSTHEJUMPBUTTON
+LANG_ENGLISH        "hold [%s] to line the base of the tank up with the turret"
+
+REFERENCE           OBJ_GETTOTOWN
+LANG_ENGLISH        "Reach the outskirts of the next town."
+
+REFERENCE           GREENBAR
+LANG_ENGLISH        "The Green box with the red bar on the right shows how much damage your tank has taken."
+
+REFERENCE           MACHINEGUNHINT
+LANG_ENGLISH        "The Machine Gun on your tank will automatically fire at troops in front of your tank."
+
+REFERENCE           PRESSUSETOLOOK
+LANG_ENGLISH        "Press [%s] to open your hatch and look around"
+
+REFERENCE           HATCHOPENHINT
+LANG_ENGLISH        "You can use your regular weapons while the hatch is open."
+
+REFERENCE           PRESSMOVEME
+LANG_ENGLISH        "Use your movement and strafe keys to move and turn the tank."
+
+
+ENDMARKER
+
+

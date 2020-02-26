@@ -1,0 +1,82 @@
+Particle
+{
+	flags				useAlpha
+
+	count				3
+
+	life				700 1000
+
+	rotation			360 -360
+
+	rotationDelta		7 -7
+
+	velocity			-123 151 151 -123 -151 -151
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.5 1
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			13 23
+		end				65 186
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/misc/snowsheet1
+		gfx/impact/snow1
+	]
+}
+
+Particle
+{
+	name				Copy of Unnamed Particle 0
+
+	flags				useAlpha
+
+	count				4 5
+
+	life				700 1000
+
+	rotation			360 -360
+
+	rotationDelta		23 -23
+
+	velocity			0 251 251 0 -251 -251
+
+	gravity				-500
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.5
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			33 23
+		end				65 196
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/impact/snowpuff
+	]
+}

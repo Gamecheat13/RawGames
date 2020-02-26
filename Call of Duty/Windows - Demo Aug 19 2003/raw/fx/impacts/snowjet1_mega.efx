@@ -1,0 +1,23 @@
+Emitter
+{
+	flags				emitFx
+
+	count				2
+
+	life				100 150
+
+	velocity			4000 732 732 7000 -932 -932
+
+	density				4
+
+	size
+	{
+		flags			linear
+	}
+
+	emitfx
+	[
+		fx/tagged/snow_em
+		fx/tagged/snowchunk_em
+	]
+}

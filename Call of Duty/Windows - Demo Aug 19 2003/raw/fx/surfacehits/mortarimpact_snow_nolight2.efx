@@ -1,0 +1,120 @@
+Particle
+{
+	name				flash
+
+	flags				deathFx useAlpha
+
+	spawnFlags			absoluteVel absoluteAccel orgOnSphere axisFromSphere
+
+	life				100 123
+
+	delay				1 0
+
+	origin				0 14 -4 0 -28 -4
+
+	rotation			34 -68
+
+	rotationDelta		4 2
+
+	velocity			0 0 211
+
+	acceleration		0 0 322
+
+	gravity				300
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.5 0.7
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			10 1
+		end				75 50
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/groundflash1
+	]
+
+	deathfx
+	[
+		fx/surfacehits/snowgib1
+	]
+}
+
+OrientedParticle
+{
+	name				smokeblast
+
+	flags				useAlpha
+
+	spawnFlags			cheapOrgCalc orgOnCylinder axisFromSphere evenDistribution
+
+	count				3
+
+	life				200 300
+
+	height				100
+
+	rotation			13 -26
+
+	rotationDelta		40 -80
+
+	velocity			0 0 400 0 0 200
+
+	acceleration		300 200 700 120 -350 400
+
+	gravity				-300 -400
+
+	rgb
+	{
+		start			0.6275 0.6275 0.6431
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			1 10
+		end				676 976
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/mist
+	]
+}
+
+FxRunner
+{
+	spawnFlags			randrotaroundfwd
+
+	playfx
+	[
+		fx/impacts/snowjet1_mega
+	]
+}
+
+FxRunner
+{
+	playfx
+	[
+		fx/explosions/grenade1
+	]
+}

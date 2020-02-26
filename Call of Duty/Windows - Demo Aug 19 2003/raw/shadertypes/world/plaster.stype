@@ -1,0 +1,11 @@
+{
+	surfaceparm plaster
+	{
+		map $texturename
+		rgbGen exactVertex
+	}
+	{
+		map $lightmap
+		blendFunc filter
+	}
+}

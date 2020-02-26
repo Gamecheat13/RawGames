@@ -1,0 +1,177 @@
+Particle
+{
+	count				3
+
+	life				100
+
+	cullrange			100
+
+	rotation			54 -108
+
+	rotationDelta		32 -64
+
+	rgb
+	{
+		start			0.2745 0.2275 0.2
+		end				0.4235 0.4824 0.4627 0.502 0.502 0.502
+		flags			random linear
+	}
+
+	alpha
+	{
+		start			0.7 0.4
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				8
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/impact/sparkflash
+	]
+}
+
+Particle
+{
+	name				Copy of Unnamed Particle 0
+
+	flags				useAlpha
+
+	life				100
+
+	cullrange			400
+
+	rotation			54 -108
+
+	rotationDelta		32 -64
+
+	rgb
+	{
+		start			0.2745 0.2275 0.2
+		end				0.4235 0.4824 0.4627 0.502 0.502 0.502
+		flags			random linear
+	}
+
+	alpha
+	{
+		start			0.7 0.8
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				43 23
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/impact/dustlayer1
+	]
+}
+
+Decal
+{
+	life				1e+004
+
+	cullrange			2200
+
+	rotation			-360 360
+
+	rgb
+	{
+		start			0.5647 0.5647 0.5647
+	}
+
+	size
+	{
+		start			2 4
+	}
+
+	shaders
+	[
+		gfx/impact/stone_singleshot1
+	]
+}
+
+Particle
+{
+	flags				useAlpha
+
+	life				500
+
+	cullrange			600
+
+	origin				1 1 1
+
+	rotation			0 360
+
+	rotationDelta		2 -2
+
+	acceleration		-3 -23 -23 4 25 23
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.5
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			6 4
+		end				23 10
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/whitesmoke
+	]
+}
+
+Emitter
+{
+	flags				emitFx
+
+	spawnFlags			orgOnCylinder axisFromSphere
+
+	life				100 150
+
+	cullrange			1000
+
+	height				14
+
+	velocity			322 22 22 422 -22 -22
+
+	density				4
+
+	emitfx
+	[
+		fx/smoke/brickimpact_em
+		fx/smoke/impact_em
+	]
+}
+
+FxRunner
+{
+	count				1 0
+
+	cullrange			800
+
+	playfx
+	[
+		fx/impacts/metalhit_small
+	]
+}

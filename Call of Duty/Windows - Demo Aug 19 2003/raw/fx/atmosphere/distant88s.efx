@@ -1,0 +1,116 @@
+Particle
+{
+	flags				useAlpha
+
+	spawnFlags			absoluteVel absoluteAccel
+
+	life				100
+
+	delay				180 170
+
+	origin				2000 90 0 1900 -120 0
+
+	rgb
+	{
+		end				0.8392 0.8118 0.6627 1 0.9843 0.9412
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.8
+		end				0.2 0.1
+		flags			linear
+	}
+
+	size
+	{
+		start			2900
+		end				2900
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/lowlevel_cloudflash1
+	]
+}
+
+Particle
+{
+	spawnFlags			absoluteVel absoluteAccel
+
+	count				1 2
+
+	life				500 700
+
+	delay				110 150
+
+	origin				900 200 0 900 -180 0
+
+	rotation			3 -5
+
+	rotationDelta		1 0
+
+	rgb
+	{
+		start			0.8392 0.8118 0.6627 0.6275 0.6275 0.6431
+		end				0.502 0.502 0.502 0.8392 0.8118 0.6627
+		flags			random linear
+	}
+
+	alpha
+	{
+		start			0.2 0.3
+		end				0.1
+		flags			linear
+	}
+
+	size
+	{
+		start			2870 2892
+		end				2900
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/lowlevel_cloudflash2
+	]
+}
+
+Particle
+{
+	spawnFlags			absoluteVel absoluteAccel
+
+	life				400 600
+
+	delay				190 200
+
+	origin				900 200 0 900 -178 0
+
+	rotation			3 -2
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0.2 0.1
+		flags			linear
+	}
+
+	size
+	{
+		start			2600 2610
+		end				2600 2610
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/lowlevel_cloudflash2m
+	]
+}

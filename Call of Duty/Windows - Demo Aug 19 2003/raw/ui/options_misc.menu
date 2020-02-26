@@ -1,0 +1,268 @@
+#include "ui/menudef.h"
+{
+menuDef 
+{
+	name options_misc
+	fullScreen 0				
+	rect OPTIONS_WINDOW_POS OPTIONS_WINDOW_SIZE				// Size and position of the menu
+	visible 1				// Visible on open
+	focusColor .9 .85 1 .8			// Menu focus color for text and items
+	soundloop ""
+	onOpen
+	{
+		uiScript loadControls
+	}
+	onESC 
+	{ 
+		open main;
+		close options_menu;		
+	}
+/*
+	itemDef 
+	{
+		name keyBindStatus
+		rect 0 322 640 30 
+		ownerdraw UI_KEYBINDSTATUS
+		text "-"      
+		forecolor 1 .75 0 1
+		textscale .23
+		textalignx 221
+		textalign 1
+		textaligny 20
+		visible 1
+		decoration 
+	}
+*/
+	itemDef 
+	{
+		name look_back
+		rect 0 0 OPTIONS_WINDOW_SIZE	
+		style WINDOW_STYLE_FILLED
+		border 1
+		bordercolor .5 .5 .5 .5
+		forecolor 1 1 1 1
+		backcolor OPTIONS_WINDOW_BACKCOLOR
+		visible 1
+		decoration
+	}
+	itemDef {
+		name keyBindStatus
+		rect 0 324 360 15 
+		ownerdraw UI_KEYBINDSTATUS
+		text " "      
+		style WINDOW_STYLE_FILLED
+		backcolor OPTIONS_WINDOW_BACKCOLOR
+		forecolor .9 .9 1 1
+		border 1
+		bordercolor .5 .5 .5 .5
+		textscale .20
+		textalignx 168
+		textalign 1
+		textaligny 12
+		visible 0
+		decoration 
+	}
+
+	itemDef 
+	{
+		name ctr_look
+		text "@MENU_OPTIONS_CONTROLS"
+		textscale .23
+		group grpControlbutton
+		type ITEM_TYPE_BUTTON
+		style 0
+		rect 102.5 5 120 10
+		textalign 1
+		textalignx 60
+		textaligny 10
+		forecolor 0.75 0.75 0.75 1
+		visible 1
+		decoration 
+	}
+	itemDef 
+	{
+		name look
+		group grpControls
+		text "@MENU_INTERACT"
+		type 1
+		textscale .23
+		group grpControls
+		rect 145 20 35 10
+		textalign 1
+		textalignx 17
+		textaligny 10
+		forecolor 1 1 1 .9
+		visible 1
+		cvartest "ui_multiplayer"
+		showCvar { "1" }
+		decoration
+	}
+	itemDef 
+	{
+		name look
+		group grpControls
+		text "@MENU_SAVE_INTERACT"
+		type 1
+		textscale .23
+		group grpControls
+		rect 145 20 35 10
+		textalign 1
+		textalignx 17
+		textaligny 10
+		forecolor 1 1 1 .9
+		visible 1
+		cvartest "ui_multiplayer"
+		showCvar { "0" }
+		decoration
+	}
+
+	itemDef 
+	{
+		name misc
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "@MENU_SHOW_OBJECTIVES_SCORES"
+		cvar "+scores"
+		rect		5 40 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+  	}
+
+	itemDef 
+	{
+		name misc
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "@MENU_USE"
+		cvar "+activate"
+		rect		5 55 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+	}
+
+	itemDef 
+	{
+		name misc
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "@MENU_SCREENSHOT"
+		cvar "screenshotjpeg"
+		rect		5 70 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+  	}
+
+	itemDef 
+	{
+		name misc
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "@MENU_QUICK_SAVE"
+		cvar "savegame quicksave"
+		rect		5 85 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		cvartest "ui_multiplayer"
+		hideCvar { "1" }
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+  	}
+
+	itemDef 
+	{
+		name misc
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "@MENU_QUICK_LOAD"
+		cvar "loadgame quicksave"
+		rect		5 100 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		cvartest "ui_multiplayer"
+		hideCvar { "1" }
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+  	}
+
+
+/*
+	itemDef 
+	{
+		name misc
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "Toggle Console:  "
+		cvar "toggleconsole"
+		rect 82 150 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142 
+		textaligny 10
+		textscale .23 
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07                   
+		forecolor 1 1 1 1
+		visible 0 
+		mouseenter { show keyBindStatus }
+		mouseexit { hide keyBindStatus }
+	}
+*/
+
+}
+
+}//

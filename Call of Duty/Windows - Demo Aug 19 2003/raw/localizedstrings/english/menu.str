@@ -1,0 +1,928 @@
+// Note to translators:
+// If a sentence is the same in your language then please change it to "#same"
+//
+// eg:
+// LANG_ENGLISH  "HALT"
+// LANG_GERMAN   "#same"
+//
+// (This is so we can tell which strings have been signed-off as ok to be the same words for QA
+//  and because we do not store duplicate strings, which will then get exported again next time
+//  as being untranslated.)
+//
+VERSION             "1"
+CONFIG              "C:\trees\mk\bin\StringEd\StringEd.cfg"
+FILENOTES           "Strings displayed in the menus go in this file."
+
+REFERENCE           YES
+LANG_ENGLISH        "Yes"
+
+REFERENCE           MULTIPLAYER
+LANG_ENGLISH        "Multiplayer"
+
+REFERENCE           QUIT
+LANG_ENGLISH        "Quit"
+
+REFERENCE           OPTIONS
+LANG_ENGLISH        "Options"
+
+REFERENCE           SAVELOADGAME
+LANG_ENGLISH        "Save/Load Game"
+
+REFERENCE           LOADGAME
+LANG_ENGLISH        "Load Game"
+
+REFERENCE           NEWGAME
+LANG_ENGLISH        "New Game"
+
+REFERENCE           TRAINING
+LANG_ENGLISH        "Training"
+
+REFERENCE           RESUMEGAME
+LANG_ENGLISH        "Resume Game"
+
+REFERENCE           BACKTOGAME
+LANG_ENGLISH        "Back To Game"
+
+REFERENCE           CURRENTLYINAGAME
+LANG_ENGLISH        "You are currently in a game"
+
+REFERENCE           DOYOUWISHTOCONTINUE
+LANG_ENGLISH        "Do you wish to continue?"
+
+REFERENCE           CHOOSESKILLLEVEL
+LANG_ENGLISH        "Choose your skill level"
+
+REFERENCE           GREENHORN
+LANG_ENGLISH        "Greenhorn"
+
+REFERENCE           REGULAR
+LANG_ENGLISH        "Regular"
+
+REFERENCE           HARDENED
+LANG_ENGLISH        "Hardened"
+
+REFERENCE           VETERAN
+LANG_ENGLISH        "Veteran"
+
+REFERENCE           BACK
+LANG_ENGLISH        "Back"
+
+REFERENCE           STARTTRAINING
+LANG_ENGLISH        "Start training?"
+
+REFERENCE           SWITCHTOMULTIPLAYER
+LANG_ENGLISH        "Switch to Multiplayer?"
+
+REFERENCE           NO
+LANG_ENGLISH        "No"
+
+REFERENCE           SAVEGAMELIST
+LANG_ENGLISH        "Save Game List"
+
+REFERENCE           SHOWAUTOSAVES
+LANG_ENGLISH        "Show Auto Saves"
+
+REFERENCE           SHOWMANUALSAVES
+LANG_ENGLISH        "Show Manual Saves"
+
+REFERENCE           NAME
+LANG_ENGLISH        "Name"
+
+REFERENCE           DATE
+LANG_ENGLISH        "Date"
+
+REFERENCE           SAVEAS
+LANG_ENGLISH        "Save As:"
+
+REFERENCE           DELETE
+LANG_ENGLISH        "Delete"
+
+REFERENCE           LOAD
+LANG_ENGLISH        "Load"
+
+REFERENCE           SAVE
+LANG_ENGLISH        "Save"
+
+REFERENCE           DEL_SEL_SAVEGAME
+LANG_ENGLISH        "Delete selected save game?"
+
+REFERENCE           OVERWRITE_EXISTING_FILE
+LANG_ENGLISH        "Overwrite existing file?"
+
+REFERENCE           OK
+LANG_ENGLISH        "OK"
+
+REFERENCE           YOU_MUST_SPECIFY_A_FILENAME
+LANG_ENGLISH        "You must specify a filename!"
+
+REFERENCE           ARE_YOU_SURE_QUIT
+LANG_ENGLISH        "Are you sure you want to quit?"
+
+REFERENCE           CONTROLS
+LANG_ENGLISH        "Controls"
+
+REFERENCE           LOOK
+LANG_ENGLISH        "Look"
+
+REFERENCE           MOVE
+LANG_ENGLISH        "Move"
+
+REFERENCE           SHOOT
+LANG_ENGLISH        "Shoot"
+
+REFERENCE           SAVE_INTERACT
+LANG_ENGLISH        "Save/Interact"
+
+REFERENCE           CONTROL_DEFAULTS
+LANG_ENGLISH        "Control Defaults"
+
+REFERENCE           SYSTEM
+LANG_ENGLISH        "System"
+
+REFERENCE           GRAPHICS
+LANG_ENGLISH        "Graphics"
+
+REFERENCE           SOUND
+LANG_ENGLISH        "Sound"
+
+REFERENCE           PERFORMANCE
+LANG_ENGLISH        "Performance"
+
+REFERENCE           DRIVERINFO
+LANG_ENGLISH        "Driver Info"
+
+REFERENCE           RESET_SYSTEM_DEFAULTS
+LANG_ENGLISH        "Reset System Defaults"
+
+REFERENCE           CREDITS
+LANG_ENGLISH        "Credits"
+
+REFERENCE           RESET_TO_DEFAULTS
+LANG_ENGLISH        "Reset to Default"
+
+REFERENCE           THIS_WILL_RESTORE_ALL_SETTINGS
+LANG_ENGLISH        "Each setting will be restored"
+
+REFERENCE           TO_THEIR_DEFAULT_VALUE
+LANG_ENGLISH        "to its default value."
+
+REFERENCE           ARE_YOU_SURE
+LANG_ENGLISH        "Are you sure?"
+
+REFERENCE           YOUR_CONTROLS_ARE_NOW_SET
+LANG_ENGLISH        "Your controls are now set"
+
+REFERENCE           TO_THEIR_ORIGINAL_DEFAULT_VALUES
+LANG_ENGLISH        "to their original default values."
+
+REFERENCE           CLOSE
+LANG_ENGLISH        "Close"
+
+REFERENCE           OPTIONS_SYSTEM
+LANG_ENGLISH        "Options - System"
+
+REFERENCE           SET_RECOMMENDED
+LANG_ENGLISH        "Set Recommended"
+
+REFERENCE           QUALITY
+LANG_ENGLISH        "Quality:"
+
+REFERENCE           QUALITY_RECOMMENDED
+LANG_ENGLISH        "Quality:  Recommended"
+
+REFERENCE           VIDEO_MODE
+LANG_ENGLISH        "Video Mode:"
+
+REFERENCE           COLOR_DEPTH
+LANG_ENGLISH        "Color Depth:"
+
+REFERENCE           FULLSCREEN
+LANG_ENGLISH        "Full Screen:"
+
+REFERENCE           GEOMETRIC_DETAIL
+LANG_ENGLISH        "Geometric Detail:"
+
+REFERENCE           CHARACTER_TEXTURES
+LANG_ENGLISH        "Character Textures:"
+
+REFERENCE           GENERAL_TEXTURES
+LANG_ENGLISH        "General Textures:"
+
+REFERENCE           TEXTURE_FILTER
+LANG_ENGLISH        "Texture Filter:"
+
+REFERENCE           TEXTURE_QUALITY
+LANG_ENGLISH        "Texture Quality:"
+
+REFERENCE           NVIDIA_DISTANCE_FOG
+LANG_ENGLISH        "Nvidia Distance Fog:"
+
+REFERENCE           BRIGHTNESS
+LANG_ENGLISH        "Brightness:"
+
+REFERENCE           LANGUAGE
+LANG_ENGLISH        "Language:"
+
+REFERENCE           APPLY_LANGUAGE_CHANGE
+LANG_ENGLISH        "Apply Language Change"
+
+REFERENCE           APPLY
+LANG_ENGLISH        "Apply"
+
+REFERENCE           YOUR_SETTINGS_ARE_NOW_SET
+LANG_ENGLISH        "Your settings are now set"
+
+REFERENCE           OPTIONS_CONTROLS
+LANG_ENGLISH        "Options - Controls"
+
+REFERENCE           LOOK_UP
+LANG_ENGLISH        "Look up:  "
+
+REFERENCE           LOOK_DOWN
+LANG_ENGLISH        "Look Down:  "
+
+REFERENCE           MOUSE_LOOK
+LANG_ENGLISH        "Mouse Look:  "
+
+REFERENCE           CENTER_VIEW
+LANG_ENGLISH        "Center View:  "
+
+REFERENCE           FREE_LOOK
+LANG_ENGLISH        "Free Look:  "
+
+REFERENCE           INVERT_MOUSE
+LANG_ENGLISH        "Invert Mouse:  "
+
+REFERENCE           SMOOTH_MOUSE
+LANG_ENGLISH        "Smooth Mouse:  "
+
+REFERENCE           MOUSE_SENSITIVITY
+LANG_ENGLISH        "Mouse Sensitivity:  "
+
+REFERENCE           SHOW_OBJECTIVES_SCORES
+LANG_ENGLISH        "Show Objectives/Scores:  "
+
+REFERENCE           USE
+LANG_ENGLISH        "Use:  "
+
+REFERENCE           QUICK_SAVE
+LANG_ENGLISH        "Quick Save:  "
+
+REFERENCE           QUICK_LOAD
+LANG_ENGLISH        "Quick Load:  "
+
+REFERENCE           SCREENSHOT
+LANG_ENGLISH        "Screenshot:  "
+
+REFERENCE           FORWARD
+LANG_ENGLISH        "Forward:  "
+
+REFERENCE           BACKPEDAL
+LANG_ENGLISH        "Backpedal:  "
+
+REFERENCE           MOVE_LEFT
+LANG_ENGLISH        "Move Left:  "
+
+REFERENCE           MOVE_RIGHT
+LANG_ENGLISH        "Move Right:  "
+
+REFERENCE           LEAN_LEFT
+LANG_ENGLISH        "Lean Left:  "
+
+REFERENCE           LEAN_RIGHT
+LANG_ENGLISH        "Lean Right:  "
+
+REFERENCE           STAND
+LANG_ENGLISH        "Stand:  "
+
+REFERENCE           CROUCH
+LANG_ENGLISH        "Crouch:  "
+
+REFERENCE           PRONE
+LANG_ENGLISH        "Prone:  "
+
+REFERENCE           JUMP_STANCE_UP
+LANG_ENGLISH        "Jump/Stance Up:  "
+
+REFERENCE           STANCE_DOWN
+LANG_ENGLISH        "Stance Down:  "
+
+REFERENCE           STANCE_UP
+LANG_ENGLISH        "Stance Up:  "
+
+REFERENCE           TOGGLE_CROUCH
+LANG_ENGLISH        "Toggle Crouch:  "
+
+REFERENCE           TOGGLE_PRONE
+LANG_ENGLISH        "Toggle Prone:  "
+
+REFERENCE           HOLD_DOWN_CROUCH
+LANG_ENGLISH        "Hold Down Crouch:  "
+
+REFERENCE           HOLD_DOWN_PRONE
+LANG_ENGLISH        "Hold Down Prone:  "
+
+REFERENCE           TURN_LEFT
+LANG_ENGLISH        "Turn Left:  "
+
+REFERENCE           TURN_RIGHT
+LANG_ENGLISH        "Turn Right:  "
+
+REFERENCE           STRAFE
+LANG_ENGLISH        "Strafe:  "
+
+REFERENCE           WALL_MARKS
+LANG_ENGLISH        "Wall Marks:  "
+
+REFERENCE           EJECTING_BRASS
+LANG_ENGLISH        "Ejecting Brass:  "
+
+REFERENCE           DYNAMIC_LIGHTS
+LANG_ENGLISH        "Dynamic Lights:  "
+
+REFERENCE           LOW_QUALITY_SKY
+LANG_ENGLISH        "Low Quality Sky:  "
+
+REFERENCE           SYNC_EVERY_FRAME
+LANG_ENGLISH        "Sync Every Frame:  "
+
+REFERENCE           NVIDIA_FOG_TYPE
+LANG_ENGLISH        "Nvidia fog type:  "
+
+REFERENCE           ATTACK
+LANG_ENGLISH        "Attack:  "
+
+REFERENCE           TOGGLE_AIM_DOWN_THE_SIGHT
+LANG_ENGLISH        "Toggle Aim Down the Sight:  "
+
+REFERENCE           AIM_DOWN_THE_SIGHT
+LANG_ENGLISH        "Aim Down the Sight:  "
+
+REFERENCE           MELEE_ATTACK
+LANG_ENGLISH        "Melee Attack:  "
+
+REFERENCE           RELOAD_WEAPON
+LANG_ENGLISH        "Reload Weapon:  "
+
+REFERENCE           TOGGLE_SEMIAUTOMATIC
+LANG_ENGLISH        "Toggle Semi-Automatic:  "
+
+REFERENCE           SELECT_FIRST_WEAPON
+LANG_ENGLISH        "Select First Weapon:  "
+
+REFERENCE           SELECT_SECOND_WEAPON
+LANG_ENGLISH        "Select Second Weapon:  "
+
+REFERENCE           SELECT_PISTOL
+LANG_ENGLISH        "Select Pistol:  "
+
+REFERENCE           SELECT_GRENADE
+LANG_ENGLISH        "Select Grenade:  "
+
+REFERENCE           NEXT_WEAPON
+LANG_ENGLISH        "Next Weapon:  "
+
+REFERENCE           PREVIOUS_WEAPON
+LANG_ENGLISH        "Previous Weapon:  "
+
+REFERENCE           LAST_WEAPON_USED
+LANG_ENGLISH        "Last Weapon Used:  "
+
+REFERENCE           EFFECTS_VOLUME
+LANG_ENGLISH        "Effects Volume:  "
+
+REFERENCE           MUSIC_VOLUME
+LANG_ENGLISH        "Music Volume:  "
+
+REFERENCE           SOUND_QUALITY
+LANG_ENGLISH        "Sound Quality:  "
+
+REFERENCE           SOUND_PROVIDER
+LANG_ENGLISH        "Sound Provider:  "
+
+REFERENCE           THIS_WILL_APPLY_SOUND
+LANG_ENGLISH        "This will apply sound"
+
+REFERENCE           SETTINGS_AND_RETURN
+LANG_ENGLISH        "settings and return"
+
+REFERENCE           TO_THE_MAIN_MENU
+LANG_ENGLISH        "to the Main Menu."
+
+REFERENCE           ERROR
+LANG_ENGLISH        "Error:"
+
+REFERENCE           EXIT
+LANG_ENGLISH        "Exit"
+
+REFERENCE           THIS_WILL_APPLY_VIDEO
+LANG_ENGLISH        "This will apply video"
+
+REFERENCE           RESTART_LEVEL
+LANG_ENGLISH        "Restart Level"
+
+REFERENCE           LOAD_LAST_SAVE
+LANG_ENGLISH        "Load Last Save"
+
+REFERENCE           MAIN_MENU
+LANG_ENGLISH        "Main Menu"
+
+REFERENCE           CLICK_TO_START_THE_MISSION
+LANG_ENGLISH        "Click to Start the Mission"
+
+REFERENCE           NEXT_LEVEL
+LANG_ENGLISH        "Next Level"
+
+REFERENCE           THIS_WILL_SET
+LANG_ENGLISH        "This will set"
+
+REFERENCE           RECOMMENDED_VIDEO_SETTINGS
+LANG_ENGLISH        "recommended video settings"
+
+REFERENCE           AND_RETURN_TO_THE_MAIN_MENU
+LANG_ENGLISH        "and return to the Main Menu."
+
+REFERENCE           JOIN_AN_INTERNET_GAME
+LANG_ENGLISH        "Join an Internet Game"
+
+REFERENCE           JOIN_A_LAN_GAME
+LANG_ENGLISH        "Join a LAN Game"
+
+REFERENCE           DISCONNECT
+LANG_ENGLISH        "Disconnect"
+
+REFERENCE           START_NEW_SERVER
+LANG_ENGLISH        "Start New Server"
+
+REFERENCE           MULTIPLAYER_OPTIONS
+LANG_ENGLISH        "Multiplayer Options"
+
+REFERENCE           MODS
+LANG_ENGLISH        "Mods"
+
+REFERENCE           SINGLE_PLAYER
+LANG_ENGLISH        "Single Player"
+
+REFERENCE           CLICK_FOR_AUTOUPDATE
+LANG_ENGLISH        "Click for Auto-Update"
+
+REFERENCE           SWITCH_TO_SINGLE_PLAYER
+LANG_ENGLISH        "Switch to Single Player?"
+
+REFERENCE           DOWNLOAD_AUTOUPDATE_PATCH
+LANG_ENGLISH        "Download Auto-Update Patch?"
+
+REFERENCE           VERSION_INSTALLED
+LANG_ENGLISH        "Version Installed:"
+
+REFERENCE           VERSION_AVAILABLE
+LANG_ENGLISH        "Version Available:"
+
+REFERENCE           CDKEY
+LANG_ENGLISH        "CD KEY"
+
+REFERENCE           ENTER_YOUR_ENCRYPTION_KEY_IN_THE_FIELD_BELOW
+LANG_ENGLISH        "Enter your encryption key in the field below."
+
+REFERENCE           KEY
+LANG_ENGLISH        "Key:"
+
+REFERENCE           CANCEL
+LANG_ENGLISH        "Cancel"
+
+REFERENCE           VERIFY
+LANG_ENGLISH        "Verify"
+
+REFERENCE           NEW_FAVORITE
+LANG_ENGLISH        "New Favorite"
+
+REFERENCE           NAME1
+LANG_ENGLISH        "Name: "
+
+REFERENCE           IP_ADDRESS
+LANG_ENGLISH        "IP Address: "
+
+REFERENCE           FILTER_SERVERS
+LANG_ENGLISH        "Filter Servers"
+
+REFERENCE           VIEW_EMPTY
+LANG_ENGLISH        "View Empty:"
+
+REFERENCE           VIEW_FULL
+LANG_ENGLISH        "View Full:"
+
+REFERENCE           FRIENDLY_FIRE
+LANG_ENGLISH        "Friendly Fire:"
+
+REFERENCE           SHOW_MAX_LIVES
+LANG_ENGLISH        "Show Max Lives:"
+
+REFERENCE           SHOW_TOURNEY
+LANG_ENGLISH        "Show Tourney:"
+
+REFERENCE           TYPE
+LANG_ENGLISH        "Type:"
+
+REFERENCE           SERVER NAME
+LANG_ENGLISH        "Server Name"
+
+REFERENCE           MAP_NAME
+LANG_ENGLISH        "Map Name"
+
+REFERENCE           NUMPLAYERS
+LANG_ENGLISH        "#Players"
+
+REFERENCE           PING
+LANG_ENGLISH        "Ping"
+
+REFERENCE           GET_NEW_LIST
+LANG_ENGLISH        "Get New List"
+
+REFERENCE           REFRESH_LIST
+LANG_ENGLISH        "Refresh List"
+
+REFERENCE           PASSWORD
+LANG_ENGLISH        "Password"
+
+REFERENCE           ADD_TO_FAVORITES
+LANG_ENGLISH        "Add To Favorites"
+
+REFERENCE           DEL_FAVORITE
+LANG_ENGLISH        "Del. Favorite"
+
+REFERENCE           SERVER_INFO
+LANG_ENGLISH        "Server Info"
+
+REFERENCE           FIND_FRIEND
+LANG_ENGLISH        "Find Friend"
+
+REFERENCE           ACCEPT
+LANG_ENGLISH        "Accept"
+
+REFERENCE           CONNECTION_TYPE
+LANG_ENGLISH        "Connection Type:"
+
+REFERENCE           LAUNCH
+LANG_ENGLISH        "Launch"
+
+REFERENCE           SELECT_MOD_NAME_TO_LAUNCH
+LANG_ENGLISH        "Select MOD name to Launch"
+
+REFERENCE           JOIN_SERVER
+LANG_ENGLISH        "Join Server"
+
+REFERENCE           CREATE_SERVER
+LANG_ENGLISH        "Create Server"
+
+REFERENCE           ENTER CD-KEY
+LANG_ENGLISH        "Enter CD-Key"
+
+REFERENCE           SHOW_SCORES
+LANG_ENGLISH        "Show Scores:"
+
+REFERENCE           CHAT
+LANG_ENGLISH        "Chat:"
+
+REFERENCE           TEAM_CHAT
+LANG_ENGLISH        "Team Chat:"
+
+REFERENCE           QUICK_CHAT
+LANG_ENGLISH        "Quick Chat:"
+
+REFERENCE           SHOW_COMPASS
+LANG_ENGLISH        "Show Compass:"
+
+REFERENCE           TEAM_OVERLAY
+LANG_ENGLISH        "Team Overlay:"
+
+REFERENCE           CHAT_ICON_TIME
+LANG_ENGLISH        "Chat Icon Time:"
+
+REFERENCE           NET_DATA_RATE
+LANG_ENGLISH        "Net Data Rate:"
+
+REFERENCE           PLAYER_NAME
+LANG_ENGLISH        "Player Name:"
+
+REFERENCE           REFRESH
+LANG_ENGLISH        "Refresh"
+
+REFERENCE           CONTINUE
+LANG_ENGLISH        "Continue"
+
+REFERENCE           HIGHQUALITY
+LANG_ENGLISH        "High Quality"
+
+REFERENCE           NORMAL
+LANG_ENGLISH        "Normal"
+
+REFERENCE           FAST
+LANG_ENGLISH        "Fast"
+
+REFERENCE           FASTEST
+LANG_ENGLISH        "Fastest"
+
+REFERENCE           CUSTOM
+LANG_ENGLISH        "Custom"
+
+REFERENCE           INTERACT
+LANG_ENGLISH        "Interact"
+
+REFERENCE           SET_DEFAULT_CONTROLS
+LANG_ENGLISH        "Set Default Controls"
+
+REFERENCE           STANDJUMP
+LANG_ENGLISH        "Stand/Jump:  "
+
+REFERENCE           GO_TO_CROUCH
+LANG_ENGLISH        "Go To Crouch:  "
+
+REFERENCE           GO_TO_PRONE
+LANG_ENGLISH        "Go To Prone:  "
+
+REFERENCE           LOAD_SELECTED_GAME
+LANG_ENGLISH        "Load selected game?"
+
+REFERENCE           DEL_SEL_FAVORITE
+LANG_ENGLISH        "Delete selected favorite from list?"
+
+REFERENCE           VOTE_YES
+LANG_ENGLISH        "Vote Yes:"
+
+REFERENCE           VOTE_NO
+LANG_ENGLISH        "Vote No:"
+
+REFERENCE           CHANGE_RATE_OF_FIRE
+LANG_ENGLISH        "Change Rate of Fire:  "
+
+REFERENCE           DRAW_HUD
+LANG_ENGLISH        "Draw HUD:"
+
+REFERENCE           DRAW_CROSSHAIR
+LANG_ENGLISH        "Draw Crosshair:"
+
+REFERENCE           QUICK_REFRESH
+LANG_ENGLISH        "Quick Refresh"
+
+REFERENCE           WORLD_DYNAMIC_LIGHT_QUALITY
+LANG_ENGLISH        "World Dynamic Light Quality:  "
+
+REFERENCE           SHOW_BLOOD
+LANG_ENGLISH        "Show Blood:  "
+
+REFERENCE           THIS_WILL_APPLY_THE
+LANG_ENGLISH        "This will apply the"
+
+REFERENCE           LANGUAGE_CHANGE_AND_RETURN
+LANG_ENGLISH        "language change and return"
+
+REFERENCE           640480
+LANG_ENGLISH        "640*480"
+
+REFERENCE           800600
+LANG_ENGLISH        "800*600"
+
+REFERENCE           1024768
+LANG_ENGLISH        "1024*768"
+
+REFERENCE           1152864
+LANG_ENGLISH        "1152*864"
+
+REFERENCE           12801024
+LANG_ENGLISH        "1280*1024"
+
+REFERENCE           16001200
+LANG_ENGLISH        "1600*1200"
+
+REFERENCE           20481536
+LANG_ENGLISH        "2048*1536"
+
+REFERENCE           LOW
+LANG_ENGLISH        "Low"
+
+REFERENCE           HIGH
+LANG_ENGLISH        "High"
+
+REFERENCE           EXTRA
+LANG_ENGLISH        "Extra"
+
+REFERENCE           BILINEAR
+LANG_ENGLISH        "Bilinear"
+
+REFERENCE           TRILINEAR
+LANG_ENGLISH        "Trilinear"
+
+REFERENCE           DEFAULT
+LANG_ENGLISH        "Default"
+
+REFERENCE           16BIT
+LANG_ENGLISH        "16 bit"
+
+REFERENCE           32BIT
+LANG_ENGLISH        "32 bit"
+
+REFERENCE           ENGLISH
+LANG_ENGLISH        "English"
+
+REFERENCE           FRENCH
+LANG_ENGLISH        "French"
+
+REFERENCE           GERMAN
+LANG_ENGLISH        "German"
+
+REFERENCE           ITALIAN
+LANG_ENGLISH        "Italian"
+
+REFERENCE           SPANISH
+LANG_ENGLISH        "Spanish"
+
+REFERENCE           BRITISH
+LANG_ENGLISH        "British"
+
+REFERENCE           RUSSIAN
+LANG_ENGLISH        "Russian"
+
+REFERENCE           KOREAN
+LANG_ENGLISH        "Korean"
+
+REFERENCE           TAIWANESE
+LANG_ENGLISH        "Taiwanese"
+
+REFERENCE           JAPANESE
+LANG_ENGLISH        "Japanese"
+
+REFERENCE           CHINESE
+LANG_ENGLISH        "Chinese"
+
+REFERENCE           THAI
+LANG_ENGLISH        "Thai"
+
+REFERENCE           ON
+LANG_ENGLISH        "On"
+
+REFERENCE           OFF
+LANG_ENGLISH        "Off"
+
+REFERENCE           EVERYTHING
+LANG_ENGLISH        "Everything"
+
+REFERENCE           MODELS_ONLY
+LANG_ENGLISH        "Models Only"
+
+REFERENCE           NONE
+LANG_ENGLISH        "None"
+
+REFERENCE           NICEST
+LANG_ENGLISH        "Nicest"
+
+REFERENCE           NV_RADIAL
+LANG_ENGLISH        "NV Radial"
+
+REFERENCE           NV_PLANE
+LANG_ENGLISH        "NV Plane"
+
+REFERENCE           11KHZ__
+LANG_ENGLISH        "11khz (low quality, least memory)"
+
+REFERENCE           22KHZ__
+LANG_ENGLISH        "22khz (normal quality, medium memory)"
+
+REFERENCE           44KHZ__
+LANG_ENGLISH        "44khz (high quality, most memory)"
+
+REFERENCE           CREATIVE_LABS_EAX_3
+LANG_ENGLISH        "Creative Labs EAX 3 (TM)"
+
+REFERENCE           CREATIVE_LABS_EAX_2
+LANG_ENGLISH        "Creative Labs EAX 2 (TM)"
+
+REFERENCE           CREATIVE_LABS_EAX
+LANG_ENGLISH        "Creative Labs EAX (TM)"
+
+REFERENCE           MILES_FAST_2D_POSITIONAL_AUDIO
+LANG_ENGLISH        "Miles Fast 2D Positional Audio"
+
+REFERENCE           GAME_TYPE_SETTINGS
+LANG_ENGLISH        "Game Type Settings"
+
+REFERENCE           SERVER_SETTINGS
+LANG_ENGLISH        "Server Settings"
+
+REFERENCE           GAME_TYPE
+LANG_ENGLISH        "Game Type:  "
+
+REFERENCE           SERVER_NAME
+LANG_ENGLISH        "Server Name:  "
+
+REFERENCE           DEDICATED
+LANG_ENGLISH        "Dedicated:  "
+
+REFERENCE           PURE
+LANG_ENGLISH        "Pure:  "
+
+REFERENCE           MAXIMUM_PLAYERS
+LANG_ENGLISH        "Maximum Players:  "
+
+REFERENCE           MINIMUM_PING
+LANG_ENGLISH        "Minimum Ping:  "
+
+REFERENCE           MAXIMUM_PING
+LANG_ENGLISH        "Maximum Ping:  "
+
+REFERENCE           MAXIMUM_RATE
+LANG_ENGLISH        "Maximum Rate:  "
+
+REFERENCE           PASSWORD1
+LANG_ENGLISH        "Password:  "
+
+REFERENCE           BOTH
+LANG_ENGLISH        "Both"
+
+REFERENCE           288K
+LANG_ENGLISH        "<=28.8k"
+
+REFERENCE           336K
+LANG_ENGLISH        "33.6k"
+
+REFERENCE           56K
+LANG_ENGLISH        "56k"
+
+REFERENCE           ISDN
+LANG_ENGLISH        "ISDN"
+
+REFERENCE           LAN_CABLE_XDSL
+LANG_ENGLISH        "LAN/CABLE/xDSL"
+
+REFERENCE           SCORE_LIMIT
+LANG_ENGLISH        "Score Limit:  "
+
+REFERENCE           TIME_LIMIT
+LANG_ENGLISH        "Time Limit:  "
+
+REFERENCE           FRIENDLY_FIRE1
+LANG_ENGLISH        "Friendly Fire:  "
+
+REFERENCE           FORCE_RESPAWNING
+LANG_ENGLISH        "Force Respawning:  "
+
+REFERENCE           GRACE_PERIOD
+LANG_ENGLISH        "Grace Period:  "
+
+REFERENCE           ROUND_LENGTH
+LANG_ENGLISH        "Round Length:  "
+
+REFERENCE           ROUND_LIMIT
+LANG_ENGLISH        "Round Limit:  "
+
+REFERENCE           GO_TO_SINGLE_PLAYER_CALL_OF_DUTY
+LANG_ENGLISH        "Go to single player Call of Duty?"
+
+REFERENCE           TO_THE_GAME
+LANG_ENGLISH        "to the game."
+
+REFERENCE           NUMBER_OF_CORPSES
+LANG_ENGLISH        "Number of Corpses:  "
+
+REFERENCE           TINY
+LANG_ENGLISH        "tiny"
+
+REFERENCE           SMALL
+LANG_ENGLISH        "small"
+
+REFERENCE           MEDIUM
+LANG_ENGLISH        "medium"
+
+REFERENCE           LARGE
+LANG_ENGLISH        "large"
+
+REFERENCE           INSANE
+LANG_ENGLISH        "insane"
+
+REFERENCE           SETTINGS_WILL_BE_REAPPLIED
+LANG_ENGLISH        "Settings will be applied"
+
+REFERENCE           NEXT_TIME_THE_SERVER
+LANG_ENGLISH        "next time the server"
+
+REFERENCE           IS_STARTED
+LANG_ENGLISH        "is started."
+
+REFERENCE           JOIN
+LANG_ENGLISH        "Join"
+
+REFERENCE           ALL_CURRENT_PROGRESS_WILL_BE_LOST
+LANG_ENGLISH        "All current progress will be lost."
+
+REFERENCE           PLAY_DEMO_LEVEL
+LANG_ENGLISH        "Play Demo Level"
+
+REFERENCE           ENABLE_CONSOLE
+LANG_ENGLISH        "Enable Console:  "
+
+REFERENCE           SUBTITLES
+LANG_ENGLISH        "Subtitles:  "
+
+
+ENDMARKER
+
+

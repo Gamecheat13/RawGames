@@ -1,0 +1,169 @@
+// Note to translators:
+// If a sentence is the same in your language then please change it to "#same"
+//
+// eg:
+// LANG_ENGLISH  "HALT"
+// LANG_GERMAN   "#same"
+//
+// (This is so we can tell which strings have been signed-off as ok to be the same words for QA
+//  and because we do not store duplicate strings, which will then get exported again next time
+//  as being untranslated.)
+//
+VERSION             "1"
+CONFIG              "C:\trees\mk\bin\StringEd\StringEd.cfg"
+FILENOTES           ""
+
+REFERENCE           SERVERISFULL
+LANG_ENGLISH        "Server is full."
+
+REFERENCE           KEYWAIT
+LANG_ENGLISH        "Waiting for new key. Press ESCAPE to cancel or BACKSPACE to clear"
+
+REFERENCE           KEYCHANGE
+LANG_ENGLISH        "Press ENTER or CLICK to change"
+
+REFERENCE           YES
+LANG_ENGLISH        "yes"
+
+REFERENCE           NO
+LANG_ENGLISH        "no"
+
+REFERENCE           ALL
+LANG_ENGLISH        "All"
+
+REFERENCE           WAITINGFORMASTERSERVERRESPONSE
+LANG_ENGLISH        "Waiting for response from Master Server"
+
+REFERENCE           GETTINGINFOFORSERVERS
+LANG_ENGLISH        "Getting info for %d servers (ESC to cancel)"
+
+REFERENCE           REFRESHTIME
+LANG_ENGLISH        "Refresh Time: %s"
+
+REFERENCE           CDKEYVALID
+LANG_ENGLISH        "CD key appears to be valid."
+
+REFERENCE           CDKEYINVALID
+LANG_ENGLISH        "CD key does not appear to be valid."
+
+REFERENCE           FAVORITEINLIST
+LANG_ENGLISH        "Favorite already in list."
+
+REFERENCE           FAVORITELISTFULL
+LANG_ENGLISH        "Favorite list is full."
+
+REFERENCE           FAVORITEADDED
+LANG_ENGLISH        "Added favorite server %s"
+
+REFERENCE           DOWNLOADINGUPDATE
+LANG_ENGLISH        "Downloading Update: %s"
+
+REFERENCE           CONNECTINGTO
+LANG_ENGLISH        "Connecting to %s"
+
+REFERENCE           AWAITINGCONNECTION
+LANG_ENGLISH        "Awaiting connection...%i"
+
+REFERENCE           AWAITINGCHALLENGE
+LANG_ENGLISH        "Awaiting challenge...%i"
+
+REFERENCE           AWAITINGGAMESTATE
+LANG_ENGLISH        "Awaiting gamestate..."
+
+REFERENCE           SAYTEAM
+LANG_ENGLISH        "say_team"
+
+REFERENCE           SAY
+LANG_ENGLISH        "say"
+
+REFERENCE           GAMESAVED
+LANG_ENGLISH        "Game Saved"
+
+REFERENCE           PLAYERKICKED
+LANG_ENGLISH        "Player kicked."
+
+REFERENCE           CANNOTKICKHOSTPLAYER
+LANG_ENGLISH        "Can not kick the host player."
+
+REFERENCE           SERVERKILLED
+LANG_ENGLISH        "Server killed."
+
+REFERENCE           SERVERQUIT
+LANG_ENGLISH        "Server quit"
+
+REFERENCE           DISCONNECTEDFROMOWNLISTENSERVER
+LANG_ENGLISH        "Client told to disconnect from its own listen server."
+
+REFERENCE           ENDOFGAME
+LANG_ENGLISH        "end of game"
+
+REFERENCE           SERVERDIDNTHAVECD
+LANG_ENGLISH        "Server didn't have CD"
+
+REFERENCE           SERVERRESTARTTIMEWRAP
+LANG_ENGLISH        "Restarting server due to time wrapping"
+
+REFERENCE           SERVERRESTARTMISC
+LANG_ENGLISH        "Restarting server due to %s wrapping."
+
+REFERENCE           INVALIDUPDATESERVERDOWNLOAD
+LANG_ENGLISH        "Invalid download from update server"
+
+REFERENCE           CANTAUTODLGAMEPAK
+LANG_ENGLISH        "Can not auto-download game pk3 file %s."
+
+REFERENCE           AUTODL_SERVERDISABLED_PURE
+LANG_ENGLISH        "Could not download %s because autodownloading is disabled on the server.\n\nYou will need to get this file elsewhere before you can connect to this pure server."
+
+REFERENCE           AUTODL_SERVERDISABLED
+LANG_ENGLISH        "Could not download %s because autodownloading is disabled on the server.\n\nSet autodownload to No in your settings and you might be able to connect if you do have the file."
+
+REFERENCE           AUTODL_FILENOTONSERVER
+LANG_ENGLISH        "File %s not found on server for autodownloading."
+
+REFERENCE           DISCONNECTED
+LANG_ENGLISH        "Disconnected"
+
+REFERENCE           UNPURECLIENTDETECTED
+LANG_ENGLISH        "Unpure client detected. Invalid .PK3 files referenced!"
+
+REFERENCE           LOSTRELIABLECOMMANDS
+LANG_ENGLISH        "Lost reliable commands"
+
+REFERENCE           CANNOTVALIDATEPURECLIENT
+LANG_ENGLISH        "Cannot validate pure client!"
+
+REFERENCE           SERVERCOMMANDOVERFLOW
+LANG_ENGLISH        "Server command overflow"
+
+REFERENCE           TIMEDOUT
+LANG_ENGLISH        "Timed out"
+
+REFERENCE           SERVERMESSAGEOVERFLOW
+LANG_ENGLISH        "Server message overflow"
+
+REFERENCE           LOCAL
+LANG_ENGLISH        "Local"
+
+REFERENCE           INTERNET
+LANG_ENGLISH        "Internet"
+
+REFERENCE           FAVORITES
+LANG_ENGLISH        "Favorites"
+
+REFERENCE           NETSOURCE
+LANG_ENGLISH        "Source: %s"
+
+REFERENCE           SERVERFILTER
+LANG_ENGLISH        "Filter: %s"
+
+REFERENCE           NOSAVEGAMES
+LANG_ENGLISH        "(no savegames)"
+
+REFERENCE           AWAITINGCDKEYAUTH
+LANG_ENGLISH        "Awaiting CD key authorization"
+
+
+ENDMARKER
+
+

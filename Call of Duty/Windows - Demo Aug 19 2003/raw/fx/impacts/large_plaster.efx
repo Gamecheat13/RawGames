@@ -1,0 +1,186 @@
+Tail
+{
+	name				dirthit_large
+
+	flags				useAlpha
+
+	spawnFlags			axisFromSphere
+
+	life				200
+
+	cullrange			100
+
+	height				10
+
+	velocity			150 0 0
+
+	acceleration		722 0 0
+
+	rgb
+	{
+		end				0.8392 0.8118 0.6627
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				12
+		flags			linear
+	}
+
+	length
+	{
+		end				43
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/dirthit_large
+	]
+}
+
+Particle
+{
+	name				stonegib
+
+	flags				usePhysics impactKills useAlpha
+
+	spawnFlags			axisFromSphere
+
+	count				14 8
+
+	life				1500 1200
+
+	cullrange			100
+
+	radius				3 6
+
+	rotation			360 -360
+
+	rotationDelta		21 43
+
+	velocity			333 233 233 333 -233 -233
+
+	gravity				-800
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0.3 0.2
+		flags			linear
+	}
+
+	size
+	{
+		end				0.1
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/stonegib1
+		gfx/impact/stone_piece1
+	]
+}
+
+Particle
+{
+	name				puff
+
+	flags				useAlpha
+
+	spawnFlags			orgOnCylinder axisFromSphere
+
+	count				4
+
+	life				300 400
+
+	cullrange			300
+
+	origin				0 0 0 23 0 0
+
+	rotation			432 -123
+
+	rotationDelta		3 0
+
+	velocity			23 0 0
+
+	rgb
+	{
+		end				0.8392 0.8118 0.6627
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.6 0.9
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			1 3
+		end				22 12
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/impact/dustlayer1
+	]
+}
+
+Emitter
+{
+	flags				emitFx
+
+	life				100 150
+
+	cullrange			1200
+
+	velocity			422 122 0 422 -122 0
+
+	density				4
+
+	size
+	{
+		flags			linear
+	}
+
+	emitfx
+	[
+		fx/smoke/impact_em
+	]
+}
+
+Decal
+{
+	life				1e+004
+
+	cullrange			2200
+
+	rotation			360 -360
+
+	size
+	{
+		start			4 7
+	}
+
+	shaders
+	[
+		gfx/impact/bullethit_plaster
+		gfx/impact/bullethit_plaster2
+	]
+}

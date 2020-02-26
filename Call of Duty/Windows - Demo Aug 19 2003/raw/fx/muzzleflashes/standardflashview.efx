@@ -1,0 +1,205 @@
+Particle
+{
+	flags				depthHack relative
+
+	count				1 2
+
+	life				121 211
+
+	origin				0 0 0 7 0 0
+
+	rotation			320 -360
+
+	velocity			33 0 0 22 0 0
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.6 0.8
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			1 2
+		end				10 8
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/muzflash2_sn
+	]
+}
+
+Particle
+{
+	name				Copy of Unnamed Particle 0
+
+	flags				depthHack relative
+
+	count				2 3
+
+	life				100
+
+	origin				-3 0 0 0 0 0
+
+	rotation			320 -360
+
+	rotationDelta		44 0
+
+	velocity			56 0 0 100 0 0
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.6 0.8
+		end				0.4 0.2
+		flags			linear
+	}
+
+	size
+	{
+		start			0
+		end				8
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/muzflash2_sn
+	]
+}
+
+Particle
+{
+	name				Copy of Copy of Unnamed Particl
+
+	flags				depthHack relative
+
+	count				0 1
+
+	life				100
+
+	origin				4 0 0 8 0 0
+
+	rotation			320 -360
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.6 0.8
+		end				0.4 0
+		flags			linear
+	}
+
+	size
+	{
+		start			0
+		end				10
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/muzflash2a_sn
+	]
+}
+
+Tail
+{
+	flags				depthHack relative
+
+	life				100
+
+	origin				14 0 0
+
+	velocity			2 0 0 0 0 0
+
+	size
+	{
+		end				6
+		flags			linear
+	}
+
+	length
+	{
+		start			12
+		end				15
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/mg42a_sn
+	]
+}
+
+Tail
+{
+	name				Copy of Unnamed Tail 5
+
+	flags				depthHack relative
+
+	count				2 1
+
+	life				100
+
+	origin				15 0 0 16 0 0
+
+	velocity			2 0 0 0 0 0
+
+	size
+	{
+		start			0
+		end				2
+		flags			linear
+	}
+
+	length
+	{
+		start			13
+		end				14
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/mg42b_sn
+	]
+}
+
+Light
+{
+	flags				depthHack
+
+	life				100
+
+	origin				7 0 0 12 0 0
+
+	rgb
+	{
+		start			0.9686 0.8235 0.03529 0.8392 0.8118 0.6627
+		end				0.9765 0.949 0.651 0.8549 0.7098 0.2706
+		flags			linear
+	}
+
+	size
+	{
+		start			210 190
+		flags			linear
+	}
+}

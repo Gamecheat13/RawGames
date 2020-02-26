@@ -1,0 +1,153 @@
+Particle
+{
+	flags				useAlpha
+
+	spawnFlags			orgOnCylinder axisFromSphere
+
+	count				2 3
+
+	life				100
+
+	cullrange			800
+
+	rotation			0 360
+
+	rotationDelta		23 -65
+
+	velocity			164 0 0 228 0 0
+
+	rgb
+	{
+		start			1 0.9843 0.9412
+		end				1 0.9843 0.9412
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.5
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				14 34
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/impact/woodpuff
+	]
+}
+
+Tail
+{
+	flags				useAlpha
+
+	spawnFlags			orgOnCylinder axisFromSphere
+
+	count				1 4
+
+	life				500
+
+	cullrange			200
+
+	velocity			600 23 0 200 -64 0
+
+	gravity				-200
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				10
+		flags			linear
+	}
+
+	length
+	{
+		start			10
+		end				10
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/impact/wood_splinter1
+		gfx/impact/wood_splinter2
+	]
+}
+
+Particle
+{
+	flags				usePhysics impactKills useAlpha
+
+	spawnFlags			orgOnCylinder axisFromSphere
+
+	count				1 3
+
+	life				600
+
+	cullrange			200
+
+	rotation			-360 360
+
+	rotationDelta		125 -190
+
+	velocity			423 0 0 123 0 0
+
+	gravity				-300
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				3 6
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/impact/wood_splinter2
+	]
+}
+
+Decal
+{
+	life				1e+004
+
+	cullrange			1200
+
+	rotation			0 360
+
+	size
+	{
+		start			5 7
+	}
+
+	shaders
+	[
+		gfx/impact/bullethit_wood1
+		gfx/impact/bullethit_wood2
+	]
+}

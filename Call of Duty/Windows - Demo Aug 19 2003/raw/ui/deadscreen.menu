@@ -1,0 +1,223 @@
+#include "ui/menudef.h"
+
+{
+	assetGlobalDef 
+	{
+		cursor "ui/assets/3_cursor3"			// cursor	
+		gradientBar "ui/assets/gradientbar2.tga"	// gradient bar
+		itemFocusSound "sound/misc/menu2.wav"	
+					// sound for item getting focus (via keyboard or mouse )
+
+		fadeClamp 0.4   				// sets the fadeup alpha
+		fadeCycle 1					// how often fade happens in milliseconds
+		fadeAmount 0.05 				// amount to adjust fadeout alpha per cycle
+		fadeInAmount 0.002				// amount to adjust fadein alpha per cycle
+		
+		shadowColor 0.1 0.1 0.1 0.25			// shadow color
+	}
+
+	menuDef 
+	{
+		name "deadscreen"
+//		background "menuback_cw"		// Spinning Circle Background
+		fullScreen MENU_TRUE				
+		rect 0 0 640 480				// Size and position of the menu
+		visible MENU_TRUE				// Visible on open
+		focusColor .9 .85 1 .8			// Menu focus color for text and items
+		soundloop ""
+		
+		onOpen 
+		{ 
+//			play "music_mainmenu";
+			setcvar cl_paused "1"; // pause the game
+			setitemcolor fadebox backcolor 0 0 0 1;
+			fadeout fadebox;
+			setitemcolor bloodfade backcolor 1 1 1 0;
+			fadein bloodfade;
+//			setitemcolor quote forecolor 1 1 1 0.01;
+//			fadein quote;
+//			play "sound/misc/tim_pump.wav" ; 
+//			uiScript stopRefresh;
+		}
+		
+		onClose
+		{
+			setcvar cl_paused "0"; // unpause the game
+		}
+
+		// Do Continue functionality if player pressed the ESC key
+		onESC 
+		{ 
+			open main;
+//			close deadscreen;
+//			exec "loadgame_continue";
+		}
+
+		// default full screen backdrop image
+		itemDef 
+		{
+			name defaultbackdrop
+			rect 0 0 640 480
+			style WINDOW_STYLE_SHADER
+//			background "levelshots/deadscreen/american.jpg"
+			background "ui/assets/fadebox.tga"
+			forecolor 0 0 0 1
+			backcolor 0 0 0 1
+			visible 1
+			decoration
+		}
+
+		// full screen backdrop image
+		itemDef 
+		{
+			name backdrop
+			rect 0 0 640 480
+			style WINDOW_STYLE_CVAR_SHADER
+			cvar "cg_deadscreen_backdrop"
+			visible 1
+			decoration
+		}
+
+		// Level name display
+		itemDef 
+		{
+			name backdrop
+			rect 0 0 640 80 // 1024x128
+			style WINDOW_STYLE_CVAR_SHADER
+			cvar "cg_deadscreen_levelname"
+			visible 1
+			decoration
+		}
+		
+    	// Fadein Blood overlay 
+    	itemDef
+    	{
+    		name bloodfade
+	      	style WINDOW_STYLE_FILLED
+	 		background "ui/assets/menu@bloodfade.tga"
+			forecolor 1 1 1 0
+			backcolor 1 1 1 0
+			rect 0 0 640 480
+	      	visible 1 
+			decoration
+    	}
+
+		// Quote from a famous dead guy    	
+		itemDef 
+		{
+			name quote
+			cvar "ui_deadquote"
+			autowrapped
+			textscale .4
+			group grpControlbutton
+			type ITEM_TYPE_TEXT
+			rect 80 200 480 20
+			textalign ITEM_ALIGN_CENTER
+			textalignx 240 // point to center around
+			forecolor 1 1 1 1
+			visible 1
+			decoration 
+		}
+    	
+	/*	
+		// Restart level button (loads autosave at start of level)
+		itemDef
+		{
+			name restart
+			rect 32 440 128 16
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			text "@MENU_RESTART_LEVEL"
+			textfont UI_FONT_BIG
+			textstyle ITEM_TEXTSTYLE_SHADOWEDMORE
+			textalign ITEM_ALIGN_CENTER
+			textalignx 64
+			textaligny 16
+			textscale .4
+			forecolor .9 .9 .9 .9
+			visible 1 
+			action
+			{
+				exec "loadgame_restart";
+				close deadscreen;
+			}
+		}
+		execKey "r" // Restart hotkey
+		{
+			exec "loadgame_restart";
+			close deadscreen;
+		}
+*/
+		// Continue button (loads last accessed savegame)
+		itemDef
+		{
+			name continue
+			rect 250 440 140 16
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			text "@MENU_CONTINUE"
+			textfont UI_FONT_BIG
+			textstyle ITEM_TEXTSTYLE_SHADOWEDMORE
+			textalign ITEM_ALIGN_CENTER
+			textalignx 70
+			textaligny 16
+			textscale .4
+			forecolor .9 .9 .9 .9
+			visible 1 
+			action
+			{
+				exec "loadgame_continue";
+				close deadscreen;
+			}
+		}
+		execKey "c" // Continue hotkey
+		{
+			exec "loadgame_continue";
+			close deadscreen;
+		}
+
+		// Main menu button (returns player to the main menu)
+		itemDef
+		{
+			name restart
+			rect 480 440 128 16
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			text "@MENU_MAIN_MENU"
+			textfont UI_FONT_BIG
+			textstyle ITEM_TEXTSTYLE_SHADOWEDMORE
+			textalign ITEM_ALIGN_CENTER
+			textalignx 64
+			textaligny 16
+			textscale .4
+			forecolor .9 .9 .9 .9
+			visible 1 
+			action
+			{
+//				exec "disconnect";
+//				close deadscreen;
+				open main;
+			}
+		}
+		execKey "m" // main menu hotkey
+		{
+//			exec "disconnect";
+//			close deadscreen;
+			open main;
+		}
+
+		// Box for fading in menus, this needs to come last
+		itemDef 	
+		{
+	      	name fadebox
+	      	style WINDOW_STYLE_FILLED
+	 		background "ui/assets/fadebox.tga"
+			forecolor 0 0 0 1
+			backcolor 0 0 0 1
+			rect 0 0 640 480
+	      	visible 1 
+			decoration
+    	}
+   	
+	}
+}

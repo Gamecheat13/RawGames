@@ -1,0 +1,10 @@
+{
+	surfaceparm metal
+	surfaceparm nonsolid
+	{
+		map $texturename
+		rgbGen lightingDiffuse
+		alphaFunc GE128
+		depthWrite
+	}
+}

@@ -1,0 +1,13 @@
+{
+	surfaceparm trans	
+	surfaceparm nomarks	
+	DeformVertexes autosprite2
+	{
+		map $texturename
+		rgbGen exactVertex
+		alphaFunc GE128
+		depthWrite
+	nextbundle
+		map $lightmap
+	}
+}

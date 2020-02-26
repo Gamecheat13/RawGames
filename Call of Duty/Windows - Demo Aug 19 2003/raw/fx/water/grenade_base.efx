@@ -1,0 +1,212 @@
+Particle
+{
+	name				flash
+
+	flags				useAlpha
+
+	spawnFlags			orgOnCylinder
+
+	count				2 3
+
+	life				100
+
+	origin				12 0 16 -12 0 -21
+
+	radius				10 20
+
+	height				0 7
+
+	rgb
+	{
+		start			0.9765 0.949 0.651 0.9686 0.8235 0.03529
+		end				0.8353 0.5176 0.1686 0.6706 0.4157 0.1373
+		flags			random linear
+	}
+
+	alpha
+	{
+		start			0.3
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			0
+		end				21
+		flags			random linear
+	}
+
+	shaders
+	[
+		gfx/effects/flash1
+	]
+}
+
+Particle
+{
+	name				smoke
+
+	flags				useAlpha
+
+	spawnFlags			orgOnCylinder evenDistribution
+
+	count				10
+
+	life				900 700
+
+	origin				5 12 0 75 -24 0
+
+	radius				10 30
+
+	rotation			360 -360
+
+	rotationDelta		7
+
+	velocity			32 0 0 128 0 0
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			10
+		end				100 50
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/pjsmoke
+	]
+}
+
+Emitter
+{
+	name				particulates
+
+	flags				usePhysics impactKills emitFx
+
+	spawnFlags			cheapOrgCalc absoluteVel absoluteAccel orgOnCylinder evenDistribution
+
+	life				100
+
+	velocity			120 0 0
+
+	acceleration		120 0 0 0 0 0
+
+	density				4
+
+	size
+	{
+		flags			linear
+	}
+
+	emitfx
+	[
+		fx/water/splash
+	]
+}
+
+Particle
+{
+	name				Copy of smoke
+
+	flags				useAlpha
+
+	spawnFlags			orgOnCylinder axisFromSphere evenDistribution
+
+	count				3 4
+
+	life				1500 1600
+
+	origin				5 60 0 75 -60 0
+
+	radius				10 30
+
+	rotation			360 -145
+
+	rotationDelta		12 -12
+
+	velocity			32 0 0 -32 0 0
+
+	acceleration		0 0 142 0 0 133
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.5
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			10
+		end				100 150
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/whitesmoke
+	]
+}
+
+Particle
+{
+	name				Copy of smoke
+
+	flags				useAlpha
+
+	spawnFlags			absoluteVel orgOnCylinder axisFromSphere evenDistribution
+
+	count				5
+
+	life				1900 1700
+
+	origin				5 12 0 75 -24 0
+
+	radius				10 30
+
+	rotation			360 -360
+
+	rotationDelta		3 -3
+
+	velocity			-32 0 0 128 0 0
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			10
+		end				100 50
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/pjsmoke
+	]
+}

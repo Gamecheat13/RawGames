@@ -1,0 +1,9 @@
+{
+	surfaceparm cloth
+	{
+		map $texturename
+		rgbGen lightingDiffuse
+		alphaFunc GE128
+		depthWrite
+	}
+}

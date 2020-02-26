@@ -1,0 +1,38 @@
+Particle
+{
+	spawnFlags			absoluteAccel
+
+	life				3e+004
+
+	delay				1 2
+
+	radius				2.124e+004 2.15e+004
+
+	height				12 111
+
+	velocity			-100 2 0 -110 2 0
+
+	rgb
+	{
+		flags			linear clamp
+	}
+
+	alpha
+	{
+		start			0.7 0.3
+		end				0.9
+		flags			linear
+	}
+
+	size
+	{
+		start			10 15
+		end				400 350
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/parachute1
+	]
+}

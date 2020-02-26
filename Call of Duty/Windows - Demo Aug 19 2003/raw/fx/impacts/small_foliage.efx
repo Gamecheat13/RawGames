@@ -1,0 +1,43 @@
+Particle
+{
+	name				Copy of Unnamed Particle 0
+
+	flags				useAlpha
+
+	life				100
+
+	rotation			54 -108
+
+	rotationDelta		32 -64
+
+	rgb
+	{
+		flags			random linear
+	}
+
+	alpha
+	{
+		start			0.4
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				43 23
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/impact/woodpuff
+	]
+}
+
+FxRunner
+{
+	playfx
+	[
+		fx/impacts/leafs
+	]
+}

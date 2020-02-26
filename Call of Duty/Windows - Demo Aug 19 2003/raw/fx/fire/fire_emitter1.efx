@@ -1,0 +1,30 @@
+Particle
+{
+	life				600
+
+	rotation			360 -360
+
+	rgb
+	{
+		end				0.9765 0.949 0.651
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				133
+		flags			nonlinear
+	}
+
+	shaders
+	[
+		gfx/effects/fire/hotspot
+		gfx/effects/fire/smallfill
+	]
+}

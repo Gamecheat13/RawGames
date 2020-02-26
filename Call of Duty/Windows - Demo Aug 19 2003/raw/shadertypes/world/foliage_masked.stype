@@ -1,0 +1,15 @@
+{
+	surfaceparm foliage
+	surfaceparm trans
+	surfaceparm alphashadow
+	surfaceparm nomarks
+	//cull disable
+	{
+		map $texturename
+		rgbGen exactVertex
+		alphaFunc GE128
+		depthWrite
+	nextbundle
+		map $lightmap
+	}
+}

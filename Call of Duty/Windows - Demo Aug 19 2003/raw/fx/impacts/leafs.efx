@@ -1,0 +1,44 @@
+Particle
+{
+	flags				usePhysics impactKills useAlpha
+
+	count				0 2
+
+	life				6000
+
+	cullrange			1400
+
+	rotation			360 -360
+
+	rotationDelta		33 -33
+
+	velocity			0 -45 -45 0 45 45
+
+	gravity				-70 -100
+
+	rgb
+	{
+		start			0.6745 0.6784 0.5882
+		end				0.6745 0.6784 0.5882
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			2
+		end				4 3
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/impact/foliage_gib1
+		gfx/impact/foliage_gib2
+	]
+}

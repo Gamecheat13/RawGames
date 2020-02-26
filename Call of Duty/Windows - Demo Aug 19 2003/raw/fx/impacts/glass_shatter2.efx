@@ -1,0 +1,191 @@
+Emitter
+{
+	name				one_foreward
+
+	flags				useModel usePhysics
+
+	count				3
+
+	life				700
+
+	bounce				0.7
+
+	origin				0 24 24 0 -24 -24
+
+	angle				33 33 33 0 0 0
+
+	angleDelta			33 33 33 0 0 0
+
+	velocity			23 52 12 45 -52 -12
+
+	gravity				-400
+
+	models
+	[
+		xmodel/gib_glass1
+		xmodel/gib_glass2
+	]
+}
+
+Emitter
+{
+	name				two_foreward
+
+	flags				useModel impactKills
+
+	count				3
+
+	life				700
+
+	origin				0 24 24 0 -24 -24
+
+	angle				33 33 33 0 0 0
+
+	angleDelta			33 33 33 0 0 0
+
+	velocity			32 52 0 43 -52 0
+
+	gravity				-400
+
+	size
+	{
+		start			2
+		end				2
+	}
+
+	models
+	[
+		xmodel/gib_glass1
+		xmodel/gib_glass2
+	]
+}
+
+Emitter
+{
+	name				three_foreward
+
+	flags				useModel impactKills
+
+	count				3
+
+	life				700
+
+	origin				0 24 -24 0 -24 24
+
+	angle				33 33 33 0 0 0
+
+	angleDelta			33 33 33 0 0 0
+
+	velocity			34 0 12 56 0 -12
+
+	gravity				-400
+
+	size
+	{
+		start			2 3
+		end				2 3
+		flags			linear
+	}
+
+	models
+	[
+		xmodel/gib_glass1
+		xmodel/gib_glass2
+	]
+}
+
+Emitter
+{
+	name				one_backward
+
+	flags				useModel usePhysics
+
+	count				3
+
+	life				1333
+
+	bounce				0.7
+
+	origin				0 24 24 0 -24 -24
+
+	angle				33 33 33 0 0 0
+
+	angleDelta			33 33 33 0 0 0
+
+	velocity			-23 52 52 -45 -52 -52
+
+	gravity				-400
+
+	models
+	[
+		xmodel/gib_glass1
+		xmodel/gib_glass2
+	]
+}
+
+Emitter
+{
+	name				two_backward
+
+	flags				useModel impactKills
+
+	count				3
+
+	life				700
+
+	origin				0 24 24 0 -24 -24
+
+	angle				33 33 33 0 0 0
+
+	angleDelta			33 33 33 0 0 0
+
+	velocity			-32 52 0 -43 -52 0
+
+	gravity				-400
+
+	size
+	{
+		start			2
+		end				2
+	}
+
+	models
+	[
+		xmodel/gib_glass1
+		xmodel/gib_glass2
+	]
+}
+
+Emitter
+{
+	name				three_backward
+
+	flags				useModel impactKills
+
+	count				3
+
+	life				700
+
+	origin				0 24 24 0 -24 -24
+
+	angle				33 33 33 -33 -33 -33
+
+	angleDelta			33 33 33 -33 -33 -33
+
+	velocity			-34 0 12 -56 0 -12
+
+	gravity				-400
+
+	size
+	{
+		start			2 3
+		end				2 3
+		flags			linear
+	}
+
+	models
+	[
+		xmodel/gib_glass1
+		xmodel/gib_glass2
+	]
+}

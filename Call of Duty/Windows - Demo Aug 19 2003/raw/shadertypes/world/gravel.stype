@@ -1,0 +1,11 @@
+{
+	surfaceparm gravel
+	{
+		map $texturename
+		rgbGen exactVertex
+	}
+	{
+		map $lightmap
+		blendFunc filter
+	}
+}

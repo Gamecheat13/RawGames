@@ -1,0 +1,67 @@
+// Note to translators:
+// If a sentence is the same in your language then please change it to "#same"
+//
+// eg:
+// LANG_ENGLISH  "HALT"
+// LANG_GERMAN   "#same"
+//
+// (This is so we can tell which strings have been signed-off as ok to be the same words for QA
+//  and because we do not store duplicate strings, which will then get exported again next time
+//  as being untranslated.)
+//
+VERSION             "1"
+CONFIG              "C:\Projects\mk\bin\StringEd\StringEd.cfg"
+FILENOTES           ""
+
+REFERENCE           WINS
+LANG_ENGLISH        "%s ^7Wins!"
+
+REFERENCE           KILLED_ALLIED_SOLDIER
+LANG_ENGLISH        "%s ^7killed an Allied soldier"
+
+REFERENCE           MOVED_TO_AXIS
+LANG_ENGLISH        "%s ^7was moved to the Axis"
+
+REFERENCE           ADDING_ALLIED
+LANG_ENGLISH        "Adding another Allied player to the game"
+
+REFERENCE           IS_NOW_ALLIED
+LANG_ENGLISH        "%s ^7is now an Allied player"
+
+REFERENCE           OBJ_ALLIED
+LANG_ENGLISH        "Take out as many Axis soldiers as possible before being overrun."
+
+REFERENCE           OBJ_AXIS
+LANG_ENGLISH        "Hunt down Allied soldiers."
+
+REFERENCE           TIE
+LANG_ENGLISH        "The game is a tie!"
+
+REFERENCE           BEHIND_ENEMY_LINES
+LANG_ENGLISH        "Behind Enemy Lines"
+
+REFERENCE           TIME_ALIVE
+LANG_ENGLISH        "Time Alive: %s"
+
+REFERENCE           POINTS_EARNED
+LANG_ENGLISH        "Points Earned: %s"
+
+REFERENCE           SPECTATOR_OBJS
+LANG_ENGLISH        "Allies: Take out as many Axis soldiers as possible before being overrun.\nAxis: Hunt down Allied soldiers."
+
+REFERENCE           TIME_TILL_SPAWN
+LANG_ENGLISH        "Time until next respawn:"
+
+REFERENCE           PRESS_TO_RESPAWN
+LANG_ENGLISH        "Press ATTACK to Respawn"
+
+REFERENCE           CONNECTED
+LANG_ENGLISH        "%s Connected"
+
+REFERENCE           DISCONNECTED
+LANG_ENGLISH        "%s Disconnected"
+
+
+ENDMARKER
+
+

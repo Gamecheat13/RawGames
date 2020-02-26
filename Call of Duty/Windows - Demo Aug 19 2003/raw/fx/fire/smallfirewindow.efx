@@ -1,0 +1,55 @@
+Particle
+{
+	name				smoke
+
+	flags				setShaderTime useAlpha
+
+	spawnFlags			evenDistribution
+
+	life				1500 2000
+
+	delay				100
+
+	cullrange			500
+
+	origin				-2 32 32 30 -32 -32
+
+	wind				100
+
+	rotation			0 300
+
+	rotationDelta		0 20
+
+	velocity			25 -1 -1 50 40 1
+
+	acceleration		50 0 0 100 0 0
+
+	alpha
+	{
+		start			0.8 0.5
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			8 12
+		end				55 50
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/dark_smoke
+	]
+}
+
+FxRunner
+{
+	cullrange			500
+
+	playfx
+	[
+		fx/fire/inferno_medium
+	]
+}

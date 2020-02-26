@@ -1,0 +1,67 @@
+Tail
+{
+	flags				useAlpha
+
+	spawnFlags			rgbComponentInterpolation
+
+	count				2
+
+	life				300
+
+	velocity			2720 0 0
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				40 -40
+		flags			linear
+	}
+
+	length
+	{
+		start			123 122
+		end				800 900
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/mist
+	]
+}
+
+FxRunner
+{
+	name				Copy of Unnamed FxRunner 4
+
+	spawnFlags			orgOnCylinder axisFromSphere
+
+	cullrange			1000
+
+	origin				32 0 0
+
+	playfx
+	[
+		fx/water/rocksplashes
+	]
+}
+
+FxRunner
+{
+	cullrange			2500
+
+	playfx
+	[
+		fx/impacts/waterhit_after_effect
+	]
+}

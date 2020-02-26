@@ -1,0 +1,156 @@
+Tail
+{
+	flags				relative
+
+	count				3 2
+
+	life				100
+
+	cullrange			600
+
+	origin				29 0 0
+
+	velocity			1 0 0
+
+	rgb
+	{
+		flags			random linear
+	}
+
+	alpha
+	{
+		end				0.6 0.5
+		flags			linear
+	}
+
+	size
+	{
+		end				3
+		flags			linear
+	}
+
+	length
+	{
+		start			12
+		end				25
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/muzzleflashes/sn/thompson_sn2
+	]
+}
+
+Particle
+{
+	flags				relative
+
+	count				12
+
+	life				100
+
+	origin				2 0 0 13 0 0
+
+	rotation			90 -180
+
+	rotationDelta		11 -32
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.8
+		end				0.3
+		flags			linear
+	}
+
+	size
+	{
+		start			3
+		end				12
+		flags			linear
+	}
+
+	size2
+	{
+		end				12
+		flags			linear
+	}
+
+	length
+	{
+		start			42
+		end				275
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/muzflash2a_sn
+	]
+}
+
+Light
+{
+	life				100
+
+	origin				18 0 0 29 0 0
+
+	rgb
+	{
+		start			0.9804 0.9373 0.8118
+		end				0.9765 0.949 0.651
+		flags			linear
+	}
+
+	size
+	{
+		start			200
+		flags			random linear
+	}
+}
+
+Particle
+{
+	flags				useAlpha
+
+	count				3 4
+
+	life				600
+
+	cullrange			300
+
+	rotation			-360 360
+
+	rotationDelta		2 -2
+
+	velocity			42 33 33 0 -33 -33
+
+	rgb
+	{
+		end				0.6235 0.5725 0.5176
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.3
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				20
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/whitesmoke
+	]
+}

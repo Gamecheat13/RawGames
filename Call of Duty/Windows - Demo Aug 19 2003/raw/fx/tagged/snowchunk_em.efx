@@ -1,0 +1,78 @@
+Particle
+{
+	flags				useAlpha
+
+	life				700 1000
+
+	rotation			360 -360
+
+	rotationDelta		7 -7
+
+	velocity			123 51 51 322 -51 -51
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.5 1
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			13 23
+		end				65 186
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/mist2
+		gfx/impact/snow1
+	]
+}
+
+Particle
+{
+	name				Copy of Unnamed Particle 0
+
+	flags				useAlpha
+
+	life				2200 1000
+
+	rotation			360 -360
+
+	rotationDelta		4 -4
+
+	velocity			322 51 51 233 -51 -51
+
+	gravity				-500
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			63
+		end				65 296
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/misc/snowchunks
+		gfx/impact/snowpuff
+	]
+}

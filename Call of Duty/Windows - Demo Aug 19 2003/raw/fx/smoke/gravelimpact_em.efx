@@ -1,0 +1,37 @@
+Particle
+{
+	flags				useAlpha
+
+	life				500 600
+
+	rotation			-360 360
+
+	rotationDelta		4 -4
+
+	velocity			23 21 21 21 -21 -21
+
+	rgb
+	{
+		start			0.451 0.451 0.451
+		end				0.451 0.451 0.451
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			3 2
+		end				15 35
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/mist2
+	]
+}

@@ -1,0 +1,51 @@
+"# If the text in the first column of a row starts with a # character, the row is ignored",,
+,,"If the first column for a row is blank, then the row is ignored"
+# The first non-comment line of a sound alias file specifies the key name for all values appearing in this column.,,
+"# This means it is safe to swap entire columns around, though you should never swap partial columns.",,
+"# You can invent new keys, but the game will ignore them if it doesn't know about them.",,
+"# You can leave out keys, but the ""name"" and ""file"" keys must always be present.",,
+
+,name,name of the alias that is used to play this sound (required)
+,sequence,"used to uniquely identify alias entries when more than one sound goes to an alias, used only to catch unwanted duplicates (default = 0)"
+,file,the name of the file that contains the sound data (required)
+,vol_min,"0 is silent, 1 is full volume (default = 1)"
+,vol_max,"0 is silent, 1 is full volume (default = same as vol_min)"
+,pitch_min,"1 is normal playback, 2 is twice as fast, 0.5 is half as fast (default = 1)"
+,pitch_max,"1 is normal playback, 2 is twice as fast, 0.5 is half as fast (default = same as pitch_min)"
+,dist_min,"within this distance in inches, the sound is always full volume (default = 120)"
+,dist_max,"outside this distance in inches, the sound is not started.  If left blank or set to 0, the sound will play from any distance.  This does not affect sound volume falloff."
+,channel,"auto, menu, weapon, voice, item, body, local, music, announcer (default = auto)",,,,,,,,,,,,,
+,type,streamed / loaded (default = loaded),,,,,,,,,,,,,
+,probability,weight to use for the weighted probability of playing this sound instead of another sound (default = 1),,,,,,,,,,,,,
+,loop,"whether this sound is ""looping"" or ""nonlooping"" (default = ""nonlooping"")",,,,,,,,,,,,,
+,masterslave,"if ""master"", this is a master sound.  If a number, then this sound won't exceed this volume whenever any master sound is playing.  If blank, then neither master nor slave.",,,,,,,,,,,,,
+,loadspec,"space-separated list of which maps should use this alias; eg, ""burnville dawnville"".  If blank, the alias is used on all maps.",,,,,,,,,,,,,
+
+name,sequence,file,vol_min,vol_max,pitch_min,pitch_max,dist_min,dist_max,channel,type,probability,loop,masterslave,loadspec,subtitle
+
+airfield_escape,,music/airfield_escape.mp3,0.8,,,,,,music,streamed,,,,airfield,
+airfield_loop,,music/airfield_loop.mp3,0.8,,,,,,music,streamed,,,,airfield,
+airfield_main,,music/airfield_main.mp3,0.8,,,,,,music,streamed,,,,airfield dam,
+burnville_speech,,music/burnville_speech.mp3,0.8,,,,,,music,streamed,,,,burnville,
+carride_a,,music/carride_a.mp3,0.8,,,,,,music,streamed,,,,carride,
+carride_b,,music/carride_b.mp3,0.8,,,,,,music,streamed,,,,carride,
+codtheme,,music/codtheme.mp3,0.8,,,,,,music,streamed,,,,,
+dam_a,,music/dam_a.mp3,0.8,,,,,,music,streamed,,,,dam
+dam_b,,music/dam_b.mp3,0.8,,,,,,music,streamed,,,,dam
+datestamp,,music/datestamp.mp3,0.8,,,,,,music,streamed,,,,pathfinder burnville brecourt chateau sewer hurtgen
+pegasusbridge,,music/pegasusbridge.mp3,0.7,,,,,,music,streamed,,,0.5,pegasusday
+pf_frantic,,music/pf_frantic.mp3,0.8,,,,,,music,streamed,,,,berlin
+pf_stealth,,music/pf_stealth.mp3,0.8,,,,,,music,streamed,,,,pathfinder chateau pegasusnight factory hurtgen rocket pavlov
+powcamp_ramgate,,music/powcamp_ramgate.mp3,0.8,,,,,,music,streamed,,,,powcamp
+redsquare_charge,,music/redsquare_charge.mp3,1.1,,,,,,music,streamed,,,0.6,redsquare
+redsquare_dark,,music/redsquare_dark.mp3,0.8,,,,,,music,streamed,,,,redsquare carride chateau powcamp trainstation sewer factory
+redsquare_tense,,music/redsquare_tense.mp3,0.8,,,,,,music,streamed,,,,redsquare chateau powcamp dam ship railyard rocket
+ship_action,,music/ship_action.mp3,0.8,,,,,,music,streamed,,,,ship
+ship_approach,,music/ship_approach.mp3,0.8,,,,,,music,streamed,,,,ship
+ship_loop,,music/ship_loop.mp3,0.8,,,,,,music,streamed,,,,ship
+stalingrad_battle,,music/stalingrad_battle.mp3,0.8,,,,,,music,streamed,,,,stalingrad berlin
+stalingrad_boatride,,music/stalingrad_boatride.mp3,0.8,,,,,,music,streamed,,,,stalingrad
+stalingrad_victory,,music/stalingrad_victory.mp3,0.8,,,,,,music,streamed,,,,stalingrad pavlov
+tankdrive_a,,music/tankdrive_a.mp3,0.8,,,,,,music,streamed,,,,tankdrivetown tankdrivecountry
+tankdrive_b,,music/tankdrive_b.mp3,0.8,,,,,,music,streamed,,,,tankdrivetown tankdrivecountry
+truckride,,music/truckride.mp3,0.8,,,,,,music,streamed,,,,truckride

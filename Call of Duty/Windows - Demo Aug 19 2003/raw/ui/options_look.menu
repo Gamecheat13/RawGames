@@ -1,0 +1,306 @@
+#include "ui/menudef.h"
+{
+menuDef 
+{
+	name options_look
+	fullScreen 0				
+	rect OPTIONS_WINDOW_POS OPTIONS_WINDOW_SIZE				// Size and position of the menu
+	visible 1				// Visible on open
+	focusColor .9 .85 1 .8			// Menu focus color for text and items
+	soundloop ""
+	onOpen
+	{
+		uiScript loadControls
+	}
+	onESC 
+	{ 
+		open main;
+		close options_menu;		
+	}
+/*
+	itemDef 
+	{
+		name keyBindStatus
+		rect 0 322 640 30 
+		ownerdraw UI_KEYBINDSTATUS
+		text "-"      
+		forecolor 1 .75 0 1
+		textscale .23
+		textalignx 221
+		textalign 1
+		textaligny 20
+		visible 1
+		decoration 
+	}
+*/
+	itemDef 
+	{
+		name look_back
+		rect 0 0 OPTIONS_WINDOW_SIZE	
+		style WINDOW_STYLE_FILLED
+		border 1
+		bordercolor .5 .5 .5 .5
+		forecolor 1 1 1 1
+		backcolor OPTIONS_WINDOW_BACKCOLOR
+		visible 1
+		decoration
+	}
+	itemDef {
+		name keyBindStatus
+		rect 0 324 360 15 
+		ownerdraw UI_KEYBINDSTATUS
+		text " "      
+		style WINDOW_STYLE_FILLED
+		backcolor OPTIONS_WINDOW_BACKCOLOR
+		forecolor .9 .9 1 1
+		border 1
+		bordercolor .5 .5 .5 .5
+		textscale .20
+		textalignx 168
+		textalign 1
+		textaligny 12
+		visible 0
+		decoration 
+	}
+	itemDef 
+	{
+		name ctr_look
+		text "@MENU_OPTIONS_CONTROLS"
+		textscale .23
+		group grpControlbutton
+		type ITEM_TYPE_BUTTON
+		style 0
+		rect 102.5 5 120 10
+		textalign 1
+		textalignx 60
+		textaligny 10
+		forecolor 0.75 0.75 0.75 1
+		visible 1
+		decoration 
+	}
+	itemDef 
+	{
+		name look
+		group grpControls
+		text "@MENU_LOOK"
+		type 1
+		textscale .23
+		group grpControls
+		rect 145 20 35 10
+		textalign 1
+		textalignx 17
+		textaligny 10
+		forecolor 1 1 1 .9
+		visible 1
+		decoration
+	}
+
+	itemDef 
+	{
+		name look
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "@MENU_LOOK_UP"
+		cvar "+lookup"
+		rect		5 40 OPTIONS_CONTROL_SIZE 
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+	}
+
+	itemDef 
+	{
+		name look
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "@MENU_LOOK_DOWN"
+		cvar "+lookdown"
+		rect		5 55 OPTIONS_CONTROL_SIZE 
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+	}
+
+	itemDef 
+	{
+		name look
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "@MENU_MOUSE_LOOK"
+		cvar "+mlook"
+		rect		5 70 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+	}
+
+	itemDef 
+	{
+		name look
+		group grpControls
+		type ITEM_TYPE_BIND
+		text "@MENU_CENTER_VIEW"
+		cvar "centerview"
+		rect		5 85 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+	}
+	itemDef 
+	{
+		name look
+		group grpControls
+		type ITEM_TYPE_YESNO
+		text "@MENU_FREE_LOOK"
+		cvar "cl_freelook"
+		rect		5 100 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		action { play "mouse_click";  }
+		mouseEnter 
+		{
+			play "mouse_over";
+		}
+	}
+	itemDef 
+	{
+		name misc
+		group grpControls
+		type ITEM_TYPE_YESNO
+		text "@MENU_INVERT_MOUSE"
+		cvar "ui_mousePitch"
+		rect		5 115 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+		}
+		action { play "mouse_click"; uiScript update ui_mousePitch }
+	}
+
+	itemDef 
+	{
+		name misc
+		group grpControls
+		type ITEM_TYPE_YESNO
+		text "@MENU_SMOOTH_MOUSE"
+		cvar "m_filter"
+		rect		5 130 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		action { play "mouse_click";  }
+		mouseEnter 
+		{
+			play "mouse_over";
+		}
+	}
+	itemDef 
+	{
+		name look
+		group grpControls
+		type ITEM_TYPE_SLIDER
+		text "@MENU_MOUSE_SENSITIVITY"
+		cvarfloat "sensitivity" 5 1 30
+		rect		5 145 OPTIONS_CONTROL_SIZE
+		textalign	ITEM_ALIGN_RIGHT
+		textalignx	OPTIONS_CONTROL_XALIGN 
+		textaligny	OPTIONS_CONTROL_YALIGN
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+		}
+	}
+
+
+/*
+	itemDef 
+	{
+		name look
+		group grpControls
+		type ITEM_TYPE_SLIDER
+		text "Mouse Sensitivity: "
+		cvarfloat "sensitivity" 5 1 30
+		rect 82 125 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 22
+		textaligny 14
+		textscale .23
+		style WINDOW_STYLE_FILLED
+		backcolor 0 0 .25 .2
+		forecolor .9 .9 .9 1
+		visible 1 
+		mouseenter { show slider_message }
+		mouseexit { hide slider_message }
+	}
+*/
+}
+
+}//

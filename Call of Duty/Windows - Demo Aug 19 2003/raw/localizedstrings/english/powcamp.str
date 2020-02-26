@@ -1,0 +1,34 @@
+// Note to translators:
+// If a sentence is the same in your language then please change it to "#same"
+//
+// eg:
+// LANG_ENGLISH  "HALT"
+// LANG_GERMAN   "#same"
+//
+// (This is so we can tell which strings have been signed-off as ok to be the same words for QA
+//  and because we do not store duplicate strings, which will then get exported again next time
+//  as being untranslated.)
+//
+VERSION             "1"
+CONFIG              "E:\trees\mk\bin\StringEd\StringEd.cfg"
+FILENOTES           ""
+
+REFERENCE           OBJ3
+LANG_ENGLISH        "Escort Major Ingram back to the truck."
+
+REFERENCE           OBJ1
+LANG_ENGLISH        "Eliminate the gate guards."
+
+REFERENCE           OBJ2
+LANG_ENGLISH        "Free Major Ingram."
+
+REFERENCE           TIMER
+LANG_ENGLISH        "TIME REMAINING: %s"
+
+REFERENCE           TEN_MINUTES_HAVE_ELAPSED
+LANG_ENGLISH        "TEN MINUTES HAVE ELAPSED"
+
+
+ENDMARKER
+
+

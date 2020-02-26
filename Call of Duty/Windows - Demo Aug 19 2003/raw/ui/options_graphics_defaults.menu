@@ -1,0 +1,244 @@
+#include "ui/menudef.h"
+{
+menuDef 
+{
+	name options_graphics_defaults
+	fullScreen 0				
+	rect OPTIONS_WINDOW_POS OPTIONS_WINDOW_SIZE				// Size and position of the menu
+	visible 1				// Visible on open
+	focusColor .9 .85 1 .8			// Menu focus color for text and items
+	soundloop ""
+	onOpen
+	{
+		show grpdefault; 
+		hide grpfinish; 
+		uiScript loadControls
+	}
+	onESC 
+	{ 
+		open main;
+		close options_menu;		
+	}
+/*
+	itemDef 
+	{
+		name keyBindStatus
+		rect 0 322 640 30 
+		ownerdraw UI_KEYBINDSTATUS
+		text "-"      
+		forecolor 1 .75 0 1
+		textscale .23
+		textalignx 221
+		textalign 1
+		textaligny 20
+		visible 1
+		decoration 
+	}
+*/
+	itemDef 
+	{
+		name look_back
+		rect 0 0 OPTIONS_WINDOW_SIZE	
+		style WINDOW_STYLE_FILLED
+		border 1
+		bordercolor .5 .5 .5 .5
+		forecolor 1 1 1 1
+		backcolor OPTIONS_WINDOW_BACKCOLOR
+		visible 1
+		decoration
+	}
+	itemDef 
+	{
+		name ctr_look
+		text "@MENU_RESET_TO_DEFAULTS"
+		textscale .23
+		group grpControlbutton
+		type ITEM_TYPE_BUTTON
+		style 0
+		rect 102.5 5 120 10
+		textalign 1
+		textalignx 60
+		textaligny 10
+		forecolor 0.75 0.75 0.75 1
+		visible 1
+		decoration 
+	}
+	itemDef 
+	{
+		name ctr_look
+		text "@MENU_SYSTEM"
+		textscale .23
+		group grpControlbutton
+		type ITEM_TYPE_BUTTON
+		style 0
+		rect 102.5 20 120 10
+		textalign 1
+		textalignx 60
+		textaligny 10
+		forecolor 0.75 0.75 0.75 1
+		visible 1
+		decoration 
+	}
+/*
+	itemDef 
+	{
+		name look
+		group grpControls
+		text "Reset Defaults"
+		type 1
+		textscale .23
+		group grpControls
+		rect 145 20 35 10
+		textalign 1
+		textalignx 17
+		textaligny 10
+		forecolor 1 1 1 .9
+		visible 1
+		decoration
+	}
+*/
+	itemDef 
+	{
+		name look
+		group grpControls
+		text "@MENU_THIS_WILL_RESTORE_ALL_SETTINGS"
+		type 1
+		textscale .23
+		group grpControls
+		rect 145 40 35 10
+		textalign 1
+		textalignx 17
+		textaligny 10
+		forecolor 1 1 1 .9
+		visible 1
+		decoration
+	}
+	itemDef 
+	{
+		name look
+		group grpControls
+		text "@MENU_TO_THEIR_DEFAULT_VALUE"
+		type 1
+		textscale .23
+		group grpControls
+		rect 145 55 35 10
+		textalign 1
+		textalignx 17
+		textaligny 10
+		forecolor 1 1 1 .9
+		visible 1
+		decoration
+	}
+	itemDef 
+	{
+		name look
+		group grpControls
+		text "@MENU_ARE_YOU_SURE"
+		type 1
+		textscale .3
+		group grpControls
+		rect 145 80 35 10
+		textalign 1
+		textalignx 17
+		textaligny 10
+		forecolor 1 1 1 .9
+		visible 1
+		decoration
+	}
+		itemDef 
+		{
+			name yes
+			text "@MENU_YES"
+			group grpdefault
+			type 1
+			textfont UI_FONT_NORMAL
+			textscale .3
+			style WINDOW_STYLE_FILLED
+			rect 77.5 105 70 26
+			textalign 1
+			textalignx 35
+			textaligny 18
+			forecolor 1 1 1 1
+			backcolor .1 .1 .1 .1 
+			visible 1
+			border 1
+			bordercolor .5 .5 .5 .5 
+
+
+			action 
+			{ 
+				play "mouse_click"; 
+				hide grpdefault; 
+				show grpfinish; 
+				exec "setRecommended"
+			}
+
+			mouseEnter { setitemcolor yes backcolor 1 1 .3 .3 
+			play "mouse_over"} 
+			mouseExit { setitemcolor yes backcolor .1 .1 .1 .1 } 	
+		}
+
+		itemDef 
+		{
+			name no
+			text "@MENU_NO"
+			group grpdefault
+			type 1
+			textfont UI_FONT_NORMAL
+			textscale .3
+			style WINDOW_STYLE_FILLED
+			rect 177.5 105 70 26
+			textalign 1
+			textalignx 35
+			textaligny 18
+			forecolor 1 1 1 1
+			backcolor .1 .1 .1 .1
+			border 1
+			bordercolor .5 .5 .5 .5 
+			visible 1
+			action { 
+				play "mouse_click"; 
+				close options_menu; 
+				open options_menu;
+				open options_look;
+			}
+			mouseEnter { setitemcolor no backcolor 1 1 .3 .3 
+			play "mouse_over"} 
+			mouseExit { setitemcolor no backcolor .1 .1 .1 .1 } 	
+		}
+
+		itemDef 
+		{
+			name finish_message 
+			group grpfinish
+			style 0
+			text "@MENU_YOUR_SETTINGS_ARE_NOW_SET"
+			rect 0 160 443 20
+			textalign ITEM_ALIGN_CENTER
+			textalignx 221
+			textaligny 20
+			textscale .333        
+			forecolor 1 1 1 1
+			visible 0 
+			decoration
+		}
+		itemDef 
+		{
+			name finish_message 
+			group grpfinish
+			style 0
+			text "@MENU_TO_THEIR_ORIGINAL_DEFAULT_VALUES"
+			rect 0 180 443 20
+			textalign ITEM_ALIGN_CENTER
+			textalignx 221
+			textaligny 20
+			textscale .333        
+			forecolor 1 1 1 1
+			visible 0 
+			decoration
+		}
+
+
+}
+
+}//

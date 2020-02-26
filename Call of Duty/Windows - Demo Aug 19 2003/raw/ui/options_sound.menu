@@ -1,0 +1,268 @@
+#include "ui/menudef.h"
+{
+menuDef 
+{
+	name options_sound
+	fullScreen 0				
+	rect OPTIONS_WINDOW_POS OPTIONS_WINDOW_SIZE				// Size and position of the menu
+	visible 1				// Visible on open
+	focusColor .9 .85 1 .8			// Menu focus color for text and items
+	soundloop ""
+	onOpen
+	{
+		uiScript loadControls
+//		show applysystem;
+	}
+	onESC 
+	{ 
+		open main;
+		close options_menu;		
+	}
+
+/*
+	itemDef 
+	{
+		name keyBindStatus
+		rect 0 322 640 30 
+		ownerdraw UI_KEYBINDSTATUS
+		text "-"      
+		forecolor 1 .75 0 1
+		textscale .23
+		textalignx 221
+		textalign 1
+		textaligny 20
+		visible 1
+		decoration 
+	}
+*/
+	itemDef 
+	{
+		name look_back
+		rect 0 0 OPTIONS_WINDOW_SIZE	
+		style WINDOW_STYLE_FILLED
+		border 1
+		bordercolor .5 .5 .5 .5
+		forecolor 1 1 1 1
+		backcolor OPTIONS_WINDOW_BACKCOLOR
+		visible 1
+		decoration
+	}
+	itemDef 
+	{
+		name ctr_look
+		text "@MENU_OPTIONS_SYSTEM"
+		textscale .23
+		group grpControlbutton
+		type ITEM_TYPE_BUTTON
+		style 0
+		rect 102.5 5 120 10
+		textalign 1
+		textalignx 60
+		textaligny 10
+		forecolor 0.75 0.75 0.75 1
+		visible 1
+		decoration 
+	}
+	itemDef 
+	{
+		name look
+		group grpControls
+		text "@MENU_SOUND"
+		type 1
+		textscale .23
+		group grpControls
+		rect 145 20 35 10
+		textalign 1
+		textalignx 17
+		textaligny 10
+		forecolor 1 1 1 .9
+		visible 1
+		decoration
+	}
+
+	itemDef 
+	{
+		name other
+		group grpSystem
+		type ITEM_TYPE_YESNO
+		text "@MENU_SUBTITLES"
+		cvar "cg_subtitles"
+//		cvarfloat "mss_volume" 0.8 0 1
+		rect 5 70 OPTIONS_CONTROL_SIZE
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 110
+		textaligny 10
+		textscale	OPTIONS_CONTROL_TXTSCALE    
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible 1 
+		mouseEnter 
+		{
+			play "mouse_over";
+		}
+	}
+
+	itemDef 
+	{
+		name other
+		group grpSystem
+		type ITEM_TYPE_SLIDER
+		text "@MENU_EFFECTS_VOLUME"
+		cvarfloat "mss_volume" 0.8 0 1
+		rect 5 100 OPTIONS_CONTROL_SIZE
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 110
+		textaligny 10
+		textscale	OPTIONS_CONTROL_TXTSCALE    
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible 1 
+		mouseEnter 
+		{
+			play "mouse_over";
+		}
+	}
+
+	itemDef 
+	{
+		name other
+		group grpSystem
+		type ITEM_TYPE_SLIDER
+		text "@MENU_MUSIC_VOLUME"
+		cvarfloat "mss_musicvolume" 1 0 2
+		rect 5 130 OPTIONS_CONTROL_SIZE
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 110
+		textaligny 10
+		textscale	OPTIONS_CONTROL_TXTSCALE 
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		mouseEnter 
+		{
+			play "mouse_over";
+		}
+		visible 1 
+	}
+
+	itemDef 
+	{
+		name other
+		group grpSystem
+		type ITEM_TYPE_MULTI
+		text "@MENU_SOUND_QUALITY"
+		cvar "mss_khz"
+		cvarFloatList { "@MENU_11KHZ__" 11 
+				"@MENU_22KHZ__" 22 
+				"@MENU_44KHZ__" 44 
+				}
+//		rect 17.5 130 290 12
+		rect 5 160 OPTIONS_CONTROL_SIZE
+		textalign ITEM_ALIGN_RIGHT
+//		textalignx 142
+//		textaligny 10
+		textalignx 110
+		textaligny 10
+		textscale	OPTIONS_CONTROL_TXTSCALE 
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible 1 
+		action { play "mouse_click"; show applysystem }
+		mouseEnter 
+		{
+			play "mouse_over";
+		}
+	}
+//mss_3d_provider
+/*
+		cvarStrList {	"Aureal A3D Interactive (TM)", 
+				"Aureal A3D Interactive (TM)",
+				"Aureal A3D 2.0 (TM)", 
+				"Aureal A3D 2.0 (TM)", 
+				"DirectSound3D Software Emulation", 
+				"DirectSound3D Software Emulation", 
+				"DirectSound3D Hardware Support",
+				"DirectSound3D Hardware Support",
+				"DirectSound3D 7+ SW - Pan & Volume",
+				"DirectSound3D 7+ Software - Pan and Volume",
+				"DirectSound3D 7+ SW - Light HRTF",
+				"DirectSound3D 7+ Software - Light HRTF",
+				"DirectSound3D 7+ SW - Full HRTF",
+				"DirectSound3D 7+ Software - Full HRTF",
+				"Creative Labs EAX 3 (TM)",
+				"Creative Labs EAX 3 (TM)",
+				"Creative Labs EAX 2 (TM)",
+				"Creative Labs EAX 2 (TM)",
+				"Creative Labs EAX (TM)",
+				"Creative Labs EAX (TM)",
+				"RAD Game Tools RSX 3D Audio",
+				"RAD Game Tools RSX 3D Audio",
+				"Dolby Surround",
+				"Dolby Surround",
+				"Miles Fast 2D Positional Audio",
+				"Miles Fast 2D Positional Audio"
+				}
+*/
+	itemDef 
+	{
+		name other
+		group grpSystem
+		type ITEM_TYPE_MULTI
+		text "@MENU_SOUND_PROVIDER"
+		cvar "mss_3d_provider"
+		cvarStrList {	"@MENU_CREATIVE_LABS_EAX_3", "Creative Labs EAX 3 (TM)",
+				"@MENU_CREATIVE_LABS_EAX_2", "Creative Labs EAX 2 (TM)",
+				"@MENU_CREATIVE_LABS_EAX", "Creative Labs EAX (TM)",
+				"@MENU_MILES_FAST_2D_POSITIONAL_AUDIO", "Miles Fast 2D Positional Audio"
+				}
+		rect 5 190 OPTIONS_CONTROL_SIZE
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 110
+		textaligny 10
+		textscale	OPTIONS_CONTROL_TXTSCALE 
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible 1 
+		action { play "mouse_click"; show applysystem }
+		mouseEnter 
+		{
+			play "mouse_over";
+		}
+	}
+	itemDef 
+	{
+		name applysystem
+		group grpapplySystem
+		text "@MENU_APPLY"
+		type 1
+		style WINDOW_STYLE_FILLED	
+		textscale .25
+		rect 112.5 220 100 20
+		textalign 1
+		textalignx 50
+		textaligny 15
+		forecolor 1 1 1 1
+		backcolor .1 .1 .1 .1 
+		visible 0
+		border 1
+		bordercolor .5 .5 .5 .5
+		action 
+		{ 
+			play "mouse_click";
+			open snd_restart_popmenu ; 
+//			hide other ; 
+//			hide applysystem; 
+		}
+		mouseEnter { setitemcolor applysystem backcolor 1 1 .3 .3 
+		play "mouse_over"}
+		mouseExit { setitemcolor applysystem backcolor .1 .1 .1 .1 }
+	}
+
+
+}
+
+}//

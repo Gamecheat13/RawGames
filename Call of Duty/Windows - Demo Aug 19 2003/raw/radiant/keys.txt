@@ -1,0 +1,120 @@
+// syntax:
+// float floatVar
+// int intVar
+// string stringVar
+
+float	script_wait		// Used on patrol nodes to make patrollers wait the specified amount before continuing>>>>>>> 1.58
+float	script_additive_delay	// Additive delay is the # of seconds extra a flood_spawner will wait for each additional spawning. Defaults to 1 second.
+float	script_delay		// Used as a substitute for delay_min/max.
+float	script_delay_min 	// Minimum time for a guy to spawn, if this is on an mg42 then its minimum time between bursts
+float	script_delay_max 	// Maximum time for a guy to spawn, if this is on an mg42 then its maximum time between bursts
+float	script_burst_min 	// Put on an mg42, min time of a burst
+float	script_burst_max 	// Put on an mg42, max time of a burst
+float	delay
+float	script_prespawn_delay	// A flood spawner will wait this long before the guy spawns
+float	script_accuracy
+float	script_accuracyStationaryMod
+float	script_suppression	// Suppression wait for this AI
+float	script_firefxdelay	// repetition rate on a firefx for exploders
+float	script_firefxtimeout	// Amount of time before a looping effect fades out
+
+int	script_health
+int	script_health_easy
+int	script_ignoreme		// If this setting exists on a spawner this guy will have his .ignoreme set to true
+int	script_fxstart		// Identifies effects so they can be turned on by grouping with a trigger
+int	script_fxstop		// Identifies effects so they can be turned off by grouping with a trigger
+int	script_delete
+int	script_increment
+int	script_patroller
+int	script_offtime		// Number of milliseconds before guys get off a flak when you hit the off-trigger, defaults to 20000
+int	script_offradius	// Guys get off a flak if a player gets this close to a flak after hitting the off-trigger, default 350
+int	script_autosave
+int	count
+int	script_timer		// Timeout for friendly_chat
+int	script_delayed_playerseek
+int	script_playerseek
+int	script_seekgoal
+int	radius
+int	script_start
+int	script_radius		// Sets an AI's starting goal radius. On an exploder this sets the radius damage's radius.
+int	script_followmin
+int	script_followmax
+int	script_startinghealth
+int	script_fallback
+int	script_grenades
+int	script_moveoverride 	// Spawners with this will go to their (targetted) node before fighting.
+int	script_killspawner 	// When you go through a trigger with this on it, any spawners that have the same # will be deleted.
+int	script_mg42auto		// When you hit this trigger any grouped mg42s will go into auto mode and clear target.
+int	script_turret
+int	script_min_friendlies	// The minimum # of friendlies required to be at a friendly_Chat trigger for the sequence to play.
+int	script_requires_player
+int	script_sightrange
+int	spawnflags
+int	script_fallback_group	// Makes stray spawned guys part of bigger falling back movements.
+int	script_vehiclegroup	// links a vehicle to its spawners
+int	script_exploder		// Grouping things that explode
+int	script_balcony		// current mechanism for flagging an actor to test for balcony death
+int	export
+int	script_mg42		// Group AI with a node that targets an mg42 and the AI will keep the gun in use.
+int	script_plane		// Specifies which plane set this is, so they can all be started together.
+int	script_explode		// Tells a plane to explode with this exploder.
+int	script_speed		// tank speed to go when battling an enemy tank
+int	dontdropweapon		// If set, the AI will not drop a weapon when he dies
+int	dontdrawoncompass	// If set, the AI will not be drawn on the player's compass. Only matters for friendlies
+int	script_noDeathMessage	// If set, this AI won't play a death message.
+int	script_order		// Preston: Used in ship to set suggested order bombs should be planted and radars destroyed. Determines next objective pointed to.
+int	script_usemg42		// If set to false, a friendly will not use be told by friendly_mg42 triggers to use an mg42.
+int	script_pacifist		// Set ai to pacifist
+int	script_parachutegroup	// Pathfinder parachuters
+int	script_damage		// Damage of radius damage on an exploder
+int	script_idnumber		// Generic identifier
+
+
+string	script_tree		// Additional variable for Stalingrad hill charge
+string	target
+string	targetname
+string	groupname
+string	name
+string	script_objective
+string	script_friendname
+string	script_noteworthy  	// Used to get a string for scripted sequences mainly.
+string	script_path		// Z: probably not used currently
+string	script_uniquename
+string	script_chain		// Identifies a friendly chain so you can turn it off with chain_on/chain_off.
+string	script_triggername	// Z: used for elevators in the dam
+string	script_kill_chain	// On triggering, this trigger will disable chains with a script_chain value equal to the trigger's script_kill_chain value
+string	script_hint
+string	script_fxcommand	// What to do with the effect
+string	script_fxid		// The id of the effect to do
+string	weaponinfo
+string	script_hidden		// the thing which is hidden and appears later (mortars)
+string	vehicletype
+string	script_personality	// This guy will use this personality type
+string  script_squadname	// squad (spawner cluster) identifier
+string	script_namenumber	// generic identifier
+string  script_commonname	// additional generic identifier
+string 	script_nodestate	// generic identifier for nodes
+string	script_assaultnode	// generic identifier for nodes
+string 	script_team		// how to know which team a tank is on (needed to free up target/targetname for radiant linkability)
+string 	script_mortargroup	// to group mortars with their triggers
+string	ambient			// String index of the level.ambient_track to play on this trigger.=======
+string	script_flaktype		// set to tank or air to tell the scripts which set of animations to play
+string	script_waittill		// set on a friendly_chat trigger to make it wait for an event before waitting for other requirements
+string	script_animation	// If defined, patrollers will play a random pause animation at this node.
+string	script_favoriteenemy	// used in burnville to set the second floor grenade throwing guy to have the player has his favorite enemy
+string	script_gameobjectname	// Preston: Used in multiplayer to identify entities which are deleted if not allowed by the gametype.
+string	script_objective_name	// Used in Retrieval multiplayer gamemode to specify an optional name for an objective.
+string	script_topfloor		//z: used for elevators in the dam
+string	script_bottomfloor		//z:used for elevators in the dam
+string	script_sound		// Plays level.scr_sound ["string"]
+string	script_animname		// Animname for a friendly to do a friendly chat thing
+string	script_firefx		// Fx to play infinitely from a used exploder
+string	script_earthquake	// References level.earthquake variables to do an earthquake
+string	script_presound		// To play sounds on exploders before the explosion, for pathfinder only
+string	script_ender		// Stop a looping effect
+
+// Stalingrad
+int	script_scatter
+int	script_linked
+int	script_hillgroup
+int	script_chaintarget

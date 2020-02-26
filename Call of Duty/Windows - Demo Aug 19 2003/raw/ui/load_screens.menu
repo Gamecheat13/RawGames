@@ -1,0 +1,38 @@
+itemDef 
+{
+	name main_back_top
+	style WINDOW_STYLE_SHADER
+	rect 0 120 640 240
+	background "levelshots/loadscreen/loading_american.tga"
+	visible 1
+	decoration
+
+//	cvarTest "ui_campaign"
+//	showCVar { "american" }
+}
+		
+itemDef 
+{
+	name main_back_top
+	style WINDOW_STYLE_SHADER
+	rect 0 120 640 240
+	background "levelshots/loadscreen/loading_british.tga"
+	visible 1
+	decoration
+
+	cvarTest "ui_campaign"
+	showCVar { "british" }
+}
+
+itemDef 
+{
+	name main_back_top
+	style WINDOW_STYLE_SHADER
+	rect 0 120 640 240
+	background "levelshots/loadscreen/loading_russian.tga"
+	visible 1
+	decoration
+
+	cvarTest "ui_campaign"
+	showCVar { "russian" }
+}

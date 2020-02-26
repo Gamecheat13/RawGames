@@ -1,0 +1,18 @@
+{
+	surfaceparm metal
+	surfaceparm trans
+	surfaceparm alphashadow
+	surfaceparm nomarks
+	surfaceparm nonsolid
+	surfaceparm playerclip
+	surfaceparm monsterclip
+	nopicmip
+	{
+		map $texturename
+		rgbGen exactVertex
+		alphaFunc GE128
+		depthWrite
+	nextbundle
+		map $lightmap
+	}
+}

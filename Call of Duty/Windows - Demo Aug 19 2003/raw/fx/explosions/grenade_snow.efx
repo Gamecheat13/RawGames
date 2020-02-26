@@ -1,0 +1,213 @@
+Particle
+{
+	name				flash
+
+	flags				deathFx useAlpha
+
+	spawnFlags			absoluteVel absoluteAccel orgOnSphere axisFromSphere
+
+	life				100 123
+
+	delay				1 0
+
+	origin				0 14 -4 0 -28 -4
+
+	rotation			34 -68
+
+	rotationDelta		4 2
+
+	velocity			0 0 211
+
+	acceleration		0 0 322
+
+	gravity				300
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.5 0.7
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			10 1
+		end				75 50
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/groundflash1
+	]
+
+	deathfx
+	[
+		fx/surfacehits/snowgib1
+	]
+}
+
+OrientedParticle
+{
+	name				smokeblast
+
+	flags				useAlpha
+
+	spawnFlags			cheapOrgCalc orgOnCylinder axisFromSphere evenDistribution
+
+	count				3
+
+	life				200 300
+
+	height				100
+
+	rotation			13 -26
+
+	rotationDelta		40 -80
+
+	velocity			0 0 400 0 0 200
+
+	acceleration		300 200 700 120 -350 400
+
+	gravity				-300 -400
+
+	rgb
+	{
+		start			0.6275 0.6275 0.6431
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			1 10
+		end				676 976
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/mist
+	]
+}
+
+OrientedParticle
+{
+	name				Copy of smokey
+
+	flags				useAlpha
+
+	spawnFlags			cheapOrgCalc orgOnCylinder axisFromSphere evenDistribution rgbComponentInterpolation
+
+	count				3
+
+	life				200 100
+
+	height				10
+
+	rotation			13 -26
+
+	rotationDelta		40 -80
+
+	velocity			0 0 400 0 0 200
+
+	acceleration		300 200 700 120 -350 400
+
+	gravity				-300 -400
+
+	rgb
+	{
+		start			0.8941 0.8941 0.8941 1 0.9843 0.9412
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			1 10
+		end				700 753
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/mist
+	]
+}
+
+Particle
+{
+	spawnFlags			orgOnCylinder axisFromSphere
+
+	count				8
+
+	life				200
+
+	origin				0 1 0
+
+	radius				12
+
+	rotation			-360 0
+
+	rotationDelta		-22 -42
+
+	velocity			422 0 0
+
+	gravity				400
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.2
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				300
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/snowpuff1
+	]
+}
+
+FxRunner
+{
+	spawnFlags			randrotaroundfwd
+
+	playfx
+	[
+		fx/impacts/snowjet1_large
+	]
+}
+
+FxRunner
+{
+	playfx
+	[
+		fx/explosions/exp_fill2
+	]
+}

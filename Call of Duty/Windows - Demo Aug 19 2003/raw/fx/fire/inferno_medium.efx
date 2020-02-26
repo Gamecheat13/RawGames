@@ -1,0 +1,117 @@
+Particle
+{
+	spawnFlags			orgOnCylinder
+
+	nonUniformScale		1
+
+	count				6 7
+
+	life				1000 1500
+
+	cullrange			1500
+
+	radius				35 0
+
+	rotation			-24 24
+
+	rotationDelta		2 -4
+
+	velocity			32 0 0 -12 0 0
+
+	rgb
+	{
+		start			0.6275 0.6275 0.6431
+		end				0.03529 0.02745 0.02353
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				67 43
+		flags			linear
+	}
+
+	size2
+	{
+		start			10 1
+		end				38 18
+		flags			linear
+	}
+
+	length
+	{
+		end				18 68
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/fire/firesheet1
+		gfx/effects/fire/firesheet2
+	]
+}
+
+Particle
+{
+	name				Copy of Unnamed Particle 0
+
+	spawnFlags			orgOnCylinder
+
+	count				3 5
+
+	life				1000 1500
+
+	cullrange			500
+
+	radius				45 0
+
+	rotation			-34 34
+
+	rotationDelta		2 -4
+
+	velocity			32 0 0 -12 0 0
+
+	rgb
+	{
+		start			0.6275 0.6275 0.6431
+		end				0.03529 0.02745 0.02353
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				67 73
+		flags			linear
+	}
+
+	size2
+	{
+		start			10 1
+		end				38 18
+		flags			linear
+	}
+
+	length
+	{
+		end				18 68
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/fire/firesheet1
+		gfx/effects/fire/firesheet2
+	]
+}

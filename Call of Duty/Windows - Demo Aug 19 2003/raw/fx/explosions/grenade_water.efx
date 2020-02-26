@@ -1,0 +1,107 @@
+Particle
+{
+	spawnFlags			orgOnCylinder evenDistribution
+
+	count				5
+
+	life				300
+
+	delay				0 100
+
+	origin				0 0 0 92 0 0
+
+	radius				43 44
+
+	rotation			332 -250
+
+	rotationDelta		2
+
+	velocity			250 0 0
+
+	gravity				-500 -100
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.7
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			10
+		end				100
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/waterspay
+	]
+}
+
+Particle
+{
+	count				5
+
+	life				1000
+
+	delay				200
+
+	origin				0 0 0 220 0 0
+
+	rotation			-360 360
+
+	rotationDelta		5 -5
+
+	velocity			100 -54 -54 450 54 54
+
+	gravity				-900
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.6 0.8
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			10
+		end				150
+		flags			linear
+	}
+
+	length
+	{
+		end				0
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/waterspay
+	]
+}
+
+FxRunner
+{
+	count				2
+
+	origin				0 22 22 44 -22 -22
+
+	playfx
+	[
+		fx/water/grenade_base
+	]
+}

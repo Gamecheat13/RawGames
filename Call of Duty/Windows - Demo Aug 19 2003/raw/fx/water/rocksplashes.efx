@@ -1,0 +1,133 @@
+Particle
+{
+	name				mist
+
+	spawnFlags			orgOnSphere
+
+	count				3
+
+	life				100 400
+
+	origin				23 21 43 0 -42 -68
+
+	radius				4 8
+
+	rotation			360 -360
+
+	rotationDelta		3 -3
+
+	rgb
+	{
+		start			0.4235 0.4824 0.4627
+		end				0.502 0.502 0.502
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.7
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			10
+		end				123 112
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/riverspray1
+	]
+}
+
+Particle
+{
+	spawnFlags			orgOnSphere axisFromSphere
+
+	count				5 8
+
+	life				1000
+
+	cullrange			500
+
+	radius				12
+
+	height				23 33
+
+	velocity			500 0 0 200 0 0
+
+	gravity				-600 -800
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.5
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				3 8
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/raindroplett
+	]
+}
+
+Tail
+{
+	spawnFlags			orgOnSphere axisFromSphere
+
+	count				4 12
+
+	life				500
+
+	cullrange			500
+
+	origin				31 0 0 12 0 0
+
+	velocity			402 0 0 100 0 0
+
+	gravity				-800
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.5
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				2 5
+		flags			linear
+	}
+
+	length
+	{
+		start			0
+		end				21
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/raindroplett
+	]
+}

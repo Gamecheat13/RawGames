@@ -1,0 +1,97 @@
+Particle
+{
+	name				stonegib
+
+	flags				usePhysics impactKills useAlpha
+
+	spawnFlags			axisFromSphere
+
+	count				3 1
+
+	life				1500 1200
+
+	cullrange			175
+
+	radius				3 6
+
+	rotation			360 -360
+
+	rotationDelta		21 43
+
+	velocity			333 233 233 333 -233 -233
+
+	gravity				-800
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0.3 0.2
+		flags			linear
+	}
+
+	size
+	{
+		start			3 1
+		end				0.1
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/impact/stone_piece1
+	]
+}
+
+Emitter
+{
+	flags				emitFx
+
+	life				100 150
+
+	cullrange			1200
+
+	velocity			422 122 0 422 -122 0
+
+	density				4
+
+	variance			12 1
+
+	size
+	{
+		flags			linear
+	}
+
+	emitfx
+	[
+		fx/smoke/impact_em
+	]
+}
+
+Decal
+{
+	life				1e+004
+
+	cullrange			2200
+
+	rotation			360 -360
+
+	rgb
+	{
+		start			0.6275 0.6275 0.6431
+	}
+
+	size
+	{
+		start			3 6
+	}
+
+	shaders
+	[
+		gfx/impact/bullethit_plaster
+		gfx/impact/bullethit_sand
+	]
+}

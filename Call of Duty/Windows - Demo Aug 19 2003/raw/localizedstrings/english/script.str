@@ -1,0 +1,211 @@
+// Note to translators:
+// If a sentence is the same in your language then please change it to "#same"
+//
+// eg:
+// LANG_ENGLISH  "HALT"
+// LANG_GERMAN   "#same"
+//
+// (This is so we can tell which strings have been signed-off as ok to be the same words for QA
+//  and because we do not store duplicate strings, which will then get exported again next time
+//  as being untranslated.)
+//
+VERSION             "1"
+CONFIG              "C:\trees\mk\bin\StringEd\StringEd.cfg"
+FILENOTES           "All game messages made by script should go in this file."
+
+REFERENCE           MISSIONCOMPLETE
+LANG_ENGLISH        "MISSION COMPLETE"
+
+REFERENCE           HINT_OBJECTIVEKEY
+LANG_ENGLISH        "Press [%s] to see your objectives."
+
+REFERENCE           HINT_OBJECTIVEONCOMPASS
+LANG_ENGLISH        "The star on your compass marks your next objective"
+
+REFERENCE           HINT_PRONEKEY
+LANG_ENGLISH        "Press [%s] to go prone"
+
+REFERENCE           HINT_DOUBLETAPPRONEKEY
+LANG_ENGLISH        "Double tap [%s] to go prone"
+
+REFERENCE           HINT_HOLDDOWNPRONEKEY
+LANG_ENGLISH        "Hold down [%s] to go prone"
+
+REFERENCE           HINT_ADSKEY
+LANG_ENGLISH        "Press [%s] to aim down the sight"
+
+REFERENCE           HINT_HOLDDOWNADSKEY
+LANG_ENGLISH        "Hold down [%s] to aim down the sight"
+
+REFERENCE           HINT_STANDFROMPRONEKEY
+LANG_ENGLISH        "Press [%s] to stand up from prone"
+
+REFERENCE           HINT_DOUBLETAPSTANDKEY
+LANG_ENGLISH        "Double tap [%s] to stand from prone"
+
+REFERENCE           HINT_SWITCHTOGRENADE
+LANG_ENGLISH        "Press [%s] to switch to grenades"
+
+REFERENCE           HINT_MELEEATTACK
+LANG_ENGLISH        "Press [%s] to do a melee attack"
+
+REFERENCE           HINT_PLANTEXPLOSIVES
+LANG_ENGLISH        "Look at the explosives spot and press [%s] to plant the explosives."
+
+REFERENCE           OBJ_DESTROYFLAKPANZERS
+LANG_ENGLISH        "Destroy the flak panzers (%s remaining)"
+
+REFERENCE           OBJ_FOLEYDEBRIEF
+LANG_ENGLISH        "Debrief with Foley"
+
+REFERENCE           HINT_LEANOUTWINDOW
+LANG_ENGLISH        "Press USE [%s] to lean out of the window"
+
+REFERENCE           HINT_CANT_OPEN_DOORS
+LANG_ENGLISH        "This door cannot be opened. You never need to try to open closed doors in Call of Duty."
+
+REFERENCE           HINT_FIRSTOBJECTIVE
+LANG_ENGLISH        "Look at your first objective and press USE [%s] to retrieve"
+
+REFERENCE           HINT_USEPRIVATEMILLS
+LANG_ENGLISH        "To get Private Mills'  attention, 'USE' him by pressing [%s]"
+
+REFERENCE           HINT_STRAFELEFT
+LANG_ENGLISH        "Press your Move Left key [%s] to move left."
+
+REFERENCE           HINT_STRAFERIGHT
+LANG_ENGLISH        "Press your Move Right key [%s] to move right."
+
+REFERENCE           HINT_MOVEFORWARD
+LANG_ENGLISH        "Press your Move Forward key [%s] to move forward."
+
+REFERENCE           HINT_MOVEBACKWARD
+LANG_ENGLISH        "Press your Move Back key [%s] to move backwards."
+
+REFERENCE           HINT_CHECKCURRENTOBJECTIVE
+LANG_ENGLISH        "Press [%s] to check your current objective."
+
+REFERENCE           HINT_SWITCHTOSECONDWEAPON
+LANG_ENGLISH        "You now have two weapons. Press [%s] to switch to your second weapon."
+
+REFERENCE           HINT_TRAINING_SWITCHTOGRENADE
+LANG_ENGLISH        "Press [%s] to switch to your grenades."
+
+REFERENCE           EXPLOSIVESPLANTED
+LANG_ENGLISH        "EXPLOSIVES PLANTED. STAND BACK!"
+
+REFERENCE           HINT_USECINDERBLOCKWALL
+LANG_ENGLISH        "Approach the cinder block wall and press your USE key [%s] to plant the explosives."
+
+REFERENCE           HINT_CROUCHKEY
+LANG_ENGLISH        "Press [%s] to crouch."
+
+REFERENCE           HINT_CROUCHTOGGLEFROM
+LANG_ENGLISH        "Press [%s] a second time to stand up from crouch."
+
+REFERENCE           HINT_HOLDDOWNCROUCHKEY
+LANG_ENGLISH        "Hold down [%s] to crouch."
+
+REFERENCE           HINT_RAISEFROMPRONETOCROUCH
+LANG_ENGLISH        "Press [%s] to switch from crouch from prone."
+
+REFERENCE           HINT_STANDKEY
+LANG_ENGLISH        "Press [%s] to stand up."
+
+REFERENCE           HINT_STANDLETGOCROUCHKEY
+LANG_ENGLISH        "Let go of [%s] to stop crouching."
+
+REFERENCE           HINT_STANDLETGOSECONDKEY
+LANG_ENGLISH        "If this makes you go prone, double tap [%s]."
+
+REFERENCE           HINT_STANDFROMCROUCHKEY
+LANG_ENGLISH        "Double tap [%s] to stand up from crouch."
+
+REFERENCE           HINT_RAISEFROMCROUCHTOSTAND
+LANG_ENGLISH        "Single tap [%s] to stand from crouch."
+
+REFERENCE           HINT_STANDLETGOPRONEKEY
+LANG_ENGLISH        "Let go of [%s] to come out of prone."
+
+REFERENCE           HINT_ADSSTOP
+LANG_ENGLISH        "Press [%s] a second time to stop aiming down the sight."
+
+REFERENCE           HINT_FIRSTWEAPONKEY
+LANG_ENGLISH        "Press [%s] to switch to your first weapon."
+
+REFERENCE           HINT_SECONDWEAPONKEY
+LANG_ENGLISH        "Press [%s] to switch to your second weapon."
+
+REFERENCE           HINT_SWAPWEAPONSKEY
+LANG_ENGLISH        "HOLD USE [%s] to swap your current weapon for another that you are looking at."
+
+REFERENCE           HINT_PICKUPWEAPONKEY
+LANG_ENGLISH        "To pickup a weapon, look at it and press USE [%s]."
+
+REFERENCE           HINT_PICKUPAMMOKEY
+LANG_ENGLISH        "To pickup ammo from another rifle, walk close to it or look at it and press USE [%s]."
+
+REFERENCE           HINT_JUMPSTANDKEY
+LANG_ENGLISH        "While standing, press [%s] to jump."
+
+REFERENCE           HINT_LEANLEFTKEY
+LANG_ENGLISH        "Hold down [%s] to lean to the left."
+
+REFERENCE           HINT_LEANRIGHTKEY
+LANG_ENGLISH        "Hold down [%s] to lean to the right."
+
+REFERENCE           HINT_LEANINGSLOWMOVE
+LANG_ENGLISH        "You move slower while leaning."
+
+REFERENCE           HINTSTR_PICKUPGRENADES
+LANG_ENGLISH        "Press [%s] to pick up the grenades."
+
+REFERENCE           HINTSTR_GRENADESFULL
+LANG_ENGLISH        "You can't carry anymore grenades."
+
+REFERENCE           HINTSTR_PLANTEXPLOSIVES
+LANG_ENGLISH        "Press [%s] to plant the explosives."
+
+REFERENCE           HINTSTR_DOCUMENTS
+LANG_ENGLISH        "Press [%s] to pick up the documents."
+
+REFERENCE           HINTSTR_PICKUPEXPLOSIVES
+LANG_ENGLISH        "Press [%s] to pick up the explosives."
+
+REFERENCE           HINTSTR_PICKUPPATROLLOGS
+LANG_ENGLISH        "Press [%s] to pick up the patrol log."
+
+REFERENCE           PICKUPSTIELHANDGRANATES
+LANG_ENGLISH        "Picked up some Stielhandgranates."
+
+REFERENCE           KILLCAM
+LANG_ENGLISH        "KILLCAM"
+
+REFERENCE           ROUNDCAM
+LANG_ENGLISH        "ROUNDCAM"
+
+REFERENCE           HINTSTR_USEELEVATOR
+LANG_ENGLISH        "Press [%s] to activate the elevator."
+
+REFERENCE           PRESS_USE_TO_SKIP
+LANG_ENGLISH        "(Press Use to skip)"
+
+REFERENCE           AMERICAN_FORCES
+LANG_ENGLISH        "American Forces"
+
+REFERENCE           BRITISH_FORCES
+LANG_ENGLISH        "British Forces"
+
+REFERENCE           RUSSIAN_FORCES
+LANG_ENGLISH        "Russian Forces"
+
+REFERENCE           GERMAN_FORCES
+LANG_ENGLISH        "German Forces"
+
+REFERENCE           GLOWING_MARKER
+LANG_ENGLISH        "Look for the glowing marker on the German anti-aircraft vehicle."
+
+
+ENDMARKER
+
+

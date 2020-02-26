@@ -1,0 +1,108 @@
+Emitter
+{
+	flags				emitFx
+
+	spawnFlags			orgOnCylinder axisFromSphere
+
+	count				3
+
+	life				100
+
+	velocity			3322 1111 3111 2322 1111 3111
+
+	density				4
+
+	emitfx
+	[
+		fx/fire/fire_emitter1
+	]
+}
+
+FxRunner
+{
+	delay				300
+
+	playfx
+	[
+		fx/explosions/new_explosions2
+	]
+}
+
+Emitter
+{
+	flags				useModel usePhysics impactKills
+
+	spawnFlags			orgOnCylinder axisFromSphere
+
+	count				5 7
+
+	life				5000
+
+	delay				350
+
+	angle				22 22 111
+
+	angleDelta			111 0 0 76 0 0
+
+	velocity			211 211 911 411 211 711
+
+	gravity				-700
+
+	density				4
+
+	size
+	{
+		start			0.4 0.5
+		end				0.3 1
+		flags			linear
+	}
+
+	models
+	[
+		xmodel/gib_metalplate
+	]
+}
+
+Particle
+{
+	flags				useAlpha
+
+	count				17
+
+	life				8000
+
+	delay				400
+
+	origin				233 42 42 123 -42 -42
+
+	rotation			360 -360
+
+	rotationDelta		4 -4
+
+	velocity			272 32 32 32 -32 -32
+
+	rgb
+	{
+		start			0.6275 0.6275 0.6431
+		end				0.2078 0.2 0.1843
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			43
+		end				400 300
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/dark_smoke
+		gfx/effects/whitesmoke
+	]
+}

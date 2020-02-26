@@ -1,0 +1,153 @@
+Particle
+{
+	name				Copy of Unnamed Particle 0
+
+	spawnFlags			evenDistribution
+
+	count				5
+
+	life				1000 1500
+
+	cullrange			1800
+
+	origin				32 34 34 33 -34 -34
+
+	rotation			360 -360
+
+	rotationDelta		6 -6
+
+	velocity			12 0 0 200 0 0
+
+	rgb
+	{
+		end				0.949 0.9294 0.549 0.7608 0.4353 0.2392
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			13
+		end				100 90
+		flags			linear
+	}
+
+	size2
+	{
+		start			35
+		end				94 144
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/fire/hotspot
+		gfx/effects/fire/top
+	]
+}
+
+Particle
+{
+	count				2
+
+	life				1000
+
+	cullrange			1000
+
+	origin				0 22 22 32 -22 -22
+
+	rotation			360 -360
+
+	rotationDelta		2 -2
+
+	rgb
+	{
+		end				0.9765 0.949 0.651
+		flags			random linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				100
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/fire/hotspot
+	]
+}
+
+Particle
+{
+	name				Copy of Copy of Unnamed Particl
+
+	spawnFlags			evenDistribution
+
+	count				2 3
+
+	life				1000
+
+	cullrange			700
+
+	origin				32 44 44 43 -44 -44
+
+	rotation			360 -360
+
+	rotationDelta		6 -6
+
+	velocity			12 0 0 200 0 0
+
+	rgb
+	{
+		end				0.949 0.9294 0.549 0.9765 0.949 0.651
+		flags			random linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			13
+		end				100 90
+		flags			linear
+	}
+
+	size2
+	{
+		start			35
+		end				94 144
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/fire/fire_wisp1
+		gfx/effects/fire/top
+	]
+}

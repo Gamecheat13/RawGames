@@ -1,0 +1,141 @@
+Particle
+{
+	count				3
+
+	life				100
+
+	cullrange			600
+
+	rotation			54 -108
+
+	rotationDelta		32 -64
+
+	rgb
+	{
+		start			0.2745 0.2275 0.2
+		end				0.4235 0.4824 0.4627 0.502 0.502 0.502
+		flags			random linear
+	}
+
+	alpha
+	{
+		start			0.7 0.4
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				8
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/impact/sparkflash
+	]
+}
+
+Particle
+{
+	flags				usePhysics impactKills useAlpha
+
+	spawnFlags			orgOnSphere axisFromSphere
+
+	count				2 5
+
+	life				200 400
+
+	cullrange			200
+
+	rotation			128 -256
+
+	rotationDelta		43 -86
+
+	velocity			700 0 0 500 0 0
+
+	gravity				-300
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				2
+		flags			random linear
+	}
+
+	shaders
+	[
+		gfx/impact/stone_piece1
+		gfx/impact/stone_piece2
+	]
+}
+
+Particle
+{
+	name				Copy of Unnamed Particle 0
+
+	flags				useAlpha
+
+	life				100
+
+	cullrange			1000
+
+	rotation			54 -108
+
+	rotationDelta		32 -64
+
+	rgb
+	{
+		start			0.2745 0.2275 0.2
+		end				0.4235 0.4824 0.4627 0.502 0.502 0.502
+		flags			random linear
+	}
+
+	alpha
+	{
+		start			0.7 0.8
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				43 23
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/impact/dustlayer1
+	]
+}
+
+Decal
+{
+	life				8000
+
+	cullrange			1200
+
+	rotation			0 360
+
+	size
+	{
+		start			2 4
+	}
+
+	shaders
+	[
+		gfx/impact/bullethole1
+		gfx/impact/bullethole2
+	]
+}

@@ -1,0 +1,1264 @@
+#Dialog_generic - All the dialog called automaticall from animscripts.,,,
+
+"# If the text in the first column of a row starts with a # character, the row is ignored",,,
+,,,"If the first column for a row is blank, then the row is ignored"
+# The first non-comment line of a sound alias file specifies the key name for all values appearing in this column.,,,
+"# This means it is safe to swap entire columns around, though you should never swap partial columns.",,,
+"# You can invent new keys, but the game will ignore them if it doesn't know about them.",,,
+"# You can leave out keys, but the ""name"" and ""file"" keys must always be present.",,,
+
+,name,,name of the alias that is used to play this sound (required)
+,sequence,,"used to uniquely identify alias entries when more than one sound goes to an alias, used only to catch unwanted duplicates (default = 0)"
+,file,,the name of the file that contains the sound data (required)
+,vol_min,,"0 is silent, 1 is full volume (default = 1)"
+,vol_max,,"0 is silent, 1 is full volume (default = same as vol_min)"
+,pitch_min,,"1 is normal playback, 2 is twice as fast, 0.5 is half as fast (default = 1)"
+,pitch_max,,"1 is normal playback, 2 is twice as fast, 0.5 is half as fast (default = same as pitch_min)"
+,dist_min,,"within this distance in inches, the sound is always full volume (default = 120)",,,,,,,,,,,,
+,dist_max,,"outside this distance in inches, the sound is not started.  If left blank or set to 0, the sound will play from any distance.  This does not affect sound volume falloff.",,,,,,,,,,,,
+,channel,,"auto, menu, weapon, voice, item, body, local, music, announcer (default = auto)",,,,,,,,,,,,
+,type,,streamed / loaded (default = loaded),,,,,,,,,,,,
+,probability,,weight to use for the weighted probability of playing this sound instead of another sound (default = 1),,,,,,,,,,,,
+,loop,,"whether this sound is ""looping"" or ""nonlooping"" (default = ""nonlooping"")",,,,,,,,,,,,
+,masterslave,,"if ""master"", this is a master sound.  If a number, then this sound won't exceed this volume whenever any master sound is playing.  If blank, then neither master nor slave.",,,,,,,,,,,,
+,loadspec,,"space-separated list of which maps should use this alias; eg, ""burnville dawnville"".  If blank, the alias is used on all maps.",,,,,,,,,,,,
+
+name,sequence,probability,file,vol_min,,pitch_min,pitch_max,dist_min,dist_max,channel,type,loop,masterslave,loadspec,subtitle
+
+#German A,,,,,,,,,,,,,,,
+
+#Enemy sighted (versus Russians),,,,,,,,,,,,,,,
+generic_enemysighted_german_1vrussian,1,,voiceovers/generic/axis/a/ES_Ger_A_004alt_Russen.wav,0.85,1.14,,,100,3000,voice,streamed,,,,
+generic_enemysighted_german_1vrussian,2,,voiceovers/generic/axis/a/ES_Ger_A_005alt_ThereTheyAre.wav,0.85,1.14,,,100,2500,voice,streamed,,,,
+generic_enemysighted_german_1vrussian,3,,voiceovers/generic/axis/a/ES_Ger_A_006alt_ItsThem.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_german_1vrussian,4,,voiceovers/generic/axis/a/ES_Ger_A_007alt_Attack.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_german_1vrussian,5,,voiceovers/generic/axis/a/ES_Ger_A_008alt_HeadsUp.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_german_1vrussian,6,,voiceovers/generic/axis/a/ES_Ger_A_001_TheEnemy.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_german_1vrussian,7,,voiceovers/generic/axis/a/BA_Ger_A_002_DieCommie.wav,0.85,1.14,,,100,2500,voice,streamed
+#Enemy sighted (versus British),,,,0.85,1.14,,,100,2500,,
+generic_enemysighted_german_1vbritish,1,,voiceovers/generic/axis/a/ES_Ger_A_003alt_Englander.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_german_1vbritish,2,,voiceovers/generic/axis/a/ES_Ger_A_005alt_ThereTheyAre.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_german_1vbritish,3,,voiceovers/generic/axis/a/ES_Ger_A_006alt_ItsThem.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_german_1vbritish,4,,voiceovers/generic/axis/a/ES_Ger_A_007alt_Attack.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_german_1vbritish,5,,voiceovers/generic/axis/a/ES_Ger_A_008alt_HeadsUp.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_german_1vbritish,6,,voiceovers/generic/axis/a/ES_Ger_A_001_TheEnemy.wav,0.85,1.14,,,100,2500,voice,streamed
+#Enemy sighted (versus American),,,,0.85,1.14,,,100,2500,,
+generic_enemysighted_german_1vamerican,1,,voiceovers/generic/axis/a/ES_Ger_A_002alt_Amerikaner.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_german_1vamerican,2,,voiceovers/generic/axis/a/ES_Ger_A_005alt_ThereTheyAre.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_german_1vamerican,3,,voiceovers/generic/axis/a/ES_Ger_A_006alt_ItsThem.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_german_1vamerican,4,,voiceovers/generic/axis/a/ES_Ger_A_007alt_Attack.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_german_1vamerican,5,,voiceovers/generic/axis/a/ES_Ger_A_008alt_HeadsUp.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_german_1vamerican,6,,voiceovers/generic/axis/a/ES_Ger_A_001_TheEnemy.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_german_1vamerican,7,,voiceovers/generic/axis/a/BA_Ger_A_1alt_DieAmerikaner.wav,0.85,1.14,,,100,2500,voice,streamed
+#Grenade danger,,,,0.85,1.14,,,100,2500,,
+generic_grenadedanger_german_1,1,,voiceovers/generic/axis/a/GD_Ger_A_001_GrenadeRun.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_german_1,2,,voiceovers/generic/axis/a/GD_Ger_A_002_LookGrenade.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_german_1,3,,voiceovers/generic/axis/a/GD_Ger_A_004_EnemyGrenade.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_german_1,4,,voiceovers/generic/axis/a/GD_Ger_A_003alt_GetDownGrenade.wav,0.85,1.14,,,100,2500,voice,streamed
+#Grenade attack,,,,0.85,1.14,,,100,2500,,streamed
+generic_grenadeattack_german_1,1,,voiceovers/generic/axis/a/GA_Ger_A_001_FireInTheHole.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadeattack_german_1,2,,voiceovers/generic/axis/a/GA_Ger_A_002_ThrowingGrenade.wav,0.85,1.14,,,100,2500,voice,streamed
+#Cover me,,,,0.85,1.14,,,100,2500,,streamed
+generic_coverme_german_1,1,,voiceovers/generic/axis/a/BA_Ger_A_04_CoverMe.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_coverme_german_1,2,,voiceovers/generic/axis/a/BA_Ger_A_10_Now.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_coverme_german_1,3,,voiceovers/generic/axis/a/BA_Ger_A_12_Move.wav,0.85,1.14,,,100,2500,voice,streamed
+#Flank right,,,,0.85,1.14,,,100,2500,,
+generic_flankright_german_1,1,,voiceovers/generic/axis/a/BA_Ger_A_07_FlankRight.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankright_german_1,2,,voiceovers/generic/axis/a/BA_Ger_A_03_FlankThem.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankright_german_1,3,,voiceovers/generic/axis/a/BA_Ger_A_07alt2_FlankRight.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankright_german_1,4,,voiceovers/generic/axis/a/BA_Ger_A_13alt_RightFlank.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankright_german_1,5,,voiceovers/generic/axis/a/BA_Ger_A_14alt2_RightFlank.wav,0.85,1.14,,,100,2500,voice,streamed
+#Flank left,,,,0.85,1.14,,,100,2500,,
+generic_flankleft_german_1,1,,voiceovers/generic/axis/a/BA_Ger_A_06_FlankLeft.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankleft_german_1,2,,voiceovers/generic/axis/a/BA_Ger_A_03_FlankThem.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankleft_german_1,3,,voiceovers/generic/axis/a/BA_Ger_A_06alt2_FlankLeft.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankleft_german_1,4,,voiceovers/generic/axis/a/BA_Ger_A_6alt_FlankLeft.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankleft_german_1,5,,voiceovers/generic/axis/a/BA_Ger_A_12alt_LeftFlank.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankleft_german_1,6,,voiceovers/generic/axis/a/BA_Ger_A_13alt2_LeftFlank.wav,0.85,1.14,,,100,2500,voice,streamed
+#Misc combat,,,,0.85,1.14,,,100,2500,,streamed
+generic_misccombat_german_1,1,,voiceovers/generic/axis/a/BA_Ger_A_006_Tactics.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_1,2,,voiceovers/generic/axis/a/BA_Ger_A_005_MG42Team.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_1,3,,voiceovers/generic/axis/a/BA_Ger_A_002_Tactics.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_1,4,,voiceovers/generic/axis/a/BA_Ger_A_001_LetsGoLetsGo.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_1,5,,voiceovers/generic/axis/a/BA_Ger_A_7alt_Defensive.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_1,6,,voiceovers/generic/axis/a/BA_Ger_A_4alt_SendBackup.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_1,7,,voiceovers/generic/axis/a/BA_Ger_A_3alt_CheckWeps.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_1,8,,voiceovers/generic/axis/a/BA_Ger_A_2alt_Tactics.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_1,9,,voiceovers/generic/axis/a/BA_Ger_A_1alt_LetsGoLetsGo.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_1,10,,voiceovers/generic/axis/a/BA_Ger_A_004_YouStink.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_1,11,,voiceovers/generic/axis/a/BA_Ger_A_1alt_TakeCover.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_1,12,,voiceovers/generic/axis/a/BA_Ger_A_2alt_MoveIn.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_1,13,,voiceovers/generic/axis/a/BA_Ger_A_4alt_CoverMe.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_1,14,,voiceovers/generic/axis/a/BA_Ger_A_7alt_FireAtWill.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_1,15,,voiceovers/generic/axis/a/BA_Ger_A_8alt_FireOnCommand.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_1,16,,voiceovers/generic/axis/a/BA_Ger_A_9alt_Now.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_1,17,,voiceovers/generic/axis/a/BA_Ger_A_01_TakeCover.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_1,18,,voiceovers/generic/axis/a/BA_Ger_A_02_MoveIn.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_1,19,,voiceovers/generic/axis/a/BA_Ger_A_05_FallBack.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_1,20,,voiceovers/generic/axis/a/BA_Ger_A_08_FireAtWill.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_1,21,,voiceovers/generic/axis/a/BA_Ger_A_09_FireOnCommand.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_1,22,,voiceovers/generic/axis/a/BA_Ger_A_10_Now.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_1,23,,voiceovers/generic/axis/a/BA_Ger_A_11_GoGoGo.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_1,24,,voiceovers/generic/axis/a/BA_Ger_A_12_Move.wav,0.85,1.14,,,100,2500,voice,streamed
+#Doing suppression,,,,0.85,1.14,,,100,2500,,streamed
+generic_doingsuppression_german_1,1,,voiceovers/generic/axis/a/DS_Ger_A_001alt_SuppressingFire.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_german_1,2,,voiceovers/generic/axis/a/DS_Ger_A_002_CoveringFire.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_german_1,3,,voiceovers/generic/axis/a/DS_Ger_A_002alt_CoveringFire.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_german_1,4,,voiceovers/generic/axis/a/DS_Ger_A_003_Fire.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_german_1,5,,voiceovers/generic/axis/a/DS_Ger_A_003alt_Fire.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_german_1,6,,voiceovers/generic/axis/a/DS_Ger_A_004_OpenFire.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_german_1,7,,voiceovers/generic/axis/a/DS_Ger_A_004alt_OpenFIre.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_german_1,8,,voiceovers/generic/axis/a/DS_Ger_A_005_HideYouCowards.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_german_1,9,,voiceovers/generic/axis/a/DS_Ger_A_005alt_HideYouCowards.wav,0.85,1.14,,,100,2500,voice,streamed
+#Under suppression,,,,0.85,1.14,,,100,2500,,streamed
+generic_undersuppression_german_1,1,,voiceovers/generic/axis/a/UNS_Ger_A_001alt2_PinnedDown.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_german_1,2,,voiceovers/generic/axis/a/UNS_Ger_A_001alt_PinnedDown.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_german_1,3,,voiceovers/generic/axis/a/UNS_Ger_A_001_PinnedDown.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_german_1,4,,voiceovers/generic/axis/a/UNS_Ger_A_002_TakeCover.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_german_1,5,,voiceovers/generic/axis/a/UNS_Ger_A_003_FallBack.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_german_1,6,,voiceovers/generic/axis/a/UNS_Ger_A_004_GetDown.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_german_1,7,,voiceovers/generic/axis/a/UNS_Ger_A_005_HeadDown.wav,0.85,1.14,,,100,2500,voice,streamed
+#Enemy killed,,,,0.85,1.14,,,100,2500,,streamed
+generic_enemykilled_german_1,1,,voiceovers/generic/axis/a/EK_Ger_A_001_GotOne.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemykilled_german_1,2,,voiceovers/generic/axis/a/EK_Ger_A_002_OneDown.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemykilled_german_1,3,,voiceovers/generic/axis/a/EK_Ger_A_003_KillEm.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemykilled_german_1,4,,voiceovers/generic/axis/a/EK_Ger_A_004_KeepShootingGusto.wav,0.85,1.14,,,100,2500,voice,streamed
+#Melee charge,,,,0.85,1.14,,,100,2500,,streamed
+generic_meleecharge_german_1,1,,voiceovers/generic/axis/a/MeleeCharg_Ger_Stirb_B_001.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleecharge_german_1,2,,voiceovers/generic/axis/a/MeleeCharg_Ger_Stirb_B_002.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleecharge_german_1,3,,voiceovers/generic/axis/a/MeleeCharge_Ger_Die_E_002.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleecharge_german_1,4,,voiceovers/generic/axis/a/MeleeCharge_Ger_Die_E_004.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleecharge_german_1,5,,voiceovers/generic/axis/a/MeleeCharge_Ger_Stirb_D_04.wav,0.85,1.14,,,100,2500,voice,streamed
+#Melee attack,,,,0.85,1.14,,,100,2500,,streamed
+generic_meleeattack_german_1,1,,voiceovers/generic/axis/a/MeleeAttack_G_001.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_german_1,2,,voiceovers/generic/axis/a/MeleeAttack_G_002.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_german_1,3,,voiceovers/generic/axis/a/MeleeAttack_G_003.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_german_1,4,,voiceovers/generic/axis/a/MeleeAttack_G_005.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_german_1,5,,voiceovers/generic/axis/a/MeleeAttack_G_006.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_german_1,6,,voiceovers/generic/axis/a/MeleeAttack_Ger_E_001.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_german_1,7,,voiceovers/generic/axis/a/MeleeAttack_Ger_E_002.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_german_1,8,,voiceovers/generic/axis/a/MeleeAttack_Ger_E_003.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_german_1,9,,voiceovers/generic/axis/a/MeleeAttack_Ger_E_009.wav,0.85,1.14,,,100,2500,voice,streamed
+#Pain,,,,0.85,1.14,,,100,2500,,streamed
+generic_pain_german_1,1,,voiceovers/generic/axis/a/Pain_German_E_006.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_german_1,2,,voiceovers/generic/axis/a/Pain_German_E_007.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_german_1,3,,voiceovers/generic/axis/a/Pain_German_E_008.wav,0.85,1.14,,,100,2500,voice,streamed
+#Death,,,,0.85,1.14,,,100,2500,,streamed
+generic_death_german_1,1,,voiceovers/generic/axis/a/Death_Aargh_G_001.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_german_1,2,,voiceovers/generic/axis/a/Death_Aargh_G_003.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_german_1,3,,voiceovers/generic/axis/c/german2_line_119.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_german_1,4,,voiceovers/generic/axis/c/german2_line_120.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_german_1,5,,voiceovers/generic/axis/c/die01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_german_1,6,,voiceovers/generic/axis/c/die02.wav,0.85,1.14,,,100,2500,voice,streamed
+,,,,0.85,1.14,,,100,2500,,
+#German B,,,,0.85,1.14,,,100,2500,,
+,,,,0.85,1.14,,,100,2500,,
+#Enemy sighted (versus American),,,,0.85,1.14,,,100,2500,,
+generic_enemysighted_german_2vamerican,1,,voiceovers/generic/axis/b/ES_Ger_B_002 alt_Amerikaner.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_german_2vamerican,2,,voiceovers/generic/axis/b/ES_Ger_B_002_Amerikaner.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_german_2vamerican,3,,voiceovers/generic/axis/b/ES_Ger_B_008 alt2_EnemySighted.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_german_2vamerican,4,,voiceovers/generic/axis/b/ES_Ger_B_006_alt_ItsThem.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_german_2vamerican,5,,voiceovers/generic/axis/b/ES_Ger_B_005_ItsThem.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_german_2vamerican,6,,voiceovers/generic/axis/b/ES_Ger_B_006_TheEnemy.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_german_2vamerican,7,,voiceovers/generic/axis/b/ES_Ger_B_001 alt_TheresTheEnemy.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_german_2vamerican,8,,voiceovers/generic/axis/b/ES_Ger_B_008_HeadsUp.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_german_2vamerican,9,,voiceovers/generic/axis/b/ES_Ger_B_007 alt_Attack.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_german_2vamerican,10,,voiceovers/generic/axis/b/BA_Ger_B_002alt_DieAmi.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_german_2vamerican,11,,voiceovers/generic/axis/b/BA_Ger_B_002_DieAmerikaner.wav,0.85,1.14,,,100,2500,voice,streamed
+#Grenade danger,,,,0.85,1.14,,,100,2500,,
+generic_grenadedanger_german_2,1,,voiceovers/generic/axis/b/GD_Ger_B_001 alt_GrenadeRun.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_german_2,2,,voiceovers/generic/axis/b/GD_Ger_B_002 alt_LookGrenade.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_german_2,3,,voiceovers/generic/axis/b/GD_Ger_B_003 alt_GetDownGrenade.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_german_2,4,,voiceovers/generic/axis/b/GD_Ger_B_004 alt_EnemyGrenade.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_german_2,5,,voiceovers/generic/axis/b/GD_Ger_B_001_GrenadeRun.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_german_2,6,,voiceovers/generic/axis/b/GD_Ger_B_002_LookGrenade.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_german_2,7,,voiceovers/generic/axis/b/GD_Ger_B_004_EnemyGrenade.wav,0.85,1.14,,,100,2500,voice,streamed
+#Grenade attack,,,,0.85,1.14,,,100,2500,,
+generic_grenadeattack_german_2,1,,voiceovers/generic/axis/b/GA_Ger_B_001 alt_FireInTheHole.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadeattack_german_2,2,,voiceovers/generic/axis/b/GA_Ger_B_002 alt_ThrowingGrenade.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadeattack_german_2,3,,voiceovers/generic/axis/b/GA_Ger_B_001_FireInTheHole.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadeattack_german_2,4,,voiceovers/generic/axis/b/GA_Ger_B_002_ThrowingGrenade.wav,0.85,1.14,,,100,2500,voice,streamed
+#Cover me,,,,0.85,1.14,,,100,2500,,
+generic_coverme_german_2,1,,voiceovers/generic/axis/b/BA_Ger_B_004alt2_CoverMe.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_coverme_german_2,2,,voiceovers/generic/axis/b/BA_Ger_B_011alt3_GoGoGo.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_coverme_german_2,3,,voiceovers/generic/axis/b/BA_Ger_B_012alt_Move.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_coverme_german_2,4,,voiceovers/generic/axis/b/BA_Ger_B_004alt_CoverMe.wav,0.85,1.14,,,100,2500,voice,streamed
+#Flank left,,,,0.85,1.14,,,100,2500,,
+generic_flankleft_german_2,1,,voiceovers/generic/axis/b/BA_Ger_B_006alt2_FlankLeft.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankleft_german_2,2,,voiceovers/generic/axis/b/BA_Ger_B_013alts_LeftFlank.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankleft_german_2,3,,voiceovers/generic/axis/b/BA_Ger_B_006_FlankLeft.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankleft_german_2,4,,voiceovers/generic/axis/b/BA_Ger_B_013_LeftFlank.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankleft_german_2,5,,voiceovers/generic/axis/b/BA_Ger_B_013alt_LeftFlank.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankleft_german_2,6,,voiceovers/generic/axis/b/BA_Ger_B_003alt_FlankThem.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankleft_german_2,7,,voiceovers/generic/axis/b/BA_Ger_B_003_FlankThem.wav,0.85,1.14,,,100,2500,voice,streamed
+#Flank right,,,,0.85,1.14,,,100,2500,,
+generic_flankright_german_2,1,,voiceovers/generic/axis/b/BA_Ger_B_007alt2_FlankRight.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankright_german_2,2,,voiceovers/generic/axis/b/BA_Ger_B_007_FlankRight.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankright_german_2,3,,voiceovers/generic/axis/b/BA_Ger_B_007alt_FlankRight.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankright_german_2,4,,voiceovers/generic/axis/b/BA_Ger_B_014_RightFlank.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankright_german_2,5,,voiceovers/generic/axis/b/BA_Ger_B_014alt_RightFlank.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankright_german_2,6,,voiceovers/generic/axis/b/BA_Ger_B_003alt_FlankThem.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankright_german_2,7,,voiceovers/generic/axis/b/BA_Ger_B_003_FlankThem.wav,0.85,1.14,,,100,2500,voice,streamed
+#Misc combat,,,,0.85,1.14,,,100,2500,,
+generic_misccombat_german_2,1,,voiceovers/generic/axis/b/BA_Ger_B_004alt2_CoverMe.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_2,2,,voiceovers/generic/axis/b/BA_Ger_B_009alt2_FireOnCommand.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_2,3,,voiceovers/generic/axis/b/BA_Ger_B_011alt2_GoGoGo.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_2,4,,voiceovers/generic/axis/b/BA_Ger_B_011alt3_GoGoGo.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_2,5,,voiceovers/generic/axis/b/BA_Ger_B_012alt2_Move.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_2,6,,voiceovers/generic/axis/b/BA_Ger_B_001alt_TakeCover.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_2,7,,voiceovers/generic/axis/b/BA_Ger_B_002alt_MoveIn.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_2,8,,voiceovers/generic/axis/b/BA_Ger_B_004alt_CoverMe.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_2,9,,voiceovers/generic/axis/b/BA_Ger_B_005_FallBack.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_2,10,,voiceovers/generic/axis/b/BA_Ger_B_005alt_FallBack.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_2,11,,voiceovers/generic/axis/b/BA_Ger_B_008_FireAtWill.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_2,12,,voiceovers/generic/axis/b/BA_Ger_B_008alt_FireAtWill.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_2,13,,voiceovers/generic/axis/b/BA_Ger_B_009_FireOnCommand.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_2,14,,voiceovers/generic/axis/b/BA_Ger_B_009alt_FireOnCommand.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_2,15,,voiceovers/generic/axis/b/BA_Ger_B_012alt_Move.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_2,16,,voiceovers/generic/axis/b/BA_Ger_B_010alt_Now.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_2,17,,voiceovers/generic/axis/b/BA_Ger_B_011_GoGoGo.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_2,18,,voiceovers/generic/axis/b/BA_Ger_B_011alt_GoGoGo.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_2,19,,voiceovers/generic/axis/b/BA_Ger_B_012_Move.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_2,20,,voiceovers/generic/axis/b/BA_Ger_B_001_TakeCover.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_2,21,,voiceovers/generic/axis/b/BA_Ger_B_002_MoveIn.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_2,22,,voiceovers/generic/axis/b/BA_Ger_B_004_CoverMe.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_2,23,,voiceovers/generic/axis/b/BA_Ger_B_004alt2_SendBackup.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_2,24,,voiceovers/generic/axis/b/BA_Ger_B_003alt_CheckWeps.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_2,25,,voiceovers/generic/axis/b/BA_Ger_B_005alt_MG42Team.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_2,26,,voiceovers/generic/axis/b/BA_Ger_B_04alt_YouGuysStink.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_2,27,,voiceovers/generic/axis/b/BA_Ger_B_004_YouGuysStink.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_2,28,,voiceovers/generic/axis/b/BA_Ger_B_002_Tactics.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_2,29,,voiceovers/generic/axis/b/BA_Ger_B_003_CheckWeps.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_2,30,,voiceovers/generic/axis/b/BA_Ger_B_005_MG42Team.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_2,31,,voiceovers/generic/axis/b/BA_Ger_B_006_Tactics.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_2,32,,voiceovers/generic/axis/b/BA_Ger_B_007_Defensive.wav,0.85,1.14,,,100,2500,voice,streamed
+#Doing suppression,,,,0.85,1.14,,,100,2500,,
+generic_doingsuppression_german_2,1,,voiceovers/generic/axis/b/DS_Ger_B_003alt2_Fire.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_german_2,2,,voiceovers/generic/axis/b/DS_Ger_B_004alt_OpenFire.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_german_2,3,,voiceovers/generic/axis/b/DS_Ger_B_005alt2_HideYouCowards.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_german_2,4,,voiceovers/generic/axis/b/DS_Ger_B_005alt3_Fire.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_german_2,5,,voiceovers/generic/axis/b/DS_Ger_B_001_SuppressingFire.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_german_2,6,,voiceovers/generic/axis/b/DS_Ger_B_002alt_CoveringFire.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_german_2,7,,voiceovers/generic/axis/b/DS_Ger_B_003alt_Fire.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_german_2,8,,voiceovers/generic/axis/b/DS_Ger_B_005_HideYouCowards.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_german_2,9,,voiceovers/generic/axis/b/DS_Ger_B_005alt_HideYouCowards.wav,0.85,1.14,,,100,2500,voice,streamed
+#Under suppression,,,,0.85,1.14,,,100,2500,,
+generic_undersuppression_german_2,1,,voiceovers/generic/axis/b/UNS_Ger_B_001alt2_PinnedDown.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_german_2,2,,voiceovers/generic/axis/b/UNS_Ger_B_001alt3_PinnedDown.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_german_2,3,,voiceovers/generic/axis/b/UNS_Ger_B_002alt2_TakeCover.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_german_2,4,,voiceovers/generic/axis/b/UNS_Ger_B_002alt3_TakeCover.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_german_2,5,,voiceovers/generic/axis/b/UNS_Ger_B_003alt2_FallBack.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_german_2,6,,voiceovers/generic/axis/b/UNS_Ger_B_003alt3_FallBack.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_german_2,7,,voiceovers/generic/axis/b/UNS_Ger_B_003alt5_FallBack.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_german_2,8,,voiceovers/generic/axis/b/UNS_Ger_B_004alt_GetDown.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_german_2,9,,voiceovers/generic/axis/b/UNS_Ger_B_001_PinnedDown.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_german_2,10,,voiceovers/generic/axis/b/UNS_Ger_B_001alt_PinnedDown.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_german_2,11,,voiceovers/generic/axis/b/UNS_Ger_B_002_TakeCover.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_german_2,12,,voiceovers/generic/axis/b/UNS_Ger_B_002alt_TakeCover.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_german_2,13,,voiceovers/generic/axis/b/UNS_Ger_B_003_FallBack.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_german_2,14,,voiceovers/generic/axis/b/UNS_Ger_B_003alt_FallBack.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_german_2,15,,voiceovers/generic/axis/b/UNS_Ger_B_004_GetDown.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_german_2,16,,voiceovers/generic/axis/b/UNS_Ger_B_005_HeadDown.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_german_2,17,,voiceovers/generic/axis/b/GA_Ger_B_002_ThrowingGrenade.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_german_2,18,,voiceovers/generic/axis/b/UNS_Ger_B_005alt_HeadDown.wav,0.85,1.14,,,100,2500,voice,streamed
+#Enemy killed,,,,0.85,1.14,,,100,2500,,
+generic_enemykilled_german_2,1,,voiceovers/generic/axis/b/EK_Ger_B_001_alt_GotOne.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemykilled_german_2,2,,voiceovers/generic/axis/b/EK_Ger_B_001_GotOne.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemykilled_german_2,3,,voiceovers/generic/axis/b/EK_Ger_B_002_alt_OneDown.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemykilled_german_2,4,,voiceovers/generic/axis/b/EK_Ger_B_002_alt3_OneDown.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemykilled_german_2,5,,voiceovers/generic/axis/b/EK_Ger_B_002_OneDown.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemykilled_german_2,6,,voiceovers/generic/axis/b/EK_Ger_B_003_alt3_KillEm.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemykilled_german_2,7,,voiceovers/generic/axis/b/EK_Ger_B_003_KillEm.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemykilled_german_2,8,,voiceovers/generic/axis/b/EK_Ger_B_003a_alt_KeepShooting.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemykilled_german_2,9,,voiceovers/generic/axis/b/EK_Ger_B_003a_KeepShooting.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemykilled_german_2,10,,voiceovers/generic/axis/b/EK_Ger_B_004a_KeepShooting.wav,0.85,1.14,,,100,2500,voice,streamed
+#Melee charge,,,,0.85,1.14,,,100,2500,,
+generic_meleecharge_german_2,1,,voiceovers/generic/axis/b/MeleeCharge_Ger_Stirb_D_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleecharge_german_2,2,,voiceovers/generic/axis/a/MeleeCharg_Ger_Stirb_B_002.wav,0.85,1.14,,,100,2500,voice,streamed
+#Melee attack,,,,0.85,1.14,,,100,2500,,
+generic_meleeattack_german_2,1,,voiceovers/generic/axis/b/MeleeAttack_Ger_D_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_german_2,2,,voiceovers/generic/axis/b/MeleeAttack_Ger_D_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_german_2,3,,voiceovers/generic/axis/b/MeleeAttack_Ger_D_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_german_2,4,,voiceovers/generic/axis/b/MeleeAttack_Ger_B_001.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_german_2,5,,voiceovers/generic/axis/b/MeleeAttack_Ger_B_004.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_german_2,6,,voiceovers/generic/axis/b/MeleeAttack_Ger_B_006.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_german_2,7,,voiceovers/generic/axis/b/MeleeAttack_Ger_B_008.wav,0.85,1.14,,,100,2500,voice,streamed
+#Pain,,,,0.85,1.14,,,100,2500,,
+generic_pain_german_2,1,,voiceovers/generic/axis/b/Pain_Ger_B_002.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_german_2,2,,voiceovers/generic/axis/b/Pain_Ger_B_003.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_german_2,3,,voiceovers/generic/axis/b/Pain_Ger_B_007.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_german_2,4,,voiceovers/generic/axis/b/Pain_Ger_B_010.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_german_2,5,,voiceovers/generic/axis/b/Pain_Ger_B_013.wav,0.85,1.14,,,100,2500,voice,streamed
+#Death,,,,0.85,1.14,,,100,2500,,
+generic_death_german_2,1,,voiceovers/generic/axis/c/german1_line_119.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_german_2,2,,voiceovers/generic/axis/c/german1_line_120.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_german_2,3,,voiceovers/generic/axis/c/german2_line_119.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_german_2,4,,voiceovers/generic/axis/c/german2_line_120.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_german_2,5,,voiceovers/generic/axis/c/die01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_german_2,6,,voiceovers/generic/axis/c/die02.wav,0.85,1.14,,,100,2500,voice,streamed
+,,,,0.85,1.14,,,100,2500,,
+#German C,,,,0.85,1.14,,,100,2500,,
+,,,,0.85,1.14,,,100,2500,,
+#Enemy sighted (versus American),,,,0.85,1.14,,,100,2500,,
+generic_enemysighted_german_3vamerican,1,,voiceovers/generic/axis/c/german1_line_103.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_german_3vamerican,2,,voiceovers/generic/axis/c/german1_line_87.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_german_3vamerican,3,,voiceovers/generic/axis/c/german1_line_83.wav,0.85,1.14,,,100,2500,voice,streamed
+#Cover me,,,,0.85,1.14,,,100,2500,,
+generic_coverme_german_3,1,,voiceovers/generic/axis/b/BA_Ger_B_004alt2_CoverMe.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_coverme_german_3,2,,voiceovers/generic/axis/b/BA_Ger_B_011alt3_GoGoGo.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_coverme_german_3,3,,voiceovers/generic/axis/b/BA_Ger_B_012alt_Move.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_coverme_german_3,4,,voiceovers/generic/axis/b/BA_Ger_B_004alt_CoverMe.wav,0.85,1.14,,,100,2500,voice,streamed
+#Grenade danger,,,,0.85,1.14,,,100,2500,,
+generic_grenadedanger_german_3,1,,voiceovers/generic/axis/c/german1_line_97.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_german_3,2,,voiceovers/generic/axis/c/german1_line_90.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_german_3,3,,voiceovers/generic/axis/c/german2_line_97.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_german_3,4,,voiceovers/generic/axis/c/german2_line_90.wav,0.85,1.14,,,100,2500,voice,streamed
+#Grenade attack,,,,0.85,1.14,,,100,2500,,
+generic_grenadeattack_german_3,1,,voiceovers/generic/axis/c/german1_line_88.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadeattack_german_3,2,,voiceovers/generic/axis/c/german1_line_89.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadeattack_german_3,3,,voiceovers/generic/axis/c/german1_line_116.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadeattack_german_3,4,,voiceovers/generic/axis/c/german2_line_88.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadeattack_german_3,5,,voiceovers/generic/axis/c/german2_line_89.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadeattack_german_3,6,,voiceovers/generic/axis/c/german2_line_116.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadeattack_german_3,7,,voiceovers/generic/axis/c/FireInHole.wav,0.85,1.14,,,100,2500,voice,streamed
+#Flank left,,,,0.85,1.14,,,100,2500,,
+generic_flankleft_german_3,1,,voiceovers/generic/axis/c/german1_line_92.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankleft_german_3,2,,voiceovers/generic/axis/c/german1_line_107.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankleft_german_3,3,,voiceovers/generic/axis/c/german2_line_92.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankleft_german_3,4,,voiceovers/generic/axis/c/german2_line_107.wav,0.85,1.14,,,100,2500,voice,streamed
+#Flank right,,,,0.85,1.14,,,100,2500,,
+generic_flankright_german_3,1,,voiceovers/generic/axis/c/german1_line_92.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankright_german_3,2,,voiceovers/generic/axis/c/german1_line_108.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankright_german_3,3,,voiceovers/generic/axis/c/german2_line_92.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankright_german_3,4,,voiceovers/generic/axis/c/german2_line_108.wav,0.85,1.14,,,100,2500,voice,streamed
+#Misc combat,,,,0.85,1.14,,,100,2500,,
+generic_misccombat_german_3,1,,voiceovers/generic/axis/c/german1_line_91.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_3,2,,voiceovers/generic/axis/c/german1_line_98.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_3,3,,voiceovers/generic/axis/c/german1_line_101.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_3,4,,voiceovers/generic/axis/c/german1_line_102.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_3,5,,voiceovers/generic/axis/c/german1_line_103.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_3,6,,voiceovers/generic/axis/c/german1_line_104.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_3,7,,voiceovers/generic/axis/c/german1_line_105.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_3,8,,voiceovers/generic/axis/c/german2_line_96.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_3,9,,voiceovers/generic/axis/c/german2_line_98.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_3,10,,voiceovers/generic/axis/c/german2_line_101.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_3,11,,voiceovers/generic/axis/c/german2_line_102.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_3,12,,voiceovers/generic/axis/c/german2_line_103b.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_german_3,13,,voiceovers/generic/axis/c/german2_line_109.wav,0.85,1.14,,,100,2500,voice,streamed
+#Doing suppression,,,,0.85,1.14,,,100,2500,,
+generic_doingsuppression_german_3,1,,voiceovers/generic/axis/c/german1_line_99.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_german_3,2,,voiceovers/generic/axis/c/german1_line_112.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_german_3,3,,voiceovers/generic/axis/c/german1_line_113.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_german_3,4,,voiceovers/generic/axis/c/german1_line_114.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_german_3,5,,voiceovers/generic/axis/c/german1_line_106.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_german_3,6,,voiceovers/generic/axis/c/german2_line_91.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_german_3,7,,voiceovers/generic/axis/c/german2_line_99.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_german_3,8,,voiceovers/generic/axis/c/german2_line_112.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_german_3,9,,voiceovers/generic/axis/c/german2_line_106.wav,0.85,1.14,,,100,2500,voice,streamed
+#Under suppression,,,,0.85,1.14,,,100,2500,,
+generic_undersuppression_german_3,1,,voiceovers/generic/axis/c/german1_line_97.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_german_3,2,,voiceovers/generic/axis/c/german1_line_100.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_german_3,3,,voiceovers/generic/axis/c/german2_line_100.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_german_3,4,,voiceovers/generic/axis/c/ShortTaunt.wav,0.85,1.14,,,100,2500,voice,streamed
+#Enemy killed,,,,0.85,1.14,,,100,2500,,
+generic_enemykilled_german_3,1,,voiceovers/generic/axis/c/german1_line_94.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemykilled_german_3,2,,voiceovers/generic/axis/c/german1_line_95.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemykilled_german_3,3,,voiceovers/generic/axis/c/german2_line_94.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemykilled_german_3,4,,voiceovers/generic/axis/c/german2_line_95.wav,0.85,1.14,,,100,2500,voice,streamed
+#Melee charge,,,,0.85,1.14,,,100,2500,,
+generic_meleecharge_german_3,1,,voiceovers/generic/axis/c/pain02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleecharge_german_3,2,,voiceovers/generic/axis/c/german1_line_112.wav,0.85,1.14,,,100,2500,voice,streamed
+#Melee attack,,,,0.85,1.14,,,100,2500,,streamed
+generic_meleeattack_german_3,1,,voiceovers/generic/axis/c/pain02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_german_3,2,,voiceovers/generic/axis/c/german1_line_118.wav,0.85,1.14,,,100,2500,voice,streamed
+#Pain,,,,0.85,1.14,,,100,2500,,
+generic_pain_german_3,1,,voiceovers/generic/axis/c/german1_line_117.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_german_3,2,,voiceovers/generic/axis/c/german1_line_118.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_german_3,3,,voiceovers/generic/axis/c/german2_line_117.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_german_3,4,,voiceovers/generic/axis/c/german2_line_118.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_german_3,5,,voiceovers/generic/axis/c/pain02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Death,,,,0.85,1.14,,,100,2500,,
+generic_death_german_3,1,,voiceovers/generic/axis/c/german1_line_119.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_german_3,2,,voiceovers/generic/axis/c/german1_line_120.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_german_3,3,,voiceovers/generic/axis/c/german2_line_119.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_german_3,4,,voiceovers/generic/axis/c/german2_line_120.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_german_3,5,,voiceovers/generic/axis/c/die01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_german_3,6,,voiceovers/generic/axis/c/die02.wav,0.85,1.14,,,100,2500,voice,streamed
+,,,,0.85,1.14,,,100,2500,,
+#American voice #1 GR,,,,0.85,1.14,,,100,2500,,
+,,,,0.85,1.14,,,100,2500,,
+#Enemy sighted,,,,0.85,1.14,,,100,2500,,
+generic_enemysighted_american_1,1,,voiceovers/generic/allies/am/gr/ElderSighted_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_american_1,2,,voiceovers/generic/allies/am/gr/ElderSighted_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_american_1,3,,voiceovers/generic/allies/am/gr/ElderSighted_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_american_1,4,,voiceovers/generic/allies/am/gr/ElderSighted_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_american_1,5,,voiceovers/generic/allies/am/gr/ElderSighted_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_american_1,6,,voiceovers/generic/allies/am/gr/ElderSighted_06.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_american_1,7,,voiceovers/generic/allies/am/gr/ElderSighted_07.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_american_1,8,,voiceovers/generic/allies/am/gr/ElderSighted_08.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_american_1,9,,voiceovers/generic/allies/am/gr/ElderSighted_09.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_american_1,10,,voiceovers/generic/allies/am/gr/ElderSighted_10.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_american_1,11,,voiceovers/generic/allies/am/gr/ElderSighted_11.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_american_1,12,,voiceovers/generic/allies/am/gr/ElderSighted_12.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_american_1,13,,voiceovers/generic/allies/am/gr/ElderSighted_13.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_american_1,14,,voiceovers/generic/allies/am/gr/ElderSighted_14.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_american_1,15,,voiceovers/generic/allies/am/gr/ElderSighted_15.wav,0.85,1.14,,,100,2500,voice,streamed
+#Greet the player loudly,,,,0.85,1.14,,,100,2500,,
+generic_greetplayerloud_american_1,1,,voiceovers/generic/allies/am/gr/ElderGreetLoud_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerloud_american_1,2,,voiceovers/generic/allies/am/gr/ElderGreetLoud_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerloud_american_1,3,,voiceovers/generic/allies/am/gr/ElderGreetLoud_03.wav,0.85,1.14,,,100,2500,voice,streamed
+#Greet the player quietly,,,,0.85,1.14,,,100,2500,,
+generic_greetplayerquiet_american_1,1,,voiceovers/generic/allies/am/gr/ElderGreetSoft_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerquiet_american_1,2,,voiceovers/generic/allies/am/gr/ElderGreetSoft_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Grenade danger,,,,0.85,1.14,,,100,2500,,
+generic_grenadedanger_american_1,1,,voiceovers/generic/allies/am/qf/QF_GrenDng_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_american_1,2,,voiceovers/generic/allies/am/qf/QF_GrenDng_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_american_1,3,,voiceovers/generic/allies/am/qf/QF_GrenDng_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_american_1,4,,voiceovers/generic/allies/am/qf/QF_GrenDng_04.wav,0.85,1.14,,,100,2500,voice,streamed
+#Grenade attack,,,,0.85,1.14,,,100,2500,,
+generic_grenadeattack_american_1,1,,voiceovers/generic/allies/am/qf/QF_GrenAtk_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadeattack_american_1,2,,voiceovers/generic/allies/am/qf/QF_GrenAtk_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Cover me,,,,0.85,1.14,,,100,2500,,
+generic_coverme_american_1,1,,voiceovers/generic/allies/am/gr/ElderCoverMe_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_coverme_american_1,2,,voiceovers/generic/allies/am/gr/ElderCoverMe_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Flank left,,,,0.85,1.14,,,100,2500,,
+generic_flankleft_american_1,1,,voiceovers/generic/allies/am/gr/ElderFlankLeft_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankleft_american_1,2,,voiceovers/generic/allies/am/gr/ElderFlankThem01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankleft_american_1,3,,voiceovers/generic/allies/am/gr/ElderLeftFlank_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankleft_american_1,4,,voiceovers/generic/allies/am/gr/ElderLeftFlank_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Flank right,,,,0.85,1.14,,,100,2500,,
+generic_flankright_american_1,1,,voiceovers/generic/allies/am/gr/ElderFlankRight_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankright_american_1,2,,voiceovers/generic/allies/am/gr/ElderFlankRight_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankright_american_1,3,,voiceovers/generic/allies/am/gr/ElderFlankThem02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Misc combat,,,,0.85,1.14,,,100,2500,,
+generic_misccombat_american_1,1,,voiceovers/generic/allies/am/gr/ElderCoverMe_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_american_1,2,,voiceovers/generic/allies/am/gr/ElderCoverMe_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#generic_misccombat_american_1,,,voiceovers/generic/allies/am/gr/ElderFallBack_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_american_1,3,,voiceovers/generic/allies/am/gr/ElderGoGoGo_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_american_1,4,,voiceovers/generic/allies/am/gr/ElderMoveIn01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_american_1,5,,voiceovers/generic/allies/am/gr/ElderMoveIn02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_american_1,6,,voiceovers/generic/allies/am/gr/ElderMoveIt_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_american_1,7,,voiceovers/generic/allies/am/gr/ElderMoveIt_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Doing suppression,,,,0.85,1.14,,,100,2500,,
+generic_doingsuppression_american_1,1,,voiceovers/generic/allies/am/gr/ElderAtWill_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_american_1,2,,voiceovers/generic/allies/am/gr/ElderAtWill_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Under suppression,,,,0.85,1.14,,,100,2500,,
+generic_undersuppression_american_1,1,,voiceovers/generic/allies/am/gr/ElderStayLow_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_american_1,2,,voiceovers/generic/allies/am/gr/ElderStayLow_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Enemy killed,,,,0.85,1.14,,,100,2500,,
+generic_enemykilled_american_1,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Melee charge,,,,0.85,1.14,,,100,2500,,
+generic_meleecharge_american_1,1,,voiceovers/generic/allies/am/gr/ElderCharge_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleecharge_american_1,2,,voiceovers/generic/allies/am/gr/ElderCharge_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleecharge_american_1,3,,voiceovers/generic/allies/am/gr/ElderCharge_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleecharge_american_1,4,,voiceovers/generic/allies/am/gr/ElderCharge_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleecharge_american_1,5,,voiceovers/generic/allies/am/gr/ElderCharge_05.wav,0.85,1.14,,,100,2500,voice,streamed
+#Melee attack,,,,0.85,1.14,,,100,2500,,
+generic_meleeattack_american_1,1,,voiceovers/generic/allies/am/gr/ElderExert_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_1,2,,voiceovers/generic/allies/am/gr/ElderExert_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_1,3,,voiceovers/generic/allies/am/gr/ElderExert_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_1,4,,voiceovers/generic/allies/am/gr/ElderExert_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_1,5,,voiceovers/generic/allies/am/gr/ElderExert_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_1,6,,voiceovers/generic/allies/am/gr/ElderExert_06.wav,0.85,1.14,,,100,2500,voice,streamed
+#Give up position to player,,,,0.85,1.14,,,100,2500,,
+generic_giveupposition_american_1,1,,voiceovers/generic/allies/am/qf/QF_Avoid_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_1,2,,voiceovers/generic/allies/am/qf/QF_Avoid_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_1,3,,voiceovers/generic/allies/am/qf/QF_Avoid_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_1,4,,voiceovers/generic/allies/am/qf/QF_Avoid_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_1,5,,voiceovers/generic/allies/am/qf/QF_Avoid_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_1,6,,voiceovers/generic/allies/am/qf/QF_Avoid_06.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_1,7,,voiceovers/generic/allies/am/qf/QF_Avoid_07.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_1,8,,voiceovers/generic/allies/am/qf/QF_Avoid_08.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_1,9,,voiceovers/generic/allies/am/qf/QF_Avoid_09.wav,0.85,1.14,,,100,2500,voice,streamed
+#Pain,,,,0.85,1.14,,,100,2500,,
+generic_pain_american_1,1,,allied/pain01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_1,2,,allied/pain02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_1,3,,allied/pain03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_1,4,,allied/pain04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_1,5,,allied/pain05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_1,6,,allied/pain06.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_1,7,,allied/pain07.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_1,8,,allied/pain08.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_1,9,,allied/pain09.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_1,10,,allied/pain10.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_1,11,,allied/pain11.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_1,12,,allied/pain12.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_1,13,,allied/pain13.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_1,14,,allied/pain14.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_1,15,,allied/pain15.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_1,16,,allied/pain16.wav,0.85,1.14,,,100,2500,voice,streamed
+#Death,,,,0.85,1.14,,,100,2500,,
+generic_death_american_1,1,,allied/death01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_1,2,,allied/death02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_1,3,,allied/death03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_1,4,,allied/death04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_1,5,,allied/death05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_1,6,,allied/death06.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_1,7,,allied/death07.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_1,8,,allied/death08.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_1,9,,allied/death09.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_1,10,,allied/death10.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_1,11,,allied/death11.wav,0.85,1.14,,,100,2500,voice,streamed
+,,,,0.85,1.14,,,100,2500,,
+#American voice #2 MG,,,,0.85,1.14,,,100,2500,,
+,,,,0.85,1.14,,,100,2500,,
+#Enemy sighted,,,,0.85,1.14,,,100,2500,,
+generic_enemysighted_american_2,1,,voiceovers/generic/allies/am/mg/MG_Sighted_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_american_2,2,,voiceovers/generic/allies/am/mg/MG_Sighted_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_american_2,3,,voiceovers/generic/allies/am/mg/MG_Sighted_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_american_2,4,,voiceovers/generic/allies/am/mg/MG_Sighted_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_american_2,5,,voiceovers/generic/allies/am/mg/MG_Sighted_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_american_2,6,,voiceovers/generic/allies/am/mg/MG_Sighted_06.wav,0.85,1.14,,,100,2500,voice,streamed
+#Greet the player loudly,,,,0.85,1.14,,,100,2500,,
+generic_greetplayerloud_american_2,1,,voiceovers/generic/allies/am/mg/MG_GreetLoud_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerloud_american_2,2,,voiceovers/generic/allies/am/mg/MG_GreetLoud_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerloud_american_2,3,,voiceovers/generic/allies/am/mg/MG_GreetLoud_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerloud_american_2,4,,voiceovers/generic/allies/am/mg/MG_GreetLoud_04.wav,0.85,1.14,,,100,2500,voice,streamed
+#Greet the player quietly,,,,0.85,1.14,,,100,2500,,
+generic_greetplayerquiet_american_2,1,,voiceovers/generic/allies/am/mg/MG_GreetSoft_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerquiet_american_2,2,,voiceovers/generic/allies/am/mg/MG_GreetSoft_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerquiet_american_2,3,,voiceovers/generic/allies/am/mg/MG_GreetSoft_01.wav,0.85,1.14,,,100,2500,voice,streamed
+#Grenade danger,,,,0.85,1.14,,,100,2500,,
+generic_grenadedanger_american_2,1,,voiceovers/generic/allies/am/mg/MG_GrenDng_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_american_2,2,,voiceovers/generic/allies/am/mg/MG_GrenDng_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_american_2,3,,voiceovers/generic/allies/am/mg/MG_GrenDng_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_american_2,4,,voiceovers/generic/allies/am/mg/MG_GrenDng_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_american_2,5,,voiceovers/generic/allies/am/mg/MG_GrenDng_05.wav,0.85,1.14,,,100,2500,voice,streamed
+#Grenade attack,,,,0.85,1.14,,,100,2500,,
+generic_grenadeattack_american_2,1,,voiceovers/generic/allies/am/mg/MG_GrenAtk_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadeattack_american_2,2,,voiceovers/generic/allies/am/mg/MG_GrenAtk_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Cover me,,,,0.85,1.14,,,100,2500,,
+generic_coverme_american_2,1,,voiceovers/generic/allies/am/mg/MG_Combat_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_coverme_american_2,2,,voiceovers/generic/allies/am/mg/MG_Combat_15.wav,0.85,1.14,,,100,2500,voice,streamed
+#Flank left,,,,0.85,1.14,,,100,2500,,
+generic_flankleft_american_2,1,,voiceovers/generic/allies/am/mg/MG_Combat_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankleft_american_2,2,,voiceovers/generic/allies/am/mg/MG_Combat_06.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankleft_american_2,3,,voiceovers/generic/allies/am/mg/MG_Combat_12.wav,0.85,1.14,,,100,2500,voice,streamed
+#Flank right,,,,0.85,1.14,,,100,2500,,
+generic_flankright_american_2,1,,voiceovers/generic/allies/am/mg/MG_Combat_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankright_american_2,2,,voiceovers/generic/allies/am/mg/MG_Combat_07.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankright_american_2,3,,voiceovers/generic/allies/am/mg/MG_Combat_13.wav,0.85,1.14,,,100,2500,voice,streamed
+#Misc combat,,,,0.85,1.14,,,100,2500,,
+generic_misccombat_american_2,1,,voiceovers/generic/allies/am/mg/MG_Combat_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_american_2,2,,voiceovers/generic/allies/am/mg/MG_Combat_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_american_2,3,,voiceovers/generic/allies/am/mg/MG_Combat_04.wav,0.85,1.14,,,100,2500,voice,streamed
+#generic_misccombat_american_2,,,voiceovers/generic/allies/am/mg/MG_Combat_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_american_2,4,,voiceovers/generic/allies/am/mg/MG_Combat_08.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_american_2,5,,voiceovers/generic/allies/am/mg/MG_Combat_09.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_american_2,6,,voiceovers/generic/allies/am/mg/MG_Combat_10.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_american_2,7,,voiceovers/generic/allies/am/mg/MG_Combat_11.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_american_2,8,,voiceovers/generic/allies/am/mg/MG_Combat_14.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_american_2,9,,voiceovers/generic/allies/am/mg/MG_Combat_15.wav,0.85,1.14,,,100,2500,voice,streamed
+#Doing suppression,,,,0.85,1.14,,,100,2500,,
+generic_doingsuppression_american_2,1,,voiceovers/generic/allies/am/mg/MG_SuppFire_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_american_2,2,,voiceovers/generic/allies/am/mg/MG_KeepFire_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_american_2,3,,voiceovers/generic/allies/am/mg/MG_KeepShoot_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_american_2,4,,voiceovers/generic/allies/am/mg/MG_OpenFire_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_american_2,5,,voiceovers/generic/allies/am/mg/MG_Fire_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_american_2,6,,voiceovers/generic/allies/am/mg/MG_CovFire_01.wav,0.85,1.14,,,100,2500,voice,streamed
+#Under suppression,,,,0.85,1.14,,,100,2500,,
+generic_undersuppression_american_2,1,,voiceovers/generic/allies/am/mg/MG_UndSup_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_american_2,2,,voiceovers/generic/allies/am/mg/MG_UndSup_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_american_2,3,,voiceovers/generic/allies/am/mg/MG_UndSup_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_american_2,4,,voiceovers/generic/allies/am/mg/MG_UndSup_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_american_2,5,,voiceovers/generic/allies/am/mg/MG_UndSup_05.wav,0.85,1.14,,,100,2500,voice,streamed
+#Enemy killed,,,,0.85,1.14,,,100,2500,,
+generic_enemykilled_american_2,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Melee charge,,,,0.85,1.14,,,100,2500,,
+generic_meleecharge_american_2,1,,voiceovers/generic/allies/am/mg/MG_Charge_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleecharge_american_2,2,,voiceovers/generic/allies/am/mg/MG_Charge_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Melee attack,,,,0.85,1.14,,,100,2500,,
+generic_meleeattack_american_2,1,,voiceovers/generic/allies/am/mg/MG_Exert_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_2,2,,voiceovers/generic/allies/am/mg/MG_Exert_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_2,3,,voiceovers/generic/allies/am/mg/MG_Exert_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_2,4,,voiceovers/generic/allies/am/mg/MG_Exert_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_2,5,,voiceovers/generic/allies/am/mg/MG_Exert_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_2,6,,voiceovers/generic/allies/am/mg/MG_Exert_06.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_2,7,,voiceovers/generic/allies/am/mg/MG_Exert_07.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_2,8,,voiceovers/generic/allies/am/mg/MG_Exert_08.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_2,9,,voiceovers/generic/allies/am/mg/MG_Exert_09.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_2,10,,voiceovers/generic/allies/am/mg/MG_Exert_10.wav,0.85,1.14,,,100,2500,voice,streamed
+#Give up position to player,,,,0.85,1.14,,,100,2500,,
+generic_giveupposition_american_2,1,,voiceovers/generic/allies/am/mg/MG_Avoid_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_2,2,,voiceovers/generic/allies/am/mg/MG_Avoid_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_2,3,,voiceovers/generic/allies/am/mg/MG_Avoid_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_2,4,,voiceovers/generic/allies/am/mg/MG_Avoid_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_2,5,,voiceovers/generic/allies/am/mg/MG_Avoid_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_2,6,,voiceovers/generic/allies/am/mg/MG_Avoid_06.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_2,7,,voiceovers/generic/allies/am/mg/MG_Avoid_07.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_2,8,,voiceovers/generic/allies/am/mg/MG_Avoid_08.wav,0.85,1.14,,,100,2500,voice,streamed
+#Pain,,,,0.85,1.14,,,100,2500,,
+generic_pain_american_2,1,,voiceovers/generic/allies/am/mg/MG_Exert_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_2,2,,voiceovers/generic/allies/am/mg/MG_Exert_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_2,3,,voiceovers/generic/allies/am/mg/MG_Exert_06.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_2,4,,voiceovers/generic/allies/am/mg/MG_Exert_07.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_2,5,,voiceovers/generic/allies/am/mg/MG_Exert_08.wav,0.85,1.14,,,100,2500,voice,streamed
+#Death,,,,0.85,1.14,,,100,2500,,
+generic_death_american_2,1,,voiceovers/generic/allies/am/mg/MG_Exert_07.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_2,2,,voiceovers/generic/allies/am/mg/MG_Exert_08.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_2,3,,voiceovers/generic/allies/am/mg/MG_Exert_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_2,4,,voiceovers/generic/allies/am/mg/MG_Exert_04.wav,0.85,1.14,,,100,2500,voice,streamed
+,,,,0.85,1.14,,,100,2500,,
+#American voice #3 AS,,,,0.85,1.14,,,100,2500,,
+,,,,0.85,1.14,,,100,2500,,
+#Enemy sighted,,,,0.85,1.14,,,100,2500,,
+generic_enemysighted_american_3,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Greet the player loudly,,,,0.85,1.14,,,100,2500,,
+generic_greetplayerloud_american_3,1,,voiceovers/generic/allies/am/qf/QF_GreetLoud_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerloud_american_3,2,,voiceovers/generic/allies/am/qf/QF_GreetLoud_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerloud_american_3,3,,voiceovers/generic/allies/am/qf/QF_GreetLoud_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerloud_american_3,4,,voiceovers/generic/allies/am/qf/QF_GreetLoud_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerloud_american_3,5,,voiceovers/generic/allies/am/qf/QF_GreetLoud_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerloud_american_3,6,,voiceovers/generic/allies/am/qf/QF_GreetLoud_06.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerloud_american_3,7,,voiceovers/generic/allies/am/qf/QF_GreetLoud_07.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerloud_american_3,8,,voiceovers/generic/allies/am/qf/QF_GreetLoud_08.wav,0.85,1.14,,,100,2500,voice,streamed
+#Greet the player quietly,,,,0.85,1.14,,,100,2500,,
+generic_greetplayerquiet_american_3,1,,voiceovers/generic/allies/am/qf/QF_GreetSoft_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerquiet_american_3,2,,voiceovers/generic/allies/am/qf/QF_GreetSoft_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerquiet_american_3,3,,voiceovers/generic/allies/am/qf/QF_GreetSoft_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerquiet_american_3,4,,voiceovers/generic/allies/am/qf/QF_GreetSoft_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerquiet_american_3,5,,voiceovers/generic/allies/am/qf/QF_GreetSoft_05.wav,0.85,1.14,,,100,2500,voice,streamed
+#Grenade danger,,,,0.85,1.14,,,100,2500,,
+generic_grenadedanger_american_3,1,,voiceovers/generic/allies/am/as/AS_GrenDng_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_american_3,2,,voiceovers/generic/allies/am/as/AS_GrenDng_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_american_3,3,,voiceovers/generic/allies/am/as/AS_GrenDng_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_american_3,4,,voiceovers/generic/allies/am/as/AS_GrenDng_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_american_3,5,,voiceovers/generic/allies/am/as/AS_GrenDng_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_american_3,6,,voiceovers/generic/allies/am/as/AS_GrenDng_06.wav,0.85,1.14,,,100,2500,voice,streamed
+#Grenade attack,,,,0.85,1.14,,,100,2500,,
+generic_grenadeattack_american_3,1,,voiceovers/generic/allies/am/as/AS_GrenAtk_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadeattack_american_3,2,,voiceovers/generic/allies/am/as/AS_GrenAtk_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Cover me,,,,0.85,1.14,,,100,2500,,
+generic_coverme_american_3,1,,voiceovers/generic/allies/am/gr/ElderCoverMe_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_coverme_american_3,2,,voiceovers/generic/allies/am/gr/ElderCoverMe_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Flank left,,,,0.85,1.14,,,100,2500,,
+generic_flankleft_american_3,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Flank right,,,,0.85,1.14,,,100,2500,,
+generic_flankright_american_3,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Misc combat,,,,0.85,1.14,,,100,2500,,
+generic_misccombat_american_3,1,,voiceovers/generic/allies/am/as/AS_Supp_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_american_3,2,,voiceovers/generic/allies/am/as/AS_UndSup_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Doing suppression,,,,0.85,1.14,,,100,2500,,
+generic_doingsuppression_american_3,1,,voiceovers/generic/allies/am/as/AS_Supp_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_american_3,2,,voiceovers/generic/allies/am/as/AS_Supp_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_american_3,3,,voiceovers/generic/allies/am/as/AS_Supp_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_american_3,4,,voiceovers/generic/allies/am/as/AS_Supp_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_american_3,5,,voiceovers/generic/allies/am/as/AS_Supp_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_american_3,6,,voiceovers/generic/allies/am/as/AS_Supp_06.wav,0.85,1.14,,,100,2500,voice,streamed
+#Under suppression,,,,0.85,1.14,,,100,2500,,
+generic_undersuppression_american_3,1,,voiceovers/generic/allies/am/as/AS_UndSup_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_american_3,2,,voiceovers/generic/allies/am/as/AS_UndSup_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_american_3,3,,voiceovers/generic/allies/am/as/AS_UndSup_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_american_3,4,,voiceovers/generic/allies/am/as/AS_UndSup_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_american_3,5,,voiceovers/generic/allies/am/as/AS_UndSup_05.wav,0.85,1.14,,,100,2500,voice,streamed
+#Enemy killed,,,,0.85,1.14,,,100,2500,,
+generic_enemykilled_american_3,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Melee charge,,,,0.85,1.14,,,100,2500,,
+generic_meleecharge_american_3,1,,voiceovers/generic/allies/am/as/AS_Exert_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleecharge_american_3,2,,voiceovers/generic/allies/am/as/AS_Exert_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleecharge_american_3,3,,voiceovers/generic/allies/am/as/AS_Exert_07.wav,0.85,1.14,,,100,2500,voice,streamed
+#Melee attack,,,,0.85,1.14,,,100,2500,,
+generic_meleeattack_american_3,1,,voiceovers/generic/allies/am/as/AS_Exert_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_3,2,,voiceovers/generic/allies/am/as/AS_Exert_06.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_3,3,,voiceovers/generic/allies/am/as/AS_Exert_09.wav,0.85,1.14,,,100,2500,voice,streamed
+#Give up position to player,,,,0.85,1.14,,,100,2500,,
+generic_giveupposition_american_3,1,,voiceovers/generic/allies/am/qf/QF_Avoid_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_3,2,,voiceovers/generic/allies/am/qf/QF_Avoid_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_3,3,,voiceovers/generic/allies/am/qf/QF_Avoid_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_3,4,,voiceovers/generic/allies/am/qf/QF_Avoid_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_3,5,,voiceovers/generic/allies/am/qf/QF_Avoid_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_3,6,,voiceovers/generic/allies/am/qf/QF_Avoid_06.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_3,7,,voiceovers/generic/allies/am/qf/QF_Avoid_07.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_3,8,,voiceovers/generic/allies/am/qf/QF_Avoid_08.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_3,9,,voiceovers/generic/allies/am/qf/QF_Avoid_09.wav,0.85,1.14,,,100,2500,voice,streamed
+#Pain,,,,0.85,1.14,,,100,2500,,
+generic_pain_american_3,1,,voiceovers/generic/allies/am/as/AS_Exert_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_3,2,,voiceovers/generic/allies/am/as/AS_Exert_06.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_3,3,,voiceovers/generic/allies/am/as/AS_Exert_08.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_3,4,,voiceovers/generic/allies/am/as/AS_Exert_09.wav,0.85,1.14,,,100,2500,voice,streamed
+#Death,,,,0.85,1.14,,,100,2500,,
+generic_death_american_3,1,,voiceovers/generic/allies/am/as/AS_Exert_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_3,2,,voiceovers/generic/allies/am/as/AS_Exert_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_3,3,,voiceovers/generic/allies/am/as/AS_Exert_08.wav,0.85,1.14,,,100,2500,voice,streamed
+,,,,0.85,1.14,,,100,2500,,
+#American voice #4 JP,,,,0.85,1.14,,,100,2500,,
+,,,,0.85,1.14,,,100,2500,,
+#Enemy sighted,,,,0.85,1.14,,,100,2500,,
+generic_enemysighted_american_4,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Greet the player loudly,,,,0.85,1.14,,,100,2500,,
+generic_greetplayerloud_american_4,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Greet the player quietly,,,,0.85,1.14,,,100,2500,,
+generic_greetplayerquiet_american_4,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Grenade danger,,,,0.85,1.14,,,100,2500,,
+generic_grenadedanger_american_4,1,,voiceovers/generic/allies/am/jp/JP_GrenDng_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_american_4,2,,voiceovers/generic/allies/am/jp/JP_GrenDng_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_american_4,3,,voiceovers/generic/allies/am/jp/JP_GrenDng_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_american_4,4,,voiceovers/generic/allies/am/jp/JP_GrenDng_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_american_4,5,,voiceovers/generic/allies/am/jp/JP_GrenDng_05.wav,0.85,1.14,,,100,2500,voice,streamed
+#Grenade attack,,,,0.85,1.14,,,100,2500,,
+generic_grenadeattack_american_4,1,,voiceovers/generic/allies/am/jp/JP_GrenAtk_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadeattack_american_4,2,,voiceovers/generic/allies/am/jp/JP_GrenAtk_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Cover me,,,,0.85,1.14,,,100,2500,,
+generic_coverme_american_4,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Flank left,,,,0.85,1.14,,,100,2500,,
+generic_flankleft_american_4,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Flank right,,,,0.85,1.14,,,100,2500,,
+generic_flankright_american_4,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Misc combat,,,,0.85,1.14,,,100,2500,,
+generic_misccombat_american_4,1,,voiceovers/generic/allies/am/jp/JP_Combat_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_american_4,2,,voiceovers/generic/allies/am/jp/JP_Combat_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Doing suppression,,,,0.85,1.14,,,100,2500,,
+generic_doingsuppression_american_4,1,,voiceovers/generic/allies/am/jp/JP_Supp_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_american_4,2,,voiceovers/generic/allies/am/jp/JP_Supp_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_american_4,3,,voiceovers/generic/allies/am/jp/JP_Supp_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_american_4,4,,voiceovers/generic/allies/am/jp/JP_Supp_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_american_4,5,,voiceovers/generic/allies/am/jp/JP_Supp_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_american_4,6,,voiceovers/generic/allies/am/jp/JP_Supp_06.wav,0.85,1.14,,,100,2500,voice,streamed
+#Under suppression,,,,0.85,1.14,,,100,2500,,
+generic_undersuppression_american_4,1,,voiceovers/generic/allies/am/jp/JP_UndSup_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_american_4,2,,voiceovers/generic/allies/am/jp/JP_UndSup_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_american_4,3,,voiceovers/generic/allies/am/jp/JP_UndSup_03a.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_american_4,4,,voiceovers/generic/allies/am/jp/JP_UndSup_03b.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_american_4,5,,voiceovers/generic/allies/am/jp/JP_UndSup_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_american_4,6,,voiceovers/generic/allies/am/jp/JP_UndSup_05.wav,0.85,1.14,,,100,2500,voice,streamed
+#Enemy killed,,,,0.85,1.14,,,100,2500,,
+generic_enemykilled_american_4,1,,voiceovers/generic/allies/am/nj/NJ_Combat_04.wav,0.85,1.14,,,100,2500,voice,streamed
+#Melee charge,,,,0.85,1.14,,,100,2500,,
+generic_meleecharge_american_4,1,,voiceovers/generic/allies/am/jp/JP_Charge_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleecharge_american_4,2,,voiceovers/generic/allies/am/jp/JP_Charge_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Melee attack,,,,0.85,1.14,,,100,2500,,
+generic_meleeattack_american_4,1,,voiceovers/generic/allies/am/jp/JP_Exert_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_4,2,,voiceovers/generic/allies/am/jp/JP_Exert_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_4,3,,voiceovers/generic/allies/am/jp/JP_Exert_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_4,4,,voiceovers/generic/allies/am/jp/JP_Exert_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_4,5,,voiceovers/generic/allies/am/jp/JP_Exert_05.wav,0.85,1.14,,,100,2500,voice,streamed
+#Give up position to player,,,,0.85,1.14,,,100,2500,,
+generic_giveupposition_american_4,1,,voiceovers/generic/allies/am/jp/JP_Avoid_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_4,2,,voiceovers/generic/allies/am/jp/JP_Avoid_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_4,3,,voiceovers/generic/allies/am/jp/JP_Avoid_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_4,4,,voiceovers/generic/allies/am/jp/JP_Avoid_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_4,5,,voiceovers/generic/allies/am/jp/JP_Avoid_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_4,6,,voiceovers/generic/allies/am/jp/JP_Avoid_06.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_4,7,,voiceovers/generic/allies/am/jp/JP_Avoid_07.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_4,8,,voiceovers/generic/allies/am/jp/JP_Avoid_08.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_4,9,,voiceovers/generic/allies/am/jp/JP_Avoid_09.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_4,10,,voiceovers/generic/allies/am/jp/JP_Avoid_10.wav,0.85,1.14,,,100,2500,voice,streamed
+#Pain,,,,0.85,1.14,,,100,2500,,
+generic_pain_american_4,1,,voiceovers/generic/allies/am/jp/JP_Exert_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_4,2,,voiceovers/generic/allies/am/jp/JP_Exert_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_4,3,,voiceovers/generic/allies/am/jp/JP_Exert_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_4,4,,voiceovers/generic/allies/am/jp/JP_Exert_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_4,5,,voiceovers/generic/allies/am/jp/JP_Exert_05.wav,0.85,1.14,,,100,2500,voice,streamed
+#Death,,,,0.85,1.14,,,100,2500,,
+generic_death_american_4,1,,allied/death01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_4,2,,allied/death02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_4,3,,allied/death03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_4,4,,allied/death04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_4,5,,allied/death05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_4,6,,allied/death06.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_4,7,,allied/death07.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_4,8,,allied/death08.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_4,9,,allied/death09.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_4,10,,allied/death10.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_4,11,,allied/death11.wav,0.85,1.14,,,100,2500,voice,streamed
+,,,,0.85,1.14,,,100,2500,,
+#American voice #5 NJ,,,,0.85,1.14,,,100,2500,,
+,,,,0.85,1.14,,,100,2500,,
+#Enemy sighted,,,,0.85,1.14,,,100,2500,,
+generic_enemysighted_american_5,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Greet the player loudly,,,,0.85,1.14,,,100,2500,,
+generic_greetplayerloud_american_5,1,,voiceovers/generic/allies/am/nj/NJ_GreetLoud_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerloud_american_5,2,,voiceovers/generic/allies/am/nj/NJ_GreetLoud_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerloud_american_5,3,,voiceovers/generic/allies/am/nj/NJ_GreetLoud_03.wav,0.85,1.14,,,100,2500,voice,streamed
+#Greet the player quietly,,,,0.85,1.14,,,100,2500,,
+generic_greetplayerquiet_american_5,1,,voiceovers/generic/allies/am/nj/NJ_GreetSoft_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerquiet_american_5,2,,voiceovers/generic/allies/am/nj/NJ_GreetSoft_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerquiet_american_5,3,,voiceovers/generic/allies/am/nj/NJ_GreetSoft_03.wav,0.85,1.14,,,100,2500,voice,streamed
+#Cover me,,,,0.85,1.14,,,100,2500,,
+generic_coverme_american_5,1,,voiceovers/generic/allies/am/nj/NJ_Combat_04.wav,0.85,1.14,,,100,2500,voice,streamed
+#Grenade danger,,,,0.85,1.14,,,100,2500,,
+generic_grenadedanger_american_5,1,,voiceovers/generic/allies/am/nj/NJ_GrenDng_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_american_5,2,,voiceovers/generic/allies/am/nj/NJ_GrenDng_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_american_5,3,,voiceovers/generic/allies/am/nj/NJ_GrenDng_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_american_5,4,,voiceovers/generic/allies/am/nj/NJ_GrenDng_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_american_5,5,,voiceovers/generic/allies/am/nj/NJ_GrenDng_05.wav,0.85,1.14,,,100,2500,voice,streamed
+#Grenade attack,,,,0.85,1.14,,,100,2500,,
+generic_grenadeattack_american_5,1,,voiceovers/generic/allies/am/nj/NJ_GrenAtk_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadeattack_american_5,2,,voiceovers/generic/allies/am/nj/NJ_GrenAtk_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Flank left,,,,0.85,1.14,,,100,2500,,
+generic_flankleft_american_5,1,,voiceovers/generic/allies/am/nj/NJ_Combat_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankleft_american_5,2,,voiceovers/generic/allies/am/nj/NJ_Combat_06.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankleft_american_5,3,,voiceovers/generic/allies/am/nj/NJ_Combat_12.wav,0.85,1.14,,,100,2500,voice,streamed
+#Flank right,,,,0.85,1.14,,,100,2500,,
+generic_flankright_american_5,1,,voiceovers/generic/allies/am/nj/NJ_Combat_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankright_american_5,2,,voiceovers/generic/allies/am/nj/NJ_Combat_07.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankright_american_5,3,,voiceovers/generic/allies/am/nj/NJ_Combat_13.wav,0.85,1.14,,,100,2500,voice,streamed
+#Misc combat,,,,0.85,1.14,,,100,2500,,
+generic_misccombat_american_5,1,,voiceovers/generic/allies/am/nj/NJ_Combat_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_american_5,2,,voiceovers/generic/allies/am/nj/NJ_Combat_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_american_5,3,,voiceovers/generic/allies/am/nj/NJ_Combat_04.wav,0.85,1.14,,,100,2500,voice,streamed
+#generic_misccombat_american_5,,,voiceovers/generic/allies/am/nj/NJ_Combat_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_american_5,4,,voiceovers/generic/allies/am/nj/NJ_Combat_08.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_american_5,5,,voiceovers/generic/allies/am/nj/NJ_Combat_09.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_american_5,6,,voiceovers/generic/allies/am/nj/NJ_Combat_10.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_american_5,7,,voiceovers/generic/allies/am/nj/NJ_Combat_11.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_american_5,8,,voiceovers/generic/allies/am/nj/NJ_Combat_14.wav,0.85,1.14,,,100,2500,voice,streamed
+#Doing suppression,,,,0.85,1.14,,,100,2500,,
+generic_doingsuppression_american_5,1,,voiceovers/generic/allies/am/nj/NJ_Supp_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_american_5,2,,voiceovers/generic/allies/am/nj/NJ_Supp_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_american_5,3,,voiceovers/generic/allies/am/nj/NJ_Supp_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_american_5,4,,voiceovers/generic/allies/am/nj/NJ_Supp_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_american_5,5,,voiceovers/generic/allies/am/nj/NJ_Supp_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_american_5,6,,voiceovers/generic/allies/am/nj/NJ_Supp_06.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_american_5,7,,voiceovers/generic/allies/am/nj/NJ_Supp_07.wav,0.85,1.14,,,100,2500,voice,streamed
+#Under suppression,,,,0.85,1.14,,,100,2500,,
+generic_undersuppression_american_5,1,,voiceovers/generic/allies/am/nj/NJ_UndSup_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_american_5,2,,voiceovers/generic/allies/am/nj/NJ_UndSup_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_american_5,3,,voiceovers/generic/allies/am/nj/NJ_UndSup_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_american_5,4,,voiceovers/generic/allies/am/nj/NJ_UndSup_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_american_5,5,,voiceovers/generic/allies/am/nj/NJ_UndSup_05.wav,0.85,1.14,,,100,2500,voice,streamed
+#Enemy killed,,,,0.85,1.14,,,100,2500,,
+generic_enemykilled_american_5,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Melee charge,,,,0.85,1.14,,,100,2500,,
+generic_meleecharge_american_5,1,,voiceovers/generic/allies/am/mg/MG_Charge_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleecharge_american_5,2,,voiceovers/generic/allies/am/mg/MG_Charge_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Melee attack,,,,0.85,1.14,,,100,2500,,
+generic_meleeattack_american_5,1,,voiceovers/generic/allies/am/mg/MG_Exert_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_5,2,,voiceovers/generic/allies/am/mg/MG_Exert_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_5,3,,voiceovers/generic/allies/am/mg/MG_Exert_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_5,4,,voiceovers/generic/allies/am/mg/MG_Exert_04.wav,0.85,1.14,,,100,2500,voice,streamed
+#generic_meleeattack_american_5,5,,voiceovers/generic/allies/am/mg/MG_Exert_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_5,6,,voiceovers/generic/allies/am/mg/MG_Exert_06.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_5,7,,voiceovers/generic/allies/am/mg/MG_Exert_07.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_5,8,,voiceovers/generic/allies/am/mg/MG_Exert_08.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_5,9,,voiceovers/generic/allies/am/mg/MG_Exert_09.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_5,10,,voiceovers/generic/allies/am/mg/MG_Exert_10.wav,0.85,1.14,,,100,2500,voice,streamed
+#Give up position to player,,,,0.85,1.14,,,100,2500,,
+generic_giveupposition_american_5,1,,voiceovers/generic/allies/am/mg/MG_Avoid_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_5,2,,voiceovers/generic/allies/am/mg/MG_Avoid_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_5,3,,voiceovers/generic/allies/am/mg/MG_Avoid_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_5,4,,voiceovers/generic/allies/am/mg/MG_Avoid_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_5,5,,voiceovers/generic/allies/am/mg/MG_Avoid_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_5,6,,voiceovers/generic/allies/am/mg/MG_Avoid_06.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_5,7,,voiceovers/generic/allies/am/mg/MG_Avoid_07.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_5,8,,voiceovers/generic/allies/am/mg/MG_Avoid_08.wav,0.85,1.14,,,100,2500,voice,streamed
+#Pain,,,,0.85,1.14,,,100,2500,,
+generic_pain_american_5,1,,allied/pain01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_5,2,,allied/pain02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_5,3,,allied/pain03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_5,4,,allied/pain04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_5,5,,allied/pain05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_5,6,,allied/pain06.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_5,7,,allied/pain07.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_5,8,,allied/pain08.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_5,9,,allied/pain09.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_5,10,,allied/pain10.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_5,11,,allied/pain11.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_5,12,,allied/pain12.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_5,13,,allied/pain13.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_5,14,,allied/pain14.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_5,15,,allied/pain15.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_5,16,,allied/pain16.wav,0.85,1.14,,,100,2500,voice,streamed
+#Death,,,,0.85,1.14,,,100,2500,,
+generic_death_american_5,1,,allied/death01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_5,2,,allied/death02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_5,3,,allied/death03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_5,4,,allied/death04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_5,5,,allied/death05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_5,6,,allied/death06.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_5,7,,allied/death07.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_5,8,,allied/death08.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_5,9,,allied/death09.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_5,10,,allied/death10.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_5,11,,allied/death11.wav,0.85,1.14,,,100,2500,voice,streamed
+,,,,0.85,1.14,,,100,2500,,
+#American voice #6 QF,,,,0.85,1.14,,,100,2500,,
+,,,,0.85,1.14,,,100,2500,,
+#Enemy sighted,,,,0.85,1.14,,,100,2500,,
+generic_enemysighted_american_6,1,,voiceovers/generic/allies/am/qf/QF_Sighted_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_american_6,2,,voiceovers/generic/allies/am/qf/QF_Sighted_02a.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_american_6,3,,voiceovers/generic/allies/am/qf/QF_Sighted_02b.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_american_6,4,,voiceovers/generic/allies/am/qf/QF_Sighted_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_american_6,5,,voiceovers/generic/allies/am/qf/QF_Sighted_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_american_6,6,,voiceovers/generic/allies/am/qf/QF_Sighted_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_american_6,7,,voiceovers/generic/allies/am/qf/QF_Sighted_06.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_american_6,8,,voiceovers/generic/allies/am/qf/QF_Sighted_07a.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_american_6,9,,voiceovers/generic/allies/am/qf/QF_Sighted_07b.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_american_6,10,,voiceovers/generic/allies/am/qf/QF_Sighted_08.wav,0.85,1.14,,,100,2500,voice,streamed
+#Greet the player loudly,,,,0.85,1.14,,,100,2500,,
+generic_greetplayerloud_american_6,1,,voiceovers/generic/allies/am/qf/QF_GreetLoud_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerloud_american_6,2,,voiceovers/generic/allies/am/qf/QF_GreetLoud_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerloud_american_6,3,,voiceovers/generic/allies/am/qf/QF_GreetLoud_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerloud_american_6,4,,voiceovers/generic/allies/am/qf/QF_GreetLoud_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerloud_american_6,5,,voiceovers/generic/allies/am/qf/QF_GreetLoud_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerloud_american_6,6,,voiceovers/generic/allies/am/qf/QF_GreetLoud_06.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerloud_american_6,7,,voiceovers/generic/allies/am/qf/QF_GreetLoud_07.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerloud_american_6,8,,voiceovers/generic/allies/am/qf/QF_GreetLoud_08.wav,0.85,1.14,,,100,2500,voice,streamed
+#Greet the player quietly,,,,0.85,1.14,,,100,2500,,
+generic_greetplayerquiet_american_6,1,,voiceovers/generic/allies/am/qf/QF_GreetSoft_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerquiet_american_6,2,,voiceovers/generic/allies/am/qf/QF_GreetSoft_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerquiet_american_6,3,,voiceovers/generic/allies/am/qf/QF_GreetSoft_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerquiet_american_6,4,,voiceovers/generic/allies/am/qf/QF_GreetSoft_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerquiet_american_6,5,,voiceovers/generic/allies/am/qf/QF_GreetSoft_05.wav,0.85,1.14,,,100,2500,voice,streamed
+#Grenade danger,,,,0.85,1.14,,,100,2500,,
+generic_grenadedanger_american_6,1,,voiceovers/generic/allies/am/qf/QF_GrenDng_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_american_6,2,,voiceovers/generic/allies/am/qf/QF_GrenDng_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_american_6,3,,voiceovers/generic/allies/am/qf/QF_GrenDng_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_american_6,4,,voiceovers/generic/allies/am/qf/QF_GrenDng_04.wav,0.85,1.14,,,100,2500,voice,streamed
+#Grenade attack,,,,0.85,1.14,,,100,2500,,
+generic_grenadeattack_american_6,1,,voiceovers/generic/allies/am/qf/QF_GrenAtk_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadeattack_american_6,2,,voiceovers/generic/allies/am/qf/QF_GrenAtk_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Cover me,,,,0.85,1.14,,,100,2500,,
+generic_coverme_american_6,1,,voiceovers/generic/allies/am/mg/MG_Combat_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_coverme_american_6,2,,voiceovers/generic/allies/am/mg/MG_Combat_15.wav,0.85,1.14,,,100,2500,voice,streamed
+#Flank left,,,,0.85,1.14,,,100,2500,,
+generic_flankleft_american_6,1,,voiceovers/generic/allies/am/gr/ElderFlankLeft_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankleft_american_6,2,,voiceovers/generic/allies/am/gr/ElderFlankThem01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankleft_american_6,3,,voiceovers/generic/allies/am/gr/ElderLeftFlank_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankleft_american_6,4,,voiceovers/generic/allies/am/gr/ElderLeftFlank_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Flank right,,,,0.85,1.14,,,100,2500,,
+generic_flankright_american_6,1,,voiceovers/generic/allies/am/gr/ElderFlankRight_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankright_american_6,2,,voiceovers/generic/allies/am/gr/ElderFlankRight_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankright_american_6,3,,voiceovers/generic/allies/am/gr/ElderFlankThem02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Misc combat,,,,0.85,1.14,,,100,2500,,
+generic_misccombat_american_6,1,,voiceovers/generic/allies/am/gr/ElderCoverMe_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_american_6,2,,voiceovers/generic/allies/am/gr/ElderCoverMe_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#generic_misccombat_american_6,,,voiceovers/generic/allies/am/gr/ElderFallBack_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_american_6,3,,voiceovers/generic/allies/am/gr/ElderGoGoGo_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_american_6,4,,voiceovers/generic/allies/am/gr/ElderMoveIn01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_american_6,5,,voiceovers/generic/allies/am/gr/ElderMoveIn02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_american_6,6,,voiceovers/generic/allies/am/gr/ElderMoveIt_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_american_6,7,,voiceovers/generic/allies/am/gr/ElderMoveIt_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Doing suppression,,,,0.85,1.14,,,100,2500,,
+generic_doingsuppression_american_6,1,,voiceovers/generic/allies/am/gr/ElderAtWill_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_american_6,2,,voiceovers/generic/allies/am/gr/ElderAtWill_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Under suppression,,,,0.85,1.14,,,100,2500,,
+generic_undersuppression_american_6,1,,voiceovers/generic/allies/am/gr/ElderStayLow_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_american_6,2,,voiceovers/generic/allies/am/gr/ElderStayLow_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Enemy killed,,,,0.85,1.14,,,100,2500,,
+generic_enemykilled_american_6,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Melee charge,,,,0.85,1.14,,,100,2500,,
+generic_meleecharge_american_6,1,,voiceovers/generic/allies/am/mg/MG_Charge_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleecharge_american_6,2,,voiceovers/generic/allies/am/mg/MG_Charge_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Melee attack,,,,0.85,1.14,,,100,2500,,
+generic_meleeattack_american_6,1,,voiceovers/generic/allies/am/mg/MG_Exert_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_6,2,,voiceovers/generic/allies/am/mg/MG_Exert_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_6,3,,voiceovers/generic/allies/am/mg/MG_Exert_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_6,4,,voiceovers/generic/allies/am/mg/MG_Exert_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_6,5,,voiceovers/generic/allies/am/mg/MG_Exert_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_6,6,,voiceovers/generic/allies/am/mg/MG_Exert_06.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_6,7,,voiceovers/generic/allies/am/mg/MG_Exert_07.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_6,8,,voiceovers/generic/allies/am/mg/MG_Exert_08.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_6,9,,voiceovers/generic/allies/am/mg/MG_Exert_09.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_6,10,,voiceovers/generic/allies/am/mg/MG_Exert_10.wav,0.85,1.14,,,100,2500,voice,streamed
+#Give up position to player,,,,0.85,1.14,,,100,2500,,
+generic_giveupposition_american_6,1,,voiceovers/generic/allies/am/qf/QF_Avoid_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_6,2,,voiceovers/generic/allies/am/qf/QF_Avoid_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_6,3,,voiceovers/generic/allies/am/qf/QF_Avoid_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_6,4,,voiceovers/generic/allies/am/qf/QF_Avoid_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_6,5,,voiceovers/generic/allies/am/qf/QF_Avoid_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_6,6,,voiceovers/generic/allies/am/qf/QF_Avoid_06.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_6,7,,voiceovers/generic/allies/am/qf/QF_Avoid_07.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_6,8,,voiceovers/generic/allies/am/qf/QF_Avoid_08.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_6,9,,voiceovers/generic/allies/am/qf/QF_Avoid_09.wav,0.85,1.14,,,100,2500,voice,streamed
+#Pain,,,,0.85,1.14,,,100,2500,,
+generic_pain_american_6,1,,voiceovers/generic/allies/am/mg/MG_Exert_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_6,2,,voiceovers/generic/allies/am/mg/MG_Exert_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_6,3,,voiceovers/generic/allies/am/mg/MG_Exert_06.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_6,4,,voiceovers/generic/allies/am/mg/MG_Exert_07.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_6,5,,voiceovers/generic/allies/am/mg/MG_Exert_08.wav,0.85,1.14,,,100,2500,voice,streamed
+#Death,,,,0.85,1.14,,,100,2500,,
+generic_death_american_6,1,,voiceovers/generic/allies/am/mg/MG_Exert_07.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_6,2,,voiceovers/generic/allies/am/mg/MG_Exert_08.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_6,3,,voiceovers/generic/allies/am/mg/MG_Exert_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_6,4,,voiceovers/generic/allies/am/mg/MG_Exert_04.wav,0.85,1.14,,,100,2500,voice,streamed
+,,,,0.85,1.14,,,100,2500,,
+#American voice #7 GA,,,,0.85,1.14,,,100,2500,,
+,,,,0.85,1.14,,,100,2500,,
+#Enemy sighted,,,,0.85,1.14,,,100,2500,,
+generic_enemysighted_american_7,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Greet the player loudly,,,,0.85,1.14,,,100,2500,,
+generic_greetplayerloud_american_7,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Greet the player quietly,,,,0.85,1.14,,,100,2500,,
+generic_greetplayerquiet_american_7,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Cover me,,,,0.85,1.14,,,100,2500,,
+generic_coverme_american_7,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Grenade danger,,,,0.85,1.14,,,100,2500,,
+generic_grenadedanger_american_7,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Grenade attack,,,,0.85,1.14,,,100,2500,,
+generic_grenadeattack_american_7,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Flank left,,,,0.85,1.14,,,100,2500,,
+generic_flankleft_american_7,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Flank right,,,,0.85,1.14,,,100,2500,,
+generic_flankright_american_7,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Misc combat,,,,0.85,1.14,,,100,2500,,
+generic_misccombat_american_7,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Doing suppression,,,,0.85,1.14,,,100,2500,,
+generic_doingsuppression_american_7,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Under suppression,,,,0.85,1.14,,,100,2500,,
+generic_undersuppression_american_7,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Enemy killed,,,,0.85,1.14,,,100,2500,,
+generic_enemykilled_american_7,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Melee charge,,,,0.85,1.14,,,100,2500,,
+generic_meleecharge_american_7,1,,voiceovers/generic/allies/am/ga/GA_Charge.wav,0.85,1.14,,,100,2500,voice,streamed
+#Melee attack,,,,0.85,1.14,,,100,2500,,
+generic_meleeattack_american_7,1,,voiceovers/generic/allies/am/ga/GA_Exert_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_7,2,,voiceovers/generic/allies/am/ga/GA_Exert_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_7,3,,voiceovers/generic/allies/am/ga/GA_Exert_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_7,4,,voiceovers/generic/allies/am/ga/GA_Exert_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_7,5,,voiceovers/generic/allies/am/ga/GA_Exert_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_american_7,6,,voiceovers/generic/allies/am/ga/GA_Exert_06.wav,0.85,1.14,,,100,2500,voice,streamed
+#Give up position to player,,,,0.85,1.14,,,100,2500,,
+generic_giveupposition_american_7,1,,voiceovers/generic/allies/am/ga/GA_Avoid_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_7,2,,voiceovers/generic/allies/am/ga/GA_Avoid_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_7,3,,voiceovers/generic/allies/am/ga/GA_Avoid_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_giveupposition_american_7,4,,voiceovers/generic/allies/am/ga/GA_Avoid_04.wav,0.85,1.14,,,100,2500,voice,streamed
+#Pain,,,,0.85,1.14,,,100,2500,,
+generic_pain_american_7,1,,voiceovers/generic/allies/am/ga/GA_Exert_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_7,2,,voiceovers/generic/allies/am/ga/GA_Exert_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_7,3,,voiceovers/generic/allies/am/ga/GA_Exert_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_7,4,,voiceovers/generic/allies/am/ga/GA_Exert_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_american_7,5,,voiceovers/generic/allies/am/ga/GA_Exert_06.wav,0.85,1.14,,,100,2500,voice,streamed
+#Death,,,,0.85,1.14,,,100,2500,,
+generic_death_american_7,1,,voiceovers/generic/allies/am/ga/GA_Exert_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_7,2,,voiceovers/generic/allies/am/ga/GA_Exert_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_7,3,,voiceovers/generic/allies/am/ga/GA_Exert_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_7,4,,voiceovers/generic/allies/am/ga/GA_Exert_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_american_7,5,,voiceovers/generic/allies/am/ga/GA_Exert_06.wav,0.85,1.14,,,100,2500,voice,streamed
+,,,,0.85,1.14,,,100,2500,,
+#Foley,,,,0.85,1.14,,,100,2500,,
+,,,,0.85,1.14,,,100,2500,,
+#Enemy sighted,,,,0.85,1.14,,,100,2500,,
+generic_enemysighted_foley,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Greet the player loudly,,,,0.85,1.14,,,100,2500,,
+generic_greetplayerloud_foley,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Greet the player quietly,,,,0.85,1.14,,,100,2500,,
+generic_greetplayerquiet_foley,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Cover me,,,,0.85,1.14,,,100,2500,,
+generic_coverme_foley,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Grenade danger,,,,0.85,1.14,,,100,2500,,
+generic_grenadedanger_foley,1,,voiceovers/generic/allies/am/sb/FoleyTakeCover_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_foley,2,,voiceovers/generic/allies/am/sb/FoleyTakeCover_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Grenade attack,,,,0.85,1.14,,,100,2500,,
+generic_grenadeattack_foley,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Flank left,,,,0.85,1.14,,,100,2500,,
+generic_flankleft_foley,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Flank right,,,,0.85,1.14,,,100,2500,,
+generic_flankright_foley,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Misc combat,,,,0.85,1.14,,,100,2500,,
+generic_misccombat_foley,1,,voiceovers/generic/allies/am/sb/FoleyCovFire_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_foley,2,,voiceovers/generic/allies/am/sb/FoleyGetDown_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_foley,3,,voiceovers/generic/allies/am/sb/FoleySuppFire_01.wav,0.85,1.14,,,100,2500,voice,streamed
+#Doing suppression,,,,0.85,1.14,,,100,2500,,
+generic_doingsuppression_foley,1,,voiceovers/generic/allies/am/sb/FoleyFire_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_foley,2,,voiceovers/generic/allies/am/sb/FoleyKeepFire_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_foley,3,,voiceovers/generic/allies/am/sb/FoleyKeepShoot_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_foley,4,,voiceovers/generic/allies/am/sb/FoleyOpenFire_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_foley,5,,voiceovers/generic/allies/am/sb/FoleySuppFire_01.wav,0.85,1.14,,,100,2500,voice,streamed
+#Under suppression,,,,0.85,1.14,,,100,2500,,
+generic_undersuppression_foley,1,,voiceovers/generic/allies/am/sb/FoleyGetDown_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_foley,2,,voiceovers/generic/allies/am/sb/FoleyGetDown_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_foley,3,,voiceovers/generic/allies/am/sb/FoleyHeadsDown_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_foley,4,,voiceovers/generic/allies/am/sb/FoleyHelpMe_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_foley,5,,voiceovers/generic/allies/am/sb/FoleyPinned_01.wav,0.85,1.14,,,100,2500,voice,streamed
+#Enemy killed,,,,0.85,1.14,,,100,2500,,
+generic_enemykilled_foley,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Melee charge,,,,0.85,1.14,,,100,2500,,
+generic_meleecharge_foley,1,,voiceovers/generic/allies/am/sb/FoleyCharge_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleecharge_foley,2,,voiceovers/generic/allies/am/sb/FoleyCharge_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleecharge_foley,3,,voiceovers/generic/allies/am/sb/FoleyCharge_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleecharge_foley,4,,voiceovers/generic/allies/am/sb/FoleyCharge_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleecharge_foley,5,,voiceovers/generic/allies/am/sb/FoleyCharge_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleecharge_foley,6,,voiceovers/generic/allies/am/sb/FoleyCharge_06.wav,0.85,1.14,,,100,2500,voice,streamed
+#Melee attack,,,,0.85,1.14,,,100,2500,,
+generic_meleeattack_foley,1,,voiceovers/generic/allies/am/sb/FoleyExert_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_foley,2,,voiceovers/generic/allies/am/sb/FoleyExert_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_foley,3,,voiceovers/generic/allies/am/sb/FoleyExert_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_foley,4,,voiceovers/generic/allies/am/sb/FoleyExert_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_foley,5,,voiceovers/generic/allies/am/sb/FoleyExert_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_foley,6,,voiceovers/generic/allies/am/sb/FoleyExert_06.wav,0.85,1.14,,,100,2500,voice,streamed
+#Give up position to player,,,,0.85,1.14,,,100,2500,,
+generic_giveupposition_foley,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Pain,,,,0.85,1.14,,,100,2500,,
+generic_pain_foley,1,,allied/pain01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_foley,2,,allied/pain02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_foley,3,,allied/pain03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_foley,4,,allied/pain04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_foley,5,,allied/pain05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_foley,6,,allied/pain06.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_foley,7,,allied/pain07.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_foley,8,,allied/pain08.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_foley,9,,allied/pain09.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_foley,10,,allied/pain10.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_foley,11,,allied/pain11.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_foley,12,,allied/pain12.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_foley,13,,allied/pain13.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_foley,14,,allied/pain14.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_foley,15,,allied/pain15.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_foley,16,,allied/pain16.wav,0.85,1.14,,,100,2500,voice,streamed
+#Death,,,,0.85,1.14,,,100,2500,,
+generic_death_foley,1,,allied/death01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_foley,2,,allied/death02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_foley,3,,allied/death03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_foley,4,,allied/death04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_foley,5,,allied/death05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_foley,6,,allied/death06.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_foley,7,,allied/death07.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_foley,8,,allied/death08.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_foley,9,,allied/death09.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_foley,10,,allied/death10.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_foley,11,,allied/death11.wav,0.85,1.14,,,100,2500,voice,streamed
+,,,,0.85,1.14,,,100,2500,,
+,,,,0.85,1.14,,,100,2500,,
+#Moody,,,,0.85,1.14,,,100,2500,,
+,,,,0.85,1.14,,,100,2500,,
+#Enemy sighted,,,,0.85,1.14,,,100,2500,,
+generic_enemysighted_moody,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Greet the player loudly,,,,0.85,1.14,,,100,2500,,
+generic_greetplayerloud_moody,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Greet the player quietly,,,,0.85,1.14,,,100,2500,,
+generic_greetplayerquiet_moody,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Cover me,,,,0.85,1.14,,,100,2500,,
+generic_coverme_moody,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Grenade danger,,,,0.85,1.14,,,100,2500,,
+generic_grenadedanger_moody,1,,voiceovers/generic/allies/am/gb/MoodyGrenDanger_01.wav,0.85,1.14,,,100,2500,voice,streamed
+#Grenade attack,,,,0.85,1.14,,,100,2500,,
+generic_grenadeattack_moody,1,,voiceovers/generic/allies/am/gb/MoodyGrenAtk_01.wav,0.85,1.14,,,100,2500,voice,streamed
+#Flank left,,,,0.85,1.14,,,100,2500,,
+generic_flankleft_moody,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Flank right,,,,0.85,1.14,,,100,2500,,
+generic_flankright_moody,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Misc combat,,,,0.85,1.14,,,100,2500,,
+generic_misccombat_moody,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Doing suppression,,,,0.85,1.14,,,100,2500,,
+generic_doingsuppression_moody,1,,voiceovers/generic/allies/am/gb/MoodyDoingSupp01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_moody,2,,voiceovers/generic/allies/am/gb/MoodyDoingSupp02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Under suppression,,,,0.85,1.14,,,100,2500,,
+generic_undersuppression_moody,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Enemy killed,,,,0.85,1.14,,,100,2500,,
+generic_enemykilled_moody,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Melee charge,,,,0.85,1.14,,,100,2500,,
+generic_meleecharge_moody,1,,voiceovers/generic/allies/am/gb/MoodyCharge_A_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleecharge_moody,2,,voiceovers/generic/allies/am/gb/MoodyCharge_A_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleecharge_moody,3,,voiceovers/generic/allies/am/gb/MoodyCharge_Die_A_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleecharge_moody,4,,voiceovers/generic/allies/am/gb/MoodyCharge_Die_A_03.wav,0.85,1.14,,,100,2500,voice,streamed
+#Melee attack,,,,0.85,1.14,,,100,2500,,
+generic_meleeattack_moody,1,,voiceovers/generic/allies/am/gb/MoodyExert_A_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_moody,2,,voiceovers/generic/allies/am/gb/MoodyExert_A_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Give up position to player,,,,0.85,1.14,,,100,2500,,
+generic_giveupposition_moody,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Pain,,,,0.85,1.14,,,100,2500,,
+generic_pain_moody,1,,allied/pain01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_moody,2,,allied/pain02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_moody,3,,allied/pain03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_moody,4,,allied/pain04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_moody,5,,allied/pain05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_moody,6,,allied/pain06.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_moody,7,,allied/pain07.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_moody,8,,allied/pain08.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_moody,9,,allied/pain09.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_moody,10,,allied/pain10.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_moody,11,,allied/pain11.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_moody,12,,allied/pain12.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_moody,13,,allied/pain13.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_moody,14,,allied/pain14.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_moody,15,,allied/pain15.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_moody,16,,allied/pain16.wav,0.85,1.14,,,100,2500,voice,streamed
+#Death,,,,0.85,1.14,,,100,2500,,
+generic_death_moody,1,,allied/death01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_moody,2,,allied/death02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_moody,3,,allied/death03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_moody,4,,allied/death04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_moody,5,,allied/death05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_moody,6,,allied/death06.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_moody,7,,allied/death07.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_moody,8,,allied/death08.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_moody,9,,allied/death09.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_moody,10,,allied/death10.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_moody,11,,allied/death11.wav,0.85,1.14,,,100,2500,voice,streamed
+,,,,0.85,1.14,,,100,2500,,
+#Private Elder,,,,0.85,1.14,,,100,2500,,
+,,,,0.85,1.14,,,100,2500,,
+#Enemy sighted,,,,0.85,1.14,,,100,2500,,
+generic_enemysighted_elder,1,,voiceovers/generic/allies/am/gr/ElderSighted_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_elder,2,,voiceovers/generic/allies/am/gr/ElderSighted_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_elder,3,,voiceovers/generic/allies/am/gr/ElderSighted_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_elder,4,,voiceovers/generic/allies/am/gr/ElderSighted_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_elder,5,,voiceovers/generic/allies/am/gr/ElderSighted_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_elder,6,,voiceovers/generic/allies/am/gr/ElderSighted_06.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_elder,7,,voiceovers/generic/allies/am/gr/ElderSighted_07.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_elder,8,,voiceovers/generic/allies/am/gr/ElderSighted_08.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_elder,9,,voiceovers/generic/allies/am/gr/ElderSighted_09.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_elder,10,,voiceovers/generic/allies/am/gr/ElderSighted_10.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_elder,11,,voiceovers/generic/allies/am/gr/ElderSighted_11.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_elder,12,,voiceovers/generic/allies/am/gr/ElderSighted_12.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_elder,13,,voiceovers/generic/allies/am/gr/ElderSighted_13.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_elder,14,,voiceovers/generic/allies/am/gr/ElderSighted_14.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_enemysighted_elder,15,,voiceovers/generic/allies/am/gr/ElderSighted_15.wav,0.85,1.14,,,100,2500,voice,streamed
+#Greet the player loudly,,,,0.85,1.14,,,100,2500,,
+generic_greetplayerloud_elder,1,,voiceovers/generic/allies/am/gr/ElderGreetLoud_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerloud_elder,2,,voiceovers/generic/allies/am/gr/ElderGreetLoud_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerloud_elder,3,,voiceovers/generic/allies/am/gr/ElderGreetLoud_03.wav,0.85,1.14,,,100,2500,voice,streamed
+#Greet the player quietly,,,,0.85,1.14,,,100,2500,,
+generic_greetplayerquiet_elder,1,,voiceovers/generic/allies/am/gr/ElderGreetSoft_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_greetplayerquiet_elder,2,,voiceovers/generic/allies/am/gr/ElderGreetSoft_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Cover me,,,,0.85,1.14,,,100,2500,,
+generic_coverme_elder,1,,voiceovers/generic/allies/am/gr/ElderCoverMe_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_coverme_elder,2,,voiceovers/generic/allies/am/gr/ElderCoverMe_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Grenade danger,,,,0.85,1.14,,,100,2500,,
+generic_grenadedanger_elder,1,,voiceovers/generic/allies/am/gr/ElderTakeCover_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_grenadedanger_elder,2,,voiceovers/generic/allies/am/gr/ElderTakeCover_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Grenade attack,,,,0.85,1.14,,,100,2500,,
+generic_grenadeattack_elder,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Flank left,,,,0.85,1.14,,,100,2500,,
+generic_flankleft_elder,1,,voiceovers/generic/allies/am/gr/ElderFlankLeft_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankleft_elder,2,,voiceovers/generic/allies/am/gr/ElderFlankThem01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankleft_elder,3,,voiceovers/generic/allies/am/gr/ElderLeftFlank_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankleft_elder,4,,voiceovers/generic/allies/am/gr/ElderLeftFlank_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Flank right,,,,0.85,1.14,,,100,2500,,
+generic_flankright_elder,1,,voiceovers/generic/allies/am/gr/ElderFlankRight_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankright_elder,2,,voiceovers/generic/allies/am/gr/ElderFlankRight_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_flankright_elder,3,,voiceovers/generic/allies/am/gr/ElderFlankThem02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Misc combat,,,,0.85,1.14,,,100,2500,,
+generic_misccombat_elder,1,,voiceovers/generic/allies/am/gr/ElderCoverMe_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_elder,2,,voiceovers/generic/allies/am/gr/ElderCoverMe_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#generic_misccombat_elder,,,voiceovers/generic/allies/am/gr/ElderFallBack_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_elder,3,,voiceovers/generic/allies/am/gr/ElderGoGoGo_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_elder,4,,voiceovers/generic/allies/am/gr/ElderMoveIn01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_elder,5,,voiceovers/generic/allies/am/gr/ElderMoveIn02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_elder,6,,voiceovers/generic/allies/am/gr/ElderMoveIt_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_misccombat_elder,7,,voiceovers/generic/allies/am/gr/ElderMoveIt_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Doing suppression,,,,0.85,1.14,,,100,2500,,
+generic_doingsuppression_elder,1,,voiceovers/generic/allies/am/gr/ElderAtWill_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_doingsuppression_elder,2,,voiceovers/generic/allies/am/gr/ElderAtWill_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Under suppression,,,,0.85,1.14,,,100,2500,,
+generic_undersuppression_elder,1,,voiceovers/generic/allies/am/gr/ElderStayLow_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_undersuppression_elder,2,,voiceovers/generic/allies/am/gr/ElderStayLow_02.wav,0.85,1.14,,,100,2500,voice,streamed
+#Enemy killed,,,,0.85,1.14,,,100,2500,,
+generic_enemykilled_elder,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Melee charge,,,,0.85,1.14,,,100,2500,,
+generic_meleecharge_elder,1,,voiceovers/generic/allies/am/gr/ElderCharge_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleecharge_elder,2,,voiceovers/generic/allies/am/gr/ElderCharge_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleecharge_elder,3,,voiceovers/generic/allies/am/gr/ElderCharge_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleecharge_elder,4,,voiceovers/generic/allies/am/gr/ElderCharge_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleecharge_elder,5,,voiceovers/generic/allies/am/gr/ElderCharge_05.wav,0.85,1.14,,,100,2500,voice,streamed
+#Melee attack,,,,0.85,1.14,,,100,2500,,
+generic_meleeattack_elder,1,,voiceovers/generic/allies/am/gr/ElderExert_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_elder,2,,voiceovers/generic/allies/am/gr/ElderExert_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_elder,3,,voiceovers/generic/allies/am/gr/ElderExert_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_elder,4,,voiceovers/generic/allies/am/gr/ElderExert_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_elder,5,,voiceovers/generic/allies/am/gr/ElderExert_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_meleeattack_elder,6,,voiceovers/generic/allies/am/gr/ElderExert_06.wav,0.85,1.14,,,100,2500,voice,streamed
+#Give up position to player,,,,0.85,1.14,,,100,2500,,
+generic_giveupposition_elder,1,,null2.wav,0.85,1.14,,,100,2500,voice,streamed
+#Pain,,,,0.85,1.14,,,100,2500,,
+generic_pain_elder,1,,voiceovers/generic/allies/am/gr/ElderExert_01.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_elder,2,,voiceovers/generic/allies/am/gr/ElderExert_02.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_elder,3,,voiceovers/generic/allies/am/gr/ElderExert_03.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_elder,4,,voiceovers/generic/allies/am/gr/ElderExert_04.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_elder,5,,voiceovers/generic/allies/am/gr/ElderExert_05.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_pain_elder,6,,voiceovers/generic/allies/am/gr/ElderExert_06.wav,0.85,1.14,,,100,2500,voice,streamed
+#Death,,,,0.85,1.14,,,100,2500,,
+generic_death_elder,1,,voiceovers/generic/allies/am/gr/ElderExert_06.wav,0.85,1.14,,,100,2500,voice,streamed
+generic_death_elder,2,,voiceovers/generic/allies/am/gr/ElderExert_03.wav,0.85,1.14,,,100,2500,voice,streamed
+,,,,0.85,1.14,,,100,2500,,

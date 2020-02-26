@@ -1,0 +1,119 @@
+Particle
+{
+	spawnFlags			orgOnSphere
+
+	count				3 1
+
+	life				180 200
+
+	origin				300 230 0 200 -340 0
+
+	radius				300 100
+
+	rotation			180 1360
+
+	rotationDelta		2 0
+
+	rgb
+	{
+		start			1 0.9843 0.9412 1 1 1
+		end				0.9765 0.949 0.651 0.8392 0.8118 0.6627
+		flags			linear
+	}
+
+	alpha
+	{
+		start			0.7 0.6
+		end				0.1
+		flags			linear
+	}
+
+	size
+	{
+		start			10 6
+		end				200 700
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/cloudflash1
+	]
+}
+
+Particle
+{
+	flags				useAlpha
+
+	spawnFlags			orgOnSphere
+
+	count				3 1
+
+	life				100
+
+	origin				300 230 200 200 -340 -300
+
+	radius				300 100
+
+	rgb
+	{
+		start			0.9765 0.949 0.651 0.8431 0.9255 0.8941
+		end				0.8549 0.7098 0.2706 0.8392 0.8118 0.6627
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0.3
+		flags			linear
+	}
+
+	size
+	{
+		start			10 6
+		end				200 300
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/flash1
+	]
+}
+
+Particle
+{
+	flags				useAlpha
+
+	spawnFlags			orgOnSphere
+
+	count				5
+
+	life				100
+
+	radius				300 200
+
+	rotation			180 -360
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0.4 0.2
+		flags			linear
+	}
+
+	size
+	{
+		end				105 800
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/cloudflash1a
+	]
+}

@@ -1,0 +1,168 @@
+#include "ui/menudef.h"
+
+{
+//SND_RESTART POPUP MENU //
+
+	menuDef 
+	{
+		name "snd_restart_popmenu"
+	    	visible 0
+    		fullscreen 0
+	    	//rect 217 200 210 85
+		rect 55 150 235 235
+		//outOfBoundsClick			// this closes the window if it gets a click out of the rectangle
+	    	focusColor 1 .75 0 1
+	    	style 1
+	    	border 1
+		popup
+
+		onESC 
+		{
+			show applysystem;
+			close snd_restart_popmenu ;  
+			close options_menu;
+			close options_sound;
+			open options_menu;
+			open options_sound;
+		}
+		onClose
+		{
+			show applysystem;
+		}
+
+// SOUND_RESTART	//
+		itemDef 
+		{
+			name backimage2fade
+			style WINDOW_STYLE_SHADER
+			rect -57 -152 642 482
+	 		background "ui/assets/fadebox.tga"
+			forecolor 0 0 0 0.6
+			backcolor 0 0 0 0.6
+			visible 1
+			decoration
+		}
+		itemDef 
+		{
+			name confirm
+			text "@MENU_THIS_WILL_APPLY_SOUND"
+			style 0
+			textscale .23 
+			textstyle 3
+			rect 30 135 110 20
+			textalign 1
+			textalignx 100
+			textaligny 15
+			decoration
+			forecolor 1 1 1 1
+			visible 1
+		}
+
+		itemDef 
+		{	
+			name confirm
+			text "@MENU_SETTINGS_AND_RETURN"
+			style 0
+			textscale .23 
+			textstyle 3
+			rect 30 150 110 20
+			textalign 1
+			textalignx 100
+			textaligny 15
+			decoration
+			forecolor 1 1 1 1
+			visible 1
+		}
+		itemDef 
+		{
+			name confirm
+			text "@MENU_TO_THE_GAME" 
+			style 0
+			textscale .23 
+			textstyle 3
+			rect 30 165 110 20
+			textalign 1
+			textalignx 100
+			textaligny 15
+			decoration
+			forecolor 1 1 1 1
+			cvartest "cl_paused"
+			showCvar { "1" }
+			visible 1
+		}
+		itemDef 
+		{
+			name confirm
+			text "@MENU_TO_THE_MAIN_MENU" 
+			style 0
+			textscale .23 
+			textstyle 3
+			rect 30 165 110 20
+			textalign 1
+			textalignx 100
+			textaligny 15
+			decoration
+			forecolor 1 1 1 1
+			cvartest "cl_paused"
+			hideCvar { "1" }
+			visible 1
+		}
+
+		itemDef 
+		{
+			name yes
+			text "@MENU_YES"
+			type 1
+			textfont UI_FONT_NORMAL
+			textscale .25
+			style WINDOW_STYLE_FILLED
+			rect 50 190 70 26
+			textalign 1
+			textalignx 32
+			textaligny 17
+			forecolor 1 1 1 1
+			backcolor  .1 .1 .1 .1  
+			visible 1
+			border 1
+			bordercolor .5 .5 .5 .5 
+			action { 
+				play "mouse_click"; 
+				hide applysystem;
+				close snd_restart_popmenu ; 
+				exec "snd_restart" 
+			}
+			mouseEnter { play "mouse_over"; setitemcolor yes backcolor .3 0.5 0.2 .25 } 
+			mouseExit { setitemcolor yes backcolor  .1 .1 .1 .1  } 	
+		}
+
+		itemDef 
+		{
+			name no
+			text "@MENU_NO"
+			type 1
+			textfont UI_FONT_NORMAL
+			textscale .25
+			style WINDOW_STYLE_FILLED
+			rect 140 190 70 26
+			textalign 1
+			textalignx 35
+			textaligny 17
+			forecolor 1 1 1 1
+			backcolor  .1 .1 .1 .1  
+			visible 1
+			border 1
+			bordercolor .5 .5 .5 .5 
+			action { 
+				play "mouse_click";
+				close snd_restart_popmenu ;  
+				close options_menu;
+				close options_sound;
+				open options_menu;
+				open options_sound;
+				show applysystem;
+			}
+			mouseEnter { play "mouse_over"; setitemcolor no backcolor .3 0.5 0.2 .25 } 
+			mouseExit { setitemcolor no backcolor  .1 .1 .1 .1  } 		
+		}
+	}
+}

@@ -1,0 +1,199 @@
+#include "ui/menudef.h"
+
+{
+\\ QUIT POPUP MENU \\
+
+	menuDef 
+	{
+		name "quit_popmenu"
+	    	visible 0
+    		fullscreen 0
+	    	//rect 217 200 210 85
+		rect 204 160 235 135
+		focusColor 1 .75 0 1
+    		style 1
+    		border 1
+		popup
+		onESC { close quit_popmenu ; open main }
+
+		itemDef 
+		{
+			name window
+			group grpControlbutton
+			rect 0 2 235 135
+			style WINDOW_STYLE_FILLED
+			border 1
+			bordercolor .5 .5 .5 .5
+			forecolor 1 1 1 1
+			backcolor 0 0 0 .5
+			visible 1
+			decoration
+		}
+		itemDef 
+		{
+			name backimage2fade
+			style WINDOW_STYLE_SHADER
+			rect -206 -162 642 482
+	 		background "ui/assets/fadebox.tga"
+			forecolor 0 0 0 0.4
+			backcolor 0 0 0 0.4
+			visible 1
+			decoration
+		}
+	
+		itemDef 
+		{
+			name window2
+			group grpControlbutton
+			rect 2 3 231 20	
+			style WINDOW_STYLE_FILLED
+			border 1
+			bordercolor .1 .1 .1 .2
+			forecolor 1 1 1 1
+			backcolor 1 1 .3 .3
+			visible 1
+			decoration
+		}
+
+	// QUIT	//
+
+		itemDef 
+		{
+			name confirm
+			text "@MENU_ARE_YOU_SURE_QUIT" 
+			style 0
+			textscale .25 
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 126 20 110 20
+			textalign 1
+			textalignx -7
+			textaligny 0
+			decoration
+			forecolor 1 1 1 1
+			visible 1
+		}
+
+		itemDef 
+		{
+			name yes
+			text "@MENU_YES"
+			type 1
+			textscale .4
+			style WINDOW_STYLE_FILLED
+			textfont UI_FONT_NORMAL
+//			background "ui/assets/button_back.tga"
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 52 60 50 30
+			textalign 1
+			textalignx 27
+			textaligny 22
+			forecolor 1 1 1 .9
+//			backcolor 0 0 0 .5 
+			visible 1
+			border 0
+			bordercolor .5 .5 .5 .5
+			action { 
+//				play "sound/misc/nomenu.wav"; 
+				play "mouse_click";
+//				close main ;
+				close quit_popmenu ; 
+//				open quitCredit  
+//				uiScript "quit";
+				open demo_end;
+			}
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+//			mouseEnter { setitemcolor yes backcolor 0 0 0 .75 } 
+//			mouseExit { setitemcolor yes backcolor 0 0 0 .5 } 	
+		}
+		itemDef 
+		{
+			name no
+			text "@MENU_NO"
+			type 1
+			textscale .4
+			style WINDOW_STYLE_FILLED
+			textfont UI_FONT_NORMAL
+//			background "ui/assets/button_back.tga"
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 149 60 50 30
+			textalign 1
+			textalignx 27
+			textaligny 22
+			forecolor 1 1 1 .9
+//			backcolor 0 0 0 .5 
+			visible 1
+			border 0
+			bordercolor .5 .5 .5 .5
+			action { play "mouse_click"; ; 
+			close quit_popmenu ; open main }
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+//			mouseEnter { setitemcolor no backcolor 0 0 0 .75 } 
+//			mouseExit { setitemcolor no backcolor 0 0 0 .5 } 		
+		}	
+//		itemDef 
+//		{
+//     		name yes
+//			style WINDOW_STYLE_SHADER
+//			background "ui/assets/framebutton.tga"
+//	 		rect 75 120 30 26
+//     		visible 1 
+//			decoration  	  
+//		}
+
+//		itemDef 
+//		{
+//			name yes
+///			style WINDOW_STYLE_SHADER
+//			background "ui/assets/leftbutton.tga"
+//   	   	rect 69 120 7 26
+//   	   	visible 1 
+//			decoration  	  
+//		}
+
+//		itemDef 
+//		{
+//	      	name yes
+//			style WINDOW_STYLE_SHADER
+//			background "ui/assets/rightbutton.tga"
+//      	rect 104 120 7 26
+//     	 	visible 1 
+//			decoration  	  
+//    	}
+
+
+//		itemDef 
+//		{
+//      	name no
+//			style WINDOW_STYLE_SHADER
+//			background "ui/assets/framebutton.tga"
+// 			rect 128 120 30 26
+//      	visible 1 
+//			decoration  	  
+//    	}
+
+//		itemDef 
+//		{
+//      	name no
+///			style WINDOW_STYLE_SHADER
+//			background "ui/assets/leftbutton.tga"
+//   	   	visible 1 
+//			decoration  	  
+//   	 }
+
+//		itemDef 
+//		{
+//	      	name no
+//			style WINDOW_STYLE_SHADER
+//			background "ui/assets/rightbutton.tga"
+//      	rect 157 120 7 26
+//     	 	visible 1 
+//			decoration  	  
+//   	}
+	}
+}

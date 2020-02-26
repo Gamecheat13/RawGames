@@ -1,0 +1,41 @@
+Decal
+{
+	life				1e+004
+
+	cullrange			2200
+
+	rotation			360 -360
+
+	size
+	{
+		start			8 12
+	}
+
+	shaders
+	[
+		gfx/impact/bullethit_glass
+	]
+}
+
+Emitter
+{
+	flags				useModel usePhysics impactKills
+
+	life				800 1500
+
+	bounce				23 43
+
+	angle				360 360 360 -360 -360 -360
+
+	angleDelta			22 22 64 -22 -22 -64
+
+	velocity			100 164 165 200 -164 -165
+
+	gravity				-300 -400
+
+	models
+	[
+		xmodel/gib_glass1
+		xmodel/gib_glass2
+	]
+}

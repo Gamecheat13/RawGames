@@ -1,0 +1,135 @@
+Particle
+{
+	name				Copy of Unnamed Particle 0
+
+	flags				useAlpha
+
+	nonUniformScale		1
+
+	count				8
+
+	life				1800
+
+	rotation			320 -320
+
+	velocity			345 0 0 245 0 0
+
+	gravity				-400
+
+	rgb
+	{
+		start			0.451 0.451 0.451
+		end				0.451 0.451 0.451
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				100 300
+		flags			linear
+	}
+
+	size2
+	{
+		end				-320 420
+		flags			linear
+	}
+
+	length
+	{
+		start			100
+		end				1000
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/misc/groundblastdark_gib
+	]
+}
+
+Particle
+{
+	flags				useAlpha
+
+	count				14
+
+	life				2800
+
+	rotation			-360 360
+
+	rotationDelta		3 -3
+
+	velocity			300 22 12 600 -22 -22
+
+	gravity				-600
+
+	rgb
+	{
+		start			0.451 0.451 0.451
+		end				0.451 0.451 0.451
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				150 240
+		flags			linear
+	}
+
+	length
+	{
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/misc/groundblastdark_gib
+	]
+}
+
+Particle
+{
+	flags				useAlpha
+
+	life				100
+
+	origin				22 17 12 0 -18 -12
+
+	rgb
+	{
+		start			0.7608 0.4353 0.2392
+		end				0.9765 0.949 0.651
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				63 84
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/explosion/explosion_1
+		gfx/effects/groundflash1
+	]
+}

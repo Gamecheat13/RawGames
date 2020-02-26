@@ -1,0 +1,212 @@
+Particle
+{
+	name				smoke
+
+	flags				useAlpha
+
+	spawnFlags			orgOnCylinder evenDistribution
+
+	count				10
+
+	life				1900 1700
+
+	origin				5 12 0 75 -24 0
+
+	radius				10 30
+
+	rotation			360 -360
+
+	rotationDelta		7
+
+	velocity			12 0 0 58 0 0
+
+	rgb
+	{
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			10
+		end				100 50
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/pjsmoke
+		gfx/effects/whitesmoke
+	]
+}
+
+Emitter
+{
+	name				particulates
+
+	flags				usePhysics impactKills emitFx
+
+	spawnFlags			cheapOrgCalc absoluteVel absoluteAccel evenDistribution
+
+	life				100
+
+	cullrange			1200
+
+	origin				-56 0 0 -43 0 0
+
+	velocity			250 0 0 125 0 0
+
+	acceleration		120 0 0 0 0 0
+
+	density				4
+
+	variance			14
+
+	size
+	{
+		flags			linear
+	}
+
+	emitfx
+	[
+		fx/surfacehits/radstones1sml
+	]
+}
+
+Particle
+{
+	name				lowlying
+
+	flags				useAlpha
+
+	spawnFlags			orgOnCylinder axisFromSphere evenDistribution
+
+	count				10
+
+	life				2500 2600
+
+	origin				5 60 0 0 -60 0
+
+	radius				23 44
+
+	rotation			360 -360
+
+	rotationDelta		3 -3
+
+	velocity			12 0 0 0 0 0
+
+	acceleration		0 0 0 0 0 3
+
+	rgb
+	{
+		start			0.5647 0.5647 0.5647
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			10
+		end				50
+		flags			linear
+	}
+
+	length
+	{
+		end				222
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/medium_smoke
+	]
+}
+
+Light
+{
+	life				100
+
+	rgb
+	{
+		start			0.8392 0.8118 0.6627
+		end				0.7373 0.6275 0.4784
+	}
+
+	size
+	{
+		start			800
+		flags			linear
+	}
+}
+
+Decal
+{
+	life				4e+004
+
+	rotation			360 -360
+
+	size
+	{
+		start			45 55
+	}
+
+	shaders
+	[
+		gfx/impact/cratered
+	]
+}
+
+Particle
+{
+	count				2
+
+	life				100
+
+	origin				22 5 5 -3 -5 -5
+
+	rotation			360 -360
+
+	rgb
+	{
+		end				0.7608 0.4353 0.2392
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			50
+		end				20
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/flash1
+		gfx/effects/groundflash1
+	]
+}
+
+FxRunner
+{
+	playfx
+	[
+		fx/impacts/blast_flash2
+	]
+}
