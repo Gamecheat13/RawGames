@@ -1,0 +1,21 @@
+(script static void (vig_kat_start)
+	(performance_play_line "anim")
+	(performance_play_line "sleep_until")
+)
+
+(script static void (vig_spire_jorge)
+	(sleep 110)
+	(performance_play_line "pause")
+)
+
+(script static void (vig_spire_elite)
+	(performance_play_line "teleport")
+	(cs_stow (performance_get_actor elite) TRUE)
+	(performance_play_line "stow")
+	(performance_play_line "anim")
+	(sleep_until (branch_spire_elite (performance_get_actor elite)))
+	(performance_play_line "sleep_until")
+	(performance_play_line "lines_6")
+	(performance_play_line "anim_exit")
+)
+
