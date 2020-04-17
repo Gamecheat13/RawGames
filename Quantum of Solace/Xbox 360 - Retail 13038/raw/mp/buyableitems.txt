@@ -1,0 +1,690 @@
+// available item types
+// Primary_Weapon
+// Secondary_Weapon
+// Grenade 
+// Gadget
+// Attachment
+// Golden_Primary
+// Golden_Secondary
+
+// Note that the name field is used to generate the display name by prepending "MPUI_"
+// and also used for the icon by prepending "icon_".
+
+// Valid attachment names are silencer, scope, red_dot, acog, silencer_scope, silencer_red_dot, silencer_acog
+
+BuyableItem
+{
+	type Primary_Weapon
+	name aksu_mp
+	cost 300
+	unlockindex 0
+	attachments 
+	{	
+		silencer
+		red_dot
+		acog
+		silencer_red_dot
+		silencer_acog
+	}
+}
+
+BuyableItem
+{
+	type Primary_Weapon
+	name mp5_mp
+	cost 1200
+	unlockindex 1
+	attachments 
+	{	
+		silencer
+		acog
+		silencer_acog
+	}
+}
+
+BuyableItem
+{
+	type Primary_Weapon
+	name aug_mp
+	cost 1200
+	unlockindex 2
+	attachments 	
+	{	
+		silencer
+	}
+}
+
+BuyableItem
+{
+	type Primary_Weapon
+	name m4_mp
+	cost 500
+	unlockindex 3
+	attachments 	
+	{	
+		silencer
+		scope
+		red_dot
+		silencer_scope
+		silencer_red_dot
+	}
+}
+
+BuyableItem
+{
+	type Primary_Weapon
+	name m14_mp
+	cost 300
+	unlockindex 4
+	attachments 	
+	{	
+		silencer
+		red_dot
+		acog
+		silencer_red_dot
+		silencer_acog
+	}
+}
+
+
+BuyableItem
+{
+	type Primary_Weapon
+	name calico_mp
+	cost 8000
+	unlockindex 5
+	attachments 	
+	{	
+		silencer
+		red_dot
+		silencer_red_dot
+	}
+}
+
+BuyableItem
+{
+	type Primary_Weapon
+	name saf45_mp
+	cost 0
+	unlockindex 6
+	attachments 	
+	{	
+		silencer
+
+	}
+}
+
+
+BuyableItem
+{
+	type Primary_Weapon
+	name scar_mp
+	cost 800
+	unlockindex 7
+	attachments 	
+	{	
+		silencer
+		red_dot
+		acog
+		silencer_red_dot
+		silencer_acog
+		scope
+		silencer_scope
+	}
+}
+
+BuyableItem
+{
+	type Primary_Weapon
+	name svd_dragunov_mp
+	cost 0
+	unlockindex 8
+	attachments 	
+	{	
+		silencer
+	}
+}
+
+BuyableItem
+{
+	type Primary_Weapon
+	name vkp08_mp
+	cost 800
+	unlockindex 9
+	attachments 	
+	{	
+		silencer
+		acog
+		scope
+		silencer_scope
+		silencer_acog
+	}
+}
+
+BuyableItem
+{
+	type Primary_Weapon
+	name m60e3_mp
+	cost 4000
+	unlockindex 10
+	attachments 	
+	{	
+		silencer
+		red_dot
+		silencer_red_dot
+	}
+}
+
+BuyableItem
+{
+	type Primary_Weapon
+	name wa2000_mp
+	cost 800
+	unlockindex 11
+	attachments 	
+	{	
+		silencer
+	}
+}
+
+BuyableItem
+{
+	type Primary_Weapon
+	name s1300_pump_mp
+	cost 0
+	unlockindex 12
+	attachments
+	{
+		red_dot
+	}
+}
+
+BuyableItem
+{
+	type Primary_Weapon
+	name s1300_auto_mp
+	cost 4000
+	unlockindex 13
+	attachments
+	{	
+		silencer
+	}
+}
+
+BuyableItem
+{
+	type Secondary_Weapon
+	name p99_mp
+	cost 0
+	unlockindex 14
+	attachments 	
+	{	
+		silencer
+	}
+}
+
+BuyableItem
+{
+	type Secondary_Weapon
+	name glock_18_mp
+	cost 1200
+	unlockindex 15
+	attachments 	
+	{	
+		silencer
+	}
+}
+
+BuyableItem
+{
+	type Secondary_Weapon
+	name colt1911_mp
+	cost 500
+	unlockindex 16
+	attachments 	
+	{	
+		silencer
+	}
+}
+
+BuyableItem
+{
+	type Secondary_Weapon
+	name mac11_mp
+	cost 800
+	unlockindex 17
+	attachments 	
+	{	
+		silencer
+	}
+}
+
+BuyableItem
+{
+	type Secondary_Weapon
+	name sw500_mp
+	cost 800
+	unlockindex 18
+	attachments
+	{
+		acog
+	}
+}
+
+BuyableItem
+{
+	type Grenade
+	name proxmine_mp
+	cost 800
+	unlockindex 19
+}
+
+BuyableItem
+{
+	type Grenade
+	name flash_grenade_mp
+	cost 0
+	unlockindex 20
+}
+
+BuyableItem
+{
+	type Grenade
+	name frag_grenade_mp
+	cost 500
+	unlockindex 21
+}
+
+BuyableItem
+{
+	type Grenade
+	name smoke_grenade_mp
+	cost 300
+	unlockindex 22
+}
+
+BuyableItem
+{
+	type Grenade
+	name tear_grenade_mp
+	cost 300
+	unlockindex 23
+}
+
+BuyableItem
+{
+	type Grenade
+	name concussion_grenade_mp
+	cost 500
+	unlockindex 24
+}
+
+BuyableItem
+{
+	type Secondary_Weapon
+	name glock_mp
+	cost 300
+	unlockindex 25
+	attachments 	
+	{	
+		silencer
+	}
+}
+
+// Slot 26 is available because it was removed
+
+BuyableItem
+{
+	type Secondary_Weapon
+	name nailgun_mp
+	cost 500
+	unlockindex 27
+}
+
+//****************************************************
+//					GADGETS
+//****************************************************
+
+BuyableItem
+{
+	type Gadget
+	name specialty_flak_vest
+	cost 300
+	unlockindex 28
+}
+
+BuyableItem
+{
+	type Gadget
+	name specialty_stability
+	cost 500
+	unlockindex 29
+}
+
+BuyableItem
+{
+	type Gadget
+	name specialty_self_preservation
+	cost 500
+	unlockindex 30
+}
+
+BuyableItem
+{
+	type Gadget
+	name specialty_proxy_mines
+	cost 4000
+	unlockindex 31
+}
+
+BuyableItem
+{
+	type Gadget
+	name specialty_gloves
+	cost 300
+	unlockindex 32
+}
+
+// slot number 33 is open
+//BuyableItem
+//{
+//	type Gadget
+//	name specialty_extra_frags
+//	cost 4000
+//	unlockindex 33
+//}
+
+BuyableItem
+{
+	type Gadget
+	name specialty_extra_special
+	cost 4000
+	unlockindex 34
+}
+
+BuyableItem
+{
+	type Gadget
+	name specialty_extra_ammo
+	cost 300
+	unlockindex 35
+}
+
+BuyableItem
+{
+	type Gadget
+	name specialty_explosive_awareness
+	cost 500
+	unlockindex 36
+}
+
+BuyableItem
+{
+	type Gadget
+	name specialty_extra_damage
+	cost 1200
+	unlockindex 37
+}
+
+BuyableItem
+{
+	type Gadget
+	name specialty_extra_health
+	cost 500
+	unlockindex 38
+}
+
+BuyableItem
+{
+	type Gadget
+	name specialty_massive_arsenal
+	cost 800
+	unlockindex 39
+}
+
+BuyableItem
+{
+	type Gadget
+	name specialty_explosives_expert
+	cost 1200
+	unlockindex 40
+}
+
+BuyableItem
+{
+	type Gadget
+	name specialty_off_the_cuff
+	cost 800
+	unlockindex 41
+}
+
+BuyableItem
+{
+	type Gadget
+	name specialty_blind_fold
+	cost 500
+	unlockindex 42
+}
+
+BuyableItem
+{
+	type Gadget
+	name specialty_kung_fu
+	cost 500
+	unlockindex 43
+}
+
+// unlock slot number 44 is available
+
+// unlock slot number 45 is available
+
+BuyableItem
+{
+	type Gadget
+	name specialty_silent_footsteps
+	cost 800
+	unlockindex 46
+}
+
+// Slot 47 is available because it was cut
+
+BuyableItem
+{
+	type Gadget
+	name specialty_faster_reload
+	cost 800
+	unlockindex 48
+}
+
+BuyableItem
+{
+	type Gadget
+	name specialty_trigger_happy
+	cost 1200
+	unlockindex 49
+}
+
+// unlock slot number 50 is available
+// unlock slot number 51 is available
+// unlock slot number 52 is available
+// unlock slot number 53 is available
+// unlock slot number 54 is available
+// unlock slot number 55 is available
+
+//****************************************************
+//					ATTACHMENTS
+//****************************************************
+
+// NOTE: If you add a new attachment here, you also need to make changes in code for it to work
+//       correctly because they can be combined.
+
+BuyableItem
+{
+	type Attachment
+	name silencer
+	cost 4000
+	unlockindex 56
+}
+
+BuyableItem
+{
+	type Attachment
+	name scope
+	cost 8000
+	unlockindex 57
+}
+
+BuyableItem
+{
+	type Attachment
+	name red_dot
+	cost 1200
+	unlockindex 58
+}
+
+BuyableItem
+{
+	type Attachment
+	name ACOG
+	cost 1200
+	unlockindex 59
+}
+
+//****************************************************
+//					GOLDEN_WEAPONS
+//****************************************************
+
+BuyableItem
+{
+	type Golden_Primary
+	name gold_aksu_mp
+	cost 4000
+	unlockindex 60
+	attachments 
+	{	
+		silencer
+		red_dot
+		acog
+		silencer_red_dot
+		silencer_acog
+	}
+}
+
+BuyableItem
+{
+	type Golden_Primary
+	name gold_mp5_mp
+	cost 4000
+	unlockindex 61
+	attachments 	
+	{	
+		silencer
+		acog
+		silencer_acog
+	}
+}
+
+BuyableItem
+{
+	type Golden_Primary
+	name gold_calico_mp
+	cost 4000
+	unlockindex 66
+	attachments 	
+	{	
+		silencer
+		red_dot
+		silencer_red_dot
+	}
+}
+
+BuyableItem
+{
+	type Golden_Primary
+	name gold_m60e3_mp
+	cost 4000
+	unlockindex 70
+	attachments 	
+	{	
+		silencer
+		red_dot
+		silencer_red_dot
+	}
+}
+
+BuyableItem
+{
+	type Golden_Primary
+	name gold_wa2000_mp
+	cost 4000
+	unlockindex 71
+	attachments 	
+	{	
+		silencer
+	}
+}
+
+BuyableItem
+{
+	type Golden_Primary
+	name gold_s1300_pump_mp
+	cost 4000
+	unlockindex 72
+	attachments
+	{
+		red_dot
+	}
+}
+
+BuyableItem
+{
+	type Golden_Secondary
+	name gold_p99_mp
+	cost 1200
+	unlockindex 74
+	attachments 	
+	{	
+		silencer
+	}
+}
+
+BuyableItem
+{
+	type Golden_Secondary
+	name gold_glock_18_mp
+	cost 1200
+	unlockindex 75
+	attachments 	
+	{	
+		silencer
+	}
+}
+
+BuyableItem
+{
+	type Golden_Secondary
+	name gold_colt1911_mp
+	cost 1200
+	unlockindex 76
+	attachments 	
+	{	
+		silencer
+	}
+}
+
+BuyableItem
+{
+	type Golden_Secondary
+	name gold_mac11_mp
+	cost 1200
+	unlockindex 77
+	attachments 	
+	{	
+		silencer
+	}
+}
+
+
+
+
+

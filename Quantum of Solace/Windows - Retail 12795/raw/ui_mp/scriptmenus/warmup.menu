@@ -1,0 +1,347 @@
+#ifdef PC //SDOMPIERRE
+#define ORIGIN_WARMUP_TEAM_TEXT			160	90
+#define	ORIGIN_WARMUP_TEAM				200	90
+#define ORIGIN_WARMUP_TIME_LIMIT_TEXT	82	51
+#define ORIGIN_WARMUP_TIME_LIMIT		180	50
+#define ORIGIN_WARMUP_SCORE_LIMIT_TEXT	220	51
+#define ORIGIN_WARMUP_SCORE_LIMIT		316	50
+#define ORIGIN_WARMUP_GAMETYPE			460	77
+#define ORIGIN_WARMUP_OBJECTIVE_TEXT	62	156
+#define ORIGIN_WARMUP_OBJECTIVE			170 140
+#define ORIGIN_WARMUP_EQUIPCHANGE_TEXT	62 334
+#define ORIGIN_WARMUP_MATCHSTART_TEXT	66 415
+#else
+#define ORIGIN_WARMUP_TEAM_TEXT			160	90
+#define	ORIGIN_WARMUP_TEAM				200	90
+#define ORIGIN_WARMUP_TIME_LIMIT_TEXT	62	292
+#define ORIGIN_WARMUP_TIME_LIMIT		200	292
+#define ORIGIN_WARMUP_SCORE_LIMIT_TEXT	70	14
+#define ORIGIN_WARMUP_SCORE_LIMIT		200	14
+#define ORIGIN_WARMUP_GAMETYPE			460	40
+#define ORIGIN_WARMUP_OBJECTIVE_TEXT	62	146
+#define ORIGIN_WARMUP_OBJECTIVE			170 130
+#define ORIGIN_WARMUP_EQUIPCHANGE_TEXT	62 334
+#define ORIGIN_WARMUP_MATCHSTART_TEXT	62 380
+#endif
+
+#define WARMUP_TEXTSIZE_XLARGE 0.75
+#define WARMUP_TEXTSIZE_LARGE 0.55
+#define WARMUP_TEXTSIZE_MEDIUM 0.35
+#define WARMUP_TEXTSIZE_SMALL 0.3
+
+		// background_overlay
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			48 36 546 410
+			backcolor		0 0 0 0.5
+			visible			1
+			decoration
+		}
+			
+		// team_menu_bar_MI6
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			48 64 546 54 
+			background		"mp_blue_bar_02"
+			visible			1
+			visible when ( dvarstring( cl_menu_skin ) == "mi6" || dvarstring( cl_menu_skin ) == "bond" );
+			decoration
+		}
+		
+		// team_menu_bar_ORG
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			48 64 546 54 
+			background		"mp_orange_bar_02"
+			visible			1
+			visible when ( dvarstring( cl_menu_skin ) == "org" );
+			decoration
+		}
+		
+		// team_menu_bar_NOTEAM
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			48 64 546 54  
+			background		"mp_gray_bar_02"
+			visible			1
+			visible when ( dvarstring( cl_menu_skin ) == "default" );
+			decoration
+		}
+		
+		// top_menu_bar
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			0 36 640 38 HORIZONTAL_ALIGN_FULLSCREEN  VERTICAL_ALIGN_FULLSCREEN
+			background		"mp_top_bar_01"
+			visible			1
+			decoration
+		}
+		
+		// bottom_timer_menu_bar_MI6
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			48 376 546 42 
+			background		"mp_blue_bar_03"
+			visible			1
+			visible when ( dvarstring( cl_menu_skin ) == "mi6" || dvarstring( cl_menu_skin ) == "bond" );
+			decoration
+		}
+		
+		// bottom_timer_menu_bar_ORG
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			48 376 546 42 
+			background		"mp_orange_bar_03"
+			visible			1
+			visible when ( dvarstring( cl_menu_skin ) == "org" );
+			decoration
+		}
+		
+		// bottom_timer_menu_bar_NOTEAM
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			48 376 546 42 
+			background		"mp_gray_bar_03"
+			visible			1
+			visible when ( dvarstring( cl_menu_skin ) == "default" );
+			decoration
+		}
+		
+		// bottom_white_line_thick
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			-82 416 854 2 HORIZONTAL_ALIGN_FULLSCREEN  VERTICAL_ALIGN_FULLSCREEN
+			backcolor		0.6 0.6 0.6 1.0
+			visible			1
+			decoration
+		}
+		
+		// bottom_white_line_skinny
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			rect			-82 445 854 1 HORIZONTAL_ALIGN_FULLSCREEN  VERTICAL_ALIGN_FULLSCREEN
+			backcolor		0.6 0.6 0.6 1.0
+			visible			1
+			decoration
+		}
+		
+		// team_icon_MI6
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			54 73 44 44
+			background		"hudicon_mi6"
+			visible			1
+			visible when ( dvarstring( cl_menu_skin ) == "mi6" || dvarstring( cl_menu_skin ) == "bond" );
+			decoration
+		}
+		
+		// team_icon_ORG
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			54 73 44 44
+			background		"hudicon_enemy_a"
+			visible			1
+			visible when ( dvarstring( cl_menu_skin ) == "org" );
+			decoration
+		}
+		
+
+// Text for the game mode (as, be, vs, etc.)
+itemDef
+{
+	type			ITEM_TYPE_TEXT
+	visible			1
+	rect			0 0 128 48 HORIZONTAL_ALIGN_SUBLEFT VERTICAL_ALIGN_TOP
+	origin			ORIGIN_WARMUP_GAMETYPE
+	forecolor		COLOR_TITLE
+	dvar			"ui_gametype_text"
+	textfont		UI_FONT_BOLD
+	textscale		WARMUP_TEXTSIZE_LARGE
+	textalign		ITEM_ALIGN_BOTTOM
+	textalign		ITEM_ALIGN_RIGHT
+	decoration
+}
+
+// Actual team text MI6
+itemDef
+{
+	type			ITEM_TYPE_TEXT
+	visible			1
+	rect			-50 25 128 24
+	origin			158	 92
+	forecolor		0.9 0.7 0.3 1.0
+	text			"@MPUI_MI6"
+	textfont		UI_FONT_NORMAL
+	textscale		TEXTSIZE_TITLE
+	visible when ( dvarstring( cl_menu_skin ) == "mi6" || dvarstring( cl_menu_skin ) == "bond" );
+	decoration
+}
+
+// Actual team text ORG
+itemDef
+{
+	type			ITEM_TYPE_TEXT
+	visible			1
+	rect			-50 25 128 24
+	origin			158	 92
+	forecolor		0.9 0.7 0.3 1.0
+	text			"@MPUI_ORGANIZATION"
+	textfont		UI_FONT_NORMAL
+	textscale		TEXTSIZE_TITLE
+	visible when ( dvarstring( cl_menu_skin ) == "org" );
+	decoration
+}
+
+// "Objectives:"
+itemDef
+{
+	type			ITEM_TYPE_TEXT
+	visible			1
+	rect			0 0 128 24 
+	origin			ORIGIN_WARMUP_OBJECTIVE_TEXT
+	forecolor		1 1 1 1
+	text			"@MPUI_OBJECTIVES_COLON"
+	textfont		UI_FONT_NORMAL
+	textscale		WARMUP_TEXTSIZE_MEDIUM
+	decoration
+}
+
+// Actual objective description
+itemDef
+{
+	type			ITEM_TYPE_TEXT
+	visible			1
+	rect			0 0 400 300 
+	origin			ORIGIN_WARMUP_OBJECTIVE
+	forecolor		1 1 1 1
+	dvar			"cl_objective_text"
+	textfont		UI_FONT_NORMAL
+	textscale		WARMUP_TEXTSIZE_MEDIUM
+	textalign		ITEM_ALIGN_TOP_LEFT
+	autowrapped
+	decoration
+}
+
+// "Press START to Change equipment:"
+itemDef
+{
+	type			ITEM_TYPE_TEXT
+	visible			1
+	visible when ( dvarstring( g_gametype ) == "dm" || dvarstring( g_gametype ) == "tdm"  || dvarstring( g_gametype ) == "as"  || dvarstring( g_gametype ) == "vs"  || dvarstring( g_gametype ) == "koth"   || dvarstring( g_gametype ) == "be" );
+	rect			0 0 128 24 HORIZONTAL_ALIGN_SUBLEFT VERTICAL_ALIGN_TOP
+	origin			ORIGIN_WARMUP_EQUIPCHANGE_TEXT
+	forecolor		1 1 1 0.6
+	text			"@MPUI_CHANGE_EQUIPMENT_TEXT"
+	textfont		UI_FONT_NORMAL
+	textscale		WARMUP_TEXTSIZE_MEDIUM
+	decoration
+}
+
+// "Match Starting in:"
+itemDef
+{
+	type			ITEM_TYPE_TEXT
+	visible			1
+	rect			0 0 128 24 HORIZONTAL_ALIGN_SUBLEFT VERTICAL_ALIGN_TOP
+	origin			ORIGIN_WARMUP_MATCHSTART_TEXT
+	forecolor		1 1 1 1
+	text			"@MPUI_MATCH_STARTS_IN_COLON"
+	textfont		UI_FONT_NORMAL
+	textscale		WARMUP_TEXTSIZE_MEDIUM
+	decoration
+}
+
+//**********************************************************************************************************
+// Time limit itemDef's
+//**********************************************************************************************************
+
+// "Time Limit:"
+itemDef
+{
+	type			ITEM_TYPE_TEXT
+	rect			0 0 128 24 HORIZONTAL_ALIGN_SUBLEFT VERTICAL_ALIGN_TOP
+	origin			ORIGIN_WARMUP_TIME_LIMIT_TEXT
+	forecolor		1.0 1.0 1.0 1.0
+	text			"@MPUI_TIME_LIMIT_COLON"
+	textfont		UI_FONT_NORMAL
+	textscale		WARMUP_TEXTSIZE_MEDIUM
+	textalign		ITEM_ALIGN_LEFT
+	textalign		ITEM_ALIGN_BOTTOM
+	visible			1
+	decoration
+}
+
+// Actual time limit number for each game mode
+#define TIME_LIMIT_ITEM( gamemode ) \
+	itemDef \
+	{ \
+		type			ITEM_TYPE_TEXT \
+		visible when	(dvarstring( g_gametype ) == gamemode) \
+		rect			0 0 128 24 HORIZONTAL_ALIGN_SUBLEFT VERTICAL_ALIGN_TOP \
+		origin			ORIGIN_WARMUP_TIME_LIMIT \
+		textfont		UI_FONT_NORMAL \
+		textscale		WARMUP_TEXTSIZE_MEDIUM \
+		textalign		ITEM_ALIGN_BOTTOM \
+		dvar			scr_##gamemode##_timelimit \
+		decoration \
+	}
+
+// All the time limit text for each game mode
+TIME_LIMIT_ITEM( dm )
+TIME_LIMIT_ITEM( tdm )
+TIME_LIMIT_ITEM( as )
+TIME_LIMIT_ITEM( koth )
+TIME_LIMIT_ITEM( os )
+TIME_LIMIT_ITEM( be )
+TIME_LIMIT_ITEM( vs )
+
+//**********************************************************************************************************
+// Score limit itemDef's
+//**********************************************************************************************************
+
+// Actual score limit number for each game mode that supports it
+#define SCORE_LIMIT_ITEM( gamemode ) \
+	itemDef \
+	{ \
+		type			ITEM_TYPE_TEXT \
+		rect			0 0 128 24 HORIZONTAL_ALIGN_SUBLEFT VERTICAL_ALIGN_TOP \
+		origin			ORIGIN_WARMUP_SCORE_LIMIT_TEXT \
+		forecolor		0.6 0.6 0.6 1.0 \
+		text			"@MPUI_SCORE_LIMIT_COLON" \
+		textfont		UI_FONT_NORMAL \
+		textscale		WARMUP_TEXTSIZE_SMALL \
+		textalign		ITEM_ALIGN_LEFT \
+		textalign		ITEM_ALIGN_BOTTOM \
+		visible	when	(dvarstring(g_gametype) == gamemode && dvarint(scr_##gamemode##_scorelimit) != 0) \
+		decoration \
+	} \
+	itemDef \
+	{ \
+		type			ITEM_TYPE_TEXT \
+		visible when	(dvarstring( g_gametype ) == gamemode && dvarint(scr_##gamemode##_scorelimit) != 0) \
+		rect			0 0 128 24 HORIZONTAL_ALIGN_SUBLEFT VERTICAL_ALIGN_TOP \
+		origin			ORIGIN_WARMUP_SCORE_LIMIT \
+		textfont		UI_FONT_NORMAL \
+		textscale		WARMUP_TEXTSIZE_MEDIUM \
+		textalign		ITEM_ALIGN_BOTTOM \
+		dvar			scr_##gamemode##_scorelimit \
+		decoration \
+	}
+
+SCORE_LIMIT_ITEM( dm )
+SCORE_LIMIT_ITEM( tdm )
+SCORE_LIMIT_ITEM( as )
+SCORE_LIMIT_ITEM( koth )
+SCORE_LIMIT_ITEM( os )

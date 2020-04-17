@@ -1,0 +1,418 @@
+version 1
+
+gametype vs
+name english "Bond Versus"
+name french "Bond contre"
+name italian "Bond contro"
+name german "Bond-Duell"
+name spanish "Duelo Bond"
+rule scr_vs_timelimit	5
+rule scr_player_respawndelay	5
+script vs
+
+gametype be
+name english "Bond Evasion"
+name french "Évasion de Bond"
+name italian "Evasione di Bond"
+name german "Bond-Flucht"
+name spanish "Evasión de Bond"
+set scr_be_timelimit	5
+set scr_be_roundlimit	6
+rule scr_player_respawndelay	5
+script be
+
+gametype as
+name english "Golden Gun"
+name french "Pistolet d'or"
+name italian "Pistola d'oro"
+name german "Goldener Colt"
+name spanish "Revólver dorado"
+set scr_as_timelimit	8
+set scr_as_roundlimit	1
+set scr_as_scorelimit	100
+set scr_as_points_player_Eliminate	1
+set scr_as_points_rival_Eliminate	2
+set scr_as_points_vip_Eliminate		2
+set scr_as_points_vip_death		6
+set scr_as_points_golden_gun_pickup	1
+rule scr_player_respawndelay	5
+script as
+
+gametype koth
+name english "Territory Control"
+name french "Contrôle de territoire"
+name italian "Controllo territorio"
+name german "Gebietskontrolle"
+name spanish "Control territorial"
+set scr_koth_scorelimit	300
+set scr_koth_timelimit	10
+set scr_koth_roundlimit	1
+rule scr_player_respawndelay	5
+script koth
+
+gametype os
+name english "Classic"
+name french "Classique"
+name italian "Classica"
+name german "Klassisch"
+name spanish "Clásico"
+set scr_os_scorelimit	100
+set scr_os_timelimit	8
+set scr_os_roundlimit	1
+rule scr_player_respawndelay	5
+script os
+
+gametype dm
+name english "Conflict"
+name french "Conflit"
+name italian "Conflitto"
+name german "Konflikt"
+name spanish "Conflicto"
+set scr_dm_scorelimit	100
+set scr_dm_timelimit	8
+set scr_dm_roundlimit	1
+rule scr_player_respawndelay	5
+script dm
+
+gametype tdm 
+name english "Team Conflict"
+name french "Conflit en équipe"
+name italian "Conflitto a squadre"
+name german "Team-Konflikt"
+name spanish "Conflicto por equipos"
+set scr_tdm_scorelimit	100
+set scr_tdm_timelimit	10
+Set scr_tdm_roundlimit	1
+rule scr_player_respawndelay	5
+script tdm
+
+
+playlist 1 //
+name english "Team Conflict"
+name french "Conflit en équipe"
+name italian "Conflitto a squadre"
+name german "Team-Konflikt"
+name spanish "Conflicto por equipos"
+description english "MI-6 vs. the Organization. Teamwork rules the day.|10 minutes|75"
+description french "MI-6 contre l'Organisation. Le travail d'équipe avant tout !|10 minutes|75"
+description italian "MI-6 contro l'organizzazione. Il lavoro di squadra è la chiave del successo.|10 minuti|75"
+description german "Der MI6 gegen die Organisation. Es kommt auf Teamwork an.|10 Minuten|75"
+description spanish "MI6 contra la organización. Lo fundamental es el trabajo en equipo.|10 minutos|75"
+quickmatch
+rule xblive_rankedmatch 0
+rule party_minplayers 4
+rule party_maxplayers 12
+rule party_readypercentrequired 0
+rule party_gamestarttimerlength 9
+mp_barge,tdm,2
+mp_italia,tdm,2
+mp_embassy,tdm,2
+mp_constructionsite,tdm,2
+mp_docks,tdm,1
+mp_facility,tdm,1
+mp_miamiconcourse,tdm,1
+mp_ecohotel,tdm,1
+mp_rooftop,tdm,1
+mp_sauna,tdm,1
+mp_sciencecenter,tdm,1
+mp_siena,tdm,1
+
+
+playlist 2 //
+name english "Bond Versus"
+name french "Bond contre"
+name italian "Bond contro"
+name german "Bond-Duell"
+name spanish "Duelo Bond"
+description english "Bond versus the Organization. Bond is a one man army sent in to disarm Organization explosives. Organization members must protect the explosives with their lives. Everyone plays as Bond, the player with the most points wins.|5 minutes|N/A"
+description french "Bond contre l'Organisation. Bond est seul contre tous et doit désamorcer les explosifs que les membres de l'Organisation protègent à tout prix. Chaque joueur incarne Bond au moins une fois; le joueur ayant le plus de points gagne la partie.|5 minutes|N/A"
+description italian "Bond contro l'organizzazione. Bond è stato inviato da solo a disinnescare gli esplosivi mentre i membri dell'organizzazione cercano di proteggerli. Tutti i giocatori impersonano Bond; alla fine vince chi ottiene il punteggio più alto.|5 minuti|N/D"
+description german "Bond gegen die Organisation. Bond muss die Sprengsätze entschärfen oder die Organisation ausschalten. Die Organisation muss die Sprengsätze schützen. Jeder spielt als Bond, der Spieler mit den meisten Punkten gewinnt.|5 Minuten|-"
+description spanish "Bond contra la organización. Bond es un ejército de un hombre enviado para desactivar los explosivos. Los miembros de la organización deben proteger los explosivos. Todos juegan una vez como Bond, gana el jugador con más puntos.|5 minutos|N/D"
+quickmatch
+rule xblive_rankedmatch	0
+rule party_minplayers	4
+rule party_maxplayers	8
+rule scr_vs_minplayers	4
+rule party_readypercentrequired	0
+rule party_gamestarttimerlength	9
+mp_docks,vs,2
+mp_miamiconcourse,vs,2
+mp_sciencecenter,vs,2
+mp_siena,vs,2
+mp_barge,vs,1
+mp_constructionsite,vs,1
+mp_embassy,vs,1
+mp_facility,vs,1
+mp_italia,vs,1
+mp_ecohotel,vs,1
+mp_rooftop,vs,1
+mp_sauna,vs,1
+
+
+playlist 3 //
+name english "Bond Evasion"
+name french "Évasion de Bond"
+name italian "Evasione di Bond"
+name german "Bond-Flucht"
+name spanish "Evasión de Bond"
+description english "MI-6 vs. the Organization. MI-6 must assist Bond to the escape zone. The teams swap sides at the end of each round; after six rounds are completed the team with the most points wins.|10 minutes|N/A"
+description french "MI-6 contre l'Organisation. Le MI-6 doit aider Bond à s'enfuir. Les équipes changent de camp à la fin de chaque manche. Après six manches, l'équipe qui a le plus de points gagne.|10 minutes|N/A"
+description italian "MI-6 contro l'organizzazione. L'MI-6 deve aiutare Bond a raggiungere il punto di fuga. Le squadre cambiano posizione alla fine di ciascun round. Al termine dei sei round, la squadra con più punti vince.|10 minuti|N/D"
+description german "Der MI6 gegen die Organisation. Der MI6 muss Bond in die Evakuierungszone helfen. Am Ende jeder Runde werden die Teams gewechselt. Nach Abschluss von 6 Runden gewinnt das Team mit dem meisten Punkten.|10 Minuten|-"
+description spanish "El MI6 contra la organización. El MI6 debe ayudar a Bond a llegar a la zona de huida. Los equipos cambian de bando al final de cada ronda; tras terminar seis rondas, gana el equipo con más puntos.|10 minutos|N/D"
+quickmatch
+rule xblive_rankedmatch 0
+rule party_minplayers 4
+rule party_maxplayers 12
+rule scr_vs_minplayers	4
+rule party_readypercentrequired 0
+rule party_gamestarttimerlength 9
+mp_docks,be,2
+mp_miamiconcourse,be,2
+mp_sciencecenter,be,2
+mp_siena,be,2
+mp_barge,be,1
+mp_constructionsite,be,1
+mp_embassy,be,1
+mp_facility,be,1
+mp_italia,be,1
+mp_ecohotel,be,1
+mp_rooftop,be,1
+mp_sauna,be,1
+
+
+playlist 4 //
+name english "Golden Gun"
+name french "Pistolet d'or"
+name italian "Pistola d'oro"
+name german "Goldener Colt"
+name spanish "Revólver dorado"
+description english "Obtain the Golden Gun and eliminate your rivals to make it to the top.|8 minutes|100"
+description french "Trouvez le pistolet d'or et éliminez tous vos rivaux.|8 minutes|100"
+description italian "Ottieni la pistola d'oro ed elimina i tuoi avversari per arrivare in cima alla classifica.|8 minuti|100"
+description german "Erlangen Sie den goldenen Colt und schalten Sie die Rivalen aus, um es an die Spitze zu schaffen.|8 Minuten|100"
+description spanish "Hazte con el revólver dorado y elimina a tus rivales para llegar a lo más alto.|8 minutos|100"
+quickmatch
+rule xblive_rankedmatch	0
+rule party_minplayers	4
+rule party_maxplayers	8
+rule party_readypercentrequired	0
+rule party_gamestarttimerlength	9
+mp_facility,as,2
+mp_rooftop,as,2
+mp_sauna,as,2
+mp_ecohotel,as,2
+mp_barge,as,1
+mp_constructionsite,as,1
+mp_docks,as,1
+mp_embassy,as,1
+mp_italia,as,1
+mp_miamiconcourse,as,1
+mp_sciencecenter,as,1
+mp_siena,as,1
+
+
+playlist 5 //
+name english "Territory Control"
+name french "Contrôle de territoire"
+name italian "Controllo territorio"
+name german "Gebietskontrolle"
+name spanish "Control territorial"
+description english "Capture the control point and hold it for as long as you can to score points. Once a point is under control the team does not need to remain at it, but it would serve them well to protect it.|10 minutes|300"
+description french "Capturez le point de contrôle et tenez-le aussi longtemps que possible pour marquer des points. Il est par ailleurs préférable de continuer à protéger les points sous contrôle.|10 minutes|300"
+description italian "Conquista la postazione di controllo e mantienila per ottenere dei punti. Conquistata la postazione, la squadra non deve restarle vicina, ma sarà meglio presidiarla.|10 minuti|300"
+description german "Nehmen Sie den Kontrollpunkt ein und halten Sie ihn möglichst lange, um zu punkten. Wenn ein Team den Punkt kontrolliert, muss es nicht dort bleiben, aber es ist sinnvoll, ihn zu beschützen.|10 Minuten|300"
+description spanish "Toma el punto de control y defiéndelo tanto tiempo como puedas para conseguir puntos. Una vez controlado un punto, el equipo no necesita permanecer en él, pero le conviene protegerlo.|10 minutos|300"
+quickmatch
+rule xblive_rankedmatch	0
+rule party_minplayers	4
+rule party_maxplayers	12
+rule party_readypercentrequired	0
+rule party_gamestarttimerlength	9
+mp_barge,koth,2
+mp_italia,koth,2
+mp_embassy,koth,2
+mp_constructionsite,koth,2
+mp_docks,koth,1
+mp_facility,koth,1
+mp_miamiconcourse,koth,1
+mp_ecohotel,koth,1
+mp_rooftop,koth,1
+mp_sauna,koth,1
+mp_sciencecenter,koth,1
+mp_siena,koth,1
+
+
+playlist 6 // 
+name english "Classic"
+name french "Classique"
+name italian "Classica"
+name german "Klassisch"
+name spanish "Clásico"
+description english "Start with a pistol with weapon spawn points.|8 minutes|25"
+description french "Début de partie avec un pistolet et apparition d'armes.|8 minutes|25"
+description italian "Inizia con una pistola e con punti per l'approvvigionamento di armi.|8 minuti|25"
+description german "Start mit Pistole mit Waffenaufnahmepunkten.|8 Minuten|25"
+description spanish "Empieza con una pistola y con puntos de reaparición de armas.|8 minutos|25"
+quickmatch
+rule xblive_rankedmatch	0
+rule party_minplayers	4
+rule party_maxplayers	8
+rule party_readypercentrequired	0
+rule party_gamestarttimerlength	9
+mp_facility,os,2
+mp_rooftop,os,2
+mp_sauna,os,2
+mp_ecohotel,os,2
+mp_barge,os,1
+mp_constructionsite,os,1
+mp_docks,os,1
+mp_embassy,os,1
+mp_italia,os,1
+mp_miamiconcourse,os,1
+mp_sciencecenter,os,1
+mp_siena,os,1
+
+
+playlist 7 //
+name english "Conflict"
+name french "Conflit"
+name italian "Conflitto"
+name german "Konflikt"
+name spanish "Conflicto"
+description english "Eliminate everyone and anyone - Free For All.|8 minutes|25"
+description french "Tuez tous les autres joueurs. Mêlée générale !|8 minutes|25"
+description italian "Elimina tutti - Libera.|8 minuti|25"
+description german "Eliminieren Sie alle anderen - frei für alle.|8 Minuten|25"
+description spanish "Elimina a todo el mundo. Todos contra todos.|8 minutos|25"
+quickmatch
+rule xblive_rankedmatch 0
+rule party_minplayers 4
+rule party_maxplayers 8
+rule party_readypercentrequired 0
+rule party_gamestarttimerlength 9
+mp_facility,dm,2
+mp_rooftop,dm,2
+mp_sauna,dm,2
+mp_ecohotel,dm,2
+mp_barge,dm,1
+mp_constructionsite,dm,1
+mp_docks,dm,1
+mp_embassy,dm,1
+mp_italia,dm,1
+mp_miamiconcourse,dm,1
+mp_sciencecenter,dm,1
+mp_siena,dm,1
+
+
+playlist 8 // 
+name english "Teamwork"
+name french "Travail d'équipe"
+name italian "Lavoro di squadra"
+name german "Teamwork"
+name spanish "Trabajo en equipo"
+description english "Welcome to Teamwork. Play Team Conflict, Bond Evasion, and Territory Control.|Varies|Varies"
+description french "Bienvenue dans le Travail d'équipe. Jouez aux modes Conflit par équipe, Évasion de Bond et Contrôle de territoire.|Variés|Variés"
+description italian "Benvenuto al Lavoro di squadra. Gioca in modalità Conflitto a squadre, Evasione di Bond e Controllo territorio.|Varia|Varia"
+description german "Willkommen beim Teamwork. Spielen Sie Konflikt, Bond-Flucht und Gebietskontrolle.|Variiert|Variiert"
+description spanish "Bienvenido a Trabajo en equipo. Juega a Conflicto por equipos, Evasión de Bond y Control territorial.|Varía|Varía"
+quickmatch
+rule xblive_rankedmatch 0
+rule party_minplayers 6
+rule party_maxplayers 12
+rule party_readypercentrequired 0
+rule party_gamestarttimerlength 9
+mp_barge,be,5
+mp_embassy,be,5
+mp_constructionsite,be,5
+mp_sciencecenter,be,5
+mp_facility,be,5
+mp_italia,be,4
+mp_docks,be,4
+mp_ecohotel,be,4
+mp_sauna,be,4
+mp_siena,be,4
+mp_miamiconcourse,be,3
+mp_rooftop,be,3
+mp_barge,koth,4
+mp_embassy,koth,4
+mp_constructionsite,koth,4
+mp_sciencecenter,koth,4
+mp_facility,koth,4
+mp_italia,koth,3
+mp_docks,koth,3
+mp_ecohotel,koth,3
+mp_sauna,koth,3
+mp_siena,koth,3
+mp_miamiconcourse,koth,2
+mp_rooftop,koth,2
+mp_barge,tdm,3
+mp_embassy,tdm,3
+mp_constructionsite,tdm,3
+mp_sciencecenter,tdm,3
+mp_facility,tdm,3
+mp_italia,tdm,2
+mp_docks,tdm,2
+mp_ecohotel,tdm,2
+mp_sauna,tdm,2
+mp_siena,tdm,2
+mp_miamiconcourse,tdm,1
+mp_rooftop,tdm,1
+
+
+playlist 9 // 
+name english "Mayhem"
+name french "Chaos"
+name italian "Inferno"
+name german "Gefecht"
+name spanish "Caos"
+description english "Welcome to Mayhem. Play Golden Gun, Classic, and Conflict.|8 minutes|100"
+description french "Bienvenue dans le Chaos. Jouez aux modes Pistolet d'or, Classique et Conflit.|8 minutes|100"
+description italian "Benvenuto all'Inferno. Gioca in modalità Pistola d'oro, Classica e Conflitto.|8 minuti|100"
+description german "Willkommen beim Gefecht. Spielen Sie Goldener Colt, Klassisch und Konflikt.|8 Minuten|100"
+description spanish "Bienvenido a Caos. Juega a Revólver dorado, Clásico y Conflicto.|8 minutos|100"
+quickmatch
+rule xblive_rankedmatch 0
+rule party_minplayers 4
+rule party_maxplayers 8
+rule party_readypercentrequired 0
+rule party_gamestarttimerlength 9
+mp_facility,as,5
+mp_rooftop,as,5
+mp_sauna,as,5
+mp_ecohotel,as,5
+mp_barge,as,5
+mp_constructionsite,as,4
+mp_docks,as,4
+mp_embassy,as,4
+mp_miamiconcourse,as,4
+mp_siena,as,3
+mp_sciencecenter,as,3
+mp_italia,as,3
+mp_facility,os,4
+mp_rooftop,os,4
+mp_sauna,os,4
+mp_ecohotel,os,4
+mp_barge,os,4
+mp_constructionsite,os,3
+mp_docks,os,3
+mp_embassy,os,3
+mp_miamiconcourse,os,3
+mp_siena,os,2
+mp_italia,os,2
+mp_sciencecenter,os,2
+mp_facility,dm,3
+mp_rooftop,dm,3
+mp_sauna,dm,3
+mp_ecohotel,dm,3
+mp_barge,dm,3
+mp_constructionsite,dm,2
+mp_docks,dm,2
+mp_embassy,dm,2
+mp_miamiconcourse,dm,2
+mp_siena,dm,1
+mp_italia,dm,1
+mp_sciencecenter,dm,1
+
+

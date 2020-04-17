@@ -1,0 +1,26 @@
+// Loss of depth of field - used in the intro IGC when looking at the dealer.
+
+r_reviveFX_enable                     "1"
+r_reviveFX_contrastEdge           "1.0"
+r_reviveFX_brightnessEdge       "0"
+r_reviveFX_desaturationEdge    "0.2"
+r_reviveFX_darkTintEdge           "1.0 1.0 1.0"
+r_reviveFX_lightTintEdge           "1.0 1.0 1.0"
+r_reviveFX_blurRadiusEdge       "0.0"
+
+r_reviveFX_contrastCenter         "1.0"
+r_reviveFX_brightnessCenter      "0"
+r_reviveFX_desaturationCenter   "0.2" 
+r_reviveFX_darkTintCenter          "1.0 1.0 1.0"
+r_reviveFX_lightTintCenter          "1.0 1.0 1.0"
+
+r_reviveFX_highThreshold			"0.4"
+r_reviveFX_lowThreshold				"0.0"
+
+r_dof_enable 	 					"1"
+r_dof_nearBlur 						"0"
+r_dof_farBlur 						"15"//4
+r_dof_nearStart 					"0"
+r_dof_nearEnd 						"0"
+r_dof_farStart 						"25" // 100
+r_dof_farEnd 							"250"

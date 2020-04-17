@@ -1,0 +1,967 @@
+//
+// Player xanims refix convention:
+//
+// Torso only animation are prefixed with pt_
+// Legs only animations are prefixed with pl_
+// Full body animations (both) are prefixed with pb_
+//
+
+main
+{
+	//
+	// Torso Animations
+	//
+	torso
+	{
+		fp_bomb_idle
+		fp_bomb_melee
+
+		Sony_Phone_Idle
+		Sony_Phone_Raise
+		Sony_Phone_Drop
+		
+		//Nerve Addition
+		mp_fp_detonator_idle
+		mp_fp_detonator_melee
+		mp_fp_detonator_arm_all
+		mp_fp_detonator_arm_start
+		mp_fp_detonator_arm_loop
+		mp_fp_detonator_arm_end
+		mp_pt_vkp_08_reload
+		mp_pt_primary_raise
+		mp_pt_primary_drop
+		mp_fp_grenade_raise
+		mp_fp_grenade_hold
+		mp_fp_grenade_throw
+		mp_pt_flinch_back
+		mp_pt_flinch_forward
+		mp_pt_flinch_left
+		mp_pt_flinch_right
+		mp_pt_flinch_pistol_back
+		mp_pt_flinch_pistol_forward
+		mp_pt_flinch_pistol_left
+		mp_pt_flinch_pistol_right
+		mp_pt_melee_02
+		mp_pt_melee_03
+		mp_pt_melee_04
+		mp_pb_fg_stand_idle
+		mp_pb_p99_stand_idle
+		mp_pt_defuse_offscreen
+		
+		rifle_general_idle
+		rifle_fire
+
+		foregrip_general_stand_idle
+		foregrip_general_stand_idle_1
+		foregrip_general_stand_idle_crouch
+		foregrip_general_stand_idle_to_crouch
+		foregrip_general_stand_crouch_to_idle
+		foregrip_general_stand_put_weapon_away_1
+		foregrip_general_stand_put_weapon_away_2
+		foregrip_general_stand_put_away_weapon_1
+		foregrip_general_stand_raise_weapon_1
+		foregrip_general_stand_raise_weapon_2
+		foregrip_general_crouch_idle
+		foregrip_general_fire
+		foregrip_general_fire_small
+		foregrip_general_fire_small_V1
+		foregrip_general_fire_small_V2
+		foregrip_general_fire_large
+		foregrip_general_two_hand_drop
+		foregrip_general_two_hand_raise
+
+		foregrip_mp5_stand_ads_idle_iron
+		foregrip_mp5_crouch_ads_idle_iron
+		foregrip_mp5_stand_ads_fire_iron
+		foregrip_mp5_stand_fire
+		foregrip_mp5_stand_melee_1
+		foregrip_mp5_stand_melee_2
+		foregrip_mp5_stand_reload
+		fp_mp5_reload
+		fp_mp5_reload_offscreen
+		foregrip_mp5_stand_reload_empty
+		foregrip_general_reload_offscreen_1
+		
+		foregrip_m60_stand_ads_idle_iron
+		foregrip_m60_stand_ads_fire_iron
+
+		foregrip_scar_crouch_ads_fire_iron
+		foregrip_scar_crouch_ads_fire_reflex
+		foregrip_scar_crouch_ads_idle_iron
+		foregrip_scar_crouch_ads_idle_reflex
+		foregrip_scar_crouch_fire
+		foregrip_scar_crouch_laser_on_off
+		foregrip_scar_crouch_melee_1
+		foregrip_scar_crouch_reload_empty
+		foregrip_scar_stand_ads_fire_iron
+		foregrip_scar_stand_ads_fire_reflex
+		foregrip_scar_stand_ads_idle_iron
+		foregrip_scar_stand_ads_idle_reflex
+		foregrip_scar_stand_fire
+		foregrip_scar_stand_laser_on_off
+		foregrip_scar_stand_melee_1
+		foregrip_scar_stand_reload
+		foregrip_scar_stand_reload_empty
+		foregrip_scar_stand_silencer_on
+		fp_scar_reload
+
+
+		foregrip_svd_stand_ads_idle_iron
+		foregrip_svd_stand_ads_fire_iron
+		fp_svd_reload
+
+		foregrip_aksu_stand_ads_idle_iron
+		foregrip_aksu_stand_ads_fire_iron
+		foregrip_aksu_reload
+		fp_aksu_reload
+
+		foregrip_calico_stand_ads_idle_iron
+		foregrip_calico_stand_ads_fire_iron
+		foregrip_calico_reload
+
+		foregrip_aug_stand_ads_idle_iron
+		foregrip_aug_stand_ads_fire_iron
+		foregrip_aug_reload
+		foregrip_aug_reload_eco
+
+		foregrip_m4_stand_ads_idle_iron
+		foregrip_m4_stand_ads_fire_iron
+		fp_m4_reload
+		foregrip_m4_reload
+		foregrip_m4_idle
+
+		fp_1911_stand_ads_idle_iron
+		fp_1911_stand_ads_fire_iron
+
+		fp_mac11_stand_ads_idle_iron
+		fp_mac11_stand_ads_fire_iron
+		fp_mac11_melee
+		fp_mac11_fire
+		fp_mac11_reload
+		fp_mac11_idle
+
+		HutchinsonA3_fire
+		HutchinsonA3_reload
+		HutchinsonA3_reload_start
+		HutchinsonA3_reload_cycle
+		HutchinsonA3_reload_end
+		HutchinsonA3_ads_fire
+
+		HutchinsonA4_fire
+		HutchinsonA4_reload
+		HutchinsonA4_ads_fire
+
+		ump_reload
+
+		mac11_reload
+		mac11_fire
+		mac11_fire_V1
+		mac11_fire_v2
+		mac11_idle
+		mac11_raise
+		mac11_drop
+
+		m14_reload
+
+		m14_sniper_fire
+		m14_sniper_idle
+		m14_sniper_lower
+		m14_sniper_raise
+		m14_sniper_reload
+		m14_sniper_reload_offscreen
+		m14_foregrip_fire
+		m14_foregrip_idle
+		m14_foregrip_reload
+
+		sw500_idle
+		sw500_fire
+		sw500_reload_offscreen
+		sw500_reload_0
+		sw500_reload_1
+		sw500_reload_2
+		sw500_reload_3
+		sw500_reload_4
+		sw500_raise
+		sw500_drop
+		sw500_reload_start
+		sw500_reload_end
+		sw500_ads_fire
+
+		scar_reload
+
+		aksu_reload
+		
+		1911_reload
+		1911_idle
+		1911_fire
+		1911_fire_V1
+		1911_fire_V2
+		1911_ads_fire
+		1911_drop
+		1911_raise
+
+		glock18_reload
+		glock18_idle
+		glock18_fire
+		glock18_fire_V1
+		glock18_fire_V2
+		glock18_ads_fire
+
+		rifle_idle
+		rifle_reload_offscreen
+		rifle_raise
+		rifle_lower
+		rifle_ads_fire
+
+		fp_wa2000_idle
+		fp_wa2000_stand_ads_idle_iron
+		fp_wa2000_stand_ads_fire_iron
+		fp_wa2000_reload
+
+		p99_stand_reload_empty
+		fp_p99_raise
+		fp_p99_drop
+		fp_p99_idle
+		fp_p99_fire
+		fp_p99_fire_V1
+		fp_p99_fire_v2
+		fp_p99_reload
+		fp_p99_melee
+		fp_p99_ads_fire
+		fp_p99_reload_offscreen
+		fp_p99_two_hand_raise
+		fp_p99_two_hand_drop
+		fp_p99_silencer_on
+		fp_p99_silencer_off
+		fp_p99_raise_bolt
+		fp_p99_idle_test
+		fp_p99_slilencer_on
+		fp_p99_slilencer_off
+		
+		fp_phone_fire
+		fp_phone_drop
+		fp_phone_idle
+		fp_phone_raise
+
+		fp_phone_p99_idle
+		fp_phone_p99_fire
+		fp_phone_p99_drop
+		fp_phone_p99_raise
+		fp_phone_p99_reload
+
+		mp_05_reload
+
+		m32_reload_start
+		m32_reload
+		m32_reload_end
+		m32_fire
+
+		m60_idle	
+		m60_reload
+		m60_fire
+		m60_ads_fire
+		m60_raise
+		m60_drop
+
+		wa2000_idle
+		wa2000_reload
+		wa2000_fire
+		wa2000_foregrip_idle
+		wa2000_foregrip_reload
+		wa2000_foregrip_fire
+		wa2000_foregrip_raise
+		wa2000_foregrip_lower
+
+		vtak_idle
+		vtak_fire
+		vtak_reload
+		vtak_foregrip_idle
+		vtak_foregrip_fire
+		vtak_foregrip_reload
+
+		pt_rifle_raise
+		pt_rifle_drop
+		pt_rifle_idle
+		pt_rifle_fire
+		pt_rifle_reload
+		pt_rifle_melee
+
+		pt_pistol_raise
+		pt_pistol_drop
+		pt_pistol_idle
+		pt_pistol_fire
+		pt_pistol_reload
+		pt_pistol_melee
+
+		fp_unarmed_idle_test
+		fp_unarmed_idle
+		fp_unarmed_walk
+		fp_unarmed_run
+
+		// Temp placeholder anims
+		pt_chicken_dance		 // Animation which indicates another animation is not completed yet
+		pt_chicken_dance_crouch // ditto for this one
+	
+		
+
+	
+		//
+		// Shooting anims
+		//
+		
+		pt_stand_shoot
+		pt_stand_shoot_auto
+		pt_stand_shoot_ads
+		pt_stand_shoot_auto_ads
+		pt_crouch_shoot
+		pt_crouch_shoot_auto
+		pt_crouch_shoot_ads
+		pt_crouch_shoot_auto_ads
+	
+		pt_stand_shoot_pistol
+		pt_stand_shoot_ads_pistol
+		pt_crouch_shoot_pistol
+		pt_crouch_shoot_ads_pistol
+
+		// Pistol needs aim/alert torso animations for use with regular lower body animations.
+		pt_stand_ads_pistol
+		pt_crouch_alert_pistol
+		pt_crouch_ads_pistol
+
+		fp_gnad_stand_pull_pin
+		fp_gnad_stand_throw
+		
+		pt_crouch_grenade_throw
+		pt_stand_stickgrenade_throw
+		pt_prone_grenade_throw
+		pt_prone_grenade_pullpin
+		pt_rifle_fire_prone
+		pt_rifle_fire_ads
+		pt_crouch_rifle_fire_ads
+		pt_crouch_rifle_fire
+
+		//
+		// Reload anims
+		//
+		
+		pt_reload_crouch_pistol
+		pt_reload_stand_pistol
+		pt_reload_prone_pistol
+		
+		pt_reload_crouch_rifle
+		pt_reload_stand_rifle
+		pt_reload_prone_rifle
+		pt_reload_stand_auto
+		pt_reload_stand_auto_mp40
+		pt_reload_stand_auto_fg42
+		pt_reload_stand_auto_sten
+		pt_reload_prone_auto
+		
+		//
+		// Prone anims
+		//
+	
+		pt_prone_shoot
+		pt_prone_shoot_pistol
+		pt_prone_shoot_auto
+	
+		//
+		// Melee anims
+		//
+	
+		pt_melee_right2right_1
+		pt_melee_right2right_2
+		pt_melee_right2left
+		pt_melee_left2left_1
+		pt_melee_left2right
+
+		pt_melee_crouch_left2left
+		pt_melee_crouch_left2right
+		pt_melee_crouch_right2left
+
+		pt_melee_pistol_1
+		pt_melee_pistol_2
+		pt_melee_pistol_3
+		pt_melee_pistol_4
+
+		pt_melee_prone
+		pt_melee_prone_pistol
+
+		//
+		// pullout poses
+		//
+	
+		pt_crouch_pullout_pose
+		pt_stand_pullout_pose
+		pt_prone_pullout_pose
+
+		// shellshock anims
+		pb_stand_shellshock
+		pb_crouch_shellshock
+
+		//
+		// Flinch
+		//
+
+		pb_flinch_back
+
+		pt_flinch_forward			// PI - RIFLE
+		pt_flinch_back
+		pt_flinch_left
+		pt_flinch_right
+		pt_flinch_pistol_left		// PI - PISTOL
+		pt_flinch_pistol_forward
+		pt_flinch_pistol_back
+		pt_flinch_pistol_right
+		pt_flinch_grenade_right
+		pt_flinch_grenade_left
+		pt_flinch_grenade_forward
+		pt_flinch_grenade_back
+
+		//
+		// AK74 anims
+		//
+
+		//
+		// P99 anims
+		//
+	}
+	
+	//
+	// Legs Animations (also full body anims)
+	//
+	legs
+	{
+		pb_stand_idle_unarmed
+		pb_stand_walk_fore_unarmed
+		pb_stand_walk_back_unarmed
+		pb_stand_run_fore_unarmed
+		
+		pl_crouch_idle
+
+		pl_crouch_walk_right
+		pl_crouch_walk_fore_right
+		pl_crouch_walk_fore
+		pl_crouch_walk_fore_left
+		pl_crouch_walk_left
+		pl_crouch_walk_back_left
+		pl_crouch_walk_back
+		pl_crouch_walk_back_right
+
+		pl_stand_idle
+		pl_stand_jump
+
+		pl_stand_walk_right
+		pl_stand_walk_fore_right
+		pl_stand_walk_fore
+		pl_stand_walk_fore_left
+		pl_stand_walk_left
+		pl_stand_walk_back_left
+		pl_stand_walk_back
+		pl_stand_walk_back_right
+
+		pl_stand_run_right
+		pl_stand_run_fore_right
+		pl_stand_run_fore
+		pl_stand_run_fore_left
+		pl_stand_run_left
+		pl_stand_run_back_left
+		pl_stand_run_back
+		pl_stand_run_back_right
+
+
+		//Nerve Additions
+		
+		mp_pl_stand_idle
+		mp_pl_stand_jump
+		mp_pl_stand_jump_back
+		
+		mp_pl_stand_run_right
+		mp_pl_stand_run_forward_right
+		mp_pl_stand_run_forward
+		mp_pl_stand_run_forward_left
+		mp_pl_stand_run_left
+		mp_pl_stand_run_back_left
+		mp_pl_stand_run_back
+		mp_pl_stand_run_back_right
+		
+		mp_pl_stand_walk_right
+		mp_pl_stand_walk_forward_right
+		mp_pl_stand_walk_forward
+		mp_pl_stand_walk_forward_left
+		mp_pl_stand_walk_left
+		mp_pl_stand_walk_back_left
+		mp_pl_stand_walk_back
+		mp_pl_stand_walk_back_right
+		
+		mp_pl_crouch_idle
+		mp_pl_crouch_walk_right
+		mp_pl_crouch_walk_forward_right
+		mp_pl_crouch_walk_forward
+		mp_pl_crouch_walk_forward_left
+		mp_pl_crouch_walk_left
+		mp_pl_crouch_walk_back_left
+		mp_pl_crouch_walk_back
+		mp_pl_crouch_walk_back_right
+		
+		mp_pl_crouch_turn_left
+		mp_pl_crouch_turn_right
+		
+		mp_pl_stand_turn_left
+		mp_pl_stand_turn_right
+		
+		//
+		// Idle anims
+		//
+		
+		pb_phone_idle
+	
+		pb_chicken_dance		 // Animation which indicates another animation is not completed yet
+		pb_chicken_dance_crouch // ditto for this one
+	
+		pb_stand__shoot_ads_pistol
+		
+		pb_prone_bombplant
+		pb_stand_bombplant
+		
+		pb_stand_bombdefuse
+		
+		pb_revive_raise
+		pb_revive_kick
+
+		//Nerve Additions
+
+		fp_phone_mp_interact_raise
+		fp_phone_mp_interact_idle
+		fp_phone_mp_interact_drop
+
+		// Nerve torso 3rd person anims
+		mp_pb_fg_crouch_idle
+		mp_pb_p99_crouch_idle
+		
+		mp_pb_p99_stand_jump_back
+		mp_pb_p99_stand_jump_forward
+		mp_pb_fg_stand_jump_back
+		mp_pb_fg_stand_jump_forward
+		
+		mp_pb_fg_stand_land
+		mp_pb_p99_stand_land
+		
+		mp_pb_p99_stand_sprint
+		mp_pb_p99_stand_run_forward
+		mp_pb_p99_stand_run_forward_left
+		mp_pb_p99_stand_run_forward_right
+		mp_pb_p99_stand_run_back
+		mp_pb_p99_stand_run_back_left
+		mp_pb_p99_stand_run_back_right
+		mp_pb_p99_stand_run_right
+		mp_pb_p99_stand_run_left
+		
+		
+		mp_pb_fg_stand_sprint
+		mp_pb_fg_stand_run_forward
+		mp_pb_fg_stand_run_forward_left
+		mp_pb_fg_stand_run_forward_right
+		mp_pb_fg_stand_run_back
+		mp_pb_fg_stand_run_back_left
+		mp_pb_fg_stand_run_back_right
+		mp_pb_fg_stand_run_right
+		mp_pb_fg_stand_run_left
+		
+		mp_pb_p99_stand_walk_forward
+		mp_pb_p99_stand_walk_forward_left
+		mp_pb_p99_stand_walk_forward_right
+		mp_pb_p99_stand_walk_back
+		mp_pb_p99_stand_walk_back_left
+		mp_pb_p99_stand_walk_back_right
+		mp_pb_p99_stand_walk_right
+		mp_pb_p99_stand_walk_left
+	
+		
+		mp_pb_fg_stand_walk_forward
+		mp_pb_fg_stand_walk_forward_left
+		mp_pb_fg_stand_walk_forward_right
+		mp_pb_fg_stand_walk_back
+		mp_pb_fg_stand_walk_back_left
+		mp_pb_fg_stand_walk_back_right
+		mp_pb_fg_stand_walk_right
+		mp_pb_fg_stand_walk_left
+		
+		mp_pb_fg_crouch_walk_forward
+		mp_pb_fg_crouch_walk_forward_left
+		mp_pb_fg_crouch_walk_forward_right
+		mp_pb_fg_crouch_walk_back
+		mp_pb_fg_crouch_walk_back_left
+		mp_pb_fg_crouch_walk_back_right
+		mp_pb_fg_crouch_walk_right
+		mp_pb_fg_crouch_walk_left
+		
+		mp_pb_p99_crouch_walk_forward
+		mp_pb_p99_crouch_walk_forward_left
+		mp_pb_p99_crouch_walk_forward_right
+		mp_pb_p99_crouch_walk_back
+		mp_pb_p99_crouch_walk_back_left
+		mp_pb_p99_crouch_walk_back_right
+		mp_pb_p99_crouch_walk_right
+		mp_pb_p99_crouch_walk_left
+
+		
+		
+		mp_pb_melee_01
+		mp_pb_melee_02
+		mp_pb_melee_03
+		
+
+
+		// Phone Anims
+		fp_phone_stylus
+		fp_phone_stylus_raise
+		fp_phone_stylus_drop
+		fp_phone_download
+		fp_phone_download_raise
+		fp_phone_download_drop
+		fp_phone_panel
+		fp_phone_panel_raise
+		fp_phone_panel_drop
+		fp_phone_take_photo
+		pb_security_lock
+
+		//
+		// Movement anims
+		//
+
+		pb_run_rifle
+		pb_run_smg
+		pb_run_heavy
+		pb_run_forward_m
+		pb_run_right_m
+		pb_run_left_m
+		pb_run_back_m
+		
+		pb_crouchwalk_loop
+		
+		pb_sprint_pistol
+		pb_sprint_foregrip
+		
+		pb_runjump_land
+		pb_standjump_land
+		pb_runjump_land_pistol
+		pb_standjump_land_pistol
+		
+		pb_walk_right					// these have the gun down like in the idle...
+		pb_walk_left
+		pb_walk_back
+		
+		pb_pull_stand_intro
+		pb_pull_stand_loop
+		pb_pull_stand_end
+
+//		pb_wounded_walk_loop // the temp ladder climbing anim
+
+		// 
+		// Door Anims
+		//
+		
+		fp_door_open_generic
+		fp_stnd_door_push_knob
+		fp_stnd_door_bash
+
+		//
+		// Ladder Climbing anims
+		//
+		
+		pb_ladder_climb_down
+		pb_ladder_climb_down_idle
+		pb_ladder_climb_up
+		pb_ladder_slide_down
+		pb_ladder_get_off_bottom
+		pb_ladder_get_off_top
+		pb_ladder_get_on_bottom
+		pb_ladder_get_on_top
+	
+		//
+		// Ledge anims
+		//
+		pb_ledge_2_mantle_left
+		pb_ledge_2_mantle_right
+		pb_ledge_die
+		pb_ledge_idle
+		pb_ledge_left_idle
+		pb_ledge_right_idle
+		pb_ledge_peek_left_idle
+		pb_ledge_peek_right_idle
+		pb_ledge_peek_left
+		pb_ledge_peek_right
+		pb_ledge_strafe_left
+		pb_ledge_strafe_right
+		pb_ledge_dash_left_60
+		pb_ledge_dash_right_60
+		pb_ledge_to_ledge_left
+		pb_ledge_to_ledge_right
+
+		//
+		// Pipe Climbing anims
+		//
+		
+		pb_climb_pipe_up
+		pb_climb_pipe_down
+		pb_climb_pipe_down_idle
+		pb_climb_pipe_slide_down
+		pb_climb_pipe_approach_top
+		pb_climb_pipe_depart_top
+		pb_climb_pipe_approach_bottom
+		pb_climb_pipe_depart_bottom
+	
+		// Wall Hugging anims
+		pb_wallhug_idle
+		pb_wallhug_strafe_left
+		pb_wallhug_strafe_right
+		pb_wallhug_dash_left_60
+		pb_wallhug_dash_right_60
+		
+		// Beam anims
+		pb_beam_idle
+		pb_beam_idle_wobble
+		pb_beam_idle_wobble_left
+		pb_beam_idle_wobble_right
+		pb_beam_walk_fore
+		pb_beam_walk_fore_wobble_left
+		pb_beam_walk_fore_wobble_right
+
+		pb_beam_walk_back
+		pb_beam_turn_180_left
+		pb_beam_turn_180_right
+		
+		pb_beam_fall_left
+		pb_beam_fall_right
+		pb_beam_idle_wobble_left_extreme
+		pb_beam_idle_wobble_left_slight
+		pb_beam_idle_wobble_right_extreme
+		pb_beam_idle_wobble_right_slight
+		pb_beam_run_fore
+		pb_beam_run_fore_fall_left
+		pb_beam_run_fore_fall_right
+		pb_beam_run_fore_wobble_left_extreme
+		pb_beam_run_fore_wobble_left_slight
+		pb_beam_run_fore_wobble_right_extreme
+		pb_beam_run_fore_wobble_right_slight
+		pb_beam_sprint_fore
+
+//		pb_crouch_grenade_throw
+		
+		//
+		// Prone anims
+		//
+	
+		pb_prone_crawl
+		pb_prone_grenade_crawl
+		pb_prone_crawl_left
+		pb_prone_crawl_right
+		pb_prone_crawl_back
+		pb_prone_aim
+		pb_prone_aim_pistol
+		pb_prone_aim_grenade
+		pb_prone_grenade_crawl_left
+		pb_prone_grenade_crawl_right
+		pb_prone_crawl_pistol
+		pb_prone_crawl_pistol_back
+		pb_prone_pistol_crawl_left
+		pb_prone_pistol_crawl_right
+		pb_prone_grenade_crawl_back
+		pb_crouch2prone
+		pb_prone2crouch
+
+		// 
+		// Mantle anims
+		//
+		
+		pb_mantle_2_ledge_right
+		pb_mantle_2_ledge_left
+		pb_mantle_44_stand_over_short
+		pb_mantle_44_stand_over_long
+		pb_mantle_44_stand_on
+		pb_mantle_40_cover_right_over_short
+		pb_mantle_40_cover_right_over_long
+		pb_mantle_40_cover_right_on
+		pb_mantle_40_cover_left_over_short
+		pb_mantle_40_cover_left_over_long
+		pb_mantle_40_cover_left_on
+
+		pb_mantle_on_40
+		pb_mantle_over_40
+		pb_mantle_on_44
+		pb_mantle_over_44
+		pb_mantle_on_56
+		pb_mantle_over_long
+		pb_mantle_ledge_right
+		pb_traverse_on_ladder
+		
+		sc_bond_ledgepipe_pistol
+
+		qk_s_s_grbpnch_bond_a_mp
+		qk_s_s_grbpnch_thug_a_mp
+		qk_s_s_neck_break_bond_a_mp
+		qk_s_s_neck_break_thug_a_mp
+		qk_s_s_necksnap_thug_a_mp
+		qk_s_s_necksnap_bond_b_mp
+		qk_s_s_necksnap_bond_c_mp
+		qk_s_s_necksnap_bond_d_mp
+		qk_s_s_necksnap_bond_e_mp
+
+		// Nerve Addition
+		mp_qk_forward_01_attack
+		mp_qk_forward_01_victim
+		mp_qk_forward_block_01_attack
+		mp_qk_forward_block_01_defend
+		mp_qk_rear_01_attack
+		mp_qk_rear_01_victim
+		mp_qk_rear_block_01_attack
+		mp_qk_rear_block_01_defend
+		mp_qk_step_left
+		mp_qk_step_right
+				
+		mp_pb_mantle_over_44
+		mp_pb_mantle_on_44
+		mp_pb_mantle_on_56
+		mp_pb_mantle_over_long_44
+		
+		//
+		// Death
+		//
+	
+		// prone
+		pb_prone_death_quickdeath
+		// Crouch run
+		pb_crouchrun_death_drop
+		pb_crouchrun_death_crumple
+		// stand
+		pb_stand_death_spin
+		pb_stand_death_legs
+		pb_stand_death_lowerback
+		pb_stand_death_lowertorso
+		pb_stand_death_head_collapse
+		pb_stand_death_neckdeath_thrash
+		pb_stand_death_neckdeath				
+		pb_stand_death_nervedeath			
+		pb_stand_death_frontspin			// Hit from front in head, upper chest or right shoulder.
+		pb_stand_death_headchest_topple	// Hit in head or chest from any direction.  Falls back, one leg goes up.		
+		// run
+		pb_death_run_forward_crumple
+		pb_death_run_onfront
+		pb_death_run_stumble
+		pb_death_run_back
+		pb_death_run_left
+		pb_death_run_right
+		mp_shotgun_death_back
+		mp_shotgun_death_front
+		mp_shotgun_death_left
+		mp_shotgun_death_right
+
+	
+		//
+		// Stumble
+		//
+
+		pb_stumble_forward			// RUNNING
+		pb_stumble_back
+		pb_stumble_left
+		pb_stumble_right
+		pb_stumble_walk_forward		// WALKING
+		pb_stumble_walk_back
+		pb_stumble_walk_left
+		pb_stumble_walk_right
+
+		pb_stumble_pistol_walk_right	// WALKING w/pistol
+		pb_stumble_pistol_walk_left
+		pb_stumble_pistol_walk_forward
+		pb_stumble_pistol_walk_back
+		pb_stumble_pistol_right			// RUNNING w/pistol
+		pb_stumble_pistol_left
+		pb_stumble_pistol_forward
+		pb_stumble_pistol_back
+
+		pb_stumble_grenade_right
+		pb_stumble_grenade_left
+		pb_stumble_grenade_forward
+		pb_stumble_grenade_back
+
+
+		//
+		// Pain
+		//		
+		
+		// prone
+		pb_prone_painA_holdchest
+		pb_prone_painB_holdhead
+		
+		// Crouch run
+//		crouchrun_painfall
+	
+		// Crouch
+//		crouch_pain_fallToGround		// Shot from front, backs back and slightly right.
+//		pb_crouch_pain_holdStomach			// Shot in torso.
+//		crouch_pain_crouch2crawl_ktwist	// extended pain. Ends in crawl (backwards).
+//		crouch_pain_crouch2crawl_grabhead	// extended pain. Ends in crawl (backwards).
+//		crouch_pain_crouch2crawl_back	// Shot from behind, falls forward to crawl.
+		
+		// Stand
+//		stand_pain_leghit				// Shot in leg, falls to ground, writhes, up to crouch
+//		stand_pain_fallToHand			// Shot in torso? falls to left hand, up to crouch
+//		stand_pain_hunch				// Shot in stomach, turns left and then straight.  Ends in crouch.
+//		stand_pain_stand2crawl_stumbleback	// extended pain.  Ends in crawl.
+	
+//		minorpain_head_front
+//		minorpain_head_back
+//		minorpain_head_left
+//		minorpain_head_right
+//			pb_minorpain_chest_front
+//		minorpain_chest_back
+//		minorpain_chest_left
+//		minorpain_chest_right
+//		minorpain_leftarm_front
+//		minorpain_leftarm_back
+//		minorpain_leftarm_left
+//		minorpain_leftarm_right
+//		minorpain_rightarm_front
+//		minorpain_rightarm_back
+//		minorpain_rightarm_left
+//		minorpain_rightarm_right
+	}
+}
+
+//
+// Turning animations (played on the legs, but handled seperatly)
+//
+turning
+{
+	pl_crouch_turn_left
+	pl_crouch_turn_right
+	pl_stand_turn_left
+	pl_stand_turn_right
+}
+
+
+///////////////////////////////////
+//Begin Level Specific Animations//
+///////////////////////////////////
+
+casino_poison
+{
+	Pbond_StaggerWalk
+	Pbond_StaggerFall
+	Pbond_ThroatStrike
+	Pbond_StumbleRight
+	Pbond_Stagger2WallSteady
+	Pbond_SaltGrab
+	Pbond_StumbleLeft
+	Pbond_DrinkSpill
+	Pbond_ChairExitStumble
+	Pbond_DoubleDoorOpen
+	Pbond_RailingStumble
+	Pbond_ParkedCarHit
+}
+
+barge
+{
+	Temp_Bond_Get_Up
+}

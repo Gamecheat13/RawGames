@@ -1,0 +1,56 @@
+# The file is broken into the CPU section followed by the GPU section.,,,,,
+"# The first two columns of the CPU section must be ""cpu mhz"" then ""sys mb"".,,,,,"
+"# The first column of the GPU section must be ""gpu"".  This triggers the start of the GPU section.,,,,,"
+# Each subsequent column header in both sections is a dvar name.,,,,,
+# In the CPU section, each dvar gets the value listed in its column for the row of the system settings that most closely match the current machine, without going over,,,,,
+# In the GPU section, each dvar gets the value listed in its column for the row of the first GPU string to match.,,,,,
+# For GPU names, spaces are treated as wildcards that match any sequence of 0 or more non-numeric characters.  You can use * to match 0 or more of any character, or ? to match any single character.,,,,,
+
+
+
+
+cpu ghz,sys mb,mss_khz,fx_sort,ai_corpseCount,g_useGear
+
+0,128,11,0,5,0
+0,256,22,0,5,0
+0,512,44,0,5,0
+
+2,128,11,1,10,1,,,,,,,
+2,256,22,1,10,1,,,,,,,
+2,512,44,1,10,1,,,,,,,
+
+
+
+gpu,r_mode,r_rendererPreference,sf_bx_alt_vid_quality,r_aaSamples,r_vsync,sm_enable,r_dlightLimit,r_picmip_manual,r_picmip,r_picmip_bump,r_picmip_spec,r_lodScaleParam,fx_marks
+
+GeForce 66*,800x600,Shader model 2.0,0,1,1,0,4,0,0,0,0,1,0
+GeForce 68*,800x600,Shader model 2.0,0,1,1,0,4,0,0,0,0,1,0
+GeForce 6*,800x600,Shader model 2.0,1,1,1,0,4,0,0,0,0,0,0
+GeForce 79*,1024x768,Shader model 2.0,0,2,1,0,4,0,0,0,0,1,1
+GeForce 7*,800x600,Shader model 2.0,0,2,1,0,4,0,0,0,0,0,1
+GeForce 88*,1280x1024,Shader model 3.0,0,4,1,1,4,0,0,0,0,2,1
+GeForce 8*,1024x768,Shader model 2.0,0,2,1,0,4,0,0,0,0,1,1
+GeForce 9*,1280x1024,Shader model 3.0,0,4,1,1,4,0,0,0,0,2,1
+GeForce G*,800x600,Shader model 3.0,0,4,1,1,4,0,0,0,0,2,1
+GeForce,800x600,Shader model 2.0,1,1,1,0,4,0,0,0,0,0,0
+
+Radeon 98* XT,800x600,Shader model 2.0,1,4,1,0,4,0,0,0,0,0,0
+Radeon 98*,800x600,Shader model 2.0,1,1,1,0,4,0,0,0,0,0,0
+Radeon 97*,800x600,Shader model 2.0,1,2,0,0,4,0,0,0,0,0,0
+Radeon X3*,800x600,Shader model 2.0,1,1,0,0,0,0,0,0,0,0,0
+Radeon X13*,800x600,Shader model 2.0,1,1,0,0,4,0,0,0,0,0,1
+Radeon X15*,800x600,Shader model 2.0,1,1,0,0,4,0,0,0,0,0,1
+Radeon X16*,800x600,Shader model 2.0,1,1,0,0,4,0,0,0,0,0,1
+Radeon X5*,800x600,Shader model 2.0,1,1,1,0,4,0,0,0,0,0,1
+Radeon X6*,800x600,Shader model 2.0,1,1,1,0,4,0,0,0,0,0,0
+Radeon X7*,800x600,Shader model 2.0,1,1,1,0,4,0,0,0,0,0,1
+Radeon X8*,1024x768,Shader model 2.0,0,2,1,0,4,0,0,0,0,1,1
+Radeon X18*,1024x768,Shader model 2.0,0,2,1,0,4,0,0,0,0,1,1
+Radeon X19*,1024x768,Shader model 2.0,0,2,1,0,4,0,0,0,0,1,1
+Radeon X*,800x600,Shader model 2.0,1,1,0,0,0,0,0,0,0,0,0
+Radeon HD 2900 X*,1024x768,Shader model 3.0,0,2,1,1,4,0,0,0,0,2,1
+Radeon HD 2*,1024x768,Shader model 2.0,0,2,1,0,4,0,0,0,0,1,1
+Radeon HD*,1024x768,Shader model 3.0,0,4,1,1,4,0,0,0,0,2,1
+Radeon,800x600,Shader model 2.0,1,1,0,0,1,0,0,0,0,0,0
+
+*,800x600,Shader model 2.0,1,1,0,0,4,0,0,0,0,0,0

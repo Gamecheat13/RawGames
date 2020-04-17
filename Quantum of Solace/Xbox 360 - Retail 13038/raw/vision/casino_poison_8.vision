@@ -1,0 +1,39 @@
+// Cammera fly through.  
+/*
+r_reviveFX_enable                     "1"
+r_reviveFX_contrastEdge           "2.84"
+r_reviveFX_brightnessEdge       "0.264"
+r_reviveFX_desaturationEdge    "1"
+r_reviveFX_darkTintEdge           "0.931 0.955 0.939"
+r_reviveFX_lightTintEdge           "1 1.03 1.02"
+r_reviveFX_blurRadiusEdge      "6.4"
+
+r_reviveFX_contrastCenter         "1.9"
+r_reviveFX_brightnessCenter      "0.234"
+r_reviveFX_desaturationCenter   "0.845"  
+r_reviveFX_darkTintCenter          "0.978 1.01 0.975"
+r_reviveFX_lightTintCenter          "1.02 1 0.99"
+
+r_reviveFX_highThreshold			"0.4"
+r_reviveFX_lowThreshold				"0.0"
+*/
+
+r_reviveFX_enable                     "1"
+r_reviveFX_contrastEdge           "2.84"
+r_reviveFX_brightnessEdge       "0.86"
+r_reviveFX_desaturationEdge    "1.00" // .15
+r_reviveFX_darkTintEdge           "0.33 0.23 0.12"
+r_reviveFX_lightTintEdge           "1.8 2.0 2.0"
+r_reviveFX_blurRadiusEdge       "6.4"
+
+r_reviveFX_contrastCenter         "1.9"
+r_reviveFX_brightnessCenter      "0.5"
+r_reviveFX_desaturationCenter   "0.95" 
+//r_reviveFX_darkTintCenter          "0.97 1.0 0.97"
+//r_reviveFX_lightTintCenter          "1.56 1.57 1.69"
+
+r_reviveFX_darkTintCenter          "0.978 1.01 0.975"
+r_reviveFX_lightTintCenter          "1.02 1 0.99"
+
+r_reviveFX_highThreshold			"0.4"
+r_reviveFX_lowThreshold				"0.0"
