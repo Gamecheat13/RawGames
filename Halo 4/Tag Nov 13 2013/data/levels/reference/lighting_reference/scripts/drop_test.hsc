@@ -1,0 +1,86 @@
+(global vehicle v_sur_drop_01 NONE)
+(global vehicle v_sur_drop_02 NONE)
+
+(script startup lighting_reference_mark
+	(print "drop pod test")
+)
+
+(script static void test_squad_drop
+                
+                (print "cleaning up drop pods...")
+                (sleep 1)
+                (ai_erase sq_sur_drop_01)
+                (sleep 30)
+                (drop_pod_01)
+)
+
+(script static void drop_pod_01
+                (sleep (random_range 5 15))
+                (print "squad pod 01...")
+                (object_create dm_drop_01)
+                (ai_place sq_sur_drop_01)
+                (sleep 1)
+                (set v_sur_drop_01 (ai_vehicle_get_from_spawn_point sq_sur_drop_01/driver))
+                (sleep 1)
+                (objects_attach dm_drop_01 "" v_sur_drop_01 "")
+                (sleep 1)
+                (device_set_position dm_drop_01 1)
+                (sleep 30)
+                (sound_impulse_start "sound\device_machines\040vc_longsword\crash" dm_drop_01 1)
+                (sleep_until (>= (device_get_position dm_drop_01) 1) 1)
+                (sleep 1)
+                (objects_detach dm_drop_01 v_sur_drop_01)
+                (object_destroy dm_drop_01)
+                (sleep 1)
+                (f_callout_object v_sur_drop_01 14)
+                (unit_open v_sur_drop_01)
+                (print "kicking ai out of pod 01...")
+                (vehicle_unload v_sur_drop_01 "")
+)
+
+(script static void test_elite_drop
+                
+                (print "cleaning up drop pods...")
+                (sleep 1)
+                (ai_erase sq_sur_drop_02)
+                (sleep 30)
+                (drop_pod_02)
+)
+
+(script static void drop_pod_02
+                (sleep (random_range 5 15))
+                (print "squad pod 01...")
+                (object_create dm_drop_02)
+                (ai_place sq_sur_drop_02)
+                (sleep 1)
+                (set v_sur_drop_02 (ai_vehicle_get_from_spawn_point sq_sur_drop_02/passenger))
+                (sleep 1)
+                (objects_attach dm_drop_02 "" v_sur_drop_02 "")
+                (sleep 1)
+                (device_set_position dm_drop_02 1)
+                (sleep 30)
+                (sound_impulse_start "sound\device_machines\040vc_longsword\crash" dm_drop_02 1)
+                (sleep_until (>= (device_get_position dm_drop_02) 1) 1)
+                (sleep 1)
+                (objects_detach dm_drop_02 v_sur_drop_02)
+                (object_destroy dm_drop_02)
+                (sleep 1)
+                ;(v_sur_drop_02 14)
+                (unit_open v_sur_drop_02)
+                (print "kicking ai out of pod 01...")
+                (vehicle_unload v_sur_drop_02 "")
+)
+
+(script static void first_3_a
+								(device_set_position_track temp01 mp_boneyard_a_idle_start 0)
+								(device_animate_position temp01 1 10 0 0 false)
+								(sleep 900)
+								(device_set_position_track temp01 mp_boneyard_a_fly_in 0)
+								(device_animate_position temp01 1 10 0 0 false)
+								(sleep 900)
+						    (device_set_position_track temp01 mp_boneyard_a_idle_mid 0)
+								(device_animate_position temp01 1 10 0 0 false)
+								(sleep 900)
+
+
+)
