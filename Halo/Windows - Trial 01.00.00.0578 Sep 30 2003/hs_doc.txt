@@ -1,0 +1,1534 @@
+(begin <expression(s)>)
+returns the last expression in a sequence after evaluating the sequence in order.
+
+(begin_random <expression(s)>)
+evaluates the sequence of expressions in random order and returns the last value evaluated.
+
+(if <boolean> <then> [<else>])
+returns one of two values based on the value of a condition.
+
+(cond (<boolean1> <result1>) [(<boolean2> <result2>) [...]])
+returns the value associated with the first true condition.
+
+(set <variable name> <expression>)
+set the value of a global variable.
+
+(and <boolean(s)>)
+returns true if all specified expressions are true.
+
+(or <boolean(s)>)
+returns true if any specified expressions are true.
+
+(+ <number(s)>)
+returns the sum of all specified expressions.
+
+(- <number> <number>)
+returns the difference of two expressions.
+
+(* <number(s)>)
+returns the product of all specified expressions.
+
+(/ <number> <number>)
+returns the quotient of two expressions.
+
+(min <number(s)>)
+returns the minimum of all specified expressions.
+
+(max <number(s)>)
+returns the maximum of all specified expressions.
+
+(= <expression> <expression>)
+returns true if two expressions are equal
+
+(!= <expression> <expression>)
+returns true if two expressions are not equal
+
+(> <number> <number>)
+returns true if the first number is larger than the second.
+
+(< <number> <number>)
+returns true if the first number is smaller than the second.
+
+(>= <number> <number>)
+returns true if the first number is larger than or equal to the second.
+
+(<= <number> <number>)
+returns true if the first number is smaller than or equal to the second.
+
+(sleep <short> [<script>])
+pauses execution of this script (or, optionally, another script) for the specified number of ticks.
+
+(sleep_until <boolean> [<short>])
+pauses execution of this script until the specified condition is true, checking once per second unless a different number of ticks is specified.
+
+(wake <script name>)
+wakes a sleeping script in the next update.
+
+(inspect <expression>)
+prints the value of an expression to the screen for debugging purposes.
+
+(unit <object>)
+converts an object to a unit.
+
+(ai_debug_communication_suppress <string(s)>)
+suppresses (or stops suppressing) a set of AI communication types.
+
+(ai_debug_communication_ignore <string(s)>)
+ignores (or stops ignoring) a set of AI communication types when printing out communications.
+
+(ai_debug_communication_focus <string(s)>)
+focuses (or stops focusing) a set of unit vocalization types.
+
+(not <boolean>)
+
+
+(print <string>)
+
+
+(players)
+
+
+(volume_teleport_players_not_inside <trigger_volume> <cutscene_flag>)
+
+
+(volume_test_object <trigger_volume> <object>)
+
+
+(volume_test_objects <trigger_volume> <object_list>)
+
+
+(volume_test_objects_all <trigger_volume> <object_list>)
+
+
+(object_teleport <object> <cutscene_flag>)
+
+
+(object_set_facing <object> <cutscene_flag>)
+
+
+(object_set_shield <object> <real>)
+
+
+(object_set_permutation <object> <string> <string>)
+
+
+(object_create <object_name>)
+
+
+(object_destroy <object>)
+
+
+(object_create_anew <object_name>)
+
+
+(object_create_containing <string>)
+
+
+(object_create_anew_containing <string>)
+
+
+(object_destroy_containing <string>)
+
+
+(object_destroy_all)
+
+
+(list_get <object_list> <short>)
+
+
+(list_count <object_list>)
+
+
+(effect_new <effect> <cutscene_flag>)
+
+
+(effect_new_on_object_marker <effect> <object> <string>)
+
+
+(damage_new <damage> <cutscene_flag>)
+
+
+(damage_object <damage> <object>)
+
+
+(objects_can_see_object <object_list> <object> <real>)
+
+
+(objects_can_see_flag <object_list> <cutscene_flag> <real>)
+
+
+(objects_delete_by_definition <object_definition>)
+
+
+(sound_set_gain <string> <real>)
+
+
+(sound_get_gain <string>)
+
+
+(script_recompile)
+
+
+(script_doc)
+
+
+(help <string>)
+prints a description of the named function.
+
+(random_range <short> <short>)
+
+
+(real_random_range <real> <real>)
+
+
+(numeric_countdown_timer_set <long> <boolean>)
+
+
+(numeric_countdown_timer_get <short>)
+
+
+(numeric_countdown_timer_stop)
+
+
+(numeric_countdown_timer_restart)
+
+
+(breakable_surfaces_enable <boolean>)
+
+
+(recording_play <unit> <cutscene_recording>)
+
+
+(recording_play_and_delete <unit> <cutscene_recording>)
+
+
+(recording_play_and_hover <vehicle> <cutscene_recording>)
+
+
+(recording_kill <unit>)
+
+
+(recording_time <unit>)
+
+
+(object_set_ranged_attack_inhibited <object> <boolean>)
+
+
+(object_set_melee_attack_inhibited <object> <boolean>)
+
+
+(objects_dump_memory)
+
+
+(object_set_collideable <object> <boolean>)
+
+
+(object_set_scale <object> <real> <short>)
+
+
+(objects_attach <object> <string> <object> <string>)
+
+
+(objects_detach <object> <object>)
+
+
+(garbage_collect_now)
+
+
+(object_cannot_take_damage <object_list>)
+
+
+(object_can_take_damage <object_list>)
+
+
+(object_beautify <object> <boolean>)
+
+
+(objects_predict <object_list>)
+
+
+(object_type_predict <object_definition>)
+
+
+(object_pvs_activate <object>)
+
+
+(object_pvs_set_object <object>)
+
+
+(object_pvs_set_camera <cutscene_camera_point>)
+
+
+(object_pvs_clear)
+
+
+(render_lights <boolean>)
+
+
+(scenery_get_animation_time <scenery>)
+
+
+(scenery_animation_start <scenery> <animation_graph> <string>)
+
+
+(scenery_animation_start_at_frame <scenery> <animation_graph> <string> <short>)
+
+
+(render_effects <boolean>)
+
+
+(unit_can_blink <unit> <boolean>)
+
+
+(unit_open <unit>)
+
+
+(unit_close <unit>)
+
+
+(unit_kill <unit>)
+
+
+(unit_kill_silent <unit>)
+
+
+(unit_get_custom_animation_time <unit>)
+
+
+(unit_stop_custom_animation <unit>)
+
+
+(unit_custom_animation_at_frame <unit> <animation_graph> <string> <boolean> <short>)
+
+
+(custom_animation <unit> <animation_graph> <string> <boolean>)
+
+
+(custom_animation_list <object_list> <animation_graph> <string> <boolean>)
+
+
+(unit_is_playing_custom_animation <unit>)
+
+
+(unit_aim_without_turning <unit> <boolean>)
+
+
+(unit_set_emotion <unit> <short>)
+
+
+(unit_set_enterable_by_player <unit> <boolean>)
+
+
+(unit_enter_vehicle <unit> <vehicle> <string>)
+
+
+(vehicle_test_seat_list <vehicle> <string> <object_list>)
+
+
+(vehicle_test_seat <vehicle> <string> <unit>)
+
+
+(unit_set_emotion_animation <unit> <string>)
+
+
+(unit_exit_vehicle <unit>)
+
+
+(unit_set_maximum_vitality <unit> <real> <real>)
+
+
+(units_set_maximum_vitality <object_list> <real> <real>)
+
+
+(unit_set_current_vitality <unit> <real> <real>)
+
+
+(units_set_current_vitality <object_list> <real> <real>)
+
+
+(vehicle_load_magic <unit> <string> <object_list>)
+
+
+(vehicle_unload <unit> <string>)
+
+
+(magic_seat_name <string>)
+
+
+(unit_set_seat <unit> <string>)
+
+
+(magic_melee_attack)
+
+
+(vehicle_riders <unit>)
+
+
+(vehicle_driver <unit>)
+
+
+(vehicle_gunner <unit>)
+
+
+(unit_get_health <unit>)
+
+
+(unit_get_shield <unit>)
+
+
+(unit_get_total_grenade_count <unit>)
+
+
+(unit_has_weapon <unit> <object_definition>)
+
+
+(unit_has_weapon_readied <unit> <object_definition>)
+
+
+(unit_doesnt_drop_items <object_list>)
+
+
+(unit_impervious <object_list> <boolean>)
+
+
+(unit_suspended <unit> <boolean>)
+
+
+(unit_solo_player_integrated_night_vision_is_active)
+
+
+(units_set_desired_flashlight_state <object_list> <boolean>)
+
+
+(unit_set_desired_flashlight_state <unit> <boolean>)
+
+
+(unit_get_current_flashlight_state <unit>)
+
+
+(device_set_never_appears_locked <device> <boolean>)
+
+
+(device_get_power <device>)
+
+
+(device_set_power <device> <real>)
+
+
+(device_set_position <device> <real>)
+
+
+(device_get_position <device>)
+
+
+(device_set_position_immediate <device> <real>)
+
+
+(device_group_get <device_group>)
+
+
+(device_group_set <device_group> <real>)
+
+
+(device_group_set_immediate <device_group> <real>)
+
+
+(device_one_sided_set <device> <boolean>)
+
+
+(device_operates_automatically_set <device> <boolean>)
+
+
+(device_group_change_only_once_more_set <device_group> <boolean>)
+
+
+(breakable_surfaces_reset)
+
+
+(cheat_all_powerups)
+
+
+(cheat_all_weapons)
+
+
+(cheat_spawn_warthog)
+
+
+(cheat_all_vehicles)
+
+
+(cheat_teleport_to_camera)
+
+
+(cheat_active_camouflage)
+
+
+(cheat_active_camouflage_local_player <short>)
+
+
+(cheats_load)
+
+
+(ai_free <ai>)
+
+
+(ai_free_units <object_list>)
+
+
+(ai_attach <unit> <ai>)
+
+
+(ai_attach_free <unit> <actor_variant>)
+
+
+(ai_detach <unit>)
+
+
+(ai_place <ai>)
+
+
+(ai_kill <ai>)
+
+
+(ai_kill_silent <ai>)
+
+
+(ai_erase <ai>)
+
+
+(ai_erase_all)
+
+
+(ai_select <ai>)
+
+
+(ai_deselect)
+
+
+(ai_spawn_actor <ai>)
+
+
+(ai_set_respawn <ai> <boolean>)
+
+
+(ai_set_deaf <ai> <boolean>)
+
+
+(ai_set_blind <ai> <boolean>)
+
+
+(ai_magically_see_encounter <ai> <ai>)
+
+
+(ai_magically_see_players <ai>)
+
+
+(ai_magically_see_unit <ai> <unit>)
+
+
+(ai_timer_start <ai>)
+
+
+(ai_timer_expire <ai>)
+
+
+(ai_attack <ai>)
+
+
+(ai_defend <ai>)
+
+
+(ai_retreat <ai>)
+
+
+(ai_maneuver <ai>)
+
+
+(ai_maneuver_enable <ai> <boolean>)
+
+
+(ai_migrate <ai> <ai>)
+
+
+(ai_migrate_and_speak <ai> <ai> <string>)
+
+
+(ai_migrate_by_unit <object_list> <ai>)
+
+
+(ai_allegiance <team> <team>)
+
+
+(ai_allegiance_remove <team> <team>)
+
+
+(ai_living_count <ai>)
+
+
+(ai_living_fraction <ai>)
+
+
+(ai_strength <ai>)
+
+
+(ai_swarm_count <ai>)
+
+
+(ai_nonswarm_count <ai>)
+
+
+(ai_actors <ai>)
+
+
+(ai_go_to_vehicle <ai> <unit> <string>)
+
+
+(ai_go_to_vehicle_override <ai> <unit> <string>)
+
+
+(ai_going_to_vehicle <unit>)
+
+
+(ai_exit_vehicle <ai>)
+
+
+(ai_braindead <ai> <boolean>)
+
+
+(ai_braindead_by_unit <object_list> <boolean>)
+
+
+(ai_disregard <object_list> <boolean>)
+
+
+(ai_prefer_target <object_list> <boolean>)
+
+
+(ai_teleport_to_starting_location <ai>)
+
+
+(ai_teleport_to_starting_location_if_unsupported <ai>)
+
+
+(ai_renew <ai>)
+
+
+(ai_try_to_fight_nothing <ai>)
+
+
+(ai_try_to_fight <ai> <ai>)
+
+
+(ai_try_to_fight_player <ai>)
+
+
+(ai_command_list <ai> <ai_command_list>)
+
+
+(ai_command_list_by_unit <unit> <ai_command_list>)
+
+
+(ai_command_list_advance <ai>)
+
+
+(ai_command_list_advance_by_unit <unit>)
+
+
+(ai_command_list_status <object_list>)
+
+
+(ai_is_attacking <ai>)
+
+
+(ai_force_active <ai> <boolean>)
+
+
+(ai_force_active_by_unit <unit> <boolean>)
+
+
+(ai_set_return_state <ai> <ai_default_state>)
+
+
+(ai_set_current_state <ai> <ai_default_state>)
+
+
+(ai_playfight <ai> <boolean>)
+
+
+(ai_status <ai>)
+
+
+(ai_reconnect)
+
+
+(ai_vehicle_encounter <unit> <ai>)
+
+
+(ai_vehicle_enterable_distance <unit> <real>)
+
+
+(ai_vehicle_enterable_team <unit> <team>)
+
+
+(ai_vehicle_enterable_actor_type <unit> <actor_type>)
+
+
+(ai_vehicle_enterable_actors <unit> <ai>)
+
+
+(ai_vehicle_enterable_disable <unit>)
+
+
+(ai_look_at_object <unit> <object>)
+
+
+(ai_stop_looking <unit>)
+
+
+(ai_automatic_migration_target <ai> <boolean>)
+
+
+(ai_follow_target_disable <ai>)
+
+
+(ai_follow_target_players <ai>)
+
+
+(ai_follow_target_unit <ai> <unit>)
+
+
+(ai_follow_target_ai <ai> <ai>)
+
+
+(ai_follow_distance <ai> <real>)
+
+
+(ai_conversation <conversation>)
+
+
+(ai_conversation_stop <conversation>)
+
+
+(ai_conversation_advance <conversation>)
+
+
+(ai_conversation_line <conversation>)
+
+
+(ai_conversation_status <conversation>)
+
+
+(ai_link_activation <ai> <ai>)
+
+
+(ai_berserk <ai> <boolean>)
+
+
+(ai_set_team <ai> <team>)
+
+
+(ai_allow_charge <ai> <boolean>)
+
+
+(ai_allow_dormant <ai> <boolean>)
+
+
+(ai_allegiance_broken <team> <team>)
+
+
+(camera_control <boolean>)
+
+
+(camera_set <cutscene_camera_point> <short>)
+
+
+(camera_set_relative <cutscene_camera_point> <short> <object>)
+
+
+(camera_set_animation <animation_graph> <string>)
+
+
+(camera_set_first_person <unit>)
+
+
+(camera_set_dead <unit>)
+
+
+(camera_time)
+
+
+(debug_camera_load)
+
+
+(debug_camera_save)
+
+
+(game_speed <real>)
+
+
+(game_time)
+
+
+(game_variant <string>)
+
+
+(game_difficulty_get)
+
+
+(game_difficulty_get_real)
+
+
+(profile_service_clear_timers)
+
+
+(profile_service_dump_timers)
+
+
+(map_reset)
+
+
+(map_name <string>)
+
+
+(multiplayer_map_name <string>)
+
+
+(game_difficulty_set <game_difficulty>)
+
+
+(crash <string>)
+
+
+(switch_bsp <short>)
+
+
+(structure_bsp_index)
+
+
+(version)
+
+
+(playback)
+
+
+(quit)
+quits the game
+
+(texture_cache_flush)
+
+
+(sound_cache_flush)
+
+
+(sound_cache_dump_to_file)
+
+
+(debug_memory)
+
+
+(debug_memory_by_file)
+
+
+(debug_memory_for_file <string>)
+
+
+(debug_tags)
+
+
+(profile_reset)
+
+
+(profile_dump <string>)
+
+
+(profile_activate <string>)
+
+
+(profile_deactivate <string>)
+
+
+(profile_graph_toggle <string>)
+
+
+(ai <boolean>)
+
+
+(ai_dialogue_triggers <boolean>)
+
+
+(ai_grenades <boolean>)
+
+
+(ai_lines)
+
+
+(ai_debug_sound_point_set)
+
+
+(ai_debug_vocalize <string> <string>)
+
+
+(ai_debug_teleport_to <ai>)
+
+
+(ai_debug_speak <string>)
+
+
+(ai_debug_speak_list <string>)
+
+
+(fade_in <real> <real> <real> <short>)
+
+
+(fade_out <real> <real> <real> <short>)
+
+
+(cinematic_start)
+
+
+(cinematic_stop)
+
+
+(cinematic_abort)
+
+
+(cinematic_skip_start_internal)
+
+
+(cinematic_skip_stop_internal)
+
+
+(cinematic_show_letterbox <boolean>)
+
+
+(cinematic_set_title <cutscene_title>)
+
+
+(cinematic_set_title_delayed <cutscene_title> <real>)
+
+
+(cinematic_suppress_bsp_object_creation <boolean>)
+
+
+(attract_mode_start)
+
+
+(game_won)
+
+
+(game_lost)
+
+
+(game_safe_to_save)
+
+
+(game_all_quiet)
+
+
+(game_safe_to_speak)
+
+
+(game_is_cooperative)
+
+
+(game_save)
+
+
+(game_save_cancel)
+
+
+(game_save_no_timeout)
+
+
+(game_save_totally_unsafe)
+
+
+(game_saving)
+
+
+(game_revert)
+
+
+(game_reverted)
+
+
+(core_save)
+
+
+(core_save_name <string>)
+
+
+(core_load)
+
+
+(core_load_at_startup)
+
+
+(core_load_name <string>)
+
+
+(core_load_name_at_startup <string>)
+
+
+(game_skip_ticks <short>)
+
+
+(sound_impulse_predict <sound> <boolean>)
+
+
+(sound_impulse_start <sound> <object> <real>)
+
+
+(sound_impulse_time <sound>)
+
+
+(sound_impulse_stop <sound>)
+
+
+(sound_looping_predict <looping_sound>)
+
+
+(sound_looping_start <looping_sound> <object> <real>)
+
+
+(sound_looping_stop <looping_sound>)
+
+
+(sound_looping_set_scale <looping_sound> <real>)
+
+
+(sound_looping_set_alternate <looping_sound> <boolean>)
+
+
+(debug_sounds_enable <string> <boolean>)
+
+
+(debug_sounds_distances <string> <real> <real>)
+
+
+(debug_sounds_wet <string> <real>)
+
+
+(sound_enable <boolean>)
+
+
+(sound_set_master_gain <real>)
+
+
+(sound_get_master_gain)
+
+
+(sound_set_music_gain <real>)
+
+
+(sound_get_music_gain)
+
+
+(sound_set_effects_gain <real>)
+
+
+(sound_get_effects_gain)
+
+
+(sound_class_set_gain <string> <real> <short>)
+
+
+(vehicle_hover <vehicle> <boolean>)
+
+
+(players_unzoom_all)
+
+
+(player_enable_input <boolean>)
+
+
+(player_camera_control <boolean>)
+
+
+(player_action_test_reset)
+
+
+(player_action_test_jump)
+
+
+(player_action_test_primary_trigger)
+
+
+(player_action_test_grenade_trigger)
+
+
+(player_action_test_zoom)
+
+
+(player_action_test_action)
+
+
+(player_action_test_accept)
+
+
+(player_action_test_back)
+
+
+(player_action_test_look_relative_up)
+
+
+(player_action_test_look_relative_down)
+
+
+(player_action_test_look_relative_left)
+
+
+(player_action_test_look_relative_right)
+
+
+(player_action_test_look_relative_all_directions)
+
+
+(player_action_test_move_relative_all_directions)
+
+
+(player_add_equipment <unit> <starting_profile> <boolean>)
+
+
+(show_hud <boolean>)
+
+
+(show_hud_help_text <boolean>)
+
+
+(enable_hud_help_flash <boolean>)
+
+
+(hud_help_flash_restart)
+
+
+(activate_nav_point_flag <navpoint> <unit> <cutscene_flag> <real>)
+
+
+(activate_nav_point_object <navpoint> <unit> <object> <real>)
+
+
+(activate_team_nav_point_flag <navpoint> <team> <cutscene_flag> <real>)
+
+
+(activate_team_nav_point_object <navpoint> <team> <object> <real>)
+
+
+(deactivate_nav_point_flag <unit> <cutscene_flag>)
+
+
+(deactivate_nav_point_object <unit> <object>)
+
+
+(deactivate_team_nav_point_flag <team> <cutscene_flag>)
+
+
+(deactivate_team_nav_point_object <team> <object>)
+
+
+(cls)
+clears console text from the screen
+
+(connect <string> <string>)
+Attempt to connect to server - use ip:port password as parameters
+
+(disconnect)
+Disconnect from a server
+
+(hammer_begin <string> <string> <long> <short> <short>)
+
+
+(hammer_stop)
+
+
+(network_server_dump)
+
+
+(network_client_dump)
+
+
+(net_graph_clear)
+
+
+(net_graph_show <string> <string>)
+
+
+(play_update_history <long> <boolean>)
+
+
+(show_player_update_stats)
+
+
+(message_metrics_clear)
+
+
+(message_metrics_dump <string>)
+
+
+(error_overflow_suppression <boolean>)
+
+
+(structure_lens_flares_place)
+
+
+(player_effect_set_max_translation <real> <real> <real>)
+
+
+(player_effect_set_max_rotation <real> <real> <real>)
+
+
+(player_effect_set_max_vibrate <real> <real>)
+
+
+(player_effect_start <real> <real>)
+
+
+(player_effect_stop <real>)
+
+
+(hud_show_health <boolean>)
+
+
+(hud_blink_health <boolean>)
+
+
+(hud_show_shield <boolean>)
+
+
+(hud_blink_shield <boolean>)
+
+
+(hud_show_motion_sensor <boolean>)
+
+
+(hud_blink_motion_sensor <boolean>)
+
+
+(hud_show_crosshair <boolean>)
+
+
+(hud_clear_messages)
+
+
+(hud_set_help_text <hud_message>)
+
+
+(hud_set_objective_text <hud_message>)
+
+
+(hud_set_timer_time <short> <short>)
+
+
+(hud_set_timer_warning_time <short> <short>)
+
+
+(hud_set_timer_position <short> <short> <hud_corner>)
+
+
+(show_hud_timer <boolean>)
+
+
+(pause_hud_timer <boolean>)
+
+
+(hud_get_timer_ticks)
+
+
+(time_code_show <boolean>)
+
+
+(time_code_start <boolean>)
+
+
+(time_code_reset)
+
+
+(set_gamma <long>)
+
+
+(rasterizer_fixed_function_ambient <long>)
+
+
+(rasterizer_decals_flush)
+
+
+(rasterizer_fps_accumulate)
+
+
+(rasterizer_model_ambient_reflection_tint <real> <real> <real> <real>)
+
+
+(rasterizer_lights_reset_for_new_map)
+
+
+(script_screen_effect_set_value <short> <real>)
+
+
+(cinematic_screen_effect_start <boolean>)
+
+
+(cinematic_screen_effect_set_convolution <short> <short> <real> <real> <real>)
+
+
+(cinematic_screen_effect_set_filter <real> <real> <real> <real> <boolean> <real>)
+
+
+(cinematic_screen_effect_set_filter_desaturation_tint <real> <real> <real>)
+
+
+(cinematic_screen_effect_set_video <short> <real>)
+
+
+(cinematic_screen_effect_stop)
+
+
+(cinematic_set_near_clip_distance <real>)
+
+
+(delete_save_game_files)
+
+
+(fast_setup_network_server <string> <string> <boolean>)
+
+
+(profile_unlock_solo_levels)
+
+
+(player0_look_invert_pitch <boolean>)
+
+
+(player0_look_pitch_is_inverted)
+
+
+(player0_joystick_set_is_normal)
+
+
+(ui_widget_show_path <boolean>)
+
+
+(display_scenario_help <short>)
+
+
+(sound_enable_eax <boolean>)
+
+
+(sound_eax_enabled)
+
+
+(sound_set_env <short>)
+
+
+(sound_enable_hardware <boolean> <boolean>)
+
+
+(sound_set_supplementary_buffers <short> <boolean>)
+
+
+(sound_get_supplementary_buffers)
+
+
+(sound_set_rolloff <real>)
+
+
+(sound_set_factor <real>)
+
+
+(input_get_joy_count)
+
+
+(input_is_joy_active <short>)
+
+
+(input_activate_joy <short> <short>)
+
+
+(input_deactivate_joy <short>)
+
+
+(input_find_joystick <string>)
+
+
+(input_show_joystick_info)
+
+
+(input_find_default <string>)
+
+
+(config_one_control <string>)
+
+
+(get_yaw_rate <short>)
+
+
+(get_pitch_rate <short>)
+
+
+(set_yaw_rate <short> <real>)
+
+
+(set_pitch_rate <short> <real>)
+
+
+(get_digital_forward_throttle <short>)
+
+
+(set_digital_forward_throttle <short> <real>)
+
+
+(get_digital_strafe_throttle <short>)
+
+
+(set_digital_strafe_throttle <short> <real>)
+
+
+(get_digital_yaw_increment <short>)
+
+
+(set_digital_yaw_increment <short> <real>)
+
+
+(get_digital_pitch_increment <short>)
+
+
+(set_digital_pitch_increment <short> <real>)
+
+
+(get_mouse_forward_threshold <short>)
+
+
+(set_mouse_forward_threshold <short> <real>)
+
+
+(get_mouse_strafe_threshold <short>)
+
+
+(set_mouse_strafe_threshold <short> <real>)
+
+
+(get_mouse_yaw_scale <short>)
+
+
+(set_mouse_yaw_scale <short> <real>)
+
+
+(get_mouse_pitch_scale <short>)
+
+
+(set_mouse_pitch_scale <short> <real>)
+
+
+(get_gamepad_forward_threshold <short>)
+
+
+(set_gamepad_forward_threshold <short> <real>)
+
+
+(get_gamepad_strafe_threshold <short>)
+
+
+(set_gamepad_strafe_threshold <short> <real>)
+
+
+(get_gamepad_yaw_scale <short>)
+
+
+(set_gamepad_yaw_scale <short> <real>)
+
+
+(get_gamepad_pitch_scale <short>)
+
+
+(set_gamepad_pitch_scale <short> <real>)
+
+
+(bind <string> <string> <string>)
+
+
+(unbind <string> <string>)
+
+
+(print_binds)
+
+
+(sv_end_game)
+End the current game.
+
+(change_team <short>)
+
+
+(sv_mapcycle)
+Print the contents of the currently loaded mapcycle file
+
+(sv_mapcycle_begin)
+Restart or begin playing the currently loaded mapcycle file
+
+(sv_mapcycle_save)
+Saves the current mapcycle to disk.
+
+(sv_mapcycle_add <string> <string>)
+Usage: sv_mapcycle_add <mapname> <variantname>
+Add a new game to the end of the mapcycle file.
+
+(sv_mapcycle_del <long>)
+Usage: sv_mapcycle_del <index> 
+Removes the game at <index>.  Will not affect running games.
+
+(sv_map_next)
+<Server Only> Abort the current game and begin the next game in the playlist
+
+(sv_map_restart)
+<Server Only> Restart the current game
+
+(sv_map <string> <string>)
+<Server Only> Usage: "sv_map <mapname> <variantname>" 
+Abort current game and playlist and start specified game
+
+(sv_players)
+<Server Only> Print a list of players in the current game
+
+(sv_kick <string>)
+<Server Only> Usage: sv_kick <player # or name>  
+Kicks the specified player from the server
+
+(sv_ban <string>)
+<Server Only> Usage: sv_ban <player # or name> 
+Player is kicked and added to banned.txt.
+
+(sv_banlist)
+Print a list of banned players
+
+(sv_unban <long>)
+<Server Only> Usage: sv_unban <index> 
+Removes player at index in the banlist.  Use sv_banlist to find the index
+
+(sv_parameters_reload)
+
+
+(sv_parameters_dump)
+
+
+(sv_status)
+Shows status of the server
+
+(sv_name [name])
+Sets the name of the server. If no name is given, displays the current name.
+
+(sv_password [password])
+Sets the server password. If no password is given, displays the
+current password.
+
+(profile_load <string>)
+Load any included builtin profiles and create profiles on disk.
+
+(track_remote_player_position_updates <string>)
+
+
+(thread_sleep <long>)
+
+
+(checkpoint_save)
+
+
+(checkpoint_load <string>)
+
+

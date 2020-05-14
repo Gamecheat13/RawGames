@@ -1,0 +1,1530 @@
+(begin <expression(s)>)
+returns the last expression in a sequence after evaluating the sequence in order.
+
+(begin_random <expression(s)>)
+evaluates the sequence of expressions in random order and returns the last value evaluated.
+
+(if <boolean> <then> [<else>])
+returns one of two values based on the value of a condition.
+
+(cond (<boolean1> <result1>) [(<boolean2> <result2>) [...]])
+returns the value associated with the first true condition.
+
+(set <variable name> <expression>)
+set the value of a global variable.
+
+(and <boolean(s)>)
+returns true if all specified expressions are true.
+
+(or <boolean(s)>)
+returns true if any specified expressions are true.
+
+(+ <number(s)>)
+returns the sum of all specified expressions.
+
+(- <number> <number>)
+returns the difference of two expressions.
+
+(* <number(s)>)
+returns the product of all specified expressions.
+
+(/ <number> <number>)
+returns the quotient of two expressions.
+
+(min <number(s)>)
+returns the minimum of all specified expressions.
+
+(max <number(s)>)
+returns the maximum of all specified expressions.
+
+(= <expression> <expression>)
+returns true if two expressions are equal
+
+(!= <expression> <expression>)
+returns true if two expressions are not equal
+
+(> <number> <number>)
+returns true if the first number is larger than the second.
+
+(< <number> <number>)
+returns true if the first number is smaller than the second.
+
+(>= <number> <number>)
+returns true if the first number is larger than or equal to the second.
+
+(<= <number> <number>)
+returns true if the first number is smaller than or equal to the second.
+
+(sleep <short> [<script>])
+pauses execution of this script (or, optionally, another script) for the specified number of ticks.
+
+(sleep_until <boolean> [<short>])
+pauses execution of this script until the specified condition is true, checking once per second unless a different number of ticks is specified.
+
+(wake <script name>)
+wakes a sleeping script in the next update.
+
+(inspect <expression>)
+prints the value of an expression to the screen for debugging purposes.
+
+(unit <object>)
+converts an object to a unit.
+
+(ai_debug_communication_suppress <string(s)>)
+suppresses (or stops suppressing) a set of AI communication types.
+
+(ai_debug_communication_ignore <string(s)>)
+ignores (or stops ignoring) a set of AI communication types when printing out communications.
+
+(ai_debug_communication_focus <string(s)>)
+focuses (or stops focusing) a set of unit vocalization types.
+
+(not <boolean>)
+returns the opposite of the expression.
+
+(modulo <long> <long>)
+returns the first expression modulo the second.
+
+(print <string>)
+prints a string to the console.
+
+(players_current)
+returns a list of the units the players are currently controlling.
+
+(players_origin)
+returns a list of the units the players spawned with.
+
+(players_nonorigin)
+returns a list of temporary units currently controlled by players, if any.
+
+(players_all)
+returns a list of all units currently controlled by players.
+
+(player_move_origin <unit> <unit>)
+makes the second unit the player's origin in place of the first.
+
+(players)
+DEPRECATED. use players_current.
+
+(unit_move_soul <unit> <unit>)
+DEPRECATED. use player_move_origin.
+
+(volume_teleport_players_not_inside <trigger_volume> <cutscene_flag>)
+moves all players outside a specified trigger volume to a specified flag.
+
+(volume_test_object <trigger_volume> <object>)
+returns true if the specified object is within the specified volume.
+
+(volume_test_objects <trigger_volume> <object_list>)
+returns true if any of the specified objects are within the specified volume.
+
+(list_trim_for_volume_test <object_list> <trigger_volume>)
+DEPRECATED.  use objects_in_volume.
+
+(objects_in_volume <object_list> <trigger_volume>)
+trims the object list to only include objects within the specified volume.
+
+(volume_test_objects_all <trigger_volume> <object_list>)
+returns true if any of the specified objects are within the specified volume.
+
+(object_teleport <object> <cutscene_flag>)
+moves the specified object to the specified flag.
+
+(object_set_facing <object> <cutscene_flag>)
+turns the specified object in the direction of the specified flag.
+
+(object_set_maximum_vitality <object> <real> <real>)
+sets an object's maximum body and shield vitality
+
+(objects_set_maximum_vitality <object_list> <real> <real>)
+sets a group of objects' maximum body and shield vitality
+
+(object_set_current_vitality <object> <real> <real>)
+sets an object's current body and shield vitality
+
+(objects_set_current_vitality <object_list> <real> <real>)
+sets a group of objects' current body and shield vitality
+
+(object_get_health <object>)
+returns the health [0,1] of the object, returns -1 if the object does not exists
+
+(unit_get_health <unit>)
+DEPRECATED. use object_get_health.
+
+(object_get_shield <object>)
+returns the shield [0,1] of the object, returns -1 if the object does not exists
+
+(objects_cannot_take_damage <object_list> <boolean>)
+sets or clears invulnerability to damage for an object or list of objects
+
+(objects_cannot_die <object_list> <boolean>)
+sets or clears invulnerability to death for an object or list of objects
+
+(objects_cannot_lose_regions <object_list> <boolean>)
+sets or clears invulnerability to region damage for an object or list of objects
+
+(objects_cannot_be_finished <object_list> <boolean>)
+sets or clears invulnerability to finishing moves for an object or list of objects
+
+(objects_cannot_be_possessed <object_list> <boolean>)
+sets or clears invulnerability to possession for an object or list of objects
+
+(object_set_permutation <object> <string> <string>)
+sets the desired region (use "" for all regions) to the permutation with the given name, e.g. (object_set_permutation flood "right arm" ~damaged)
+
+(object_set_function_value <object> <string> <real>)
+sets the object's incoming function value to the desired value (this will only work if the object isn't already configured to export a value to that function)
+
+(object_create <object_name>)
+creates an object from the scenario.
+
+(object_destroy <object>)
+destroys an object.
+
+(object_create_anew <object_name>)
+creates an object, destroying it first if it already exists.
+
+(object_create_containing <string>)
+creates all objects from the scenario whose names contain the given substring.
+
+(object_create_anew_containing <string>)
+creates anew all objects from the scenario whose names contain the given substring.
+
+(object_destroy_containing <string>)
+destroys all objects from the scenario whose names contain the given substring.
+
+(object_destroy_all)
+destroys all non player objects.
+
+(objects_destroy <object_list>)
+destroys a list of objects.
+
+(list_get <object_list> <short>)
+returns an item in an object list.
+
+(list_count <object_list>)
+returns the number of objects in a list
+
+(effect_new_on_flag <effect> <cutscene_flag>)
+starts the specified effect at the specified flag.
+
+(effect_new_on_object <effect> <object>)
+starts the specified effect at the specified flag.
+
+(effect_new_on_object_marker <effect> <object> <string>)
+starts the specified effect on the specified object at the specified marker.
+
+(damage_new <damage> <cutscene_flag>)
+causes the specified damage at the specified flag.
+
+(damage_object <damage> <object>)
+causes the specified damage at the specified object.
+
+(objects_can_see_object <object_list> <object> <real>)
+returns true if any of the specified units are looking within the specified number of degrees of the object.
+
+(objects_can_see_flag <object_list> <cutscene_flag> <real>)
+returns true if any of the specified units are looking within the specified number of degrees of the flag.
+
+(objects_distance <object_list> <object>)
+returns the shortest distance between any of the objects in the list and the specified object.
+
+(object_distance_to_camera_point <cutscene_camera_point> <object>)
+returns the distance from the object to the cutscene flag
+
+(objects_delete_by_definition <object_definition>)
+deletes all objects of type <definition>
+
+(sound_set_gain <string> <real>)
+absolutely do not use this
+
+(sound_get_gain <string>)
+absolutely do not use this either
+
+(apply_impulse <trigger_volume> <cutscene_flag> <real> <real> <damage>)
+fake wind inside volume in direction of flag, with velocity and acceleration and effect.
+
+(object_is_instance <object> <object_definition>)
+returns true if the object is of the specified type (eg, is the player's current unit a scientist)
+
+(ui_map_first_load)
+don't use this unless your name rhymes with "utopian"
+
+(script_recompile)
+recompiles scripts.
+
+(script_doc)
+saves a file called hs_doc.txt with parameters for all script commands.
+
+(help <string>)
+prints a description of the named function.
+
+(random_range <short> <short>)
+returns a random value in the range [lower bound, upper bound)
+
+(real_random_range <real> <real>)
+returns a random value in the range [lower bound, upper bound)
+
+(numeric_countdown_timer_set <long> <boolean>)
+<milliseconds>, <auto_start>
+
+(numeric_countdown_timer_get <short>)
+<digit_index>
+
+(numeric_countdown_timer_stop)
+
+
+(numeric_countdown_timer_restart)
+
+
+(breakable_surfaces_enable <boolean>)
+enables or disables breakability of all breakable surfaces on level
+
+(breakable_surfaces_broken <string>)
+returns true if any breakable surface with a material name matching the substring has been broken. if substring is the empty string, any broken surface anywhere will return true.
+
+(recording_play <unit> <cutscene_recording>)
+make the specified unit run the specified cutscene recording.
+
+(recording_play_and_delete <unit> <cutscene_recording>)
+make the specified unit run the specified cutscene recording, deletes the unit when the animation finishes.
+
+(recording_play_and_hover <vehicle> <cutscene_recording>)
+make the specified vehicle run the specified cutscene recording, hovers the vehicle when the animation finishes.
+
+(recording_kill <unit>)
+kill the specified unit's cutscene recording.
+
+(recording_time <unit>)
+return the time remaining in the specified unit's cutscene recording.
+
+(object_set_ranged_attack_inhibited <object> <boolean>)
+FALSE prevents object from using ranged attack
+
+(object_set_melee_attack_inhibited <object> <boolean>)
+FALSE prevents object from using melee attack
+
+(objects_dump_memory)
+debugs object memory usage
+
+(object_set_collideable <object> <boolean>)
+FALSE prevents any object from colliding with the given object
+
+(object_set_scale <object> <real> <short>)
+sets the scale for a given object and interpolates over the given number of frames to achieve that scale
+
+(objects_attach <object> <string> <object> <string>)
+attaches the second object to the first; both strings can be empty
+
+(objects_detach <object> <object>)
+detaches from the given parent object the given child object
+
+(garbage_collect_now)
+causes all garbage objects except those visible to a player to be collected immediately
+
+(object_cannot_take_damage <object_list>)
+DEPRECATED. use objects_cannot_take_damage
+
+(object_can_take_damage <object_list>)
+DEPRECATED. use objects_cannot_take_damage
+
+(object_beautify <object> <boolean>)
+makes an object pretty for the remainder of the levels' cutscenes.
+
+(objects_predict <object_list>)
+loads textures necessary to draw a objects that are about to come on-screen.
+
+(object_type_predict <object_definition>)
+loads textures necessary to draw an object that's about to come on-screen.
+
+(object_activation_add_object <object>)
+forces everything the object can see to be active.
+
+(object_activation_add_camera <cutscene_camera_point>)
+forces everything the cutscene camera point can see to be active.
+
+(object_activation_clear)
+removes all custom activation.
+
+(object_clone_state <object> <object> <boolean>)
+copies the regions for an object to match another object (copies from the second argument into the first); if the third argument is true, will also copy the position, rotation, and orientation of all nodes
+
+(object_region_destroyed <object> <string>)
+returns true if the region with the specified name has been destroyed.
+
+(object_outside_world <object>)
+returns true if the object has fallen/flown outside of the world.
+
+(render_lights <boolean>)
+enables/disables dynamic lights
+
+(scenery_get_animation_time <scenery>)
+returns the number of ticks remaining in a custom animation (or zero, if the animation is over).
+
+(scenery_animation_start <scenery> <animation_graph> <string>)
+starts a custom animation playing on a piece of scenery
+
+(scenery_animation_start_at_frame <scenery> <animation_graph> <string> <short>)
+starts a custom animation playing on a piece of scenery at a specific frame
+
+(render_effects <boolean>)
+
+
+(unit_can_blink <unit> <boolean>)
+allows a unit to blink or not (units never blink when they are dead)
+
+(unit_open <unit>)
+opens the hatches on the given unit
+
+(unit_close <unit>)
+closes the hatches on a given unit
+
+(unit_kill <unit>)
+kills a given unit, no saving throw
+
+(unit_kill_silent <unit>)
+kills a given unit silently (doesn't make them play their normal death animation or sound)
+
+(unit_get_custom_animation_time <unit>)
+returns the number of ticks remaining in a unit's custom animation (or zero, if the animation is over).
+
+(unit_stop_custom_animation <unit>)
+stops the custom animation running on the given unit.
+
+(unit_custom_animation_at_frame <unit> <animation_graph> <string> <boolean> <short>)
+starts a custom animation playing on a unit at a specific frame index(interpolates into animation if next to last parameter is TRUE)
+
+(custom_animation <unit> <animation_graph> <string> <boolean>)
+starts a custom animation playing on a unit (interpolates into animation if last parameter is TRUE)
+
+(custom_animation_list <object_list> <animation_graph> <string> <boolean>)
+starts a custom animation playing on a unit list (interpolates into animation if last parameter is TRUE)
+
+(unit_is_playing_custom_animation <unit>)
+returns TRUE if the given unit is still playing a custom animation
+
+(unit_aim_without_turning <unit> <boolean>)
+allows a unit to aim in place without turning
+
+(unit_set_emotion <unit> <short>)
+sets a unit's facial expression (-1 is none, other values depend on unit)
+
+(unit_set_enterable_by_player <unit> <boolean>)
+can be used to prevent the player from entering a vehicle
+
+(unit_enter_vehicle <unit> <vehicle> <string>)
+puts the specified unit in the specified vehicle (in the named seat)
+
+(unit_enter_vehicle_now <unit> <vehicle> <string>)
+instantly puts the specified unit in the specified vehicle (in the named seat), with no entry animation.
+
+(vehicle_test_seat_list <vehicle> <string> <object_list>)
+tests whether the named seat has an object in the object list
+
+(vehicle_test_seat <vehicle> <string> <unit>)
+tests whether the named seat has a specified unit in it
+
+(unit_set_emotion_animation <unit> <string>)
+sets the emotion animation to be used for the given unit
+
+(unit_exit_vehicle <unit>)
+makes a unit exit its vehicle
+
+(vehicle_load_magic <unit> <string> <object_list>)
+makes a list of units (named or by encounter) magically get into a vehicle, in the substring-specified seats (e.g. CD-passenger... empty string matches all seats)
+
+(vehicle_unload <unit> <string>)
+makes units get out of a vehicle from the substring-specified seats (e.g. CD-passenger... empty string matches all seats)
+
+(magic_seat_name <string>)
+all units controlled by the player will assume the given seat name (valid values are 'asleep', 'alert', 'stand', 'crouch' and 'flee')
+
+(unit_set_seat <unit> <string>)
+this unit will assume the named seat
+
+(magic_melee_attack)
+causes player's unit to start a melee attack
+
+(vehicle_riders <unit>)
+returns a list of all riders in a vehicle
+
+(vehicle_driver <unit>)
+returns the driver of a vehicle
+
+(vehicle_gunner <unit>)
+returns the gunner of a vehicle
+
+(unit_get_total_grenade_count <unit>)
+returns the total number of grenades for the given unit, 0 if it does not exist
+
+(unit_has_weapon <unit> <object_definition>)
+returns TRUE if the <unit> has <object> as a weapon, FALSE otherwise
+
+(unit_has_weapon_readied <unit> <object_definition>)
+returns TRUE if the <unit> has <object> as the primary weapon, FALSE otherwise
+
+(unit_get_weapon <unit>)
+returns the weapon that the unit is currently wielding so that allen can fuck with it.
+
+(unit_set_weapon <unit> <object_definition>)
+gives the unit the specified weapon as its current ready weapon.
+
+(unit_doesnt_drop_items <object_list>)
+prevents any of the given units from dropping weapons or grenades when they die
+
+(unit_impervious <object_list> <boolean>)
+prevents any of the given units from being knocked around or playing ping animations
+
+(unit_suspended <unit> <boolean>)
+stops gravity from working on the given unit
+
+(unit_special_attack <unit> <short>)
+makes the unit launch the specified special attack immediately with no animation [0 - n].
+
+(unit_special_attack_animated <unit> <short>)
+makes the unit launch the specified special attack as if the button were pressed [0 - n].
+
+(unit_special_attack_get_count <unit> <short>)
+returns the unit's count for the specified special attack.
+
+(unit_special_attack_set_count <unit> <short> <short>)
+change the unit's count for the specified special attack [0-n] to the specified number.
+
+(unit_solo_player_integrated_night_vision_is_active)
+returns whether the night-vision mode could be activated via the flashlight button
+
+(units_set_desired_flashlight_state <object_list> <boolean>)
+sets the units' desired flashlight state
+
+(unit_set_desired_flashlight_state <unit> <boolean>)
+sets the unit's desired flashlight state
+
+(unit_get_current_flashlight_state <unit>)
+gets the unit's current flashlight state
+
+(unit_finishing_move <unit>)
+if possible, the unit will eat the brains of a nearby enemy.
+
+(unit_taking_damage <unit>)
+returns true if the unit is currently in the middle of a soft, medium, or hard ping.
+
+(device_set_never_appears_locked <device> <boolean>)
+changes a machine's never_appears_locked flag, but only if paul is a bastard
+
+(device_get_power <device>)
+gets the current power of a named device
+
+(device_set_power <device> <real>)
+immediately sets the power of a named device to the given value
+
+(device_set_position <device> <real>)
+set the desired position of the given device (used for devices without explicit device groups)
+
+(device_get_position <device>)
+gets the current position of the given device (used for devices without explicit device groups)
+
+(device_set_position_immediate <device> <real>)
+instantaneously changes the position of the given device (used for devices without explicit device groups
+
+(device_group_get <device_group>)
+returns the desired value of the specified device group.
+
+(device_group_set <device_group> <real>)
+changes the desired value of the specified device group.
+
+(device_group_set_immediate <device_group> <real>)
+instantaneously changes the value of the specified device group.
+
+(device_one_sided_set <device> <boolean>)
+TRUE makes the given device one-sided (only able to be opened from one direction), FALSE makes it two-sided
+
+(device_operates_automatically_set <device> <boolean>)
+TRUE makes the given device open automatically when any biped is nearby, FALSE makes it not
+
+(device_group_change_only_once_more_set <device_group> <boolean>)
+TRUE allows a device to change states only once
+
+(breakable_surfaces_reset)
+restores all breakable surfaces
+
+(cheat_all_powerups)
+drops all powerups near player
+
+(cheat_all_weapons)
+drops all weapons near player
+
+(cheat_all_vehicles)
+drops all vehicles on player
+
+(cheat_teleport_to_camera)
+teleports player to camera location
+
+(cheat_active_camouflage)
+gives the player active camouflage
+
+(cheat_active_camouflage_local_player <short>)
+gives the player active camouflage
+
+(cheats_load)
+reloads the cheats.txt file
+
+(ai_free <ai>)
+removes a group of actors from their encounter and sets them free
+
+(ai_free_units <object_list>)
+removes a set of units from their encounter (if any) and sets them free
+
+(ai_attach <unit> <ai>)
+attaches the specified unit to the specified encounter.
+
+(ai_resurrect_and_attach <unit> <actor_variant> <ai>)
+if the specified unit is dead, resurrects it as the specified actor variant and attaches the replacement unit to the specified encounter. if the unit isn't dead or can't resurrect, this does nothing. if no ai index is given, the unit will resurrect into the usual resurrection squad.
+
+(ai_attach_free <unit> <actor_variant>)
+attaches a unit to a newly created free actor of the specified type
+
+(ai_detach <unit>)
+detaches the specified unit from all AI.
+
+(ai_place <ai>)
+places the specified encounter on the map.
+
+(ai_kill <ai>)
+instantly kills the specified encounter and/or squad.
+
+(ai_kill_silent <ai>)
+instantly and silently (no animation or sound played) kills the specified encounter and/or squad.
+
+(ai_erase <ai>)
+erases the specified encounter and/or squad.
+
+(ai_erase_all)
+erases all AI.
+
+(ai_select <ai>)
+selects the specified encounter.
+
+(ai_deselect)
+clears the selected encounter.
+
+(ai_spawn_actor <ai>)
+spawns a single actor in the specified encounter and/or squad.
+
+(ai_set_respawn <ai> <boolean>)
+enables or disables respawning in the specified encounter.
+
+(ai_set_deaf <ai> <boolean>)
+enables or disables hearing for actors in the specified encounter.
+
+(ai_set_blind <ai> <boolean>)
+enables or disables sight for actors in the specified encounter.
+
+(ai_magically_see_encounter <ai> <ai>)
+makes one encounter magically aware of another.
+
+(ai_magically_see_players <ai>)
+makes an encounter magically aware of nearby players.
+
+(ai_magically_see_unit <ai> <unit>)
+makes an encounter magically aware of the specified unit.
+
+(ai_timer_start <ai>)
+makes a squad's delay timer start counting.
+
+(ai_timer_expire <ai>)
+makes a squad's delay timer expire and releases them to enter combat.
+
+(ai_attack <ai>)
+makes the specified platoon(s) go into the attacking state.
+
+(ai_defend <ai>)
+makes the specified platoon(s) go into the defending state.
+
+(ai_retreat <ai>)
+makes all squads in the specified platoon(s) maneuver to their designated maneuver squads.
+
+(ai_maneuver <ai>)
+makes all squads in the specified platoon(s) maneuver to their designated maneuver squads.
+
+(ai_maneuver_enable <ai> <boolean>)
+enables or disables the maneuver/retreat rule for an encounter or platoon. the rule will still trigger, but none of the actors will be given the order to change squads.
+
+(ai_migrate <ai> <ai>)
+makes all or part of an encounter move to another encounter.
+
+(ai_migrate_and_speak <ai> <ai> <string>)
+makes all or part of an encounter move to another encounter, and say their 'advance' or 'retreat' speech lines.
+
+(ai_migrate_by_unit <object_list> <ai>)
+makes a named vehicle or group of units move to another encounter.
+
+(ai_allegiance <team> <team>)
+creates an allegiance between two teams.
+
+(ai_allegiance_remove <team> <team>)
+destroys an allegiance between two teams.
+
+(ai_living_count <ai>)
+return the number of living actors in the specified encounter and/or squad.
+
+(ai_living_fraction <ai>)
+return the fraction [0-1] of living actors in the specified encounter and/or squad.
+
+(ai_strength <ai>)
+return the current strength (average body vitality from 0-1) of the specified encounter and/or squad.
+
+(ai_swarm_count <ai>)
+return the number of swarm actors in the specified encounter and/or squad.
+
+(ai_nonswarm_count <ai>)
+return the number of non-swarm actors in the specified encounter and/or squad.
+
+(ai_actors <ai>)
+converts an ai reference to an object list.
+
+(ai_go_to_vehicle <ai> <unit> <string>)
+tells a group of actors to get into a vehicle, in the substring-specified seats (e.g. passenger for pelican)... does not interrupt any actors who are already going to vehicles
+
+(ai_go_to_vehicle_override <ai> <unit> <string>)
+tells a group of actors to get into a vehicle, in the substring-specified seats (e.g. passenger for pelican)... NB: any actors who are already going to vehicles will stop and go to this one instead!
+
+(ai_going_to_vehicle <unit>)
+return the number of actors that are still trying to get into the specified vehicle
+
+(ai_exit_vehicle <ai>)
+tells a group of actors to get out of any vehicles that they are in
+
+(ai_braindead <ai> <boolean>)
+makes a group of actors braindead, or restores them to life (in their initial state)
+
+(ai_braindead_by_unit <object_list> <boolean>)
+makes a list of objects braindead, or restores them to life. if you pass in a vehicle index, it makes all actors in that vehicle braindead (including any built-in guns)
+
+(ai_disregard <object_list> <boolean>)
+if TRUE, forces all actors to completely disregard the specified units, otherwise lets them acknowledge the units again
+
+(ai_prefer_target <object_list> <boolean>)
+if TRUE, *ALL* enemies will prefer to attack the specified units. if FALSE, removes the preference.
+
+(ai_teleport_to_starting_location <ai>)
+teleports a group of actors to the starting locations of their current squad(s)
+
+(ai_teleport_to_starting_location_if_unsupported <ai>)
+teleports a group of actors to the starting locations of their current squad(s), only if they are not supported by solid ground (i.e. if they are falling after switching BSPs)
+
+(ai_renew <ai>)
+refreshes the health and grenade count of a group of actors, so they are as good as new
+
+(ai_try_to_fight_nothing <ai>)
+removes the preferential target setting from a group of actors
+
+(ai_try_to_fight <ai> <ai>)
+causes a group of actors to preferentially target another group of actors
+
+(ai_try_to_fight_player <ai>)
+causes a group of actors to preferentially target the player
+
+(ai_command_list <ai> <ai_command_list>)
+tells a group of actors to begin executing the specified command list
+
+(ai_command_list_by_unit <unit> <ai_command_list>)
+tells a named unit to begin executing the specified command list
+
+(ai_command_list_advance <ai>)
+tells a group of actors that are running a command list that they may advance further along the list (if they are waiting for a stimulus)
+
+(ai_command_list_advance_by_unit <unit>)
+just like ai_command_list_advance but operates upon a unit instead
+
+(ai_command_list_status <object_list>)
+gets the status of a number of units running command lists: 0 = none, 1 = finished command list, 2 = waiting for stimulus, 3 = running command list
+
+(ai_is_attacking <ai>)
+returns whether a platoon is in the attacking mode (or if an encounter is specified, returns whether any platoon in that encounter is attacking)
+
+(ai_disguise_knowledge_count <ai> <disguise_type>)
+return the number of actors that know about the given disguise type
+
+(ai_force_active <ai> <boolean>)
+forces an encounter to remain active (i.e. not freeze in place) even if there are no players nearby
+
+(ai_force_active_by_unit <unit> <boolean>)
+forces a named actor that is NOT in an encounter to remain active (i.e. not freeze in place) even if there are no players nearby
+
+(ai_set_return_state <ai> <ai_default_state>)
+sets the state that a group of actors will return to when they have nothing to do
+
+(ai_set_current_state <ai> <ai_default_state>)
+sets the current state of a group of actors. WARNING: may have unpredictable results on actors that are in combat
+
+(ai_playfight <ai> <boolean>)
+sets an encounter to be playfighting or not
+
+(ai_status <ai>)
+returns the most severe combat status of a group of actors (0=inactive, 1=noncombat, 2=guarding, 3=search/suspicious, 4=definite enemy(heard or magic awareness), 5=visible enemy, 6=engaging in combat.
+
+(ai_reconnect)
+reconnects all AI information to the current structure bsp (use this after you create encounters or command lists in sapien, or place new firing points or command list points)
+
+(ai_vehicle_encounter <unit> <ai>)
+sets a vehicle to 'belong' to a particular encounter/squad. any actors who get into the vehicle will be placed in this squad. NB: vehicles potentially drivable by multiple teams need their own encounter!
+
+(ai_vehicle_enterable_distance <unit> <real>)
+sets a vehicle as being impulsively enterable for actors within a certain distance
+
+(ai_vehicle_enterable_team <unit> <team>)
+sets a vehicle as being impulsively enterable for actors on a certain team
+
+(ai_vehicle_enterable_actor_type <unit> <actor_type>)
+sets a vehicle as being impulsively enterable for actors of a certain type (grunt, elite, marine etc)
+
+(ai_vehicle_enterable_actors <unit> <ai>)
+sets a vehicle as being impulsively enterable for a certain encounter/squad of actors
+
+(ai_vehicle_enterable_disable <unit>)
+disables actors from impulsively getting into a vehicle (this is the default state for newly placed vehicles)
+
+(ai_look_at_object <unit> <object>)
+tells an actor to look at an object until further notice
+
+(ai_stop_looking <unit>)
+tells an actor to stop looking at whatever it's looking at
+
+(ai_automatic_migration_target <ai> <boolean>)
+enables or disables a squad as being an automatic migration target
+
+(ai_vehicle_use_movement_positions <ai> <boolean>)
+enables or disables a squad as using movement positions with its vehicles
+
+(ai_follow_target_disable <ai>)
+turns off following for an encounter
+
+(ai_follow_target_players <ai>)
+sets the follow target for an encounter to be the closest player
+
+(ai_follow_target_unit <ai> <unit>)
+sets the follow target for an encounter to be a specific unit
+
+(ai_follow_target_ai <ai> <ai>)
+sets the follow target for an encounter to be a group of AI (encounter, squad or platoon)
+
+(ai_follow_distance <ai> <real>)
+sets the distance threshold which will cause squads to migrate when following someone
+
+(ai_conversation <conversation>)
+tries to add an entry to the list of conversations waiting to play. returns FALSE if the required units could not be found to play the conversation, or if the player is too far away and the 'delay' flag is not set.
+
+(ai_conversation_stop <conversation>)
+stops a conversation from playing or trying to play
+
+(ai_conversation_advance <conversation>)
+tells a conversation that it may advance
+
+(ai_conversation_line <conversation>)
+returns which line the conversation is currently playing, or 999 if the conversation is not currently playing
+
+(ai_conversation_status <conversation>)
+returns the status of a conversation (0=none, 1=trying to begin, 2=waiting for guys to get in position, 3=playing, 4=waiting to advance, 5=could not begin, 6=finished successfully, 7=aborted midway
+
+(ai_link_activation <ai> <ai>)
+links the first encounter so that it will be made active whenever it detects that the second encounter is active
+
+(ai_berserk <ai> <boolean>)
+forces a group of actors to start or stop berserking
+
+(ai_enable_berserk <ai> <real>)
+sets a group of actors to be enabled to/disabled from going berserk (0 means everyone's disabled, 1 means everyone's enabled, values between give a random chance for each group member). If a berserking actor has its berserking disabled, it will cancel the berserk state.
+
+(ai_set_team <ai> <team>)
+makes an encounter change to a new team
+
+(ai_allow_charge <ai> <boolean>)
+either enables or disables charging behavior for a group of actors
+
+(ai_allow_dormant <ai> <boolean>)
+either enables or disables automatic dormancy for a group of actors
+
+(ai_set_resurrection_group <ai>)
+sets the ai squad into which new zombies will be placed, if the squad can accept new zombies (if it can't, this will do nothing); if a platoon or encounter is specified, we use the first squad available in it
+
+(ai_begin_flee <ai> <boolean> <short>)
+makes the ai actors panic; the boolean parameter will force them to keep panicking until told to stop; if the boolean is false, the time value (in ticks) controls how long they are forced to stay panicking
+
+(ai_begin_flee_with_cower_chance <ai> <boolean> <short> <boolean> <real>)
+makes the ai actors panic; the first boolean parameter will force them to keep panicking until told to stop; if the first boolean is false, the time value (in ticks) controls how long they are forced to stay panicking; the second boolean tells it whether to force the cower/run blindly behavior even if there's a position to run to; the last number is the chance of playing cower if it can't find anywhere to go--0 means only run around like crazy, 1 means only cower, values between are a random mix of the two
+
+(ai_end_flee <ai>)
+cancels any forced-fleeing timer or lock on the actor; if it's fleeing, tries to put it back into its default action
+
+(ai_set_berserk_timers <ai> <long> <long>)
+sets the berserk timers for a group of ais to be random values between the first (min) and second (max) number of ticks (when active, a berserk timer will count down during combat and the actor will go berserk when it runs out)
+
+(ai_activate_berserk_timers <ai> <boolean>)
+activates/deactivates the berserk timers for a group of ais (when active, a berserk timer will count down during combat and the actor will go berserk when it runs out)
+
+(ai_allegiance_broken <team> <team>)
+returns whether two teams have an allegiance that is currently broken by traitorous behavior
+
+(ai_set_disguise_known <ai> <disguise_type> <boolean>)
+activates/deactivates knowledge of a specific disguise for a group of ais (knowledge is stored at the actor level, so this can be called on a squad without affecting other members of an encounter)
+
+(ai_set_disguise_knowable <ai> <disguise_type> <boolean>)
+activates/deactivates knowability of a specific disguise for a group of ais; when activated, actors are able to learn the disguise (default to activated for all disguises) (this is stored at the encounter level, so calling this on a squad will affect other members of an encounter)
+
+(ai_set_disguise_persuasive <ai> <disguise_type> <boolean>)
+activates/deactivates enhanced-persuasiveness of a specific disguise for a group of ais; when activated, actors will only learn disguises through drastic events (default to deactivated for all disguises) (this is stored at the encounter level, so calling this on a squad will affect other members of an encounter)
+
+(ai_enable_communication <ai> <boolean>)
+activates/deactivates normal communication for a group of ais (when active, they can play dialogue triggers in reaction to in-game events and as idles; this doesn't affect their ability to play scripted or command list sounds)
+
+(ai_set_all_enemies_unopposable <ai> <boolean>)
+sets/unsets an encounter to treat all live enemies as unopposable.
+
+(camera_control <boolean> <short>)
+toggles script control of the camera, interpolating to the game camera in the specified number of ticks.
+
+(camera_set <cutscene_camera_point> <short>)
+moves the camera to the specified camera point over the specified number of ticks.
+
+(camera_set_relative <cutscene_camera_point> <short> <object>)
+moves the camera to the specified camera point over the specified number of ticks (position is relative to the specified object).
+
+(camera_set_animation <animation_graph> <string>)
+begins a prerecorded camera animation.
+
+(camera_set_first_person <unit>)
+makes the scripted camera follow a unit.
+
+(camera_set_dead <unit>)
+makes the scripted camera zoom out around a unit as if it were dead.
+
+(camera_time)
+returns the number of ticks remaining in the current camera interpolation.
+
+(debug_camera_load)
+loads the saved camera position and facing.
+
+(debug_camera_save)
+saves the camera position and facing.
+
+(camera_video_set <cutscene_camera_point>)
+moves the camera for rendering to a video screen
+
+(camera_video_enable <boolean>)
+enables or disables all video cameras
+
+(game_speed <real>)
+changes the game speed.
+
+(game_time)
+gets ticks elapsed since the start of the game.
+
+(game_variant <string>)
+set the game engine
+
+(game_difficulty_get)
+returns the current difficulty setting, but lies to you and will never return easy, instead returning normal
+
+(map_reset)
+starts the map from the beginning.
+
+(map_name <string>)
+changes the name of the solo player map.
+
+(multiplayer_map_name <string>)
+changes the name of the multiplayer map
+
+(game_difficulty_set <game_difficulty>)
+changes the difficulty setting for the next map to be loaded.
+
+(crash <string>)
+crashes (for debugging).
+
+(switch_bsp <short>)
+takes off your condom and changes to a different structure bsp
+
+(structure_bsp_index)
+returns the current structure bsp index
+
+(version)
+prints the build version.
+
+(playback)
+starts game in film playback mode
+
+(texture_cache_flush)
+don't make me kick your ass
+
+(sound_cache_flush)
+i'm a rebel!
+
+(debug_memory)
+dumps memory leaks.
+
+(debug_memory_by_file)
+dumps memory leaks by source file.
+
+(debug_memory_for_file <string>)
+dumps memory leaks from the specified source file.
+
+(debug_tags)
+writes all memory being used by tag files into tag_dump.txt
+
+(profile_reset)
+resets profiling data.
+
+(profile_dump <string>)
+dumps profile based on a substring.
+
+(profile_activate <string>)
+activates profile sections based on a substring.
+
+(profile_deactivate <string>)
+deactivates profile sections based on a substring.
+
+(profile_graph_toggle <string>)
+enables or disables profile graph display of a particular value.
+
+(debug_pvs <boolean>)
+displays the current pvs.
+
+(radiosity_start)
+starts radiosity computation.
+
+(radiosity_save)
+saves radiosity solution.
+
+(radiosity_debug_point)
+tests sun occlusion at a point.
+
+(ai <boolean>)
+turns all AI on or off.
+
+(ai_dialogue_triggers <boolean>)
+turns impromptu dialogue on or off.
+
+(ai_grenades <boolean>)
+turns grenade inventory on or off.
+
+(ai_lines)
+cycles through AI line-spray modes
+
+(ai_debug_sound_point_set)
+drops the AI debugging sound point at the camera location
+
+(ai_debug_vocalize <string> <string>)
+makes the selected AI vocalize
+
+(ai_debug_teleport_to <ai>)
+teleports all players to the specified encounter
+
+(ai_debug_speak <string>)
+makes the currently selected AI speak a vocalization (e.g. ai_speak "pain minor")
+
+(ai_debug_speak_list <string>)
+makes the currently selected AI speak a list of vocalizations (e.g. ai_speak_list "involuntary")
+
+(ai_debug_whistle_selected)
+whistles to the currently selected AI, to make it come to the player
+
+(fade_in <real> <real> <real> <short>)
+does a screen fade in from a particular color
+
+(fade_out <real> <real> <real> <short>)
+does a screen fade out to a particular color
+
+(cinematic_start)
+initializes game to start a cinematic (interruptive) cutscene
+
+(cinematic_stop)
+initializes the game to end a cinematic (interruptive) cutscene
+
+(cinematic_skip_start_internal)
+
+
+(cinematic_skip_stop_internal)
+
+
+(cinematic_show_letterbox <boolean>)
+sets or removes the letterbox bars
+
+(cinematic_set_title <cutscene_title>)
+activates the chapter title
+
+(cinematic_clear_title <cutscene_title>)
+deactivates the chapter title
+
+(cinematic_set_title_delayed <cutscene_title> <real>)
+activates the chapter title, delayed by <real> seconds
+
+(cinematic_suppress_bsp_object_creation <boolean>)
+suppresses or enables the automatic creation of objects during cutscenes due to a bsp switch
+
+(attract_mode_start)
+Starts the attract mode video immedietly
+
+(attract_mode_enable)
+Allows attract mode to function in this level
+
+(attract_mode <boolean>)
+override to allow or disallow attract mode
+
+(game_won)
+causes the player to successfully finish the current level and move to the next
+
+(game_lost)
+causes the player to revert to his previous saved game
+
+(game_safe_to_save)
+returns FALSE if it would be a bad idea to save the player's game right now
+
+(game_all_quiet)
+returns FALSE if there are bad guys around, projectiles in the air, etc.
+
+(game_safe_to_speak)
+returns FALSE if it would be a bad idea to save the player's game right now
+
+(game_is_cooperative)
+returns TRUE if the game is cooperative
+
+(game_save)
+checks to see if it is safe to save game, then saves (gives up after 8 seconds)
+
+(game_save_cancel)
+cancels any pending game_save, timeout or not
+
+(game_save_no_timeout)
+checks to see if it is safe to save game, then saves (this version never gives up)
+
+(game_save_totally_unsafe)
+disregards player's current situation
+
+(game_saving)
+checks to see if the game is trying to save the map.
+
+(game_revert)
+reverts to last saved game, if any (for testing, the first bastard that does this to me gets it in the head)
+
+(game_reverted)
+don't use this for anything, you black-hearted bastards.
+
+(core_save)
+saves debug game state to core\core.bin
+
+(core_save_name <string>)
+saves debug game state to core\<path>
+
+(core_load)
+loads debug game state from core\core.bin
+
+(core_load_at_startup)
+loads debug game state from core\core.bin as soon as the map is initialized
+
+(core_load_name <string>)
+loads debug game state from core\<path>
+
+(core_load_name_at_startup <string>)
+loads debug game state from core\<path> as soon as the map is initialized
+
+(game_skip_ticks <short>)
+skips <short> amount of game ticks. ONLY USE IN CUTSCENES!!!
+
+(sound_impulse_start <sound> <object> <real>)
+plays an impulse sound from the specified source object (or "none"), with the specified scale.
+
+(sound_impulse_time <sound>)
+returns the time remaining for the specified impulse sound.
+
+(sound_impulse_stop <sound>)
+stops the specified impulse sound.
+
+(sound_looping_predict <looping_sound>)
+your mom.
+
+(sound_looping_start <looping_sound> <object> <real>)
+plays a looping sound from the specified source object (or "none"), with the specified scale.
+
+(sound_looping_stop <looping_sound>)
+stops the specified looping sound.
+
+(sound_looping_set_scale <looping_sound> <real>)
+changes the scale of the sound (which should affect the volume) within the range 0 to 1.
+
+(sound_looping_set_alternate <looping_sound> <boolean>)
+enables or disables the alternate loop/alternate end for a looping sound.
+
+(debug_sounds_enable <string> <boolean>)
+enables or disabled all sound classes matching the substring.
+
+(debug_sounds_distances <string> <real> <real>)
+changes the minimum and maximum distances for all sound classes matching the substring.
+
+(debug_sounds_wet <string> <real>)
+changes the reverb level for all sound classes matching the substring.
+
+(sound_enable <boolean>)
+enables or disables all sound.
+
+(sound_class_set_gain <string> <real> <short>)
+changes the gain on the specified sound class(es) to the specified game over the specified number of ticks.
+
+(vehicle_hover <vehicle> <boolean>)
+stops the vehicle from running real physics and runs fake hovering physics instead.
+
+(players_unzoom_all)
+resets zoom levels on all players
+
+(player_enable_input <boolean>)
+toggle player input. the player can still free-look, but nothing else.
+
+(player_enable_respawn <boolean>)
+toggle respawning in co-op. neither player will respawn after dying until the script re-enables respawning.
+
+(player_force_respawn)
+tries to immediately respawn any dead players, returns TRUE if successful or no respawning is required
+
+(player_camera_control <boolean>)
+enables/disables camera control globally
+
+(player_action_test_reset)
+resets the player action test state so that all tests will return false.
+
+(player_action_test_enable <short> <boolean>)
+allows or disallows the specified local player (eitehr 0 or 1) causing action tests to succeed.
+
+(player_action_test_jump)
+returns true if any player has jumped since the last call to (player_action_test_reset).
+
+(player_action_test_primary_trigger)
+returns true if any player has used primary trigger since the last call to (player_action_test_reset).
+
+(player_action_test_zoom)
+returns true if any player has hit the zoom button since the last call to (player_action_test_reset).
+
+(player_action_test_action)
+returns true if any player has hit the action key since the last call to (player_action_test_reset).
+
+(player_action_test_melee)
+returns true if any player has hit the melee key since the last call to (player_action_test_reset).
+
+(player_action_test_flatulence)
+returns true if any player has hit the glatulence key since the last call to (player_action_test_reset).
+
+(player_action_test_grenade)
+returns true if any player has hit the grenade key since the last call to (player_action_test_reset).
+
+(player_action_test_hand)
+returns true if any player has hit the hand key since the last call to (player_action_test_reset).
+
+(player_action_test_head)
+returns true if any player has hit the head key since the last call to (player_action_test_reset).
+
+(player_action_test_abandon)
+returns true if any player has hit the abandon head/hand/grenade key since the last call to (player_action_test_reset).
+
+(player_action_test_accept)
+returns true if any player has hit accept since the last call to (player_action_test_reset).
+
+(player_action_test_back)
+returns true if any player has hit the back key since the last call to (player_action_test_reset).
+
+(player_action_test_look_relative_up)
+returns true if any player has looked up since the last call to (player_action_test_reset).
+
+(player_action_test_look_relative_down)
+returns true if any player has looked down since the last call to (player_action_test_reset).
+
+(player_action_test_look_relative_left)
+returns true if any player has looked left since the last call to (player_action_test_reset).
+
+(player_action_test_look_relative_right)
+returns true if any player has looked right since the last call to (player_action_test_reset).
+
+(player_action_test_look_relative_all_directions)
+returns true if any player has looked up, down, left, and right since the last call to (player_action_test_reset).
+
+(player_action_test_move_relative_forward)
+returns true if any player has moved forward since the last call to (player_action_test_reset).
+
+(player_action_test_move_relative_back)
+returns true if any player has moved back since the last call to (player_action_test_reset).
+
+(player_action_test_move_relative_left)
+returns true if any player has moved left since the last call to (player_action_test_reset).
+
+(player_action_test_move_relative_right)
+returns true if any player has moved right since the last call to (player_action_test_reset).
+
+(player_action_test_move_relative_all_directions)
+returns true if any player has moved forward, backward, left, and right since the last call to (player_action_test_reset).
+
+(player_action_test_dance_up)
+returns true if any player has danced up since the last call to (player_action_test_reset).
+
+(player_action_test_dance_down)
+returns true if any player has danced down since the last call to (player_action_test_reset).
+
+(player_action_test_dance_left)
+returns true if any player has danced left since the last call to (player_action_test_reset).
+
+(player_action_test_dance_right)
+returns true if any player has danced right since the last call to (player_action_test_reset).
+
+(player_action_test_shove)
+returns true if any player has hit the action key to cause a shove since the last call to (player_action_test_reset)
+
+(player_action_test_whistle)
+returns true if any player has hit the action key to cause a whistle since the last call to (player_action_test_reset)
+
+(player_action_test_breakthrough)
+returns true if any player has hit the action key to cause a breakthrough since the last call to (player_action_test_reset)
+
+(player_action_test_possess)
+returns true if any player has hit the action key to cause a possess since the last call to (player_action_test_reset)
+
+(player_action_test_finishing_move)
+returns true if any player has hit the action key to cause a finishing move since the last call to (player_action_test_reset)
+
+(player_action_test_limb_tear)
+returns true if any player has hit the action key to cause a limb tear since the last call to (player_action_test_reset)
+
+(player_action_test_vehicle_enter)
+returns true if any player has hit the action key to enter a vehicle since the last call to (player_action_test_reset)
+
+(player_action_test_touch_device)
+returns true if any player has hit the action key to touch a device since the last call to (player_action_test_reset)
+
+(player_action_test_shove_enabled)
+returns true if any player has had the option of performing a shove since the last call to (player_action_test_reset)
+
+(player_action_test_whistle_enabled)
+returns true if any player has had the option of performing a whistle since the last call to (player_action_test_reset)
+
+(player_action_test_breakthrough_enabled)
+returns true if any player has had the option of performing a breakthrough since the last call to (player_action_test_reset)
+
+(player_action_test_possess_enabled)
+returns true if any player has had the option of performing a possess since the last call to (player_action_test_reset)
+
+(player_action_test_finishing_move_enabled)
+returns true if any player has had the option of performing a finishing move since the last call to (player_action_test_reset)
+
+(player_action_test_limb_tear_enabled)
+returns true if any player has had the option of performing a limb tear since the last call to (player_action_test_reset)
+
+(player_action_test_vehicle_enter_enabled)
+returns true if any player has had the option of performing a vehicle enter since the last call to (player_action_test_reset)
+
+(player_action_test_touch_device_enabled)
+returns true if any player has had the option of performing a device touch since the last call to (player_action_test_reset)
+
+(player_set_weapons <unit> <starting_profile> <boolean>)
+adds to the player's weapons from the named profile. removes the player's current weapons in advance if the third parameter is true.
+
+(player_set_profile <unit> <starting_profile> <boolean>)
+adds to the player's health, shield, and inventory (weapons and grenades) from the named profile. resets the player's current values to zero in advance if the third parameter is true.
+
+(debug_teleport_player <short> <short>)
+
+
+(show_hud <boolean>)
+shows or hides the hud
+
+(show_hud_help_text <boolean>)
+shows or hides the hud help text
+
+(show_hud_help_text_for_player <boolean> <unit>)
+shows or hides the hud help text for a specific player
+
+(enable_hud_help_flash <boolean>)
+starts/stops the help text flashing
+
+(hud_help_flash_restart)
+resets the timer for the help text flashing
+
+(activate_nav_point_flag <navpoint> <unit> <cutscene_flag> <real>)
+activates a nav point type <string> attached to (local) player <unit> anchored to a flag with a vertical offset <real>. If the player is not local to the machine, this will fail
+
+(activate_nav_point_object <navpoint> <unit> <object> <real>)
+activates a nav point type <string> attached to (local) player <unit> anchored to an object with a vertical offset <real>. If the player is not local to the machine, this will fail
+
+(activate_team_nav_point_flag <navpoint> <team> <cutscene_flag> <real>)
+activates a nav point type <string> attached to a team anchored to a flag with a vertical offset <real>. If the player is not local to the machine, this will fail
+
+(activate_team_nav_point_object <navpoint> <team> <object> <real>)
+activates a nav point type <string> attached to a team anchored to an object with a vertical offset <real>. If the player is not local to the machine, this will fail
+
+(deactivate_nav_point_flag <unit> <cutscene_flag>)
+deactivates a nav point type attached to a player <unit> anchored to a flag
+
+(deactivate_nav_point_object <unit> <object>)
+deactivates a nav point type attached to a player <unit> anchored to an object
+
+(deactivate_team_nav_point_flag <team> <cutscene_flag>)
+deactivates a nav point type attached to a team anchored to a flag
+
+(deactivate_team_nav_point_object <team> <object>)
+deactivates a nav point type attached to a team anchored to an object
+
+(cls)
+clears console text from the screen
+
+(error_overflow_suppression <boolean>)
+enables or disables the suppression of error spamming
+
+(structure_lens_flares_place)
+places lens flares in the structure bsp
+
+(player_effect_set_max_translation <real> <real> <real>)
+<x> <y> <z>
+
+(player_effect_set_max_rotation <real> <real> <real>)
+<yaw> <pitch> <roll>
+
+(player_effect_set_max_rumble <real> <real>)
+<left> <right>
+
+(player_effect_enable_rumble <boolean>)
+enables/disables rumble for all players (by default, rumble is enabled)
+
+(player_effect_start <real> <real>)
+<max_intensity> <attack time>
+
+(player_effect_stop <real>)
+<decay>
+
+(hud_show_health <boolean>)
+hides/shows the health panel
+
+(hud_blink_health <boolean>)
+starts/stops manual blinking of the health panel
+
+(hud_show_shield <boolean>)
+hides/shows the shield panel
+
+(hud_blink_shield <boolean>)
+starts/stops manual blinking of the shield panel
+
+(hud_show_motion_sensor <boolean>)
+hides/shows the motion sensor panel
+
+(hud_blink_motion_sensor <boolean>)
+starts/stops manual blinking of the motion sensor panel
+
+(hud_show_crosshair <boolean>)
+hides/shows the weapon crosshair
+
+(hud_show_special_attack <short> <boolean>)
+hides/shows the special attack ammo indicator
+
+(hud_clear_messages)
+clears all non-state messages on the hud
+
+(hud_set_help_text <hud_message>)
+displays <message> as the help text
+
+(hud_set_objective_text <hud_message>)
+sets <message> as the current objective
+
+(hud_set_timer_time <short> <short>)
+sets the time for the timer to <short> minutes and <short> seconds, and starts and displays timer
+
+(hud_set_timer_warning_time <short> <short>)
+sets the warning time for the timer to <short> minutes and <short> seconds
+
+(hud_set_timer_position <short> <short> <hud_corner>)
+sets the timer upper left position to (x, y)=>(<short>, <short>)
+
+(show_hud_timer <boolean>)
+displays the hud timer
+
+(pause_hud_timer <boolean>)
+pauses or unpauses the hud timer
+
+(hud_get_timer_ticks)
+returns the ticks left on the hud timer
+
+(time_code_show <boolean>)
+shows the time code timer
+
+(time_code_start <boolean>)
+starts/stops the time code timer
+
+(time_code_reset)
+resets the time code timer
+
+(rasterizer_decals_flush)
+flush all decals
+
+(rasterizer_fps_accumulate)
+average fps
+
+(rasterizer_model_ambient_reflection_tint <real> <real> <real> <real>)
+
+
+(rasterizer_lights_reset_for_new_map)
+
+
+(cinematic_set_near_clip_distance <real>)
+
+
+(image_effect_set <image_effect>)
+creates a new screen effect.
+
+(image_effect_end)
+ends an existing screen effect
+
+(image_effect_start_blend <image_effect> <real>)
+blends between current image effect, and this one, over this amount of time
+
+(image_effects <boolean>)
+turns image effects on or off.
+
+(enumerate_memory_units)
+enumerate memory units
+
+(delete_save_game_files)
+delete all custom profile files
+
+(fast_setup_network_server)
+for zach's multiplayer testing
+
+(profile_unlock_solo_levels)
+unlocks all the solo player levels for player 1's profile
+
+(player0_look_invert_pitch <boolean>)
+invert player0's look
+
+(player0_look_pitch_is_inverted)
+returns TRUE if player0's look pitch is inverted
+
+(player0_joystick_set_is_normal)
+returns TRUE if player0 is using the normal joystick set
+
+(map_completed <game_difficulty>)
+returns TRUE if either player has beaten the current level at the specified difficulty level or higher.
+
+(ui_widget_show_path <boolean>)
+blah blah
+
+(display_scenario_help <short>)
+display in-game help dialog
+
+(display_scenario_help_disable <boolean>)
+disables scenario help dialogs
+
+(network_game_start_now)
+another one for zach
+
+(xbox_set_machine_name <string>)
+YAHSFFZ
+
+(main_menu_load)
+loads and switches to the UI map
+
+(main_menu_show)
+Pops up the main menu if we are in the UI map.
+
+(debug_data <string>)
+display visual debug for the data array matching the string.
+
