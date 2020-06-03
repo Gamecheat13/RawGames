@@ -1,0 +1,50 @@
+main()
+{
+	//maps\mp\mp_cargoship_fx::main();
+	//maps\createart\mp_cargoship_art::main();
+	//needs to be first for create fx
+	
+	maps\mp\mp_asylum_fx::main();
+	maps\mp\createart\mp_asylum_art::main();
+	
+	maps\mp\_load::main();
+
+	maps\mp\mp_asylum_amb::main();
+	
+	maps\mp\_compass::setupMiniMap("compass_map_mp_asylum");
+	
+	//setExpFog(300, 1400, 0.5, 0.5, 0.5, 0);
+	//VisionSetNaked( "mp_cargoship" );
+	//ambientPlay("ambient_cargoshipmp_ext");
+
+	// If the team nationalites change in this file,
+	// you must update the team nationality in the level's csc file as well!
+	game["allies"] = "russian";
+	game["axis"] = "german";
+	game["attackers"] = "allies";
+	game["defenders"] = "axis";
+	game["allies_soldiertype"] = "german";
+	game["axis_soldiertype"] = "german";
+
+	setdvar( "r_specularcolorscale", "1" );
+
+	setdvar("compassmaxrange","2100");
+
+	game["strings"]["war_callsign_a"] = &"MPUI_CALLSIGN_ASYLUM_A";
+	game["strings"]["war_callsign_b"] = &"MPUI_CALLSIGN_ASYLUM_B";
+	game["strings"]["war_callsign_c"] = &"MPUI_CALLSIGN_ASYLUM_C";
+	game["strings"]["war_callsign_d"] = &"MPUI_CALLSIGN_ASYLUM_D";
+	game["strings"]["war_callsign_e"] = &"MPUI_CALLSIGN_ASYLUM_E";
+
+	game["strings_menu"]["war_callsign_a"] = "@MPUI_CALLSIGN_ASYLUM_A";
+	game["strings_menu"]["war_callsign_b"] = "@MPUI_CALLSIGN_ASYLUM_B";
+	game["strings_menu"]["war_callsign_c"] = "@MPUI_CALLSIGN_ASYLUM_C";
+	game["strings_menu"]["war_callsign_d"] = "@MPUI_CALLSIGN_ASYLUM_D";
+	game["strings_menu"]["war_callsign_e"] = "@MPUI_CALLSIGN_ASYLUM_E";
+
+
+	// enable new player spawning system
+	maps\mp\gametypes\_spawning::level_use_unified_spawning(true);
+	
+	return;
+}

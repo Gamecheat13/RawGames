@@ -1,0 +1,111 @@
+body
+{
+	combat_directions
+	{
+		combat_up
+		{
+			stand_aim_up
+			stand_shoot_up
+			stand_shoot_auto_up
+	
+			crouch_aim_up
+			crouch_shoot_up
+			crouch_shoot_auto_up
+		}
+	
+		combat_straight
+		{
+			stand_aim_straight
+			stand_shoot_straight
+			stand_shoot_auto_straight
+	
+			crouch_aim_straight
+			crouch_shoot_straight
+			crouch_shoot_auto_straight
+		}
+	
+		combat_down
+		{
+			stand_aim_down
+			stand_shoot_down
+			stand_shoot_auto_down
+	
+			crouch_aim_down
+			crouch_shoot_down
+			crouch_shoot_auto_down
+		}
+	}
+	
+	reload_stand_rifle
+	exposed_reload
+	duhoc_climber_dismount
+	combat_run_fast_3
+	drone_run_forward_1
+	jump_across_100
+	jump_down_56
+	traverse_wallhop
+	trench_jump_out
+	step_up_low_wall
+	stand_alert_1
+	stand_alert_2
+	stand_alert_3
+	
+	//coverstand_mini_approach_1
+	coverstand_trans_OUT_M
+	coverstand_trans_IN_M
+	coverstand_hide_idle
+	coverstand_hide_idle_twitch01
+	coverstand_hide_idle_twitch02
+	coverstand_hide_idle_twitch03
+	coverstand_hide_idle_twitch04
+	coverstand_hide_idle_twitch05
+	coverstand_react01
+	coverstand_react02
+	coverstand_react03
+	coverstand_react04
+		
+	covercrouch_hide_idle
+	covercrouch_twitch_1
+	covercrouch_twitch_2
+	covercrouch_twitch_3
+	covercrouch_twitch_4	
+	covercrouch_run_out_M
+	covercrouch_run_in_M
+	
+	// custom run cycles
+	ai_run_deep_water_a
+	ai_run_deep_water_b
+	// custom run cycle for sniper - TFLAME - 3/14/08 
+	Ai_walk_weary_a
+	Ai_walk_weary_b
+	Ai_walk_weary_c
+	Ai_walk_weary_d
+	ai_sneaking_a_walk
+	
+	// Bloodlust 14 Feb 2008
+	// ******************************************
+	// Berlin 1 Train Rail and Train Yard Support
+	
+	ch_berlin1_explosion_back
+	ch_berlin1_explosion_front
+	ch_berlin1_explosion_left
+	ch_berlin1_explosion_right
+	
+	// ******************************************
+	
+	// from generic human cuz we don't like switching anim trees
+	death_explosion_up10
+	death_explosion_forward13
+	death_explosion_back13
+	death_explosion_left11
+	death_explosion_right13
+	ai_flame_death_a
+	ai_flame_death_b
+	ai_flame_death_c
+	ai_flame_death_d
+	death_run_stumble
+	death_run_onfront
+	death_run_onleft
+	death_run_forward_crumple
+	death_stand_dropinplace
+}

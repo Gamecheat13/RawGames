@@ -1,0 +1,253 @@
+v_lvt4_open_ramp
+v_lvt4_ramp_close
+v_lvt4_stuck
+v_lvt4_explode_over
+v_lvt4_float
+v_lst_open_doors
+v_lvt4_ramp_open
+v_lvt4_sinking
+v_lvt4_float_loop
+
+
+// PEL1
+v_willys_peleliu1_jeep_destroyed
+v_lvt4_peleliu1_jeep_destroyed
+v_lvt4_peleliu1_the_ride_in
+v_pel1_intro_LVT_explosion
+
+// Model3
+v_model3_load
+
+// old stuff we might need
+technical_driving_idle_forward
+technical_driving_idle_backward
+
+door_pickup_driver_climb_in
+door_pickup_passenger_climb_in
+door_pickup_driver_climb_out
+door_pickup_passenger_climb_out
+door_pickup_passenger_RL_climb_out
+door_pickup_passenger_RR_climb_out
+
+// new opel truck driver door open anim
+
+v_opelblitz_driverdoor_climbout
+
+// cod4 destructible vehicles
+v_flattire_LB
+v_flattire_LF
+v_flattire_RB
+v_flattire_RF
+v_explode
+
+
+// cod5 destructible vehicles
+
+// japanese scout car
+v_type95_scoutcar_flatire_lf
+v_type95_scoutcar_flatire_lb
+v_type95_scoutcar_flatire_rf
+v_type95_scoutcar_flatire_rb
+v_type95_scoutcar_explode
+
+// beetle
+
+v_beetle_flattire_lf
+v_beetle_flattire_lb
+v_beetle_flattire_rf
+v_beetle_flattire_rb
+v_beetle_explode
+
+
+// japanese type94 truck
+
+v_type94_truck_explode
+v_type94_truck_flattire_lb1
+v_type94_truck_flattire_lb2
+v_type94_truck_flattire_lf
+v_type94_truck_flattire_rb1
+v_type94_truck_flattire_rb2
+v_type94_truck_flattire_rf
+
+// MAKIN Type 94 truck
+makin_truck_other
+{
+	v_makinraid_truck_jumpin
+	v_makinraid_truck_jumpout
+}
+
+makin_truck_barrels
+{
+	v_makinraid_hatch
+	v_makinraid_hatch_loop_start
+	v_makinraid_hatch_loop
+	v_makinraid_hatch_barrel
+	v_makinraid_hatch_barrel_loop
+}
+
+
+// horch1a
+
+v_horch1a_explode
+v_horch1a_flattire_lb
+v_horch1a_flattire_lf
+v_horch1a_flattire_rb
+v_horch1a_flattire_rf
+
+
+// mercedesw136
+
+v_mercedesw136_explode
+v_mercedesw136_flattire_lb
+v_mercedesw136_flattire_lf
+v_mercedesw136_flattire_rb
+v_mercedesw136_flattire_rf
+
+
+// opel blitz
+
+v_opelblitz_explode
+v_opelblitz_flattire_lb
+v_opelblitz_flattire_lf
+v_opelblitz_flattire_rb
+v_opelblitz_flattire_rf
+
+
+// bmw motorcycle
+
+v_bmwmotorcycle_explode
+v_bmwmotorcycle_flattire_back
+v_bmwmotorcycle_flattire_front
+v_bmwmotorcycle_flattire_sidecar
+v_bmwmotorcycle_flattire_spare
+
+
+// PBY
+pby_vehicle_animations
+{
+	v_pby1_crash
+	v_pby2_crash
+	v_pby_rear_gun_down
+	v_pby_rear_gun_up
+	v_pby_rear_gun_snap_up
+	v_pby_rear_gun_snap_down
+	v_pby_fly
+	v_pby_fly_up //-- flying with the pontoons up
+	v_pby_fly_up_open //-- pontoons up and hatch open
+	v_pby_fly_down //-- pontoons down and hatch closed
+	v_pby_distress_radio
+	v_pby_float
+	v_pby_float_blisters
+	v_pby_land_water
+	v_pby_explosion
+	v_pby_close_hatch
+	v_pby_open_hatch
+	v_pby_taxi
+	v_pby_taxi_fast
+	v_pby_taxi_rough
+	v_pby_taxi_ai
+	v_pby_intro
+	v_pby_crash1
+	v_pby_crash2
+	v_pby_player_pbycrash
+	v_pby_player_pbycrash2
+	v_pby_staticpose
+	pby_fire_left
+	{
+		v_pby_blisterammo_left_fire
+		v_pby_blisterammo_left_start
+		v_pby_blisterammo_left_stop
+	}
+	pby_fire_right
+	{
+		v_pby_blisterammo_right_fire
+		v_pby_blisterammo_right_start
+		v_pby_blisterammo_right_stop
+		
+		v_pby_blisterammo_right_empty1
+		v_pby_blisterammo_right_empty2
+		v_pby_blisterammo_right_empty3
+		v_pby_blisterammo_right_empty4
+		v_pby_blisterammo_right_empty5
+		v_pby_blisterammo_right_empty6
+		v_pby_blisterammo_right_empty7
+	}
+}
+
+pby_pontoons : additive
+{
+	v_pby_pontoon_down
+	v_pby_pontoon_up
+	v_pby_pontoon_snap_up
+	v_pby_pontoon_snap_down
+}
+
+// OT34 Russian Flame Tank
+v_t34_flameturret
+
+//Japanese PT Boat
+v_ptboat_idle
+v_ptboat_sink
+v_ptboat_sink2
+v_ptboat_sink3
+v_ptboat_sink4
+v_ptboat_skim
+v_ptboat_skim4
+v_ptboat_skim5
+v_ptboat_death1
+v_ptboat_death_fronthit
+v_ptboat_death_lefthit
+v_ptboat_death_righthit
+v_ptboat_death_alt_a
+v_ptboat_death_alt_b
+v_ptboat_death_alt_c
+v_ptboat_death_alt_d
+
+
+//Japanese Shinyou
+v_shinyou_sink
+v_shinyou_skim
+
+// Japanese Zero A6M
+o_pby_zero_miss_waterskip
+o_pby_zero_fletcherhit_front
+o_pby_zero_flying_idle1
+o_pby_zero_flying_idle2
+o_pby_zero_flying_idle3
+
+//Destructible Merchant Ships
+v_merchant_ship_sink1
+v_merchant_ship_sink2
+v_merchant_ship_sink3
+v_merchant_ship_sink4
+v_merchant_ship_sink5
+
+// Fletcher taking kamikaze hit
+v_fletcher_impact
+o_pby_chunks1_fletcherhit_front
+o_pby_gun1barrel_fletcherhit_front
+o_pby_gun1base_fletcherhit_front
+o_pby_gun2barrel_fletcherhit_front
+o_pby_gun2base_fletcherhit_front
+o_pby_chunk3_fletcherhit_right
+o_pby_chunk4tower_fletcherhit_right
+//o_pby_chunk5_fletcherhit_right
+o_pby_chunk5plate_fletcherhit_right
+o_pby_chunk5tower_fletcherhit_right
+o_pby_chunk2_fletcherhit_right
+o_pby_fletcher_fletcherhit_right
+o_pby_oerlikon_fletcherhit_right
+o_pby_oerlikonshield_fletcherhit_right
+o_pby_turret_fletcherhit_right
+o_pby_turretbarrel_fletcherhit_right
+
+
+//Sniper
+v_horch1a_sniper_intro
+v_horch1a_amsel_die
+v_horch1a_amsel_getin
+v_horch1a_amsel_getout
+
+
+// oki2 outro
+v_oki2_outro_gmc_truck
