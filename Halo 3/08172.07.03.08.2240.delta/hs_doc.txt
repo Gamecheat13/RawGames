@@ -1,0 +1,5025 @@
+(begin <expression(s)>)
+returns the last expression in a sequence after evaluating the sequence in order.
+NETWORK SAFE: Yes
+
+(begin_random <expression(s)>)
+evaluates the sequence of expressions in random order and returns the last value evaluated.
+NETWORK SAFE: Yes
+
+(if <boolean> <then> [<else>])
+returns one of two values based on the value of a condition.
+NETWORK SAFE: Yes
+
+(cond (<boolean1> <result1>) [(<boolean2> <result2>) [...]])
+returns the value associated with the first true condition.
+NETWORK SAFE: Yes
+
+(set <variable name> <expression>)
+set the value of a global variable.
+NETWORK SAFE: Yes (depending on result)
+
+(and <boolean(s)>)
+returns true if all specified expressions are true.
+NETWORK SAFE: Yes
+
+(or <boolean(s)>)
+returns true if any specified expressions are true.
+NETWORK SAFE: Yes
+
+(+ <number(s)>)
+returns the sum of all specified expressions.
+NETWORK SAFE: Yes
+
+(- <number> <number>)
+returns the difference of two expressions.
+NETWORK SAFE: Yes
+
+(* <number(s)>)
+returns the product of all specified expressions.
+NETWORK SAFE: Yes
+
+(/ <number> <number>)
+returns the quotient of two expressions.
+NETWORK SAFE: Yes
+
+(min <number(s)>)
+returns the minimum of all specified expressions.
+NETWORK SAFE: Yes
+
+(max <number(s)>)
+returns the maximum of all specified expressions.
+NETWORK SAFE: Yes
+
+(= <expression> <expression>)
+returns true if two expressions are equal
+NETWORK SAFE: Yes
+
+(!= <expression> <expression>)
+returns true if two expressions are not equal
+NETWORK SAFE: Yes
+
+(> <number> <number>)
+returns true if the first number is larger than the second.
+NETWORK SAFE: Yes
+
+(< <number> <number>)
+returns true if the first number is smaller than the second.
+NETWORK SAFE: Yes
+
+(>= <number> <number>)
+returns true if the first number is larger than or equal to the second.
+NETWORK SAFE: Yes
+
+(<= <number> <number>)
+returns true if the first number is smaller than or equal to the second.
+NETWORK SAFE: Yes
+
+(sleep <short> [<script>])
+pauses execution of this script (or, optionally, another script) for the specified number of ticks.
+NETWORK SAFE: Yes
+
+(sleep_forever [<script>])
+pauses execution of this script (or, optionally, another script) forever.
+NETWORK SAFE: Yes
+
+(sleep_until <boolean> [<short>])
+pauses execution of this script until the specified condition is true, checking once per second unless a different number of ticks is specified.
+NETWORK SAFE: Yes
+
+(wake <script name>)
+wakes a sleeping script in the next update.
+NETWORK SAFE: Yes
+
+(inspect <expression>)
+prints the value of an expression to the screen for debugging purposes.
+NETWORK SAFE: Yes
+
+(unit <object>)
+converts an object to a unit.
+NETWORK SAFE: No
+
+(not <boolean>)
+returns the opposite of the expression.
+NETWORK SAFE: Yes
+
+(pin <real> <real> <real>)
+returns the first value pinned between the second two
+NETWORK SAFE: Yes
+
+(print <string>)
+prints a string to the console.
+NETWORK SAFE: Yes
+
+(log_print <string>)
+prints a string to the hs log file.
+NETWORK SAFE: Yes
+
+(debug_scripting_show_thread <string> <boolean>)
+shows or hides the display of any thread containing the given substring.
+NETWORK SAFE: Yes
+
+(debug_script_thread <string> <boolean>)
+Verbose threads spew to log about script and function calls.
+NETWORK SAFE: Yes
+
+(debug_scripting <boolean>)
+Turn on/off hs script debugging.
+NETWORK SAFE: Yes
+
+(debug_scripting_globals <boolean>)
+Turn on/off hs global debugging.
+NETWORK SAFE: Yes
+
+(breakpoint <string>)
+If breakpoints are enabled, pause execution when this statement is hit (displaying the given message).
+NETWORK SAFE: Yes
+
+(kill_active_scripts)
+Terminates all currently running threads.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(get_executing_running_thread)
+Retrieves the current executing thread index
+NETWORK SAFE: Unknown, assumed unsafe
+
+(kill_thread <long>)
+Kill the specified thread
+NETWORK SAFE: Unknown, assumed unsafe
+
+(script_started <string>)
+Returns true if the continuous, dormant or startup script was started.
+NETWORK SAFE: Yes
+
+(script_finished <string>)
+Returns true if the continuous, dormant or startup script was finished.
+NETWORK SAFE: Yes
+
+(players)
+returns a list of the players (DO NOT USE TO COUNT PLAYERS IN COOP GAME, USE game_coop_player_count)
+NETWORK SAFE: Yes
+
+(kill_volume_enable <trigger_volume>)
+enables a kill volume
+NETWORK SAFE: Yes
+
+(kill_volume_disable <trigger_volume>)
+disables a kill volume
+NETWORK SAFE: Yes
+
+(volume_teleport_players_not_inside <trigger_volume> <cutscene_flag>)
+moves all players outside a specified trigger volume to a specified flag.
+NETWORK SAFE: Yes
+
+(volume_test_object <trigger_volume> <object>)
+returns true if the specified object is within the specified volume.
+NETWORK SAFE: Yes
+
+(volume_test_objects <trigger_volume> <object_list>)
+returns true if any of the specified objects are within the specified volume. trigger volume must have been postprocessed
+NETWORK SAFE: Yes
+
+(volume_test_objects_all <trigger_volume> <object_list>)
+returns true if any of the specified objects are within the specified volume. trigger volume must have been postprocessed
+NETWORK SAFE: Yes
+
+(volume_test_players <trigger_volume>)
+returns true if any players are within the specified volume. trigger volume must have been postprocessed
+NETWORK SAFE: Yes
+
+(volume_test_players_all <trigger_volume>)
+returns true if all players are within the specified volume. trigger volume must have been postprocessed
+NETWORK SAFE: Yes
+
+(volume_return_objects <trigger_volume>)
+returns list of objects in volume or (max 128).
+NETWORK SAFE: Yes
+
+(volume_return_objects_by_type <trigger_volume> <long>)
+returns list of objects in volume or (max 128).
+NETWORK SAFE: Yes
+
+(list_get <object_list> <short>)
+returns an item in an object list.
+NETWORK SAFE: Yes
+
+(list_count <object_list>)
+returns the number of objects in a list
+NETWORK SAFE: Yes
+
+(list_count_not_dead <object_list>)
+returns the number of objects in a list that aren't dead
+NETWORK SAFE: Yes
+
+(effect_new <effect> <cutscene_flag>)
+starts the specified effect at the specified flag.
+NETWORK SAFE: No
+
+(effect_new_random <effect> <point_reference>)
+starts the specified effect at one of the points in the given a point set.
+NETWORK SAFE: No
+
+(effect_new_at_ai_point <effect> <point_reference>)
+starts the specified effect at the specified ai point.
+NETWORK SAFE: No
+
+(effect_new_on_object_marker <effect> <object> <string_id>)
+starts the specified effect on the specified object at the specified marker.
+NETWORK SAFE: No (partial support exists, no general solution)
+
+(effect_new_on_ground <effect> <object>)
+starts the specified effect on the ground underneath the object's root.
+NETWORK SAFE: Dunno
+
+(damage_new <damage> <cutscene_flag>)
+causes the specified damage at the specified flag.
+NETWORK SAFE: Yes
+
+(damage_object_effect <damage> <object>)
+causes the specified damage at the specified object.
+NETWORK SAFE: Yes
+
+(damage_objects_effect <damage> <object_list>)
+causes the specified damage at the specified object list.
+NETWORK SAFE: Yes
+
+(damage_object <object> <string_id> <real>)
+causes the specified damage at the specified object.
+NETWORK SAFE: Yes
+
+(damage_objects <object_list> <string_id> <real>)
+causes the specified damage at the specified object list.
+NETWORK SAFE: Yes
+
+(damage_players <damage>)
+damages all players with the given damage effect
+NETWORK SAFE: Yes
+
+(soft_ceiling_enable <string_id> <boolean>)
+turn on or off a soft ceiling
+NETWORK SAFE: Yes
+
+(object_create <object_name>)
+creates an object from the scenario.
+NETWORK SAFE: Yes
+
+(object_create_clone <object_name>)
+creates an object, potentially resulting in multiple objects if it already exists.
+NETWORK SAFE: No
+
+(object_create_anew <object_name>)
+creates an object, destroying it first if it already exists.
+NETWORK SAFE: Yes
+
+(object_create_containing <string>)
+creates all objects from the scenario whose names contain the given substring.
+NETWORK SAFE: Yes
+
+(object_create_clone_containing <string>)
+creates clones for all objects from the scenario whose names contain the given substring.
+NETWORK SAFE: No
+
+(object_create_anew_containing <string>)
+creates anew all objects from the scenario whose names contain the given substring.
+NETWORK SAFE: Yes
+
+(object_destroy <object>)
+destroys an object.
+NETWORK SAFE: Yes
+
+(object_destroy_containing <string>)
+destroys all objects from the scenario whose names contain the given substring.
+NETWORK SAFE: Yes
+
+(object_destroy_all)
+destroys all non player objects.
+NETWORK SAFE: Yes
+
+(object_destroy_type_mask <long>)
+destroys all objects matching the type mask
+NETWORK SAFE: Yes
+
+(objects_delete_by_definition <object_definition>)
+deletes all objects of type <definition>
+NETWORK SAFE: Yes
+
+(object_hide <object> <boolean>)
+hides or shows the object passed in
+NETWORK SAFE: No
+
+(object_set_shadowless <object> <boolean>)
+set/reset shadow castingness of object
+NETWORK SAFE: No
+
+(object_function_set <long> <real>)
+sets a global object function (0-3) to value
+NETWORK SAFE: Unknown, assumed unsafe
+
+(object_set_function_variable <object> <string_id> <real> <real>)
+sets funciton variable for sin-o-matic use
+NETWORK SAFE: Unknown, assumed unsafe
+
+(object_clear_function_variable <object> <string_id>)
+clears one funciton variables for sin-o-matic use
+NETWORK SAFE: Unknown, assumed unsafe
+
+(object_clear_all_function_variables <object>)
+clears all funciton variables for sin-o-matic use
+NETWORK SAFE: Unknown, assumed unsafe
+
+(object_dynamic_simulation_disable <object> <boolean>)
+disabled dynamic simulation for this object (makes it fixed)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(object_set_phantom_power <object> <boolean>)
+sets phantom power to be latched at 1.0f or 0.0f
+NETWORK SAFE: Unknown, assumed unsafe
+
+(object_wake_physics <object>)
+wakes physics of an object.  For example it would make an usupported crate fall
+NETWORK SAFE: No
+
+(object_set_ranged_attack_inhibited <object> <boolean>)
+FALSE prevents object from using ranged attack
+NETWORK SAFE: Yes (actors only)
+
+(object_set_melee_attack_inhibited <object> <boolean>)
+FALSE prevents object from using melee attack
+NETWORK SAFE: Yes (actors only)
+
+(objects_dump_memory)
+debugs object memory usage
+NETWORK SAFE: Unknown, assumed unsafe
+
+(object_get_health <object>)
+returns the health [0,1] of the object, returns -1 if the object does not exist
+NETWORK SAFE: Yes
+
+(object_get_shield <object>)
+returns the shield [0,1] of the object, returns -1 if the object does not exist
+NETWORK SAFE: Yes
+
+(object_set_shield_effect <object> <real> <real>)
+sets the shield response effect (not current shield amount) to a given value over the given number of seconds (cinematic use only, remember to call (object_set_shield_effect 0 0) after use!)
+NETWORK SAFE: No
+
+(object_set_physics <object> <boolean>)
+prevents an object from running physics or colliding with any other objects
+NETWORK SAFE: No
+
+(object_get_parent <object>)
+returns the parent of the given object
+NETWORK SAFE: Yes
+
+(objects_attach <object> <string_id> <object> <string_id>)
+attaches the second object to the first both strings can be empty
+NETWORK SAFE: No
+
+(object_at_marker <object> <string_id>)
+returns the object attached to the marker of the given parent object
+NETWORK SAFE: Yes
+
+(objects_detach <object> <object>)
+detaches from the given parent object the given child object
+NETWORK SAFE: No
+
+(object_set_scale <object> <real> <short>)
+sets the scale for a given object and interpolates over the given number of frames to achieve that scale
+NETWORK SAFE: No
+
+(object_set_velocity <object> <real>)
+Sets the (object-relative) forward velocity of the given object
+NETWORK SAFE: Yes
+
+(object_set_velocity <object> <real> <real> <real>)
+Sets the (object-relative) velocity of the given object
+NETWORK SAFE: Yes
+
+(object_set_deleted_when_deactivated <object>)
+when this object deactivates it will be deleted
+NETWORK SAFE: Yes
+
+(object_copy_player_appearance <object> <long>)
+copy appearance into object from player n (starts counting from 0)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(object_model_target_destroyed <object> <string_id>)
+returns TRUE if the specified model target is destroyed
+NETWORK SAFE: Unknown, assumed unsafe
+
+(object_model_targets_destroyed <object> <string_id>)
+returns TRUE if the specified model target is destroyed
+NETWORK SAFE: Unknown, assumed unsafe
+
+(object_damage_damage_section <object> <string_id> <real>)
+applies damage to a damage section, causing all manner of effects/constraint breakage to occur
+NETWORK SAFE: Yes
+
+(object_cannot_die <object> <boolean>)
+Set whether the object can die from damage or not (as opposed to by scripting)
+NETWORK SAFE: Yes
+
+(object_vitality_pinned <object>)
+returns TRUE if the object's vitality is currently pinned at some minimum value because it cannot die.
+NETWORK SAFE: Yes
+
+(garbage_collect_now)
+causes all garbage objects except those visible to a player to be collected immediately
+NETWORK SAFE: Unknown, assumed unsafe
+
+(garbage_collect_unsafe)
+forces all garbage objects to be collected immediately, even those visible to a player (dangerous!)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(garbage_collect_multiplayer)
+runs multiplayer garbage collection
+NETWORK SAFE: Unknown, assumed unsafe
+
+(object_cannot_take_damage <object_list>)
+prevents an object from taking damage
+NETWORK SAFE: Unknown, assumed unsafe
+
+(object_can_take_damage <object_list>)
+allows an object to take damage again
+NETWORK SAFE: Unknown, assumed unsafe
+
+(object_cinematic_lod <object> <boolean>)
+makes an object use the highest lod for the remainder of the levels' cutscenes.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(object_cinematic_collision <object> <boolean>)
+makes an object not collide with other cinematic collision objects.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(object_cinematic_visibility <object> <boolean>)
+makes an object bypass visibility and always render during cinematics.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_light_object <object> <cinematic_lightprobe> <real> <real>)
+Uses cinematic lightprobe instead of sampled lighting.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_light_object_blend <object> <cinematic_lightprobe> <cinematic_lightprobe> <real> <real> <real>)
+Interpolate between two lightprobes.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_light_object_dynamic <object> <real> <real>)
+Dynamically interpolate between light probes.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_light_object_off <object>)
+Turn off cinematic lighting for the object.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_lighting_initialize)
+Intialize the cinematic lighting system.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(objects_predict <object_list>)
+loads textures/geometry/sounds necessary to present objects that are about to come on-screen
+NETWORK SAFE: Unknown, assumed unsafe
+
+(objects_predict_high <object_list>)
+loads textures/geometry/sounds necessary to present objects that are about to come on-screen
+NETWORK SAFE: Unknown, assumed unsafe
+
+(objects_predict_low <object_list>)
+loads textures/geometry/sounds necessary to present objects that are about to come on-screen
+NETWORK SAFE: Unknown, assumed unsafe
+
+(object_type_predict_high <object_definition>)
+loads textures necessary to draw an object that's about to come on-screen.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(object_type_predict_low <object_definition>)
+loads textures necessary to draw an object that's about to come on-screen.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(object_type_predict <object_definition>)
+loads textures necessary to draw an object that's about to come on-screen.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(object_teleport <object> <cutscene_flag>)
+moves the specified object to the specified flag.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(object_set_facing <object> <cutscene_flag>)
+turns the specified object in the direction of the specified flag.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(object_set_shield <object> <real>)
+sets the shield vitality of the specified object (between 0 and 1).
+NETWORK SAFE: No
+
+(object_set_shield_stun <object> <real>)
+set how long the shield will be stunned for, 0 is unstunned
+NETWORK SAFE: No
+
+(object_set_shield_stun_infinite <object>)
+make this objects shield be stunned permanently
+NETWORK SAFE: No
+
+(object_set_permutation <object> <string_id> <string_id>)
+sets the desired region (use "" for all regions) to the permutation with the given name, e.g. (object_set_permutation flood "right arm" ~damaged)
+NETWORK SAFE: No
+
+(object_set_region_state <object> <string_id> <model_state>)
+sets the desired region (use "" for all regions) to the model state with the given name, e.g. (object_set_region_state marine head destroyed)
+NETWORK SAFE: No
+
+(objects_can_see_object <object_list> <object> <real>)
+returns true if any of the specified units are looking within the specified number of degrees of the object.
+NETWORK SAFE: Yes
+
+(objects_can_see_flag <object_list> <cutscene_flag> <real>)
+returns true if any of the specified units are looking within the specified number of degrees of the flag.
+NETWORK SAFE: Yes
+
+(objects_distance_to_object <object_list> <object>)
+returns minimum distance from any of the specified objects to the specified destination object. (returns -1 if there are no objects to check)
+NETWORK SAFE: Yes
+
+(objects_distance_to_flag <object_list> <cutscene_flag>)
+returns minimum distance from any of the specified objects to the specified flag. (returns -1 if there are no objects, or no flag, to check)
+NETWORK SAFE: Yes
+
+(map_info)
+prints the map, zone set, active bsps, and current bsp
+
+(position_predict <real> <real> <real>)
+in: x, y, z position. loads textures/geometry/sounds necessary to present locations that are about to come on-screen.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(shader_predict <shader>)
+in: shader name. loads textures necessary for a shader.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(bitmap_predict <bitmap>)
+in: bitmap name. loads all the bitmaps in that bitmap group
+NETWORK SAFE: Unknown, assumed unsafe
+
+(script_recompile)
+recompiles scripts.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(script_doc)
+saves a file called hs_doc.txt with parameters for all script commands.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(help <string>)
+prints a description of the named function.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(game_engine_objects)
+returns a list of the special game engine objects
+NETWORK SAFE: Unknown, assumed unsafe
+
+(random_range <short> <short>)
+returns a random value in the range [lower bound, upper bound)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(real_random_range <real> <real>)
+returns a random value in the range [lower bound, upper bound)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(physics_constants_reset)
+resets all physics constants to earthly values
+NETWORK SAFE: Unknown, assumed unsafe
+
+(physics_set_gravity <real>)
+set global gravity acceleration relative to halo standard gravity
+NETWORK SAFE: Unknown, assumed unsafe
+
+(physics_set_velocity_frame <real> <real> <real>)
+sets a local frame of motion for updating physics of things that wish to respect it
+NETWORK SAFE: Unknown, assumed unsafe
+
+(physics_disable_character_ground_adhesion_forces <real>)
+turn off ground adhesion forces so you can play tricks with gravity
+NETWORK SAFE: Unknown, assumed unsafe
+
+(havok_debug_start)
+start up the havok visual debugger
+NETWORK SAFE: Unknown, assumed unsafe
+
+(havok_dump_world <string> <boolean>)
+dump the state of the havok world, with our without a movie
+NETWORK SAFE: Unknown, assumed unsafe
+
+(havok_dump_world_close_movie)
+end the capture of a havok dump movie
+NETWORK SAFE: Unknown, assumed unsafe
+
+(havok_profile_start)
+start profiling havok
+NETWORK SAFE: Unknown, assumed unsafe
+
+(havok_profile_end)
+start profiling havok
+NETWORK SAFE: Unknown, assumed unsafe
+
+(havok_reset_allocated_state <boolean>)
+strips down and builds back up all allocated havok memory
+NETWORK SAFE: Unknown, assumed unsafe
+
+(breakable_surfaces_enable <boolean>)
+enables or disables breakability of all breakable surfaces on level
+NETWORK SAFE: Yes
+
+(breakable_surfaces_reset)
+restores all breakable surfaces
+NETWORK SAFE: No
+
+(recording_play <unit> <cutscene_recording>)
+make the specified unit run the specified cutscene recording.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(recording_play_and_delete <unit> <cutscene_recording>)
+make the specified unit run the specified cutscene recording, deletes the unit when the animation finishes.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(recording_play_and_hover <vehicle> <cutscene_recording>)
+make the specified vehicle run the specified cutscene recording, hovers the vehicle when the animation finishes.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(recording_kill <unit>)
+kill the specified unit's cutscene recording.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(recording_time <unit>)
+return the time remaining in the specified unit's cutscene recording.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(render_lights <boolean>)
+enables/disables dynamic lights
+NETWORK SAFE: Unknown, assumed unsafe
+
+(render_lights_enable_cinematic_shadow <boolean> <object> <string_id> <real>)
+enable/disable the specified unit to receive cinematic shadows where the shadow is focused about a radius around a marker name
+NETWORK SAFE: Unknown, assumed unsafe
+
+(texture_camera_set_object_marker <object> <string_id> <real>)
+sets the render texture camera to a given object marker
+
+(texture_camera_set_position <real> <real> <real>)
+sets the render texture camera position
+NETWORK SAFE: Unknown, assumed unsafe
+
+(texture_camera_set_target <real> <real> <real>)
+sets the render texture camera target
+NETWORK SAFE: Unknown, assumed unsafe
+
+(texture_camera_attach_to_object <object> <string_id>)
+attaches the render texture camera to a given object marker
+NETWORK SAFE: Unknown, assumed unsafe
+
+(texture_camera_target_object <object> <string_id>)
+targets the render texture camera to view a given object marker
+NETWORK SAFE: Unknown, assumed unsafe
+
+(texture_camera_on)
+turns off the render texture camera
+NETWORK SAFE: Unknown, assumed unsafe
+
+(texture_camera_off)
+turns off the render texture camera
+NETWORK SAFE: Unknown, assumed unsafe
+
+(texture_camera_render_mode <long>)
+switches the texture camera render mode
+
+(render_debug_texture_camera <boolean>)
+toggles displaying the texture camera in the corner of the screen
+NETWORK SAFE: Unknown, assumed unsafe
+
+(debug_structure_cluster <long> <long>)
+specify a structure and cluster to debug
+NETWORK SAFE: Unknown, assumed unsafe
+
+(render_debug_structure_cluster_visibility <long>)
+enables cluster visibility debugging
+NETWORK SAFE: Unknown, assumed unsafe
+
+(render_debug_structure_cluster_fog <long>)
+enables cluster fog debugging
+NETWORK SAFE: Unknown, assumed unsafe
+
+(render_debug_structure_fog_plane <long>)
+enables fog plane debugging
+NETWORK SAFE: Unknown, assumed unsafe
+
+(render_debug_structure_fog_plane_infinite_extent <long>)
+enables fog plane debugging
+NETWORK SAFE: Unknown, assumed unsafe
+
+(render_debug_structure_fog_zone <long>)
+enabled fog zone debugging
+NETWORK SAFE: Unknown, assumed unsafe
+
+(render_debug_structure_fog_zone_floodfill <long>)
+enables fog zone debugging
+NETWORK SAFE: Unknown, assumed unsafe
+
+(render_debug_structure_all_fog_planes <boolean>)
+enables fog plane debugging (all)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(render_debug_structure_all_cluster_errors <boolean>)
+enables cluster error debugging (all)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(render_debug_structure_line_opacity <real> <real> <real> <real>)
+sets the opacity (0 is default)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(render_debug_structure_text_opacity <real> <real> <real> <real>)
+sets the opacity (0 is default)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(render_debug_structure_opacity <real> <real> <real> <real>)
+sets the opacity (0 is default)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(render_debug_structure_non_occluded_fog_planes <boolean>)
+controls non-occluded fog plane debugging
+NETWORK SAFE: Unknown, assumed unsafe
+
+(render_debug_query_object_bitmaps <string>)
+substring of object definition name to spew out it's debug usage
+NETWORK SAFE: Unknown, assumed unsafe
+
+(render_debug_query_bsp_resources <long> <boolean>)
+BSP index and whether to spit out all bitmaps used
+NETWORK SAFE: Unknown, assumed unsafe
+
+(render_debug_query_all_object_resources)
+Outputs text of texture and geometry memory usage
+NETWORK SAFE: Unknown, assumed unsafe
+
+(render_debug_query_d3d_resources)
+Outputs text of d3d resource usage
+NETWORK SAFE: Unknown, assumed unsafe
+
+(render_postprocess_color_tweaking_reset)
+resets hue saturation filters to default
+NETWORK SAFE: Unknown, assumed unsafe
+
+(scenery_animation_start <scenery> <animation_graph> <string_id>)
+starts a custom animation playing on a piece of scenery
+NETWORK SAFE: Unknown, assumed unsafe
+
+(scenery_animation_start_loop <scenery> <animation_graph> <string_id>)
+starts a custom looping animation playing on a piece of scenery
+NETWORK SAFE: Unknown, assumed unsafe
+
+(scenery_animation_start_relative <scenery> <animation_graph> <string_id> <object>)
+starts a custom animation playing on a piece of scenery relative to a parent object
+NETWORK SAFE: Unknown, assumed unsafe
+
+(scenery_animation_start_relative_loop <scenery> <animation_graph> <string_id> <object>)
+starts a custom looping animation playing on a piece of scenery relative to a parent object
+NETWORK SAFE: Unknown, assumed unsafe
+
+(scenery_animation_start_at_frame <scenery> <animation_graph> <string_id> <short>)
+starts a custom animation playing on a piece of scenery at a specific frame
+NETWORK SAFE: Unknown, assumed unsafe
+
+(scenery_animation_start_relative_at_frame <scenery> <animation_graph> <string_id> <object> <short>)
+starts a custom animation playing on a piece of scenery relative to a specific cutscene flag at a specific frame
+NETWORK SAFE: Unknown, assumed unsafe
+
+(scenery_animation_idle <scenery>)
+starts the idle animation (if any) for a piece of scenery
+NETWORK SAFE: Unknown, assumed unsafe
+
+(scenery_get_animation_time <scenery>)
+returns the number of ticks remaining in a custom animation (or zero, if the animation is over).
+NETWORK SAFE: Unknown, assumed unsafe
+
+(render_effects <boolean>)
+
+NETWORK SAFE: Unknown, assumed unsafe
+
+(unit_can_blink <unit> <boolean>)
+allows a unit to blink or not (units never blink when they are dead)
+NETWORK SAFE: No
+
+(unit_set_active_camo <unit> <boolean> <real>)
+enable or disable active camo for the given unit over the specified number of seconds
+NETWORK SAFE: Unknown, assumed unsafe
+
+(unit_open <unit>)
+opens the hatches on the given unit
+NETWORK SAFE: No
+
+(unit_close <unit>)
+closes the hatches on a given unit
+NETWORK SAFE: Unknown, assumed unsafe
+
+(unit_kill <unit>)
+kills a given unit, no saving throw
+NETWORK SAFE: Unknown, assumed unsafe
+
+(unit_kill_silent <unit>)
+kills a given unit silently (doesn't make them play their normal death animation or sound)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(unit_is_emitting <unit>)
+returns whether or not the given unit is current emitting an ai
+NETWORK SAFE: Unknown, assumed unsafe
+
+(unit_get_custom_animation_time <unit>)
+returns the number of ticks remaining in a unit's custom animation (or zero, if the animation is over).
+NETWORK SAFE: Unknown, assumed unsafe
+
+(unit_stop_custom_animation <unit>)
+stops the custom animation running on the given unit.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(custom_animation <unit> <animation_graph> <string_id> <boolean>)
+starts a custom animation playing on a unit (interpolates into animation if last parameter is TRUE)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(custom_animation_loop <unit> <animation_graph> <string_id> <boolean>)
+starts a custom animation playing on a unit (interpolates into animation if last parameter is TRUE)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(custom_animation_relative <unit> <animation_graph> <string_id> <boolean> <object>)
+starts a custom animation relative to some other object (interpolates into animation if last parameter is TRUE)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(custom_animation_relative_loop <unit> <animation_graph> <string_id> <boolean> <object>)
+starts a custom animation relative to some other object (interpolates into animation if last parameter is TRUE)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(custom_animation_list <object_list> <animation_graph> <string_id> <boolean>)
+starts a custom animation playing on a unit list (interpolates into animation if last parameter is TRUE)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(unit_custom_animation_at_frame <unit> <animation_graph> <string_id> <boolean> <short>)
+starts a custom animation playing on a unit at a specific frame index(interpolates into animation if next to last parameter is TRUE)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(unit_custom_animation_relative_at_frame <unit> <animation_graph> <string_id> <string_id> <boolean> <short>)
+starts a custom animation playing on a unit relative to a specific cutscene flag at a specific frame index(interpolates into animation if next to last parameter is TRUE)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(unit_is_playing_custom_animation <unit>)
+returns TRUE if the given unit is still playing a custom animation
+NETWORK SAFE: Unknown, assumed unsafe
+
+(object_set_custom_animations_hold_on_last_frame <boolean>)
+changes the default behavior for custom animations
+NETWORK SAFE: Unknown, assumed unsafe
+
+(object_set_custom_animations_prevent_lipsync_head_movement <boolean>)
+when true, prevents lipsync from bobbing the head during custom animations. default is true.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(preferred_animation_list_add <object> <string_id>)
+adds an animation into the 'preferred list' of animations
+NETWORK SAFE: Unknown, assumed unsafe
+
+(preferred_animation_list_clear)
+clears the 'preferred list' of animations
+NETWORK SAFE: Unknown, assumed unsafe
+
+(unit_set_actively_controlled <unit> <boolean>)
+sets unit's actively controlled flag
+NETWORK SAFE: No
+
+(unit_get_team_index <unit>)
+returns the team index of the unit, returns -1 if the unit does not have a team
+NETWORK SAFE: Yes
+
+(unit_aim_without_turning <unit> <boolean>)
+allows a unit to aim in place without turning
+NETWORK SAFE: Yes
+
+(unit_set_enterable_by_player <unit> <boolean>)
+can be used to prevent the player from entering a vehicle
+NETWORK SAFE: Yes
+
+(unit_get_enterable_by_player <unit>)
+returns true if a player may enter the vehicle
+NETWORK SAFE: Yes
+
+(unit_only_takes_damage_from_players_team <unit> <boolean>)
+used for the tartarus boss fight
+NETWORK SAFE: No
+
+(unit_enter_vehicle <unit> <vehicle> <string_id>)
+puts the specified unit in the specified vehicle (in the named seat)
+NETWORK SAFE: Yes (w/o animation on clients)
+
+(object_get_turret_count <object>)
+returns the number of turrets attached to the given object
+NETWORK SAFE: Unknown, assumed UNSAFE
+
+(object_get_turret <object> <short>)
+returns the nth turret attached to the given object
+NETWORK SAFE: Unknown, assumed UNSAFE
+
+(unit_board_vehicle <unit> <string_id>)
+Causes the given unit to attempt to board the named seat
+NETWORK SAFE: Yes
+
+(unit_set_emotion <unit> <long> <real> <real>)
+sets a unit's facial expression (-1 is none, other values depend on unit)
+NETWORK SAFE: No
+
+(unit_set_emotion_by_name <unit> <string_id> <real> <real>)
+sets a unit's facial expression by name with weight and transition time
+NETWORK SAFE: No
+
+(unit_enable_eye_tracking <unit> <boolean>)
+enable/disable eye aiming on a unit
+NETWORK SAFE: No
+
+(unit_set_integrated_flashlight <unit> <boolean>)
+sets a unit's flashlight on or off
+NETWORK SAFE: No
+
+(unit_in_vehicle <unit>)
+returns true if the given unit is seated on a parent unit
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vehicle_test_seat_list <vehicle> <string_id> <object_list>)
+tests whether the named seat has an object in the object list (use "" to test all seats for any unit in the list)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vehicle_test_seat <vehicle> <string_id> <unit>)
+tests whether the named seat has a specified unit in it (use "" to test all seats for this unit)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(unit_set_prefer_tight_camera_track <unit> <boolean>)
+sets the unit to prefer a tight camera track
+NETWORK SAFE: Unknown, assumed unsafe
+
+(unit_exit_vehicle <unit>)
+makes a unit exit its vehicle
+NETWORK SAFE: Yes (w/o client animation)
+
+(unit_exit_vehicle <unit> <short>)
+makes a unit exit its vehicle (0 = normal exit to airborne, 1 = ejection, 2 = ejection + death, 3 = exit to ground)
+NETWORK SAFE: Yes (w/o client animation)
+
+(unit_set_maximum_vitality <unit> <real> <real>)
+sets a unit's maximum body and shield vitality
+NETWORK SAFE: Unknown, assumed unsafe
+
+(units_set_maximum_vitality <object_list> <real> <real>)
+sets a group of units' maximum body and shield vitality
+NETWORK SAFE: Unknown, assumed unsafe
+
+(unit_set_current_vitality <unit> <real> <real>)
+sets a unit's current body and shield vitality
+NETWORK SAFE: Unknown, assumed unsafe
+
+(units_set_current_vitality <object_list> <real> <real>)
+sets a group of units' current body and shield vitality
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vehicle_load_magic <object> <unit_seat_mapping> <object_list>)
+makes a list of units (named or by encounter) magically get into a vehicle, in the substring-specified seats (e.g. CD-passenger... empty string matches all seats)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vehicle_unload <object> <unit_seat_mapping>)
+makes units get out of an object from the substring-specified seats (e.g. CD-passenger... empty string matches all seats)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(unit_set_animation_mode <unit> <string_id>)
+this unit will assume the named animation mode
+NETWORK SAFE: Unknown, assumed unsafe
+
+(magic_melee_attack)
+causes player's unit to start a melee attack
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vehicle_riders <unit>)
+returns a list of all riders in a vehicle
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vehicle_driver <unit>)
+returns the driver of a vehicle
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vehicle_gunner <unit>)
+returns the gunner of a vehicle
+NETWORK SAFE: Unknown, assumed unsafe
+
+(unit_get_health <unit>)
+returns the health [0,1] of the unit, returns -1 if the unit does not exist
+NETWORK SAFE: Unknown, assumed unsafe
+
+(unit_get_shield <unit>)
+returns the shield [0,1] of the unit, returns -1 if the unit does not exist
+NETWORK SAFE: Unknown, assumed unsafe
+
+(unit_get_total_grenade_count <unit>)
+returns the total number of grenades for the given unit, 0 if it does not exist
+NETWORK SAFE: Unknown, assumed unsafe
+
+(unit_has_weapon <unit> <object_definition>)
+returns TRUE if the <unit> has <object> as a weapon, FALSE otherwise
+NETWORK SAFE: Unknown, assumed unsafe
+
+(unit_has_weapon_readied <unit> <object_definition>)
+returns TRUE if the <unit> has <object> as the primary weapon, FALSE otherwise
+NETWORK SAFE: Unknown, assumed unsafe
+
+(unit_has_any_equipment <unit>)
+returns TRUE if the <unit> has any equipment, FALSE otherwise
+NETWORK SAFE: Unknown, assumed unsafe
+
+(unit_has_equipment <unit> <object_definition>)
+returns TRUE if the <unit> has equipment <object> , FALSE otherwise
+NETWORK SAFE: Unknown, assumed unsafe
+
+(unit_lower_weapon <unit> <short>)
+lower the units weapon over x ticks
+NETWORK SAFE: Unknown, assumed unsafe
+
+(unit_raise_weapon <unit> <short>)
+raises the units weapon over x ticks
+NETWORK SAFE: Unknown, assumed unsafe
+
+(unit_animation_forced_seat <string_id>)
+all units controlled by the player will assume the given seat name (valid values are 'asleep', 'alert', 'stand', 'crouch' and 'flee')
+NETWORK SAFE: Unknown, assumed unsafe
+
+(unit_doesnt_drop_items <object_list>)
+prevents any of the given units from dropping weapons or grenades when they die
+NETWORK SAFE: Unknown, assumed unsafe
+
+(unit_impervious <object_list> <boolean>)
+prevents any of the given units from being knocked around or playing ping animations
+NETWORK SAFE: Unknown, assumed unsafe
+
+(unit_suspended <unit> <boolean>)
+stops gravity from working on the given unit
+NETWORK SAFE: Unknown, assumed unsafe
+
+(unit_add_equipment <unit> <starting_profile> <boolean> <boolean>)
+adds/resets the unit's health, shield, and inventory (weapons and grenades) to the named profile. resets if third parameter is true, adds if false. weapons will be marked as garbage if fourth parameter is true (for respawning equipment).
+NETWORK SAFE: Unknown, assumed unsafe
+
+(weapon_hold_trigger <weapon> <long> <boolean>)
+turns the trigger for a weapon  on/off
+NETWORK SAFE: Unknown, assumed unsafe
+
+(weapon_enable_warthog_chaingun_light <boolean>)
+turns the trigger for a weapon  on/off
+NETWORK SAFE: Unknown, assumed unsafe
+
+(device_set_never_appears_locked <device> <boolean>)
+changes a machine's never_appears_locked flag, but only if paul is a bastard
+NETWORK SAFE: No
+
+(device_set_power <device> <real>)
+immediately sets the power of a named device to the given value
+NETWORK SAFE: Yes
+
+(device_get_power <device>)
+gets the current power of a named device
+NETWORK SAFE: Yes
+
+(device_set_position <device> <real>)
+set the desired position of the given device (used for devices without explicit device groups)
+NETWORK SAFE: Yes
+
+(device_get_position <device>)
+gets the current position of the given device (used for devices without explicit device groups)
+NETWORK SAFE: Yes
+
+(device_set_position_immediate <device> <real>)
+instantaneously changes the position of the given device (used for devices without explicit device groups
+NETWORK SAFE: No (only desired works, need to add immediate support)
+
+(device_group_get <device_group>)
+returns the desired value of the specified device group.
+NETWORK SAFE: Yes
+
+(device_group_set <device> <device_group> <real>)
+changes the desired value of the specified device group.
+NETWORK SAFE: Yes
+
+(device_group_set_immediate <device_group> <real>)
+instantaneously changes the value of the specified device group.
+NETWORK SAFE: No (only desired works, need to add immediate support)
+
+(device_one_sided_set <device> <boolean>)
+TRUE makes the given device one-sided (only able to be opened from one direction), FALSE makes it two-sided
+NETWORK SAFE: No
+
+(device_ignore_player_set <device> <boolean>)
+TRUE makes the given device ignore the player (won't open for players), FALSE makes it work for the player
+NETWORK SAFE: No
+
+(device_operates_automatically_set <device> <boolean>)
+TRUE makes the given device open automatically when any biped is nearby, FALSE makes it not
+NETWORK SAFE: No
+
+(device_closes_automatically_set <device> <boolean>)
+TRUE makes the given device close automatically after it has opened, FALSE makes it not
+NETWORK SAFE: No
+
+(device_group_change_only_once_more_set <device_group> <boolean>)
+TRUE allows a device to change states only once
+NETWORK SAFE: No
+
+(device_set_position_track <device> <string_id> <real>)
+set the desired position track animation to use (optional interpolation time onto track)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(device_set_overlay_track <device> <string_id>)
+set the desired overlay animation to use
+NETWORK SAFE: Unknown, assumed unsafe
+
+(device_animate_position <device> <real> <real> <real> <real> <boolean>)
+animate the position over time
+NETWORK SAFE: Unknown, assumed unsafe
+
+(device_animate_overlay <device> <real> <real> <real> <real>)
+animate the overlay over time
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cheat_all_powerups)
+drops all powerups near player
+NETWORK SAFE: Yes
+
+(cheat_all_weapons)
+drops all weapons near player
+NETWORK SAFE: Yes
+
+(cheat_all_vehicles)
+drops all vehicles on player
+NETWORK SAFE: Yes
+
+(cheat_teleport_to_camera)
+teleports player to camera location
+NETWORK SAFE: Yes
+
+(cheat_active_camouflage <boolean>)
+gives the player active camouflage
+NETWORK SAFE: Yes
+
+(cheat_active_camouflage_by_player <short> <boolean>)
+gives a specific player active camouflage
+NETWORK SAFE: Yes
+
+(cheats_load)
+reloads the cheats.txt file
+NETWORK SAFE: Unknown, assumed unsafe
+
+(drop_safe <any tag>)
+drops the named tag e.g. objects\vehicles\banshee\banshee.vehicle
+NETWORK SAFE: Yes, for objects
+
+(drop <string>)
+drops the named tag e.g. objects\vehicles\banshee\banshee.vehicle
+NETWORK SAFE: Yes, for objects
+
+(ai_enable <boolean>)
+turns all AI on or off.
+NETWORK SAFE: Yes
+
+(ai_enabled)
+returns whether AI is turned on or off.
+NETWORK SAFE: Yes
+
+(ai_grenades <boolean>)
+turns grenade inventory on or off.
+NETWORK SAFE: Yes
+
+(ai_dialogue_enable <boolean>)
+turn combat dialogue on/off
+NETWORK SAFE: No
+
+(ai_dialogue_log_reset)
+reset the dialogue log
+NETWORK SAFE: Yes (local)
+
+(ai_dialogue_log_dump <string>)
+dump a file of the given name with csv statistics on vocalizations
+NETWORK SAFE: Yes
+
+(ai_get_object <ai>)
+returns the unit/object corresponding to the given actor
+NETWORK SAFE: Yes
+
+(ai_get_unit <ai>)
+returns the unit/object corresponding to the given actor
+NETWORK SAFE: Yes
+
+(ai_get_squad <ai>)
+returns the squad of the given actor. Invalid if the given ai is NOT an actor-type (i.e. is itself a squad or squad group or task
+NETWORK SAFE: Yes
+
+(ai_get_turret_ai <ai> <short>)
+returns an the ai controlling the Nth turret attached to the given ai (or its vehicle)
+NETWORK SAFE: Yes
+
+(ai_random_smart_point <point_reference> <real> <real> <real>)
+returns a point in the given point set that a player is probably going to be able to see. Args are [point set], [min distance], [max distance], [angle-from-forward], all relative to the player
+NETWORK SAFE: Yes
+
+(ai_nearest_point <object> <point_reference>)
+returns the nearest point in the given point set to the given object
+NETWORK SAFE: Yes
+
+(ai_get_point_count <point_reference>)
+returns the number of points in the given point set
+NETWORK SAFE: Yes
+
+(ai_point_set_get_point <point_reference> <short>)
+returns Nth point in the point set
+NETWORK SAFE: Yes
+
+(ai_attach <unit> <ai>)
+attaches the specified unit to the specified encounter.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_attach_units <object_list> <ai>)
+attaches the specified list of units to the specified encounter.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_detach <unit>)
+detaches the specified unit from all AI.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_detach_units <object_list>)
+detaches the specified list of units from all AI.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_place <ai>)
+places the specified squad on the map.
+NETWORK SAFE: Yes
+
+(ai_place <ai> <short>)
+places the given number of members of the specified squad.
+NETWORK SAFE: Yes
+
+(ai_place_in_vehicle <ai> <ai>)
+places the specified squad (1st arg) on the map in the vehicles belonging to the specified vehicle squad (2nd arg).
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_cannot_die <ai> <boolean>)
+AI cannot die from damage (as opposed to by scripting)
+NETWORK SAFE: Yes
+
+(ai_vitality_pinned <ai>)
+Returns true if the ai's units are ALL vitality pinned (see object_vitality_pinned)
+NETWORK SAFE: Yes
+
+(ai_resurrect <object>)
+Resurrect the specified mission critical AI character.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_kill <ai>)
+instantly kills the specified encounter and/or squad.
+NETWORK SAFE: YEs
+
+(ai_kill_silent <ai>)
+instantly and silently (no animation or sound played) kills the specified encounter and/or squad.
+NETWORK SAFE: Yes
+
+(ai_erase <ai>)
+erases the specified encounter and/or squad.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_erase_all)
+erases all AI.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_disposable <ai> <boolean>)
+enables or disables automatic garbage collection for actors in the specified encounter and/or squad.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_select <ai>)
+selects the specified squad.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_deselect)
+clears the selected encounter.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_set_deaf <ai> <boolean>)
+enables or disables hearing for actors in the specified encounter.
+NETWORK SAFE: Yes
+
+(ai_set_blind <ai> <boolean>)
+enables or disables sight for actors in the specified encounter.
+NETWORK SAFE: Yes
+
+(ai_set_weapon_up <ai> <boolean>)
+force actor to hold their weapon up, instead of lowering it when idle. this does NOT cause them to draw their weapon if stowed
+NETWORK SAFE: Yes
+
+(ai_magically_see <ai> <ai>)
+Make one squad magically aware of another.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_magically_see_object <ai> <object>)
+Make a squad magically aware of a particular object.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_set_active_camo <ai> <boolean>)
+Turn on active camoflage on actor/squad/squad-group
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_suppress_combat <ai> <boolean>)
+Turn on/off combat suppression on actor/squad/squad-group
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_migrate <ai> <ai>)
+makes all or part of an encounter move to another encounter.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_allegiance <team> <team>)
+creates an allegiance between two teams.
+NETWORK SAFE: Yes
+
+(ai_allegiance_remove <team> <team>)
+destroys an allegiance between two teams.
+NETWORK SAFE: Yes
+
+(ai_allegiance_break <team> <team>)
+fake a betrayal incident between two teams
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_braindead <ai> <boolean>)
+makes a group of actors braindead, or restores them to life (in their initial state)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_braindead_by_unit <object_list> <boolean>)
+makes a list of objects braindead, or restores them to life. if you pass in a vehicle index, it makes all actors in that vehicle braindead (including any built-in guns)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_disregard <object_list> <boolean>)
+if TRUE, forces all actors to completely disregard the specified units, otherwise lets them acknowledge the units again
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_prefer_target <object_list> <boolean>)
+if TRUE, *ALL* enemies will prefer to attack the specified units. if FALSE, removes the preference.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_prefer_target_team <ai> <team>)
+the given ai will prefer the indicated team.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_teleport_to_starting_location_if_outside_bsp <ai>)
+teleports a group of actors to the starting locations of their current squad(s) if they are currently outside the world.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_teleport <ai> <point_reference>)
+teleports the given squad to the given point.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_bring_forward <object> <real>)
+teleports the given mission critical AI character to the current encounter, if beyond the given range from a player
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_migrate_form <ai> <ai> <short>)
+
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_morph <ai> <short>)
+Cause an ai (or a group of ai) to morph to the given form
+NETWORK SAFE: Unknown, assumed unsafe
+
+(biped_morph <object>)
+Cause a biped to morph to its floodified form
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_renew <ai>)
+refreshes the health and grenade count of a group of actors, so they are as good as new
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_force_active <ai> <boolean>)
+forces an encounter to remain active (i.e. not freeze in place) even if there are no players nearby
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_force_active_by_unit <unit> <boolean>)
+forces a named actor that is NOT in an encounter to remain active (i.e. not freeze in place) even if there are no players nearby
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_playfight <ai> <boolean>)
+sets an encounter to be playfighting or not
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_reconnect)
+reconnects all AI information to the current structure bsp (use this after you create encounters or command lists in sapien, or place new firing points or command list points)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_berserk <ai> <boolean>)
+forces a group of actors to start or stop berserking
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_set_team <ai> <team>)
+makes an encounter change to a new team
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_allow_dormant <ai> <boolean>)
+either enables or disables automatic dormancy for a group of actors
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_is_attacking <ai>)
+returns whether a platoon is in the attacking mode (or if an encounter is specified, returns whether any platoon in that encounter is attacking)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_fighting_count <ai>)
+return the number of actors that are fighting in a squad or squad_group
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_living_count <ai>)
+return the number of living actors in the specified encounter and/or squad.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_living_fraction <ai>)
+return the fraction [0-1] of living actors in the specified encounter and/or squad.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_in_vehicle_count <ai>)
+return the number of living actors in the specified encounter and/or squad who are currently in a vehicle.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_body_count <ai>)
+return the number of actors who have died in the completiong of the given objective/task.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_strength <ai>)
+return the current strength (average body vitality from 0-1) of the specified encounter and/or squad.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_swarm_count <ai>)
+return the number of swarm actors in the specified encounter and/or squad.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_nonswarm_count <ai>)
+return the number of non-swarm actors in the specified encounter and/or squad.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_actors <ai>)
+converts an ai reference to an object list.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_allegiance_broken <team> <team>)
+returns whether two teams have an allegiance that is currently broken by traitorous behavior
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_set_orders <ai> <ai_orders>)
+Takes the squad or squad group (arg1) and gives it the order (arg3) in zone (arg2). Use the zone_name/order_name format
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_spawn_count <ai>)
+returns the number of actors spawned in the given squad or squad group
+NETWORK SAFE: Unknown, assumed unsafe
+
+(object_get_ai <object>)
+returns the ai attached to this object, if any
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_trigger_test <string> <ai>)
+Tests the named trigger on the named squad
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_rotate_scenario <real> <real> <real> <real>)
+rotates ai points and normals (e.g. firing points, starting locations) around the given axis (x,y,z) by the given rotation angle (degrees)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_set_task <ai> <string_id> <string_id>)
+Sets the current task of the current task
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_set_objective <ai> <string_id>)
+Sets the squad's current objective
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_task_status <ai>)
+Returns the status of the given objective/task. See ai_task_status_<tab> for return codes.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_set_task_condition <ai> <boolean>)
+Latches the task condition true or false
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_leadership <ai>)
+Returns whether a squad or task has a leader
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_leadership_all <ai>)
+Returns whether a task or any of its children has a leader
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_task_count <ai>)
+Returns the living count of the AI in the given task OR any of its children
+NETWORK SAFE: Unknown, assumed unsafe
+
+(generate_pathfinding)
+Generate pathfinding info for all structure bsps in the current scenario
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_render_paths_all)
+Turns on raw, smoothed, avoided paths and avoidance obstacles
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_activity_set <ai> <string_id>)
+Set the given activity running on the given AI(s)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_activity_abort <ai>)
+Aborts the activities running on the given AI(s)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_vehicle_get <ai>)
+Returns the vehicle that the given actor is in.
+NETWORK SAFE: Yes
+
+(ai_vehicle_get_from_starting_location <ai>)
+Returns the vehicle that was spawned at the given starting location.
+NETWORK SAFE: YEs
+
+(ai_vehicle_reserve_seat <vehicle> <unit_seat_mapping> <boolean>)
+Reserves the given seat on the given vehicle (so that AI may not enter it
+NETWORK SAFE: Yes
+
+(ai_vehicle_reserve <vehicle> <boolean>)
+Reserves the given vehicle (so that AI may not enter it
+NETWORK SAFE: Yes
+
+(ai_player_get_vehicle_squad <unit>)
+Returns the squad (if any) of the vehicle the player is riding in (note, the argument is a UNIT)
+NETWORK SAFE: YEs
+
+(ai_vehicle_enter <ai> <unit> <unit_seat_mapping>)
+tells a group of actors to get into a vehicle, in the substring-specified seats (e.g. passenger for pelican)... does not interrupt any actors who are already going to vehicles
+NETWORK SAFE: Yes
+
+(ai_vehicle_enter <ai> <unit>)
+tells a group of actors to get into a vehicle... does not interrupt any actors who are already going to vehicles
+NETWORK SAFE: Yes
+
+(ai_vehicle_enter_immediate <ai> <unit> <unit_seat_mapping>)
+the given group of actors is snapped into a vehicle, in the substring-specified seats (e.g. passenger for pelican)... does not interrupt any actors who are already going to vehicles
+NETWORK SAFE: Yes
+
+(ai_vehicle_enter_immediate <ai> <unit>)
+the given group of actors is snapped into a vehicle
+NETWORK SAFE: Yes
+
+(ai_enter_squad_vehicles <ai>)
+Instructs the ai in the given squad to get in all their vehicles
+NETWORK SAFE: Yes
+
+(ai_vehicle_exit <ai> <unit_seat_mapping>)
+tells a group of actors to get out of any vehicles that they are in (if their seat matches the substring)
+NETWORK SAFE: Yes
+
+(ai_vehicle_exit <ai>)
+tells a group of actors to get out of any vehicles that they are in
+NETWORK SAFE: Yes
+
+(vehicle_overturned <vehicle>)
+Returns true if the vehicle is overturned
+NETWORK SAFE: Yes
+
+(vehicle_flip <vehicle>)
+Flips an overturned vehicle
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_combat_status <ai>)
+Returns the highest integer combat status in the given squad-group/squad/actor
+NETWORK SAFE: Unknown, assumed unsafe
+
+(flock_start <string_id>)
+The flock starts producing boids
+NETWORK SAFE: Unknown, assumed unsafe
+
+(flock_stop <string_id>)
+The flock stops producing boids
+NETWORK SAFE: Unknown, assumed unsafe
+
+(flock_create <string_id>)
+Create the given flock
+NETWORK SAFE: Unknown, assumed unsafe
+
+(flock_delete <string_id>)
+Delete the given flock
+NETWORK SAFE: Unknown, assumed unsafe
+
+(flock_definition_set <string_id> <any tag>)
+Set the definition of the given flock to the given tag
+NETWORK SAFE: Unknown, assumed unsafe
+
+(drop_ai <string> <string>)
+Drop an ai with the given weapon at the current camera position
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_verify_tags)
+Verifies state of ai-related tags (e.g. orders, squads, zones, etc.)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_wall_lean <ai>)
+Makes the actor lean against a wall RIGHT NOW
+NETWORK SAFE: No
+
+(ai_play_line <ai> <ai_line>)
+Play the given mission dialogue line on the given ai
+NETWORK SAFE: No
+
+(ai_play_line_at_player <ai> <ai_line>)
+Play the given mission dialogue line on the given ai, directing the ai's gaze at the nearest visible player
+NETWORK SAFE: No
+
+(ai_play_line_on_object <object> <ai_line>)
+Play the given mission dialogue line on the given object (uses first available variant)
+NETWORK SAFE: No
+
+(ai_play_line_on_object_for_team <object> <ai_line> <mp_team>)
+Play the given mission dialogue line on the given object (uses first available variant) if anyone on the local box is on the specified team
+NETWORK SAFE: Yes
+
+(ai_scene <string_id> <ai_command_script> <ai>)
+Start the named scene, with the named command script on the named squad
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_scene <string_id> <ai_command_script> <ai> <ai>)
+Start the named scene, with the named command script on the named set of squads
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_scene <string_id> <ai_command_script> <ai> <ai> <ai>)
+Start the named scene, with the named command script on the named set of squads
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_run_command_script <ai> <ai_command_script>)
+Causes the specified actor(s) to start executing a command script immediately (discarding any other command scripts in the queue)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_queue_command_script <ai> <ai_command_script>)
+Add a command script onto the end of an actor's command script queue
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_stack_command_script <ai> <ai_command_script>)
+Push a command script to the top of the actor's command script queue
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_reserve <ai> <short>)
+Reserves the specified actor(s) for the use of the current script (discarding any other command scripts in the queue)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_reserve <ai> <boolean> <short>)
+Reserves the specified actor(s) for the use of the current script (discarding any other command scripts in the queue)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_cast <ai> <boolean> <short> <string_id>)
+Cast 1 actor for a vignette (at the given priority, higher = more important)
+
+(vs_cast <ai> <boolean> <short> <string_id> <string_id>)
+Cast 2 actors for a vignette (at the given priority, higher = more important)
+
+(vs_cast <ai> <boolean> <short> <string_id> <string_id> <string_id>)
+Cast 3 actors for a vignette (at the given priority, higher = more important)
+
+(vs_cast <ai> <boolean> <short> <string_id> <string_id> <string_id> <string_id>)
+Cast 4 actors for a vignette (at the given priority, higher = more important)
+
+(vs_cast <ai> <boolean> <short> <string_id> <string_id> <string_id> <string_id> <string_id>)
+Cast 5 actors for a vignette (at the given priority, higher = more important)
+
+(vs_cast <ai> <boolean> <short> <string_id> <string_id> <string_id> <string_id> <string_id> <string_id>)
+Cast 6 actors for a vignette (at the given priority, higher = more important)
+
+(vs_cast <ai> <boolean> <short> <string_id> <string_id> <string_id> <string_id> <string_id> <string_id> <string_id>)
+Cast 7 actors for a vignette (at the given priority, higher = more important)
+
+(vs_role <short>)
+Returns the given member of the cast (as per more recent vs_cast call)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_abort_on_alert <boolean>)
+Command script ends prematurely when actor's combat status raises to 'alert' or higher
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_abort_on_damage <boolean>)
+Command script ends prematurely when actor is damaged
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_abort_on_combat_status <short>)
+Command script ends prematurely when actor's combat status rises to given level
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_abort_on_vehicle_exit <boolean>)
+Command script ends prematurely when actor gets out of its vehicle
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_abort_on_alert <boolean>)
+Command script ends prematurely when actor's combat status raises to 'alert' or higher
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_abort_on_damage <boolean>)
+Command script ends prematurely when actor is damaged
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_abort_on_combat_status <short>)
+Command script ends prematurely when actor's combat status rises to given level
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_abort_on_vehicle_exit <boolean>)
+Command script ends prematurely when actor gets out of its vehicle
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_abort_on_alert <boolean>)
+Command script ends prematurely when given actor's combat status raises to 'alert' or higher
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_abort_on_alert <ai> <boolean>)
+Command script ends prematurely when given actor's combat status raises to 'alert' or higher
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_abort_on_damage <boolean>)
+Command script ends prematurely when actor is damaged
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_abort_on_damage <ai> <boolean>)
+Command script ends prematurely when actor is damaged
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_abort_on_combat_status <short>)
+Command script ends prematurely when actor's combat status rises to given level
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_abort_on_combat_status <ai> <short>)
+Command script ends prematurely when actor's combat status rises to given level
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_abort_on_vehicle_exit <boolean>)
+Command script ends prematurely when actor gets out of its vehicle
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_abort_on_vehicle_exit <ai> <boolean>)
+Command script ends prematurely when actor gets out of its vehicle
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_set_cleanup_script <script>)
+Sets the script that is automatically called when the current thread ends
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_release <ai>)
+Lets the given ai out of the current command script
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_release_all)
+Releases all the ai attached to the current thread 
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_command_script_running <ai> <ai_command_script>)
+Returns true if the ai is running the command script in question
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_command_script_queued <ai> <ai_command_script>)
+Returns true if the command script is in the ai's cs queue
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_number_queued <ai>)
+Returns the number of queued command scripts
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_moving)
+Returns TRUE if the actor is currently following a path
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_moving <ai>)
+Returns TRUE if the actor is currently following a path
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_running_atom <ai>)
+Returns true if the ai is running any atom
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_running_atom_movement <ai>)
+Returns true if the ai is running an atom on the movement channel
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_running_atom_action <ai>)
+Returns true if the ai is running an atom on the action channel
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_running_atom_dialogue <ai>)
+Returns true if the ai is running an atom on the dialogue channel
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_fly_to <point_reference>)
+Flies the actor to the given point
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_fly_to <ai> <boolean> <point_reference>)
+Flies the actor to the given point
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_fly_to <point_reference> <real>)
+Flies the actor to the given point (within the given tolerance)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_fly_to <ai> <boolean> <point_reference> <real>)
+Flies the actor to the given point (within the given tolerance)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_fly_to_and_face <point_reference> <point_reference>)
+Flies the actor to the given point and orients him in the appropriate direction
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_fly_to_and_face <ai> <boolean> <point_reference> <point_reference>)
+Flies the actor to the given point and orients him in the appropriate direction
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_fly_to_and_face <point_reference> <point_reference> <real>)
+Flies the actor to the given point and orients him in the appropriate direction (within the given tolerance)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_fly_to_and_face <ai> <boolean> <point_reference> <point_reference> <real>)
+Flies the actor to the given point and orients him in the appropriate direction (within the given tolerance)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_fly_by <point_reference>)
+Flies the actor through the given point
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_fly_by <ai> <boolean> <point_reference>)
+Flies the actor through the given point
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_fly_by <point_reference> <real>)
+Flies the actor through the given point (within the given tolerance)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_fly_by <ai> <boolean> <point_reference> <real>)
+Flies the actor through the given point (within the given tolerance)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_go_to <point_reference>)
+Moves the actor to a specified point
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_go_to <ai> <boolean> <point_reference>)
+Moves the actor to a specified point
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_go_to <point_reference> <real>)
+Moves the actor to a specified point, attenuating throttle by the given amount when near the goal
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_go_to <ai> <boolean> <point_reference> <real>)
+Moves the actor to a specified point, attenuating throttle by the given amount when near the goal
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_go_by <point_reference> <point_reference>)
+Actor moves toward the point, and considers it hit when it breaks the indicated plane
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_go_by <ai> <boolean> <point_reference> <point_reference>)
+Actor moves toward the point, and considers it hit when it breaks the indicated plane
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_go_by <point_reference> <point_reference> <real>)
+Actor moves toward the point, and considers it hit when it breaks the indicated plane, attenuating throttle by the given amount when near the goal
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_go_by <ai> <boolean> <point_reference> <point_reference> <real>)
+Actor moves toward the point, and considers it hit when it breaks the indicated plane, attenuating throttle by the given amount when near the goal
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_go_to_and_face <point_reference> <point_reference>)
+Moves the actor to a specified point and has him face the second point
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_go_to_and_face <ai> <boolean> <point_reference> <point_reference>)
+Moves the actor to a specified point and has him face the second point
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_go_to_and_posture <point_reference> <string_id>)
+Actor moves to the point and performs a posture once there
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_go_to_and_posture <ai> <boolean> <point_reference> <string_id>)
+Actor moves to the point and performs a posture once there
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_go_to_nearest <point_reference>)
+Given a point set, AI goes toward the nearest point
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_go_to_nearest <ai> <boolean> <point_reference>)
+Given a point set, AI goes toward the nearest point
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_move_in_direction <real> <real> <real>)
+Actor moves at given angle, for the given distance, optionally with the given facing (angle, distance, facing)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_move_in_direction <ai> <boolean> <real> <real> <real>)
+Actor moves at given angle, for the given distance, optionally with the given facing (angle, distance, facing)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_swarm_to <point_reference> <real>)
+A swarm swarms towards the point (or point set) in question, the individual forms stopping when they get within the given radius
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_swarm_to <ai> <boolean> <point_reference> <real>)
+A swarm swarms towards the point (or point set) in question, the individual forms stopping when they get within the given radius
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_swarm_from <point_reference> <real>)
+A swarm swarms away from the point in question, going at least the given distance
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_swarm_from <ai> <boolean> <point_reference> <real>)
+A swarm swarms away from the point in question, going at least the given distance
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_pause <real>)
+The actor does nothing for the given number of seconds
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_pause <ai> <boolean> <real>)
+The actor does nothing for the given number of seconds
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_grenade <point_reference> <short>)
+Actor throws a grenade, either by tossing (arg2=0), lobbing (1) or bouncing (2)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_grenade <ai> <boolean> <point_reference> <short>)
+Actor throws a grenade, either by tossing (arg2=0), lobbing (1) or bouncing (2)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_jump <real> <real>)
+Actor jumps in direction of angle at the given velocity (angle, velocity)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_jump <ai> <boolean> <real> <real>)
+Actor jumps in direction of angle at the given velocity (angle, velocity)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_jump_to_point <real> <real>)
+Actor jumps with given horizontal and vertical velocity
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_jump_to_point <ai> <boolean> <real> <real>)
+Actor jumps with given horizontal and vertical velocity
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_action <short>)
+Actor plays an AI impulse
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_action <ai> <boolean> <short>)
+Actor plays an AI impulse
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_vocalize <short>)
+Actor emits vocalization of given type
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_vocalize <ai> <boolean> <short>)
+Actor emits vocalization of given type
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_play_sound <sound>)
+Actor plays an impulse sound and the atom blocks until it is complete
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_play_sound <ai> <boolean> <sound>)
+Actor plays an impulse sound and the atom blocks until it is complete
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_play_sound <sound> <real>)
+Actor plays an impulse sound and the atom blocks for the given percentage of the sound's total length
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_play_sound <ai> <boolean> <sound> <real>)
+Actor plays an impulse sound and the atom blocks for the given percentage of the sound's total length
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_play_sound <sound> <real> <real>)
+Actor plays an impulse sound and the atom blocks for the given percentage of the sound's total length, at the given volume (0..1)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_play_sound <ai> <boolean> <sound> <real> <real>)
+Actor plays an impulse sound and the atom blocks for the given percentage of the sound's total length, at the given volume (0..1)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_custom_animation <animation_graph> <string_id> <boolean>)
+starts a custom animation playing on the actor (interpolates into animation if last parameter is TRUE)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_custom_animation <ai> <boolean> <animation_graph> <string_id> <boolean>)
+starts a custom animation playing on the actor (interpolates into animation if last parameter is TRUE)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_custom_animation <animation_graph> <string_id> <boolean> <point_reference>)
+starts a custom animation playing on the actor at the given point (interpolates into animation if last parameter is TRUE)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_custom_animation <ai> <boolean> <animation_graph> <string_id> <boolean> <point_reference>)
+starts a custom animation playing on the actor at the given point (interpolates into animation if last parameter is TRUE)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_custom_animation_loop <animation_graph> <string_id> <boolean>)
+starts a looping custom animation playing on the actor (interpolates into animation if last parameter is TRUE) NON-BLOCKING
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_custom_animation_loop <ai> <animation_graph> <string_id> <boolean>)
+starts a looping custom animation playing on the actor (interpolates into animation if last parameter is TRUE) NON-BLOCKING
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_custom_animation_loop <animation_graph> <string_id> <boolean> <point_reference>)
+starts a looping custom animation playing on the actor at the given point (interpolates into animation if last parameter is TRUE) NON-BLOCKING
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_custom_animation_loop <ai> <animation_graph> <string_id> <boolean> <point_reference>)
+starts a looping custom animation playing on the actor at the given point (interpolates into animation if last parameter is TRUE) NON-BLOCKING
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_play_line <ai_line>)
+Play the named line in the current scene
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_play_line <ai> <boolean> <ai_line>)
+Play the named line in the current scene
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_die <short>)
+Actor dies in specified manner
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_die <ai> <boolean> <short>)
+Actor dies in specified manner
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_deploy_turret <point_reference>)
+Deploy a turret at the given script point
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_deploy_turret <ai> <boolean> <point_reference>)
+Deploy a turret at the given script point
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_approach <object> <real> <real> <real>)
+(approach <object> <distance - how close I want to get> <max-distance  - start approaching when target is within this range> <follow-distance - give up when target is outside this range>)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_approach <ai> <boolean> <object> <real> <real> <real>)
+(approach <object> <distance - how close I want to get> <max-distance  - start approaching when target is within this range> <follow-distance - give up when target is outside this range>)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_approach_player <real> <real> <real>)
+(approach player <distance - how close I want to get> <max-distance  - start approaching when target is within this range> <follow-distance - give up when target is outside this range>)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_approach_player <ai> <boolean> <real> <real> <real>)
+(approach player <distance - how close I want to get> <max-distance  - start approaching when target is within this range> <follow-distance - give up when target is outside this range>)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_go_to_vehicle <vehicle>)
+Actor gets in the appropriate vehicle
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_go_to_vehicle <ai> <boolean> <vehicle>)
+Actor gets in the appropriate vehicle
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_go_to_vehicle <vehicle> <unit_seat_mapping>)
+Actor gets in the named seat of the appropriate vehicle
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_go_to_vehicle <ai> <boolean> <vehicle> <unit_seat_mapping>)
+Actor gets in the named seat of the appropriate vehicle
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_set_style <style>)
+Override the actor's style
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_set_style <ai> <style>)
+Override the actor's style
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_force_combat_status <short>)
+Force the actor's combat status (0= no override, 1=idle, 2= alert, 3= active)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_force_combat_status <ai> <short>)
+Force the actor's combat status (0= no override, 1=idle, 2= alert, 3= active)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_enable_targeting <boolean>)
+Actor autonomous target selection enabled/disabled.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_enable_targeting <ai> <boolean>)
+Actor autonomous target selection enabled/disabled.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_enable_looking <boolean>)
+Actor autonomous looking enabled/disabled.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_enable_looking <ai> <boolean>)
+Actor autonomous looking enabled/disabled.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_enable_moving <boolean>)
+Actor autonomous moving enabled/disabled.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_enable_moving <ai> <boolean>)
+Actor autonomous moving enabled/disabled.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_enable_dialogue <boolean>)
+Actor combat dialogue enabled/disabled.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_enable_dialogue <ai> <boolean>)
+Actor combat dialogue enabled/disabled.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_suppress_dialogue_global <boolean>)
+Combat dialogue is suppressed for the remainder of the command script
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_suppress_dialogue_global <ai> <boolean>)
+Combat dialogue is suppressed for the remainder of the command script
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_look <boolean> <point_reference>)
+Actor looks at the point for the remainder of the cs, or until overridden
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_look <ai> <boolean> <point_reference>)
+Actor looks at the point for the remainder of the cs, or until overridden
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_look_player <boolean>)
+Actor looks at nearest player for the duration of the cs, or until overridden
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_look_player <ai> <boolean>)
+Actor looks at nearest player for the duration of the cs, or until overridden
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_look_object <boolean> <object>)
+Actor looks at the object for the duration of the cs, or until overridden
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_look_object <ai> <boolean> <object>)
+Actor looks at the object for the duration of the cs, or until overridden
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_aim <boolean> <point_reference>)
+Actor aims at the point for the remainder of the cs, or until overridden (overrides look)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_aim <ai> <boolean> <point_reference>)
+Actor aims at the point for the remainder of the cs, or until overridden (overrides look)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_aim_player <boolean>)
+Actor aims at nearest player for the duration of the cs, or until overridden (overrides look)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_aim_player <ai> <boolean>)
+Actor aims at nearest player for the duration of the cs, or until overridden (overrides look)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_aim_object <boolean> <object>)
+Actor aims at the object for the duration of the cs, or until overridden (overrides look)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_aim_object <ai> <boolean> <object>)
+Actor aims at the object for the duration of the cs, or until overridden (overrides look)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_face <boolean> <point_reference>)
+Actor faces exactly the point for the remainder of the cs, or until overridden (overrides aim, look)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_face <ai> <boolean> <point_reference>)
+Actor faces exactly the point for the remainder of the cs, or until overridden (overrides aim, look)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_face_player <boolean>)
+Actor faces exactly the nearest player for the duration of the cs, or until overridden (overrides aim, look)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_face_player <ai> <boolean>)
+Actor faces exactly the nearest player for the duration of the cs, or until overridden (overrides aim, look)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_face_object <boolean> <object>)
+Actor faces exactly the given object for the duration of the cs, or until overridden (overrides aim, look)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_face_object <ai> <boolean> <object>)
+Actor faces exactly the given object for the duration of the cs, or until overridden (overrides aim, look)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_shoot <boolean>)
+Actor is allowed to shoot at its target or not
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_shoot <ai> <boolean>)
+Actor is allowed to shoot at its target or not
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_shoot <boolean> <object>)
+Actor shoots at given target
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_shoot <ai> <boolean> <object>)
+Actor shoots at given target
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_shoot_point <boolean> <point_reference>)
+Actor shoots at given point
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_shoot_point <ai> <boolean> <point_reference>)
+Actor shoots at given point
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_vehicle_speed <real>)
+Set the speed at which the actor will drive a vehicle, expressed as a multiplier 0-1
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_vehicle_speed <ai> <real>)
+Set the speed at which the actor will drive a vehicle, expressed as a multiplier 0-1
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_vehicle_speed_instantaneous <real>)
+Set the instantaneous speed of the vehicle we're driving
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_vehicle_speed_instantaneous <ai> <real>)
+Set the instantaneous speed of the vehicle we're driving
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_vehicle_boost <boolean>)
+Enables or disables boost
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_vehicle_boost <ai> <boolean>)
+Enables or disables boost
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_turn_sharpness <boolean> <real>)
+Set the sharpness of a vehicle turn (values 0 -> 1). Only applicable to nondirectional flying vehicles (e.g. dropships)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_turn_sharpness <ai> <boolean> <real>)
+Set the sharpness of a vehicle turn (values 0 -> 1). Only applicable to nondirectional flying vehicles (e.g. dropships)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_enable_pathfinding_failsafe <boolean>)
+Actor blocks until pathfinding calls succeed
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_enable_pathfinding_failsafe <ai> <boolean>)
+Actor blocks until pathfinding calls succeed
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_set_pathfinding_radius <real>)
+Sets the actor's pathfinding radius (this distance at which a destination is considered to have been reached) for the remainder of the command script
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_set_pathfinding_radius <ai> <real>)
+Sets the actor's pathfinding radius (this distance at which a destination is considered to have been reached) for the remainder of the command script
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_ignore_obstacles <boolean>)
+Actor does not avoid obstacles when true
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_ignore_obstacles <ai> <boolean>)
+Actor does not avoid obstacles when true
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_approach_stop)
+Actor stops approaching
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_approach_stop <ai>)
+Actor stops approaching
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_movement_mode <short>)
+Actor switches to given animation mode
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_movement_mode <ai> <short>)
+Actor switches to given animation mode
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_crouch <boolean>)
+Actor crouches for the remainder of the command script, or until overridden
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_crouch <ai> <boolean>)
+Actor crouches for the remainder of the command script, or until overridden
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_crouch <boolean> <real>)
+Actor crouches / uncrouches, transitioning over the given number of seconds
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_crouch <ai> <boolean> <real>)
+Actor crouches / uncrouches, transitioning over the given number of seconds
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_posture_set <string_id> <boolean>)
+Actor enters the given posture (enters immediately rather than plays the entry animation if argument is TRUE)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_posture_set <ai> <string_id> <boolean>)
+Actor enters the given posture (enters immediately rather than plays the entry animation if argument is TRUE)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_posture_exit)
+Actor exits the posture it's in
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_posture_exit <ai>)
+Actor exits the posture it's in
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_stow)
+Actor stows its current weapon
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_stow <ai>)
+Actor stows its current weapon
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_draw)
+Actor draws its current weapon
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_draw <ai>)
+Actor draws its current weapon
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_teleport <point_reference> <point_reference>)
+Actor teleports to point1 facing point2
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_teleport <ai> <point_reference> <point_reference>)
+Actor teleports to point1 facing point2
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_stop_custom_animation)
+Stop running a custom animation
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_stop_custom_animation <ai>)
+Stop running a custom animation
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_stop_sound <sound>)
+Stops the specified impulse sound.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_stop_sound <ai> <sound>)
+Stops the specified impulse sound.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_player_melee <long>)
+Actor performs player-specific melee
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_player_melee <ai> <boolean> <long>)
+Actor performs player-specific melee
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_melee_direction <long>)
+Actor performs melee in provided direction (0= front, 1= back, 2= offhand, 3= tackle)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_melee_direction <ai> <boolean> <long>)
+Actor performs melee in provided direction (0= front, 1= back, 2= offhand, 3= tackle)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cs_smash_direction <long>)
+Actor performs smash in provided direction
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vs_smash_direction <ai> <boolean> <long>)
+Actor performs smash in provided direction
+NETWORK SAFE: Unknown, assumed unsafe
+
+(camera_control <boolean>)
+toggles script control of the camera.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(camera_set <cutscene_camera_point> <short>)
+moves the camera to the specified camera point over the specified number of ticks.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(camera_set_relative <cutscene_camera_point> <short> <object>)
+moves the camera to the specified camera point over the specified number of ticks (position is relative to the specified object).
+NETWORK SAFE: Unknown, assumed unsafe
+
+(camera_set_animation <animation_graph> <string_id>)
+begins a prerecorded camera animation.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(camera_set_animation_relative <animation_graph> <string_id> <unit> <cutscene_flag>)
+begins a prerecorded camera animation synchronized to unit relative to cutscene flag.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(camera_predict_resources_at_frame <animation_graph> <string_id> <unit> <cutscene_flag> <long>)
+predict resources at a frame in camera animation.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(camera_predict_resources_at_point <cutscene_camera_point>)
+predict resources given a camera point
+NETWORK SAFE: Unknown, assumed unsafe
+
+(camera_set_first_person <unit>)
+makes the scripted camera follow a unit.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(camera_set_cinematic)
+makes the scripted camera follow the path of a cinematic scene.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(camera_set_cinematic_scene <cinematic scene definition> <long> <cutscene_flag>)
+sets the scene, shot, and cutscene flag for the cinematic camera (NOTE: camera must be in cinematic mode by calling camera_set_cinematic).
+NETWORK SAFE: Unknown, assumed unsafe
+
+(camera_place_relative <object>)
+all subsequent camera placement in sapien be marked as relative to this object
+NETWORK SAFE: Unknown, assumed unsafe
+
+(camera_place_worldspace)
+all subsequent camera placement in sapien will be marked as worldspace
+NETWORK SAFE: Unknown, assumed unsafe
+
+(camera_time)
+returns the number of ticks remaining in the current camera interpolation.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(camera_set_field_of_view <real> <short>)
+sets the field of view
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_camera_set_easing_in <real> <real> <real> <real> <real> <real>)
+controls the camera easing from player position
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_camera_set_easing_out <real>)
+controls the camera easing back to the player position
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_print <string>)
+Print status lines for cinematic debugging
+NETWORK SAFE: Unknown, assumed unsafe
+
+(camera_set_pan <cutscene_camera_point> <short>)
+moves the camera to the specified camera point over the specified number of ticks with a constant speed.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(camera_pan <cutscene_camera_point> <cutscene_camera_point> <short> <short> <real> <short> <real>)
+camera_pan <start point> <end point> <ticks> <ease-in ticks> <start velocity scale> <ease-out ticks> <end velocity scale>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(debug_camera_save)
+saves the camera position and facing.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(debug_camera_load)
+loads the saved camera position and facing.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(debug_camera_save_name <string>)
+saves the camera position and facing to filename
+NETWORK SAFE: Unknown, assumed unsafe
+
+(debug_camera_load_name <string>)
+loads the camera position and facing from filename
+NETWORK SAFE: Unknown, assumed unsafe
+
+(director_debug_camera <boolean>)
+enable/disable camera debugging
+NETWORK SAFE: Unknown, assumed unsafe
+
+(game_difficulty_get)
+returns the current difficulty setting, but lies to you and will never return easy, instead returning normal
+NETWORK SAFE: Unknown, assumed unsafe
+
+(game_difficulty_get_real)
+returns the actual current difficulty setting without lying
+NETWORK SAFE: Unknown, assumed unsafe
+
+(pvs_set_object <object>)
+sets the specified object as the special place that activates everything it sees.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(pvs_set_camera <cutscene_camera_point>)
+sets the specified cutscene camera point as the special place that activates everything it sees.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(pvs_clear)
+removes the special place that activates everything it sees.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(players_unzoom_all)
+resets zoom levels on all players
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_enable_input <boolean>)
+toggle player input. the player can still free-look, but nothing else.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_disable_movement <boolean>)
+toggle player input. the look stick works, but nothing else.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_flashlight_on)
+returns true if any player has a flashlight on
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_active_camouflage_on)
+returns true if any player is active camouflaged
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_camera_control <boolean>)
+enables/disables camera control globally
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_action_test_reset)
+resets the player action test state so that all tests will return false.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_action_test_jump)
+returns true if any player has jumped since the last call to (player_action_test_reset).
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_action_test_primary_trigger)
+returns true if any player has used primary trigger since the last call to (player_action_test_reset).
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_action_test_grenade_trigger)
+returns true if any player has used grenade trigger since the last call to (player_action_test_reset).
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_action_test_vision_trigger)
+returns true if any player has used vision trigger since the last call to (player_action_test_reset).
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_action_test_zoom)
+returns true if any player has hit the zoom button since the last call to (player_action_test_reset).
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_action_test_rotate_weapons)
+returns true if any player has hit the rotate-weapon button since the last call to (player_action_test_reset).
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_action_test_rotate_grenades)
+returns true if any player has hit the rotate-grenades button since the last call to (player_action_test_reset).
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_action_test_melee)
+returns true if any player has hit the melee button since the last call to (player_action_test_reset).
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_action_test_action)
+returns true if any player has hit the action key since the last call to (player_action_test_reset).
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_action_test_accept)
+returns true if any player has hit accept since the last call to (player_action_test_reset).
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_action_test_cancel)
+returns true if any player has hit cancel key since the last call to (player_action_test_reset).
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_action_test_look_relative_up)
+returns true if any player has looked up since the last call to (player_action_test_reset).
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_action_test_look_relative_down)
+returns true if any player has looked down since the last call to (player_action_test_reset).
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_action_test_look_relative_left)
+returns true if any player has looked left since the last call to (player_action_test_reset).
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_action_test_look_relative_right)
+returns true if any player has looked right since the last call to (player_action_test_reset).
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_action_test_look_relative_all_directions)
+returns true if any player has looked up, down, left, and right since the last call to (player_action_test_reset).
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_action_test_move_relative_all_directions)
+returns true if any player has moved forward, backward, left, and right since the last call to (player_action_test_reset).
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_action_test_cinematic_skip)
+returns true if any player has pressed the cinematic skip button (player_action_test_reset).
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_action_test_start)
+returns true if any player has pressed the start button since the last call to (player_action_test_reset).
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_action_test_back)
+returns true if any player has pressed the back button since the last call to (player_action_test_reset).
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player0_looking_up)
+true if the first player is looking up
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player0_looking_down)
+true if the first player is looking down
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player0_set_pitch <real> <long>)
+sets up player look up test
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_action_test_look_up_begin)
+sets up player look up test
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_action_test_look_down_begin)
+sets down player look down test
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_action_test_look_pitch_end)
+ends the look pitch testing
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_action_test_lookstick_forward)
+true if the first player pushed forward on lookstick
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_action_test_lookstick_backward)
+true if the first player pushed backward on lookstick
+NETWORK SAFE: Unknown, assumed unsafe
+
+(debug_teleport_player <long> <long>)
+for testing: teleports one player to another's location
+NETWORK SAFE: Unknown, assumed unsafe
+
+(map_reset)
+starts the map from the beginning.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(map_reset_random)
+starts the map from the beginning with a new random seed.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(switch_bsp <long>)
+switches to a different zone set
+NETWORK SAFE: Unknown, assumed unsafe
+
+(switch_zone_set <zone_set>)
+switches to a different zone set
+NETWORK SAFE: Unknown, assumed unsafe
+
+(current_zone_set)
+returns the current zone set
+NETWORK SAFE: Unknown, assumed unsafe
+
+(switch_map_and_zone_set <string> <long>)
+switches to a different scenario and zone set
+NETWORK SAFE: Unknown, assumed unsafe
+
+(crash <string>)
+crashes (for debugging).
+NETWORK SAFE: Unknown, assumed unsafe
+
+(version)
+prints the build version.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(status)
+prints the value of all global status variables.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(record_movie <short> <real> <short> <short>)
+<frame rate> <seconds> <width> <height>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(record_movie_distributed <short> <long> <short> <long> <long>)
+<frame rate> <seconds> <screen size> <mod count> <mod index>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(screenshot <string>)
+takes a screenshot and saves as <name>.tif
+NETWORK SAFE: Unknown, assumed unsafe
+
+(screenshot_big <short> <string>)
+takes an NxN multiple-page screenshot and saves as <name>.tif
+NETWORK SAFE: Unknown, assumed unsafe
+
+(screenshot_big_raw <short> <string>)
+takes an NxN multiple-page screenshot and saves as an HDR <name>.tif
+NETWORK SAFE: Unknown, assumed unsafe
+
+(screenshot_size <short> <short> <string>)
+takes a <width> x <height> screenshot and saves as an HDR <name>.tif
+NETWORK SAFE: Unknown, assumed unsafe
+
+(screenshot_simple <string>)
+takes a simple screenshot and saves as <name>.tif
+NETWORK SAFE: Unknown, assumed unsafe
+
+(screenshot_cubemap <string>)
+takes a cubemap screenshot and saves as <name>.tif
+NETWORK SAFE: Unknown, assumed unsafe
+
+(screenshot_webmap <string>)
+takes two special screenshots and saves them, along with the camera information, as <name>.tif, <name>_secondary.tif and <name>_camera.txt
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cubemap_dynamic_generate)
+generates a dynamic cubemap and saves in the cubemaps directory
+NETWORK SAFE: Unknown, assumed unsafe
+
+(main_menu)
+goes back to the main menu
+NETWORK SAFE: Unknown, assumed unsafe
+
+(main_halt)
+goes to a halted pregame state
+NETWORK SAFE: Unknown, assumed unsafe
+
+(map_name <string>)
+the same as game_start: launches a game for debugging purposes
+NETWORK SAFE: Unknown, assumed unsafe
+
+(game_multiplayer <string>)
+debug map launching: sets the multiplayer engine for the next map.
+NETWORK SAFE: No, for init.txt only
+
+(game_splitscreen <long>)
+debug map launching: sets the number of multiplayer splitscreen players for the next map.
+NETWORK SAFE: No, for init.txt only
+
+(game_difficulty <game_difficulty>)
+debug map launching: sets the difficulty of the next map.
+NETWORK SAFE: No, for init.txt only
+
+(game_coop_players <long>)
+debug map launching: sets the number of coop players for the next map.
+NETWORK SAFE: No, for init.txt only
+
+(game_initial_bsp <long>)
+debug map launching: sets the initial bsp for the next map.
+NETWORK SAFE: No, for init.txt only
+
+(game_tick_rate <long>)
+debug map launching: sets the tick rate for the next map.
+NETWORK SAFE: No, for init.txt only
+
+(game_start <string>)
+debug map launching: starts a game on the specified map.
+NETWORK SAFE: No, for init.txt only
+
+(game_rate <real> <real> <real>)
+changes game update rate (DANGER: only use if you know what you're doing!)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(texture_cache_flush)
+don't make me kick your ass
+NETWORK SAFE: Unknown, assumed unsafe
+
+(geometry_cache_flush)
+we fear change
+NETWORK SAFE: Unknown, assumed unsafe
+
+(sound_cache_flush)
+i'm a rebel!
+NETWORK SAFE: Unknown, assumed unsafe
+
+(animation_cache_flush)
+it's just sooooo wrong
+NETWORK SAFE: Unknown, assumed unsafe
+
+(font_cache_flush)
+
+NETWORK SAFE: Unknown, assumed unsafe
+
+(texture_cache_test_malloc)
+
+NETWORK SAFE: Unknown, assumed unsafe
+
+(debug_memory)
+dumps memory leaks.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(debug_memory_by_file)
+dumps memory leaks by source file.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(debug_memory_for_file <string>)
+dumps memory leaks from the specified source file.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(debug_tags)
+writes all memory being used by tag files into tag_dump.txt
+NETWORK SAFE: Unknown, assumed unsafe
+
+(tags_verify_all)
+verifies usage of infidel fields is correct
+NETWORK SAFE: Unknown, assumed unsafe
+
+(profiler_enable <boolean>)
+toggles the profile display on/off
+NETWORK SAFE: Unknown, assumed unsafe
+
+(profiler_set_thread <long>)
+sets the thread index being profiled
+NETWORK SAFE: Unknown, assumed unsafe
+
+(profiler_set_sort_method <long>)
+sets the sorting method used
+NETWORK SAFE: Unknown, assumed unsafe
+
+(profiler_set_range <long>)
+sets the collection range used
+NETWORK SAFE: Unknown, assumed unsafe
+
+(profiler_set_attribute <string>)
+sets an attribute to profile by name
+NETWORK SAFE: Unknown, assumed unsafe
+
+(trace_next_frame <long>)
+creates a tracedump of the next frame
+NETWORK SAFE: Unknown, assumed unsafe
+
+(trace_next_frame_to_file <long> <string>)
+creates a tracedump of the next frame in a specific file
+NETWORK SAFE: Unknown, assumed unsafe
+
+(collision_log_enable <boolean>)
+enables or disables collision logging.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(damage_control_get <string>)
+gets a damage control setting by string
+NETWORK SAFE: Unknown, assumed unsafe
+
+(damage_control_set <string> <boolean>)
+sets a damage control setting by string
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_lines)
+cycles through AI line-spray modes
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ai_dialogue_break_on_vocalization <string_id>)
+break when the following vocalization is chosen for utterance
+NETWORK SAFE: Unknown, assumed unsafe
+
+(fade_in <real> <real> <real> <short>)
+does a screen fade in from a particular color
+NETWORK SAFE: Unknown, assumed unsafe
+
+(fade_out <real> <real> <real> <short>)
+does a screen fade out to a particular color
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_start)
+initializes game to start a cinematic (interruptive) cutscene
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_stop)
+initializes the game to end a cinematic (interruptive) cutscene
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_skip_start_internal)
+
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_skip_stop_internal)
+
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_show_letterbox <boolean>)
+sets or removes the letterbox bars
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_show_letterbox_immediate <boolean>)
+sets or removes the letterbox bars
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_set_title <cutscene_title>)
+activates the chapter title
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_set_title_delayed <cutscene_title> <real>)
+activates the chapter title, delayed by <real> seconds
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_suppress_bsp_object_creation <boolean>)
+suppresses or enables the automatic creation of objects during cutscenes due to a bsp switch
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_subtitle <string_id> <real>)
+displays the named subtitle for <real> seconds
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_set <cinematic definition>)
+sets the cinematic name for the current cinematic.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_set_shot <cinematic scene definition> <long>)
+sets the scene and shot for the current cinematic.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_get_shot)
+Print the stored scene and shot information to the screen
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_set_early_exit <boolean>)
+Used to store the state of skippable cinematics
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_get_early_exit)
+Used to retrieve the state of skippable cinematics
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_set_active_camera <string_id>)
+Used to change the rasterizer to display one of the texture cameras
+NETWORKING SAFE: Unknown, assumed unsafe
+
+(cinematic_object_create <string_id>)
+Creates an object for use by cinematics
+NETWORKING SAFE: Unknown, assumed unsafe
+
+(cinematic_object_create_cinematic_anchor <string_id>)
+Creates a cinematic anchor object for use by cinematics
+NETWORKING SAFE: Unknown, assumed unsafe
+
+(cinematic_object_destroy <string_id>)
+Destroys an object created by cinematic_object_create
+NETWORKING SAFE: Unknown, assumed unsafe
+
+(cinematic_destroy)
+Releases everything created by the cinematics system
+NETWORKING SAFE: Unknown, assumed unsafe
+
+(cinematic_object_get <string_id>)
+Returns an object created by cinematic_object_create
+NETWORKING SAFE: Unknown, assumed unsafe
+
+(cinematic_object_get_unit <string_id>)
+Returns a unit created by cinematic_object_create
+NETWORKING SAFE: Unknown, assumed unsafe
+
+(cinematic_object_get_scenery <string_id>)
+Returns a scenery object created by cinematic_object_create
+NETWORKING SAFE: Unknown, assumed unsafe
+
+(cinematic_reset)
+Resets the cinematics internal state
+NETWORKING SAFE: Unknown, assumed unsafe
+
+(camera_set_briefing <boolean>)
+Used for briefing cinematics
+NETWORKING SAFE: Unknown, assumed unsafe
+
+(cinematic_tag_reference_get_cinematic <long>)
+Retrieve a cinematic tag from the cinematic system
+NETWORKING SAFE: Unknown, assumed unsafe
+
+(cinematic_tag_reference_get_scene <long> <long>)
+Retrieve a cinematic tag from the cinematic system
+NETWORKING SAFE: Unknown, assumed unsafe
+
+(cinematic_tag_reference_get_effect <long> <long> <long> <long>)
+Retrieve an effect tag from the cinematic system
+NETWORKING SAFE: Unknown, assumed unsafe
+
+(cinematic_tag_reference_get_dialogue <long> <long> <long> <long>)
+Retrieve a sound tag from the cinematic system
+NETWORKING SAFE: Unknown, assumed unsafe
+
+(cinematic_tag_reference_get_music <long> <long> <long> <long>)
+Retrieve a looping sound tag from the cinematic system
+NETWORKING SAFE: Unknown, assumed unsafe
+
+(attract_mode_start)
+starts an attract mode movie
+NETWORK SAFE: Unknown, assumed unsafe
+
+(attract_mode_set_seconds <long>)
+sets number of seconds of the attract mode countdown timer.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(game_won)
+causes the player to successfully finish the current level and move to the next
+NETWORK SAFE: Unknown, assumed unsafe
+
+(game_lost <boolean>)
+marks the game as lost or not lost
+NETWORK SAFE: Unknown, assumed unsafe
+
+(game_revert)
+causes the player to revert to his previous saved game (for testing, the first bastard that does this to me gets it in the head)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(game_is_cooperative)
+returns TRUE if the game is cooperative
+NETWORK SAFE: Unknown, assumed unsafe
+
+(game_is_playtest)
+returns the hs global boolean 'global_playtest_mode' which can be set in your init.txt
+NETWORK SAFE: Unknown, assumed unsafe
+
+(game_can_use_flashlights <boolean>)
+allows or disallows the user of player flashlights
+NETWORK SAFE: Unknown, assumed unsafe
+
+(game_save_and_quit)
+save & quit to the main menu
+NETWORK SAFE: Unknown, assumed unsafe
+
+(game_save_unsafe)
+saves right now, even if the game is in an immediate-loss state (NEVER USE THIS! EVER!)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(saved_games_enumerate <controller>)
+test enumeration of saved game files on a controller
+NETWORK SAFE: Unknown, assumed unsafe
+
+(saved_games_delete_campaign_save <controller>)
+delete the campaign saved game file for a controller
+NETWORK SAFE: Unknown, assumed unsafe
+
+(saved_games_save_last_film <controller>)
+test saving of last recorded film for a controller
+NETWORK SAFE: Unknown, assumed unsafe
+
+(content_catalogue_display_status)
+display the status of all active content catalogues
+NETWORK SAFE: Unknown, assumed unsafe
+
+(achievement_was_earned_by_player <controller> <string_id>)
+check if player has been awarded named achievement
+NETWORK SAFE: Unknown, assumed unsafe
+
+(achievement_grant_to_player <controller> <string_id>)
+award named achievement to player
+NETWORK SAFE: Unknown, assumed unsafe
+
+(debug_spawning_influencers <boolean>)
+toggle debugging of any & all dynamic respawn influencers
+NETWORK SAFE: Unknown, assumed unsafe
+
+(debug_spawning_respawn_zones <boolean>)
+debugs respawn zone influences
+NETWORK SAFE: Unknown, assumed unsafe
+
+(debug_spawning_proximity_forbid <boolean>)
+debugs enemy proximity forbid influences
+NETWORK SAFE: Unknown, assumed unsafe
+
+(debug_spawning_moving_vehicle <boolean>)
+debugs moving vehicle danger influences
+NETWORK SAFE: Unknown, assumed unsafe
+
+(debug_spawning_weapon_influences <boolean>)
+debugs enemy weapon danger influences
+NETWORK SAFE: Unknown, assumed unsafe
+
+(debug_spawning_dangerous_projectiles <boolean>)
+debugs dangerous projectile influences
+NETWORK SAFE: Unknown, assumed unsafe
+
+(debug_spawning_deployed_equipment <boolean>)
+debugs deployed equipment influences
+NETWORK SAFE: Unknown, assumed unsafe
+
+(debug_spawning_proximity_enemy <boolean>)
+debugs enemy proximity bias influences
+NETWORK SAFE: Unknown, assumed unsafe
+
+(debug_spawning_teammates <boolean>)
+debugs teammate proximity bias influences
+NETWORK SAFE: Unknown, assumed unsafe
+
+(debug_spawning_random_influence <boolean>)
+toggles display of random influence contribution
+NETWORK SAFE: Unknown, assumed unsafe
+
+(debug_spawning_nominal_weight <boolean>)
+toggles display of the nominal weight influence contribution
+NETWORK SAFE: Unknown, assumed unsafe
+
+(debug_spawning_natural_weight <boolean>)
+toggles display of the natural weight influence contribution
+NETWORK SAFE: Unknown, assumed unsafe
+
+(debug_spawning_target <string>)
+sets target player for respawn influencer debugging display
+NETWORK SAFE: Unknown, assumed unsafe
+
+(debug_spawning_use_history <long>)
+sets the saved respawn state for respawn influencer debugging display
+NETWORK SAFE: Unknown, assumed unsafe
+
+(debug_initial_spawn_point_objects <boolean>)
+toggles debug cycling through multiplayer initial spawn points objects
+NETWORK SAFE: Unknown, assumed unsafe
+
+(debug_respawn_point_objects <boolean>)
+toggles debug cycling through multiplayer respawn points objects
+NETWORK SAFE: Unknown, assumed unsafe
+
+(game_export_variant_settings <string>)
+export the current game engine variant settings to the specified text file
+NETWORK SAFE: No
+
+(core_load)
+loads debug game state from core\core.bin
+NETWORK SAFE: Unknown, assumed unsafe
+
+(core_load_name <string>)
+loads debug game state from core\<path>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(core_save)
+saves debug game state to core\core.bin
+NETWORK SAFE: Unknown, assumed unsafe
+
+(core_save_name <string>)
+saves debug game state to core\<path>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(core_load_game)
+loads level and game state from core\core.bin
+NETWORK SAFE: Unknown, assumed unsafe
+
+(core_load_game_name <string>)
+loads level and game state from core\<path>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(core_regular_upload_to_debug_server <boolean>)
+toggle periodic core uploading to debug server
+NETWORK SAFE: Unknown, assumed unsafe
+
+(core_set_upload_option <string>)
+sets options for game state uploading (current options are 'default', 'repro', and 'stress'
+NETWORK SAFE: Unknown, assumed unsafe
+
+(force_debugger_not_present <boolean>)
+forces is_debugger_present() to return false
+NETWORK SAFE: Unknown, assumed unsafe
+
+(force_debugger_always_present <boolean>)
+forces is_debugger_present() to return true
+NETWORK SAFE: Unknown, assumed unsafe
+
+(game_safe_to_save)
+returns FALSE if it would be a bad idea to save the player's game right now
+NETWORK SAFE: Unknown, assumed unsafe
+
+(game_safe_to_speak)
+returns FALSE if it would be a bad idea to play mission dialog right now
+NETWORK SAFE: Unknown, assumed unsafe
+
+(game_all_quiet)
+returns FALSE if there are bad guys around, projectiles in the air, etc.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(game_save)
+checks to see if it is safe to save game, then saves (gives up after 8 seconds)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(game_save_cancel)
+cancels any pending game_save, timeout or not
+NETWORK SAFE: Unknown, assumed unsafe
+
+(game_save_no_timeout)
+checks to see if it is safe to save game, then saves (this version never gives up)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(game_save_immediate)
+disregards player's current situation and saves (BE VERY CAREFUL!)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(game_saving)
+checks to see if the game is trying to save the map.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(game_reverted)
+don't use this for anything, you black-hearted bastards.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(sound_set_tag_parameter_unsafe <string> <string> <long> <long> <long> <real> <real> <real>)
+this is the second sign of the coming of the antichrist
+NETWORK SAFE: Unknown, assumed unsafe
+
+(sound_impulse_predict <sound>)
+your mom part 2.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(sound_impulse_trigger <sound> <object> <real> <long>)
+plays an impulse sound from the specified source object (or "none"), with the specified scale.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(sound_impulse_start <sound> <object> <real>)
+plays an impulse sound from the specified source object (or "none"), with the specified scale.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(sound_impulse_start_cinematic <sound> <object> <real> <real> <real>)
+<sound> <object> <scale> <3d gain> <first person gain> plays an impulse sound from the specified source object.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(sound_impulse_start_effect <sound> <object> <real> <string_id>)
+plays an impulse sound from the specified source object (or "none"), with the specified scale and effect.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(sound_impulse_time <sound>)
+returns the time remaining for the specified impulse sound.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(sound_impulse_time <sound> <long>)
+<sound> <total playing time> returns the time remaining for the specified impulse sound based on <total playing time>.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(sound_impulse_language_time <sound>)
+returns the time remaining for the specified impulse sound. DO NOT CALL IN CUTSCENES.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(sound_impulse_stop <sound>)
+stops the specified impulse sound.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(sound_impulse_start_3d <sound> <real> <real>)
+<sound> <azimuth> <scale> at the sound's minimum distance
+NETWORK SAFE: Unknown, assumed unsafe
+
+(sound_impulse_mark_as_outro <sound>)
+marks a sound as outro (meaning it plays past an unskipped cinematic).
+NETWORK SAFE: Unknown, assumed unsafe
+
+(sound_impulse_start_naked <sound> <string_id> <string_id>)
+<sound> <pitch range name> <permutation index name> through the speakers it was encoded for
+NETWORK SAFE: Unknown, assumed unsafe
+
+(sound_looping_predict <looping_sound>)
+your mom.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(sound_looping_start <looping_sound> <object> <real>)
+plays a looping sound from the specified source object (or "none"), with the specified scale.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(sound_looping_stop <looping_sound>)
+stops the specified looping sound.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(sound_looping_stop_immediately <looping_sound>)
+stops the specified looping sound immediately.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(sound_looping_set_scale <looping_sound> <real>)
+changes the scale of the sound (which should affect the volume) within the range 0 to 1.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(sound_looping_set_alternate <looping_sound> <boolean>)
+enables or disables the alternate loop/alternate end for a looping sound.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(sound_loop_spam)
+start all loaded looping sounds
+NETWORK SAFE: Unknown, assumed unsafe
+
+(sound_class_show_channel <string> <boolean>)
+shows/hides sound classes w/ substring in debug_sound_channels view
+NETWORK SAFE: Unknown, assumed unsafe
+
+(sound_class_debug_sound_start <string> <boolean>)
+shows/hides when sounds of sound classes w/ substring start
+NETWORK SAFE: Unknown, assumed unsafe
+
+(debug_sounds_enable <string> <boolean>)
+enables or disables all sound classes matching the substring.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(sound_class_set_gain <string> <real> <short>)
+changes the gain on the specified sound class(es) to the specified gain over the specified number of ticks.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(sound_class_set_gain_db <string> <real> <short>)
+changes the gain on the specified sound class(es) to the specified gain(dB) over the specified number of ticks.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(sound_class_enable_ducker <string> <boolean>)
+enables or disables the ducker on all sound classes matching the substring.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(debug_sound_environment_parameter <long> <real>)
+
+NETWORK SAFE: Unknown, assumed unsafe
+
+(sound_set_global_effect <string_id> <real>)
+bleh
+NETWORK SAFE: Unknown, assumed unsafe
+
+(sound_set_global_effect_scale <string_id> <real>)
+more bleh
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vehicle_auto_turret <vehicle> <trigger_volume> <real> <real> <real>)
+Sets the specified trigger volume and parameters for an auto turret
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vehicle_hover <vehicle> <boolean>)
+stops the vehicle from running real physics and runs fake hovering physics instead.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vehicle_count_bipeds_killed <vehicle>)
+returns how many people this vehicle has killed
+NETWORK SAFE: Unknown, assumed unsafe
+
+(biped_ragdoll <unit>)
+given a dead biped, turns on ragdoll
+NETWORK SAFE: Unknown, assumed unsafe
+
+(hud_show_training_text <boolean>)
+true turns on scripted training text
+NETWORK SAFE: Unknown, assumed unsafe
+
+(hud_set_training_text <string_id>)
+sets the string id fo the scripted training text
+NETWORK SAFE: Unknown, assumed unsafe
+
+(hud_enable_training <boolean>)
+true turns training on, false turns it off.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_training_activate_flashlight)
+guess
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_training_activate_crouch)
+guess
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_training_activate_stealth)
+guess
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_training_activate_equipment)
+guess
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_training_activate_jump)
+guess
+NETWORK SAFE: Unknown, assumed unsafe
+
+(hud_activate_team_nav_point_flag <navpoint> <team> <cutscene_flag> <real>)
+activates a nav point type <string> attached to a team anchored to a flag with a vertical offset <real>. If the player is not local to the machine, this will fail
+NETWORK SAFE: Unknown, assumed unsafe
+
+(hud_deactivate_team_nav_point_flag <team> <cutscene_flag>)
+deactivates a nav point type attached to a team anchored to a flag
+NETWORK SAFE: Unknown, assumed unsafe
+
+(chud_cortana_suck <cutscene_flag> <boolean>)
+turns on the cortana suck at a given 
+NETWORK SAFE: Unknown, assumed unsafe
+
+(chud_texture_cam <boolean>)
+turns the chud texturecam on/off
+NETWORK SAFE: Unknown, assumed unsafe
+
+(chud_show <boolean>)
+hides/shows the entire chud
+NETWORK SAFE: Unknown, assumed unsafe
+
+(chud_show_weapon_stats <boolean>)
+hides/shows the weapon huds
+NETWORK SAFE: Unknown, assumed unsafe
+
+(chud_show_crosshair <boolean>)
+hides/shows the crosshair
+NETWORK SAFE: Unknown, assumed unsafe
+
+(chud_show_shield <boolean>)
+hides/shows the shield
+NETWORK SAFE: Unknown, assumed unsafe
+
+(chud_show_grenades <boolean>)
+hides/shows the grenade hud
+NETWORK SAFE: Unknown, assumed unsafe
+
+(chud_show_messages <boolean>)
+hides/shows the chud messages
+NETWORK SAFE: Unknown, assumed unsafe
+
+(chud_show_motion_sensor <boolean>)
+hides/shows the motion sensor chud
+NETWORK SAFE: Unknown, assumed unsafe
+
+(chud_cinematic_fade <real> <real>)
+parameter 1 is how, parameter 2 is when
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cls)
+clears console text from the screen
+NETWORK SAFE: Unknown, assumed unsafe
+
+(events_spam_suppression_enable <boolean>)
+enables or disables the suppression of event spamming
+NETWORK SAFE: Unknown, assumed unsafe
+
+(error_geometry_show <string>)
+highlights all error geometry with a name that includes the given substring
+NETWORK SAFE: Unknown, assumed unsafe
+
+(error_geometry_hide <string>)
+hides all error geometry with a name that includes the given substring
+NETWORK SAFE: Unknown, assumed unsafe
+
+(error_geometry_show_all)
+highlights all error geometry
+NETWORK SAFE: Unknown, assumed unsafe
+
+(error_geometry_hide_all)
+hides all error geometry
+NETWORK SAFE: Unknown, assumed unsafe
+
+(error_geometry_list)
+prints out a list of all error geometry types and counts
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_effect_set_max_translation <real> <real> <real>)
+<x> <y> <z>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_effect_set_max_rotation <real> <real> <real>)
+<yaw> <pitch> <roll>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_effect_set_max_rumble <real> <real>)
+<left> <right>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_effect_start <real> <real>)
+<max_intensity> <attack time>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_effect_stop <real>)
+<decay>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(hud_show_health <boolean>)
+hides/shows the health panel
+NETWORK SAFE: Unknown, assumed unsafe
+
+(hud_blink_health <boolean>)
+starts/stops manual blinking of the health panel
+NETWORK SAFE: Unknown, assumed unsafe
+
+(hud_show_shield <boolean>)
+hides/shows the shield panel
+NETWORK SAFE: Unknown, assumed unsafe
+
+(hud_blink_shield <boolean>)
+starts/stops manual blinking of the shield panel
+NETWORK SAFE: Unknown, assumed unsafe
+
+(hud_show_motion_sensor <boolean>)
+hides/shows the motion sensor panel
+NETWORK SAFE: Unknown, assumed unsafe
+
+(hud_blink_motion_sensor <boolean>)
+starts/stops manual blinking of the motion sensor panel
+NETWORK SAFE: Unknown, assumed unsafe
+
+(hud_show_crosshair <boolean>)
+hides/shows the weapon crosshair
+NETWORK SAFE: Unknown, assumed unsafe
+
+(hud_show_ammo <boolean>)
+hides/shows the weapon/grenade ammo counter
+NETWORK SAFE: Unknown, assumed unsafe
+
+(time_code_show <boolean>)
+shows the time code timer
+NETWORK SAFE: Unknown, assumed unsafe
+
+(time_code_start <boolean>)
+starts/stops the time code timer
+NETWORK SAFE: Unknown, assumed unsafe
+
+(time_code_reset)
+resets the time code timer
+NETWORK SAFE: Unknown, assumed unsafe
+
+(script_screen_effect_set_value <short> <real>)
+sets a screen effect script value
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_screen_effect_start <boolean>)
+starts screen effect pass TRUE to clear
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_screen_effect_set_crossfade <real>)
+transition-time
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_screen_effect_set_crossfade2 <real> <real>)
+transition-time, exponent
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_screen_effect_stop)
+returns control of the screen effects to the rest of the game
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_set_near_clip_distance <real>)
+
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_set_far_clip_distance <real>)
+
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_set_environment_map_attenuation <real> <real> <real>)
+interpolates environment-map attenuation (on flagged shaders) from <low> to <high> over <time>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_set_environment_map_bitmap <bitmap>)
+sets environment-map bitmap (on flagged shaders) instantly
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_reset_environment_map_bitmap)
+resets environment-map bitmap (on flagged shaders) to default instantly
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_set_environment_map_tint <real> <real> <real> <real> <real> <real> <real> <real>)
+perpendicular color: (red green blue brightness), parallel color: (red green blue brightness)... sets environment-map tint (on flagged shaders) instantly
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_reset_environment_map_tint)
+resets environment-map tint (on flagged shaders) to default instantly
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_layer <long> <real> <real>)
+interpolates the value of <cinematic layer x> from current position to <value> over <time>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_has_skills)
+Are you the best?
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_has_mad_secret_skills <long>)
+You are the best!
+NETWORK SAFE: Unknown, assumed unsafe
+
+(controller_invert_look)
+invert look on all attached controllers
+NETWORK SAFE: Unknown, assumed unsafe
+
+(controller_look_speed <short>)
+set look speed for all attached controllers
+NETWORK SAFE: Unknown, assumed unsafe
+
+(controller_set_look_invert <boolean>)
+invert player0's look
+NETWORK SAFE: Unknown, assumed unsafe
+
+(controller_get_look_invert)
+returns TRUE if player0's look pitch is inverted
+NETWORK SAFE: Unknown, assumed unsafe
+
+(user_interface_controller_get_last_level_played <short>)
+returns index of last completed solo level for profile index passed in
+NETWORK SAFE: Unknown, assumed unsafe
+
+(controller_set_look_inverted <controller> <boolean>)
+set look inversion for specified controller
+NETWORK SAFE: No
+
+(controller_set_vibration_enabled <controller> <boolean>)
+set vibration for specified controller
+NETWORK SAFE: No
+
+(controller_set_flight_stick_aircraft_controls <controller> <boolean>)
+set airrcraft flight stick controls for specified controller
+NETWORK SAFE: No
+
+(controller_set_auto_center_look <controller> <boolean>)
+set auto center look for specified controller
+NETWORK SAFE: No
+
+(controller_set_crouch_lock <controller> <boolean>)
+set crouch lock for specified controller
+NETWORK SAFE: No
+
+(controller_set_button_preset <controller> <button preset>)
+set button preset for specified controller
+NETWORK SAFE: No
+
+(controller_set_joystick_preset <controller> <joystick preset>)
+set joystick preset for specified controller
+NETWORK SAFE: No
+
+(controller_set_look_sensitivity <controller> <short>)
+set look sensitivity for specified controller
+NETWORK SAFE: No
+
+(controller_unlock_single_player_levels <controller>)
+<controller> unlock all single player levels for specified controller
+NETWORK SAFE: No
+
+(controller_lock_single_player_levels <controller>)
+<controller> lock all single player levels for specified controller
+NETWORK SAFE: No
+
+(controller_set_single_player_level_completed <controller> <long> <boolean> <game_difficulty> <boolean>)
+<controller> <level index> <co-op> <difficulty> <completed> set the single player levels completed state for specified controller
+NETWORK SAFE: No
+
+(controller_set_primary_change_color <controller> <player color>)
+set primary change color for specified controller
+NETWORK SAFE: No
+
+(controller_set_secondary_change_color <controller> <player color>)
+set secondary change color for specified controller
+NETWORK SAFE: No
+
+(controller_set_tertiary_change_color <controller> <player color>)
+set tertiary color for specified controller
+NETWORK SAFE: No
+
+(controller_set_primary_emblem_color <controller> <player color>)
+set primary change color for specified controller
+NETWORK SAFE: No
+
+(controller_set_secondary_emblem_color <controller> <player color>)
+set secondary change color for specified controller
+NETWORK SAFE: No
+
+(controller_set_background_emblem_color <controller> <player color>)
+set tertiary color for specified controller
+NETWORK SAFE: No
+
+(controller_set_player_character_type <controller> <player character type>)
+set player character type for specified controller
+NETWORK SAFE: No
+
+(controller_set_emblem_info <controller> <short> <short>)
+set emblem for specified controller
+NETWORK SAFE: No
+
+(controller_set_voice_output_setting <controller> <voice output setting>)
+set voice output setting for specified controller
+NETWORK SAFE: No
+
+(controller_set_voice_mask <controller> <voice mask>)
+set voice mask for specified controller
+NETWORK SAFE: No
+
+(controller_set_subtitle_setting <controller> <subtitle setting>)
+set subtitle setting for specified controller
+NETWORK SAFE: No
+
+(controller_set_unsignedin_user <controller> <boolean>)
+Toggle controller as unsigned-in user
+NETWORK SAFE: Unknown, assumed unsafe
+
+(controller_display_storage_device_selection <controller>)
+display storage device selection ui for the specified controller
+NETWORK SAFE: Unknown, assumed unsafe
+
+(font_cache_bitmap_save <string>)
+save font cache bitmap to targa file
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ui_debug_load_main_menu)
+loads the main menu screen
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ui_debug_text_bounds <boolean>)
+toggle rendering of ui text boundaries
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ui_debug_text_font <boolean>)
+toggle display of ui text font
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ui_debug_show_title_safe_bounds <boolean>)
+toggle display of title safe boundary
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ui_debug_element_bounds <boolean>)
+toggle rendering of widget tag block bounds
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ui_memory_dump <string>)
+dump the UI memory tracked allocations to a specified file
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ui_time_scale_step <real>)
+move the ui time forward by a specified amount on next tick
+NETWORK SAFE: Unknown, assumed unsafe
+
+(xoverlapped_debug_render <boolean>)
+toggle display a list of active xoverlapped tasks
+NETWORK SAFE: Unknown, assumed unsafe
+
+(gui_load_screen <string_id>)
+load the named screen
+NETWORK SAFE: No
+
+(gui_reset)
+cleans out the halox ui screens and errors
+NETWORK SAFEL No
+
+(gui_error_post <string_id> <long> <boolean>)
+<error_code> <controller_index> <must_be_cleared> sets an error condition in the ui
+NETWORK SAFEL No
+
+(gui_error_resolve <string_id> <long>)
+<error_name> <controller_index> resolves an error condition in the ui
+NETWORK SAFEL No
+
+(gui_error_clear <string_id> <long>)
+<error_name> <controller_index> clears an error condition in the ui
+NETWORK SAFEL No
+
+(gui_dialog_show <string_id>)
+<dialog name>
+NETWORK SAFEL No
+
+(gui_print_active_screens)
+display list of active halox ui screens
+NETWORK SAFEL No
+
+(gui_debug_screen_name <string_id> <boolean> <boolean>)
+Toggle display of given screen's name, optionally recursive
+NETWORK SAFE: No
+
+(gui_debug_screen_animation <string_id> <boolean> <boolean>)
+Toggle display of given screen animations, optionally recursive
+NETWORK SAFE: No
+
+(gui_debug_screen_bounds <string_id> <boolean> <boolean>)
+Toggle display of given screen's bounds, optionally recursive
+NETWORK SAFE: No
+
+(gui_debug_screen_rotation <string_id> <boolean> <boolean>)
+Toggle display of given screen's rotation, optionally recursive
+NETWORK SAFE: No
+
+(gui_debug_group_name <string_id> <boolean> <boolean>)
+Toggle display of given group's name, optionally recursive
+NETWORK SAFE: No
+
+(gui_debug_group_animation <string_id> <boolean> <boolean>)
+Toggle display of given group's animations, optionally recursive
+NETWORK SAFE: No
+
+(gui_debug_group_bounds <string_id> <boolean> <boolean>)
+Toggle display of given group's bounds, optionally recursive
+NETWORK SAFE: No
+
+(gui_debug_group_rotation <string_id> <boolean> <boolean>)
+Toggle display of given group's rotation, optionally recursive
+NETWORK SAFE: No
+
+(gui_debug_list_name <string_id> <boolean> <boolean>)
+Toggle display of given list's name, optionally recursive
+NETWORK SAFE: No
+
+(gui_debug_list_animation <string_id> <boolean> <boolean>)
+Toggle display of given list's animations, optionally recursive
+NETWORK SAFE: No
+
+(gui_debug_list_bounds <string_id> <boolean> <boolean>)
+Toggle display of given list's bounds, optionally recursive
+NETWORK SAFE: No
+
+(gui_debug_list_rotation <string_id> <boolean> <boolean>)
+Toggle display of given list's rotation, optionally recursive
+NETWORK SAFE: No
+
+(gui_debug_list_item_name <string_id> <boolean> <boolean>)
+Toggle display of given list item's name, optionally recursive
+NETWORK SAFE: No
+
+(gui_debug_list_item_animation <string_id> <boolean> <boolean>)
+Toggle display of given list item's animation, optionally recursive
+NETWORK SAFE: No
+
+(gui_debug_list_item_bounds <string_id> <boolean> <boolean>)
+Toggle display of given list item's bounds, optionally recursive
+NETWORK SAFE: No
+
+(gui_debug_list_item_rotation <string_id> <boolean> <boolean>)
+Toggle display of given list item's rotation, optionally recursive
+NETWORK SAFE: No
+
+(gui_debug_text_name <string_id> <boolean>)
+Toggle display of given text widget's name
+NETWORK SAFE: No
+
+(gui_debug_text_animation <string_id> <boolean>)
+Toggle display of given text widget's animation state
+NETWORK SAFE: No
+
+(gui_debug_text_bounds <string_id> <boolean>)
+Toggle display of given text widget's bounds
+NETWORK SAFE: No
+
+(gui_debug_text_rotation <string_id> <boolean>)
+Toggle display of given text widget's rotation
+NETWORK SAFE: No
+
+(gui_debug_bitmap_name <string_id> <boolean>)
+Toggle display of given bitmap widget's name
+NETWORK SAFE: No
+
+(gui_debug_bitmap_animation <string_id> <boolean>)
+Toggle display of given bitmap widget's animation state
+NETWORK SAFE: No
+
+(gui_debug_bitmap_bounds <string_id> <boolean>)
+Toggle display of given bitmap widget's bounds
+NETWORK SAFE: No
+
+(gui_debug_bitmap_rotation <string_id> <boolean>)
+Toggle display of given bitmap widget's rotation
+NETWORK SAFE: No
+
+(cc_enable <boolean>)
+toggle closed captions
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cc_test <boolean>)
+test a line of cc text
+NETWORK SAFE: Unknown, assumed unsafe
+
+(objectives_clear)
+clears the mission objectives.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(objectives_show_up_to <long>)
+show primary campaign objectives 0..n
+NETWORK SAFE: Unknown, assumed unsafe
+
+(objectives_finish_up_to <long>)
+mark primary campaign objectives 0..n as complete
+NETWORK SAFE: Unknown, assumed unsafe
+
+(objectives_secondary_show <long>)
+show secondary campaign objective N
+NETWORK SAFE: Unknown, assumed unsafe
+
+(objecives_secondary_finish <long>)
+mark secondary campaign objective N as complete
+NETWORK SAFE: Unknown, assumed unsafe
+
+(objectives_secondary_unavailable <long>)
+mark secondary campaign objective N as unavailable
+NETWORK SAFE: Unknown, assumed unsafe
+
+(input_suppress_rumble <boolean>)
+disable the friggin' rumble
+NETWORK SAFE: Unknown, assumed unsafe
+
+(input_disable_claw_button_combos <boolean>)
+disabe the Claw button combos (for monkey testing)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(update_remote_camera)
+force synchronization of remote machine camera
+NETWORK SAFE: Unknown, assumed unsafe
+
+(net_build_network_config)
+writes a new network configuration file
+NETWORK SAFE: Unknown, assumed unsafe
+
+(net_build_game_variant <string>)
+writes the current game variant to a file
+NETWORK SAFE: Yes
+
+(net_verify_game_variant <string>)
+verifies the contents of a packed game variant file
+NETWORK SAFE: Unknown, assumed unsafe
+
+(net_load_and_use_game_variant <string>)
+loads the contents of a packed game variant file and submits to networking for use in the current game
+NETWORK SAFE: Unknown, assumed unsafe
+
+(net_use_hopper_directory <string>)
+set which hopper directory to use
+NETWORK SAFE: Unknown, assumed unsafe
+
+(net_quality_dump)
+dump all network quality statistics
+NETWORK SAFE: Unknown, assumed unsafe
+
+(net_quality_clear)
+clear all network quality statistics
+NETWORK SAFE: Unknown, assumed unsafe
+
+(net_quality_set_connection_badness_history <boolean> <short>)
+set connection history, true/false, # of bits to set
+NETWORK SAFE: Yes
+
+(net_quality_set_squad_host_badness_history <boolean> <short>)
+set host badness history, true/false, # of bits to set
+NETWORK SAFE: Yes
+
+(net_quality_set_squad_client_badness_history <boolean> <short>)
+set client badness history, true/false, # of bits to set
+NETWORK SAFE: Yes
+
+(net_quality_set_group_host_badness_history <boolean> <short>)
+set host badness history, true/false, # of bits to set
+NETWORK SAFE: Yes
+
+(net_quality_set_group_client_badness_history <boolean> <short>)
+set client badness history, true/false, # of bits to set
+NETWORK SAFE: Yes
+
+(net_quality_set_estimated_bandwidth <boolean> <long>)
+set upstream bandwidth history, <is reliable> <bandwidth in kbps>
+NETWORK SAFE: Yes
+
+(net_join_friend <string>)
+join a friend's squad session, 'none' to cancel a previous join
+NETWORK SAFE: Yes
+
+(net_join_squad_to_friend <string>)
+join our squad to a friend's squad session, 'none' to cancel a previous join
+NETWORK SAFE: Yes
+
+(net_join_sessionid <string>)
+join a squad session by sessionid, 'none' to cancel a previous join
+NETWORK SAFE: Yes
+
+(net_join_squad_to_sessionid <string>)
+join a squad session by sessionid, 'none' to cancel a previous join
+NETWORK SAFE: Yes
+
+(net_enable_join_friend_loop <long>)
+randomly join a friend every <param> seconds, 0 to reset
+NETWORK SAFE: Yes
+
+(net_set_maximum_player_count <long>)
+sets the maximum player count for this squad
+NETWORK SAFE: Yes
+
+(net_status_filter <string>)
+filters the set of network status to display
+NETWORK SAFE: Yes
+
+(net_sim_reset)
+network simulation: resets the simulation state
+NETWORK SAFE: Yes
+
+(net_sim_spike_now)
+network simulation: starts a latency spike immediately
+NETWORK SAFE: Yes
+
+(net_sim_dropspike_now)
+network simulation: starts a packet loss spike immediately
+NETWORK SAFE: Yes
+
+(net_test_ping)
+network test: sends a ping
+NETWORK SAFE: Yes
+
+(net_test_channel_delete)
+network test: deletes all channels
+NETWORK SAFE: Yes
+
+(net_test_leave_squad)
+network test: leave current squad
+NETWORK SAFE: Yes
+
+(net_test_delegate_leader <long>)
+network test: delegate leadership to the specified player
+NETWORK SAFE: Yes
+
+(net_test_map_name <string>)
+network test: sets the name of the scenario to play
+NETWORK SAFE: Yes
+
+(net_test_variant <string>)
+network test: sets the game variant to play
+NETWORK SAFE: Yes
+
+(net_test_campaign_difficulty <short>)
+network test: sets the difficulty of the campaign game to play
+NETWORK SAFE: Yes
+
+(net_test_player_color <long>)
+network test: temporarily sets the color for all local players
+NETWORK SAFE: Yes
+
+(net_test_reset_objects)
+network test: resets all objects on the map
+NETWORK SAFE: Yes
+
+(net_test_fatal_error)
+creates a fatal simulation error
+NETWORK SAFE: Yes
+
+(net_set_machine_name <string>)
+sets the nickname of your xbox
+NETWORK SAFE: Unknown, assumed unsafe
+
+(events_enabled <boolean>)
+enable/disable all events
+NETWORK SAFE: No
+
+(events_disable_suppression <boolean>)
+enable/disable event suppression
+NETWORK SAFE: No
+
+(event_global_display_category <event>)
+sets the global event display level
+NETWORK SAFE: Unknown, assumed unsafe
+
+(event_global_log_category <event>)
+sets the global evetn log level
+NETWORK SAFE: Unknown, assumed unsafe
+
+(event_global_remote_log_category <event>)
+sets the global remote evetn log level
+NETWORK SAFE: Unknown, assumed unsafe
+
+(event_display_category <string> <event>)
+sets the display level for a named category of network events
+NETWORK SAFE: Unknown, assumed unsafe
+
+(event_log_category <string> <event>)
+sets the log level for a named category of network events
+NETWORK SAFE: Unknown, assumed unsafe
+
+(event_remote_log_category <string> <event>)
+sets the remote log level for a named category of network events
+NETWORK SAFE: Unknown, assumed unsafe
+
+(event_debugger_break_category <string> <event>)
+sets the debugger break level for a named category of network events
+NETWORK SAFE: Unknown, assumed unsafe
+
+(event_halt_category <string> <event>)
+sets the halt (assert/crash) level for a named category of network events
+NETWORK SAFE: Unknown, assumed unsafe
+
+(event_list_categories <string>)
+lists all categories that exist under a particular category string
+NETWORK SAFE: Unknown, assumed unsafe
+
+(play_bink_movie <string>)
+um...
+NETWORK SAFE: safe
+
+(play_credits)
+ur...
+NETWORK SAFE: Unknown, assumed unsafe
+
+(bink_time)
+uh...
+NETWORK SAFE: Unknown, assumed unsafe
+
+(set_global_doppler_factor <real>)
+new doppler factor: <real>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(set_global_mixbin_headroom <long> <long>)
+blah
+NETWORK SAFE: Unknown, assumed unsafe
+
+(debug_sound_environment_source_parameter <long> <real>)
+blah
+NETWORK SAFE: Unknown, assumed unsafe
+
+(data_mine_set_mission_segment <string>)
+sets the mission segment for single player data mine events
+NETWORK SAFE: Unknown, assumed unsafe
+
+(data_mine_insert <string>)
+insert text and camera position in the data mine
+NETWORK SAFE: Unknown, assumed unsafe
+
+(data_mine_upload)
+upload all data mining data files to debug server
+NETWORK SAFE: Unknown, assumed unsafe
+
+(data_mine_enable <boolean>)
+enable/disable data mining
+NETWORK SAFE: Unknown, assumed unsafe
+
+(data_mine_flush)
+flush any pending data mine data to disk
+NETWORK SAFE: Unknown, assumed unsafe
+
+(data_mine_debug_menu_setting <string>)
+close debug menu and set user experience setting to string
+NETWORK SAFE: Unknown, assumed unsafe
+
+(data_mine_open_debug_menu)
+open debug menu
+NETWORK SAFE: Unknown, assumed unsafe
+
+(data_mine_set_display_mission_segment <boolean>)
+toggle display of data mine mission segment
+NETWORK SAFE: Unknown, assumed unsafe
+
+(test_memory_allocators <long> <short> <short> <short> <long>)
+performs tests on different memory allocators
+NETWORK SAFE: Unknown, assumed unsafe
+
+(test_memory_allocators <long> <short> <short> <short> <long> <string>)
+performs tests on different memory allocators and saves the results
+NETWORK SAFE: Unknown, assumed unsafe
+
+(display_video_standard)
+displays the video standard the game is in
+NETWORK SAFE: safe
+
+(test_xcr_monkey_enable <boolean>)
+enable/disable controller monkeys for all in game players
+NETWORK SAFE: Unknown, assumed unsafe
+
+(test_show_guide_status)
+prints the guide status as automation events.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(test_show_users_xuids)
+prints the signed in users' xuids as automation events.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(test_show_are_users_friends <long> <string>)
+prints whether the current controller and specified xuid are friends as automation events
+NETWORK SAFE: Unknown, assumed unsafe
+
+(test_invite_friend <long> <string>)
+shows the guide send friend invite ui from the current controller to the specified xuid
+NETWORK SAFE: Unknown, assumed unsafe
+
+(test_download_storage_file <string> <string>)
+<url> <filename> downloads a file from LSP to the client
+NETWORK SAFE: Unknown, assumed unsafe
+
+(test_shared_files_upload <string> <long>)
+<filename> <slot_index> enqueues the specified filename for upload
+NETWORK SAFE: Unknown, assumed unsafe
+
+(test_shared_files_ping)
+tell the upload queue to check it's directory for changes
+NETWORK SAFE: Unknown, assumed unsafe
+
+(test_get_squad_session_id)
+get the current squad session id
+NETWORK SAFE: Unknown, assumed unsafe
+
+(test_auto_get_screens <long>)
+<arbitrary int> list the current gui screens
+NETWORK SAFE: Unknown, assumed unsafe
+
+(test_auto_get_screen_widgets <long> <long>)
+<arbitrary int> <screen index> lists widgets in a screen
+NETWORK SAFE: Unknown, assumed unsafe
+
+(test_auto_screen_get_datasources <long> <long>)
+<arbitrary int> <screen index> lists screen datasources
+NETWORK SAFE: Unknown, assumed unsafe
+
+(test_auto_screen_get_data_columns <long> <long> <string_id>)
+<arbitrary int> <screen index> <datasource string id> lists columns that make up this datasource
+NETWORK SAFE: Unknown, assumed unsafe
+
+(test_auto_screen_get_data <long> <long> <string_id> <string_id>)
+<arbitrary int> <screen index> <datasource string id> <datasource column string id> lists data from a datasource
+NETWORK SAFE: Unknown, assumed unsafe
+
+(test_auto_screen_invoke_list_item_by_name <long> <long> <string_id> <string_id> <string_id>)
+<arbitrary int> <screen index> <list string id> <datasource column string id> <column value string id> triggers the list item who's column's value matches the specified one
+NETWORK SAFE: Unknown, assumed unsafe
+
+(test_auto_screen_invoke_list_item_by_text <long> <long> <string_id> <string_id> <string>)
+<arbitrary int> <screen index> <list string id> <datasource column string id> <column value string id> triggers the list item who's column's value matches the specified one
+NETWORK SAFE: Unknown, assumed unsafe
+
+(test_auto_screen_invoke_list_item_by_handle <long> <long> <string_id> <long>)
+<arbitrary int> <screen index> <list string id> <element handle> triggers the list item specified by the element handle
+NETWORK SAFE: Unknown, assumed unsafe
+
+(test_auto_screen_send_button_press <long> <long> <string>)
+<arbitrary int> <screen index> <button name> sends the button press to the screen
+NETWORK SAFE: Unknown, assumed unsafe
+
+(test_game_results_save_to_file <string>)
+<filename> save game results to a file.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(test_game_results_load_from_file <string>)
+<filename> load game results into memory for use in the carnage report.  the format may change build to build causing this to fail or weird results to come up.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(test_fragment_utility_drive <long> <long> <long>)
+<file_count> <growth_repetitions> <growth_size> writes files of varying sizes to the utiltiy drive in an effort to fragment it really badly
+NETWORK SAFE: Unknown, assumed unsafe
+
+(webstats_disable <boolean>)
+disables webstats
+NETWORK SAFE: Unknown, assumed unsafe
+
+(webstats_test_submit <string>)
+submits a string to webstats upload
+NETWORK SAFE: Unknown, assumed unsafe
+
+(netdebug_prefer_internet <boolean>)
+hints to the netdebug code that that we're on the internet
+NETWORK SAFE: Unknown, assumed unsafe
+
+(flag_new <string> <string>)
+<name> <description>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(flag_new_at_look <string> <string>)
+<name> <description>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(flags_clear)
+erases all comment flags when not in editor (sapien)
+NETWORK SAFE: Unknown, assumed unsafe
+
+(flags_default_name <string>)
+<default comment flag name>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(flags_default_comment <string>)
+<default comment flag description>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(flags_set_filter <string>)
+<flag name filter>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(bug_now <string>)
+uploads files for bug <name>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(bug_now_lite <string>)
+uploads files (w/ no minidump) for bug <name>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(bug_now_auto <boolean>)
+uploads bug files, auto named <include_minidump>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(object_list_children <object> <object_definition>)
+returns list of child objects by definition.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(voice_set_outgoing_channel_count <long> <long>)
+sets the outgoing channel count <in-game> <out-of-game>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(voice_set_voice_repeater_peer_index <long>)
+sets the repeater peer index
+NETWORK SAFE: Unknown, assumed unsafe
+
+(voice_set_mute <long> <long> <boolean>)
+mute a player
+NETWORK SAFE: Unknown, assumed unsafe
+
+(net_leaderboard_clear_hopper <long>)
+<user index> clears the hopper stats for the user
+NETWORK SAFE: Unknown, assumed unsafe
+
+(net_leaderboard_clear_global_arbitrated <long>)
+<user index> clears the global arbitrated stats for the user
+NETWORK SAFE: Unknown, assumed unsafe
+
+(net_leaderboard_clear_global_unarbitrated <long>)
+<user index> clears the global unarbitrated stats for the user
+NETWORK SAFE: Unknown, assumed unsafe
+
+(net_leaderboard_refresh)
+<user index> refreshes stats for everybody in the session
+NETWORK SAFE: Unknown, assumed unsafe
+
+(dump_loaded_tags)
+dump a list of open tags to <map_name>_tags.txt
+NETWORK SAFE: Unknown, assumed unsafe
+
+(interpolator_start <string_id> <real> <real>)
+<name> <final value> <time>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(interpolator_start_smooth <string_id> <real> <real>)
+<name> <final value> <time>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(interpolator_stop <string_id>)
+<name>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(interpolator_restart <string_id>)
+<name>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(interpolator_is_active <string_id>)
+<name>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(interpolator_is_finished <string_id>)
+<name>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(interpolator_set_current_value <string_id> <real>)
+<name> <current value>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(interpolator_get_current_value <string_id> <boolean>)
+<name> <use function ON/OFF>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(interpolator_get_start_value <string_id> <boolean>)
+<name> <use function ON/OFF>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(interpolator_get_final_value <string_id> <boolean>)
+<name> <use function ON/OFF>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(interpolator_get_current_phase <string_id>)
+<name>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(interpolator_get_current_time_fraction <string_id>)
+<name>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(interpolator_get_start_time <string_id>)
+<name>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(interpolator_get_final_time <string_id>)
+<name>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(interpolator_evaluate_at <string_id> <real> <boolean>)
+<name> <value in> <use function ON/OFF>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(interpolator_evaluate_at_time_fraction <string_id> <real> <boolean>)
+<name> <time fraction in> <use function ON/OFF>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(interpolator_evaluate_at_time <string_id> <real> <boolean>)
+<name> <time in> <use function ON/OFF>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(interpolator_evaluate_at_time_delta <string_id> <real> <boolean>)
+<name> <time delta> <use function ON/OFF>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(interpolator_stop_all)
+
+NETWORK SAFE: Unknown, assumed unsafe
+
+(interpolator_restart_all)
+
+NETWORK SAFE: Unknown, assumed unsafe
+
+(interpolator_flip)
+
+NETWORK SAFE: Unknown, assumed unsafe
+
+(set_pc_runtime_language <string>)
+sets the pc language from a string
+NETWORK SAFE: Unknown, assumed unsafe
+
+(animation_cache_stats_reset)
+
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_clone_players_weapon <object> <string_id> <string_id>)
+clone the first player's most reasonable weapon and attach it to the specified object's marker
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_move_attached_objects <object> <string_id> <string_id> <string_id>)
+move the object's children attached to the first marker to the second marker
+NETWORK SAFE: Unknown, assumed unsafe
+
+(vehicle_enable_ghost_effects <boolean>)
+
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ice_cream_flavor_stock <long>)
+
+NETWORK SAFE: Unknown, assumed unsafe
+
+(ice_cream_flavor_available <long>)
+
+NETWORK SAFE: Unknown, assumed unsafe
+
+(set_global_sound_environment <real> <real> <real> <real> <long> <real>)
+this is your brain on drugs
+NETWORK SAFE: Unknown, assumed unsafe
+
+(reset_dsp_image)
+if we ever need to use this someone is getting fired
+NETWORK SAFE: Unknown, assumed unsafe
+
+(game_save_cinematic_skip)
+don't use this, except in one place.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_outro_start)
+flag this cutscene as an outro cutscene
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_enable_ambience_details <boolean>)
+enable/disable ambience details in cinematics
+NETWORK SAFE: Unknown, assumed unsafe
+
+(predict_model_section <render model> <long>)
+predict a geometry block.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(predict_bitmap <bitmap> <long>)
+predict a bitmap.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(get_prediction_offset)
+how many frames to predict ahead.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(rasterizer_bloom_override <boolean>)
+enable
+NETWORK SAFE: Unknown, assumed unsafe
+
+(rasterizer_bloom_override_reset <boolean>)
+reset
+NETWORK SAFE: Unknown, assumed unsafe
+
+(rasterizer_bloom_override_blur_amount <real>)
+blur mount
+NETWORK SAFE: Unknown, assumed unsafe
+
+(rasterizer_bloom_override_threshold <real>)
+threshold
+NETWORK SAFE: Unknown, assumed unsafe
+
+(rasterizer_bloom_override_brightness <real>)
+brightness
+NETWORK SAFE: Unknown, assumed unsafe
+
+(rasterizer_bloom_override_box_factor <real>)
+box factor
+NETWORK SAFE: Unknown, assumed unsafe
+
+(rasterizer_bloom_override_max_factor <real>)
+max factor
+NETWORK SAFE: Unknown, assumed unsafe
+
+(rasterizer_bloom_override_silver_bullet <boolean>)
+silver bullet
+NETWORK SAFE: Unknown, assumed unsafe
+
+(rasterizer_bloom_override_only <boolean>)
+only
+NETWORK SAFE: Unknown, assumed unsafe
+
+(rasterizer_bloom_override_high_res <boolean>)
+high res
+NETWORK SAFE: Unknown, assumed unsafe
+
+(rasterizer_bloom_override_brightness_alpha <real>)
+brightness alpha
+NETWORK SAFE: Unknown, assumed unsafe
+
+(rasterizer_bloom_override_max_factor_alpha <real>)
+max factor alpha
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cache_block_for_one_frame)
+call this to force texture and geometry cache to block until satiated
+NETWORK SAFE: Unknown, assumed unsafe
+
+(sound_suppress_ambience_update_on_revert)
+call this when transitioning between two cinematics so ambience won't fade in between the skips
+NETWORK SAFE: Unknown, assumed unsafe
+
+(render_exposure <real> <real>)
+animate exposure to <dest stops> in <seconds>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(render_autoexposure_instant <long>)
+instantly adopt auto exposure values in the next N frames
+NETWORK SAFE: Unknown, assumed unsafe
+
+(render_depth_of_field_enable <boolean>)
+turns depth of field on and off
+NETWORK SAFE: Unknown, assumed unsafe
+
+(render_depth_of_field <real> <real> <real> <real>)
+animate depth of field, in focus from <near> to <far>, with depth of field <depth>, in <ticks>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(render_dof_focus_depth <real>)
+interpolate depth of field to <depth>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(render_dof_blur_animate <real> <real>)
+interpolate depth of field maximum blur to <blur> in <ticks>
+NETWORK SAFE: Unknown, assumed unsafe
+
+(render_debug_video_mode)
+displays the current video mode
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_lightmap_shadow_disable)
+turn off lightmap shadow in cinematics
+NETWORK SAFE: Unknown, assumed unsafe
+
+(cinematic_lightmap_shadow_enable)
+turn on lightmap shadow in cinematics
+NETWORK SAFE: Unknown, assumed unsafe
+
+(predict_animation <animation_graph> <string_id>)
+begin loading an animation for the graph provided
+NETWORK SAFE: Unknown, assumed unsafe
+
+(mp_players_by_team <mp_team>)
+given a team index, returns an object list containing all living player objects belonging to that team
+NETWORK SAFE: Yes
+
+(mp_active_player_count_by_team <mp_team>)
+given a team index, returns an object list containing all living player objects belonging to that team
+NETWORK SAFE: Yes
+
+(mp_game_won <mp_team>)
+given a team index, declares the game a victory for that team and a loss for all others
+NETWORK SAFE: Yes
+
+(mp_respawn_override_timers <mp_team>)
+causes all players on the specified team waiting to respawn (due to timer) to respawn immediately
+NETWORK SAFE: Yes
+
+(mp_ai_allegiance <team> <mp_team>)
+causes an allegiance to be formed between an AI squad team and a multiplayer team
+NETWORK SAFE: Yes
+
+(mp_allegiance <mp_team> <mp_team>)
+create an allegiance between two multiplayer teams
+NETWORK SAFE: Yes
+
+(mp_round_started)
+used to determine if the mp game is in the active-round phase or not
+NETWORK SAFE: Unknown, assumed unsafe
+
+(mp_scripts_reset)
+on the host in a distributed game, resets the scripts (but not internal hs globals)
+NETWORK SAFE: Yes
+
+(mp_ai_place <ai>)
+places the specified squad on the map as a non-authoritative object
+NETWORK SAFE: Yes
+
+(mp_ai_place <ai> <short>)
+places the given number of members of the specified squad as non-authoritative objects
+NETWORK SAFE: Yes
+
+(mp_ai_kill <ai>)
+instantly kills the specified non-authoritative encounter and/or squad.
+NETWORK SAFE: YEs
+
+(mp_ai_kill_silent <ai>)
+instantly and silently (no animation or sound played) kills the specified non-authoritative encounter and/or squad.
+NETWORK SAFE: Yes
+
+(mp_object_create <object_name>)
+creates a non-authoratative object from the scenario.
+NETWORK SAFE: Yes
+
+(mp_object_create_clone <object_name>)
+creates a non-authoratative object, potentially resulting in multiple objects if it already exists.
+NETWORK SAFE: No
+
+(mp_object_create_anew <object_name>)
+creates a non-authoratative object, destroying it first if it already exists.
+NETWORK SAFE: Yes
+
+(mp_object_destroy <object>)
+destroys a non-authoratative object.
+NETWORK SAFE: Yes
+
+(tag_file_set_backend <string>)
+override the tag file system backend
+NETWORK SAFE: Unknown, assumed unsafe
+
+(mp_object_belongs_to_team <object> <mp_team>)
+causes specified object to belong to the given team, so that only that team can pick it up
+NETWORK SAFE: Yes
+
+(mp_weapon_belongs_to_team <object> <mp_team>)
+causes specified weapon to belong to the given team, so that only that team can pick it up
+NETWORK SAFE: Yes
+
+(mp_debug_goal_object_boundary_geometry <boolean>)
+toggle debug geometry for multiplayer goal objects
+NETWORK SAFE: No
+
+(mp_dump_candy_monitor_state)
+dumps the current candy monitor state to a file on disk
+NETWORK SFE: Unknown, assumed unsafe
+
+(set_camera_third_person <long> <boolean>)
+<user_index> <third_person (yes/no)> sets user's camera perspective
+NETWORK SAFE: No
+
+(get_camera_third_person <long>)
+<user_index> gets user's camera perspective
+NETWORK SAFE: No
+
+(determinism_debug_manager_enable_logging <boolean>)
+enable/disable determinism logging
+NETWORK SAFE: Unknown, assumed unsafe
+
+(determinism_debug_manager_enable_game_state_checksum <boolean>)
+enable/disable determinism checkpoints
+NETWORK SAFE: Unknown, assumed unsafe
+
+(determinism_debug_manager_enable_trace <boolean>)
+enable determinism tracing
+NETWORK SAFE: Unknown, assumed unsafe
+
+(determinism_debug_manager_set_consumer_sample_level <string> <long>)
+sets sample level for a consumer
+NETWORK SAFE: Unknown, assumed unsafe
+
+(saved_film_play <string>)
+plays a saved film
+NETWORK SAFE: Unknown, assumed unsafe
+
+(saved_film_play_last)
+play back last recorded saved film
+NETWORK SAFE: Unknown, assumed unsafe
+
+(saved_film_disable_version_checking <boolean>)
+disable saved film version checking
+NETWORK SAFE: Unknown, assumed unsafe
+
+(saved_film_toggle_debug_saving <boolean>)
+toggle saving of last film to the debug output directory automatically after each game level
+NETWORK SAFE: Unknown, assumed unsafe
+
+(mover_set_program <object> <short>)
+Set the motor program of the given mover object
+NETWORK SAFE: Unknown, assumed unsafe
+
+(determinism_log_compare_log_files <string> <string>)
+comares determinism log files
+NETWORK SAFE: No
+
+(floating_point_exceptions_enable <boolean>)
+enables/disables floating point exceptions
+NETWORK SAFE: No
+
+(determinism_debug_manager_enable_log_file_comparision_on_oos <boolean>)
+enables/disables determinism log file comparision on oos
+NETWORK SAFE: No
+
+(event_logs_snapshot)
+copy error files to the error snapshot folder
+NETWORK SAFE: No
+
+(tag_reload_force <string>)
+rather than force a painful xsync to test xsync, allow me to fake a tag_reload
+NETWORK SAFE: No
+
+(tag_unload_force <string>)
+call tag_unload
+NETWORK SAFE: No
+
+(tag_load_force <string>)
+call tag_load
+NETWORK SAFE: No
+
+(predict_bink_movie <string>)
+um2...
+NETWORK SAFE: Yes
+
+(profiler_dump_history)
+dump profile history.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(camera_set_mode <long> <long>)
+<user_index> <mode_index> sets user's camera perspective
+NETWORK SAFE: No
+
+(camera_set_flying_cam_at_point <long> <cutscene_camera_point>)
+<user_index> <camera_point> sets a flying camera perspective
+NETWORK SAFE: No
+
+(game_coop_player_count)
+returns the number of coop players active in game
+NETWORK SAFE: Unknown, assumed unsafe
+
+(player_force_mode <string_id>)
+force your will upon the player
+NETWORK SAFE: Unknown, assumed unsafe
+
+(profiler_output_pulse)
+dump profile stats to telnet console.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(string_id_name <long>)
+prints the name of the string id to the console
+NETWORK SAFE: Unknown, assumed unsafe
+
+(find <string>)
+prints any hs command matching the string passed in
+NETWORK SAFE: of course you idiot
+
+(add_recycling_volume <trigger_volume> <long> <long>)
+removes garbage in specified trigger volume to a max count over n seconds
+NETWORK SAFE: Yes
+
+(tag_resources_set_per_frame_publish <boolean>)
+turns on/off per frame resource publish (stress testing)
+NETWORK SAFE: If not, Ooops
+
+(object_recycling_clear_history)
+clear object recycling history
+NETWORK SAFE: Unknown, assumed unsafe
+
+(dump_cinematics_script)
+dump the cinematic script to cinematic_dump.txt
+
+(cinematics_dump_errors)
+dump all cinematic errors to cinematic_errors.txt
+
+(global_preferences_clear)
+clears all game preference information
+NETWORK SAFE: Unknown, assumed unsafe
+
+(network_storage_set_storage_subdirectory <string>)
+<subdirectory> The default is the build number or 'untracked'
+NETWORK SAFE: Unknown, assumed unsafe
+
+(network_storage_set_storage_user <string>)
+<user> Use the network file stored on untracked\<user>.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(status_line_dump)
+dumps active status_lines to system_log.txt
+NETWORK SAFE: I hope so
+
+(game_tick_get)
+returns current game tick
+NETWORK SAFE: only if game_time_get is
+
+(loop_it <string>)
+runs the expression at most once per tick
+NETWORK SAFE: just assume it isn't
+
+(loop_clear)
+runs the expression at most once per tick
+NETWORK SAFE: just assume it isn't
+
+(status_lines_enable <string>)
+enables status_lines that were initialized with identifiers that match the input substring
+NETWORK SAFE: I hope so
+
+(status_lines_disable <string>)
+disables status_lines that were initialized with identifiers that match the input substring
+NETWORK SAFE: I hope so
+
+(on_target_platform)
+returns true if the game thinks it's running on the target platform
+NETWORK SAFE: no
+
+(profile_activate <string>)
+activates profile sections based on a substring.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(profile_deactivate <string>)
+deactivates profile sections based on a substring.
+NETWORK SAFE: Unknown, assumed unsafe
+
+(net_game_set_player_standing <string> <long>)
+set's a player's standing by gamertag
+NETWORK SAFE: host only
+
+(net_get_game_id)
+prints the id of the game to the console
+NETWORK SAFE: if it's not, it wouldn't be very useful
+
+(generate_rsa_2048_key_pair)
+generates an RSA key pair
+
+(create_secure_test_file)
+generates a compressed encrypted test file
+
+(damaged_media_inhibit_ui <boolean>)
+inhibits the display of the dirty-disk error
+NETWORK SAFE: Unknown, assumed unsafe
+
+(net_test_matchmaking_hopper_list)
+prints the hopper list
+NETWORK SAFE: just assume it isn't
+
+(net_test_matchmaking_hopper_game_list)
+prints games for the current hopper
+NETWORK SAFE: just assume it isn't
+
+(net_test_matchmaking_hopper_set_game <long>)
+sets the game vairant for the current hopper
+NETWORK SAFE: just assume it isn't
+
+(saved_film_set_playback_game_speed <real>)
+set the saved film playback speed
+
+(noguchis_mystery_tour <string>)
+set the additional music directory to dump into the cache file
+
+(designer_zone_sync)
+synchronizes global objects with loaded designer zones
+NETWORK SAFE: Unknown, assumed unsafe
+
+(dump_designer_zone <designer_zone>)
+dump interesting info about a designer zone
+NETWORK SAFE: Unknown, assumed unsafe
+
+(designer_zone_activate <designer_zone>)
+activate designer zone
+NETWORK SAFE: Unknown, assumed unsafe
+
+(designer_zone_deactivate <designer_zone>)
+deactivates designer zone, deletes objects that were part of that designer zone
+NETWORK SAFE: Unknown, assumed unsafe
+
+(object_set_always_active <object> <boolean>)
+sets/unsets the object always active flag to ignore pvs changes
+NETWORK SAFE: Unknown, assumed unsafe
+
+(saved_film_history_seek_to_update <long>)
+seeks to an update number
+
+(saved_film_snippet_start_recording)
+starts recording a saved film snippet
+
+(saved_film_snippet_stop_recording)
+stops recording a saved film snippet
+
+(saved_film_snippet_preview)
+previews a saved film snippet
+
+(saved_film_snippet_commit <string>)
+commits a recorded snippet
+
+(saved_film_seek <real>)
+seeks a saved film to a given timestamp (seconds)
+NETWORK SAFE: probably not
+
+(saved_film_rewind <real>)
+rewinds a saved film by the given number of seconds
+NETWORK SAFE: probably not
+
+(tag_is_active <any tag not resolving>)
+returns true/false if you can create this tag with the active zones
+NETWORK SAFE: only if the global zone state is network safe
+
+(tag_resources_set_incremental_publish <boolean>)
+turns on/off incremental resource publish (prediction)
+NETWORK SAFE: If not, Ooops
+
+(tag_resources_set_deferred_prediction <boolean>)
+turns on/off optional resource prediction
+NETWORK SAFE: If not, Oooops
+
+(dump_active_resources)
+blah
+
+(object_set_persistent <object> <boolean>)
+<object_index> <true/false> prevent this object from being garbage collected
+NETWORK SAFE: No
+
+(display_zone_size_estimates <boolean>)
+display zone size estimates HUD
+NETWORK SAFE: YES
+
+(report_zone_size_estimates)
+dump zone size estimates to design report log
+NETWORK SAFE: YES
+
+(net_test_disconnect_squad)
+disconnects the squad session
+NETWORK SAFE: probably not
+
+(net_test_disconnect_group)
+disconnects the group session
+NETWORK SAFE: probably not
+
+(net_test_clear_squad_session_parameter <long>)
+clears a squad session parameter
+NETWORK SAFE: probably not
+
+(net_test_clear_group_session_parameter <long>)
+clears a group session parameter
+NETWORK SAFE: probably not
+
+(net_test_life_cycle_pause <string> <boolean>)
+pauses the life cycle in the specified state
+NETWORK SAFE: probably not
+
+(net_test_life_cycle_display_states)
+display the life cycle states
+NETWORK SAFE: probably not
+
+(overlapped_display_task_descriptions)
+displays all tasks
+NETWORK SAFE: lol
+
+(overlapped_task_inject_error <string> <boolean>)
+inject error for tasks
+NETWORK SAFE: lol
+
+(net_leaderboard_clear_hopper_all_users <string>)
+clears the hopper stats for the all user
+NETWORK SAFE: Unknown, assumed unsafe
+
+(net_leaderboard_clear_global_arbitrated_all_users <string>)
+clears the global arbitrated stats for all user
+NETWORK SAFE: Unknown, assumed unsafe
+
+(net_leaderboard_clear_global_unarbitrated_all_users <string>)
+clears the global unarbitrated stats for all user
+NETWORK SAFE: Unknown, assumed unsafe
+
+(test_sapien_crash)
+
+
+(bandwidth_profiler_enable <boolean>)
+enables bandwidth profiler
+NETWORK SAFE: probably not
+
+(bandwidth_profiler_set_context <boolean>)
+sets bandwidth profiler context
+NETWORK SAFE: probably not
+
+(overlapped_task_pause <string> <boolean>)
+pause tasks
+NETWORK SAFE: lol
+
+(net_banhammer_set_controller_cheat_flags <controller> <string> <boolean>)
+sets cheat flags
+NETWORK SAFE: yes
+
+(net_banhammer_set_controller_ban_flags <controller> <string> <boolean>)
+sets ban flags
+NETWORK SAFE: yes
+
+(net_banhammer_dump_strings)
+display cheat/ban strings
+NETWORK SAFE: yes
+
+(net_banhammer_dump_repeated_play_list)
+display repeated play lists
+NETWORK SAFE: yes
+
+(net_leaderboard_set_user_stats <long> <real> <real> <long> <long> <long>)
+slams user leaderboard values locally
+NETWORK SAFE: no
+
+(net_leaderboard_set_user_game_stats <long> <long> <long> <long> <long>)
+slams more user stats
+NETWORK SAFE: no
+
+(net_build_map_variant <string>)
+writes the current map variant to a file
+NETWORK SAFE: Yes
+
+(net_verify_map_variant <string>)
+verifies the contents of a packed map variant file
+NETWORK SAFE: Unknown, assumed unsafe
+
+(async_set_work_delay_milliseconds <long>)
+set an artificial delay time for the performance of any asynchronous task work
+NETWORK SAFE: Unknown, assumed unsafe
+

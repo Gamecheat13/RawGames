@@ -1,0 +1,176 @@
+;This file is init_mp
+
+;========================
+;|	Debugging	|
+;========================
+;error_geometry_hide_all
+;debug_structure_automatic off
+;debug_objects on
+;debug_objects_bounding_spheres off
+;debug_objects_collision_models off
+;debug_objects_physics_models off
+;debug_objects_biped_physics_pills on
+;debug_objects_names on
+;debug_objects_unit_vectors on
+;game_tick_rate 30
+;debug_render_effects 1
+
+;========================
+;|	Cheats		|
+;========================
+cheat_infinite_ammo off
+;cheat_deathless_player on
+
+;========================
+;|	Performance     |
+;========================
+;texture_cache_force_medium_detail on
+;bitmap_downsample 1
+;ssc_lightmap_shadow_extrusion 0
+;display_framerate 1
+;enable_dynamic_sound_cache on
+;run_game_scripts 0
+;
+
+;========================
+;|	Campaign        |
+;========================
+game_difficulty heroic
+;game_coop_players 2
+;game_start levels\solo\03a_oldmombasa\03a_oldmombasa
+;game_start levels\solo\05a_deltaapproach\05a_deltaapproach
+;game_start levels\solo\06b_floodzone\06b_floodzone
+;line below turns on the use of designer zones.
+scenario_use_non_bsp_zones 0
+
+;========================
+;|	Multiplayer     |
+;========================
+;game_multiplayer slayer
+;game_multiplayer king
+;game_splitscreen 1
+;game_start levels\multi\lockout\lockout
+;game_start levels\multi\coagulation\coagulation
+;game_start levels\multi\zanzibar\zanzibar
+
+
+;========================
+;|	Test 		|
+;========================
+;game_start scenarios\test\box\box_chucky
+;game_start scenarios\test\brute_test\brute_test
+;game_start scenarios\test\meat_grinder\meat_grinder
+;game_start scenarios\test\prisoner\prisoner
+;game_start test\cupertino\cupertino
+;game_start test\poopies\poopies
+;game_start test\onewayportals\onewayportals
+;game_start test\fog_bank\fog_bank
+
+;====================================
+;|	Saved Films Debugging       |
+;====================================
+
+saved_film_toggle_debug_saving 1
+
+;==========================================
+;|	Determinism Debugging - Always on |
+;==========================================
+determinism_debug_manager_enable_logging 1
+determinism_debug_manager_enable_game_state_checksum 1
+determinism_debug_manager_enable_log_file_comparision_on_oos 1
+
+;==========================================
+;|	Determinism RICH Debugging 	  |
+;==========================================
+
+;OBJECT
+;determinism_debug_manager_set_consumer_sample_level object 2
+
+;PLAYERS
+;determinism_debug_manager_set_consumer_sample_level players 2
+
+;AI
+;determinism_debug_manager_set_consumer_sample_level actor 2
+;determinism_debug_manager_set_consumer_sample_level squad 2
+;determinism_debug_manager_set_consumer_sample_level "squad group" 2
+;determinism_debug_manager_set_consumer_sample_level prop 2
+;determinism_debug_manager_set_consumer_sample_level prop_ref 2
+;determinism_debug_manager_set_consumer_sample_level tracking 2
+;determinism_debug_manager_set_consumer_sample_level "joint state" 2
+;determinism_debug_manager_set_consumer_sample_level "dynamic firing points" 2
+;determinism_debug_manager_set_consumer_sample_level clump 2
+;determinism_debug_manager_set_consumer_sample_level "vocalization records" 2
+;determinism_debug_manager_set_consumer_sample_level "command scripts" 2
+
+
+;EFFECTS
+;determinism_debug_manager_set_consumer_sample_level "effect" 2
+;determinism_debug_manager_set_consumer_sample_level "effect event" 2
+
+;HS
+;determinism_debug_manager_set_consumer_sample_level "det hs thread" 2
+
+;GENERIC GAME STATE CONSUMERS
+;determinism_debug_manager_set_consumer_sample_level "ai_reference_frame" 2
+;determinism_debug_manager_set_consumer_sample_level "ai globals" 2
+;determinism_debug_manager_set_consumer_sample_level "ai player state globals" 2
+
+;=========================
+;|	Network 	 |
+;=========================
+net_never_timeout 0
+data_mine_enable 1
+
+;=========================
+;|	Network Logging  |
+;=========================
+;event_log_category networking: verbose
+;event_log_category networking: status
+event_log_category networking: message
+
+;=========================
+;|	Voice Logging	 |
+;=========================
+;event_log_category voice: verbose
+;event_log_category voice: status
+event_log_category voice: message
+
+
+;=====================================
+;|	Shared Files Debugging       |
+;=====================================
+;shared_files_enable 1
+;events_spam_suppression_enable 0
+;event_display_category networking:online:lsp status
+;event_display_category networking:http_client status
+;event_display_category networking:http_request_queue status
+;event_display_category networking:online:files status
+
+;==========================================
+;|	DISABLE RAW / LSP UPLOADING       |
+;==========================================
+lsp_allow_raw_connections 1
+lsp_allow_lsp_connections 1
+
+
+;==========================================
+;|	Antialiasing Enable / Disable     |
+;==========================================
+;render_tiling_configuration 0: //no AA
+;render_tiling_configuration 1: //2x AA
+;render_tiling_configuration 2: //4x AA
+
+
+;===============================================================
+;|	Caching hack thing until mat gets caching working      |
+;===============================================================
+tag_resources_set_incremental_publish on
+
+
+
+;=========================
+;|	Hopper Stuff     |
+;=========================
+;net_matchmaking_hopper_id_adjustment <magic number>
+;net_use_hopper_directory test_hoppers
+;network_storage_set_storage_user <youralias>
