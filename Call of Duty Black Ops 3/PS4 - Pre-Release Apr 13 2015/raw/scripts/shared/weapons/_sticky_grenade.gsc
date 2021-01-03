@@ -1,0 +1,21 @@
+#using scripts\codescripts\struct;
+
+#using scripts\shared\system_shared;
+
+    	   	                                                                                                                         	                                                                                                                                                                                                                                                                                                                                                                    	        	     	             	    	   	                           	                               	                                	                                                              	                                                                                                              	                            	                                     	                                       	                                                               	   	                  	       	                                                    	                   	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        	                                                                                        	           	                        	                                            	                                             	                                                   	                                                             	                                                         	                                                                    	                                                                                                                                                                                                    	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      	                                                              	                                                          	                                   	                                   	                                                    	                                       
+
+#precache( "fx", "weapon/fx_equip_light_green_os" );
+#precache( "fx", "weapon/fx_equip_light_red_os" );
+
+#namespace sticky_grenade;
+
+function autoexec __init__sytem__() {     system::register("sticky_grenade",&__init__,undefined,undefined);    }
+
+function __init__()
+{
+}
+
+function watch_bolt_detonation( owner ) // self == explosive_bolt entity
+{
+	//self SetTeam( owner.team );
+}

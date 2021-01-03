@@ -1,0 +1,31 @@
+#using scripts\codescripts\struct;
+
+#using scripts\shared\clientfield_shared;
+#using scripts\shared\system_shared;
+
+    	   	                                                                                                                         	                                                                                                                                                                                                                                                                                                                                                                    	        	     	             	    	   	                           	                               	                                	                                                              	                                                                                                              	                            	                                     	                                       	                                                               	   	                  	       	                                                    	                   	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       	                                                                                        	           	                        	                                            	                                             	                                                   	                                                             	                                                         	                                                                    	                                                                                                                                                                                                    	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     	                                                              	                                                          	                                   	                                   	                                                    	                                       
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            	                                                                                                                                                                                                                                                                                                                                                                                       
+
+#precache( "client_fx", "_t6/vehicle/exhaust/fx_exhaust_f35_afterburner" );
+
+#namespace planemortar;
+
+function autoexec __init__sytem__() {     system::register("planemortar",&__init__,undefined,undefined);    }
+	
+function __init__()
+{	
+	level.planeMortarExhaustFX = "_t6/vehicle/exhaust/fx_exhaust_f35_afterburner";
+
+	clientfield::register( "scriptmover", "planemortar_contrail", 1, 1, "int",&planemortar_contrail, !true, !true );
+}
+
+function planemortar_contrail( localClientNum, oldVal, newVal, bNewEnt, bInitialSnap, fieldName, bWasDemoJump )
+{
+	self endon( "death" );
+	self endon( "entityshutdown" );
+
+	if ( newVal )
+	{
+		self.fx = PlayFXOnTag( localClientNum, level.planeMortarExhaustFX, self, "tag_origin" );	
+	}
+}

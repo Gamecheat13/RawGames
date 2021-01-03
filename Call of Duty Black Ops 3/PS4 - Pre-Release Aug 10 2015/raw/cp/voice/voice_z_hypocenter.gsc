@@ -1,0 +1,63 @@
+
+#using scripts\cp\_dialog;
+
+function init_voice()
+{
+
+    dialog::add("plyz_it_started_at_coales_0","vox_zhyp_1_01_000_plyz");//It started at Coalescence Singapore in 2070, ten years after the disaster, after Virus 61-15 began its spread, after the dead began to walk the Earth.
+    dialog::add("plyz_we_d_lost_comms_with_0","vox_zhyp_1_01_001_plyz");//We'd lost comms with John Taylor's squad, another Undead Extermination Team. Deadkillers, we were called. With our cybernetic augmentations, we were impossible to infect. We were trained to terminate the Undead.
+    dialog::add("plyz_hendricks_was_on_edg_0","vox_zhyp_2_01_000_plyz");//Hendricks was on edge. We were in a Quarantine Zone, one of many walled-off areas separating humanity from the Undead, built to keep the Virus and the infected behind their wall away from the rest of us.
+    dialog::add("plyz_the_undead_weren_t_o_0","vox_zhyp_2_01_001_plyz");//The Undead weren't our only concern. The 54 Immortals, a local combine who remained in the containment zone, were aware of Taylor's activity. This place was the epicenter of the epidemic, the 2060 Coalescence Disaster created the cursed world we lived in today. Any activity at this site would set off alarm bells.
+    dialog::add("plyz_either_way_our_trou_0","vox_zhyp_2_01_002_plyz");//Either way, our troubles were only just beginning...
+    dialog::add("plyz_we_should_ve_known_t_0","vox_zhyp_2_01_003_plyz");//We should've known that the ASP wasn't brain-dead. If we were gonna bring it down we'd need to disable its shield and find a rocket launcher.
+    dialog::add("salm_what_was_so_special_0","vox_zhyp_5_01_000_salm");//What was so special about this operation?
+    dialog::add("plyz_nothing_it_was_supp_0","vox_zhyp_5_01_001_plyz");//It was supposed to be by-the-books. Five years after our cybernetic augmentations, Hendricks and I were a well-oiled machine. Quarantine Sweeps, Recon, Search and Rescue?  It's just what Deadkillers do. (pausing, thinks about it) ...but we'd never been sent after one of our own before.  (beat) John Taylor's systems had gone quiet. With our Direct Neural Interface we're hard wired into Winslow Accord Servers. Observation knew if you were dead or alive. For Taylor to be neither... that was unusual.
+    dialog::add("plyz_we_located_an_emf_so_0","vox_zhyp_5_01_002_plyz");//We located an EMF source and uploaded it to central. It was a 54 Immortal audiolog, detailing unusual activity coming from a server room at the lowest level of the builind. It couldn't have been more than a week old, probably why Taylor's team had been sent to investigate. (beat) Hendricks activated a recon drone to scan for life. We picked up a signal coming from far below.  (beat) As we stood there in the atrium... I felt like Alice. And we were about to jump down the rabbit hole.
+    dialog::add("plyz_our_drone_picked_up_0","vox_zhyp_6_01_000_plyz");//Our drone picked up activity ahead. We should've assumed we weren't alone down here.
+    dialog::add("plyz_when_man_fled_the_vi_0","vox_zhyp_9_01_000_plyz");//When man fled the virus, they left behind thousands of active robots, machinery abandoned with one directive: kill the dead.  (beat) Years later they're still killing, but due to decrepit programming somehow we'd been added to their kill-list, indistinguishable from our brainless counterparts. (beat) The strange behavior was observed in Multiple Quarantine Zones, adding additional threats to any recon work we did. (beat) We moved on.
+    dialog::add("plyz_we_d_reached_the_sil_0","vox_zhyp_11_01_000_plyz");//We reached the Silo's Floor... but the signal came from lower still, below Coalescence.
+    dialog::add("salm_did_you_have_any_ink_0","vox_zhyp_11_01_001_salm");//Did you have any inkling of what waited for you?
+    dialog::add("plyz_no_in_hindsight_i_0","vox_zhyp_11_01_002_plyz");//No... in hindsight we should've put it together. But the fact of the matter, that day was supposed to be like any other.
+    dialog::add("salm_what_did_you_find_be_0","vox_zhyp_12_01_000_salm");//What did you find below Coalescence?
+    dialog::add("plyz_a_cia_black_project_0","vox_zhyp_12_01_001_plyz");//A CIA Black Project. Project Corvus. Unknown to the world... And unknown to most people “in the know”. As “Off the Record” as it got. A redacted footnote in Langley's History Book. Part of me wishes we'd just turned back.
+    dialog::add("salm_why_0","vox_zhyp_12_01_002_salm");//Why?
+    dialog::add("plyz_it_would_have_bee_0","vox_zhyp_12_01_003_plyz");//It... would have been easier. For me. For Hendricks. For the world.
+    dialog::add("salm_is_it_such_a_bad_thi_0","vox_zhyp_12_01_004_salm");//Is it such a bad thing? To want to be blissfully ignorant in the face of daunting adversity?
+    dialog::add("plyz_we_didn_t_have_a_cho_0","vox_zhyp_12_01_005_plyz");//We didn't have a choice.
+    dialog::add("salm_those_who_find_fate_0","vox_zhyp_12_01_006_salm");//Those who find fate thrust upon them rarely do.
+    dialog::add("salm_the_human_testing_la_0","vox_zhyp_14_01_000_salm");//The Human Testing Lab. What awaited you there?
+    dialog::add("plyz_we_found_the_trut_0","vox_zhyp_14_01_001_plyz");//We found... the truth. The cause of the Disaster.
+    dialog::add("plyz_we_didn_t_have_the_f_0","vox_zhyp_14_01_002_plyz");//We didn't have the full picture. Not yet. But this was the source.
+    dialog::add("plyz_when_the_explosion_h_0","vox_zhyp_14_01_003_plyz");//We knew Coalescence was where the virus originated, but residue of 61-15 in the air left no doubt this was where it all began. (beat) When the disaster happened, hundreds of thousands died instantly. They were the lucky ones, because when the rest of Singapore inhaled 61-15, they... changed. From the living into the living dead.  (beat) These test subjects... they were linked together, connected with a Direct Neural Interface, their minds hardwired into the central server.  (beat) Hendricks didn't like what he saw... you knew something was wrong. The same tech in our own heads, made us what we were... it was down here in this room. We didn't know what happened, but the data didn't lie.  (beat) Man did what Man always does, playing God and fucking everything up. We, the CIA, Man -- we created these things. We changed the world.
+    dialog::add("salm_what_do_you_mean_ch_0","vox_zhyp_14_01_004_salm");//How do you mean, changed the world?
+    dialog::add("plyz_the_winslow_accord_a_0","vox_zhyp_14_01_005_plyz");//The Winslow Accord and the Common Defense Pact. We'd been engaged in a cold war for nearly a decade. 61-15 changed that. When the dead walked among us, we set aside our differences. For all your conflicts, you and your enemy had two things in common. You're both human. And you both want to stay that way.
+    dialog::add("salm_did_you_find_taylor_0","vox_zhyp_14_01_008_salm");//Was this source of the signal?
+    dialog::add("plyz_no_but_they_d_come_0","vox_zhyp_14_01_009_plyz");//No, but it looked like Taylor had come through. Our answers were still further down.
+    dialog::add("salm_did_you_know_what_yo_0","vox_zhyp_17_01_000_salm");//When you found the server room, did you have any idea what you'd uncover?
+    dialog::add("plyz_we_couldn_t_have_kno_0","vox_zhyp_17_01_001_plyz");//We couldn't have known... what we found, was... we found Sebastian Diaz. One of Taylor's. Another Deadkiller, our friend. (struggling) He had... linked himself to the CIA server, connected directly with Winslow Accord systems.  (beat) He was deactivating defensives for the Undead Quarantine Zones all over the world. The massive walls containing the spread, keeping us from the undead. (beat) Deactivating the defensives would let the flesh-eating hordes loose upon the living. It would end humanity. We had to stop him. (beat) The only way to stop him now was by destroying the server.
+    dialog::add("salm_you_killed_him_0","vox_zhyp_19_01_000_salm");//You killed him. Your friend.
+    dialog::add("plyz_he_left_us_no_choice_0","vox_zhyp_19_01_001_plyz");//He left us no choice, Hendricks wasn't happy and let Diaz know  that. He'd unleashed the dead upon the world. Hendricks knew what he had to do.
+    dialog::add("plyz_accessing_diaz_s_tho_0","vox_zhyp_19_01_005_plyz");//Interfacing with Diaz and accessing his memories was the only way to find him.
+    dialog::add("plyz_goh_xiulan_leader_o_0","vox_zhyp_20_01_000_plyz");//Goh Xiulan. Leader of the 54 Immortals.  (beat) The Winslow Accord had no quarrel with them. To their credit, they had no idea we were down there. Had they known...
+    dialog::add("plyz_the_immortals_had_wo_0","vox_zhyp_20_01_001_plyz");//Well, I'm not sure things would've gone any differently, the Immortals had worried for years about another outbreak. This was the final straw and contamination was a risk they weren't willing to take.
+    dialog::add("plyz_can_t_blame_them_th_0","vox_zhyp_20_01_002_plyz");//Can't blame them. They were only human. And just like humans do, they wanted to survive.
+    dialog::add("plyz_which_meant_there_wa_0","vox_zhyp_20_01_003_plyz");//Which meant there was only one thing to do...
+    dialog::add("plyz_they_blew_the_suppor_0","vox_zhyp_20_01_004_plyz");//They blew the supports and let the ocean flood the building. We needed to haul ass and get the hell outta there.
+    dialog::add("plyz_we_needed_to_get_out_0","vox_zhyp_21_01_000_plyz");//We needed to get out before the whole building collapsed. Hendricks had an idea: flood the lab and let the water pressure jettison us out. Our lungs could take it, he just needed time to open the door.
+    dialog::add("salm_and_and_what_hap_0","vox_zhyp_26_01_000_salm");//...and? And what happened then?
+    dialog::add("plyz_we_got_through_it_w_0","vox_zhyp_26_01_001_plyz");//We got through it. We survived.
+    dialog::add("plyz_hendricks_learned_ta_0","vox_zhyp_26_01_002_plyz");//Taylor's team was making their way out of Singapore, but we weren't giving up that easy. We still had a chance to catch up before the quarantine zone collapsed entirely.  (beat) We couldn't make sense of what they'd done. Their motivations, their actions, there was no way to explain it. At least not yet.
+    dialog::add("plyz_but_that_was_the_beg_0","vox_zhyp_26_01_003_plyz");//To figure that out we needed them, and we also needed to get out of Singapore. (beat) That was the day everything changed. That was the beginning.
+    dialog::add("plyz_with_the_plaza_clear_0","vox_zhyp_2_02_000_plyz");//With the plaza cleared, we moved toward the lobby. We hacked the front panel to get inside.
+    dialog::add("plyz_hendricks_had_a_bad_0","vox_zhyp_2_02_001_plyz");//Hendricks had a bad feeling about this. He wasn't the only one, I knew we shouldn't be there.
+    dialog::add("salm_you_re_certain_of_th_0","vox_zhyp_14_02_000_salm");//You're certain of this?
+    dialog::add("salm_you_needed_to_find_o_0","vox_zhyp_19_02_000_salm");//You needed to find out what he knew. What he knew about Taylor.
+    dialog::add("salm_knowing_what_you_kno_0","vox_zhyp_19_02_001_salm");//Knowing what you know about DNI, interfacing would surely kill him.
+    dialog::add("plyz_that_didn_t_matter_0","vox_zhyp_19_02_002_plyz");//That didn't matter. We had to know. Had I known what it would do to Hendricks...
+    dialog::add("plyz_from_the_interface_0","vox_zhyp_19_02_003_plyz");//From the interface, Hendricks learned Taylor was trying to get out of Singapore. There wouldn't be much time before we'd be too late.
+    dialog::add("salm_tell_me_about_the_na_0","vox_zhyp_19_02_004_salm");//Tell me about the name. The name Hendricks learned.
+    dialog::add("plyz_the_name_deimos_th_0","vox_zhyp_19_02_005_plyz");//The name. Deimos, the Demigod of Dread and Terror. Hendricks, myself, we had no idea what it meant, but Taylor's team was obsessed with it. (beat) But more importantly, we learned our arrival on site wasn't a secret. We had company.
+    dialog::add("plyz_coalescence_enhanc_0","vox_zhyp_2_03_000_plyz");//Coalescence: “Enhance yourself for a better tomorrow.” They'd been the forefront of technology, always wanting to improve the individual. The future of you.
+    dialog::add("salm_what_happened_what_0","vox_zhyp_2_03_001_salm");//What happened? What went wrong?
+    dialog::add("plyz_the_coalescence_disa_0","vox_zhyp_2_03_002_plyz");//The Coalescence Disaster happened. Virus 61-15, spread throughout Singapore and strains popped up all over the world.  (beat) Governments built these quarantine zones to house the undead, a way for the populace to ignore what was happening. Ten years on it had worked, we'd put it out of mind. Ignorance was bliss.
+}

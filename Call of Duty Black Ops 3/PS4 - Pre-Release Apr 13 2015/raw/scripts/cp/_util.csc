@@ -1,0 +1,30 @@
+#using scripts\codescripts\struct;
+
+#using scripts\shared\clientfield_shared;
+#using scripts\shared\util_shared;
+
+    	   	                                                                                                                         	                                                                                                                                                                                                                                                                                                                                                                    	        	     	             	    	   	                           	                               	                                	                                                              	                                                                                                              	                            	                                     	                                       	                                                               	   	                  	       	                                                    	                   	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       	                                                                                        	           	                        	                                            	                                             	                                                   	                                                             	                                                         	                                                                    	                                                                                                                                                                                                    	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     	                                                              	                                                          	                                   	                                   	                                                    	                                       
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            	                                                                                                                                                                                                                                                                                                                                                                                       
+
+#namespace util;
+
+function set_streamer_hint_function( func, number_of_zones )
+{
+	level.func_streamer_hint = func;
+	clientfield::register( "world", "force_streamer", 1, GetMinBitCountForNum( number_of_zones ), "int", &_force_streamer, !true, !true );
+}
+
+function _force_streamer( localClientNum, oldVal, newVal, bNewEnt, bInitialSnap, fieldName, bWasDemoJumpid )
+{
+	if ( newVal == 0 )
+	{
+		StopForcingStreamer();
+	}
+	else
+	{
+		[[ level.func_streamer_hint ]]( newVal );
+		
+		level util::waittill_notify_or_timeout( "streamer_100", 5 );
+		StreamerNotify( newVal );
+	}
+}

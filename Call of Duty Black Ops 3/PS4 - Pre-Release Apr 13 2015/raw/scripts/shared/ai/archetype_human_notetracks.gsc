@@ -1,0 +1,145 @@
+#using scripts\shared\ai\archetype_human_cover;
+#using scripts\shared\ai\archetype_utility;
+#using scripts\shared\ai\systems\animation_state_machine_notetracks;
+#using scripts\shared\ai\systems\animation_state_machine_utility;
+#using scripts\shared\ai\systems\behavior_tree_utility;
+#using scripts\shared\ai\systems\blackboard;
+#using scripts\shared\ai\systems\gib;
+#using scripts\shared\ai\systems\shared;
+#using scripts\shared\ai_shared;
+
+    	   	                                                                                                                         	                                                                                                                                                                                                                                                                                                                                                                    	        	     	            	    	   	                           	                               	                                	                                                              	                                                                          	                            	                                     	                                       	                                                               	   	                  	       	                                                    	                   	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      	              	                  	                        	                                            	                                             	                                                   	                                                             	                                                         	                                                                    	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      	                                                          	                                   	                                   	                                                    	                                                                                                                                                                                                                                       
+   	     	                                                                                                                                                                                                                                                                                                                                                                                                                                                             	                                                                                                                   	                                                                                                 
+           	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              	  	                                 	                 	    	                                     	      	      	                                                                    	          	  	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   	                                                                                                      	                                                                                                     	                                                                                                     	                                                                                                	     	                                                                                                                                                                                                                                                                                                                                             	                      	        	         
+        	                                                                                                                                                	                                                                                                                      	                                                                                     	                                                                                     	                                                               	                                                   	                                                                           	                                                                                 	                                       	                             	                                             	                                  	                                                                                 	                                                                                                                                                	      
+                                                                                                                                               	
+
+#namespace AnimationStateNetwork;
+
+function autoexec RegisterDefaultNotetrackHandlerFunctions()
+{
+	AnimationStateNetwork::RegisterNotetrackHandlerFunction("fire",&notetrackFireBullet);;
+	AnimationStateNetwork::RegisterNotetrackHandlerFunction("gib = \"head\"",&GibServerUtils::GibHead);;
+	AnimationStateNetwork::RegisterNotetrackHandlerFunction("gib = \"arm_left\"",&GibServerUtils::GibLeftArm);;
+	AnimationStateNetwork::RegisterNotetrackHandlerFunction("gib = \"arm_right\"",&GibServerUtils::GibRightArm);;
+	AnimationStateNetwork::RegisterNotetrackHandlerFunction("gib = \"leg_left\"",&GibServerUtils::GibLeftLeg);;
+	AnimationStateNetwork::RegisterNotetrackHandlerFunction("gib = \"leg_right\"",&GibServerUtils::GibRightLeg);;
+	AnimationStateNetwork::RegisterNotetrackHandlerFunction("dropgun",&notetrackDropGun);;
+	AnimationStateNetwork::RegisterNotetrackHandlerFunction("gun drop",&notetrackDropGun);;
+	AnimationStateNetwork::RegisterNotetrackHandlerFunction("hide_weapon",&notetrackHideWeapon);;
+	AnimationStateNetwork::RegisterNotetrackHandlerFunction("show_weapon",&notetrackShowWeapon);;
+	AnimationStateNetwork::RegisterNotetrackHandlerFunction("attach_knife",&notetrackAttachKnife);;
+	AnimationStateNetwork::RegisterNotetrackHandlerFunction("detach_knife",&notetrackDetachKnife);;
+	AnimationStateNetwork::RegisterNotetrackHandlerFunction("grenade_throw",&notetrackGrenadeThrow);;
+	AnimationStateNetwork::RegisterNotetrackHandlerFunction("melee_fire",&notetrackMeleeFire);;
+	AnimationStateNetwork::RegisterNotetrackHandlerFunction("start_ragdoll",&notetrackStartRagdoll);;
+	AnimationStateNetwork::RegisterNotetrackHandlerFunction("unsync",&notetrackMeleeUnsync);;
+	
+	AnimationStateNetwork::RegisterBlackboardNotetrackHandler("anim_pose = \"stand\"","_stance","stand");;
+	AnimationStateNetwork::RegisterBlackboardNotetrackHandler("anim_pose = \"crouch\"","_stance","crouch");;
+	AnimationStateNetwork::RegisterBlackboardNotetrackHandler("anim_pose = \"prone_front\"","_stance","prone_front");;
+	AnimationStateNetwork::RegisterBlackboardNotetrackHandler("anim_pose = \"prone_back\"","_stance","prone_back");;
+}
+
+function private notetrackDropGunInternal( entity )
+{	
+	if( entity.weapon == level.weaponNone )
+		return;
+	
+	entity.lastWeapon	= entity.weapon;
+	primaryweapon		= entity.primaryweapon;
+	secondaryweapon		= entity.secondaryweapon;
+	
+	entity thread shared::DropAIWeapon();
+}
+
+// necessary for AI vs AI melees where soldiers need to stab each other
+function private notetrackAttachKnife( entity )
+{
+	if( !( isdefined( entity._ai_melee_attachedKnife ) && entity._ai_melee_attachedKnife ) )
+	{
+		entity Attach( "t6_wpn_knife_melee", "TAG_WEAPON_LEFT" );
+		entity._ai_melee_attachedKnife = true;
+	}
+}
+
+function private notetrackDetachKnife( entity )
+{
+	if( ( isdefined( entity._ai_melee_attachedKnife ) && entity._ai_melee_attachedKnife ) )
+	{
+		entity Detach( "t6_wpn_knife_melee", "TAG_WEAPON_LEFT" );
+		entity._ai_melee_attachedKnife = false;
+	}
+}
+
+function private notetrackHideWeapon( entity )
+{
+	entity ai::gun_remove();
+}
+
+function private notetrackShowWeapon( entity )
+{
+	entity ai::gun_recall();
+}
+
+function private notetrackStartRagdoll( entity )
+{
+    if( IsActor( entity ) && entity IsInScriptedState() )
+    {
+    	entity.overrideActorDamage = undefined;
+    	entity.allowdeath = true;//This ignores/overrides the scene setting if set
+        entity Kill();
+    }
+	
+	// SUMEET HACK - drop gun, if its not dropped already
+	notetrackDropGunInternal( entity );
+	entity StartRagdoll();
+}
+
+function private notetrackFireBullet( animationEntity )
+{
+	if( IsDefined( animationEntity.preBulletFireCallback ) )
+	{
+		[[animationEntity.preBulletFireCallback]]( animationEntity );
+	}
+	
+	if( IsVehicle( animationEntity ) )
+	{
+		animationEntity FireWeapon();
+	}
+	else if ( IsActor( animationEntity ) )
+	{
+		animationEntity shoot( animationEntity.script_accuracy );
+		animationEntity notify("shoot");
+		animationEntity.bulletsInClip--;
+	}
+}
+
+function private notetrackMeleeFire( animationEntity )
+{
+	animationentity Melee();
+}
+
+function private notetrackDropGun( animationEntity )
+{
+	notetrackDropGunInternal( animationEntity );
+}
+
+function private notetrackGrenadeThrow( animationEntity )
+{
+	if ( archetype_human_cover::shouldThrowGrenadeAtCoverCondition( animationEntity ) )
+	{
+		animationEntity GrenadeThrow();
+	}
+}
+
+function private notetrackMeleeUnsync( animationEntity )
+{
+	if( IsDefined( animationEntity ) && IsDefined( animationEntity.enemy ) )
+	{
+		if( ( isdefined( animationEntity.enemy._ai_melee_markedDead ) && animationEntity.enemy._ai_melee_markedDead ) )
+		{
+			animationEntity unlink();
+		}
+	}
+}

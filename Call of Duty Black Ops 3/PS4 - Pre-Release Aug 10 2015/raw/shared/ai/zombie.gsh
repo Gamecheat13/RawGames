@@ -1,0 +1,62 @@
+// Melee ranges	and timers 
+
+
+
+
+// Vision ranges
+
+
+// used for getting points on the navmesh
+
+
+
+
+
+
+	
+
+
+
+// Crawler blocking
+
+
+
+
+
+
+
+
+	
+// Juking
+
+
+
+	
+// Stumbling
+
+
+
+
+
+
+	
+// Pain
+
+	
+// Suicide
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+//										Clientfields
+//
+///////////////////////////////////////////////////////////////////////////////
+
+
+

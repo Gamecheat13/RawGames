@@ -1,0 +1,87 @@
+
+
+	
+
+
+	
+
+
+
+
+// ASM RUNNING STATUS FLAGS ------------------------------------------------------//
+
+
+
+
+
+
+
+// TODO - Find a better way to not need to have this hardcoded state name.
+
+
+
+
+// ASM NOTETRACK HANDLER DEFINES -----------------------------------------------//
+
+
+
+// ASM AIM/SHOOT NODE DEFINES -------------------------------------------------//
+
+
+// ASM MOCOMP ATTRIBUTES -----------------------------------------------------//
+
+
+
+
+	
+// NOTERACKS HANDLED BY ASM ---------------------------------------------------//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+	
+
+
+	
+// AI_ANIM_MODE, DEFINED SAME AS CODE -----------------------------------------//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
