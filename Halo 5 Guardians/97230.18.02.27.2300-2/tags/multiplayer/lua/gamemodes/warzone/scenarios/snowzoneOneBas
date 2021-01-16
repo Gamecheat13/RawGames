@@ -1,0 +1,119 @@
+
+__OnWarzoneIntro = Delegate:new();
+onWarzoneIntro = root:AddCallback(
+	__OnWarzoneIntro
+	);
+__OnWarzoneBaseIntro = Delegate:new();
+onWarzoneBaseIntro = root:AddCallback(
+	__OnWarzoneBaseIntro
+	);
+__OnWarzoneOneBaseIntro = Delegate:new();
+onWarzoneOneBaseIntro = root:AddCallback(
+	__OnWarzoneOneBaseIntro
+	);
+warzoneOneBaseIntroResponseAtt = onWarzoneOneBaseIntro:Target(PlayersOnAttackingTeam):Response(
+	{
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_onebasearcintroatt'
+	});
+warzoneOneBaseIntroResponseDef = onWarzoneOneBaseIntro:Target(PlayersOnDefendingTeam):Response(
+	{
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_onebasearcintrodef'
+	});
+__OnWarzoneSpawned = Delegate:new();
+onWarzoneSpawned = root:AddCallback(
+	__OnWarzoneSpawned
+	);
+warzoneBaseIntroSpawnedResponseAtt = onWarzoneSpawned:Target(PlayersOnAttackingTeam):Response(
+	{
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_onebaseszstartatt'
+	});
+warzoneBaseIntroSpawnedResponseDef = onWarzoneSpawned:Target(PlayersOnDefendingTeam):Response(
+	{
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_onebaseszstartdef'
+	});
+onBaseCapturedSelect = onBaseCaptured:Select();
+onSnowzoneOneBaseFortressBaseCaptured = onBaseCapturedSelect:Add(BaseIsNamed('snowzone_onebase_fortress'));
+onSnowzoneOneBaseFortressBaseCapturedCapturing = onSnowzoneOneBaseFortressBaseCaptured:Target(CapturingPlayers):Response(
+	{
+		Fanfare = FanfareDefinitions.QuestFeed,
+		FanfareText = 'snowzone_onebase_fortress_captured_fanfare',
+		TeamDesignator = DesignatorProperty, 
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_fortresscapturedfriendly'
+	}):Response(
+	{
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_onebasenextcapturearmoryatt'
+	});
+onSnowzoneOneBaseFortressBaseCapturedFriendly = onSnowzoneOneBaseFortressBaseCaptured:Target(FriendlyToCapturingPlayers):Response(
+	{
+		Fanfare = FanfareDefinitions.QuestFeed,
+		FanfareText = 'snowzone_onebase_fortress_captured_friendly_fanfare',
+		TeamDesignator = DesignatorProperty, 
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_fortresscapturedfriendly'
+	}):Response(
+	{
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_onebasenextcapturearmoryatt'
+	});
+onSnowzoneOneBaseFortressCapturedHostile = onSnowzoneOneBaseFortressBaseCaptured:Target(PlayersWithoutDesignator):Response(
+	{
+		Fanfare = FanfareDefinitions.QuestFeed,
+		FanfareText = 'snowzone_onebase_fortress_captured_enemy_fanfare',
+		TeamDesignator = DesignatorProperty,
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_onebasefortresslost'
+	}):Response(
+	{
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_onebasenextcapturearmorydef'
+	});
+onSnowzoneOneBaseArmoryCaptured = onBaseCapturedSelect:Add(BaseIsNamed('snowzone_onebase_armory'));
+onSnowzoneOneBaseArmoryCapturedCapturing = onSnowzoneOneBaseArmoryCaptured:Target(CapturingPlayers):Response(
+	{
+		Fanfare = FanfareDefinitions.QuestFeed,
+		FanfareText = 'snowzone_onebase_armory_captured_fanfare',
+		TeamDesignator = DesignatorProperty,
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_armorycapturedfriendly'
+	});
+onSnowzoneOneBaseArmoryCapturedFriendly = onSnowzoneOneBaseArmoryCaptured:Target(FriendlyToCapturingPlayers):Response(
+	{
+		Fanfare = FanfareDefinitions.QuestFeed,
+		FanfareText = 'snowzone_onebase_armory_captured_friendly_fanfare',
+		TeamDesignator = DesignatorProperty, 
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_armorycapturedfriendly'
+	});
+onSnowzoneOneBaseArmoryCapturedHostile = onSnowzoneOneBaseArmoryCaptured:Target(PlayersWithoutDesignator):Response(
+	{
+		Fanfare = FanfareDefinitions.QuestFeed,
+		FanfareText = 'snowzone_onebase_armory_captured_enemy_fanfare',
+		TeamDesignator = DesignatorProperty,
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_onebasearmorylost'
+	});
+defendResponses =
+{	
+	{
+		name = "attacker_homebase",
+		responses = 
+		{
+			beginResponse =
+			{
+				Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_baseunderattackhomebase'
+			},
+			successResponse =
+			{
+				Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_baseunderattackdefendedhomebase'
+			},
+		},
+	},
+	{
+		name = "defender_homebase",
+		responses = 
+		{
+			beginResponse =
+			{
+				Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_baseunderattackhomebase'
+			},
+			successResponse =
+			{
+				Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_baseunderattackdefendedhomebase'
+			},
+		},
+	},
+}
+	

@@ -1,0 +1,3 @@
+-- 
+enableKillMedals = true;
+disableTeamTakedownMedal = true;

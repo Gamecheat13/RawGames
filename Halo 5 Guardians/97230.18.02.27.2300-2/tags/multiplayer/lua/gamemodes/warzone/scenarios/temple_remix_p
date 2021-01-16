@@ -1,0 +1,2033 @@
+
+__OnWarzoneIntro = Delegate:new();
+onWarzoneIntro = root:AddCallback(
+	__OnWarzoneIntro
+	);
+__OnWarzoneBaseIntro = Delegate:new();
+onWarzoneBaseIntro = root:AddCallback(
+	__OnWarzoneBaseIntro
+	);
+warzoneBaseIntroResponse = onWarzoneBaseIntro:Target(TargetAllPlayers):Response(
+	{
+		Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_firefightintro2', 
+		Sound2 = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_incursionintro2',
+	}):Response(
+	{
+		Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_incursionintro3',
+	});
+onBaseCapturedSelect = onBaseCaptured:Select();
+onArcGarageBaseCaptured = onBaseCapturedSelect:Add(BaseIsNamed('arc_neutral_garage'));
+onArcGarageBaseCapturedCapturing = onArcGarageBaseCaptured:Target(CapturingPlayers):Response(
+	{
+		Fanfare = FanfareDefinitions.QuestFeed,
+		FanfareText = 'arc_garage_captured_friendly_fanfare',
+		TeamDesignator = DesignatorProperty, 
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_garagefirstcapture'
+	});
+onArcGarageBaseCapturedFriendly = onArcGarageBaseCaptured:Target(FriendlyToCapturingPlayers):Response(
+	{
+		Fanfare = FanfareDefinitions.QuestFeed,
+		FanfareText = 'arc_garage_captured_friendly_fanfare',
+		TeamDesignator = DesignatorProperty, 
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_arcgaragecapturedfriendly'
+	});
+onArcGarageBaseCapturedHostile = onArcGarageBaseCaptured:Target(PlayersWithoutDesignator):Response(
+	{
+		Fanfare = FanfareDefinitions.QuestFeed,
+		FanfareText = 'arc_garage_captured_enemy_fanfare',
+		TeamDesignator = DesignatorProperty,
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_arcgaragecapturedhostile'
+	});
+onArcDefArmoryCaptured = onBaseCapturedSelect:Add(BaseIsNamed('arc_def_armory'));
+onArcDefArmoryCapturedCapturing = onArcDefArmoryCaptured:Target(CapturingPlayers):Response(
+	{
+		Fanfare = FanfareDefinitions.QuestFeed,
+		FanfareText = 'arc_def_armory_captured_friendly_fanfare',
+		TeamDesignator = DesignatorProperty, 
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_easyarmoryfirstcapture'
+	});
+onArcDefArmoryCapturedFriendly = onArcDefArmoryCaptured:Target(FriendlyToCapturingPlayers):Response(
+	{
+		Fanfare = FanfareDefinitions.QuestFeed,
+		FanfareText = 'arc_def_armory_captured_friendly_fanfare',
+		TeamDesignator = DesignatorProperty, 
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_icebasecapturedfriendly'
+	});
+onArcDefArmoryCapturedHostile = onArcDefArmoryCaptured:Target(PlayersWithoutDesignator):Response(
+	{
+		Fanfare = FanfareDefinitions.QuestFeed,
+		FanfareText = 'arc_def_armory_captured_enemy_fanfare',
+		TeamDesignator = DesignatorProperty,
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_icebasecapturedhostile'
+	});
+onArcAttArmoryCaptured = onBaseCapturedSelect:Add(BaseIsNamed('arc_att_armory'));
+onArcAttArmoryCapturedCapturing = onArcAttArmoryCaptured:Target(CapturingPlayers):Response(
+	{
+		Fanfare = FanfareDefinitions.QuestFeed,
+		FanfareText = 'arc_att_armory_captured_friendly_fanfare',
+		TeamDesignator = DesignatorProperty, 
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_westarmoryfirstcapture'
+	});
+onArcAttArmoryCapturedFriendly = onArcAttArmoryCaptured:Target(FriendlyToCapturingPlayers):Response(
+	{
+		Fanfare = FanfareDefinitions.QuestFeed,
+		FanfareText = 'arc_att_armory_captured_friendly_fanfare',
+		TeamDesignator = DesignatorProperty, 
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_forestbasecapturedfriendly'
+	});
+onArcAttArmoryCapturedHostile = onArcAttArmoryCaptured:Target(PlayersWithoutDesignator):Response(
+	{
+		Fanfare = FanfareDefinitions.QuestFeed,
+		FanfareText = 'arc_att_armory_captured_enemy_fanfare',
+		TeamDesignator = DesignatorProperty,
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_forestbasecapturedhostile'
+	});
+defendResponses =
+{	
+	{
+		name = "attacker_homebase",
+		responses = 
+		{
+			beginResponse =
+			{
+				Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_baseunderattackhomebase'
+			},
+			successResponse =
+			{
+				Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_baseunderattackdefendedhomebase'
+			},
+		},
+	},
+	{
+		name = "defender_homebase",
+		responses = 
+		{
+			beginResponse =
+			{
+				Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_baseunderattackhomebase'
+			},
+			successResponse =
+			{
+				Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_baseunderattackdefendedhomebase'
+			},
+		},
+	},
+}
+__OnPvEDefendTempleStart = Delegate:new();
+onPvEDefendTempleStart = root:AddCallback(
+	__OnPvEDefendTempleStart
+	);
+pveDefendTempleStartResponse = onPvEDefendTempleStart:Target(TargetAllPlayers):Response(
+	{	         
+		Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzone_onebasenextcapturetempleatt',
+	});
+__OnPvETempleBaseDefenseEndSuccessful = Delegate:new();
+onPvETempleBaseDefenseEndSuccessful = root:AddCallback(
+	__OnPvETempleBaseDefenseEndSuccessful
+	);
+pveTempleBaseDefenseEndSuccessfulResponse = onPvETempleBaseDefenseEndSuccessful:Target(TargetAllPlayers):Response(
+	{
+		Sound = 'multiplayer\audio\wzcmndrstustain\wzcmndrstustain_warzonepve_TempleDefenseSuccess',
+	});
+__OnPvETempleBaseDefenseEndFailure = Delegate:new();
+onPvETempleBaseDefenseEndFailure = root:AddCallback(
+	__OnPvETempleBaseDefenseEndFailure
+	);
+pveTempleBaseDefenseEndFailureResponse = onPvETempleBaseDefenseEndFailure:Target(TargetAllPlayers):Response(
+	{
+		Sound = 'multiplayer\audio\wzcmndrstustain\wzcmndrstustain_warzonepve_OneBaseTempleLost',
+	});
+minibossDefinitions =
+{	
+{					
+	name = "Soldier Commandoes",				
+	label = 'r1_soldier_boss',				
+	responses = 				
+	{				
+		countdownResponse = 			
+		{			
+			[30] = 		
+			{		
+				{	
+				},	
+			},       		
+			[10] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_BossPrometheanGenericIncoming1',		
+				},	
+			},     		
+			[0] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_SoldierBossGenericSpawnedPlural',		
+					Fanfare = FanfareDefinitions.KillFeed,
+					FanfareText = 'temple_r_pve_r1_soldier_spawned',
+				},	
+			},		
+		},			
+		completePlayerResponse =			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.QuestFeed,	
+				FanfareText = function (context)	
+				return FormatText('boss_kill_shelfmsg', GetScoreVal(200));
+				end,	
+				Score = GetScoreVal(200),	
+			},		
+			{		
+				Medal = 'boss_takedown',	
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'sz_pve_r1soldierboss_ptakedown',	
+				Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_SoldierBossGenericTakedown',		
+				ImpulseEvent = 'boss_takedown',	
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		progressFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'sz_pve_r1soldierboss_ttakedown',	
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			},		
+		},			
+		completeFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'sz_pve_r1soldierboss_ttakedown',	
+				Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_SoldierBossGenericTakedownFriendly',		
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		killedTeammatesResponse =			
+		{			
+			Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_BossPrometheanGenericTeammatesKilled',		
+		},			
+	},				
+	killedTeammatesCount = 3,				
+},
+{					
+	name = "Serpent Hunters",				
+	label = 'r1_hunter_boss_all',				
+	responses = 				
+	{				
+		countdownResponse = 			
+		{			
+			[30] = 		
+			{		
+				{	
+				},	
+			},       		
+			[10] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_FirefightCovProTeamUp2',		
+				},	
+			},     		
+			[0] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossSZHunterDiscoveredPlayer',	
+					Fanfare = FanfareDefinitions.KillFeed,
+					FanfareText = 'temple_r_pve_r1_hunter_spawned',
+				},	
+			},		
+		},			
+		completePlayerResponse =			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.QuestFeed,	
+				FanfareText = function (context)	
+				return FormatText('boss_kill_shelfmsg', GetScoreVal(500));
+				end, 
+			},
+			{
+				Fanfare = FanfareDefinitions.PersonalScore,
+				Score = GetScoreVal(500), 
+			}, 	
+			{		
+				Medal = 'boss_takedown',	
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'meridian_pve_serpent_hunters_kill_fanfare',	
+				Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossSZHunterCompletePlayer',	
+				ImpulseEvent = 'boss_takedown',	
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		progressFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'meridian_pve_serpent_hunters_killed_teammessage',	
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			},		
+		},			
+		completeFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'meridian_pve_serpent_hunters_killed_teammessage',	
+				Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossSZHunterProgressFriendly',	
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		killedTeammatesResponse =			
+		{			
+			Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossSZHunterTeammatesKilled',	
+		},			
+	},				
+	killedTeammatesCount = 3,				
+},					
+{					
+	name = "Ghost Scouts",				
+	label = 'r2_ghost_boss_all',				
+	responses = 				
+	{				
+		countdownResponse = 			
+		{			
+			[30] = 		
+			{		
+				{	
+				},	
+			},       		
+			[10] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossCovenant10sGeneric3',	
+				},	
+			},     		
+			[0] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossRingGhostDiscoveredPlayer',	
+					Fanfare = FanfareDefinitions.KillFeed,
+					FanfareText = 'temple_r_pve_r2_ghost_spawned',
+				},	
+			},		
+		},			
+		completePlayerResponse =			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.QuestFeed,	
+				FanfareText = function (context)	
+					return FormatText('boss_kill_shelfmsg', GetScoreVal(500));
+				end,	
+			},		
+			{		
+				Fanfare = FanfareDefinitions.PersonalScore,	
+				Score = GetScoreVal(500),	
+			},		
+			{		
+				Medal = 'boss_takedown',	
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'temple_boss_ghost_scout_kill_fanfare',	
+				Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_VehicleDestroyedGhost',	
+				ImpulseEvent = 'boss_takedown',	
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		progressFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'temple_boss_ghost_scout_kill_teamfeed',	
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			},		
+		},			
+		completeFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'temple_boss_ghost_scout_kill_teamfeed',	
+				Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzone_BossTempleGhostCompleteFriendly',		
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		killedTeammatesResponse =			
+		{			
+			Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_BossCovenantGenericTeammatesKilled',		
+		},			
+	},				
+	killedTeammatesCount = 3,				
+},					
+--	
+{					
+	name = "Elite Specialists",				
+	label = 'r2_elite_boss_all',				
+	responses = 				
+	{				
+		countdownResponse = 			
+		{			
+			[30] = 		
+			{		
+				{	
+				},	
+			},       		
+			[10] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_BossCovenantGenericIncoming1',		
+				},	
+			},     		
+			[0] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_EliteBossGenericSpawnedPlural',		
+					Fanfare = FanfareDefinitions.KillFeed,
+					FanfareText = 'temple_r_pve_r2_elite_spawned',
+				},	
+			},		
+		},			
+		completePlayerResponse =			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.QuestFeed,	
+				FanfareText = function (context)	
+				return FormatText('boss_kill_shelfmsg', GetScoreVal(200));
+				end, 
+			},
+			{
+				Fanfare = FanfareDefinitions.PersonalScore,
+				Score = GetScoreVal(200), 
+			}, 	
+			{		
+				Medal = 'boss_takedown',	
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'sz_pve_r1elitespecialists_ptakedown',	
+				Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzone_BossTempleEliteSpecialistCompletePlayer',
+				ImpulseEvent = 'boss_takedown',	
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		progressFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'sz_pve_r1elitespecialists_ttakedown',	
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			},		
+		},			
+		completeFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'sz_pve_r1elitespecialists_ttakedown',	
+				Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzone_BossTempleEliteSpecialCompleteFriendly',		
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		killedTeammatesResponse =			
+		{			
+			Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzone_BossTempleEliteSpecialTeammatesKilled',		
+		},			
+	},				
+	killedTeammatesCount = 3,				
+},
+{					
+	name = "wraith_Boss 1 Wraith",				
+	label = 'r3_wraith_boss',				
+	responses = 				
+	{				
+		countdownResponse = 			
+		{			
+			[30] = 		
+			{		
+			},       		
+			[10] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossCovenant10sGeneric3',
+				},	
+			},     		
+			[0] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzone_BossTempleWraithSpawned',
+					Fanfare = FanfareDefinitions.KillFeed,
+					FanfareText = 'temple_r_pve_r3_wraith_spawned',
+				},	
+			},		
+		},			
+		completePlayerResponse =			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.QuestFeed,	
+				FanfareText = function (context)	
+					return FormatText('legendary_boss_kill_shelfmsg', GetScoreVal(1000));
+				end, 
+			},
+			{
+				Fanfare = FanfareDefinitions.PersonalScore,
+				Score = GetScoreVal(1000), 
+			}, 	
+			{		
+				Medal = 'legendary_boss_takedown',	
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'sz_pve_r3wraithboss_ptakedown_w',	
+				Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_WraithBossGenericTakedown',
+				ImpulseEvent = 'impulse_legendary_takedown',	
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		progressFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'sz_pve_r3wraithboss_ttakedown_w',	
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			},		
+		},			
+		completeFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'sz_pve_r3wraithboss_ttakedown_w',	
+				Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_WraithBossGenericTakedownFriendly',
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		killedTeammatesResponse =			
+		{			
+			Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossGenericTeammatesKilled',		
+		},			
+	},				
+	killedTeammatesCount = 3,				
+},		
+{					
+	name = "wraith_Boss 2 Ghost",				
+	label = 'r3_ghost_boss',				
+	responses = 				
+	{				
+		countdownResponse = 			
+		{			
+			[30] = 		
+			{		
+			},       		
+			[10] = 		
+			{		
+			},     		
+			[0] = 		
+			{		
+			},		
+		},			
+		completePlayerResponse =			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.QuestFeed,	
+				FanfareText = function (context)	
+					return FormatText('boss_kill_shelfmsg', GetScoreVal(500));
+				end, 
+			},
+			{
+				Fanfare = FanfareDefinitions.PersonalScore,
+				Score = GetScoreVal(500), 
+			}, 	
+			{		
+				Medal = 'boss_takedown',	
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'sz_pve_r3wraithboss_ptakedown_g',	
+				Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_GhostBossGenericTakedown',
+				ImpulseEvent = 'boss_takedown',	
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		progressFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'sz_pve_r3wraithboss_ttakedown_g',	
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			},		
+		},			
+		completeFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'sz_pve_r3wraithboss_ttakedown_g',	
+				Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_GhostBossGenericTakedownFriendly',
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		killedTeammatesResponse =			
+		{			
+		},			
+	},				
+	killedTeammatesCount = 3,				
+},	
+{					
+	name = "knight_boss1",							
+	label = 'r3_knight_boss_all',							
+	responses = 				
+	{				
+		countdownResponse = 			
+		{			
+			[30] = 		
+			{		
+			},       		
+			[10] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossPromethean10sGeneric5',
+				},	
+			},     		
+			[0] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_KnightBossGenericSpawnedPlural',	
+					Fanfare = FanfareDefinitions.KillFeed,
+					FanfareText = 'temple_r_pve_r3_knight_spawned',
+				},	
+			},		
+		},			
+		completePlayerResponse =			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.QuestFeed,	
+				FanfareText = function (context)	
+					return FormatText('legendary_boss_kill_shelfmsg', GetScoreVal(500));
+				end, 
+			},
+			{
+				Fanfare = FanfareDefinitions.PersonalScore,
+				Score = GetScoreVal(500), 
+			}, 	
+			{		
+				Medal = 'legendary_boss_takedown',	
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'meridian_boss_knight_excavator_kill_fanfare',	
+				Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_KnightBossGenericTakedown',     					
+				ImpulseEvent = 'impulse_legendary_takedown',	
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		progressFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'meridian_boss_knight_excavator_kill_teamfeed',	
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			},		
+		},			
+		completeFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'meridian_boss_knight_excavator_kill_teamfeed',	
+				Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_KnightBossGenericTakedownFriendly',     					
+				Fanfare = FanfareDefinitions.KillFeed,
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		killedTeammatesResponse =			
+		{			
+			Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossGenericDiscoveredFriendly',		
+			Fanfare = FanfareDefinitions.KillFeed,
+		},			
+	},				
+	killedTeammatesCount = 3,				
+},	
+{					
+	name = "Soldier Bandit",				
+	label = 'r3_soldier_hog_all',				
+	responses = 				
+	{				
+		countdownResponse = 			
+		{			
+			[30] = 		
+			{		
+				{	
+				},	
+			},       		
+			[10] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_BossPrometheanGenericIncoming1',		
+				},	
+			},     		
+			[0] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzone_BossMeridianWarthogSpawned01',		
+					Fanfare = FanfareDefinitions.KillFeed,
+					FanfareText = 'temple_r_pve_r3_warthog_spawned',
+				},	
+			},		
+		},			
+		completePlayerResponse =			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.QuestFeed,	
+				FanfareText = function (context)	
+				return FormatText('legendary_boss_kill_shelfmsg', GetScoreVal(200));
+				end,	
+				Score = GetScoreVal(200),	
+			},		
+			{		
+				Medal = 'legendary_boss_takedown',	
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'temple_pve_boss_prom_kill_fanfare_02',	
+				Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzone_BossMeridianWarthogCompletePlayer',		
+				ImpulseEvent = 'impulse_legendary_takedown',	
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		progressFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'temple_pve_boss_prom_kill_teamfeed_02',	
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			},		
+		},			
+		completeFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'temple_pve_boss_prom_kill_teamfeed_02',	
+				Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzone_BossMeridianWarthogCompleteFriendly',		
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		killedTeammatesResponse =			
+		{			
+			Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_BossPrometheanGenericTeammatesKilled',		
+		},			
+	},				
+	killedTeammatesCount = 3,				
+},
+{					
+	name = "Recon Pilot",				
+	label = 'r3_vtol_boss_all',				
+	responses = 				
+	{				
+		countdownResponse = 			
+		{			
+			[30] = 		
+			{		
+				{	
+				},	
+			},       		
+			[10] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossPromethean10sGeneric3',
+				},	
+			},     		
+			[0] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossUrbanVtolDiscoveredPlayer',
+					Fanfare = FanfareDefinitions.KillFeed,
+					FanfareText = 'temple_r_pve_r3_vtol_spawned',
+				},	
+			},		
+		},			
+		completePlayerResponse =			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.QuestFeed,	
+				FanfareText = function (context)	
+					return FormatText('legendary_boss_kill_shelfmsg', GetScoreVal(500));
+				end,	
+			},		
+			{		
+				Fanfare = FanfareDefinitions.PersonalScore,	
+				Score = GetScoreVal(500),	
+			},		
+			{		
+				Medal = 'legendary_boss_takedown',	
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'sz_pve_r2vtolboss_ptakedown',	
+				Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossUrbanVtolCompletePlayer',	
+				ImpulseEvent = 'impulse_legendary_takedown',	
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		progressFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'sz_pve_r2vtolboss_ttakedown',	
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			},		
+		},			
+		completeFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'sz_pve_r2vtolboss_ttakedown',	
+				Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossUrbanVtolCompleteFriendly',	
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		killedTeammatesResponse =			
+		{			
+			Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_BossUrbanVtolTeammatesKilled',		
+		},			
+	},				
+	killedTeammatesCount = 3,				
+},	
+{					
+	name = "Banshee Scout",				
+	label = 'r4_banshee_boss_all',				
+	responses = 				
+	{				
+		countdownResponse = 			
+		{			
+			[30] = 		
+			{		
+			},       		
+			[10] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_BossCovenantGenericIncoming2',		
+				},	
+			},     		
+			[0] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_CovenantGenericBossSpawned',		
+					Fanfare = FanfareDefinitions.KillFeed,
+					FanfareText = 'temple_r_pve_r4_banshee_spawned',
+				},	
+			},		
+		},			
+		completePlayerResponse =			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.QuestFeed,	
+				FanfareText = function (context)	
+					return FormatText('legendary_boss_kill_shelfmsg', GetScoreVal(1000));
+				end,	
+				Score = GetScoreVal(1000),	
+			},		
+			{		
+				Medal = 'legendary_boss_takedown',	
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'temple_boss_banshee_kill_fanfare',	
+				Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzone_BossTempleBansheeCompletePlayer',		
+				ImpulseEvent = 'legendary_boss_takedown',	
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		progressFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'temple_boss_banshee_kill_teamfeed',	
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			},		
+		},			
+		completeFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'temple_boss_banshee_kill_teamfeed',	
+				Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzone_BossTempleBansheeCompleteFriendly',		
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		killedTeammatesResponse =			
+		{			
+			Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzone_BossTempleBansheeTeammatesKilled',		
+		},			
+	},				
+	killedTeammatesCount = 3,				
+},	
+{					
+	name = "grunt_mech1 tomp",				
+	label = 'r4_g_mech_1',				
+	responses = 				
+	{				
+		countdownResponse = 			
+		{			
+			[30] = 		
+			{		
+			},       		
+			[10] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossCovenant10sGeneric',
+				},	
+			},     		
+			[0] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_GruntMechBossGenericSpawnedPlural',     					
+					Fanfare = FanfareDefinitions.KillFeed,
+					FanfareText = 'temple_r_pve_r4_mech_spawned',
+				},	
+			},		
+		},			
+		completePlayerResponse =			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.QuestFeed,	
+				FanfareText = function (context)	
+					return FormatText('legendary_boss_kill_shelfmsg', GetScoreVal(1000));
+				end, 
+			},
+			{
+				Fanfare = FanfareDefinitions.PersonalScore,
+				Score = GetScoreVal(1000), 
+			}, 		
+			{		
+				Medal = 'legendary_boss_takedown',	
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'temple_pve_boss_cov_01_kill_fanfare_04',	
+				Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_GruntMechBossGenericTakedown',     					
+				ImpulseEvent = 'legendary_boss_takedown',	
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		progressFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'temple_pve_boss_cov_01_kill_teamfeed_04',	
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			},		
+		},			
+		completeFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'temple_pve_boss_cov_01_kill_teamfeed_04',	
+				Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_GruntMechBossGenericTakedownFriendly',     					
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		killedTeammatesResponse =			
+		{			
+			Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossGenericDiscoveredFriendly',		
+		},			
+	},				
+	killedTeammatesCount = 3,				
+},					
+{					
+	name = "grunt_mech2 stimbab",				
+	label = 'r4_g_mech_2',				
+	responses = 				
+	{				
+		countdownResponse = 			
+		{			
+			[30] = 		
+			{		
+			},       		
+			[10] = 		
+			{		
+			},     		
+			[0] = 		
+			{		
+			},		
+		},			
+		completePlayerResponse =			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.QuestFeed,	
+				FanfareText = function (context)	
+					return FormatText('legendary_boss_kill_shelfmsg', GetScoreVal(1000));
+				end, 
+			},
+			{
+				Fanfare = FanfareDefinitions.PersonalScore,
+				Score = GetScoreVal(1000), 
+			}, 		
+			{		
+				Medal = 'legendary_boss_takedown',	
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'tr_pve_r4grunt_mech_2_ptakedown',	
+				Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_GruntMechBossGenericTakedown',     					
+				ImpulseEvent = 'legendary_boss_takedown',	
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		progressFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'tr_pve_r4grunt_mech_2_ttakedown',	
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			},		
+		},			
+		completeFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'tr_pve_r4grunt_mech_2_ttakedown',	
+				Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_GruntMechBossGenericTakedownFriendly',     					
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		killedTeammatesResponse =			
+		{			
+			Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossGenericDiscoveredFriendly',		
+		},			
+	},				
+	killedTeammatesCount = 3,				
+},	
+{					
+	name = "knight_boss1",							
+	label = 'r4_knight_boss_all',							
+	responses = 				
+	{				
+		countdownResponse = 			
+		{			
+			[30] = 		
+			{		
+			},       		
+			[10] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_BossPrometheanGenericIncoming1',	
+				},	
+			},     		
+			[0] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_KnightBossGenericSpawnedPlural',	
+					Fanfare = FanfareDefinitions.KillFeed,
+					FanfareText = 'temple_r_pve_r4_knight_spawned',
+				},	
+			},		
+		},			
+		completePlayerResponse =			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.QuestFeed,	
+				FanfareText = function (context)	
+					return FormatText('legendary_boss_kill_shelfmsg', GetScoreVal(500));
+				end, 
+			},
+			{
+				Fanfare = FanfareDefinitions.PersonalScore,
+				Score = GetScoreVal(500), 
+			}, 	
+			{		
+				Medal = 'legendary_boss_takedown',	
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'sz_pve_r5forboss1_ptakedown1',	
+				Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_KnightBossGenericTakedown',     					
+				ImpulseEvent = 'impulse_legendary_takedown',	
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		progressFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'sz_pve_r5forboss1_ttakedown1',	
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			},		
+		},			
+		completeFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'sz_pve_r5forboss1_ttakedown1',	
+				Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_KnightBossGenericTakedownFriendly',     					
+				Fanfare = FanfareDefinitions.KillFeed,
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		killedTeammatesResponse =			
+		{			
+			Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossGenericDiscoveredFriendly',		
+			Fanfare = FanfareDefinitions.KillFeed,
+		},			
+	},				
+	killedTeammatesCount = 3,				
+},	
+{					
+	name = "R4 Soldier Operative",				
+	label = 'r4_mantis_boss_all',				
+	responses = 				
+	{				
+		countdownResponse = 			
+		{			
+			[30] = 		
+			{		
+				{	
+				},	
+			},       		
+			[10] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_BossPrometheanGenericIncoming1',		
+				},	
+			},     		
+			[0] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_PrometheanGenericBossSpawned2',		
+					Fanfare = FanfareDefinitions.KillFeed,
+					FanfareText = 'temple_r_pve_r4_mantis_spawned',
+				},	
+			},		
+		},			
+		completePlayerResponse =			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.QuestFeed,	
+				FanfareText = function (context)	
+				return FormatText('legendary_boss_kill_shelfmsg', GetScoreVal(500));
+				end,	
+				Score = GetScoreVal(500),	
+			},		
+			{		
+				Medal = 'legendary_boss_takedown',	
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'meridian_boss_soldier_operative_kill_fanfare',	
+				Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzone_BossMeridianSoldierCaveCompletePlayer',		
+				ImpulseEvent = 'impulse_legendary_takedown',	
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},	
+		progressFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'meridian_boss_soldier_operative_kill_teamfeed',	
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			},		
+		},			
+		completeFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'meridian_boss_soldier_operative_kill_teamfeed',	
+				Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzone_BossMeridianSoldierCaveCompleteFriendly',		
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		killedTeammatesResponse =			
+		{			
+				Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzone_BossMeridianSoldierCaveTeammatesKilled',		
+		},			
+	},				
+	killedTeammatesCount = 3,				
+},	
+{					
+	name = "Soldier Officer Legendary Enforcers",				
+	label = 'r5_for_boss1_1_boss_all',				
+	responses = 				
+	{				
+		countdownResponse = 			
+		{			
+			[30] = 		
+			{		
+				{	
+				},	
+			},       		
+			[10] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossPromethean10sGeneric',
+				},	
+			},     		
+			[0] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_SoldierBossGenericSpawnedPlural',
+					Fanfare = FanfareDefinitions.KillFeed,
+					FanfareText = 'temple_r_pve_r5_fw1b1_spawned',
+				},	
+			},		
+		},			
+		completePlayerResponse =			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.QuestFeed,	
+				FanfareText = function (context)	
+					return FormatText('legendary_boss_kill_shelfmsg', GetScoreVal(300));
+				end, 
+			},
+			{
+				Fanfare = FanfareDefinitions.PersonalScore,
+				Score = GetScoreVal(300), 
+			}, 	
+			{		
+				Medal = 'legendary_boss_takedown',	
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'sz_pve_r2soldierboss_ptakedown',	
+				Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossArcSoldierCompletePlayer',		
+				ImpulseEvent = 'impulse_legendary_takedown',	
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		progressFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'sz_pve_r2soldierboss_ttakedown',	
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			},		
+		},			
+		completeFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'sz_pve_r2soldierboss_ttakedown',	
+				Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossArcSoldierCompleteFriendly',		
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		killedTeammatesResponse =			
+		{			
+			Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossArcSoldierTeammatesKilled',		
+		},			
+	},				
+	killedTeammatesCount = 3,				
+},					
+{					
+	name = "Knight Bannerman",				
+	label = 'r5_f_b1_w2_knight_all',				
+	responses = 				
+	{				
+		countdownResponse = 			
+		{			
+			[30] = 		
+			{		
+			},       		
+			[10] = 		
+			{		
+			},     		
+			[0] = 		
+			{		
+			},		
+		},			
+		completePlayerResponse =			
+		{				
+			{		
+				Fanfare = FanfareDefinitions.QuestFeed,	
+				FanfareText = function (context)	
+					return FormatText('mythic_boss_kill_shelfmsg', GetScoreVal(2000));
+				end, 
+			},
+			{
+				Fanfare = FanfareDefinitions.PersonalScore,
+				Score = GetScoreVal(2000), 
+			}, 	
+			{		
+				Medal = 'mythic_boss_takedown',	
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'sz_pve_r3knightboss_ptakedown',	
+				Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_KnightBossGenericTakedown',
+				ImpulseEvent = 'mythic_boss_takedown',	
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		progressFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'sz_pve_r3knightboss_ttakedown',	
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			},		
+		},			
+		completeFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'sz_pve_r3knightboss_ttakedown',	
+				Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_KnightBossGenericTakedownFriendly',
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		killedTeammatesResponse =			
+		{			
+			Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_BossPrometheanGenericTeammatesKilled',		
+		},			
+	},				
+	killedTeammatesCount = 3,				
+},	
+{					
+	name = "for_boss_w2_warden",				
+	label = 'r5_f_b1_warden',				
+	responses = 				
+	{				
+		countdownResponse = 			
+		{			
+			[30] = 		
+			{		
+			},       		
+			[10] = 		
+			{		
+				{	
+				},	
+				{	
+					Sound = 'multiplayer\audio\music\130_mus_mp_sustain\music_mp_warzone_pve_mythicboss_wardenspawn',
+				},
+			},     		
+			[0] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossUrbanWarden2DiscoveredPlayer',
+					Fanfare = FanfareDefinitions.KillFeed,
+					FanfareText = 'temple_r_pve_r4_fw2b2_spawned',
+				},	
+			},		
+		},			
+		completePlayerResponse =			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.QuestFeed,	
+				FanfareText = function (context)	
+					return FormatText('mythic_boss_kill_shelfmsg', GetScoreVal(4000));
+				end, 
+			},
+			{
+				Fanfare = FanfareDefinitions.PersonalScore,
+				Score = GetScoreVal(4000), 
+			}, 	
+			{		
+				Medal = 'mythic_boss_takedown',	
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'sz_pve_r5forboss2_ptakedown',	
+				Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossSZWardenCompletePlayer',	
+				ImpulseEvent = 'mythic_boss_takedown',	
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		progressFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'sz_pve_r5forboss2_ttakedown',	
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			},		
+		},			
+		completeFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'sz_pve_r5forboss2_ttakedown',	
+				Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossUrbanWarden1CompleteFriendly',	
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		killedTeammatesResponse =			
+		{			
+			Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossUrbanWardenTeammatesKilled',		
+		},			
+	},				
+	killedTeammatesCount = 3,				
+},	
+{					
+	name = "Elite Prime",				
+	label = 'r5_cov_boss_w1_all',				
+	responses = 				
+	{				
+		countdownResponse = 			
+		{			
+			[30] = 		
+			{		
+			},       		
+			[10] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_BossCovenantGenericIncoming2',		
+				},	
+			},     		
+			[0] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_CovenantGenericBossSpawned',
+					Fanfare = FanfareDefinitions.KillFeed,
+					FanfareText = 'temple_r_pve_r4_c1w1b1_spawned',
+				},	
+			},		
+		},			
+		completePlayerResponse =			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.QuestFeed,	
+				FanfareText = function (context)	
+					return FormatText('legendary_boss_kill_shelfmsg', GetScoreVal(500));
+				end,	
+				Score = GetScoreVal(500),	
+			},		
+			{		
+				Medal = 'legendary_boss_takedown',	
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'urban_pve_eliteprime_kill_fanfare',	
+				Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossUrbanEliteCompletePlayer',
+				ImpulseEvent = 'impulse_legendary_takedown',	
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		progressFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'urban_pve_eliteprime_killed_teammessage',	
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			},		
+		},			
+		completeFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'urban_pve_eliteprime_killed_teammessage',	
+				Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossUrbanEliteCompleteFriendly',
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		killedTeammatesResponse =			
+		{			
+			Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossUrbanEliteTeammatesKilled',
+		},			
+	},				
+	killedTeammatesCount = 3,				
+},	
+{					
+	name = "Hunter Ancient",				
+	label = 'r5_cov_boss_w2_all',				
+	responses = 				
+	{				
+		countdownResponse = 			
+		{			
+			[30] = 		
+			{		
+			},       		
+			[10] = 		
+			{		
+			},     		
+			[0] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\music\130_mus_mp_sustain\music_mp_warzone_pve_mythicboss_hunterspawn',
+				},
+			},		
+		},			
+		completePlayerResponse =			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.QuestFeed,	
+				FanfareText = function (context)	
+					return FormatText('mythic_boss_kill_shelfmsg', GetScoreVal(2000));
+				end,	
+				Score = GetScoreVal(2000),	
+			},		
+			{		
+				Medal = 'mythic_boss_takedown',	
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'temple_boss_hunters_kill_fanfare',	
+				Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzone_BossTempleHunterCompletePlayer',
+				ImpulseEvent = 'mythic_boss_takedown',	
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		progressFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'temple_boss_hunters_kill_teamfeed',	
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			},		
+		},			
+		completeFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'temple_boss_hunters_kill_teamfeed',	
+				Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzone_BossTempleHunterCompleteFriendly',
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		killedTeammatesResponse =			
+		{			
+			Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzone_BossTempleHunterTeammatesKilled',
+		},			
+	},				
+	killedTeammatesCount = 3,				
+},	
+{					
+	name = "Elite Ultra",				
+	label = 'r5_b2_elite_boss_all',				
+	responses = 				
+	{				
+		countdownResponse = 			
+		{			
+			[30] = 		
+			{		
+			},       		
+			[10] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_BossCovenantGenericIncoming2',		
+				},	
+			},     		
+			[0] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_CovenantGenericBossSpawned',
+					Fanfare = FanfareDefinitions.KillFeed,
+					FanfareText = 'temple_r_pve_r4_c2w1b1_spawned',
+				},	
+			},		
+		},			
+		completePlayerResponse =			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.QuestFeed,	
+				FanfareText = function (context)	
+					return FormatText('legendary_boss_kill_shelfmsg', GetScoreVal(500));
+				end,	
+				Score = GetScoreVal(500),	
+			},		
+			{		
+				Medal = 'legendary_boss_takedown',	
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'urban_pve_eliteultra_kill_fanfare',	
+				Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossRingGeneralCompletePlayer',
+				ImpulseEvent = 'impulse_legendary_takedown',	
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		progressFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'urban_pve_eliteultra_killed_teammessage',	
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			},		
+		},			
+		completeFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'urban_pve_eliteultra_killed_teammessage',	
+				Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossRingGeneralCompleteFriendly',
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		killedTeammatesResponse =			
+		{			
+			Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossRingGeneralTeammatesKilled',
+		},			
+	},				
+	killedTeammatesCount = 3,				
+},	
+{					
+	name = "Banshee Raider",				
+	label = 'r5_b2_banshee_boss',				
+	responses = 				
+	{				
+		countdownResponse = 			
+		{			
+			[30] = 		
+			{		
+			},       		
+			[10] = 		
+			{		
+			},     		
+			[0] = 		
+			{		
+			},		
+		},			
+		completePlayerResponse =			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.QuestFeed,	
+				FanfareText = function (context)	
+					return FormatText('legendary_boss_kill_shelfmsg', GetScoreVal(1000));
+				end,	
+				Score = GetScoreVal(1000),	
+			},		
+			{		
+				Medal = 'legendary_boss_takedown',	
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'urban_pve_bansheeraider_kill_fanfare',	
+				Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossRingBansheeCompletePlayer',
+				ImpulseEvent = 'impulse_legendary_takedown',	
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		progressFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'urban_pve_bansheeraider_killed_teammessage',	
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			},		
+		},			
+		completeFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'urban_pve_bansheeraider_killed_teammessage',	
+				Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossRingBansheeCompleteFriendly',
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		killedTeammatesResponse =			
+		{			
+			Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossRingBansheeTeammatesKilled',
+		},			
+	},				
+	killedTeammatesCount = 3,				
+},	
+{					
+	name = "Deacon Pipap",				
+	label = 'r5_cb2_mech_boss2',				
+	responses = 				
+	{				
+		countdownResponse = 			
+		{			
+			[30] = 		
+			{		
+			},       		
+			[10] = 		
+			{		
+			},     		
+			[0] = 		
+			{		
+				{	
+					Sound = 'multiplayer\audio\music\130_mus_mp_sustain\music_mp_warzone_pve_mythicboss_phantomspawn',
+				},
+			},		
+		},			
+		completePlayerResponse =			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.QuestFeed,	
+				FanfareText = function (context)	
+					return FormatText('mythic_boss_kill_shelfmsg', GetScoreVal(2000));
+				end,	
+				Score = GetScoreVal(2000),	
+			},		
+			{		
+				Medal = 'mythic_boss_takedown',	
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'boss_deacon_pipap_kill_fanfare',	
+				Sound = 'multiplayer\audio\wzcmndrsustain\wzcmndrsustain_warzonepve_GruntMechBossGenericTakedown',
+				ImpulseEvent = 'mythic_boss_takedown',	
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		progressFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'boss_deacon_pipap_kill_teamfeed',	
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			},		
+		},			
+		completeFriendlyResponse = 			
+		{			
+			{		
+				Fanfare = FanfareDefinitions.KillFeed,	
+				FanfareText = 'urban_pve_bansheeraider_killed_teammessage',	
+				Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossGenericProgressFriendly',
+			},		
+			{		
+				Sound = 'multiplayer\audio\music\130_mus_mp_warzone\music_mp_warzone_proximityboss_death'	
+			}		
+		},			
+		killedTeammatesResponse =			
+		{			
+			Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_BossCovenantGenericTeammatesKilled',
+		},			
+	},				
+	killedTeammatesCount = 3,				
+},	
+};
+applyDefaultMinibossResponses(minibossDefinitions);
+k_SnowCommandoAtt	= ResolveString("ice_boss_att_officer");
+k_SnowCommandoDef	= ResolveString("ice_boss_def_officer");
+k_ArcOfficerAtt		= ResolveString("att_soldier_officer");
+k_ArcOfficerDef		= ResolveString("def_soldier_officer");
+k_UrbReconPlaza		= ResolveString("urban_boss_vtol_greenbelt_1");
+k_SnowHunterAtt1	= ResolveString("sz_pve_r3_hunter_boss_01");
+k_SnowHunterAtt2 	= ResolveString("sz_pve_r3_hunter_boss_02");
+k_SnowHunterAtt3	= ResolveString("sz_pve_r3_hunter_boss_03");
+k_SnowHunterAtt4 	= ResolveString("sz_pve_r3_hunter_boss_04");
+k_SnowHunterAtt5	= ResolveString("sz_pve_r3_hunter_boss_05");
+k_SnowHunterAtt6 	= ResolveString("sz_pve_r3_hunter_boss_06");
+k_SnowBannerman		= ResolveString("ice_boss_stage_knight_01");
+k_SnowBannerman2	= ResolveString("ice_boss_stage_knight_02");
+k_SnowBannerman3	= ResolveString("ice_boss_stage_knight_03");
+k_UrbElitePrimeBlue = ResolveString("urban_boss_blue_elite_name");
+k_UrbElitePrimeRed 	= ResolveString("urban_boss_red_elite_name");
+k_UrbElitePrimeRed3 = ResolveString("red_tunnel_elite_01");
+k_RingBansheeRidge	= ResolveString("urban_pve_boss_banshee01");
+k_RingBansheeWater 	= ResolveString("urban_pve_boss_banshee02");
+k_RingBansheeRidge2	= ResolveString("urban_pve_boss_banshee03");
+k_RingBansheeWater2 	= ResolveString("urban_pve_boss_banshee04");
+k_ArcKnightAttCave	= ResolveString("sz_pve_r4_knight_boss_01");
+k_ArcKnightAttCave2	= ResolveString("sz_pve_r4_knight_boss_02");
+k_ArcKnightAttCave3	= ResolveString("sz_pve_r4_knight_boss_03");
+k_SnowPvEKnightChamp	= ResolveString("sz_pve_r5_knight_boss_01");
+k_SnowPvEKnightChamp2 	= ResolveString("sz_pve_r5_knight_boss_02");
+k_ArcWarden			= ResolveString("arc_boss_warden_name");
+k_ArcWarden2		= ResolveString("meridian_pve_boss_warden");
+k_ArcWarden3		= ResolveString("urban_pve_boss_warden01");
+k_SnowSpecialElite	= ResolveString("temple_boss_elite_specialist_att");
+k_SnowSpecialElite2	= ResolveString("temple_boss_elite_specialist_def");
+k_SnowSolOpp		= ResolveString("meridian_boss_soldier_operative_att");
+k_SnowElitePath		= ResolveString("temple_pve_boss_skir_01");
+k_SnowElitePath2	= ResolveString("temple_pve_boss_skir_02");
+k_SnowElitePath3	= ResolveString("temple_pve_boss_skir_03");
+k_SnowElitePath4	= ResolveString("temple_pve_boss_skir_04");
+k_SnowReconLeader	= ResolveString("temple_boss_elite_recon_att");
+k_SnowReconLeader2	= ResolveString("temple_boss_elite_recon_def");
+k_SnowWraithOff 	= ResolveString("ice_boss_stage_wraith_driver");
+k_SnowPhaetonGun	= ResolveString("sz_pve_r4_vtol_boss_01");
+k_SnowPhaetonGun2	= ResolveString("sz_pve_r4_vtol_boss_02");
+k_SnowPhaetonGun3	= ResolveString("sz_pve_r4_vtol_boss_03");
+k_SnowGoblin1		= ResolveString("sz_pve_r4_grunt_mech1");
+k_SnowGoblin2		= ResolveString("sz_pve_r4_grunt_mech2");
+k_SnowSwarmlord1	= ResolveString("sz_pve_r5_hunter_boss_01");
+k_SnowSwarmlord2	= ResolveString("sz_pve_r5_hunter_boss_02");
+k_SnowSwarmlord3	= ResolveString("sz_pve_r5_hunter_boss_03");
+k_SnowSwarmlord4	= ResolveString("sz_pve_r5_hunter_boss_04");
+k_TempStimbab		= ResolveString("temple_r_pve_mech_stimbab");
+k_TempTomp			= ResolveString("meridian_pve_boss_tomp");
+k_SoldBandit1		= ResolveString("temple_r_pve_boss_soldier_b1");
+k_SoldBandit2		= ResolveString("temple_r_pve_boss_soldier_b2");
+k_SoldBandit3		= ResolveString("temple_r_pve_boss_soldier_b3");
+k_SoldBandit4		= ResolveString("temple_r_pve_boss_soldier_b4");
+k_GhostScout1		= ResolveString("temple_boss_ghost_scout_att_1");
+k_GhostScout2		= ResolveString("temple_boss_ghost_scout_att_2");
+k_GhostScout3		= ResolveString("temple_boss_ghost_scout_def_1");
+k_GhostScout4		= ResolveString("temple_boss_ghost_scout_def_2");
+k_KnightEx1			= ResolveString("meridian_boss_knight_excavator");
+k_KnightEx2			= ResolveString("meridian_boss_knight_excavator_att");
+k_KnightEx3			= ResolveString("meridian_boss_knight_excavator_def");
+k_ReconPilot1		= ResolveString("temple_r_pve_boss_reconpilot1");
+k_ReconPilot2		= ResolveString("temple_r_pve_boss_reconpilot2");
+k_BansheeScout1		= ResolveString("temple_r_pve_boss_banshee1");
+k_BansheeScout2		= ResolveString("temple_r_pve_boss_banshee2");
+k_BansheeScout3		= ResolveString("temple_r_pve_boss_banshee3");
+k_BansheeScout4		= ResolveString("temple_r_pve_boss_banshee4");
+k_HunterAncient1	= ResolveString("temple_boss_hunters_att_1");
+k_HunterAncient2	= ResolveString("temple_boss_hunters_att_2");
+k_HunterAncient3	= ResolveString("temple_boss_hunters_def_1");
+k_HunterAncient4	= ResolveString("temple_boss_hunters_def_2");
+k_SoldEnforcer1		= ResolveString("meridian_r_pve_r5_soldier01");
+k_SoldEnforcer2		= ResolveString("meridian_r_pve_r5_soldier02");
+k_SoldEnforcer3		= ResolveString("meridian_r_pve_r5_soldier03");
+k_Warden1			= ResolveString("ice_boss_pit_warden_name");
+k_EliteUltra1		= ResolveString("ring_boss_beach_general_01");
+k_EliteUltra2		= ResolveString("ring_boss_beach_general_name");
+k_EliteUltra3		= ResolveString("ring_boss_crags_general_01");
+k_BansheeRaider1	= ResolveString("ring_boss_other_banshees_01");
+k_DeaconPipap1		= ResolveString("boss_deacon_pipap");
+k_KnightChamp1		= ResolveString("temple_r_pve_b_knight_d1");
+k_KnightChamp2		= ResolveString("temple_r_pve_b_knight_d2");
+k_KnightChamp3		= ResolveString("temple_r_pve_b_knight_d3");
+k_KnightChamp4		= ResolveString("temple_r_pve_b_knight_d4");
+k_SoldOperative1	= ResolveString("meridian_boss_soldier_operative");
+k_SoldOperative2	= ResolveString("meridian_boss_soldier_operative_att");
+k_SoldOperative3	= ResolveString("meridian_boss_soldier_operative_def");
+k_TSoldCommando1	= ResolveString("temple_r_pve_boss_soldcom1");
+k_TSoldCommando2	= ResolveString("temple_r_pve_boss_soldcom2");
+local WarzoneArcBossNamesAndIds = 
+{
+	{ "commando", 				k_SnowCommandoAtt },
+	{ "commando",		 		k_SnowCommandoDef },	
+	{ "enforcer", 				k_ArcOfficerAtt },
+	{ "enforcer", 				k_ArcOfficerDef },
+	{ "recon",					k_UrbReconPlaza },
+	{ "serpentHunter", 			k_SnowHunterAtt1 },
+	{ "serpentHunter",			k_SnowHunterAtt2 },
+	{ "serpentHunter", 			k_SnowHunterAtt3 },
+	{ "serpentHunter",			k_SnowHunterAtt4 },
+	{ "serpentHunter", 			k_SnowHunterAtt5 },
+	{ "serpentHunter",			k_SnowHunterAtt6 },
+	{ "bannerman", 				k_SnowBannerman },
+	{ "bannerman", 				k_SnowBannerman2 },
+	{ "bannerman", 				k_SnowBannerman3 },
+	{ "prime", 					k_UrbElitePrimeBlue },
+	{ "prime", 					k_UrbElitePrimeRed },
+	{ "prime", 					k_UrbElitePrimeRed3 },
+	{ "raider", 				k_RingBansheeRidge },
+	{ "raider", 				k_RingBansheeWater },
+	{ "raider", 				k_RingBansheeRidge2 },
+	{ "raider", 				k_RingBansheeWater2 },
+	{ "marshal", 				k_ArcKnightAttCave },
+	{ "marshal", 				k_ArcKnightAttCave2 },
+	{ "marshal", 				k_ArcKnightAttCave3 },
+	{ "knightChamp", 			k_SnowPvEKnightChamp },
+	{ "knightChamp", 			k_SnowPvEKnightChamp2 },
+	{ "warden",					k_ArcWarden },
+	{ "warden",					k_ArcWarden2 },
+	{ "warden",					k_ArcWarden3 },
+	{ "specialist", 			k_SnowSpecialElite },
+	{ "specialist", 			k_SnowSpecialElite2 },
+	{ "soldierOperative",		k_SnowSolOpp },
+	{ "path", 					k_SnowElitePath },
+	{ "path", 					k_SnowElitePath2 },
+	{ "path", 					k_SnowElitePath3 },
+	{ "path", 					k_SnowElitePath4 },
+	{ "reconLeader", 			k_SnowReconLeader },
+	{ "reconLeader", 			k_SnowReconLeader2 },
+	{ "wraithOfficer",		 	k_SnowWraithOff },
+	{ "phaetongunship", 		k_SnowPhaetonGun },
+	{ "phaetongunship", 		k_SnowPhaetonGun2 },
+	{ "phaetongunship", 		k_SnowPhaetonGun3 },
+	{ "goblinJockey", 			k_SnowGoblin1 },
+	{ "goblinJockey", 			k_SnowGoblin2 },
+	{ "swarmlord", 				k_SnowSwarmlord1 },
+	{ "swarmlord", 				k_SnowSwarmlord2 },
+	{ "swarmlord", 				k_SnowSwarmlord3 },
+	{ "swarmlord", 				k_SnowSwarmlord4 },
+	{ "stimbab", 				k_TempStimbab },
+	{ "tomp", 					k_TempTomp },
+	{ "soldierBandit", 			k_SoldBandit1 },
+	{ "soldierBandit", 			k_SoldBandit2 },
+	{ "soldierBandit", 			k_SoldBandit3 },
+	{ "soldierBandit", 			k_SoldBandit4 },
+	{ "ghostScout", 			k_GhostScout1 },
+	{ "ghostScout", 			k_GhostScout2 },
+	{ "ghostScout", 			k_GhostScout3 },
+	{ "ghostScout", 			k_GhostScout4 },
+	{ "knightExcavator", 		k_KnightEx1 },
+	{ "knightExcavator", 		k_KnightEx2 },
+	{ "knightExcavator", 		k_KnightEx3 },
+	{ "recon", 					k_ReconPilot1 },
+	{ "recon", 					k_ReconPilot2 },
+	{ "bansheeScout", 			k_BansheeScout1 },
+	{ "bansheeScout", 			k_BansheeScout2 },
+	{ "bansheeScout", 			k_BansheeScout3 },
+	{ "bansheeScout", 			k_BansheeScout4 },
+	{ "hunterAncient", 			k_HunterAncient1 },
+	{ "hunterAncient", 			k_HunterAncient2 },
+	{ "hunterAncient", 			k_HunterAncient3 },
+	{ "hunterAncient", 			k_HunterAncient4 },
+	{ "enforcer", 				k_SoldEnforcer1 },
+	{ "enforcer", 				k_SoldEnforcer2 },
+	{ "enforcer", 				k_SoldEnforcer3 },
+	{ "warden", 				k_Warden1 },
+	{ "ultra", 					k_EliteUltra1 },
+	{ "ultra", 					k_EliteUltra2 },
+	{ "ultra", 					k_EliteUltra3 },
+	{ "raider", 				k_BansheeRaider1 },
+	{ "deac", 					k_DeaconPipap1 },
+	{ "champion", 				k_KnightChamp1 },
+	{ "champion", 				k_KnightChamp2 },
+	{ "champion", 				k_KnightChamp3 },
+	{ "champion", 				k_KnightChamp4 },
+	{ "soldierOperative", 		k_SoldOperative1 },
+	{ "soldierOperative", 		k_SoldOperative2 },
+	{ "soldierOperative", 		k_SoldOperative3 },
+	{ "commando", 			k_TSoldCommando1 },
+	{ "commando", 			k_TSoldCommando2 },
+}
+local WarzoneArcBossNames = 
+{
+	k_SnowCommandoAtt,
+	k_SnowCommandoDef,
+	k_ArcOfficerAtt,
+	k_ArcOfficerDef,
+	k_UrbReconPlaza,
+	k_SnowHunterAtt1,
+	k_SnowHunterAtt2,
+	k_SnowHunterAtt3,
+	k_SnowHunterAtt4,
+	k_SnowHunterAtt5,
+	k_SnowHunterAtt6,
+	k_SnowBannerman,
+	k_SnowBannerman2,
+	k_SnowBannerman3,
+	k_UrbElitePrimeBlue,
+	k_UrbElitePrimeRed,
+	k_UrbElitePrimeRed3,
+	k_RingBansheeRidge,
+	k_RingBansheeWater,
+	k_RingBansheeRidge2,
+	k_RingBansheeWater2,
+	k_ArcKnightAttCave,
+	k_ArcKnightAttCave2,
+	k_ArcKnightAttCave3,
+	k_SnowPvEKnightChamp,
+	k_SnowPvEKnightChamp2,
+	k_ArcWarden,
+	k_ArcWarden2,
+	k_ArcWarden3,
+	k_SnowSpecialElite,
+	k_SnowSpecialElite2,
+	k_SnowSolOpp,
+	k_SnowElitePath,
+	k_SnowElitePath2,
+	k_SnowElitePath3,
+	k_SnowElitePath4,
+	k_SnowReconLeader,
+	k_SnowReconLeader2,
+	k_SnowWraithOff,
+	k_SnowGoblin1,
+	k_SnowGoblin2,
+	k_SnowSwarmlord1,
+	k_SnowSwarmlord2,
+	k_SnowSwarmlord3,
+	k_SnowSwarmlord4,
+	k_SnowPhaetonGun,
+	k_SnowPhaetonGun2,
+	k_SnowPhaetonGun3,
+	k_TempStimbab,
+	k_TempTomp,
+	k_SoldBandit1,
+	k_SoldBandit2,
+	k_SoldBandit3,
+	k_SoldBandit4,
+	k_GhostScout1,
+	k_GhostScout2,
+	k_GhostScout3,
+	k_GhostScout4,
+	k_KnightEx1,
+	k_KnightEx2,
+	k_KnightEx3,
+	k_ReconPilot1,
+	k_ReconPilot2,
+	k_BansheeScout1,
+	k_BansheeScout2,
+	k_BansheeScout3,
+	k_BansheeScout4,
+	k_HunterAncient1,
+	k_HunterAncient2,
+	k_HunterAncient3,
+	k_HunterAncient4,
+	k_SoldEnforcer1,
+	k_SoldEnforcer2,
+	k_SoldEnforcer3,
+	k_Warden1,
+	k_EliteUltra1,
+	k_EliteUltra2,
+	k_EliteUltra3,
+	k_BansheeRaider1,
+	k_DeaconPipap1,
+	k_KnightChamp1,
+	k_KnightChamp2,
+	k_KnightChamp3,
+	k_KnightChamp4,
+	k_SoldOperative1,
+	k_SoldOperative2,
+	k_SoldOperative3,
+	k_TSoldCommando1,
+	k_TSoldCommando2
+}
+onDeathByBoss = onKill:Filter(
+	function(context)
+		context.TargetPlayer = context.DeadPlayer;
+		if context.KillingObject == nil or
+			context.KillingObject:IsBossUnit() == false then
+			return false;	
+		end
+		return table.any(WarzoneArcBossNames,
+			function(resolvedBossString)
+				local bossId = context.KillingObject:GetStringIdNetworkedProperty(ResolveString("BossName"));
+				context.BossId = bossId;
+				return bossId:IsValid() and bossId == resolvedBossString;
+			end
+			);
+	end
+	);
+onDeathByBossSelect = onDeathByBoss:Select();
+function BuildDeathByBossResponses(bossName, source)
+	local globals = _G;
+	globals[bossName .. "KilledYouResponse"] = source:Target(TargetPlayer):Response(
+	{
+		Fanfare = FanfareDefinitions.KillFeed,
+		FanfareText = bossName .. "_killed_you"
+	});
+end
+for index, allBosses in ipairs(WarzoneArcBossNamesAndIds) do
+	local bossNameIndex = 1;
+	local bossIdIndex = 2;
+	local bossName = allBosses[bossNameIndex];
+	local sourceEvent = onDeathByBossSelect:Add(
+		function(context)
+			return context.BossId == allBosses[bossIdIndex];
+		end
+		);
+	BuildDeathByBossResponses(bossName, sourceEvent);
+end
