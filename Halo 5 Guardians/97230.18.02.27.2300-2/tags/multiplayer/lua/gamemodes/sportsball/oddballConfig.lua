@@ -1,2 +1,0 @@
-enableBallKillTypeMedals = true;
-enableOddballKillTypeMedals = true;
