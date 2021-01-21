@@ -1,0 +1,1 @@
+disableMedalsForGrifball = true;
