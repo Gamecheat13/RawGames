@@ -1,0 +1,2 @@
+
+useBreakoutTuningForMagnumPerfect = true;
