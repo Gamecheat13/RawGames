@@ -1,0 +1,2 @@
+enableFlagCarrierProtectedMedal = true;
+enableFlagsassinationMedal = true;

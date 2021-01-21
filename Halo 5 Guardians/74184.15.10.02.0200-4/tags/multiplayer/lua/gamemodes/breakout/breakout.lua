@@ -1,0 +1,1145 @@
+--
+-- Breakout event definitions
+--
+
+--
+-- Breakout Intro
+--
+
+__OnModeIntro = Delegate:new();
+
+onModeIntro = root:AddCallback(
+	__OnModeIntro
+	);
+	
+modeIntroResponse = onModeIntro:Target(TargetAllPlayers):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_roundstart'
+	});
+
+--
+-- Finished Running Start 
+--
+
+onRunningStartFinished = root:AddCallback(
+	__OnPlayerFinishedRunningStart, 
+	function(context, player)
+		context.TargetPlayer = player;
+	end
+	);
+
+onRunningStartFinishedFirstRound = onRunningStartFinished:Filter(
+	function(context)
+		return context.Engine:GetRound() == 0;
+	end
+	);
+
+runningStartFinishedFirstRoundResponse = onRunningStartFinishedFirstRound:Target(TargetAllPlayers):Response(
+	{
+		Sound = 'multiplayer\audio\sound_effects\sound_effects_breakout_matchstart'
+	});
+
+runningStartFinishedSelect = onRunningStartFinished:Select();
+
+runningStartFinishedEnemyFacingElimination = runningStartFinishedSelect:Add(
+	function(context)
+		local variant = nil;
+
+		context.Engine:VisitVariant(
+			function (currentVariant)
+				variant = currentVariant
+			end
+		);
+
+		return context.TargetPlayer:GetRoundsWonCount() == variant:GetMiscellaneousOptions():GetEarlyVictoryRoundCount() - 1;
+	end
+	);
+
+runningStartFinishedEnemyFacingEliminationResponse = runningStartFinishedEnemyFacingElimination:Target(TargetPlayer):Response(
+	{
+		Sound = 'multiplayer\audio\teamleadermale01\teamleadermale01_breakout_breakoutstartenemyelim'
+	});
+
+runningStartFinishedFacingElimination = runningStartFinishedSelect:Add(
+	function (context)
+		return table.any(context:GetAllPlayers(),
+			function (player)
+				local variant = nil;
+				
+				context.Engine:VisitVariant(
+					function (currentVariant)
+						variant = currentVariant
+					end
+				);
+
+				return player:GetRoundsWonCount() == variant:GetMiscellaneousOptions():GetEarlyVictoryRoundCount() - 1;
+			end
+		);
+	end
+	);
+
+runningStartFinishedFacingEliminationResponse = runningStartFinishedFacingElimination:Target(TargetPlayer):Response(
+	{
+		Sound = 'multiplayer\audio\teamleadermale01\teamleadermale01_breakout_breakoutstartfaceelim'
+	});
+
+runningStartFinishedGeneric = runningStartFinishedSelect:Add();
+
+runningStartFinishedGenericResponse = runningStartFinishedGeneric:Target(TargetPlayer):Response(
+	{
+		Sound = 'multiplayer\audio\teamleadermale01\teamleadermale01_breakout_breakoutstart'
+	});
+
+--	
+-- Head to Head
+--
+
+__OnOneOnOne = Delegate:new();
+
+onOneOnOne = root:AddCallback(
+	__OnOneOnOne
+	);
+
+oneOnOneAliveResponse = onOneOnOne:Target(AllAlivePlayers):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_rosterheartbeat1v1'
+	});
+	
+oneOnOneDeadResponse = onOneOnOne:Target(AllDeadPlayers):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_rosterheartbeat1v1'
+	}):Response(
+	{
+		Sound = 'multiplayer\audio\music\130_mus_mp_breakout\music_mp_breakout_oneonone_loop'
+	});
+
+
+--
+-- Two on One VO
+--
+
+__OnTwoOnOne = Delegate:new();
+
+onTwoOnOne = root:AddCallback(
+	__OnTwoOnOne,
+	function (context, lastMan)
+		context.TargetPlayer = lastMan;
+	end
+	);
+
+twoOnOneWinnerAliveResponse = onTwoOnOne:Target(HostileToTargetAlive):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_rosterheartbeat2v1'
+	});
+
+twoOnOneWinnerDeadResponse = onTwoOnOne:Target(HostileToTargetDead):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_rosterheartbeat2v1'
+	});
+	
+twoOnOneLoserAliveResponse = onTwoOnOne:Target(FriendlyToTargetAlive):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_rosterheartbeat1v2'
+	});
+	
+twoOnOneLoserDeadResponse = onTwoOnOne:Target(FriendlyToTargetDead):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_rosterheartbeat1v2'
+	});
+
+--	
+-- Two on Two VO
+--
+
+__OnTwoOnTwo = Delegate:new();
+
+onTwoOnTwo = root:AddCallback(
+	__OnTwoOnTwo
+	);
+
+twoOnTwoAliveResponse = onTwoOnTwo:Target(AllAlivePlayers):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_rosterheartbeat2v2'
+	});
+	
+twoOnTwoDeadResponse = onTwoOnTwo:Target(AllDeadPlayers):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_rosterheartbeat2v2'
+	});
+
+--	
+-- Three on One VO
+--
+
+__OnThreeOnOne = Delegate:new();
+
+onThreeOnOne = root:AddCallback(
+	__OnThreeOnOne,
+	function (context, lastMan)
+		context.TargetPlayer = lastMan;
+	end
+	);
+
+threeOnOneWinningAliveResponse = onThreeOnOne:Target(HostileToTargetAlive):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_rosterheartbeat3v1'
+	});
+	
+threeOnOneWinningDeadResponse = onThreeOnOne:Target(HostileToTargetDead):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_rosterheartbeat3v1'
+	});
+	
+threeOnOneLosingAliveResponse = onThreeOnOne:Target(FriendlyToTargetAlive):Response(
+	{		
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_rosterheartbeat1v3'
+	});
+	
+threeOnOneLosingDeadResponse = onThreeOnOne:Target(FriendlyToTargetDead):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_rosterheartbeat1v3'
+	});	
+
+--
+-- Three on Two VO
+--
+
+__OnThreeOnTwo = Delegate:new();
+
+onThreeOnTwo = root:AddCallback(
+	__OnThreeOnTwo,
+	function (context, teamTwo)
+		context.TargetPlayer = teamTwo;
+	end
+	);
+
+threeOnTwoWinnerAliveResponse = onThreeOnTwo:Target(HostileToTargetAlive):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_rosterheartbeat3v2'
+	});
+	
+threeOnTwoWinnerDeadResponse = onThreeOnTwo:Target(HostileToTargetDead):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_rosterheartbeat3v2'
+	});
+	
+threeOnTwoLoserAliveResponse = onThreeOnTwo:Target(FriendlyToTargetAlive):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_rosterheartbeat2v3'
+	});
+	
+threeOnTwoLoserDeadResponse = onThreeOnTwo:Target(FriendlyToTargetDead):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_rosterheartbeat2v3'
+	});
+
+--
+-- Three on Three VO
+--
+
+__OnThreeOnThree = Delegate:new();
+
+onThreeOnThree = root:AddCallback(
+	__OnThreeOnThree
+	);
+
+threeOnThreeAliveResponse = onThreeOnThree:Target(AllAlivePlayers):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_rosterheartbeat3v3'
+	});
+	
+threeOnThreeDeadResponse = onThreeOnThree:Target(AllDeadPlayers):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_rosterheartbeat3v3'
+	});
+
+--
+-- Four on Two VO
+--
+
+__OnFourOnTwo = Delegate:new();
+
+onFourOnTwo = root:AddCallback(
+	__OnFourOnTwo,
+	function (context, teamTwo)
+		context.TargetPlayer = teamTwo;
+	end
+	);
+
+fourOnTwoWinnerAliveResponse = onFourOnTwo:Target(HostileToTargetAlive):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_rosterheartbeat4v2'
+	});
+	
+fourOnTwoWinnerDeadResponse = onFourOnTwo:Target(HostileToTargetDead):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_rosterheartbeat4v2'
+	});
+	
+fourOnTwoLoserAliveResponse = onFourOnTwo:Target(FriendlyToTargetAlive):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_rosterheartbeat2v4'
+	});
+	
+fourOnTwoLoserDeadResponse = onFourOnTwo:Target(FriendlyToTargetDead):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_rosterheartbeat2v4'
+	});
+
+--	
+-- Four on One VO
+--
+
+__OnFourOnOne = Delegate:new();
+
+onFourOnOne = root:AddCallback(
+	__OnFourOnOne,
+	function (context, lastMan)
+		context.TargetPlayer = lastMan;
+	end
+	);
+
+fourOnOneWinnerAliveResponse = onFourOnOne:Target(HostileToTargetAlive):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_rosterheartbeat4v1'
+	});
+	
+fourOnOneWinnerDeadResponse = onFourOnOne:Target(HostileToTargetDead):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_rosterheartbeat4v1'
+	});
+	
+fourOnOneLoserDeadResponse = onFourOnOne:Target(FriendlyToTargetDead):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_rosterheartbeat1v4'
+	});	
+
+__OnLastManStanding = Delegate:new();
+
+onLastManStanding = root:AddCallback(
+	__OnLastManStanding,
+	function(context, lastMan)
+		context.TargetPlayer = lastMan;
+	end
+	);
+
+lastManStandingResponse = onLastManStanding:OnceUntil(nil, onRoundStart):Target(FriendlyToTargetAlive):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_rosterheartbeat1v4'
+	}):Response(
+	{
+		Sound = 'multiplayer\audio\music\130_mus_mp_breakout\music_mp_breakout_oneonone_loop'
+	});
+
+--	
+-- Four on Three VO
+--
+
+__OnFourOnThree = Delegate:new();
+
+onFourOnThree = root:AddCallback(
+	__OnFourOnThree,
+	function (context, teamThree)
+		context.TargetPlayer = teamThree;
+	end
+	);
+
+fourOnThreeWinnerAliveResponse = onFourOnThree:Target(HostileToTargetAlive):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_rosterheartbeat4v3'
+	});
+	
+fourOnThreeWinnerDeadResponse = onFourOnThree:Target(HostileToTargetDead):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_rosterheartbeat4v3'
+	});
+	
+fourOnThreeLoserAliveResponse = onFourOnThree:Target(FriendlyToTargetAlive):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_rosterheartbeat3v4'
+	});
+	
+fourOnThreeLoserDeadResponse = onFourOnThree:Target(FriendlyToTargetDead):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_rosterheartbeat3v4'
+	});
+
+--
+-- Round Survivor Medals and impulse events
+--
+
+function FilterSurvivedRound(context)
+	return table.filtervalues(context:GetAllPlayers(),
+		function (player)
+			return PlayerIsAlive(player);
+		end
+		);
+end
+
+-- Impulse Event for services
+onRoundSurvived = onRoundEnd:Emit(
+	function(context)
+		context.TargetPlayer = FilterSurvivedRound(context);
+	end
+	):Filter(
+	function(context)
+		return context.TargetPlayer ~= nil;
+	end
+	):Target(TargetPlayer):Response(
+		{
+			ImpulseEvent = 'impulse_round_survived'
+		});
+
+
+survivalSpreeAccumulator = root:CreatePlayerAccumulator();
+
+onConsecutiveRoundsSurvived = onRoundEnd:PlayerAccumulator(
+	survivalSpreeAccumulator,
+	FilterSurvivedRound
+	);
+
+onPlayerDeath:ResetPlayerAccumulator(
+	survivalSpreeAccumulator,
+	function (context)
+	 	return context.DeadPlayer;
+	end
+	);
+	  
+roundSurvivorBucket = onConsecutiveRoundsSurvived:Bucket(
+	FilterSurvivedRound,
+	function (context, players)
+		context.MatchingPlayers = players;
+	end
+	);	
+
+surviveAllRoundsBucket = roundSurvivorBucket:Add(
+	function (context, player)
+		local variant = nil;
+						
+		context.Engine:VisitVariant(
+			function (currentVariant)
+				variant = currentVariant
+			end
+			);
+
+		local scores = context:GetSortedTeamsRoundsWon();
+
+		if scores == nil or scores[1] == nil then
+			return false;
+		end
+
+		local winningTeamRoundsWon = scores[1];
+		local roundsToWin = variant:GetMiscellaneousOptions():GetEarlyVictoryRoundCount();
+		local survivalSpree = survivalSpreeAccumulator:GetValue(player);
+
+		--GetRound() is zero based, so add 1 to compare to rounds survived
+		local currentRound = context.Engine:GetRound() + 1;
+		
+		return winningTeamRoundsWon == roundsToWin and survivalSpree == currentRound;
+	end
+	);
+	
+breakoutGameSurvivorResponse = surviveAllRoundsBucket:Target(MatchingPlayers):Response(
+	{
+		OutOfGameEvent = true,
+		Medal = 'immortal'
+	});	
+
+survivorSpreeBucket = roundSurvivorBucket:Add(
+	function (context, player)
+		return survivalSpreeAccumulator:GetValue(player) % 3 == 0;
+	end
+	);
+	
+survivorSpreeResponse = survivorSpreeBucket:Target(MatchingPlayers):Response(
+	{
+
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_roundoversurvivorspree',
+		Medal = 'survivor_spree'
+	});	 
+	
+survivorBucket = roundSurvivorBucket:Add(
+	);	
+		
+--
+-- Facing Elimination Events
+--
+
+__OnCheckFacingElimination = Delegate:new();
+
+onCheckFacingElimination = root:AddCallback(
+	__OnCheckFacingElimination
+	);
+
+roundsWonBucket = onCheckFacingElimination:Bucket(
+	function (context)
+		return context:GetAllPlayers();
+	end,
+	function (context, players)
+		context.MatchingPlayers = players;
+	end
+	);
+
+--
+-- Next Round Wins
+--
+	
+nextRoundWinsBucket = roundsWonBucket:Add(
+	function (context, player)
+		return table.all(context:GetAllPlayers(),
+			function (player)
+				local variant = nil;
+				
+				context.Engine:VisitVariant(
+					function (currentVariant)
+						variant = currentVariant
+					end
+				);
+
+				return player:GetRoundsWonCount() == variant:GetMiscellaneousOptions():GetEarlyVictoryRoundCount() - 1;
+			end
+			);
+	end
+	);
+
+nextRoundWinsResponse = nextRoundWinsBucket:Target(MatchingPlayers):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_roundstartnextroundwins'
+	}):Response(
+	{
+		Sound = 'multiplayer\audio\music\130_mus_mp_breakout\music_mp_breakout_matchpoint_neutral_loop'
+	});
+
+--
+-- Enemy Facing Elimination
+--
+	
+enemyFacingEliminationBucket = roundsWonBucket:Add(
+	function (context, player)
+		local variant = nil;
+
+		context.Engine:VisitVariant(
+			function (currentVariant)
+				variant = currentVariant
+			end
+			);
+
+		return player:GetRoundsWonCount() == variant:GetMiscellaneousOptions():GetEarlyVictoryRoundCount() - 1;
+	end
+	);
+
+enemyFacingEliminationResponse = enemyFacingEliminationBucket:Target(MatchingPlayers):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_roundstartenemyfacingelimination'
+	}):Response(
+	{
+		Sound = 'multiplayer\audio\music\130_mus_mp_breakout\music_mp_breakout_matchpoint_winning_loop'
+	});
+	
+--
+-- Facing Elimination 
+--
+	
+facingEliminationBucket = roundsWonBucket:Add(
+	function (context, player)
+		return table.any(context:GetAllPlayers(),
+			function (player)
+				local variant = nil;
+				
+				context.Engine:VisitVariant(
+					function (currentVariant)
+						variant = currentVariant
+					end
+				);
+
+				return player:GetRoundsWonCount() == variant:GetMiscellaneousOptions():GetEarlyVictoryRoundCount() - 1;
+			end
+			);
+	end
+	);
+
+facingEliminationResponse = facingEliminationBucket:Target(MatchingPlayers):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_roundstartfacingelimination'
+	}):Response(
+	{
+		Sound = 'multiplayer\audio\music\130_mus_mp_breakout\music_mp_breakout_matchpoint_losing_loop'
+	});
+
+--
+-- Round Number Announcement
+--
+
+__OnRoundAnnouncement = Delegate:new();
+
+onRoundAnnouncement = root:AddCallback(
+	__OnRoundAnnouncement
+	);
+
+roundNumberSelect = onRoundAnnouncement:Select()
+
+for roundNumber = 1, 26 do
+	local globals = _G;
+
+	globals["onRoundStartRound" .. tostring(roundNumber)] = roundNumberSelect:Add(
+		function(context)
+			return context.Engine:GetRound() == roundNumber - 1;
+		end
+		):Target(TargetAllPlayers):Response(
+			{
+				Sound = 'multiplayer\audio\announcer\announcer_breakout_roundstartround' .. tostring(roundNumber);
+			});
+end
+
+--
+-- BlindSide (onBlindSide defined in default events)
+--
+
+blindSideResponse = onBlindSide:Target(KillingPlayer):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_finalassassinationalt2',
+		Medal = 'blind_side'
+	}); 
+
+--
+-- Extinction
+--
+
+extinctionAccumulator = root:CreatePlayerAccumulator();
+
+extinctionCounter = onEnemyPlayerKill:PlayerAccumulator(
+	extinctionAccumulator,
+	function(context)
+		return context.KillingPlayer;
+	end
+	);
+
+onExtinction = extinctionCounter:Filter(
+	function(context)
+		return extinctionAccumulator:GetValue(context.KillingPlayer) == 4;
+	end
+	);
+
+onRoundStart:ResetAccumulator(extinctionAccumulator);
+
+extinctionResponse = onExtinction:Target(KillingPlayer):Response(
+	{
+		Medal = 'extinction'
+	});
+
+--
+-- Last Man Kill Accumulator and Responses
+--
+
+function KillingPlayerHasNoAliveTeammates(context)
+	return table.all(context:GetAllPlayers(),
+		function(player)
+			if player == context.KillingPlayer then
+				return true;
+			end
+			return not PlayerIsAlive(player) or not player:IsFriendly(context.KillingPlayer);
+		end);
+end
+
+onLastManKill = onKill:Filter(KillingPlayerHasNoAliveTeammates):Emit(
+	function (context)
+		context.LastManStanding = context.KillingPlayer;
+	end
+	);
+	
+function LastManStanding(context)
+	return context.LastManStanding;
+end
+lastManKillAccumulator = root:CreatePlayerAccumulator();
+	
+onLastManKillCounter = onLastManKill:PlayerAccumulator(
+	lastManKillAccumulator,
+	function (context)
+		return context.LastManStanding;
+	end
+	);
+	
+onPlayerDeath:ResetPlayerAccumulator(
+	lastManKillAccumulator,
+	 function (context)
+	 	return context.DeadPlayer;
+	 end
+	 );
+
+onRoundStart:ResetAccumulator(lastManKillAccumulator);
+	 
+onEndOfRoundForLastMan = onRoundEnd:Emit(
+	function (context)
+		context.LastManStanding = table.first(context:GetAllPlayers(),
+				function (player)
+					return lastManKillAccumulator:GetValue(player) > 0;
+				end
+				);
+	end
+	):Filter(
+	function (context)
+		return context.LastManStanding ~= nil;
+	end
+	);
+	 
+lastManKillTypeSelect = onEndOfRoundForLastMan:Select();	
+	 
+on1v4Kill = lastManKillTypeSelect:Add(
+	function (context)
+		return lastManKillAccumulator:GetValue(context.LastManStanding) == 4;
+	end
+	);
+	
+superfectaResponse = on1v4Kill:Target(LastManStanding):Response(
+	{
+		Medal = 'bk_one_on_four_win'
+	});
+	
+on1v3Kill = lastManKillTypeSelect:Add(
+	function (context)
+		return lastManKillAccumulator:GetValue(context.LastManStanding) == 3;
+	end
+	);
+	
+trifectaResponse = on1v3Kill:Target(LastManStanding):Response(
+	{
+		Medal = 'bk_one_on_three_win'
+	});
+
+on1v2Kill = lastManKillTypeSelect:Add(
+	function (context)
+		return lastManKillAccumulator:GetValue(context.LastManStanding) == 2;
+	end
+	);
+	
+bifectaResponse = on1v2Kill:Target(LastManStanding):Response(
+	{
+		Medal = 'bk_one_on_two_win'
+	});	
+
+on1v1Kill = lastManKillTypeSelect:Add(
+	function (context)
+		return lastManKillAccumulator:GetValue(context.LastManStanding) == 1;
+	end
+	); 	
+
+vanquisherResponse = on1v1Kill:Target(LastManStanding):Response(
+	{
+		Medal = 'bk_one_on_one_win'
+	});
+
+--
+-- Last man kill impulse event for flexible stats
+--
+
+onLastManKill:Target(LastManStanding):Response(
+	{
+		ImpulseEvent = 'impulse_kill_as_last_man'
+	});
+
+-- 
+-- Triple Threat
+--
+
+tripleThreatGunAccumulator = root:CreatePlayerAccumulator();
+
+tripleThreatGrenadeAccumulator = root:CreatePlayerAccumulator();
+
+tripleThreatMeleeAccumulator = root:CreatePlayerAccumulator();
+
+--counters
+tripleThreatGunCounter = onEnemyPlayerKill:Filter(
+	function(context)
+		return context.DamageType == bulletDamageType;
+	end
+	):PlayerAccumulator(
+		tripleThreatGunAccumulator,
+		function(context)
+			return context.KillingPlayer;
+		end
+		);
+
+tripleThreatMeleeCounter = onEnemyPlayerKill:Filter(
+	function(context)
+		return context.DamageType == meleeDamageType;
+	end
+	):PlayerAccumulator(
+		tripleThreatMeleeAccumulator,
+		function(context)
+			return context.KillingPlayer;
+		end
+		);
+
+tripleThreatGrenadeCounter = onEnemyPlayerKill:Filter(
+	function(context)
+		return table.any(GrenadeDamageSources,
+			function(damageSource)
+				return context.DamageSource == damageSource;
+			end
+			);
+	end
+	):PlayerAccumulator(
+		tripleThreatGrenadeAccumulator,
+		function(context)
+			return context.KillingPlayer;
+		end
+		);
+
+--resets
+onRoundStart:ResetAccumulator(tripleThreatGunAccumulator);
+
+onRoundStart:ResetAccumulator(tripleThreatGrenadeAccumulator);
+
+onRoundStart:ResetAccumulator(tripleThreatMeleeAccumulator);
+
+--event
+onTripleThreat = onEnemyPlayerKill:Filter(
+	function(context)
+		return tripleThreatGunAccumulator:GetValue(context.KillingPlayer) >= 1
+		and tripleThreatGrenadeAccumulator:GetValue(context.KillingPlayer) >= 1
+		and tripleThreatMeleeAccumulator:GetValue(context.KillingPlayer) >= 1
+	end
+	);
+
+tripleThreatResponse = onTripleThreat:Target(KillingPlayer):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_triplethreat',
+		Medal = 'triple_threat'
+	});
+
+	
+--	
+-- Round Won/Lost
+--
+
+__OnBreakoutRoundEnd = Delegate:new();
+
+onBreakoutRoundEnd = root:AddCallback(
+	__OnBreakoutRoundEnd
+	);	
+
+roundEndFindWinningPlayers = onBreakoutRoundEnd:Emit(
+	function(context)
+		local alivePlayers = table.filtervalues(context:GetAllPlayers(),
+			function(player)
+				local playerUnit = player:GetUnit();
+
+				return playerUnit ~= nil and playerUnit:IsAlive();
+			end
+			);
+
+		if alivePlayers == nil then
+			return nil;
+		end
+
+		-- if there are any hostile players alive, the round is a draw.
+		for _ , player in pairs(alivePlayers) do
+			local hostilePlayerAlive = table.any(alivePlayers,
+				function(otherPlayer)
+					return player:IsHostile(otherPlayer);
+				end
+				);
+
+			if hostilePlayerAlive then
+				return nil;
+			end
+		end
+
+		context.WinningPlayers = table.filter(context:GetAllPlayers(),
+			function(player)
+				return player:IsFriendly(alivePlayers[1]);
+			end
+			);
+	end
+	);
+
+roundEndSelect = roundEndFindWinningPlayers:Select();
+
+onBreakoutRoundWon = roundEndSelect:Add(
+	function(context)
+		return context.WinningPlayers ~= nil;
+	end
+	);
+
+roundWonSelect = onBreakoutRoundWon:Select();
+
+roundWonBigWin = roundWonSelect:Add(
+	function(context)
+		return table.all(context.WinningPlayers, 
+			function(player)
+				local playerUnit = player:GetUnit();
+
+				return playerUnit ~= nil and playerUnit:IsAlive();
+			end
+			);
+	end
+	);
+
+roundWonCloseWin = roundWonSelect:Add(
+	function(context)
+		local indexedAlivePlayers = table.filtervalues(context.WinningPlayers,
+			function(player)
+				local playerUnit = player:GetUnit();
+
+				return playerUnit ~= nil and playerUnit:IsAlive(); 
+			end
+			);
+
+		return #indexedAlivePlayers <= 1;
+	end
+	);
+
+roundWonStandard = roundWonSelect:Add();
+
+-- Responses
+roundWonBigWinWinnersResponse = roundWonBigWin:Target(WinningPlayers):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_roundwonnodeaths'
+	}):Response(
+	{
+		Sound = 'multiplayer\audio\music\130_mus_mp_global\music_mp_global_roundoverbig_win'
+	});
+
+roundWonBigWinLosersResponse = roundWonBigWin:Target(LosingPlayers):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_roundoverroundlost'
+	}):Response(
+	{
+		Sound = 'multiplayer\audio\music\130_mus_mp_global\music_mp_global_roundoverbig_lose'
+	});	
+
+roundWonCloseWinWinnersResponse = roundWonCloseWin:Target(WinningPlayers):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_shared_roundwon'
+	}):Response(
+	{
+		Sound = 'multiplayer\audio\music\130_mus_mp_global\music_mp_global_roundoverclose_win'
+	});
+
+roundWonCloseWinLosersResponse = roundWonCloseWin:Target(LosingPlayers):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_roundoverroundlost'
+	}):Response(
+	{
+		Sound = 'multiplayer\audio\music\130_mus_mp_global\music_mp_global_roundoverclose_lose'
+	});	
+
+roundWonStandardWinnersResponse = roundWonStandard:Target(WinningPlayers):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_shared_roundwon'
+	}):Response(
+	{
+		Sound = 'multiplayer\audio\music\130_mus_mp_global\music_mp_global_roundover_win'
+	});
+	
+roundWonStandardLosersResponse = roundWonStandard:Target(LosingPlayers):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_roundoverroundlost'
+	}):Response(
+	{
+		Sound = 'multiplayer\audio\music\130_mus_mp_global\music_mp_global_roundover_lose'
+	});	
+
+roundWonImpulse = onBreakoutRoundWon:Target(WinningPlayers):Response(
+	{
+		ImpulseEvent = 'impulse_round_won'
+	});
+	
+--
+-- Round Won via Flag Capture
+--
+roundWonFlagCaptureAccumulator = root:CreateAccumulator();
+
+onRoundStart:ResetAccumulator(roundWonFlagCaptureAccumulator);
+
+roundWonFlagCaptureCounter = onFlagCapture:Accumulator(roundWonFlagCaptureAccumulator);
+
+roundWonFlagCaptureResponse = onFlagCapture:Target(PlayersWithDesignator):Response(
+	{
+		Sound = 'multiplayer\audio\music\130_mus_mp_global\music_mp_global_roundover_win',
+		ImpulseEvent = 'impulse_round_won'
+	}):Response(
+	{
+		Perspective = GameEventPerspective.Personal,
+		Sound = 'multiplayer\audio\announcer\announcer_shared_roundwon'
+	});
+	
+roundLostFlagCaptureResponse = onFlagCapture:Target(PlayersWithoutDesignator):Response(
+	{
+		Sound = 'multiplayer\audio\music\130_mus_mp_global\music_mp_global_roundover_lose'
+	}):Response(
+	{
+		Perspective = GameEventPerspective.Personal,
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_roundoverroundlost'
+	});
+	
+	
+-- Round Tied
+
+onBreakoutRoundTie = roundEndSelect:Add(
+	function(context)
+		return roundWonFlagCaptureAccumulator:GetValue() < 1;
+	end
+	);
+
+roundTiedBreakoutResponse = onBreakoutRoundTie:Target(TargetAllPlayers):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_roundtied'
+	}):Response(
+	{
+		Sound = 'multiplayer\audio\music\130_mus_mp_global\music_mp_global_roundover_neutral'
+	});	
+
+--
+-- Round won facing elimination impulse event for flexible stats
+--
+
+function HostileToWinningTeamOneWinFromVictory(context)
+	if(context.WinningPlayers == nil) then
+		return false;
+	end
+
+	local firstWinningPlayer = table.first(context.WinningPlayers, 
+	function(player)
+		return player;
+	end
+	);
+
+	return firstWinningPlayer ~= nil and table.any(context:GetAllPlayers(),
+		function(player)
+			local variant = nil;
+			
+			context.Engine:VisitVariant(
+				function (currentVariant)
+					variant = currentVariant
+				end
+			);
+
+			return player:IsHostile(firstWinningPlayer) and player:GetRoundsWonCount() == variant:GetMiscellaneousOptions():GetEarlyVictoryRoundCount() - 1;
+		end
+		);
+end
+
+
+onBreakoutRoundWon:Filter(HostileToWinningTeamOneWinFromVictory):Target(WinningPlayers):Response(
+	{
+		ImpulseEvent = 'impulse_round_won_facing_elimination'
+	});
+	
+onFlagCapture:Filter(HostileToWinningTeamOneWinFromVictory):Target(WinningPlayers):Response(
+	{
+		ImpulseEvent = 'impulse_round_won_facing_elimination'
+	});
+
+--
+-- Fast Break
+--
+
+local fastBreakSeconds = 15.0; --10 seconds to the user (5 second round start buffer)
+
+fastBreakAccumulator = root:CreateAccumulator(fastBreakSeconds);
+
+onFastBreakRoundStart = onRoundStart:Accumulator(fastBreakAccumulator);
+
+onFastBreak = onEnemyPlayerKill:Filter(
+	function(context)
+		return fastBreakAccumulator:GetValue() == 1
+	end
+	);
+
+onBreakoutRoundEnd:ResetAccumulator(fastBreakAccumulator);
+
+fastBreakResponse = onFastBreak:Target(KillingPlayer):Response(
+	{
+		Sound = 'multiplayer\audio\announcer\announcer_breakout_quickkill',
+		Medal = 'fast_break'
+	});
+	
+--
+-- Enemies/Teammates Alive Kill SFX
+--
+
+onRegularEnemyBreakoutKill = onEnemyPlayerKill:Filter(
+	function (context)
+		local aliveHostileBreakoutPlayers = table.filtervalues(context:GetAllPlayers(),
+			function (player)
+				return PlayerIsAlive(player) and player:IsHostile(context.KillingPlayer);
+			end
+			);
+		return #aliveHostileBreakoutPlayers >= 2;
+	end
+	);
+	
+regularEnemyKillBreakoutKillerResponse = onRegularEnemyBreakoutKill:Target(KillingPlayer):Response(
+	{
+		Sound = 'multiplayer\audio\sound_effects\sound_effects_breakout_enemydie'
+	});
+	
+regularEnemyKillBreakoutKillTeamResponse = onRegularEnemyBreakoutKill:Target(FriendlyToKillingPlayer):Response(
+	{
+		Sound = 'multiplayer\audio\sound_effects\sound_effects_breakout_enemydie'
+	});
+	
+regularEnemyKillBreakoutDeadTeamResponse = onRegularEnemyBreakoutKill:Target(HostileToKillingPlayer):Response(
+	{
+		Sound = 'multiplayer\audio\sound_effects\sound_effects_breakout_teammatedie'
+	});
+	
+onLastEnemyBreakoutKill = onEnemyPlayerKill:Filter(
+	function (context)
+		local aliveHostileBreakoutPlayers = table.filtervalues(context:GetAllPlayers(),
+			function (player)
+				return PlayerIsAlive(player) and player:IsHostile(context.KillingPlayer);
+			end
+			);
+		return #aliveHostileBreakoutPlayers == 1;
+	end
+	);
+	
+lastEnemyKillBreakoutKillerResponse = onLastEnemyBreakoutKill:Target(KillingPlayer):Response(
+	{
+		Sound = 'multiplayer\audio\sound_effects\sound_effects_breakout_lastenemy'
+	});
+	
+lastEnemyKillBreakoutKillTeamResponse = onLastEnemyBreakoutKill:Target(FriendlyToKillingPlayer):Response(
+	{
+		Sound = 'multiplayer\audio\sound_effects\sound_effects_breakout_lastenemy'
+	});
+	
+lastEnemyKillBreakoutDeadTeamResponse = onLastEnemyBreakoutKill:Target(HostileToKillingPlayer):Response(
+	{
+		Sound = 'multiplayer\audio\sound_effects\sound_effects_breakout_lastteammate'
+	});
+	
+-- Impulse Events for services .  This should not display any fanfare
+roundWinningKillImpulse = onLastEnemyBreakoutKill:Target(KillingPlayer):Response(
+	{
+		ImpulseEvent = 'impulse_round_winning_kill'
+	});
+
+onLastEnemyBreakoutKill:Filter(
+	function(context)
+		return context.DeadPlayer:IsFlagCarrier()
+	end
+	):Target(KillingPlayer):Response(
+	{
+		ImpulseEvent = 'impulse_round_winning_carrier_kill'
+	});
+
+killsInBreakoutRoundAccumulator = root:CreateAccumulator();
+
+onKillsInRound = onEnemyPlayerKill:Accumulator(killsInBreakoutRoundAccumulator);
+
+onFirstKillInRound = onKillsInRound:Filter(
+	function (context)
+		return killsInBreakoutRoundAccumulator:GetValue() == 1;
+	end
+	);
+
+onRoundStart:ResetAccumulator(killsInBreakoutRoundAccumulator);
+
+firstEnemyBreakoutKillImpulse = onFirstKillInRound:Target(KillingPlayer):Response(
+	{
+		ImpulseEvent = 'impulse_first_kill_in_round'
+	});
+	

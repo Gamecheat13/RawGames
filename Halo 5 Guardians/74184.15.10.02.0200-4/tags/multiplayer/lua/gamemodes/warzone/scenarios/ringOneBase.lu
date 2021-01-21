@@ -1,0 +1,183 @@
+
+
+
+--
+-- Ring-Specific Warzone Intro
+--
+
+__OnWarzoneIntro = Delegate:new();
+
+onWarzoneIntro = root:AddCallback(
+	__OnWarzoneIntro
+	);
+	
+__OnWarzoneBaseIntro = Delegate:new();
+
+onWarzoneBaseIntro = root:AddCallback(
+	__OnWarzoneBaseIntro
+	);
+
+--
+-- Ring One Base Intro
+--
+
+__OnWarzoneOneBaseIntro = Delegate:new();
+onWarzoneOneBaseIntro = root:AddCallback(
+	__OnWarzoneOneBaseIntro
+	);
+
+warzoneOneBaseIntroResponseAtt = onWarzoneOneBaseIntro:Target(PlayersOnAttackingTeam):Response(
+	{
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_onebasearcintroatt'
+	});
+
+warzoneOneBaseIntroResponseDef = onWarzoneOneBaseIntro:Target(PlayersOnDefendingTeam):Response(
+	{
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_onebasearcintrodef'
+	});
+
+--
+-- Initial Spawn
+--
+
+__OnWarzoneSpawned = Delegate:new();
+
+onWarzoneSpawned = root:AddCallback(
+	__OnWarzoneSpawned
+	);
+
+warzoneBaseIntroSpawnedResponseAtt = onWarzoneSpawned:Target(PlayersOnAttackingTeam):Response(
+	{
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_onebaseringstartatt'
+	});
+
+
+warzoneBaseIntroSpawnedResponseDef = onWarzoneSpawned:Target(PlayersOnDefendingTeam):Response(
+	{
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_onebaseringstartdef'
+	});
+
+
+--
+-- Ring Base Captured Events
+--
+	
+onBaseCapturedSelect = onBaseCaptured:Select();
+
+
+
+--
+-- Ring One-Base Captured Events
+--
+
+-- The Spire
+
+onRingOneBaseSpireBaseCaptured = onBaseCapturedSelect:Add(BaseIsNamed('ring_onebase_fortress'));
+
+
+onRingOneBaseSpireBaseCapturedCapturing = onRingOneBaseSpireBaseCaptured:Target(CapturingPlayers):Response(
+	{
+		Fanfare = FanfareDefinitions.QuestFeed,
+		FanfareText = 'ring_onebase_spire_captured_fanfare',
+		TeamDesignator = DesignatorProperty, 		
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_spirecapturedfriendly'
+	}):Response(
+	{
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_onebasenextcapturearmoryatt'
+	});
+
+onRingOneBaseSpireBaseCapturedFriendly = onRingOneBaseSpireBaseCaptured:Target(FriendlyToCapturingPlayers):Response(
+	{
+		Fanfare = FanfareDefinitions.QuestFeed,
+		FanfareText = 'ring_onebase_spire_captured_friendly_fanfare',
+		TeamDesignator = DesignatorProperty, 
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_spirecapturedfriendly'
+	}):Response(
+	{
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_onebasenextcapturearmoryatt'
+	});
+
+onRingOneBaseSpireBaseCapturedHostile = onRingOneBaseSpireBaseCaptured:Target(PlayersWithoutDesignator):Response(
+	{
+		Fanfare = FanfareDefinitions.QuestFeed,
+		FanfareText = 'ring_onebase_spire_captured_enemy_fanfare',
+		TeamDesignator = DesignatorProperty,
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_onebasespirelost'
+	}):Response(
+	{
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_onebasenextcapturearmorydef'
+	});
+
+-- The Armory
+
+onRingOneBaseArmoryCaptured = onBaseCapturedSelect:Add(BaseIsNamed('ring_onebase_armory'));
+
+onRingOneBaseArmoryCapturedCapturing = onRingOneBaseArmoryCaptured:Target(CapturingPlayers):Response(
+	{
+		Fanfare = FanfareDefinitions.QuestFeed,
+		FanfareText = 'ring_onebase_armory_captured_fanfare',
+		TeamDesignator = DesignatorProperty, 
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_armorycapturedfriendly'
+	});
+
+onRingOneBaseArmoryCapturedFriendly = onRingOneBaseArmoryCaptured:Target(FriendlyToCapturingPlayers):Response(
+	{
+		Fanfare = FanfareDefinitions.QuestFeed,
+		FanfareText = 'ring_onebase_armory_captured_friendly_fanfare',
+		TeamDesignator = DesignatorProperty, 
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_armorycapturedfriendly'
+	});
+
+onRingOneBaseArmoryCapturedHostile = onRingOneBaseArmoryCaptured:Target(PlayersWithoutDesignator):Response(
+	{
+		Fanfare = FanfareDefinitions.QuestFeed,
+		FanfareText = 'ring_onebase_armory_captured_enemy_fanfare',
+		TeamDesignator = DesignatorProperty,
+		Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_onebasearmorylost'
+	});
+
+
+
+--
+-- Defend
+--
+
+defendResponses =
+{	
+	-- Blue Home Base
+	{
+		name = "attacker_homebase",
+
+		responses = 
+		{
+			beginResponse =
+			{
+				Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_baseunderattackhomebase'
+			},
+
+			successResponse =
+			{
+				Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_baseunderattackdefendedhomebase'
+			},
+		},
+	},
+	
+	-- Red Home Base
+	{
+		name = "defender_homebase",
+
+		responses = 
+		{
+			beginResponse =
+			{
+				Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_baseunderattackhomebase'
+			},
+
+			successResponse =
+			{
+				Sound = 'multiplayer\audio\warzonecommander\warzonecommander_warzone_baseunderattackdefendedhomebase'
+			},
+		},
+	},
+}
+	
