@@ -1,0 +1,2089 @@
+Particle
+{
+	name				puff
+
+	flags				useAlpha useRandomRotationDelta useRandomVelocity relative
+
+	spawnFlags			axisFromSphere frustumCull
+
+	count				4
+
+	life				4000 6000
+
+	delay				800
+
+	spawnRange			0 800
+
+	origin				0 0 -40 0 0 -20
+
+	radius				5
+
+	height				5
+
+	rotation			0 360
+
+	gravity				3 0
+
+	spawnFrustumCullRadius	100.000000
+
+	rgb
+	{
+		curve
+		[
+			0 0.75 0.7382 0.7059
+			1 0.75 0.7382 0.7059
+		]
+	}
+
+	rgbRand
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0.4406 0 0
+			0.1839 0.2426 0 0
+			0.4425 0.09901 0 0
+			0.7534 0.0219 0 0
+			1 0 0 0
+		]
+	}
+
+	alphaRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.03125 0 0
+			0.03779 0.3544 0 0
+			0.1163 0.5506 0 0
+			0.2694 0.7117 0 0
+			0.6164 0.8018 0 0
+			1 0.75 0 0
+		]
+
+		scale			32
+	}
+
+	sizeRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2Rand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	lengthRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDelta
+	{
+		curve
+		[
+			0 -0.5 0 0
+			1 -0.5 0 0
+		]
+
+		scale			12
+	}
+
+	rotationDeltaRand
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+	}
+
+	velocityX
+	{
+		curve
+		[
+			0 0.1667 0 0
+			1 0 0 0
+		]
+
+		scale			30
+	}
+
+	velocityY
+	{
+		curve
+		[
+			0 -0.5 0 0
+			1 -0.5 0 0
+		]
+
+		scale			30
+	}
+
+	velocityZ
+	{
+		curve
+		[
+			0 -0.5 0 0
+			1 -0.5 0 0
+		]
+
+		scale			30
+	}
+
+	velocityXRand
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityYRand
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+	}
+
+	velocityZRand
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+	}
+
+	velocity2X
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Y
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Z
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2XRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2YRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2ZRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	shaders
+	[
+		gfx_whisp_spiral
+	]
+}
+
+Emitter
+{
+	name				wood_splinter
+
+	flags				useModel useBBox usePhysics useRandomSize useRandomVelocity relative
+
+	spawnFlags			orgOnCylinder axisFromSphere frustumCull
+
+	count				5
+
+	life				3000 2000
+
+	delay				800
+
+	spawnRange			0 800
+
+	bounce				0.1 0.5
+
+	min					-2 -2 -2
+
+	max					2 2 2
+
+	origin				80 -2 -2 0 2 2
+
+	angleDelta			-200 -200 0 300 300 0
+
+	gravity				-800 -900
+
+	spawnFrustumCullRadius	200.000000
+
+	rgb
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	rgbRand
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	alphaRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 1 0 0
+			0.8634 1 0 0
+			0.9535 0.9051 0 0
+			0.9797 0.6772 0 0
+			1 0 0 0
+		]
+
+		scale			0.5
+	}
+
+	sizeRand
+	{
+		curve
+		[
+			0 0.6266 0 0
+			0.8634 0.6266 0 0
+			0.939 0.5696 0 0
+			0.9855 0.443 0 0
+			1 0 0 0
+		]
+	}
+
+	size2
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2Rand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	lengthRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDelta
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDeltaRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityX
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+
+		scale			700
+	}
+
+	velocityY
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+
+		scale			200
+	}
+
+	velocityZ
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+
+		scale			200
+	}
+
+	velocityXRand
+	{
+		curve
+		[
+			0 0.04902 0 0
+			1 0.05392 0 0
+		]
+	}
+
+	velocityYRand
+	{
+		curve
+		[
+			0 -0.5 0 0
+			1 -0.5 0 0
+		]
+	}
+
+	velocityZRand
+	{
+		curve
+		[
+			0 -0.5 0 0
+			1 -0.5 0 0
+		]
+	}
+
+	velocity2X
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Y
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Z
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2XRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2YRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2ZRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	models
+	[
+		xmodel/prop_wood_splinter01
+		xmodel/prop_wood_splinter02
+	]
+}
+
+Emitter
+{
+	name				topBrace
+
+	flags				useModel useBBox usePhysics useRandomSize useRandomVelocity relative
+
+	spawnFlags			axisFromSphere frustumCull
+
+	life				3000 2000
+
+	delay				800
+
+	spawnRange			0 800
+
+	bounce				0.1 0.5
+
+	min					-2 -2 -2
+
+	max					2 2 2
+
+	origin				0 -2 -2 0 2 2
+
+	angle				0 90 90
+
+	angleDelta			-80 -80 -80 80 80 80
+
+	gravity				-800 -900
+
+	spawnFrustumCullRadius	100.000000
+
+	rgb
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	rgbRand
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	alphaRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 1 0 0
+			0.8634 1 0 0
+			0.9535 0.9051 0 0
+			0.9797 0.6772 0 0
+			1 0 0 0
+		]
+	}
+
+	sizeRand
+	{
+		curve
+		[
+			0 0.6266 0 0
+			0.8634 0.6266 0 0
+			0.939 0.5696 0 0
+			0.9855 0.443 0 0
+			1 0 0 0
+		]
+	}
+
+	size2
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2Rand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	lengthRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDelta
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDeltaRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityX
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+
+		scale			1200
+	}
+
+	velocityY
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+
+		scale			1200
+	}
+
+	velocityZ
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+
+		scale			1200
+	}
+
+	velocityXRand
+	{
+		curve
+		[
+			0 -0.5 0 0
+			1 -0.5 0 0
+		]
+	}
+
+	velocityYRand
+	{
+		curve
+		[
+			0 -0.5 0 0
+			1 -0.5 0 0
+		]
+	}
+
+	velocityZRand
+	{
+		curve
+		[
+			0 -0.5 0 0
+			1 -0.5 0 0
+		]
+	}
+
+	velocity2X
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Y
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Z
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2XRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2YRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2ZRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	models
+	[
+		xmodel/trenchframe_piece02
+	]
+}
+
+Emitter
+{
+	name				topBrace2
+
+	flags				useModel useBBox usePhysics useRandomSize useRandomVelocity relative
+
+	spawnFlags			axisFromSphere frustumCull
+
+	life				3000 2000
+
+	delay				900
+
+	spawnRange			0 500
+
+	bounce				0.1 0.5
+
+	min					-2 -2 -2
+
+	max					2 2 2
+
+	origin				40 -2 -2 40 2 2
+
+	angle				0 90 90
+
+	angleDelta			-80 -80 -80 80 80 80
+
+	gravity				-800 -900
+
+	spawnFrustumCullRadius	800.000000
+
+	rgb
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	rgbRand
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	alphaRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 1 0 0
+			0.8634 1 0 0
+			0.9535 0.9051 0 0
+			0.9797 0.6772 0 0
+			1 0 0 0
+		]
+	}
+
+	sizeRand
+	{
+		curve
+		[
+			0 0.6266 0 0
+			0.8634 0.6266 0 0
+			0.939 0.5696 0 0
+			0.9855 0.443 0 0
+			1 0 0 0
+		]
+	}
+
+	size2
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2Rand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	lengthRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDelta
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDeltaRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityX
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+
+		scale			1200
+	}
+
+	velocityY
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+
+		scale			1200
+	}
+
+	velocityZ
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+
+		scale			1200
+	}
+
+	velocityXRand
+	{
+		curve
+		[
+			0 -0.5 0 0
+			1 -0.5 0 0
+		]
+	}
+
+	velocityYRand
+	{
+		curve
+		[
+			0 -0.5 0 0
+			1 -0.5 0 0
+		]
+	}
+
+	velocityZRand
+	{
+		curve
+		[
+			0 -0.5 0 0
+			1 -0.5 0 0
+		]
+	}
+
+	velocity2X
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Y
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Z
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2XRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2YRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2ZRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	models
+	[
+		xmodel/trenchframe_piece02
+	]
+}
+
+Emitter
+{
+	name				smallpiece
+
+	flags				useModel useBBox usePhysics useRandomSize useRandomVelocity relative
+
+	spawnFlags			axisFromSphere frustumCull
+
+	life				3000 2000
+
+	delay				500
+
+	spawnRange			0 800
+
+	bounce				0.1 0.5
+
+	min					-2 -2 -2
+
+	max					2 2 2
+
+	origin				80 -2 -2 80 2 2
+
+	angle				0 90 90
+
+	angleDelta			-80 -80 -80 80 80 80
+
+	gravity				-800 -900
+
+	spawnFrustumCullRadius	100.000000
+
+	rgb
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	rgbRand
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	alphaRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 1 0 0
+			0.8634 1 0 0
+			0.9535 0.9051 0 0
+			0.9797 0.6772 0 0
+			1 0 0 0
+		]
+	}
+
+	sizeRand
+	{
+		curve
+		[
+			0 0.6266 0 0
+			0.8634 0.6266 0 0
+			0.939 0.5696 0 0
+			0.9855 0.443 0 0
+			1 0 0 0
+		]
+	}
+
+	size2
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2Rand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	lengthRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDelta
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDeltaRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityX
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+
+		scale			1200
+	}
+
+	velocityY
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+
+		scale			1200
+	}
+
+	velocityZ
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+
+		scale			1200
+	}
+
+	velocityXRand
+	{
+		curve
+		[
+			0 -0.5 0 0
+			1 -0.5 0 0
+		]
+	}
+
+	velocityYRand
+	{
+		curve
+		[
+			0 -0.5 0 0
+			1 -0.5 0 0
+		]
+	}
+
+	velocityZRand
+	{
+		curve
+		[
+			0 -0.5 0 0
+			1 -0.5 0 0
+		]
+	}
+
+	velocity2X
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Y
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Z
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2XRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2YRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2ZRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	models
+	[
+		xmodel/trenchframe_piece01
+	]
+}
+
+Emitter
+{
+	name				tallarm
+
+	flags				useModel useBBox usePhysics useRandomSize useRandomVelocity relative
+
+	spawnFlags			axisFromSphere frustumCull
+
+	life				3000 2000
+
+	delay				800
+
+	spawnRange			0 800
+
+	bounce				0.1 0.5
+
+	min					-2 -2 -2
+
+	max					2 2 2
+
+	origin				0 0 -20
+
+	angleDelta			-80 -80 -80 80 80 80
+
+	gravity				-800 -900
+
+	spawnFrustumCullRadius	100.000000
+
+	rgb
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	rgbRand
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	alphaRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 1 0 0
+			0.8634 1 0 0
+			0.9535 0.9051 0 0
+			0.9797 0.6772 0 0
+			1 0 0 0
+		]
+	}
+
+	sizeRand
+	{
+		curve
+		[
+			0 0.6266 0 0
+			0.8634 0.6266 0 0
+			0.939 0.5696 0 0
+			0.9855 0.443 0 0
+			1 0 0 0
+		]
+	}
+
+	size2
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2Rand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	lengthRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDelta
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDeltaRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityX
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+
+		scale			1200
+	}
+
+	velocityY
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+
+		scale			1200
+	}
+
+	velocityZ
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+
+		scale			1200
+	}
+
+	velocityXRand
+	{
+		curve
+		[
+			0 -0.5 0 0
+			1 -0.5 0 0
+		]
+	}
+
+	velocityYRand
+	{
+		curve
+		[
+			0 -0.5 0 0
+			1 -0.5 0 0
+		]
+	}
+
+	velocityZRand
+	{
+		curve
+		[
+			0 -0.5 0 0
+			1 -0.5 0 0
+		]
+	}
+
+	velocity2X
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Y
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Z
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2XRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2YRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2ZRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	models
+	[
+		xmodel/trenchframe_piece02
+	]
+}
+
+Emitter
+{
+	name				topBrace3
+
+	flags				useModel useBBox usePhysics useRandomSize useRandomVelocity relative
+
+	spawnFlags			axisFromSphere frustumCull
+
+	life				3000 2000
+
+	delay				700
+
+	spawnRange			0 800
+
+	bounce				0.1 0.5
+
+	min					-2 -2 -2
+
+	max					2 2 2
+
+	origin				60 -2 -2 60 2 2
+
+	angle				0 90 90
+
+	angleDelta			-80 -80 -80 80 80 80
+
+	gravity				-800 -900
+
+	spawnFrustumCullRadius	100.000000
+
+	rgb
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	rgbRand
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	alphaRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 1 0 0
+			0.8634 1 0 0
+			0.9535 0.9051 0 0
+			0.9797 0.6772 0 0
+			1 0 0 0
+		]
+	}
+
+	sizeRand
+	{
+		curve
+		[
+			0 0.6266 0 0
+			0.8634 0.6266 0 0
+			0.939 0.5696 0 0
+			0.9855 0.443 0 0
+			1 0 0 0
+		]
+	}
+
+	size2
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2Rand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	lengthRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDelta
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDeltaRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityX
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+
+		scale			1200
+	}
+
+	velocityY
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+
+		scale			1200
+	}
+
+	velocityZ
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+
+		scale			1200
+	}
+
+	velocityXRand
+	{
+		curve
+		[
+			0 -0.5 0 0
+			1 -0.5 0 0
+		]
+	}
+
+	velocityYRand
+	{
+		curve
+		[
+			0 -0.5 0 0
+			1 -0.5 0 0
+		]
+	}
+
+	velocityZRand
+	{
+		curve
+		[
+			0 -0.5 0 0
+			1 -0.5 0 0
+		]
+	}
+
+	velocity2X
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Y
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Z
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2XRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2YRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2ZRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	models
+	[
+		xmodel/trenchframe_piece02
+	]
+}
+
+FxRunner
+{
+	name				impacts
+
+	spawnFlags			orgOnCylinder axisFromSphere randrotaroundfwd evenDistribution frustumCull
+
+	count				5 10
+
+	delay				0 800
+
+	spawnRange			0 800
+
+	origin				80 0 0 0 0 0
+
+	spawnFrustumCullRadius	100.000000
+
+	rgb
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	rgbRand
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	alphaRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	sizeRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2Rand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	lengthRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDelta
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDeltaRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityX
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityY
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityZ
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityXRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityYRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityZRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2X
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Y
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Z
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2XRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2YRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2ZRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	playfx
+	[
+		/fx/impacts/large_woodhit
+	]
+}

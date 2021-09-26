@@ -1,0 +1,13 @@
+{
+	stateMap "nofog";
+
+	vertex.position = code.position;
+
+	vertexShader 2.0 "shadowcookie_caster.hlsl"
+	{
+	}
+
+	pixelShader 2.0 "shadowcookie_caster.hlsl"
+	{
+	}
+}

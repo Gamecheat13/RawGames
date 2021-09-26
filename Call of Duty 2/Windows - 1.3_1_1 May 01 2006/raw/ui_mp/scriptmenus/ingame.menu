@@ -1,0 +1,344 @@
+#include "ui_mp/menudef.h"
+
+#define ORIGIN_TITLE	48 64
+#define ORIGIN_CHOICE1	80 84
+#define ORIGIN_CHOICE2	80 108
+#define ORIGIN_CHOICE3	80 132
+#define ORIGIN_CHOICE4	80 156
+#define ORIGIN_CHOICE5	80 180
+
+{
+	menuDef
+	{
+		name			"ingame"
+		rect			0 0 640 480
+		focuscolor		GLOBAL_FOCUSED_COLOR
+		style			WINDOW_STYLE_EMPTY
+		blurWorld		5.0
+		onEsc 
+		{
+			close ingame;
+		}
+
+		// Gradient
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			//rect			-107 0 554 480
+			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			background		"gradient"
+			visible			1
+			decoration
+		}
+
+		#include "ui/bars.menu"
+
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			visible			1
+			origin			ORIGIN_TITLE
+			forecolor		1 1 1 1
+			text			"@MENU_OPTIONS"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_HEADER_SIZE
+			decoration
+		}
+		
+// MENU CHOICES
+		execKey "1" { play "mouse_click"; scriptMenuResponse "changeweapon" }
+		execKey "2" { play "mouse_click"; scriptMenuResponse "changeteam" }
+		execKey "3" { play "mouse_click"; scriptMenuResponse "muteplayer" }
+		execKey "4" { play "mouse_click"; scriptMenuResponse "callvote" }
+		execKey "5" { play "mouse_click"; close ingame; open leavegame }
+		
+		itemDef
+		{
+			name			"button_changeweapon"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE1
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"@MPUI_1_CHANGE_WEAPON"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			dvartest		"ui_allow_weaponchange"
+			showDvar		{ "1" }
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "changeweapon";
+			}
+			onFocus
+			{
+				play "mouse_over";
+			}
+		}
+		itemDef 
+		{
+			name			"button_changeweapon"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE1
+			forecolor		GLOBAL_DISABLED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"@MPUI_1_CHANGE_WEAPON"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			dvartest		"ui_allow_weaponchange"
+			hideDvar		{ "1" }
+			decoration
+		}
+
+		itemDef 
+		{
+			name			"button_changeteam"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE2
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"@MPUI_2_CHANGE_TEAM"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "changeteam";
+			}
+			onFocus
+			{
+				play "mouse_over";
+			}
+		}
+				
+		itemDef 
+		{
+			name			"button_muteplayer"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE3
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"@MPUI_3_MUTE_PLAYERS"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "muteplayer";
+			}
+			onFocus
+			{
+				play "mouse_over";
+			}
+		}
+
+		itemDef 
+		{
+			name			"button_callvote"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE4
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"@MPUI_4_CALL_VOTE"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			dvartest		"ui_allowvote"
+			showDvar		{ "1" }
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "callvote";
+			}
+			onFocus
+			{
+				play "mouse_over";
+			}
+		}
+		itemDef 
+		{
+			name			"button_callvote"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE4
+			forecolor		GLOBAL_DISABLED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"@MPUI_4_CALL_VOTE"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			dvartest		"ui_allowvote"
+			hideDvar		{ "1" }
+			decoration
+		}
+
+		itemDef 
+		{
+			name			"button_leavegame"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE5
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"@MPUI_5_LEAVE_GAME"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			action
+			{
+				play "mouse_click";
+				close ingame;
+				open leavegame;
+			}
+			onFocus
+			{
+				play "mouse_over";
+			}
+		}
+
+		itemDef 
+		{
+			#include "ui_mp/button_mainmenu.menu"
+
+			action
+			{
+				play "mouse_click";
+				close ingame;
+				open main;
+			}
+			onFocus
+			{
+				play "mouse_over";
+			}
+		}
+	}
+	
+	menuDef
+	{
+		name			"leavegame"
+		rect			0 0 640 480
+		focuscolor		GLOBAL_FOCUSED_COLOR
+		style			WINDOW_STYLE_EMPTY
+		blurWorld		5.0
+		onEsc 
+		{
+			close leavegame;
+		}
+		onOpen 
+		{
+		}
+		onClose
+		{
+			setfocus button_no;
+		}
+
+		// Gradient
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			//rect			-107 0 554 480
+			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			background		"gradient"
+			visible			1
+			decoration
+		}
+
+		#include "ui/bars.menu"
+
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			visible			1
+			origin			ORIGIN_TITLE
+			forecolor		1 1 1 1
+			text			"@MPUI_LEAVE_GAME1"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_HEADER_SIZE
+			decoration
+		}
+
+// MENU CHOICES
+		execKey "1" { play "mouse_click"; close leavegame; exec "disconnect" }
+		execKey "2" { play "mouse_click"; close leavegame; }
+
+		itemDef
+		{
+			name			"button_yes"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE1
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"@MPUI_1_YES"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			action
+			{
+				play "mouse_click";
+				close leavegame;
+				exec "disconnect";
+			}
+			onFocus
+			{
+				play "mouse_over";
+			}
+		}
+
+		itemDef
+		{
+			name			"button_no"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE2
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"@MPUI_2_NO"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			action
+			{
+				play "mouse_click";
+				close leavegame;
+			}
+			onFocus
+			{
+				play "mouse_over";
+			}
+		}
+
+		itemDef 
+		{
+			#include "ui_mp/button_mainmenu.menu"
+
+			action
+			{
+				play "mouse_click";
+				close leavegame;
+				open main;
+			}
+			onFocus
+			{
+				play "mouse_over";
+			}
+		}
+	}
+}

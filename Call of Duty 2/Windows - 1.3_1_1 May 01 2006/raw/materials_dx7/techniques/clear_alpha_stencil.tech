@@ -1,0 +1,8 @@
+{
+	stateMap "clear_alpha_stencil";
+
+	texture[0] = sampler.white;
+
+	stage[0].rgb = select( constant );
+	stage[0].a = select( constant );
+}

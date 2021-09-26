@@ -1,0 +1,15 @@
+{
+	stateMap "nofog";
+
+	vertex.position = code.position;
+	vertex.texcoord[0] = code.texcoord[0];
+
+	vertexShader 2.0 "glow_apply_bloom.hlsl"
+	{
+	}
+
+	pixelShader 2.0 "glow_apply_bloom.hlsl"
+	{
+		colorMapSampler = sampler.feedback;
+	}
+}

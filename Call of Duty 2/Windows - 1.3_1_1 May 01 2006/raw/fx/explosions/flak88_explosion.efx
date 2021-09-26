@@ -1,0 +1,56 @@
+Emitter
+{
+	name				pieces
+
+	flags				useModel useBBox usePhysics emitFx
+
+	count				5
+
+	life				1e+004
+
+	bounce				0.5 0.7
+
+	min					-7 -7 -7
+
+	max					7 7 7
+
+	angleDelta			90 90 0 -90 -90 0
+
+	velocity			400 -400 -400 800 400 400
+
+	gravity				-800 -600
+
+	density				20
+
+	size
+	{
+		curve
+		[
+			0 1 1 1
+			1 1 2.755e-040 2.571e-038
+		]
+	}
+
+	models
+	[
+		xmodel/prop_flak88_piece0
+		xmodel/prop_flak88_piece1
+		xmodel/prop_flak88_piece2
+		xmodel/prop_flak88_piece3
+	]
+
+	emitfx
+	[
+		/fx/impacts/default_hit
+	]
+}
+
+FxRunner
+{
+	name				large_vehicle_explosion
+
+	playfx
+	[
+		/fx/explosions/large_vehicle_explosion
+	]
+}

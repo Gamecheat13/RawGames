@@ -1,0 +1,163 @@
+#include "ui_mp/menudef.h"
+
+#define ORIGIN_TITLE		48 64
+#define ORIGIN_SETTING1		255 146
+#define ORIGIN_SETTING2		255 170
+#define ORIGIN_SETTING3		255 194
+
+#define ORIGIN_INSTRUCTIONS	80 84
+#define ORIGIN_MOTD			80 267
+//#define ORIGIN_SERVERNAME	106 92
+
+{
+	menuDef
+	{
+		name			"serverinfo_ctf"
+		rect			0 0 640 480
+		focuscolor		GLOBAL_FOCUSED_COLOR
+		style			WINDOW_STYLE_EMPTY
+		blurWorld		5.0
+		onEsc 
+		{
+			scriptMenuResponse "close";
+		}
+
+		// Gradient
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			background		"gradient"
+			visible			1
+			decoration
+		}
+
+		#include "ui/bars.menu"
+
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			visible			1
+			origin			ORIGIN_TITLE
+			forecolor		1 1 1 1
+			text			"@MPUI_CAPTURE_THE_FLAG"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_HEADER_SIZE
+			decoration
+		}
+
+// INSTRUCTIONS
+		itemDef
+		{
+			visible			1
+			rect			0 0 480 150
+			origin			ORIGIN_INSTRUCTIONS
+			forecolor		1 1 1 1
+			autowrapped
+			text			"@MP_CTF_OBJ_TEXT_NOSCORE"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		16
+			decoration
+		}
+
+// SERVER SETTINGS
+		itemDef 
+		{
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_SETTING1
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_NUMERICFIELD
+			text			"@MENU_SCORE_LIMIT_TEAM_POINTS"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textalign		ITEM_ALIGN_RIGHT
+			textaligny		20
+			dvar			"ui_ctf_scorelimit"
+			decoration
+		}
+
+		itemDef 
+		{
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_SETTING2
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_NUMERICFIELD
+			text			"@MENU_TIME_LIMIT"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textalign		ITEM_ALIGN_RIGHT
+			textaligny		20
+			dvar			"ui_ctf_timelimit"
+			decoration
+		}
+
+		itemDef
+		{
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_SETTING3
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_MULTI
+			text			"@MENU_FRIENDLY_FIRE"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textalign		ITEM_ALIGN_RIGHT
+			textaligny		20
+			dvar			"ui_friendlyfire"
+			dvarFloatList		{ "@MENU_OFF" 0 "@MENU_ON" 1 "@MENU_REFLECT" 2 "@MENU_SHARED" 3 }
+			decoration
+		}
+
+// MESSAGE OF THE DAY
+		itemDef
+		{
+			name			"text_motd"
+			visible			1
+			rect			0 0 480 150
+			origin			ORIGIN_MOTD
+			forecolor		1 1 1 1
+			autowrapped
+			dvar			"ui_motd"
+			textfont		UI_FONT_NORMAL
+			textscale		0.25
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		16
+			decoration
+		}
+
+// CLICK TO CONTINUE
+
+		itemDef
+		{
+			visible 		1
+			rect			0 0 640 480
+			type 			ITEM_TYPE_BUTTON
+			action
+			{
+				scriptMenuResponse "close";
+			}
+		}
+		
+		itemDef
+		{
+			visible			1
+			rect			0 0 128 24
+			origin			464 417
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			text			"@MPUI_CLICK_TO_CONTINUE"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_HEADER_SIZE
+			textalign		ITEM_ALIGN_RIGHT
+			textalignx		128
+			textaligny		24
+			decoration
+		}
+	}
+}

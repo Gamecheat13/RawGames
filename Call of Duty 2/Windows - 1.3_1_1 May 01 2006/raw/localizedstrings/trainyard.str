@@ -1,0 +1,46 @@
+// Note to translators:
+// If a sentence is the same in your language then please change it to "#same"
+//
+// eg:
+// LANG_ENGLISH  "HALT"
+// LANG_GERMAN   "#same"
+//
+// (This is so we can tell which strings have been signed-off as ok to be the same words for QA
+//  and because we do not store duplicate strings, which will then get exported again next time
+//  as being untranslated.)
+//
+VERSION             "1"
+CONFIG              "C:\trees\cod2\bin\StringEd.cfg"
+FILENOTES           "Strings used in trainyard go in this file."
+
+REFERENCE           OBJ_REGROUP
+LANG_ENGLISH        "Regroup with second squad at the trainyard."
+
+REFERENCE           OBJ_CAPTUREHQ
+LANG_ENGLISH        "Capture the enemy HQ in the Station House."
+
+REFERENCE           OBJ_DEFENDHQ
+LANG_ENGLISH        "Defend the Station House."
+
+REFERENCE           OBJ_DESTROYTANK
+LANG_ENGLISH        "Use your sticky bombs to destroy the enemy tank."
+
+REFERENCE           OBJ_HARDPOINT1
+LANG_ENGLISH        "Clear the suspected enemy supply dumps."
+
+REFERENCE           OBJ_HARDPOINT2
+LANG_ENGLISH        "Eliminate the enemy forward position."
+
+REFERENCE           OBJ_HARDPOINT3
+LANG_ENGLISH        "Eliminate the enemy machine gun position."
+
+REFERENCE           OBJ_RENDEZVOUS
+LANG_ENGLISH        "Rendezvous with your comrades."
+
+REFERENCE           HINT_NONLINEAR1
+LANG_ENGLISH        "Multiple gold markers on the compass means you can choose your path to complete these objectives."
+
+
+ENDMARKER
+
+

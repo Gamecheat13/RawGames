@@ -1,0 +1,1116 @@
+	#define LINE_COLOR						0.22 0.22 0.22 1
+
+	// UI elements
+	#define MISSION_SELECT_TITLE_RECT 		48 48 250 32
+	#define MISSION_SELECT_TITLE_ALIGNX 	0
+	#define MISSION_SELECT_TITLE_ALIGNY 	32
+	
+	#define MISSION_BACKDROP_TOP_RECT		0 80 640 1 4 4
+	#define MISSION_BACKDROP_RECT			0 81 640 28 4 4
+	#define MISSION_BACKDROP_BOTTOM_RECT	0 109 640 1 4 4
+	
+	#define VIGNETTE_TITLE_RECT			48 83 640 24
+	#define VIGNETTE_TITLE_ALIGNX			0
+	#define VIGNETTE_TITLE_ALIGNY			24
+
+	#define VIGNETTE_LEVEL_IMAGE_ORIGIN		375 126 //
+	#define VIGNETTE_LEVEL_IMAGE_BG_RECT		0 0 180 150
+	#define VIGNETTE_LEVEL_IMAGE_RECT		3 3 192 144
+	
+	#define VIGNETTE_LEVEL_DESC_RECT		345 300 250 100 //
+	#define VIGNETTE_LEVEL_DESC_TEXTALIGNX		120
+	#define VIGNETTE_LEVEL_TEXT_SIZE		130 20
+	#define VIGNETTE_LEVEL_TEXT_RECT		0 0 170 20
+	#define	VIGNETTE_LEVEL_TEXT_ALIGNX		0
+	#define	VIGNETTE_LEVEL_TEXT_ALIGNY		20
+		
+	#define VIGNETTE_LEVEL_01_TEXT_ORIGIN	73 126
+	#define VIGNETTE_LEVEL_02_TEXT_ORIGIN	73 156
+	#define VIGNETTE_LEVEL_03_TEXT_ORIGIN	73 186
+	#define VIGNETTE_LEVEL_04_TEXT_ORIGIN	73 216
+	#define VIGNETTE_LEVEL_05_TEXT_ORIGIN	73 246
+	
+	#define LEVEL_LINE_RECT 				55 126 1 150
+	#define DESC_LINE_RECT 					430 126 1 150
+	#define SEP_LINE_RECT					0 288 640 1 4 4
+	
+	#define VIGNETTES_BACKDROP_RECT			0 320 640 80 4 4
+
+	#define VIGNETTES_SIZE					128 80
+	#define VIGNETTES_BACKGROUND_RECT		0 0 128 80
+	#define VIGNETTES_IMAGE_RECT			2 2 124 76
+	#define VIGNETTES_TEXT_RECT				2 2 124 76
+	#define VIGNETTES_TEXT_ALIGNX			62 // half of text rect width
+	#define VIGNETTES_TITLE_ALIGNY			20
+	#define VIGNETTES_LOCATION_ALIGNY		40
+
+	#define	VIGNETTES_LEFT_ORIGIN			96 320
+	#define	VIGNETTES_CENTER_ORIGIN			256 320
+	#define	VIGNETTES_RIGHT_ORIGIN			416 320
+	
+	#define VIGNETTE_PREV_ORIGIN			48 328
+	#define VIGNETTE_PREV_ARROW_RECT		0 0 40 64
+	#define VIGNETTE_PREV_BUTTON_RECT		11 19 26 26
+
+	#define VIGNETTE_NEXT_ORIGIN			552 328
+	#define VIGNETTE_NEXT_ARROW_RECT		0 0 40 64
+	#define VIGNETTE_NEXT_BUTTON_RECT		3 19 26 26
+
+	#define YEAR_SIZE						40 15
+	#define YEAR_TEXT_ALIGNX				0
+	#define YEAR_TEXT_ALIGNY				15
+
+	#define YEAR_LEFT_ORIGIN				100 294
+	#define YEAR_CENTER_ORIGIN				260 294
+	#define YEAR_RIGHT_ORIGIN				420 294
+
+	#define TEXT_ON_BG_STYLE	3
+	#define TITLE_ORIGIN		48 64
+	#define CHOICE_ORIGIN		80 90
+
+
+	#define VIGNETTE_STATE_TEXT_SIZE .4
+
+	#define VIGNETTE_STATE_COLOR_LOCKED		.45 .45 .45 .9
+	#define VIGNETTE_STATE_COLOR_OPEN		.24 .65 .24 1
+	#define VIGNETTE_STATE_COLOR_IN_PROGRESS	.61 .81 .54 1
+	#define VIGNETTE_STATE_COLOR_COMPLETED_EASY	1 1 1 1
+	#define VIGNETTE_STATE_COLOR_COMPLETED_NORMAL	1 1 1 1
+	#define VIGNETTE_STATE_COLOR_COMPLETED_HARD	1 1 1 1
+	#define VIGNETTE_STATE_COLOR_COMPLETED_FU	1 1 1 1
+
+	#define MISSION_COMPLETED_COLOR			1 1 1 1
+	#define MISSION_LOCKED_COLOR			.25 .25 .25 .9
+
+	itemDef 
+	{
+		name main_back_top
+		style WINDOW_STYLE_SHADER
+		rect 0 0 640 320 4 4
+		background MISSION_SELECT_BACKGROUND_TOP
+		visible 1
+		decoration
+	}
+	itemDef 
+	{
+		name main_back_bottom
+		style WINDOW_STYLE_SHADER
+		rect 0 320 640 160 4 4
+		background MISSION_SELECT_BACKGROUND_BOTTOM
+		visible 1
+		decoration
+	}
+// Black bars
+	itemDef 
+	{
+		style			WINDOW_STYLE_FILLED
+		rect			-128 0 896 65
+		backcolor		0 0 0 1
+		visible			1
+		decoration
+	}
+	itemDef 
+	{
+		style			WINDOW_STYLE_FILLED
+		rect			-128 416 896 64
+		backcolor		0 0 0 1
+		visible			1
+		decoration
+	}
+
+// Lines
+		itemDef 
+		{
+			name background_top_bar
+			style			WINDOW_STYLE_FILLED
+			rect			0 64 640 1.2 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			backcolor		.65 .65 .65 1
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			name background_bottom_bar
+			style			WINDOW_STYLE_FILLED
+			rect			0 416 640 1.2 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			backcolor		.65 .65 .65 1
+			visible			1
+			decoration
+		}
+//	#include "ui/menu_generic_background.menu"
+	itemDef
+	{
+		rect			MISSION_BACKDROP_TOP_RECT
+		style 			WINDOW_STYLE_FILLED
+		border 			0
+		backcolor		LINE_COLOR
+		visible 		0
+		decoration
+	}
+/*
+	itemDef
+	{
+		rect			MISSION_BACKDROP_BOTTOM_RECT
+		style 			WINDOW_STYLE_FILLED
+		border 			0
+		backcolor		LINE_COLOR
+		visible 		0
+		decoration
+	}
+*/
+	// Mission Backdrop Image
+	itemDef
+	{
+		rect 			MISSION_BACKDROP_RECT
+		style 			WINDOW_STYLE_SHADER
+		border 			0
+		background		VIGNETTE_CENTER_BACKDROP
+		visible 		0
+		decoration
+	}
+/*
+	itemDef
+	{
+		rect			VIGNETTES_BACKDROP_RECT
+		style 			WINDOW_STYLE_FILLED
+		border 			0
+		backcolor		.22 .22 .22 0.41
+		visible 		0
+		decoration
+	}
+*/
+	// Select Next Mission 
+
+	itemDef
+	{
+		type			ITEM_TYPE_TEXT
+		origin			TITLE_ORIGIN
+		forecolor		1 1 1 1
+		text			"@MENU_SELECT_LEVEL"
+		textfont		UI_FONT_NORMAL
+		textscale		GLOBAL_HEADER_SIZE
+		visible			1
+		decoration
+	}
+	// Vignette Title
+	itemDef
+	{
+		text			VIGNETTE_CENTER_TITLE
+		rect			VIGNETTE_TITLE_RECT
+		type			ITEM_TYPE_TEXT
+		style			WINDOW_STYLE_EMPTY
+		textstyle		TEXT_ON_BG_STYLE
+		textalign		ITEM_ALIGN_LEFT
+		textalignx		VIGNETTE_TITLE_ALIGNX
+		textaligny		VIGNETTE_TITLE_ALIGNY
+		textscale		0.5
+		forecolor		GLOBAL_FOCUSED_COLOR
+		visible			1
+		textfont		UI_FONT_BIG
+		decoration
+	}
+	/*
+	// Vignette Location
+	itemDef
+	{
+		text			VIGNETTE_CENTER_LOCATION
+		rect			VIGNETTE_LOCATION_RECT
+		type			ITEM_TYPE_TEXT
+		style			WINDOW_STYLE_EMPTY
+		textstyle		TEXT_ON_BG_STYLE
+		textalign		ITEM_ALIGN_LEFT
+		textalignx		VIGNETTE_LOCATION_ALIGNX
+		textaligny		VIGNETTE_LOCATION_ALIGNY
+		textscale		0.4	
+		forecolor		1 1 1 1
+		visible			1
+		textfont		UI_FONT_BIG
+		decoration
+	}
+	*/
+	itemDef 
+	{
+		rect 			VIGNETTE_LEVEL_IMAGE_BG_RECT
+		origin			VIGNETTE_LEVEL_IMAGE_ORIGIN
+		style 			WINDOW_STYLE_FILLED
+		border 			1
+		bordercolor		LINE_COLOR
+		backcolor		0 0 0 1
+		visible 		0
+		decoration
+	}
+
+/*
+- redundant?
+	// Level 01 Text - mission not complete
+	itemDef
+	{
+		text			VIGNETTE_LEVEL_01_TITLE
+		rect			VIGNETTE_LEVEL_TEXT_RECT
+		origin			VIGNETTE_LEVEL_01_TEXT_ORIGIN
+		type			ITEM_TYPE_BUTTON
+
+		#include		"ui/mission_select/style_leveltitle.menu"
+
+		dvarTest		VIGNETTE_LEVEL_01_DVAR
+		hidedvar { MISSION_DONE }
+		onFocus
+		{
+			play "mouse_over";
+			show "Level01";
+			hide "Level02";
+			hide "Level03";
+			hide "Level04";
+			hide "Level05";
+		}
+		leaveFocus
+		{
+//			hide "Level01";
+		}
+		action 
+		{
+			play "mouse_click";
+			setdvar ui_selected_map VIGNETTE_LEVEL_01_EXEC;
+			open popmenu_difficulty;
+		}
+	}
+*/
+
+
+
+		itemDef 
+		{
+			name			level_status
+			group			level_status
+			text			VIGNETTE_STATE_OPEN
+			type			ITEM_TYPE_TEXT
+			rect			580 48 100 20
+			textalign		ITEM_ALIGN_RIGHT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		VIGNETTE_STATE_TEXT_SIZE
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		VIGNETTE_STATE_COLOR_OPEN
+			textaligny		14
+			visible			0
+			decoration
+			dvarTest	"ui_level_status"
+			showDvar { "0" }
+		}
+		itemDef 
+		{
+			name			level_status
+			group			level_status
+			text			VIGNETTE_STATE_COMPLETED_EASY
+			type			ITEM_TYPE_TEXT
+			rect			580 48 100 20
+			textalign		ITEM_ALIGN_RIGHT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		VIGNETTE_STATE_TEXT_SIZE
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		VIGNETTE_STATE_COLOR_COMPLETED_EASY
+			textaligny		14
+			visible			0
+			decoration
+			dvarTest	"ui_level_status"
+			showDvar { "1"; }
+		}
+		itemDef 
+		{
+			name			level_status
+			group			level_status
+			text			VIGNETTE_STATE_COMPLETED_NORMAL
+			type			ITEM_TYPE_TEXT
+			rect			580 48 100 20
+			textalign		ITEM_ALIGN_RIGHT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		VIGNETTE_STATE_TEXT_SIZE
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		VIGNETTE_STATE_COLOR_COMPLETED_NORMAL
+			textaligny		14
+			visible			0
+			decoration
+			dvarTest	"ui_level_status"
+			showDvar { "2"; }
+		}
+		itemDef 
+		{
+			name			level_status
+			group			level_status
+			text			VIGNETTE_STATE_COMPLETED_HARD
+			type			ITEM_TYPE_TEXT
+			rect			580 48 100 20
+			textalign		ITEM_ALIGN_RIGHT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		VIGNETTE_STATE_TEXT_SIZE
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		VIGNETTE_STATE_COLOR_COMPLETED_HARD
+			textaligny		14
+			visible			0
+			decoration
+			dvarTest	"ui_level_status"
+			showDvar { "3";  }
+		}
+		itemDef 
+		{
+			name			level_status
+			group			level_status
+			text			VIGNETTE_STATE_COMPLETED_FU
+			type			ITEM_TYPE_TEXT
+			rect			580 48 100 20
+			textalign		ITEM_ALIGN_RIGHT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		VIGNETTE_STATE_TEXT_SIZE
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		VIGNETTE_STATE_COLOR_COMPLETED_FU
+			textaligny		14
+			visible			0
+			decoration
+			dvarTest	"ui_level_status"
+			showDvar { "4"; }
+		}
+
+
+
+
+	// Level 01 Text - entire mission completed
+	itemDef
+	{
+		name			"button01"
+		text			VIGNETTE_LEVEL_01_TITLE
+		rect			VIGNETTE_LEVEL_TEXT_RECT
+		origin			VIGNETTE_LEVEL_01_TEXT_ORIGIN
+		type			ITEM_TYPE_BUTTON
+
+		#include		"ui/mission_select/style_leveltitle.menu"
+
+//		dvarTest		VIGNETTE_LEVEL_01_DVAR
+//		showdvar { MISSION_DONE }
+		onFocus
+		{
+			play "mouse_over";
+			show "Level01";
+			hide "Level02";
+			hide "Level03";
+			hide "Level04";
+			hide "Level05";
+			exec "setfromdvar ui_level_status	ui_level01";
+			show level_status;
+		}
+		leaveFocus
+		{
+//			hide "Level01";
+		}
+		action 
+		{
+			play "mouse_click";
+			setdvar ui_selected_map VIGNETTE_LEVEL_01_EXEC;
+			open popmenu_difficulty;
+		}
+	}
+
+	// Vignette Level 01 Image
+	itemDef 
+	{
+		group 			"Level01"
+		rect 			VIGNETTE_LEVEL_IMAGE_RECT
+		origin			VIGNETTE_LEVEL_IMAGE_ORIGIN
+		style 			WINDOW_STYLE_SHADER
+		border 			0
+		background 		VIGNETTE_LEVEL_01_IMAGE
+		visible 		0
+		decoration
+	}
+
+	// Vignette Level 01 Description
+	itemDef 
+	{
+		group 			"Level01"
+		text 			VIGNETTE_LEVEL_01_DESC
+		rect 			VIGNETTE_LEVEL_DESC_RECT
+		backcolor 		1 1 1 .25
+		autowrapped
+		border 			0
+		textalign 		ITEM_ALIGN_CENTER
+		textscale 		.35
+		textfont 		UI_FONT_NORMAL
+		textstyle 		6
+		textaligny 		20
+		textalignx 		VIGNETTE_LEVEL_DESC_TEXTALIGNX
+		visible 		0
+		decoration	
+	}
+
+	// level 02 locked text
+	itemDef
+	{
+		name			"button02_locked"
+		text			VIGNETTE_STATE_LOCKED
+		rect			VIGNETTE_LEVEL_TEXT_RECT
+		origin			VIGNETTE_LEVEL_02_TEXT_ORIGIN
+		type			ITEM_TYPE_BUTTON
+
+		#include		"ui/mission_select/style_leveltitle_locked.menu"
+
+		dvarTest		VIGNETTE_LEVEL_02_DVAR
+		showdvar { "1"; }
+		decoration
+	}
+
+	// Level 02 Text
+	itemDef
+	{
+		name			"button02"
+		text			VIGNETTE_LEVEL_02_TITLE
+		rect			VIGNETTE_LEVEL_TEXT_RECT
+		origin			VIGNETTE_LEVEL_02_TEXT_ORIGIN
+		type			ITEM_TYPE_BUTTON
+
+		#include		"ui/mission_select/style_leveltitle.menu"
+
+		dvarTest		VIGNETTE_LEVEL_02_DVAR
+		showdvar { "2"; "3"; "4"; "5"; VIGNETTE_DONE_CHEAT; VIGNETTE_DONE_EASY; VIGNETTE_DONE_NORMAL; VIGNETTE_DONE_HARD; VIGNETTE_DONE_FU; }
+//		hidedvar { "1"; }
+		onFocus
+		{
+			play "mouse_over";
+			hide "Level01";
+			show "Level02";
+			hide "Level03";
+			hide "Level04";
+			hide "Level05";
+			exec "setfromdvar ui_level_status	ui_level02";
+			show level_status;
+		}
+		leaveFocus
+		{
+//			hide "Level02";
+		}
+		action 
+		{
+			play "mouse_click";
+			setdvar ui_selected_map VIGNETTE_LEVEL_02_EXEC;
+			open popmenu_difficulty;
+		}
+	}
+		
+	// Vignette Level 02 Image
+	itemDef 
+	{
+		group 			"Level02"
+		rect 			VIGNETTE_LEVEL_IMAGE_RECT
+		origin			VIGNETTE_LEVEL_IMAGE_ORIGIN
+		style 			WINDOW_STYLE_SHADER
+		border 			0
+		background 		VIGNETTE_LEVEL_02_IMAGE
+		visible 		0
+		decoration
+	}
+
+	// Vignette Level 02 Description
+	itemDef 
+	{
+		group 			"Level02"
+		text 			VIGNETTE_LEVEL_02_DESC
+		rect 			VIGNETTE_LEVEL_DESC_RECT
+		backcolor 		1 1 1 .25
+		autowrapped
+		border 			0
+		textalign 		ITEM_ALIGN_CENTER
+		textscale 		.35
+		textfont 		UI_FONT_NORMAL
+		textstyle 		6
+		textaligny 		20
+		textalignx 		VIGNETTE_LEVEL_DESC_TEXTALIGNX
+		visible 		0
+		decoration	
+	}
+	// level 03 locked text
+	itemDef
+	{
+		name			"button03_locked"
+		text			VIGNETTE_STATE_LOCKED
+		rect			VIGNETTE_LEVEL_TEXT_RECT
+		origin			VIGNETTE_LEVEL_03_TEXT_ORIGIN
+		type			ITEM_TYPE_BUTTON
+
+		#include		"ui/mission_select/style_leveltitle_locked.menu"
+
+		dvarTest		VIGNETTE_LEVEL_03_DVAR
+		showdvar { "1"; "2" }
+		decoration
+	}
+	// Level 03 Text
+	itemDef
+	{
+		name			"button03"
+		text			VIGNETTE_LEVEL_03_TITLE
+		rect			VIGNETTE_LEVEL_TEXT_RECT
+		origin			VIGNETTE_LEVEL_03_TEXT_ORIGIN
+		type			ITEM_TYPE_BUTTON
+
+		#include		"ui/mission_select/style_leveltitle.menu"
+
+		dvarTest		VIGNETTE_LEVEL_03_DVAR
+		showdvar { "3"; "4"; "5"; VIGNETTE_DONE_CHEAT; VIGNETTE_DONE_EASY; VIGNETTE_DONE_NORMAL; VIGNETTE_DONE_HARD; VIGNETTE_DONE_FU; }
+//		hidedvar { "1"; "2"; }
+		onFocus
+		{
+			play "mouse_over";
+			hide "Level01";
+			hide "Level02";
+			show "Level03";
+			hide "Level04";
+			hide "Level05";
+			exec "setfromdvar ui_level_status	ui_level03";
+			show level_status;
+		}
+		leaveFocus
+		{
+//			hide "Level03";
+		}
+		action 
+		{
+			play "mouse_click";
+			setdvar ui_selected_map VIGNETTE_LEVEL_03_EXEC;
+			open popmenu_difficulty;
+		}
+	}
+		
+	// Vignette Level 03 Image
+	itemDef 
+	{
+		group 			"Level03"
+		rect 			VIGNETTE_LEVEL_IMAGE_RECT
+		origin			VIGNETTE_LEVEL_IMAGE_ORIGIN
+		style 			WINDOW_STYLE_SHADER
+		border 			0
+		background 		VIGNETTE_LEVEL_03_IMAGE
+		visible 		0
+		decoration
+	}
+
+	// Vignette Level 03 Description
+	itemDef 
+	{
+		group 			"Level03"
+		text 			VIGNETTE_LEVEL_03_DESC
+		rect 			VIGNETTE_LEVEL_DESC_RECT
+		backcolor 		1 1 1 .25
+		autowrapped
+		border 			0
+		textalign 		ITEM_ALIGN_CENTER
+		textscale 		.35
+		textfont 		UI_FONT_NORMAL
+		textstyle 		6
+		textaligny 		20
+		textalignx 		VIGNETTE_LEVEL_DESC_TEXTALIGNX
+		visible 		0
+		decoration	
+	}
+	// level 04 locked text
+	itemDef
+	{
+		name			"button04_locked"
+		text			VIGNETTE_STATE_LOCKED
+		rect			VIGNETTE_LEVEL_TEXT_RECT
+		origin			VIGNETTE_LEVEL_04_TEXT_ORIGIN
+		type			ITEM_TYPE_BUTTON
+
+		#include		"ui/mission_select/style_leveltitle_locked.menu"
+
+		dvarTest		VIGNETTE_LEVEL_04_DVAR
+		showdvar { "1"; "2"; "3"; }
+		decoration
+	}
+	// Level 04 Text
+	itemDef
+	{
+		name			"button04"
+		text			VIGNETTE_LEVEL_04_TITLE
+		rect			VIGNETTE_LEVEL_TEXT_RECT
+		origin			VIGNETTE_LEVEL_04_TEXT_ORIGIN
+		type			ITEM_TYPE_BUTTON
+
+		#include		"ui/mission_select/style_leveltitle.menu"
+
+		dvarTest		VIGNETTE_LEVEL_04_DVAR
+		showdvar { "4"; "5"; VIGNETTE_DONE_CHEAT; VIGNETTE_DONE_EASY; VIGNETTE_DONE_NORMAL; VIGNETTE_DONE_HARD; VIGNETTE_DONE_FU; }
+//		hidedvar { "1"; "2"; "3"; }
+		onFocus
+		{
+			play "mouse_over";
+			hide "Level01";
+			hide "Level02";
+			hide "Level03";
+			show "Level04";
+			hide "Level05";
+			exec "setfromdvar ui_level_status	ui_level04";
+			show level_status;
+		}
+		leaveFocus
+		{
+//			hide "Level04";
+		}
+		action 
+		{
+			play "mouse_click";
+			setdvar ui_selected_map VIGNETTE_LEVEL_04_EXEC;
+			open popmenu_difficulty;
+		}
+	}
+		
+	// Vignette Level 04 Image
+	itemDef 
+	{
+		group 			"Level04"
+		rect 			VIGNETTE_LEVEL_IMAGE_RECT
+		origin			VIGNETTE_LEVEL_IMAGE_ORIGIN
+		style 			WINDOW_STYLE_SHADER
+		border 			0
+		background 		VIGNETTE_LEVEL_04_IMAGE
+		visible 		0
+		decoration
+	}
+
+	// Vignette Level 04 Description
+	itemDef 
+	{
+		group 			"Level04"
+		text 			VIGNETTE_LEVEL_04_DESC
+		rect 			VIGNETTE_LEVEL_DESC_RECT
+		backcolor 		1 1 1 .25
+		autowrapped
+		border 			0
+		textalign 		ITEM_ALIGN_CENTER
+		textscale 		.35
+		textfont 		UI_FONT_NORMAL
+		textstyle 		6
+		textaligny 		20
+		textalignx 		VIGNETTE_LEVEL_DESC_TEXTALIGNX
+		visible 		0
+		decoration	
+	}
+	// level 05 locked text
+	itemDef
+	{
+		name			"button05_locked"
+		text			VIGNETTE_STATE_LOCKED
+		rect			VIGNETTE_LEVEL_TEXT_RECT
+		origin			VIGNETTE_LEVEL_05_TEXT_ORIGIN
+		type			ITEM_TYPE_BUTTON
+
+		#include		"ui/mission_select/style_leveltitle_locked.menu"
+
+		dvarTest		VIGNETTE_LEVEL_05_DVAR
+		showdvar { "1"; "2"; "3"; "4"; }
+		decoration
+	}
+	// Level 05 Text
+	itemDef
+	{
+		name			"button05"
+		text			VIGNETTE_LEVEL_05_TITLE
+		rect			VIGNETTE_LEVEL_TEXT_RECT
+		origin			VIGNETTE_LEVEL_05_TEXT_ORIGIN
+		type			ITEM_TYPE_BUTTON
+
+		#include		"ui/mission_select/style_leveltitle.menu"
+
+		dvarTest		VIGNETTE_LEVEL_05_DVAR
+		showdvar { "5"; VIGNETTE_DONE_CHEAT; VIGNETTE_DONE_EASY; VIGNETTE_DONE_NORMAL; VIGNETTE_DONE_HARD; VIGNETTE_DONE_FU; }
+//		hidedvar { "1"; "2"; "3"; "4"; }
+		onFocus
+		{
+			play "mouse_over";
+			hide "Level01";
+			hide "Level02";
+			hide "Level03";
+			hide "Level04";
+			show "Level05";
+			exec "setfromdvar ui_level_status	ui_level05";
+			show level_status;
+		}
+		leaveFocus
+		{
+//			hide "Level05";
+		}
+		action 
+		{
+			play "mouse_click";
+			setdvar ui_selected_map VIGNETTE_LEVEL_05_EXEC;
+			open popmenu_difficulty;
+		}
+	}
+		
+	// Vignette Level 05 Image
+	itemDef 
+	{
+		group 			"Level05"
+		rect 			VIGNETTE_LEVEL_IMAGE_RECT
+		origin			VIGNETTE_LEVEL_IMAGE_ORIGIN
+		style 			WINDOW_STYLE_SHADER
+		border 			0
+		background 		VIGNETTE_LEVEL_05_IMAGE
+		visible 		0
+		decoration
+	}
+
+	// Vignette Level 05 Description
+	itemDef 
+	{
+		group 			"Level05"
+		text 			VIGNETTE_LEVEL_05_DESC
+		rect 			VIGNETTE_LEVEL_DESC_RECT
+		backcolor 		1 1 1 .25
+		autowrapped
+		border 			0
+		textalign 		ITEM_ALIGN_CENTER
+		textscale 		.35
+		textfont 		UI_FONT_NORMAL
+		textstyle 		6
+		textaligny 		20
+		textalignx 		VIGNETTE_LEVEL_DESC_TEXTALIGNX
+		visible 		0
+		decoration	
+	}
+
+	/*
+	// removed for redesign
+	// Left Vignette Background
+	itemDef
+	{
+		group			"leftVignette"
+		rect 			VIGNETTES_BACKGROUND_RECT
+		origin 			VIGNETTES_LEFT_ORIGIN
+		style 			WINDOW_STYLE_FILLED
+		border 			0
+		backcolor		LINE_COLOR
+		visible 		VIGNETTE_LEFT_VISIBLE
+		decoration
+	}
+	// Left Vignette Image
+	itemDef
+	{		
+		group			"leftVignette"
+		rect 			VIGNETTES_IMAGE_RECT
+		origin 			VIGNETTES_LEFT_ORIGIN
+		style 			WINDOW_STYLE_SHADER
+		border 			0		
+		background 		VIGNETTE_LEFT_IMAGE
+		visible 		VIGNETTE_LEFT_VISIBLE
+		decoration
+	}
+	*/
+	/*
+	// Left Vignette Text
+	itemDef
+	{
+		group			"leftVignette"
+		text			VIGNETTE_LEFT_TITLE
+		rect			VIGNETTES_TEXT_RECT
+		origin 			VIGNETTES_LEFT_ORIGIN
+		type			ITEM_TYPE_TEXT
+		style			WINDOW_STYLE_EMPTY
+		textstyle		TEXT_ON_BG_STYLE
+		textalign		ITEM_ALIGN_CENTER
+		textalignx		VIGNETTES_TEXT_ALIGNX
+		textaligny		VIGNETTES_TITLE_ALIGNY
+		textscale		0.35
+		forecolor		1 1 1 1 
+		textfont		UI_FONT_NORMAL		
+		visible 		VIGNETTE_LEFT_VISIBLE
+		decoration		
+	}
+	// Left Vignette Location
+	itemDef
+	{
+		group			"leftVignette"
+		text			VIGNETTE_LEFT_LOCATION
+		rect			VIGNETTES_TEXT_RECT
+		origin 			VIGNETTES_LEFT_ORIGIN
+		type			ITEM_TYPE_TEXT
+		style			WINDOW_STYLE_EMPTY
+		textstyle		TEXT_ON_BG_STYLE
+		textalign		ITEM_ALIGN_CENTER
+		textalignx		VIGNETTES_TEXT_ALIGNX
+		textaligny		VIGNETTES_LOCATION_ALIGNY
+		textscale		0.35
+		forecolor		1 1 1 1
+		textfont		UI_FONT_NORMAL		
+		visible 		VIGNETTE_LEFT_VISIBLE
+		decoration		
+	}
+	*/
+/*
+	// Center Vignette Background
+	itemDef
+	{
+		rect 			VIGNETTES_BACKGROUND_RECT		
+		origin 			VIGNETTES_CENTER_ORIGIN
+		style 			WINDOW_STYLE_FILLED
+		border 			0
+		backcolor		.9 .20 .35 1
+		visible 		0
+		decoration
+	}
+	// Center Vignette Image
+	itemDef
+	{		
+		rect 			VIGNETTES_IMAGE_RECT
+		origin 			VIGNETTES_CENTER_ORIGIN
+		style 			WINDOW_STYLE_SHADER
+		border 			0		
+		background 		VIGNETTE_CENTER_IMAGE
+		visible 		0
+		decoration
+	}
+*/
+	/*
+	// Center Vignette Text
+	itemDef
+	{
+		text			VIGNETTE_CENTER_TITLE
+		rect			VIGNETTES_TEXT_RECT
+		origin 			VIGNETTES_CENTER_ORIGIN
+		type			ITEM_TYPE_TEXT
+		style			WINDOW_STYLE_EMPTY
+		textstyle		TEXT_ON_BG_STYLE
+		textalign		ITEM_ALIGN_CENTER
+		textalignx		VIGNETTES_TEXT_ALIGNX
+		textaligny		VIGNETTES_TITLE_ALIGNY
+		textscale		0.35
+		forecolor		1 1 1 1
+		textfont		UI_FONT_NORMAL		
+		visible 		1
+		decoration		
+	}
+	// Center Vignette Location
+	itemDef
+	{
+		text			VIGNETTE_CENTER_LOCATION
+		rect			VIGNETTES_TEXT_RECT
+		origin 			VIGNETTES_CENTER_ORIGIN
+		type			ITEM_TYPE_TEXT
+		style			WINDOW_STYLE_EMPTY
+		textstyle		TEXT_ON_BG_STYLE
+		textalign		ITEM_ALIGN_CENTER
+		textalignx		VIGNETTES_TEXT_ALIGNX
+		textaligny		VIGNETTES_LOCATION_ALIGNY
+		textscale		0.35
+		forecolor		1 1 1 1
+		textfont		UI_FONT_NORMAL		
+		visible 		1
+		decoration		
+	}
+	*/
+
+	/*
+	// removed for redesign
+	// Right Vignette Background
+	itemDef
+	{
+		rect 			VIGNETTES_BACKGROUND_RECT		
+		origin 			VIGNETTES_RIGHT_ORIGIN
+		style 			WINDOW_STYLE_FILLED
+		border 			0
+		backcolor		LINE_COLOR
+		visible 		VIGNETTE_RIGHT_VISIBLE
+		decoration
+	}
+	// Right Vignette Image
+	itemDef
+	{		
+		rect 			VIGNETTES_IMAGE_RECT
+		origin 			VIGNETTES_RIGHT_ORIGIN
+		style 			WINDOW_STYLE_SHADER
+		border 			0		
+		background 		VIGNETTE_RIGHT_IMAGE
+		visible 		VIGNETTE_RIGHT_VISIBLE
+		decoration
+	}
+	*/
+	/*
+	// Right Vignette Text
+	itemDef
+	{
+		text			VIGNETTE_RIGHT_TITLE
+		rect			VIGNETTES_TEXT_RECT
+		origin 			VIGNETTES_RIGHT_ORIGIN
+		type			ITEM_TYPE_TEXT
+		style			WINDOW_STYLE_EMPTY
+		textstyle		TEXT_ON_BG_STYLE
+		textalign		ITEM_ALIGN_CENTER
+		textalignx		VIGNETTES_TEXT_ALIGNX
+		textaligny		VIGNETTES_TITLE_ALIGNY
+		textscale		0.35
+		forecolor		1 1 1 1
+		textfont		UI_FONT_NORMAL		
+		visible 		VIGNETTE_RIGHT_VISIBLE
+		decoration		
+	}
+	// Right Vignette Location
+	itemDef
+	{
+		text			VIGNETTE_RIGHT_LOCATION
+		rect			VIGNETTES_TEXT_RECT
+		origin 			VIGNETTES_RIGHT_ORIGIN
+		type			ITEM_TYPE_TEXT
+		style			WINDOW_STYLE_EMPTY
+		textstyle		TEXT_ON_BG_STYLE
+		textalign		ITEM_ALIGN_CENTER
+		textalignx		VIGNETTES_TEXT_ALIGNX
+		textaligny		VIGNETTES_LOCATION_ALIGNY
+		textscale		0.35
+		forecolor		1 1 1 1
+		textfont		UI_FONT_NORMAL		
+		visible 		VIGNETTE_RIGHT_VISIBLE
+		decoration		
+	}
+	*/
+
+//LEVEL_LINE_RECT
+	itemDef
+	{
+		rect			LEVEL_LINE_RECT
+		style 			WINDOW_STYLE_FILLED
+		border 			0
+		backcolor		LINE_COLOR
+		visible 		1
+		decoration
+	}
+
+	itemDef
+	{
+		rect			DESC_LINE_RECT
+		style 			WINDOW_STYLE_FILLED
+		border 			0
+		backcolor		LINE_COLOR
+		visible 		0
+		decoration
+	}
+
+	itemDef
+	{
+		rect			SEP_LINE_RECT
+		style 			WINDOW_STYLE_FILLED
+		border 			0
+		backcolor		LINE_COLOR
+		visible 		0
+		decoration
+	}
+
+	/*
+	// removed for redesign
+	itemDef
+	{
+		text			VIGNETTE_YEAR_LEFT_TEXT
+		rect 			0 0 YEAR_SIZE
+		origin			YEAR_LEFT_ORIGIN
+		type			ITEM_TYPE_TEXT
+		style 			WINDOW_STYLE_EMPTY
+
+		textstyle		TEXT_ON_BG_STYLE
+		textalign		ITEM_ALIGN_LEFT
+		textalignx		YEAR_TEXT_ALIGNX
+		textaligny		YEAR_TEXT_ALIGNY
+		textscale		0.4
+		forecolor		1 1 1 1
+		textfont		UI_FONT_NORMAL		
+
+		border 			0
+		visible 		VIGNETTE_YEAR_LEFT_VISIBLE
+		decoration
+	}
+	*/
+	itemDef
+	{
+		text			VIGNETTE_YEAR_CENTER_TEXT
+		rect 			0 0 YEAR_SIZE
+		origin			YEAR_CENTER_ORIGIN
+		type			ITEM_TYPE_TEXT
+		style 			WINDOW_STYLE_EMPTY
+
+		textstyle		TEXT_ON_BG_STYLE
+		textalign		ITEM_ALIGN_LEFT
+		textalignx		YEAR_TEXT_ALIGNX
+		textaligny		YEAR_TEXT_ALIGNY
+		textscale		0.4
+		forecolor		1 1 1 1
+		textfont		UI_FONT_NORMAL		
+
+		border 			0
+		visible 		0
+		decoration
+	}
+
+	/*
+	// removed for redesign
+	itemDef
+	{
+		text			VIGNETTE_YEAR_RIGHT_TEXT
+		rect 			0 0 YEAR_SIZE
+		origin			YEAR_RIGHT_ORIGIN
+		type			ITEM_TYPE_TEXT
+		style 			WINDOW_STYLE_EMPTY
+
+		textstyle		TEXT_ON_BG_STYLE
+		textalign		ITEM_ALIGN_LEFT
+		textalignx		YEAR_TEXT_ALIGNX
+		textaligny		YEAR_TEXT_ALIGNY
+		textscale		0.4
+		forecolor		1 1 1 1
+		textfont		UI_FONT_NORMAL		
+
+		border 			0
+		visible 		VIGNETTE_YEAR_RIGHT_VISIBLE
+		decoration
+	}
+	*/
+/*
+	itemDef
+	{
+		text			"@MENU_BACK"
+		type 			ITEM_TYPE_BUTTON
+		textfont		UI_FONT_NORMAL
+		textscale		.4
+		textaligny		20
+		rect			0 0 50 20
+		origin			505 440
+		visible			1
+		mouseEnter 
+		{
+			play "mouse_over";
+		}
+		action
+		{
+			play "mouse_click";
+			close VIGNETTE_CENTER; 
+		}
+		
+	}
+*/
+	itemDef 
+	{
+		text 			"@MENU_PROGRESS_WILL_BE_LOST"
+		rect 			60 335 200 150
+		backcolor 		1 1 1 .25
+		autowrapped
+		border 			0
+		textalign 		ITEM_ALIGN_CENTER
+		textscale 		.3
+		textfont 		UI_FONT_NORMAL
+		textstyle 		6
+		textaligny 		20
+		textalignx 		VIGNETTE_LEVEL_DESC_TEXTALIGNX
+		visible 		1
+		decoration	
+	}
+	// Black bars
+
+	#include "ui/navcontrols_mission_layout.menu"
+

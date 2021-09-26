@@ -1,0 +1,14 @@
+{
+	stateMap "shadowcookie_receiver";
+
+	vertex.position = code.position;
+
+	vertexShader 2.0 "shadowcookie_receiver.hlsl"
+	{
+	}
+
+	pixelShader 2.0 "shadowcookie_receiver.hlsl"
+	{
+		shadowCookieSampler = sampler.shadowCookie;
+	}
+}

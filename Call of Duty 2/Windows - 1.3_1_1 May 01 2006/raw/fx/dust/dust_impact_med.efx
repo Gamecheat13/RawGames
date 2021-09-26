@@ -1,0 +1,131 @@
+Particle
+{
+	name				lingering_dust
+
+	flags				useBBox useAlpha relative
+
+	spawnFlags			orgOnCylinder axisFromSphere evenDistribution
+
+	count				32
+
+	life				8000 5000
+
+	delay				0 500
+
+	origin				30 0 0
+
+	radius				100 200
+
+	rotation			360 -360
+
+	rotationDelta		16 -16
+
+	velocity			-20 -20 0 20 20 0
+
+	acceleration		0 0 0 0 0 5
+
+	gravity				0 -10
+
+	rgb
+	{
+		curve
+		[
+			0 0.5961 0.5608 0.4863
+			1 0.5961 0.5608 0.4863
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0 0.07306 0.1022
+			0.07306 0.1022 0.1416 0.3504
+			0.1416 0.3504 0.2237 0.5547
+			0.2237 0.5547 0.4064 0.5985
+			0.4064 0.5985 0.5571 0.5109
+			0.5571 0.5109 0.7032 0.2409
+			0.7032 0.2409 1 0
+			1 0 8.265e-040 2.498e-038
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.225 1 0.75
+			1 0.75 2.755e-040 2.572e-038
+		]
+
+		scale			154.2 179.2
+	}
+
+	shaders
+	[
+		gfx_whisp_spiral
+	]
+}
+
+Particle
+{
+	name				dirt_burst
+
+	flags				useAlpha relative
+
+	spawnFlags			orgOnSphere axisFromSphere evenDistribution
+
+	count				20
+
+	life				1500 1000
+
+	delay				0 500
+
+	radius				60
+
+	rotation			-360 360
+
+	rotationDelta		12 -12
+
+	velocity			100 0 0
+
+	gravity				12
+
+	rgb
+	{
+		curve
+		[
+			0 0.5961 0.5608 0.4863
+			1 0.5137 0.4784 0.4039
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 1 0.379 0.8759
+			0.379 0.8759 0.6393 0.7299
+			0.6393 0.7299 0.7626 0.2993
+			0.7626 0.2993 0.8858 0.07299
+			0.8858 0.07299 1 0
+			1 0 6.429e-040 1.029e-037
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0 1 0.75
+			1 0.75 2.755e-040 2.572e-038
+		]
+
+		scale			200
+	}
+
+	shaders
+	[
+		gfx_whisp_spiral
+	]
+}

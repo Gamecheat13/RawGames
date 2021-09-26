@@ -1,0 +1,120 @@
+"# If the text in the first column of a row starts with a # character, the row is ignored",,"If the first column for a row is blank, then the row is ignored"
+,"If the first column for a row is blank, then the row is ignored",
+# The first non-comment line of a sound alias file specifies the key name for all values appearing in this column.,,
+"# This means it is safe to swap entire columns around, though you should never swap partial columns.",,
+"# You can invent new keys, but the game will ignore them if it doesn't know about them.",,
+"# You can leave out keys, but the ""name"" and ""file"" keys must always be present.",,
+
+,name,name of the alias that is used to play this sound (required)
+,sequence,"used to uniquely identify alias entries when more than one sound goes to an alias, used only to catch unwanted duplicates (default = 0)"
+,file,the name of the file that contains the sound data (required)
+,vol_min,"0 is silent, 1 is full volume (default = 1)"
+,vol_max,"0 is silent, 1 is full volume (default = same as vol_min)"
+,vol_mod,"blank causes no effect on vol_min and vol_max, otherwise the string must match a string in the volumemodgroups.def file and the value in that file corresponding to that string will be used to adjust vol_min and vol_max, clamped to the valid range"
+,pitch_min,"1 is normal playback, 2 is twice as fast, 0.5 is half as fast (default = 1)"
+,pitch_max,"1 is normal playback, 2 is twice as fast, 0.5 is half as fast (default = same as pitch_min)"
+,dist_min,"within this distance in inches, the sound is always full volume (default = 120)"
+,dist_max,"outside this distance in inches, the sound is not started.  If left blank or set to 0, the sound will play from any distance.  This does not affect sound volume falloff.",,,,,,,,,,,,,,,,,,,,,
+,channel,"auto, menu, weapon, voice, item, body, local, music, announcer (default = auto)",,,,,,,,,,,,,,,,,,,,,
+,type,primed (a streamed sound which gets primed on some platforms) / streamed / loaded (default = loaded),,,,,,,,,,,,,,,,,,,,,
+,probability,weight to use for the weighted probability of playing this sound instead of another sound (default = 1),,,,,,,,,,,,,,,,,,,,,
+,loop,"whether this sound is ""looping"" or ""nonlooping"" (default = ""nonlooping"")",,,,,,,,,,,,,,,,,,,,,
+,masterslave,"if ""master"", this is a master sound.  If a number, then this sound's volume will be multiplied by that number (a percentage between 0 and 1) any master sound is playing.  If blank, then neither master nor slave.",,,,,,,,,,,,,,,,,,,,,
+,loadspec,"space-separated list of which maps should use this alias; eg, ""burnville dawnville"".  If blank, the alias is used on all maps.",,,,,,,,,,,,,,,,,,,,,
+,compression,"a string corresponding to an entry in ""XMAUpdate.tbl"" which is used to determine compression by XMAUpdate.exe",,,,,,,,,,,,,,,,,,,,,
+,secondaryaliasname,"defined the name of an additional sound alias to play in addition to the current alias being played. Note that it is an error for the secondaryalias to also define a secondaryaliasname (eg, if B is a secondaryalias of A, B is not allowed to have its own secondaryalias).",,,,,,,,,,,,,,,,,,,,,
+,volumefalloffcurve,if blank uses the linear curve which can not be changed. A string 'XXXX' corresponds to the curve defined by the file 'soundaliases/XXXX.vfcurve',,,,,,,,,,,,,,,,,,,,,
+,startdelay,defaults to no delay. The value is the number of milliseconds to delay starting the sound by,,,,,,,,,,,,,,,,,,,,,
+,speakermap,if blank uses the default speakermappings which cannot be changed. A string 'XXXX' corresponds to the speakermap defined by the file 'soundaliases/XXXX.spkrmap'. ,,,,,,,,,,,,,,,,,,,,,
+,reverb,"blank means the alias is affected normally by wet and dry levels, ""fulldrylevel"" forces the alias to use a full drylevel (ignoring the global drylevel), ""nowetlevel"" forces the alias to use no wetlevel (ignoring the global wetlevel)",,,,,,,,,,,,,,,,,,,,,
+,lfe percentage,this determines what percentage of the highest calculated spatialized speaker volume should be passed to the LFE. blank means no LFE for the sound,,,,,,,,,,,,,,,,,,,,,
+
+name,sequence,file,vol_min,vol_max,vol_mod,pitch_min,pitch_max,dist_min,dist_max,channel,type,probability,loop,masterslave,loadspec,subtitle,compression,secondaryaliasname,volumefalloffcurve,startdelay,speakermap,reverb,lfe percentage
+
+#sample voice and sfx alias - for speech entries the format of the alias name is: mapname_threelettercharactername_abbreviateddialog,,,,,,,,,,,,,,,
+
+beltot_mcg_myspeechline,,null.wav,0,0,,,,50,6000,voice,,,,master,mymapnamehere
+bigsoundeffect,,null.wav,0,0,na,1,1,1,5000,auto,,,,,mymapnamehere
+
+#PLEASE PLACE REQUESTS BELOW,,,,,,,,,,,,,,,
+silotown_assault_siloexplode,,explosions/mrk_building_big_explod_2b.wav,1,1,explosion,0.9,1.1,500000,,local,streamed,,,,silotown_assault
+
+
+#Ammo Giving Pickups,,,,,,,,,,,,,,,
+
+ammo_giving_gr9,1,null.wav,0.99,0.99,voiceover,,,360,6000,voice,,,,master,
+ammo_giving_gr9,2,null.wav,0.99,0.99,voiceover,,,360,6000,voice,,,,master,
+ammo_giving_gr9,3,null.wav,0.99,0.99,voiceover,,,360,6000,voice,,,,master,
+ammo_denial_gr9,1,null.wav,0.99,0.99,voiceover,,,360,6000,voice,,,,master,
+ammo_denial_gr9,2,null.wav,0.99,0.99,voiceover,,,360,6000,voice,,,,master,
+ammo_denial_gr9,3,null.wav,0.99,0.99,voiceover,,,360,6000,voice,,,,master,
+ammo_giving_bs4,1,null.wav,0.99,0.99,voiceover,,,360,6000,voice,,,,master,
+ammo_giving_bs4,2,null.wav,0.99,0.99,voiceover,,,360,6000,voice,,,,master,
+ammo_giving_bs4,3,null.wav,0.99,0.99,voiceover,,,360,6000,voice,,,,master,
+ammo_denial_bs4,1,null.wav,0.99,0.99,voiceover,,,360,6000,voice,,,,master,
+ammo_denial_bs4,2,null.wav,0.99,0.99,voiceover,,,360,6000,voice,,,,master,
+ammo_denial_bs4,3,null.wav,0.99,0.99,voiceover,,,360,6000,voice,,,,master,
+ammo_giving_rs3,1,null.wav,0.99,0.99,voiceover,,,360,6000,voice,,,,master,
+ammo_giving_rs3,2,null.wav,0.99,0.99,voiceover,,,360,6000,voice,,,,master,
+ammo_giving_rs3,3,null.wav,0.99,0.99,voiceover,,,360,6000,voice,,,,master,
+ammo_denial_rs3,1,null.wav,0.99,0.99,voiceover,,,360,6000,voice,,,,master,
+ammo_denial_rs3,2,null.wav,0.99,0.99,voiceover,,,360,6000,voice,,,,master,
+ammo_denial_rs3,3,null.wav,0.99,0.99,voiceover,,,360,6000,voice,,,,master,
+
+doorbreak,,doors/eldaba_doorbreak_1b.wav,1,1,na,1,1,5000,,auto,streamed,,,,credits
+
+toujane_end_music,,music/duhocassault_victory_numb3_GRFINAL.mp3,0.95,,music,,,,,music,streamed,,,,toujane,,,,,,music
+
+coughing,1,Voiceovers/RU/Demolition/demolition_rs1_sc05_02.wav,0.9,0.9,voiceover,,,1,1600,voice,streamed,,,master,credits,,,,,,
+coughing,2,Voiceovers/RU/Demolition/demolition_rs3_sc05_04.wav,0.9,0.9,voiceover,,,1,6000,voice,streamed,,,master,credits,,,,,,
+coughing,3,Voiceovers/RU/Demolition/demolition_rs4_sc05_03.wav,0.9,0.9,voiceover,,,1,1600,voice,streamed,,,master,credits,,,,,,
+
+credits_smoke,,battlechatter/us/3/US_3_order_action_smkgrenade_03.wav,0.85,0.85,voiceover,,,240,6000,voice,streamed,,,,credits,,,,,,
+credits_walla,,charge/mrk_walla_american_small1b.wav,1,1,,0.9,0.9,500,500000,voice,streamed,,,,credits,,,,,,
+credits_carclimb,,misc/toujane_ride_priceclimb.wav,1,1,,1,1,10,1200,auto,streamed,,,,credits,,,,,850,
+tank_hatch,,doors/mrk_tank_hatch1.wav,1,1,,1,1,1,2500,auto,streamed,,,,credits,,,,,,
+wall_crumble,,misc/mrk_wallcrumble08.wav,1,1,na,1,1,1000,15000,auto,streamed,,,,credits,,,,,,
+plane_flyby_stuka1,,vehicles/mrk_plane_flyby_stuka3.wav,1,1,na,,,15,50000,auto,streamed,,,,credits,,,,,,
+plane_flyby_stuka2,,vehicles/mrk_plane_flyby_stuka4.wav,1,1,na,,,15,50000,auto,streamed,,,,credits,,,,,,
+plane_flyby_stuka3,,vehicles/mrk_plane_flyby_stuka5.wav,1,1,na,,,15,50000,auto,streamed,,,,credits,,,,,,
+explo_ammo_dump,,explosions/explo_ammo_dump1.wav,1,1,explosion,1,1.2,750,9600,voice,streamed,,,,credits,,,explo_ammo_dump_layer,,,
+explo_ammo_dump_layer,,explosions/explo_ammo_dump2.wav,1,1,explosion,0.8,0.9,750,9600,auto,streamed,,,,credits,,,,,100,,,
+ambient_credits,,ambient/amb_france03_ext.mp3,0.53,,ambience,,,,,local,streamed,,looping,,credits,,,,,,ambience,,
+ambient_credits_end,,null.wav,0.6,,ambience,,,,,local,streamed,,looping,,credits,,,,,,ambience,,
+raise_ladder,,misc/moscow_ladder_1.wav,0.43,0.43,,1,1,240,1200,local,streamed,,,,credits,,,,,,,,
+
+credits_music_suspense,,music/libya_moving_in_GRFINAL.mp3,1,,music,,,,,music,streamed,,,,credits,,,,,,music,,
+credits_music_fighting,,music/88ridge_approaching_ridge2_GRFINAL.mp3,1,,music,,,,,music,streamed,,,,credits,,,,,,music,,
+credits_music_escaping,,music/toujane_armoredcar_crash_GRFINAL.mp3,1,,music,,,,,music,streamed,,,,credits,,,,,,music,,
+credits_music_victory,,music/duhocassault_victory_relief2b_GRFINAL.mp3,1,,music,,,,,music,streamed,,,,credits,,,,,,music,,
+credits_armoredcar_sputter,,weapons/shotgun/wpnfire_shotgun1.wav,0.3,0.5,explosion,0.5,0.8,300,7800,voice,,,,,,,,,,,,,0.5
+stuka_guns,,vehicles/mrk_stuka_gun_loop2.wav,1,,na,1,1,240,12000,auto,streamed,,looping,,credits,,,,,,,,
+jeep_skid,,misc/jeep_skid_stop01.wav,0.85,0.85,,0.9,0.9,250,7500,auto,streamed,,,,credits,,,,,,,,
+vehicle_brakesqueal,,vehicles/truck_brakesqueal.wav,0.5,0.5,vehicle,0.9,0.9,150,5000,auto,streamed,,,,credits,,,,,,,,
+credits_cheer,,charge/mrk_walla_germans_large.wav,1,1,,0.9,0.9,5000,500000,voice,streamed,,,,credits,,,,,,,,
+weapon_setup,,misc/MP_defuse.wav,0.85,0.85,na,0.9,1.05,150,2000,auto,,,,,credits,,,,,,,,
+
+credits_plain_music_rhinelastwords,,music/rhine_victory_last_words_GRFINAL.mp3,0.95,,music,,,,,music,streamed,,,,credits,,,,,,music
+credits_plain_music_comradesniper,,music/downtownsniper_soviet_tension_GRFINAL.mp3,0.85,,music,,,,,music,streamed,,,,credits,,,,,,music
+credits_plain_music_holdline,,music/demolition_soviet_holdline2_GRFINAL.mp3,0.85,,music,,,,,music,streamed,,,,credits,,,,,,music
+credits_plain_music_charge,,music/demolition_soviet_charge_GRFINAL.mp3,0.95,,music,,,,,music,streamed,,,,credits,,,,,,music
+credits_plain_music_trainyard,,music/trainyard_soviet_tension_GRFINAL.mp3,0.85,,music,,,,,music,streamed,,,,credits,,,,,,music
+credits_plain_music_sovietvictory,,music/downtownsniper_victory_GRFINAL.mp3,0.99,,music,,,,,music,streamed,,,,credits,,,,,,music
+credits_plain_music_88ridge,,music/88ridge_approaching_ridge2_GRFINAL.mp3,0.85,,music,,,,,music,streamed,,,,credits,,,,,,music
+credits_plain_music_88ridgevictory,,music/88ridge_crusader_victory_GRFINAL.mp3,0.95,,music,,,,,music,streamed,,,,credits,,,,,,music
+credits_plain_music_duhocassaultend,,music/duhocassault_victory_numb3_GRFINAL.mp3,0.95,,music,,,,,music,streamed,,,,credits,,,,,,music
+
+alliedradio_chatter,1,Voiceovers/US/Artillery/artillery_ar1_sc01_01_t3_R.wav,0.7,0.7,emitter,,,1,400,auto,streamed,,,,,,,,,,
+alliedradio_chatter,2,Voiceovers/US/Artillery/artillery_ar1_sc01_02_t2_R.wav,0.7,0.7,emitter,,,1,400,auto,streamed,,,,,,,,,,
+alliedradio_chatter,3,Voiceovers/US/Artillery/artillery_ar1_sc01_03_t2_R.wav,0.7,0.7,emitter,,,1,400,auto,streamed,,,,,,,,,,
+alliedradio_chatter,4,Voiceovers/US/Artillery/artillery_ar1_sc01_04_t2_R.wav,0.7,0.7,emitter,,,1,400,auto,streamed,,,,,,,,,,
+alliedradio_chatter,5,Voiceovers/US/Artillery/artillery_ar1_sc01_08_t2_R.wav,0.7,0.7,emitter,,,1,400,auto,streamed,,,,,,,,,,
+alliedradio_chatter,6,Voiceovers/US/Artillery/artillery_ar1_sc01_05_t2_R.wav,0.7,0.7,emitter,,,1,400,auto,streamed,,,,,,,,,,
+alliedradio_chatter,7,Voiceovers/US/Artillery/artillery_ar1_sc01_06_t4_R.wav,0.7,0.7,emitter,,,1,400,auto,streamed
+alliedradio_chatter,8,Voiceovers/US/Artillery/artillery_ar1_sc01_07_t1_R.wav,0.7,0.7,emitter,,,1,400,auto,streamed
+alliedradio_chatter,9,Voiceovers/US/Artillery/artillery_ar1_sc01_09_t2_R.wav,0.7,0.7,emitter,,,1,400,auto,streamed
+alliedradio_chatter,10,Voiceovers/US/Artillery/artillery_ar1_sc01_10_t2_R.wav,0.7,0.7,emitter,,,1,400,auto,streamed
+alliedradio_chatter,11,Voiceovers/US/Artillery/artillery_ar1_sc01_11_t2_R.wav,0.7,0.7,emitter,,,1,400,auto,streamed
+alliedradio_chatter,12,Voiceovers/US/Artillery/artillery_ar1_sc01_12_t2_R.wav,0.7,0.7,emitter,,,1,400,auto,streamed
+alliedradio_chatter,13,Voiceovers/US/Artillery/artillery_ar1_sc01_13_t3_R.wav,0.7,0.7,emitter,,,1,400,auto,streamed
+alliedradio_chatter,14,Voiceovers/US/Artillery/artillery_ar1_sc01_14_t4_R.wav,0.7,0.7,emitter,,,1,400,auto,streamed

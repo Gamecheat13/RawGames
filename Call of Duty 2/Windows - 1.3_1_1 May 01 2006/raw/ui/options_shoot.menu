@@ -1,0 +1,574 @@
+#include "ui/menudef.h"
+{
+menuDef 
+{
+	name options_shoot
+	fullScreen 0				
+	rect OPTIONS_WINDOW_POS OPTIONS_WINDOW_SIZE				// Size and position of the menu
+	focusColor GLOBAL_FOCUSED_COLOR			// Menu focus color for text and items
+	soundloop ""
+	onOpen
+	{
+		uiScript loadControls
+		setdvar ui_background_gradient_show "1";
+	}
+	onESC 
+	{ 
+		close options_menu;		
+	}
+/*
+	itemDef 
+	{
+		name keyBindStatus
+		rect 0 322 640 30 
+		ownerdraw UI_KEYBINDSTATUS
+		text "-"      
+		forecolor 1 .75 0 1
+		textscale .23
+		textalignx 221
+		textalign 1
+		textaligny 20
+		visible 1
+		decoration 
+	}
+*/
+	itemDef
+	{
+		type			ITEM_TYPE_TEXT
+		origin			HEADER_ORIGIN
+		forecolor		1 1 1 1
+		text			"@MENU_SHOOT"
+		textfont		UI_FONT_NORMAL
+		textscale		HEADER_SIZE
+		visible			1
+		decoration
+	}
+
+
+	itemDef 
+	{
+		name shoot				
+		group grpControls
+		type ITEM_TYPE_BUTTON
+		text "@MENU_ATTACK"
+		rect		0 0 1 13 
+		origin OPTIONS_ITEM_ORIGIN
+		textstyle	OPTIONS_ITEM_TEXT_STYLE
+		textalign	OPTIONS_ITEM_ALIGN
+		textalignx	OPTIONS_ITEM_ALIGN_X 
+		textaligny	OPTIONS_ITEM_ALIGN_Y
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		decoration
+	}
+
+	itemDef 
+	{
+		name		shoot				
+		group		grpControls
+		type		ITEM_TYPE_BUTTON
+		text		"@MENU_TOGGLE_AIM_DOWN_THE_SIGHT"
+		rect		0 15 1 13 
+		origin OPTIONS_ITEM_ORIGIN
+		textstyle	OPTIONS_ITEM_TEXT_STYLE
+		textalign	OPTIONS_ITEM_ALIGN
+		textalignx	OPTIONS_ITEM_ALIGN_X 
+		textaligny	OPTIONS_ITEM_ALIGN_Y
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		decoration
+	}
+	itemDef 
+	{
+		name shoot
+		group grpControls
+		type ITEM_TYPE_BUTTON
+		text "@MENU_AIM_DOWN_THE_SIGHT"
+		rect		0 30 1 13 
+		origin OPTIONS_ITEM_ORIGIN
+		textstyle	OPTIONS_ITEM_TEXT_STYLE
+		textalign	OPTIONS_ITEM_ALIGN
+		textalignx	OPTIONS_ITEM_ALIGN_X 
+		textaligny	OPTIONS_ITEM_ALIGN_Y
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		decoration
+	}
+
+	itemDef 
+	{
+		name shoot
+		group grpControls
+		type ITEM_TYPE_BUTTON
+		text "@MENU_SWITCH_WEAPON"
+		rect		0 45 1 13 
+		origin OPTIONS_ITEM_ORIGIN
+		textstyle	OPTIONS_ITEM_TEXT_STYLE
+		textalign	OPTIONS_ITEM_ALIGN
+		textalignx	OPTIONS_ITEM_ALIGN_X 
+		textaligny	OPTIONS_ITEM_ALIGN_Y
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		decoration
+	}
+	itemDef 
+	{
+		name shoot				
+		group grpControls
+		type ITEM_TYPE_BUTTON
+		text "@MENU_RELOAD_WEAPON"
+		rect		0 60 1 13 
+		origin OPTIONS_ITEM_ORIGIN
+		textstyle	OPTIONS_ITEM_TEXT_STYLE
+		textalign	OPTIONS_ITEM_ALIGN
+		textalignx	OPTIONS_ITEM_ALIGN_X 
+		textaligny	OPTIONS_ITEM_ALIGN_Y
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		decoration
+	}
+	itemDef 
+	{
+		name shoot
+		group grpControls
+		type ITEM_TYPE_BUTTON
+		text "@MENU_THROW_FRAG_GRENADE"
+		rect		0 75 1 13 
+		origin OPTIONS_ITEM_ORIGIN
+		textstyle	OPTIONS_ITEM_TEXT_STYLE
+		textalign	OPTIONS_ITEM_ALIGN
+		textalignx	OPTIONS_ITEM_ALIGN_X 
+		textaligny	OPTIONS_ITEM_ALIGN_Y
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		decoration
+	}
+	itemDef 
+	{
+		name shoot
+		group grpControls
+		type ITEM_TYPE_BUTTON
+		text "@MENU_THROW_SMOKE_GRENADE"
+		rect		0 90 1 13 
+		origin OPTIONS_ITEM_ORIGIN
+		textstyle	OPTIONS_ITEM_TEXT_STYLE
+		textalign	OPTIONS_ITEM_ALIGN
+		textalignx	OPTIONS_ITEM_ALIGN_X 
+		textaligny	OPTIONS_ITEM_ALIGN_Y
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		decoration
+	}
+
+	itemDef 
+	{
+		name shoot
+		group grpControls
+		type ITEM_TYPE_BUTTON
+		text "@MENU_BINOCULARS"
+		rect		0 105 1 13 
+		origin OPTIONS_ITEM_ORIGIN
+		textstyle	OPTIONS_ITEM_TEXT_STYLE
+		textalign	OPTIONS_ITEM_ALIGN
+		textalignx	OPTIONS_ITEM_ALIGN_X 
+		textaligny	OPTIONS_ITEM_ALIGN_Y
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		decoration
+	}
+	itemDef
+	{
+		name shoot
+		group grpControls
+		type ITEM_TYPE_BUTTON
+		text "@MENU_MELEE_STEADY"
+		rect		0 120 1 13 
+		origin OPTIONS_ITEM_ORIGIN
+		textstyle	OPTIONS_ITEM_TEXT_STYLE
+		textalign	OPTIONS_ITEM_ALIGN
+		textalignx	OPTIONS_ITEM_ALIGN_X 
+		textaligny	OPTIONS_ITEM_ALIGN_Y
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		decoration
+	}
+	itemDef 
+	{
+		name shoot
+		group grpControls
+		type ITEM_TYPE_BUTTON
+		text "@MENU_MELEE_ATTACK"
+		rect		0 135 1 13 
+		origin OPTIONS_ITEM_ORIGIN
+		textstyle	OPTIONS_ITEM_TEXT_STYLE
+		textalign	OPTIONS_ITEM_ALIGN
+		textalignx	OPTIONS_ITEM_ALIGN_X 
+		textaligny	OPTIONS_ITEM_ALIGN_Y
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		decoration
+	}
+	itemDef
+	{
+		name shoot
+		group grpControls
+		type ITEM_TYPE_BUTTON
+		text "@MENU_STEADY_SNIPER_RIFLE"
+		rect		0 150 1 13 
+		origin OPTIONS_ITEM_ORIGIN
+		textstyle	OPTIONS_ITEM_TEXT_STYLE
+		textalign	OPTIONS_ITEM_ALIGN
+		textalignx	OPTIONS_ITEM_ALIGN_X 
+		textaligny	OPTIONS_ITEM_ALIGN_Y
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		decoration
+	}
+/* Actual Binds */
+
+	itemDef 
+	{
+		name shoot				
+		group grpControls
+		type ITEM_TYPE_BIND
+		text " "
+		dvar "+attack"
+		rect		0 0 OPTIONS_BIND_SIZE
+		origin OPTIONS_ITEM_ORIGIN
+		textstyle	OPTIONS_ITEM_TEXT_STYLE
+		textalign	OPTIONS_ITEM_ALIGN
+		textalignx	OPTIONS_BIND_ALIGN_X 
+		textaligny	OPTIONS_ITEM_ALIGN_Y
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+		action { play "mouse_click"; }
+	}
+
+	itemDef 
+	{
+		name		shoot				
+		group		grpControls
+		type		ITEM_TYPE_BIND
+		text		" "
+		dvar		"toggleads"
+		rect		0 15 OPTIONS_BIND_SIZE
+		origin OPTIONS_ITEM_ORIGIN
+		textstyle	OPTIONS_ITEM_TEXT_STYLE
+		textalign	OPTIONS_ITEM_ALIGN
+		textalignx	OPTIONS_BIND_ALIGN_X 
+		textaligny	OPTIONS_ITEM_ALIGN_Y
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+		action { play "mouse_click"; }
+	}
+	itemDef 
+	{
+		name shoot
+		group grpControls
+		type ITEM_TYPE_BIND
+		text " "
+		dvar "+speed"
+		rect		0 30 OPTIONS_BIND_SIZE
+		origin OPTIONS_ITEM_ORIGIN
+		textstyle	OPTIONS_ITEM_TEXT_STYLE
+		textalign	OPTIONS_ITEM_ALIGN
+		textalignx	OPTIONS_BIND_ALIGN_X 
+		textaligny	OPTIONS_ITEM_ALIGN_Y
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+		action { play "mouse_click"; }
+	}
+
+	itemDef 
+	{
+		name shoot
+		group grpControls
+		type ITEM_TYPE_BIND
+		text " "
+		dvar "weapnext"
+		rect		0 45 OPTIONS_BIND_SIZE
+		origin OPTIONS_ITEM_ORIGIN
+		textstyle	OPTIONS_ITEM_TEXT_STYLE
+		textalign	OPTIONS_ITEM_ALIGN
+		textalignx	OPTIONS_BIND_ALIGN_X 
+		textaligny	OPTIONS_ITEM_ALIGN_Y
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+		action { play "mouse_click"; }
+	}
+	itemDef 
+	{
+		name shoot				
+		group grpControls
+		type ITEM_TYPE_BIND
+		text " "
+		dvar "+reload"
+		rect		0 60 OPTIONS_BIND_SIZE
+		origin OPTIONS_ITEM_ORIGIN
+		textstyle	OPTIONS_ITEM_TEXT_STYLE
+		textalign	OPTIONS_ITEM_ALIGN
+		textalignx	OPTIONS_BIND_ALIGN_X 
+		textaligny	OPTIONS_ITEM_ALIGN_Y
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+		action { play "mouse_click"; }
+	}
+	itemDef 
+	{
+		name shoot
+		group grpControls
+		type ITEM_TYPE_BIND
+		text " "
+		dvar "+frag"
+		rect		0 75 OPTIONS_BIND_SIZE
+		origin OPTIONS_ITEM_ORIGIN
+		textstyle	OPTIONS_ITEM_TEXT_STYLE
+		textalign	OPTIONS_ITEM_ALIGN
+		textalignx	OPTIONS_BIND_ALIGN_X 
+		textaligny	OPTIONS_ITEM_ALIGN_Y
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+		action { play "mouse_click"; }
+	}
+	itemDef 
+	{
+		name shoot
+		group grpControls
+		type ITEM_TYPE_BIND
+		text " "
+		dvar "+smoke"
+		rect		0 90 OPTIONS_BIND_SIZE
+		origin OPTIONS_ITEM_ORIGIN
+		textstyle	OPTIONS_ITEM_TEXT_STYLE
+		textalign	OPTIONS_ITEM_ALIGN
+		textalignx	OPTIONS_BIND_ALIGN_X 
+		textaligny	OPTIONS_ITEM_ALIGN_Y
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+		action { play "mouse_click"; }
+	}
+
+
+	itemDef 
+	{
+		name shoot
+		group grpControls
+		type ITEM_TYPE_BIND
+		text " "
+		dvar "+binoculars"
+		rect		0 105 OPTIONS_BIND_SIZE
+		origin OPTIONS_ITEM_ORIGIN
+		textstyle	OPTIONS_ITEM_TEXT_STYLE
+		textalign	OPTIONS_ITEM_ALIGN
+		textalignx	OPTIONS_BIND_ALIGN_X 
+		textaligny	OPTIONS_ITEM_ALIGN_Y
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+		action { play "mouse_click"; }
+	}
+	itemDef
+	{
+		name shoot
+		group grpControls
+		type ITEM_TYPE_BIND
+		text " "
+		dvar "+melee_breath"
+		rect		0 120 OPTIONS_BIND_SIZE
+		origin OPTIONS_ITEM_ORIGIN
+		textstyle	OPTIONS_ITEM_TEXT_STYLE
+		textalign	OPTIONS_ITEM_ALIGN
+		textalignx	OPTIONS_BIND_ALIGN_X 
+		textaligny	OPTIONS_ITEM_ALIGN_Y
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+		action { play "mouse_click"; }
+	}
+	itemDef 
+	{
+		name shoot
+		group grpControls
+		type ITEM_TYPE_BIND
+		text " "
+		dvar "+melee"
+		rect		0 135 OPTIONS_BIND_SIZE
+		origin OPTIONS_ITEM_ORIGIN
+		textstyle	OPTIONS_ITEM_TEXT_STYLE
+		textalign	OPTIONS_ITEM_ALIGN
+		textalignx	OPTIONS_BIND_ALIGN_X 
+		textaligny	OPTIONS_ITEM_ALIGN_Y
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+		action { play "mouse_click"; }
+	}
+	itemDef
+	{
+		name shoot
+		group grpControls
+		type ITEM_TYPE_BIND
+		text " "
+		dvar "+holdbreath"
+		rect		0 150 OPTIONS_BIND_SIZE
+		origin OPTIONS_ITEM_ORIGIN
+		textstyle	OPTIONS_ITEM_TEXT_STYLE
+		textalign	OPTIONS_ITEM_ALIGN
+		textalignx	OPTIONS_BIND_ALIGN_X 
+		textaligny	OPTIONS_ITEM_ALIGN_Y
+		textscale	OPTIONS_CONTROL_TXTSCALE
+		style		WINDOW_STYLE_FILLED
+		backcolor	OPTIONS_CONTROL_BACKCOLOR
+		forecolor	OPTIONS_CONTROL_FORECOLOR
+		visible		1 
+		mouseEnter 
+		{
+			play "mouse_over";
+			show keyBindStatus
+		}
+		mouseexit { hide keyBindStatus }
+		action { play "mouse_click"; }
+	}
+
+//////////////////////////////////
+	itemDef {
+		name keyBindStatus
+		rect 0 324 360 15 
+		ownerdraw UI_KEYBINDSTATUS
+		text " "      
+		style WINDOW_STYLE_FILLED
+		backcolor 0 0 0 0
+		forecolor .9 .9 .9 1
+		border 0
+		bordercolor .5 .5 .5 .5
+		textscale .20
+		textalignx 168
+		textalign 1
+		textaligny 12
+		visible 0
+		decoration 
+	}
+
+}
+
+}//

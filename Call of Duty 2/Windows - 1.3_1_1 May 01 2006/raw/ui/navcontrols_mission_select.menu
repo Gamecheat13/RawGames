@@ -1,0 +1,194 @@
+itemDef 
+{
+	name cd
+	type ITEM_TYPE_BUTTON
+	text "@MENU_CHANGE_DIFFICULTY"
+	rect		0 0 170 20
+	origin		240 420
+	textstyle	OPTIONS_ITEM_TEXT_STYLE
+	textalign	ITEM_ALIGN_CENTER
+	textalignx	80 
+	textaligny	20
+	textscale	.4
+	style		WINDOW_STYLE_FILLED
+	backcolor	OPTIONS_CONTROL_BACKCOLOR
+	forecolor	OPTIONS_CONTROL_FORECOLOR
+	visible		1  
+	mouseEnter 
+	{
+		play "mouse_over";
+	}
+	action 
+	{ 
+		play "mouse_click"; 
+		setdvar ui_selected_map ""; 
+		uiScript openMenuOnDvar sv_running 1 popmenu_ingame_difficulty_warning;
+		uiScript openMenuOnDvarNot sv_running 1 popmenu_difficulty;
+//		open popmenu_difficulty; 
+	}
+}
+/*
+itemDef 
+{
+	name graphics
+	group grpSystem
+	type ITEM_TYPE_MULTI
+	text " "
+	dvar "g_gameskill"
+	dvarFloatList { "@MENU_VETERAN" 3 "@MENU_HARDENED" 2 "@MENU_REGULAR" 1 }
+	rect		0 0 100 50 
+	origin		37 419
+	textstyle	OPTIONS_ITEM_TEXT_STYLE
+	textalign	ITEM_ALIGN_LEFT
+	textalignx	0 
+	textaligny	38
+	textscale	.4
+	style		WINDOW_STYLE_FILLED
+	backcolor	OPTIONS_CONTROL_BACKCOLOR
+	forecolor	OPTIONS_CONTROL_FORECOLOR
+	visible		1 
+	mouseEnter 
+	{
+		play "mouse_over";
+	}
+	action { play "mouse_click"; show graphicsapply; }
+}
+*/
+itemDef
+{
+	text			"@MENU_DIFFICULTY_EASY"
+	type 			ITEM_TYPE_BUTTON
+	rect			0 0 170 20
+	origin			48 420
+	textstyle	OPTIONS_ITEM_TEXT_STYLE
+	textalign		ITEM_ALIGN_LEFT
+	textalignx	0 
+	textaligny	20
+	textfont		UI_FONT_NORMAL
+	textscale		.4
+	forecolor	OPTIONS_CONTROL_FORECOLOR
+	visible			1
+	mouseEnter 
+	{
+		play "mouse_over";
+	}
+	action 
+	{ 
+		play "mouse_click"; 
+		setdvar ui_selected_map ""; 
+		uiScript openMenuOnDvar sv_running 1 popmenu_ingame_difficulty_warning;
+		uiScript openMenuOnDvarNot sv_running 1 popmenu_difficulty;
+//		open popmenu_difficulty; 
+	}
+	dvartest		"g_gameskill"
+	showdvar		{ "0" }
+}
+itemDef
+{
+	text			"@MENU_DIFFICULTY_REGULAR"
+	type 			ITEM_TYPE_BUTTON
+	rect			0 0 170 20
+	origin			48 420
+	textstyle	OPTIONS_ITEM_TEXT_STYLE
+	textalign		ITEM_ALIGN_LEFT
+	textalignx	0 
+	textaligny	20
+	textfont		UI_FONT_NORMAL
+	textscale		.4
+	forecolor	OPTIONS_CONTROL_FORECOLOR
+	visible			1
+	mouseEnter 
+	{
+		play "mouse_over";
+	}
+	action 
+	{ 
+		play "mouse_click"; 
+		setdvar ui_selected_map ""; 
+		uiScript openMenuOnDvar sv_running 1 popmenu_ingame_difficulty_warning;
+		uiScript openMenuOnDvarNot sv_running 1 popmenu_difficulty;
+//		open popmenu_difficulty; 
+	}
+	dvartest		"g_gameskill"
+	showdvar		{ "1" }
+}
+itemDef
+{
+	text			"@MENU_DIFFICULTY_HARDENED"
+	type 			ITEM_TYPE_BUTTON
+	rect			0 0 170 20
+	origin			48 420
+	textstyle	OPTIONS_ITEM_TEXT_STYLE
+	textalign		ITEM_ALIGN_LEFT
+	textalignx	0 
+	textaligny	20
+	textfont		UI_FONT_NORMAL
+	textscale		.4
+	forecolor	OPTIONS_CONTROL_FORECOLOR
+	visible			1
+	mouseEnter 
+	{
+		play "mouse_over";
+	}
+	action 
+	{ 
+		play "mouse_click"; 
+		setdvar ui_selected_map ""; 
+		uiScript openMenuOnDvar sv_running 1 popmenu_ingame_difficulty_warning;
+		uiScript openMenuOnDvarNot sv_running 1 popmenu_difficulty;
+//		open popmenu_difficulty; 
+	}
+	dvartest		"g_gameskill"
+	showdvar		{ "2" }
+}
+itemDef
+{
+	text			"@MENU_DIFFICULTY_VETERAN"
+	type 			ITEM_TYPE_BUTTON
+	rect			0 0 170 20 
+	origin			48 420
+	textstyle	OPTIONS_ITEM_TEXT_STYLE
+	textalign		ITEM_ALIGN_LEFT
+	textalignx	0 
+	textaligny	20
+	textfont		UI_FONT_NORMAL
+	textscale		.4
+	forecolor	OPTIONS_CONTROL_FORECOLOR
+	visible			1
+	mouseEnter 
+	{
+		play "mouse_over";
+	}
+	action 
+	{ 
+		play "mouse_click"; 
+		setdvar ui_selected_map ""; 
+		uiScript openMenuOnDvar sv_running 1 popmenu_ingame_difficulty_warning;
+		uiScript openMenuOnDvarNot sv_running 1 popmenu_difficulty;
+//		open popmenu_difficulty; 
+	}
+	dvartest		"g_gameskill"
+	showdvar		{ "3" }
+}
+itemDef
+{
+	text			"@MENU_BACK"
+	type 			ITEM_TYPE_BUTTON
+	textfont		UI_FONT_NORMAL
+	textscale		.4
+	textaligny		20
+	rect			0 0 50 20
+	origin			505 420
+	visible			1
+	forecolor	OPTIONS_CONTROL_FORECOLOR
+	mouseEnter 
+	{
+		play "mouse_over";
+	}
+	action
+	{
+		play "mouse_click";
+		close VIGNETTE_CENTER; 
+		open main;
+	}
+}

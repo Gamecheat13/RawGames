@@ -1,0 +1,23 @@
+"fakelight normal":
+	fakelight_normal;
+
+"fakelight view":
+	fakelight_view;
+
+"shaded wireframe":
+	wireframe_shaded;
+
+"solid wireframe":
+	wireframe_solid;
+
+"unlit no fog":
+"unlit linear fog":
+"unlit exp fog":
+	vertex_color_shaded;
+
+"lightmap no fog":
+	water_lightmap;
+
+"lightmap linear fog":
+"lightmap exp fog":
+	water_lightmap_fog;

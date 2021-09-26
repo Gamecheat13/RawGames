@@ -1,0 +1,555 @@
+Particle
+{
+	name				lingering_dust
+
+	flags				useBBox useAlpha useRandomColors useRandomRotationDelta useRandomVelocity absoluteVel2 relative
+
+	spawnFlags			axisFromSphere evenDistribution
+
+	count				20
+
+	life				5e+004
+
+	delay				0 500
+
+	origin				0 -300 0 250 300 0
+
+	radius				360
+
+	rotation			0 360
+
+	rgb
+	{
+		curve
+		[
+			0 0.6157 0.6157 0.6157
+			1 0.6235 0.6235 0.6235
+		]
+	}
+
+	rgbRand
+	{
+		curve
+		[
+			0 0.349 0.349 0.349
+			1 0.3451 0.3451 0.3451
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0 0 0
+			0.01724 0.7079 0 0
+			0.06609 0.8911 0 0
+			0.1379 1 0 0
+			0.7184 1 0 0
+			0.8075 0.9257 0 0
+			0.8937 0.7772 0 0
+			1 0 0 0
+		]
+	}
+
+	alphaRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.1125 0 0
+			0.03198 0.6962 0 0
+			0.07849 0.9177 0 0
+			0.1512 1 0 0
+			1 1 0 0
+		]
+
+		scale			230
+	}
+
+	sizeRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2
+	{
+		curve
+		[
+			0 0.5625 0 0
+			1 0.75 0 0
+		]
+
+		scale			266.7
+	}
+
+	size2Rand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 0.75 0 0
+			1 0.75 0 0
+		]
+
+		scale			1.333
+	}
+
+	lengthRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDelta
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.4909 0 0
+		]
+
+		scale			4
+	}
+
+	rotationDeltaRand
+	{
+		curve
+		[
+			0 -0.5 0 0
+			1 -0.5 0 0
+		]
+	}
+
+	velocityX
+	{
+		curve
+		[
+			0 0.08 0 0
+			1 0.08 0 0
+		]
+
+		scale			0
+	}
+
+	velocityY
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+
+		scale			0
+	}
+
+	velocityZ
+	{
+		curve
+		[
+			0 0.01961 0 0
+			0.5805 0.07843 0 0
+			0.7787 0.1667 0 0
+			0.9195 0.3137 0 0
+			1 0.5 0 0
+		]
+
+		scale			100
+	}
+
+	velocityXRand
+	{
+		curve
+		[
+			0 0.08 0 0
+			1 0.08 0 0
+		]
+	}
+
+	velocityYRand
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+	}
+
+	velocityZRand
+	{
+		curve
+		[
+			0 -0.02451 0 0
+			0.6552 -0.1127 0 0
+			0.8305 -0.1961 0 0
+			0.9339 -0.3186 0 0
+			1 -0.5 0 0
+		]
+	}
+
+	velocity2X
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+
+		scale			0
+	}
+
+	velocity2Y
+	{
+		curve
+		[
+			0 0 0 0
+			1 -0.5 0 0
+		]
+
+		scale			0
+	}
+
+	velocity2Z
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+
+		scale			0
+	}
+
+	velocity2XRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2YRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2ZRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	shaders
+	[
+		gfx_whisp_spiral
+	]
+}
+
+Particle
+{
+	name				hide_characters
+
+	flags				useBBox useAlpha useRandomRotationDelta useRandomVelocity absoluteVel2 relative
+
+	spawnFlags			axisFromSphere evenDistribution
+
+	count				5
+
+	life				5e+004
+
+	delay				0 500
+
+	origin				-50 -150 0 50 150 0
+
+	radius				360
+
+	sequenceStartFrameMode	1
+
+	sequenceFixedFpsValue	0.000000
+
+	rgb
+	{
+		curve
+		[
+			0 0.6157 0.6157 0.6157
+			1 0.6235 0.6235 0.6235
+		]
+	}
+
+	rgbRand
+	{
+		curve
+		[
+			0 0.349 0.349 0.349
+			1 0.3451 0.3451 0.3451
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0 0 0
+			0.01724 0.7079 0 0
+			0.06609 0.8911 0 0
+			0.1379 1 0 0
+			0.7184 1 0 0
+			0.8075 0.9257 0 0
+			0.8937 0.7772 0 0
+			1 0 0 0
+		]
+	}
+
+	alphaRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.5127 0 0
+			0.03488 0.7532 0 0
+			0.07849 0.9177 0 0
+			0.1512 1 0 0
+			1 1 0 0
+		]
+
+		scale			100
+	}
+
+	sizeRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2
+	{
+		curve
+		[
+			0 0.5625 0 0
+			1 0.75 0 0
+		]
+
+		scale			266.7
+	}
+
+	size2Rand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 0.75 0 0
+			1 0.75 0 0
+		]
+
+		scale			1.333
+	}
+
+	lengthRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDelta
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.4909 0 0
+		]
+
+		scale			0
+	}
+
+	rotationDeltaRand
+	{
+		curve
+		[
+			0 -0.5 0 0
+			1 -0.5 0 0
+		]
+	}
+
+	velocityX
+	{
+		curve
+		[
+			0 0.08 0 0
+			1 0.08 0 0
+		]
+
+		scale			0
+	}
+
+	velocityY
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+
+		scale			0
+	}
+
+	velocityZ
+	{
+		curve
+		[
+			0 0.01961 0 0
+			0.5805 0.07843 0 0
+			0.7787 0.1667 0 0
+			0.9195 0.3137 0 0
+			1 0.5 0 0
+		]
+
+		scale			100
+	}
+
+	velocityXRand
+	{
+		curve
+		[
+			0 0.08 0 0
+			1 0.08 0 0
+		]
+	}
+
+	velocityYRand
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+	}
+
+	velocityZRand
+	{
+		curve
+		[
+			0 -0.02451 0 0
+			0.6552 -0.1127 0 0
+			0.8305 -0.1961 0 0
+			0.9339 -0.3186 0 0
+			1 -0.5 0 0
+		]
+	}
+
+	velocity2X
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+
+		scale			0
+	}
+
+	velocity2Y
+	{
+		curve
+		[
+			0 0 0 0
+			1 -0.5 0 0
+		]
+
+		scale			0
+	}
+
+	velocity2Z
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+
+		scale			0
+	}
+
+	velocity2XRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2YRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2ZRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	shaders
+	[
+		gfx_dark_smoke_atlas_bg
+	]
+}

@@ -1,0 +1,37 @@
+// Note to translators:
+// If a sentence is the same in your language then please change it to "#same"
+//
+// eg:
+// LANG_ENGLISH  "HALT"
+// LANG_GERMAN   "#same"
+//
+// (This is so we can tell which strings have been signed-off as ok to be the same words for QA
+//  and because we do not store duplicate strings, which will then get exported again next time
+//  as being untranslated.)
+//
+VERSION             "1"
+CONFIG              "C:\trees\cod2\bin\StringEd.cfg"
+FILENOTES           ""
+
+REFERENCE           BREACH_CLEAR_BUNKERS
+LANG_ENGLISH        "Breach and clear the bunkers on Hill 400. [&&1 remaining]"
+
+REFERENCE           ELIMINATE_THE_ENEMY_MORTAR
+LANG_ENGLISH        "Eliminate the mortar crews atop the hill. [&&1 remaining]"
+
+REFERENCE           ELIMINATE_PANZERWERFER
+LANG_ENGLISH        "Eliminate the Panzerwerfer armored vehicles. [&&1 remaining]"
+
+REFERENCE           SECURE_HILL
+LANG_ENGLISH        "Secure the top of Hill400."
+
+REFERENCE           EXPLOSIVES_PLANTED
+LANG_ENGLISH        "Explosives Planted. Stand Back!"
+
+REFERENCE           FRIENDLY_FIRE_WILL_NOT
+LANG_ENGLISH        "Friendly fire will not be tolerated!"
+
+
+ENDMARKER
+
+

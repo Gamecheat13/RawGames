@@ -1,0 +1,10 @@
+{
+	stateMap "objective";
+
+	objectiveGlow();
+
+	texture[0] = material.colorMap;
+
+	stage[0].rgb = modulate( texture[0], constant );
+	stage[0].a = modulate( vertex.color, texture[0] );
+}

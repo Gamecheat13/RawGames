@@ -1,0 +1,98 @@
+Particle
+{
+
+	nonUniformScale		1
+
+	count				4
+
+	life				100
+
+	origin				0 33 33 43 -33 -33
+
+	velocity			322 0 0 622 0 0
+
+	rgb
+	{
+		end				0.7608 0.4353 0.2392
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			10
+		end				200
+		flags			linear
+	}
+
+	size2
+	{
+		start			122
+		end				2
+		flags			linear
+	}
+
+	length
+	{
+		end				122
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx_fire_ball
+		gfx_fire_whisp
+	]
+}
+
+Particle
+{
+	name				Copy of Unnamed Particle 2
+
+	life				100
+
+	velocity			1522 0 0 1622 0 0
+
+	rgb
+	{
+		start			0.7608 0.4353 0.2392
+		end				0.7608 0.4353 0.2392
+		flags			linear
+	}
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			10
+		end				200
+		flags			linear
+	}
+
+	size2
+	{
+		start			122
+		end				2
+		flags			linear
+	}
+
+	length
+	{
+		end				22
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx_fire_ball
+	]
+}

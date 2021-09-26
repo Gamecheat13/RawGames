@@ -1,0 +1,64 @@
+Particle
+{
+	name				breath
+
+	flags				useAlpha
+
+	spawnFlags			evenDistribution
+
+	count				20
+
+	life				3000
+
+	delay				0 500
+
+	origin				0 0 -3
+
+	rotation			360 0
+
+	velocity			10 -2 -4 5 2 0
+
+	gravity				4
+
+	rgb
+	{
+		curve
+		[
+			0 1 1 1
+			1 1 1 1
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0 0.1096 0.219
+			0.1096 0.219 0.2648 0.1387
+			0.2648 0.1387 1 0
+			1 0 4.592e-040 2.572e-038
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0 1 1
+			1 1 2.755e-040 2.516e-038
+		]
+
+		scale			10
+	}
+
+	sequenceStartFrameMode	2
+
+	sequenceFixedFpsValue	24.000000
+
+	sequenceLoopMode	1
+
+	shaders
+	[
+		gfx_smokepuff_atlas
+	]
+}

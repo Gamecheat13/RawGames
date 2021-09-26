@@ -1,0 +1,269 @@
+#include "ui/menudef.h"
+
+#define ORIGIN_BUTTONS				0 0
+#define ORIGIN_MENUWINDOW			20 35
+
+{
+	menuDef 
+	{
+		name moscow_skill
+	    	visible 0
+   		fullscreen 0
+	   	//rect 217 200 210 85
+		rect 204 160 235 160
+		focusColor GLOBAL_FOCUSED_COLOR
+   		style 1
+   		border 1
+		popup
+		onEsc
+		{
+			scriptMenuResponse "no";
+			close "moscow_skill";
+		}
+	
+		itemDef 
+		{
+			name backimage2fade
+			style WINDOW_STYLE_SHADER
+			rect -150 2 535 160
+	 		background "popmenu_bg"
+//			forecolor 0 0 0 0.4
+//			backcolor 0 0 0 0.4
+			visible 1
+			decoration
+		}
+		itemDef 
+		{
+			name backimage2fade
+			style WINDOW_STYLE_SHADER
+			rect -90 20 415 24
+	 		background "popmenu_goldline"
+//			forecolor 0 0 0 0.4
+//			backcolor 0 0 0 0.4
+			visible 1
+			decoration
+		}
+		itemDef 
+		{
+			name confirm
+			text "@MOSCOW_SKILL_QUESTION" 
+			style 0
+			textscale .5
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			rect 126 25 110 20
+			textalign 1
+			textalignx -7
+			textaligny 5
+			decoration
+			forecolor		POPMENU_HEADER_COLOR
+			visible 1
+		}
+
+		itemDef 
+		{
+			name 		recommended
+			text 		"@MOSCOW_SKILL_REC_EASY" 
+			style 		0
+			textscale 	.4
+			textstyle 	3
+			rect 		2 2 196 20
+			origin		ORIGIN_MENUWINDOW
+			textalign 	ITEM_ALIGN_CENTER
+			textalignx 	98
+			textaligny 	17
+			decoration
+			forecolor 	1 1 1 1
+			visible 	1
+			dvartest "ui_moscow_rec_skill"
+			showdvar { "0" }
+		}
+			itemDef 
+			{
+				name 		recommended
+				text 		"@MOSCOW_SKILL_REC_REG" 
+				style 		0
+				textscale 	.4 
+				textstyle 	3
+				rect 		2 2 196 20
+				origin		ORIGIN_MENUWINDOW
+				textalign 	ITEM_ALIGN_CENTER
+				textalignx 	98
+				textaligny 	17
+				decoration
+				forecolor 	1 1 1 1
+				visible 	1
+				dvartest "ui_moscow_rec_skill"
+				showdvar { "1" }
+			}
+				itemDef 
+				{
+					name 		recommended
+					text 		"@MOSCOW_SKILL_REC_HARD" 
+					style 		0
+					textscale 	.4 
+					textstyle 	3
+					rect 		2 2 196 20
+					origin		ORIGIN_MENUWINDOW
+					textalign 	ITEM_ALIGN_CENTER
+					textalignx 	98
+					textaligny 	17
+					decoration
+					forecolor 	1 1 1 1
+					visible 	1
+					dvartest "ui_moscow_rec_skill"
+					showdvar { "2" }
+				}
+					itemDef 
+					{
+						name 		recommended
+						text 		"@MOSCOW_SKILL_REC_VET" 
+						style 		0
+						textscale 	.4
+						textstyle 	3
+						rect 		2 2 196 20
+						origin		ORIGIN_MENUWINDOW
+						textalign 	ITEM_ALIGN_CENTER
+						textalignx 	98
+						textaligny 	17
+						decoration
+						forecolor 	1 1 1 1
+						visible 	1
+						dvartest "ui_moscow_rec_skill"
+						showdvar { "3" }
+					}
+		itemDef 
+		{
+			name 		current
+			text 		"@MOSCOW_SKILL_CUR_EASY" 
+			style 		0
+			textscale 	.4
+			textstyle 	3
+			rect 		2 8 196 20
+			origin		ORIGIN_MENUWINDOW
+			textalign 	ITEM_ALIGN_CENTER
+			textalignx 	98
+			textaligny 	31
+			decoration
+			forecolor 	1 1 1 1
+			visible 	1
+			dvartest "g_gameskill"
+			showdvar { "0" }
+		}
+			itemDef 
+			{
+				name 		current
+				text 		"@MOSCOW_SKILL_CUR_REG" 
+				style 		0
+				textscale 	.4
+				textstyle 	3
+				rect 		2 8 196 20
+				origin		ORIGIN_MENUWINDOW
+				textalign 	ITEM_ALIGN_CENTER
+				textalignx 	98
+				textaligny 	31
+				decoration
+				forecolor 	1 1 1 1
+				visible 	1
+				dvartest "g_gameskill"
+				showdvar { "1" }
+			}
+				itemDef 
+				{
+					name 		current
+					text 		"@MOSCOW_SKILL_CUR_HARD" 
+					style 		0
+					textscale 	.4
+					textstyle 	3
+					rect 		2 8 196 20
+					origin		ORIGIN_MENUWINDOW
+					textalign 	ITEM_ALIGN_CENTER
+					textalignx 	98
+					textaligny 	31
+					decoration
+					forecolor 	1 1 1 1
+					visible 	1
+					dvartest "g_gameskill"
+					showdvar { "2" }
+				}
+					itemDef 
+					{
+						name 		current
+						text 		"@MOSCOW_SKILL_CUR_VET" 
+						style 		0
+						textscale 	.4
+						textstyle 	3
+						rect 		2 8 196 20
+						origin		ORIGIN_MENUWINDOW
+						textalign 	ITEM_ALIGN_CENTER
+						textalignx 	98
+						textaligny 	31
+						decoration
+						forecolor 	1 1 1 1
+						visible 	1
+						dvartest "g_gameskill"
+						showdvar { "3" }
+					}
+
+		itemDef 
+		{
+			name yes
+			text "@MENU_YES"
+			type 1
+			textscale .5
+			style UI_BUTTON_STYLE
+			textfont UI_FONT_NORMAL
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 70 90 100 20
+			textalign 1
+			textalignx 50
+			textaligny 19
+			forecolor UI_BUTTON_TEXT_COLOR
+			backcolor UI_BUTTON_BACK_COLOR 
+			border UI_BUTTON_BORDER
+			bordercolor UI_BUTTON_BORDER_COLOR
+			visible 1
+			focusdvar { "1" }
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{ 
+				play "mouse_click";
+				scriptMenuResponse "yes";
+				close moscow_skill;
+			}
+		}
+		itemDef 
+		{
+			name no
+			text "@MENU_NO"
+			type 1
+			textscale .5
+			style UI_BUTTON_STYLE
+			textfont UI_FONT_NORMAL
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 70 130 100 20
+			textalign 1
+			textalignx 50
+			textaligny 19
+			forecolor UI_BUTTON_TEXT_COLOR
+			backcolor UI_BUTTON_BACK_COLOR 
+			border UI_BUTTON_BORDER
+			bordercolor UI_BUTTON_BORDER_COLOR
+			visible 1
+			focusdvar { "0" }
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{ 
+				play "mouse_click";
+				scriptMenuResponse "no";				
+				close moscow_skill;
+			}
+		}
+	
+	}
+}

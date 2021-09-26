@@ -1,0 +1,85 @@
+// Note to translators:
+// If a sentence is the same in your language then please change it to "#same"
+//
+// eg:
+// LANG_ENGLISH  "HALT"
+// LANG_GERMAN   "#same"
+//
+// (This is so we can tell which strings have been signed-off as ok to be the same words for QA
+//  and because we do not store duplicate strings, which will then get exported again next time
+//  as being untranslated.)
+//
+VERSION             "1"
+CONFIG              "C:\trees\cod2\bin\StringEd.cfg"
+FILENOTES           "All game messages made by script should go in this file."
+
+REFERENCE           MISSIONFAIL_KILLTEAM_RUSSIAN
+LANG_ENGLISH        "You are a traitor to the motherland!"
+
+REFERENCE           MISSIONFAIL_KILLTEAM_BRITISH
+LANG_ENGLISH        "Friendly fire will not be tolerated!"
+
+REFERENCE           MISSIONFAIL_KILLTEAM_AMERICAN
+LANG_ENGLISH        "Friendly fire will not be tolerated!"
+
+REFERENCE           SHOT_TEAMMATE
+LANG_ENGLISH        "You shot a team mate!"
+
+REFERENCE           HINT_OBJECTIVEONCOMPASS
+LANG_ENGLISH        "The star on your compass marks your next objective"
+
+REFERENCE           OBJ_DESTROYFLAKPANZERS
+LANG_ENGLISH        "Destroy the 'Flakpanzer' Anti-Aircraft Tanks. [&&1 remaining]"
+
+REFERENCE           OBJ_FOLEYDEBRIEF
+LANG_ENGLISH        "Debrief with Captain Foley at the crossroads."
+
+REFERENCE           HINT_CANT_OPEN_DOORS
+LANG_ENGLISH        "This door cannot be opened. You never need to try to open closed doors."
+
+REFERENCE           EXPLOSIVESPLANTED
+LANG_ENGLISH        "EXPLOSIVES PLANTED. STAND BACK!"
+
+REFERENCE           HINT_PICKUPAMMOKEY
+LANG_ENGLISH        "To pickup ammo from another weapon, walk close to it or look at it and press USE [&&1]."
+
+REFERENCE           HINT_LEANINGSLOWMOVE
+LANG_ENGLISH        "You move slower while leaning."
+
+REFERENCE           HINTSTR_GRENADESFULL
+LANG_ENGLISH        "You can't carry anymore grenades."
+
+REFERENCE           PICKUPSTIELHANDGRANATES
+LANG_ENGLISH        "Picked up some Stielhandgranates."
+
+REFERENCE           GLOWING_MARKER
+LANG_ENGLISH        "Look for the glowing marker on the German anti-aircraft vehicle."
+
+REFERENCE           CLEARBUILDING
+LANG_ENGLISH        "Clear the building with the Machine Guns in it."
+
+REFERENCE           TAKELEFTFLANK
+LANG_ENGLISH        "Take the left flank."
+
+REFERENCE           FIRE_TO_SKIP
+LANG_ENGLISH        "Click FIRE to Skip."
+
+REFERENCE           USE_THE_PANZERFAUST_ANTITANK
+LANG_ENGLISH        "Use the Panzerfaust anti-tank weapons behind the bunker to destroy the tanks."
+
+REFERENCE           ARTILLERY_TOOFAR
+LANG_ENGLISH        "You are too far from your radio man to use artillery."
+
+REFERENCE           ELIMINATE_THE_FLAK_88_DONE
+LANG_ENGLISH        "Eliminate the Flak 88 crews."
+
+REFERENCE           ELIMINATE_THE_FLAK_88
+LANG_ENGLISH        "Eliminate the Flak 88 crews. [&&1 remaining]"
+
+REFERENCE           GRENADE_DEATH
+LANG_ENGLISH        "You were killed by a grenade.\nWatch out for the grenade danger indicator."
+
+
+ENDMARKER
+
+

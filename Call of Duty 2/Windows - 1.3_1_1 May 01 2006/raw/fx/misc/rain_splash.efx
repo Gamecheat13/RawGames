@@ -1,0 +1,252 @@
+Particle
+{
+	flags				useAlpha useRandomVelocity absoluteVel
+
+	spawnFlags			evenDistribution frustumCull
+
+	count				5
+
+	life				500
+
+	delay				0 400
+
+	origin				0 -20 -20 0 20 20
+
+	rotation			360 -360
+
+	gravity				-100 -50
+
+	spawnFrustumCullRadius	25.000000
+
+	rgb
+	{
+		curve
+		[
+			0 1 1 1
+			1 1 1 1
+		]
+	}
+
+	rgbRand
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0.6832 0.6466 0.6683
+			0.6466 0.6683 0.8276 0.5297
+			0.8276 0.5297 0.9339 0.2822
+			0.9339 0.2822 1 0
+			1 0 5.51e-040 2.498e-038
+		]
+	}
+
+	alphaRand
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0 1 1
+			1 1 2.755e-040 2.498e-038
+		]
+
+		scale			10
+	}
+
+	sizeRand
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	size2
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	size2Rand
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	lengthRand
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	rotationDelta
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	rotationDeltaRand
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	velocityX
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+
+		scale			100
+	}
+
+	velocityY
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+
+		scale			100
+	}
+
+	velocityZ
+	{
+		curve
+		[
+			0 0.2 1 0.2
+			1 0.2 2.755e-040 2.498e-038
+		]
+
+		scale			200
+	}
+
+	velocityXRand
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	velocityYRand
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	velocityZRand
+	{
+		curve
+		[
+			0 0.07843 1 0.08333
+			1 0.08333 2.755e-040 2.498e-038
+		]
+	}
+
+	velocity2X
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	velocity2Y
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	velocity2Z
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	velocity2XRand
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	velocity2YRand
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	velocity2ZRand
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	shaders
+	[
+		gfx_rain_spray
+	]
+}

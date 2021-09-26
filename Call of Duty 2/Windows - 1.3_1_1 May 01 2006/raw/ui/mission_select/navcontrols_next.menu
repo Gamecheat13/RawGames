@@ -1,0 +1,33 @@
+/*
+	// Next Vignette Icon
+	itemDef 
+	{
+		rect VIGNETTE_NEXT_ARROW_RECT
+		origin VIGNETTE_NEXT_ORIGIN
+		style WINDOW_STYLE_SHADER
+		background mission_select_next_mission
+		border 0
+		backcolor 0 0 0 0
+		visible 1
+		decoration
+	}
+	
+	// Previous Vignette Icon
+	itemDef 
+	{
+		rect VIGNETTE_NEXT_ARROW_RECT
+		origin VIGNETTE_NEXT_ORIGIN
+		type ITEM_TYPE_BUTTON
+		visible 1
+		mouseEnter 
+		{
+			play "mouse_over";
+		}
+		action
+		{
+			play "mouse_click"; 
+			close VIGNETTE_CENTER; 
+			open VIGNETTE_RIGHT;
+		}
+	}
+*/

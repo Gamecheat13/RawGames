@@ -1,0 +1,23 @@
+{
+	stateMap "dx7_water_nofog_pass_0";
+
+	texture[0] = material.normalMap;
+
+	texture[1] = sampler.sunHalfAngle;
+	texcoord[1] = genEyeDirCoords();
+
+	stage[0].rgb = select( texture[0] );
+	stage[0].a = select( texture[0] );
+
+	stage[1].rgb = dotProduct3( stage[0], texture[1] );
+	stage[1].a = dotProduct3( stage[0], texture[1] );
+}
+{
+	stateMap "dx7_water_nofog_pass_1";
+
+	texture[0] = sampler.waterColor;
+	texcoord[0] = genEyeDirCoords();
+
+	stage[0].rgb = select( texture[0] );
+	stage[0].a = select( texture[0] );
+}

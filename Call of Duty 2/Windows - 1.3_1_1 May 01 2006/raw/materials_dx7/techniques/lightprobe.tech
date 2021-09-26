@@ -1,0 +1,10 @@
+{
+	stateMap "nofog";
+
+	gridLighting();
+
+	texture[0] = material.colorMap;
+
+	stage[0].rgb = modulate2x( vertex.color, texture[0] );
+	stage[0].a = modulate( vertex.color, texture[0] );
+}

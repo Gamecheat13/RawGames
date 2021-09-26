@@ -1,0 +1,573 @@
+Emitter
+{
+	name				rockclumps
+
+	flags				useModel impactKills useAlpha useRandomRotationDelta
+
+	spawnFlags			orgOnCylinder axisFromSphere
+
+	count				1 2
+
+	life				2000
+
+	origin				-12 0 0 12 0 0
+
+	radius				0 20
+
+	rotation			0 120
+
+	angleDelta			-15 -15 -15 15 15 15
+
+	gravity				-200
+
+	rgb
+	{
+		curve
+		[
+			0 0.6754 0.6754 0.6754
+			1 0.6806 0.6911 0.7068
+		]
+	}
+
+	rgbRand
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 1 0 0
+			0.7989 0.7525 0 0
+			1 0 0 0
+		]
+	}
+
+	alphaRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.3038 0 0
+			0.1424 0.5759 0 0
+			1 0.75 0 0
+		]
+
+		scale			2
+	}
+
+	sizeRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2Rand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 0.75 0 0
+			1 0.75 0 0
+		]
+
+		scale			1.333
+	}
+
+	lengthRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDelta
+	{
+		curve
+		[
+			0 -0.5 0 0
+			0.05263 -0.4837 0 0
+			0.1053 -0.468 0 0
+			0.1579 -0.4528 0 0
+			0.2105 -0.4381 0 0
+			0.2632 -0.4239 0 0
+			0.3158 -0.4101 0 0
+			0.3684 -0.3968 0 0
+			0.4211 -0.3839 0 0
+			0.4737 -0.3714 0 0
+			0.5263 -0.3593 0 0
+			0.5789 -0.3476 0 0
+			0.6316 -0.3363 0 0
+			0.6842 -0.3254 0 0
+			0.7368 -0.3148 0 0
+			0.7895 -0.3046 0 0
+			0.8421 -0.2947 0 0
+			0.8947 -0.2851 0 0
+			0.9474 -0.2759 0 0
+			1 -0.2669 0 0
+		]
+
+		scale			300
+	}
+
+	rotationDeltaRand
+	{
+		curve
+		[
+			0 -0.1739 0 0
+			0.05263 -0.1711 0 0
+			0.1053 -0.1683 0 0
+			0.1579 -0.1656 0 0
+			0.2105 -0.1629 0 0
+			0.2632 -0.1602 0 0
+			0.3158 -0.1576 0 0
+			0.3684 -0.1551 0 0
+			0.4211 -0.1525 0 0
+			0.4737 -0.1501 0 0
+			0.5263 -0.1476 0 0
+			0.5789 -0.1452 0 0
+			0.6316 -0.1429 0 0
+			0.6842 -0.1406 0 0
+			0.7368 -0.1383 0 0
+			0.7895 -0.136 0 0
+			0.8421 -0.1338 0 0
+			0.8947 -0.1316 0 0
+			0.9474 -0.1295 0 0
+			1 -0.1274 0 0
+		]
+	}
+
+	velocityX
+	{
+		curve
+		[
+			0 0.5 0 0
+			0.2385 0.5 0 0
+			1 0.5 0 0
+		]
+
+		scale			150
+	}
+
+	velocityY
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+
+		scale			0
+	}
+
+	velocityZ
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+
+		scale			0
+	}
+
+	velocityXRand
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+	}
+
+	velocityYRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityZRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2X
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+
+		scale			0
+	}
+
+	velocity2Y
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Z
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2XRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2YRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2ZRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	models
+	[
+		xmodel/prop_destroyedcrateplanks01
+		xmodel/prop_destroyedcrateplanks02
+	]
+}
+
+Particle
+{
+	name				dirtbursts
+
+	flags				impactKills useAlpha useRandomRotationDelta useRandomVelocity absoluteVel2
+
+	spawnFlags			orgOnCylinder axisFromSphere
+
+	count				10 15
+
+	life				500 1500
+
+	origin				-12 0 0 12 0 0
+
+	radius				0 20
+
+	rotation			0 120
+
+	gravity				0 -440
+
+	rgb
+	{
+		curve
+		[
+			0 0.7801 0.7539 0.7696
+			1 0.7696 0.7592 0.7749
+		]
+	}
+
+	rgbRand
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 1 0 0
+			0.8075 0.7228 0 0
+			1 0 0 0
+		]
+	}
+
+	alphaRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.3038 0 0
+			0.1424 0.5759 0 0
+			1 0.75 0 0
+		]
+
+		scale			35
+	}
+
+	sizeRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2Rand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 0.75 0 0
+			1 0.75 0 0
+		]
+
+		scale			1.333
+	}
+
+	lengthRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDelta
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+
+		scale			0
+	}
+
+	rotationDeltaRand
+	{
+		curve
+		[
+			0 -0.1739 0 0
+			0.05263 -0.1711 0 0
+			0.1053 -0.1683 0 0
+			0.1579 -0.1656 0 0
+			0.2105 -0.1629 0 0
+			0.2632 -0.1602 0 0
+			0.3158 -0.1576 0 0
+			0.3684 -0.1551 0 0
+			0.4211 -0.1525 0 0
+			0.4737 -0.1501 0 0
+			0.5263 -0.1476 0 0
+			0.5789 -0.1452 0 0
+			0.6316 -0.1429 0 0
+			0.6842 -0.1406 0 0
+			0.7368 -0.1383 0 0
+			0.7895 -0.136 0 0
+			0.8421 -0.1338 0 0
+			0.8947 -0.1316 0 0
+			0.9474 -0.1295 0 0
+			1 -0.1274 0 0
+		]
+	}
+
+	velocityX
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+
+		scale			400
+	}
+
+	velocityY
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+
+		scale			0
+	}
+
+	velocityZ
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+
+		scale			300
+	}
+
+	velocityXRand
+	{
+		curve
+		[
+			0 -0.004902 0 0
+			1 0.004902 0 0
+		]
+	}
+
+	velocityYRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityZRand
+	{
+		curve
+		[
+			0 -0.5 0 0
+			1 -0.5 0 0
+		]
+	}
+
+	velocity2X
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 -0.5 0 0
+		]
+	}
+
+	velocity2Y
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Z
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2XRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2YRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2ZRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	shaders
+	[
+		gfx_rockychunks01
+		gfx_rockychunks02
+		gfx_rockychunks03
+	]
+}

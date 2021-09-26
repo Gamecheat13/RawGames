@@ -1,0 +1,19 @@
+{
+	stateMap "nofog";
+
+	vertex.position = code.position;
+	vertex.normal = code.normal;
+	vertex.color[0] = code.color;
+	vertex.texcoord[0] = code.texcoord[0];
+
+	vertexShader 1.1 "fakelight_view.hlsl"
+	{
+	}
+
+	pixelShader 2.0 "vertcol_shaded.hlsl"
+	{
+		colorMapSampler = material.colorMap;
+		detailMapSampler = material.detailMap;
+		detailScale = material.detailScale;
+	}
+}

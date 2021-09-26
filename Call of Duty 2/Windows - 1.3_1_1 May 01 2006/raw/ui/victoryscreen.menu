@@ -1,0 +1,542 @@
+#include "ui/menudef.h"
+
+{
+	assetGlobalDef
+	{
+		fadeClamp 1						// sets the fadeup alpha
+		fadeCycle 1						// how often fade happens in milliseconds
+		fadeAmount 0.1					// amount to adjust alpha per cycle
+		fadeInAmount 0.002				// amount to adjust fadein alpha per cycle
+		shadowColor 0.1 0.1 0.1 0.25	// shadow color
+	}
+
+	menuDef 
+	{
+		name "victoryscreen"
+		fullScreen MENU_TRUE				
+		rect 0 0 640 480				// Size and position of the menu
+		focusColor GLOBAL_FOCUSED_COLOR		// Menu focus color for text and items
+		soundloop ""
+		
+		onOpen 
+		{ 
+//			play "music_mainmenu";
+			setdvar cl_paused "1"; // pause the game
+			setitemcolor fadebox backcolor 0 0 0 1;
+			fadeout fadebox;
+			setfocus continue;
+			execOnDvarIntValue ui_showpopup 1 "openmenu victory_notice_popmenu";
+		}
+		
+		onClose
+		{
+			setdvar cl_paused "0"; // unpause the game
+		}
+
+		// default full screen backdrop image
+		itemDef 
+		{
+			name defaultbackdrop
+			rect -128 0 896 480
+			style WINDOW_STYLE_FILLED
+			forecolor 0 0 0 1
+			backcolor 1 1 1 1
+			visible 1
+			decoration
+		}
+
+		// full screen backdrop image
+		itemDef 
+		{
+			name backdrop
+			rect -128 0 896 480
+			backcolor 1 1 1 1
+			style WINDOW_STYLE_SHADER
+			background "$victoryBackdrop"
+			visible 1
+			decoration
+		}
+		itemDef 
+		{
+			name background_top_bar
+			style			WINDOW_STYLE_FILLED
+			rect 0 0 640 64 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			backcolor		0 0 0 0.9
+			visible 1
+			decoration
+		}
+		itemDef 
+		{
+			name background_bottom_bar
+			style			WINDOW_STYLE_FILLED
+			rect 0 416 640 64 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			backcolor		0 0 0 0.9
+			visible 1
+			decoration
+		}
+
+		// lines
+		itemDef 
+		{
+			name background_top_bar
+			style			WINDOW_STYLE_FILLED
+			rect			0 64 640 2 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			backcolor		.65 .65 .65 1
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			name background_bottom_bar
+			style			WINDOW_STYLE_FILLED
+			rect			0 416 640 2 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			backcolor		.65 .65 .65 1
+			visible			1
+			decoration
+		}
+
+		// Quote from a famous dead guy    	
+		itemDef 
+		{
+			name quote
+			dvar "ui_victoryquote"
+			autowrapped
+			textscale .4
+			group grpControlbutton
+			type ITEM_TYPE_TEXT
+			textstyle ITEM_TEXTSTYLE_SHADOWEDMORE
+			rect 80 250 480 20
+			textalign ITEM_ALIGN_CENTER
+			textalignx 240 // point to center around
+			forecolor 1 1 1 1
+			visible 1
+			decoration 
+		}
+
+//credits next level
+		itemDef
+		{
+			name continue
+			rect 48 440 170 20
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			text "@MENU_CONTINUE_MISSION"
+			textfont UI_FONT_BIG
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			textalign ITEM_ALIGN_CENTER
+			textalignx 64
+			textaligny 16
+			textscale .4
+			forecolor .65 .65 .65 1
+			visible 1 
+			dvarTest "ui_nextMission"
+			showdvar { "2" }
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action
+			{
+				nextlevel;
+				close victoryscreen;
+			}
+		}
+
+		// Continue Mission button (loads next level) only shown mid vignette
+		itemDef
+		{
+			name continue
+			rect 48 440 170 20
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			text "@MENU_CONTINUE_MISSION"
+			textfont UI_FONT_BIG
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			textalign ITEM_ALIGN_CENTER
+			textalignx 64
+			textaligny 16
+			textscale .4
+			forecolor .65 .65 .65 1
+			visible 1 
+			dvarTest "ui_nextMission"
+			showdvar { "1" }
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action
+			{
+				nextlevel;
+				close victoryscreen;
+			}
+		}
+		
+		// Next Mission button (loads next level in next vignette) only shown at end of vignette
+		itemDef
+		{
+			name next_mission
+			rect 240 440 170 20
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			text "@MENU_NEXT_MISSION"
+			textfont UI_FONT_BIG
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			textalign ITEM_ALIGN_CENTER
+			textalignx 64
+			textaligny 16
+			textscale .4
+			forecolor .65 .65 .65 1
+			visible 1 
+			dvarTest "ui_nextMission"
+			showdvar { "0" }
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action
+			{
+				nextlevel;
+				close victoryscreen;
+			}
+		}
+
+		// Mission Select Menu button (goes to mission_select screen) only shown at end of vignette
+		itemDef
+		{
+			name continue
+			rect 48 440 170 20
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			text "@MENU_MISSION_SELECT_MENU"
+			textfont UI_FONT_BIG
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			textalign ITEM_ALIGN_CENTER
+			textalignx 64
+			textaligny 16
+			textscale .4
+			forecolor .65 .65 .65 1
+			visible 1 
+			dvarTest "ui_nextMission"
+			showdvar { "0" }
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action
+			{
+//				open main;
+//				close main_lockout;
+//				open mission_select;
+				exec "disconnect;wait;closemenu main_lockout;openmenu mission_select";
+			}
+		}
+
+		// Main menu button (returns player to the main menu)
+		itemDef
+		{
+			name restart
+			rect 480 440 128 16
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			text "@MENU_MAIN_MENU"
+			textfont UI_FONT_BIG
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			textalign ITEM_ALIGN_CENTER
+			textalignx 64
+			textaligny 16
+			textscale .4
+			forecolor .65 .65 .65 1
+			visible 1 
+			dvarTest "mapname"
+			hidedvar { "credits" }
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action
+			{
+//				open main;
+			exec "disconnect;wait;closemenu main;openmenu victoryscreen;openmenu main";
+			}
+		}
+		
+		itemDef
+		{
+			name restart
+			rect 480 440 128 16
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_EMPTY
+			text "@MENU_MAIN_MENU"
+			textfont UI_FONT_BIG
+			textstyle ITEM_TEXTSTYLE_SHADOWEDMORE
+			textalign ITEM_ALIGN_CENTER
+			textalignx 64
+			textaligny 16
+			textscale .4
+			forecolor .9 .9 .9 .9
+			visible 1 
+			dvarTest "mapname"
+			showdvar { "credits" }
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action
+			{
+//				exec "disconnect";
+//				close victoryscreen;
+//				open main;
+				exec "disconnect;wait;closemenu main;openmenu victoryscreen;openmenu main";
+			}
+		}
+		
+
+		// Box for fading in menus, this needs to come last
+		itemDef 	
+		{
+	      	name fadebox
+	      	style WINDOW_STYLE_FILLED
+	 		background "white"
+			forecolor 0 0 0 1
+			backcolor 0 0 0 1
+			rect 0 0 640 480
+	      	visible 1 
+			decoration
+    	}
+	}
+
+
+
+	menuDef 
+	{
+		name victory_notice_popmenu
+		visible 0
+		fullscreen 0
+		//rect 217 200 210 85
+		rect 204 140 235 135
+		focusColor GLOBAL_FOCUSED_COLOR
+		style 1
+		border 1
+		popup
+		onESC { close victory_notice_popmenu;  }
+		onOpen { setfocus ok; }
+
+		itemDef 
+		{
+			name window
+			group grpControlbutton
+			rect 0 2 235 135
+			style WINDOW_STYLE_FILLED
+			border 1
+			bordercolor .5 .5 .5 .5
+			forecolor 1 1 1 1
+			backcolor 0 0 0 .5
+			visible 0
+			decoration
+		}
+
+		itemDef 
+		{
+			name backimage2fade
+			style WINDOW_STYLE_SHADER
+			rect -332 -162 896 484
+	 		background "white"
+			forecolor 0 0 0 0.3
+			backcolor 0 0 0 0.3
+			visible 1
+			decoration
+		}
+	
+		itemDef 
+		{
+			name window2
+			group grpControlbutton
+			rect 2 3 231 20	
+			style WINDOW_STYLE_FILLED
+			border 1
+			bordercolor .1 .1 .1 .2
+			forecolor 1 1 1 1
+			backcolor 1 1 .3 .3
+			visible 0
+			decoration
+		}
+		itemDef 
+		{
+			name backimage2fade
+			style WINDOW_STYLE_SHADER
+			rect -150 2 535 150
+	 		background "popmenu_bg"
+//			forecolor 0 0 0 0.4
+//			backcolor 0 0 0 0.4
+			visible 1
+			decoration
+		}
+		itemDef 
+		{
+			name backimage2fade
+			style WINDOW_STYLE_SHADER
+			rect -50 20 335 24
+	 		background "popmenu_goldline"
+//			forecolor 0 0 0 0.4
+//			backcolor 0 0 0 0.4
+			visible 1
+			decoration
+		}
+
+		itemDef 
+		{
+			name confirm
+			text "@MENU_CONGRATULATIONS" 
+			style 0
+			textscale .5 
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			rect 126 25 110 20
+			textalign 1
+			textalignx -7
+			textaligny 5
+			decoration
+			forecolor		POPMENU_HEADER_COLOR
+			visible 1
+		}
+		itemDef 
+		{
+			text "@MENU_VICTORY_BRITISH_UNLOCKED"
+			type 1
+			autowrapped
+			textscale .3
+			style UI_BUTTON_STYLE
+			textfont UI_FONT_NORMAL
+			textstyle UI_BUTTON_TEXT_STYLE
+			rect 67 35 200 100
+			textalign 1
+			textalignx 50
+			textaligny 19
+			forecolor UI_BUTTON_TEXT_COLOR
+			backcolor UI_BUTTON_BACK_COLOR 
+			border UI_BUTTON_BORDER
+			bordercolor UI_BUTTON_BORDER_COLOR
+			visible 1
+			dvarTest "ui_popupstring"
+			showDvar { "british_unlocked" }
+			decoration
+		}
+		itemDef 
+		{
+			text "@MENU_VICTORY_AMERICAN_UNLOCKED"
+			type 1
+			autowrapped
+			textscale .3
+			style UI_BUTTON_STYLE
+			textfont UI_FONT_NORMAL
+			textstyle UI_BUTTON_TEXT_STYLE
+			rect 67 35 200 100
+			textalign 1
+			textalignx 50
+			textaligny 19
+			forecolor UI_BUTTON_TEXT_COLOR
+			backcolor UI_BUTTON_BACK_COLOR 
+			border UI_BUTTON_BORDER
+			bordercolor UI_BUTTON_BORDER_COLOR
+			visible 1
+			dvarTest "ui_popupstring"
+			showDvar { "american_unlocked"; "american_unlockedbritish_completed" }
+			decoration
+		}
+		itemDef 
+		{
+			text "@MENU_VICTORY_BRITISH_COMPLETED"
+			type 1
+			autowrapped
+			textscale .3
+			style UI_BUTTON_STYLE
+			textfont UI_FONT_NORMAL
+			textstyle UI_BUTTON_TEXT_STYLE
+			rect 67 35 200 100
+			textalign 1
+			textalignx 50
+			textaligny 19
+			forecolor UI_BUTTON_TEXT_COLOR
+			backcolor UI_BUTTON_BACK_COLOR 
+			border UI_BUTTON_BORDER
+			bordercolor UI_BUTTON_BORDER_COLOR
+			visible 1
+			dvarTest "ui_popupstring"
+			showDvar { "british_completed" }
+			decoration
+		}
+		itemDef 
+		{
+			text "@MENU_VICTORY_RUSSIAIN_COMPLETED"
+			type 1
+			autowrapped
+			textscale .3
+			style UI_BUTTON_STYLE
+			textfont UI_FONT_NORMAL
+			textstyle UI_BUTTON_TEXT_STYLE
+			rect 67 35 200 100
+			textalign 1
+			textalignx 50
+			textaligny 19
+			forecolor UI_BUTTON_TEXT_COLOR
+			backcolor UI_BUTTON_BACK_COLOR 
+			border UI_BUTTON_BORDER
+			bordercolor UI_BUTTON_BORDER_COLOR
+			visible 1
+			dvarTest "ui_popupstring"
+			showDvar { "russian_completed" }
+			decoration
+		}
+		itemDef 
+		{
+			text "@MENU_VICTORY_AMERICAN_RUSSIAN"
+			type 1
+			autowrapped
+			textscale .3
+			style UI_BUTTON_STYLE
+			textfont UI_FONT_NORMAL
+			textstyle UI_BUTTON_TEXT_STYLE
+			rect 67 35 200 100
+			textalign 1
+			textalignx 50
+			textaligny 19
+			forecolor UI_BUTTON_TEXT_COLOR
+			backcolor UI_BUTTON_BACK_COLOR 
+			border UI_BUTTON_BORDER
+			bordercolor UI_BUTTON_BORDER_COLOR
+			visible 1
+			dvarTest "ui_popupstring"
+			showDvar { "american_unlocked_russian_completed" }
+			decoration
+		}
+
+		itemDef 
+		{
+			name		ok
+			text		"@MENU_OK"
+			type		1
+			textscale	.45
+			style		UI_BUTTON_STYLE
+			textfont	UI_FONT_NORMAL
+			textstyle	ITEM_TEXTSTYLE_SHADOWED
+			rect		90 115 60 30
+			textalign	1
+			textalignx	29
+			textaligny	21
+			forecolor	UI_BUTTON_TEXT_COLOR
+//			backcolor	UI_BUTTON_BACK_COLOR 
+			visible		1
+//			border		UI_BUTTON_BORDER
+//			bordercolor	UI_BUTTON_BORDER_COLOR
+
+			action 
+			{ 
+				play "mouse_click";
+				setdvar ui_showpopup 0;
+				close victory_notice_popmenu; 
+			}
+			mouseEnter { play "mouse_over";  } 
+//			mouseExit { setitemcolor yes backcolor UI_BUTTON_BACK_COLOR } 	
+		}
+
+	}
+}

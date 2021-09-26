@@ -1,0 +1,1309 @@
+#include "ui_mp/menudef.h"
+
+#define ORIGIN_TITLE				48 64
+#define ORIGIN_CHOICE1				80 84
+#define ORIGIN_CHOICE2				80 108
+#define ORIGIN_CHOICE3				80 132
+#define ORIGIN_CHOICE4				80 156
+#define ORIGIN_CHOICE5				80 180
+#define ORIGIN_CHOICE6				80 204
+#define ORIGIN_CHOICE7				80 228
+
+#define ORIGIN_WEAPONIMAGE			296 84
+#define ORIGIN_WEAPONTEXT			296 220
+#define ORIGIN_WEAPONPROPERTIESTEXT	296 290
+#define ORIGIN_WEAPONACCURACY		395 277
+#define ORIGIN_WEAPONDAMAGE			395 301
+#define ORIGIN_WEAPONMOBILITY		395 325
+#define ORIGIN_GRENADESLOT1			296 144
+#define ORIGIN_GRENADESLOT2			312 144
+#define ORIGIN_GRENADESLOT3			328 144
+
+{
+	menuDef
+	{
+		name			"weapon_british"
+		rect			0 0 640 480
+		focuscolor		GLOBAL_FOCUSED_COLOR
+		style			WINDOW_STYLE_EMPTY
+		blurWorld		5.0
+		onEsc 
+		{
+			close weapon_british;
+		}
+		onOpen 
+		{
+			show sten_info;
+			show weapon_propertiestext;
+		}
+		onClose
+		{
+			hide sten_info;
+			hide enfield_info;
+			hide bren_info;
+			hide enfieldsniper_info;
+			hide thompson_info;
+			hide shotgun_info;
+		}
+
+		// Gradient
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			//rect			-107 0 554 480
+			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			background		"gradient"
+			visible			1
+			decoration
+		}
+
+		#include "ui/bars.menu"
+
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			visible			1
+			origin			ORIGIN_TITLE
+			forecolor		1 1 1 1
+			text			"@MPUI_BRITISH_WEAPONS"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_HEADER_SIZE
+			decoration
+		}
+
+// MENU CHOICES
+		execKey "1" { play "mouse_click"; scriptMenuResponse "sten_mp"; }
+		execKey "2" { play "mouse_click"; scriptMenuResponse "enfield_mp"; }
+		execKey "3" { play "mouse_click"; scriptMenuResponse "m1garand_mp"; }
+		execKey "4" { play "mouse_click"; scriptMenuResponse "enfield_scope_mp"; }
+		execKey "5" { play "mouse_click"; scriptMenuResponse "shotgun_mp"; }
+		execKey "6" { play "mouse_click"; scriptMenuResponse "thompson_mp"; }
+		execKey "7" { play "mouse_click"; scriptMenuResponse "bren_mp"; }
+
+		itemDef 
+		{
+			name			"button_sten"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE1
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"@MPUI_1_STEN"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			dvartest		"ui_allow_sten"
+			showDvar		{ "1" }
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "sten_mp";
+			}
+			onFocus
+			{
+				hide enfield_info;
+				hide shotgun_info;
+				hide thompson_info;
+				hide bren_info;
+				hide enfieldsniper_info;
+				hide m1garand_info;
+				play "mouse_over";
+				show sten_info;
+				show weapon_propertiestext;
+			}
+		}
+		itemDef 
+		{
+			name			"button_sten"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE1
+			forecolor		GLOBAL_DISABLED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"@MPUI_1_STEN"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			dvartest		"ui_allow_sten"
+			showDvar		{ "2" }
+			onFocus
+			{
+				hide enfield_info;
+				hide shotgun_info;
+				hide thompson_info;
+				hide bren_info;
+				hide enfieldsniper_info;
+				hide m1garand_info;
+				play "mouse_over";
+				show sten_info;
+				show weapon_propertiestext;
+			}
+		}
+
+		itemDef 
+		{
+			name			"button_enfield"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE2
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"@MPUI_2_LEEENFIELD"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			dvartest		"ui_allow_enfield"
+			showDvar		{ "1" }
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "enfield_mp";
+			}
+			onFocus
+			{
+				hide sten_info;
+				hide shotgun_info;
+				hide thompson_info;
+				hide bren_info;
+				hide enfieldsniper_info;
+				hide m1garand_info;
+				play "mouse_over";
+				show enfield_info;
+				show weapon_propertiestext;
+			}
+		}
+		itemDef 
+		{
+			name			"button_enfield"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE2
+			forecolor		GLOBAL_DISABLED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"@MPUI_2_LEEENFIELD"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			dvartest		"ui_allow_enfield"
+			showDvar		{ "2" }
+			onFocus
+			{
+				hide sten_info;
+				hide shotgun_info;
+				hide thompson_info;
+				hide bren_info;
+				hide enfieldsniper_info;
+				hide m1garand_info;
+				play "mouse_over";
+				show enfield_info;
+				show weapon_propertiestext;
+			}
+		}
+
+		itemDef 
+		{
+			name			"button_m1garand"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE3
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"@MPUI_3_M1_GARAND"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			dvartest		"ui_allow_m1garand"
+			showDvar		{ "1" }
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "m1garand_mp";
+			}
+			onFocus
+			{
+				hide sten_info;
+				hide enfield_info;
+				hide shotgun_info;
+				hide thompson_info;
+				hide bren_info;
+				hide enfieldsniper_info;
+				play "mouse_over";
+				show m1garand_info;
+				show weapon_propertiestext;
+			}
+		}
+		itemDef 
+		{
+			name			"button_m1garand"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE3
+			forecolor		GLOBAL_DISABLED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"@MPUI_3_M1_GARAND"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			dvartest		"ui_allow_m1garand"
+			showDvar		{ "2" }
+			onFocus
+			{
+				hide sten_info;
+				hide enfield_info;
+				hide shotgun_info;
+				hide thompson_info;
+				hide bren_info;
+				hide enfieldsniper_info;
+				play "mouse_over";
+				show m1garand_info;
+				show weapon_propertiestext;
+			}
+		}
+
+		itemDef 
+		{
+			name			"button_enfieldscoped"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE4
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"@MPUI_4_SCOPED_LEEENFIELD"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			dvartest		"ui_allow_enfieldsniper"
+			showDvar		{ "1" }
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "enfield_scope_mp";
+			}
+			onFocus
+			{
+				hide sten_info;
+				hide enfield_info;
+				hide shotgun_info;
+				hide thompson_info;
+				hide bren_info;
+				hide m1garand_info;
+				play "mouse_over";
+				show enfieldsniper_info;
+				show weapon_propertiestext;
+			}
+		}
+		itemDef 
+		{
+			name			"button_enfieldscoped"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE4
+			forecolor		GLOBAL_DISABLED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"@MPUI_4_SCOPED_LEEENFIELD"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			dvartest		"ui_allow_enfieldsniper"
+			showDvar		{ "2" }
+			onFocus
+			{
+				hide sten_info;
+				hide enfield_info;
+				hide shotgun_info;
+				hide thompson_info;
+				hide bren_info;
+				hide m1garand_info;
+				play "mouse_over";
+				show enfieldsniper_info;
+				show weapon_propertiestext;
+			}
+		}
+
+		itemDef 
+		{
+			name			"button_shotgun"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE5
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"@MPUI_5_SHOTGUN"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			dvartest		"ui_allow_shotgun"
+			showDvar		{ "1" }
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "shotgun_mp";
+			}
+			onFocus
+			{
+				hide sten_info;
+				hide enfield_info;
+				hide enfieldsniper_info;
+				hide m1garand_info;
+				hide thompson_info;
+				hide bren_info;
+				play "mouse_over";
+				show shotgun_info;
+				show weapon_propertiestext;
+			}
+		}
+		itemDef 
+		{
+			name			"button_shotgun"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE5
+			forecolor		GLOBAL_DISABLED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"@MPUI_5_SHOTGUN"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			dvartest		"ui_allow_shotgun"
+			showDvar		{ "2" }
+			onFocus
+			{
+				hide sten_info;
+				hide enfield_info;
+				hide enfieldsniper_info;
+				hide m1garand_info;
+				hide thompson_info;
+				hide bren_info;
+				play "mouse_over";
+				show shotgun_info;
+				show weapon_propertiestext;
+			}
+		}
+		
+		itemDef 
+		{
+			name			"button_thompson"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE6
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"@MPUI_6_THOMPSON"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			dvartest		"ui_allow_thompson"
+			showDvar		{ "1" }
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "thompson_mp";
+			}
+			onFocus
+			{
+				hide sten_info;
+				hide enfield_info;
+				hide enfieldsniper_info;
+				hide m1garand_info;
+				hide shotgun_info;
+				hide bren_info;
+				play "mouse_over";
+				show thompson_info;
+				show weapon_propertiestext;
+			}
+		}
+		itemDef 
+		{
+			name			"button_thompson"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE6
+			forecolor		GLOBAL_DISABLED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"@MPUI_6_THOMPSON"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			dvartest		"ui_allow_thompson"
+			showDvar		{ "2" }
+			onFocus
+			{
+				hide sten_info;
+				hide enfield_info;
+				hide enfieldsniper_info;
+				hide m1garand_info;
+				hide shotgun_info;
+				hide bren_info;
+				play "mouse_over";
+				show thompson_info;
+				show weapon_propertiestext;
+			}
+		}
+
+		itemDef 
+		{
+			name			"button_bren"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE7
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"@MPUI_7_BREN_LMG"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			dvartest		"ui_allow_bren"
+			showDvar		{ "1" }
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "bren_mp";
+			}
+			onFocus
+			{
+				hide sten_info;
+				hide enfield_info;
+				hide enfieldsniper_info;
+				hide m1garand_info;
+				hide shotgun_info;
+				hide thompson_info;
+				play "mouse_over";
+				show bren_info;
+				show weapon_propertiestext;
+			}
+		}
+		itemDef 
+		{
+			name			"button_bren"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE7
+			forecolor		GLOBAL_DISABLED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"@MPUI_7_BREN_LMG"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			dvartest		"ui_allow_bren"
+			showDvar		{ "2" }
+			onFocus
+			{
+				hide sten_info;
+				hide enfield_info;
+				hide enfieldsniper_info;
+				hide m1garand_info;
+				hide shotgun_info;
+				hide thompson_info;
+				play "mouse_over";
+				show bren_info;
+				show weapon_propertiestext;
+			}
+		}
+		
+		itemDef 
+		{
+			#include "ui_mp/button_mainmenu.menu"
+
+			action
+			{
+				play "mouse_click";
+				close ingame;
+				open main;
+			}
+			onFocus
+			{
+				play "mouse_over";
+			}
+		}
+		
+// WEAPON IMAGES
+		itemDef
+		{
+			name			"sten_info"
+			visible 		0
+			rect			0 0 224 112
+			origin			ORIGIN_WEAPONIMAGE
+	 		style			WINDOW_STYLE_SHADER
+			background		"weapon_sten"
+			decoration
+		}
+		itemDef
+		{
+			name			"enfield_info"
+			visible 		0
+			rect			0 -2 224 112
+			origin			ORIGIN_WEAPONIMAGE
+	 		style			WINDOW_STYLE_SHADER
+			background		"weapon_enfield"
+			decoration
+		}
+		itemDef
+		{
+			name			"bren_info"
+			visible 		0
+			rect			0 -16 224 112
+			origin			ORIGIN_WEAPONIMAGE
+	 		style			WINDOW_STYLE_SHADER
+			background		"weapon_bren"
+			decoration
+		}
+		itemDef
+		{
+			name			"enfieldsniper_info"
+			visible 		0
+			rect			0 -6 224 112
+			origin			ORIGIN_WEAPONIMAGE
+	 		style			WINDOW_STYLE_SHADER
+			background		"weapon_enfieldscoped"
+			decoration
+		}
+		itemDef
+		{
+			name			"m1garand_info"
+			visible 		0
+			rect			0 0 224 112
+			origin			ORIGIN_WEAPONIMAGE
+	 		style			WINDOW_STYLE_SHADER
+			background		"weapon_m1garand"
+			decoration
+		}
+		itemDef
+		{
+			name			"shotgun_info"
+			visible 		0
+			rect			0 0 224 112
+			origin			ORIGIN_WEAPONIMAGE
+	 		style			WINDOW_STYLE_SHADER
+			background		"weapon_shotgun"
+			decoration
+		}
+		itemDef
+		{
+			name			"thompson_info"
+			visible 		0
+			rect			0 6 224 112
+			origin			ORIGIN_WEAPONIMAGE
+	 		style			WINDOW_STYLE_SHADER
+			background		"weapon_thompson"
+			decoration
+		}
+
+/*
+// WEAPON DESCRIPTIONS
+		itemDef
+		{
+			name			"sten_info"
+			visible 		0
+			rect			0 0 224 64
+			origin			ORIGIN_WEAPONTEXT
+			forecolor		1 1 1 1
+			autowrapped
+			text			"@MPUI_THE_STEN_MARK_2_IS_A"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			decoration
+		}
+		itemDef
+		{
+			name			"enfield_info"
+			visible 		0
+			rect			0 0 224 64
+			origin			ORIGIN_WEAPONTEXT
+			forecolor		1 1 1 1
+			autowrapped
+			text			"@MPUI_THE_LEEENFIELD_RIFLE"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			decoration
+		}
+		itemDef
+		{
+			name			"bren_info"
+			visible 		0
+			rect			0 17 224 64
+			origin			ORIGIN_WEAPONTEXT
+			forecolor		1 1 1 1
+			autowrapped
+			text			"@MPUI_THE_BREN_IS_AN_EXCELLENT"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			decoration
+		}
+		itemDef
+		{
+			name			"enfieldsniper_info"
+			visible 		0
+			rect			0 0 224 64
+			origin			ORIGIN_WEAPONTEXT
+			forecolor		1 1 1 1
+			autowrapped
+			text			"@MPUI_THIS_IS_A_SNIPER_RIFLE"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			decoration
+		}
+*/
+// WEAPON PROPERTIES
+		itemDef
+		{
+			name			"weapon_propertiestext"
+			visible 		0
+			origin			ORIGIN_WEAPONPROPERTIESTEXT
+			forecolor		1 1 1 1
+			autowrapped
+			text			"@MPUI_ACCURACY_DAMAGE_MOBILITY"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			decoration
+		}
+
+		itemDef
+		{
+			name			"sten_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONACCURACY
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"sten_info"
+			visible 		0
+			rect			0 0 70 10
+			origin			ORIGIN_WEAPONACCURACY
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"sten_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONDAMAGE
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"sten_info"
+			visible 		0
+			rect			0 0 77 10
+			origin			ORIGIN_WEAPONDAMAGE
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"sten_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"sten_info"
+			visible 		0
+			rect			0 0 96 10
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"enfield_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONACCURACY
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"enfield_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONACCURACY
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"enfield_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONDAMAGE
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"enfield_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONDAMAGE
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"enfield_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"enfield_info"
+			visible 		0
+			rect			0 0 80 10
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"bren_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONACCURACY
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"bren_info"
+			visible 		0
+			rect			0 0 72 10
+			origin			ORIGIN_WEAPONACCURACY
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"bren_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONDAMAGE
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"bren_info"
+			visible 		0
+			rect			0 0 120 10
+			origin			ORIGIN_WEAPONDAMAGE
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"bren_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"bren_info"
+			visible 		0
+			rect			0 0 64 10
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"enfieldsniper_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONACCURACY
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"enfieldsniper_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONACCURACY
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"enfieldsniper_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONDAMAGE
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"enfieldsniper_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONDAMAGE
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"enfieldsniper_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"enfieldsniper_info"
+			visible 		0
+			rect			0 0 80 10
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		
+		itemDef
+		{
+			name			"thompson_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONACCURACY
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"thompson_info"
+			visible 		0
+			rect			0 0 56 10
+			origin			ORIGIN_WEAPONACCURACY
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"thompson_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONDAMAGE
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"thompson_info"
+			visible 		0
+			rect			0 0 83 10
+			origin			ORIGIN_WEAPONDAMAGE
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"thompson_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"thompson_info"
+			visible 		0
+			rect			0 0 96 10
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"m1garand_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONACCURACY
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"m1garand_info"
+			visible 		0
+			rect			0 0 96 10
+			origin			ORIGIN_WEAPONACCURACY
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"m1garand_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONDAMAGE
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"m1garand_info"
+			visible 		0
+			rect			0 0 110 10
+			origin			ORIGIN_WEAPONDAMAGE
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"m1garand_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"m1garand_info"
+			visible 		0
+			rect			0 0 80 10
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		
+		itemDef
+		{
+			name			"shotgun_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONACCURACY
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"shotgun_info"
+			visible 		0
+			rect			0 0 35 10
+			origin			ORIGIN_WEAPONACCURACY
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"shotgun_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONDAMAGE
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"shotgun_info"
+			visible 		0
+			rect			0 0 100 10
+			origin			ORIGIN_WEAPONDAMAGE
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"shotgun_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"shotgun_info"
+			visible 		0
+			rect			0 0 80 10
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+// GRENADE LOADOUT
+		itemDef
+		{
+			name			"sten_info"
+			visible 		0
+			rect			0 0 32 32
+			origin			ORIGIN_GRENADESLOT1
+	 		style			WINDOW_STYLE_SHADER
+			background		"gfx/icons/hud@british_grenade_C.tga"
+			decoration
+		}
+
+		itemDef
+		{
+			name			"thompson_info"
+			visible 		0
+			rect			0 0 32 32
+			origin			ORIGIN_GRENADESLOT1
+	 		style			WINDOW_STYLE_SHADER
+			background		"gfx/icons/hud@british_grenade_C.tga"
+			decoration
+		}
+
+		itemDef
+		{
+			name			"m1garand_info"
+			visible 		0
+			rect			0 0 32 32
+			origin			ORIGIN_GRENADESLOT1
+	 		style			WINDOW_STYLE_SHADER
+			background		"gfx/icons/hud@british_grenade_C.tga"
+			decoration
+		}
+		itemDef
+		{
+			name			"m1garand_info"
+			visible 		0
+			rect			0 0 32 32
+			origin			ORIGIN_GRENADESLOT2
+	 		style			WINDOW_STYLE_SHADER
+			background		"gfx/icons/hud@british_grenade_C.tga"
+			decoration
+		}
+		
+		itemDef
+		{
+			name			"enfield_info"
+			visible 		0
+			rect			0 0 32 32
+			origin			ORIGIN_GRENADESLOT1
+	 		style			WINDOW_STYLE_SHADER
+			background		"gfx/icons/hud@british_grenade_C.tga"
+			decoration
+		}
+		itemDef
+		{
+			name			"enfield_info"
+			visible 		0
+			rect			0 0 32 32
+			origin			ORIGIN_GRENADESLOT2
+	 		style			WINDOW_STYLE_SHADER
+			background		"gfx/icons/hud@british_grenade_C.tga"
+			decoration
+		}
+		itemDef
+		{
+			name			"enfield_info"
+			visible 		0
+			rect			0 0 32 32
+			origin			ORIGIN_GRENADESLOT3
+	 		style			WINDOW_STYLE_SHADER
+			background		"gfx/icons/hud@british_grenade_C.tga"
+			decoration
+		}
+		
+		itemDef
+		{
+			name			"bren_info"
+			visible 		0
+			rect			0 0 32 32
+			origin			ORIGIN_GRENADESLOT1
+	 		style			WINDOW_STYLE_SHADER
+			background		"gfx/icons/hud@british_grenade_C.tga"
+			decoration
+		}
+		itemDef
+		{
+			name			"bren_info"
+			visible 		0
+			rect			0 0 32 32
+			origin			ORIGIN_GRENADESLOT2
+	 		style			WINDOW_STYLE_SHADER
+			background		"gfx/icons/hud@british_grenade_C.tga"
+			decoration
+		}
+		
+		itemDef
+		{
+			name			"enfieldsniper_info"
+			visible 		0
+			rect			0 0 32 32
+			origin			ORIGIN_GRENADESLOT1
+	 		style			WINDOW_STYLE_SHADER
+			background		"gfx/icons/hud@british_grenade_C.tga"
+			decoration
+		}
+		itemDef
+		{
+			name			"enfieldsniper_info"
+			visible 		0
+			rect			0 0 32 32
+			origin			ORIGIN_GRENADESLOT2
+	 		style			WINDOW_STYLE_SHADER
+			background		"gfx/icons/hud@british_grenade_C.tga"
+			decoration
+		}
+		itemDef
+		{
+			name			"enfieldsniper_info"
+			visible 		0
+			rect			0 0 32 32
+			origin			ORIGIN_GRENADESLOT3
+	 		style			WINDOW_STYLE_SHADER
+			background		"gfx/icons/hud@british_grenade_C.tga"
+			decoration
+		}
+
+		itemDef
+		{
+			name			"greasegun_info"
+			visible 		0
+			rect			0 0 32 32
+			origin			ORIGIN_GRENADESLOT1
+	 		style			WINDOW_STYLE_SHADER
+			background		"gfx/icons/hud@british_grenade_C.tga"
+			decoration
+		}
+
+		itemDef
+		{
+			name			"shotgun_info"
+			visible 		0
+			rect			0 0 32 32
+			origin			ORIGIN_GRENADESLOT1
+	 		style			WINDOW_STYLE_SHADER
+			background		"gfx/icons/hud@british_grenade_C.tga"
+			decoration
+		}
+		
+// SMOKE GRENADE LOADOUT
+		itemDef
+		{
+			name			"thompson_info"
+			visible 		0
+			rect			0 0 32 32
+			origin			ORIGIN_GRENADESLOT3
+	 		style			WINDOW_STYLE_SHADER
+			background		"hud_us_smokegrenade_C"
+			decoration
+		}
+
+		itemDef
+		{
+			name			"sten_info"
+			visible 		0
+			rect			0 0 32 32
+			origin			ORIGIN_GRENADESLOT3
+	 		style			WINDOW_STYLE_SHADER
+			background		"hud_us_smokegrenade_C"
+			decoration
+		}
+
+		itemDef
+		{
+			name			"greasegun_info"
+			visible 		0
+			rect			0 0 32 32
+			origin			ORIGIN_GRENADESLOT3
+	 		style			WINDOW_STYLE_SHADER
+			background		"hud_us_smokegrenade_C"
+			decoration
+		}
+
+		itemDef
+		{
+			name			"shotgun_info"
+			visible 		0
+			rect			0 0 32 32
+			origin			ORIGIN_GRENADESLOT3
+	 		style			WINDOW_STYLE_SHADER
+			background		"hud_us_smokegrenade_C"
+			decoration
+		}
+	}
+}

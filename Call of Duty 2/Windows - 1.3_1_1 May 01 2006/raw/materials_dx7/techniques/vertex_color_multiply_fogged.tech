@@ -1,0 +1,12 @@
+{
+	stateMap "nofog";
+
+	texture[0] = material.colorMap;
+	texture[1] = sampler.white;
+
+	stage[0].rgb = modulate( vertex.color, texture[0] );
+	stage[0].a = modulate( vertex.color, texture[0] );
+
+	stage[1].rgb = blendCurrentAlpha( stage[0], texture[1] );
+	stage[1].a = select( stage[0] );
+}

@@ -1,0 +1,263 @@
+Particle
+{
+	flags				useAlpha useRandomAlpha useRandomSize
+
+	spawnFlags			orgOnCylinder axisFromSphere
+
+	life				1000 1500
+
+	origin				10 0 0 -10 0 0
+
+	rotation			60 -60
+
+	gravity				-12 -4
+
+	sequenceFixedFpsValue	12.000000
+
+	rgb
+	{
+		curve
+		[
+			0 1 1 1
+			1 1 1 1
+		]
+	}
+
+	rgbRand
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 1 0.5144 1
+			0.5144 1 0.6293 0.5149
+			0.6293 0.5149 0.8247 0.1386
+			0.8247 0.1386 1 0
+			1 0 5.51e-040 2.59e-038
+		]
+	}
+
+	alphaRand
+	{
+		curve
+		[
+			0 0.7673 0.2443 0.7525
+			0.2443 0.7525 0.4713 0.6832
+			0.4713 0.6832 0.5546 0.3861
+			0.5546 0.3861 0.6667 0.1436
+			0.6667 0.1436 0.8448 0.04455
+			0.8448 0.04455 1 0
+			1 0 7.347e-040 2.572e-038
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0 0.0436 0.3508
+			0.0436 0.3508 0.2035 0.7016
+			0.2035 0.7016 0.4593 0.9005
+			0.4593 0.9005 1 1
+			1 1 5.51e-040 2.59e-038
+		]
+
+		scale			100
+	}
+
+	sizeRand
+	{
+		curve
+		[
+			0 0 0.0814 0.2723
+			0.0814 0.2723 0.2703 0.5497
+			0.2703 0.5497 0.5029 0.7382
+			0.5029 0.7382 0.7238 0.8639
+			0.7238 0.8639 1 1
+			1 1 6.43e-040 2.591e-038
+		]
+	}
+
+	size2
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	size2Rand
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	lengthRand
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	rotationDelta
+	{
+		curve
+		[
+			0 -0.5 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+
+		scale			5
+	}
+
+	rotationDeltaRand
+	{
+		curve
+		[
+			0 0.5 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	velocityX
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+
+		scale			50
+	}
+
+	velocityY
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+
+		scale			50
+	}
+
+	velocityZ
+	{
+		curve
+		[
+			0 0.5 1 0.5
+			1 0.5 2.755e-040 2.498e-038
+		]
+
+		scale			50
+	}
+
+	velocityXRand
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	velocityYRand
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	velocityZRand
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	velocity2X
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	velocity2Y
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	velocity2Z
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	velocity2XRand
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	velocity2YRand
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	velocity2ZRand
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	shaders
+	[
+		gfx_snow_sheet
+		gfx_smokepuff_atlas
+	]
+}

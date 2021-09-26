@@ -1,0 +1,16 @@
+{
+	stateMap "nofog";
+
+	vertex.position = code.position;
+	vertex.texcoord[0] = code.texcoord[0];
+	vertex.color[0] = code.color;
+
+	vertexShader 2.0 "grain_overlay.hlsl"
+	{
+	}
+
+	pixelShader 2.0 "grain_overlay.hlsl"
+	{
+		colorMapSampler = material.colorMap;
+	}
+}

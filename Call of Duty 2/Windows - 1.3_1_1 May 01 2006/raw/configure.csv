@@ -1,0 +1,55 @@
+# The file is broken into the CPU section followed by the GPU section.,,,,,
+"# The first two columns of the CPU section must be ""cpu mhz"" then ""sys mb"".",,,,,
+"# The first column of the GPU section must be ""gpu"".  This triggers the start of the GPU section.",,,,,
+# Each subsequent column header in both sections is a cvar name.,,,,,
+"# In the CPU section, each cvar gets the value listed in its column for the row of the system settings that most closely match the current machine, without going over",,,,,
+"# In the GPU section, each cvar gets the value listed in its column for the row of the first GPU string to match.",,,,,
+"# For GPU names, spaces are treated as wildcards that match any sequence of 0 or more non-numeric characters.  You can use * to match 0 or more of any character, or ? to match any single character.",,,,,
+
+
+
+
+cpu ghz,sys mb,mss_khz,fx_sort,ai_corpseCount,g_useGear
+
+0,128,11,0,5,0
+0,256,22,0,5,0
+0,512,44,0,5,0
+
+2,128,11,1,10,1,,,,,,,,,,,,,,,,,,,,
+2,256,22,1,10,1,,,,,,,,,,,,,,,,,,,,
+2,512,44,1,10,1,,,,,,,,,,,,,,,,,,,,
+
+
+
+
+gpu,r_rendererPreference,r_mode,sc_enable,r_zfeather,r_glow,r_distortion,r_aaSamples,scr_duhoc_assault_drones,scr_duhoc_assault_fast,scr_elalamein_fxlevel,scr_88ridge_fxlevel,scr_duhoc_defend_fast,scr_rhine_fast,scr_silotown_minspec,scr_hill400defend_minspec,scr_moscow_fx,scr_moscow_drones,r_lodscale,r_dlightLimit,cg_marks,cg_brass,r_depthPrepassModels,scr_88ridge_fast,scr_demolition_fast,scr_toujane_ride_fast
+
+GeForce 256*,none,640x480,0,0,0,0,1,0,1,0,0,1,1,1,1,1,1,1,4,1,1,0,1,1,1
+GeForce 2*,none,640x480,0,0,0,0,1,0,1,0,0,1,1,1,1,1,1,1,4,1,1,0,1,1,1
+GeForce 3*,none,640x480,0,0,0,0,1,0,1,0,0,1,1,1,1,1,1,1,4,1,1,0,1,1,1
+GeForce 4 MX,none,640x480,0,0,0,0,2,0,1,0,0,1,1,1,1,1,1,1,4,1,1,0,1,1,1
+GeForce 4*,none,800x600,0,0,0,0,4,1,1,0,0,1,1,1,1,1,1,1,4,1,1,0,1,1,1
+GeForce FX 59*,dx7,800x600,0,0,0,0,4,1,1,1,1,1,1,1,1,1,1,1,4,1,1,0,1,1,1
+GeForce FX,dx7,800x600,0,0,0,0,4,1,1,1,1,1,1,1,1,1,1,1,4,1,1,0,1,1,1
+GeForce 62*,dx7,800x600,0,0,0,0,2,1,1,1,1,1,1,1,1,1,1,1,4,1,1,0,1,1,1
+GeForce 66*,none,640x480,0,1,1,1,2,2,0,2,2,0,0,0,0,0,0,1,4,1,1,0,0,0,1
+GeForce 68*,none,800x600,1,1,1,1,4,2,0,2,2,0,0,0,0,0,0,1,4,1,1,0,0,0,1
+GeForce 6*,none,640x480,1,1,1,1,4,2,0,2,2,0,0,0,0,0,0,1,4,1,1,0,0,0,1
+GeForce,none,1024x768,1,1,1,1,4,2,0,2,2,0,0,0,0,0,0,1,4,1,1,0,0,0,1
+
+Radeon 7*,none,640x480,0,0,0,0,1,0,1,0,0,0,0,1,1,1,1,1,4,1,1,0,0,0,1
+Radeon 8*,none,800x600,0,0,0,0,1,1,1,1,1,0,0,1,1,1,1,1,4,1,1,0,0,0,1
+Radeon 98* XT,none,640x480,0,1,0,0,4,1,0,1,1,0,0,0,0,0,0,1,4,1,1,0,0,0,1
+Radeon 98*,none,640x480,0,0,0,0,4,1,0,1,1,0,0,0,0,0,0,1,4,1,1,0,0,0,1
+Radeon 97*,dx7,800x600,0,0,0,0,2,1,0,1,1,0,0,0,0,0,0,1,4,1,1,0,0,0,1
+Radeon 96*,dx7,800x600,0,0,0,0,2,1,0,1,1,0,0,0,0,0,0,1,4,1,1,0,0,0,1
+Radeon 95*,dx7,800x600,0,0,0,0,2,1,0,1,1,0,0,0,0,0,0,1,4,1,1,0,0,0,1
+Radeon 9*,none,800x600,0,0,0,0,4,1,0,1,1,0,0,0,0,0,0,1,4,1,1,0,0,0,1
+Radeon X3*,dx7,800x600,0,0,0,0,2,1,0,1,1,0,0,0,0,0,0,1,4,1,1,0,0,0,1
+Radeon X5*,none,640x480,0,0,0,0,2,1,0,1,1,0,0,0,0,0,0,1,4,1,1,0,0,0,1
+Radeon X6*,none,640x480,0,0,0,0,4,1,0,1,1,0,0,0,0,0,0,1,4,1,1,0,0,0,0
+Radeon X7*,none,640x480,0,0,0,0,4,1,0,1,1,0,0,0,0,0,0,1,4,1,1,0,0,0,0
+Radeon X*,none,800x600,1,1,1,1,4,2,0,2,2,0,0,0,0,0,0,1,4,1,1,0,0,0,0
+Radeon,none,1024x768,1,1,1,1,4,2,0,2,2,0,0,0,0,0,0,1,4,1,1,0,0,0,0
+
+*,none,640x480,0,0,0,0,2,1,1,0,0,0,0,0,0,0,0,1,4,1,1,0,0,0,0

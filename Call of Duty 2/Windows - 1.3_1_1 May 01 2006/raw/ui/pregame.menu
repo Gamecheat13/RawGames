@@ -1,0 +1,168 @@
+#include "ui/menudef.h"
+
+// Displays after level has loaded, and we're waiting for the player to click before starting the game.
+{
+	assetGlobalDef 
+	{
+		fadeClamp 1.0				// sets the fadeup alpha
+		fadeCycle 1					// how often fade happens in milliseconds
+		fadeAmount 0.1				// amount to adjust alpha per cycle
+		shadowColor 0.1 0.1 0.1 0.25			// shadow color
+	}
+	
+	menuDef 
+	{
+		name "pregame"
+//		background "ui/assets/backscreen"
+  		rect 0 0 640 480
+		fullScreen MENU_TRUE
+		focusColor GLOBAL_FOCUSED_COLOR
+		backcolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+// 		background "$levelBriefing"
+
+		itemDef 
+		{
+			name background_image
+			style WINDOW_STYLE_SHADER
+			rect -128 0 896 480
+			background "black"
+			visible 1
+			decoration
+		}
+		itemDef 
+		{
+			name background_image
+			style WINDOW_STYLE_SHADER
+			rect -128 0 896 480
+			background "$levelBriefing"
+			visible 1
+			decoration
+		}
+		itemDef 
+		{
+			name background_top_bar
+//			style WINDOW_STYLE_SHADER
+			style			WINDOW_STYLE_FILLED
+			rect 0 0 640 64 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+//			background "black"
+			backcolor		0 0 0 0.75
+			visible 1
+			decoration
+		}
+		itemDef 
+		{
+			name background_bottom_bar
+//			style WINDOW_STYLE_SHADER
+			style			WINDOW_STYLE_FILLED
+			rect 0 416 640 64 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+//			background "black"
+			backcolor		0 0 0 0.75
+			visible 1
+			decoration
+		}
+
+		// lines
+		itemDef 
+		{
+			name background_top_bar
+			style			WINDOW_STYLE_FILLED
+			rect			0 64 640 2 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			backcolor		.65 .65 .65 1
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			name background_bottom_bar
+			style			WINDOW_STYLE_FILLED
+			rect			0 416 640 2 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			backcolor		.65 .65 .65 1
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			name "profile"
+			decoration
+			visible MENU_TRUE
+			rect 40 40 560 400
+			align HUD_HORIZONTAL
+			ownerdraw UI_LOADPROFILING
+		}
+
+        // the button
+		itemDef 
+		{
+			name projectname
+			type ITEM_TYPE_BUTTON
+			style WINDOW_STYLE_FILLED
+			textscale 0.5
+			border 0
+			bordercolor 1 1 1 1
+			rect -128 445 896 45
+			textalign 1	
+			textalignx 320 
+			textaligny 28
+			forecolor 1 1 1 1
+			backcolor 0 0 0 .7
+			visible 0 
+			decoration
+		}	
+		itemDef 
+		{
+			name projectname
+			type ITEM_TYPE_BUTTON
+			text "@MENU_CLICK_TO_START_THE_MISSION"
+			style WINDOW_STYLE_FILLED
+			textscale 0.5
+			border 0
+			bordercolor 1 1 1 1
+			rect 0 430 640 45
+			textalign 1	
+			textalignx 320 
+			textaligny 28
+			forecolor 1 1 1 1
+			backcolor 0 0 0 0
+			visible 1 
+			decoration
+			dvarTest		"mapname"
+			hideDvar		{ "credits" }
+		}
+		itemDef 
+		{
+			name projectname
+			type ITEM_TYPE_BUTTON
+			text "@MENU_CLICK_TO_CONTINUE"
+			style WINDOW_STYLE_FILLED
+			textscale 0.5
+			border 0
+			bordercolor 1 1 1 1
+			rect 0 430 640 45
+			textalign 1	
+			textalignx 320 
+			textaligny 28
+			forecolor 1 1 1 1
+			backcolor 0 0 0 0
+			visible 1 
+			decoration
+			dvarTest		"mapname"
+			showDvar		{ "credits" }
+		}
+
+	
+
+		itemDef 
+		{
+			name butn
+			type ITEM_TYPE_BUTTON
+			rect -130 -2 900 486
+			style 0
+			visible 1
+			forecolor 0 0 0 0
+			backcolor 0 0 0 0
+			action { uiScript playerstart }
+		}
+	}
+}
+

@@ -1,0 +1,14 @@
+{
+	stateMap "color_only";
+
+	vertex.position = code.position;
+
+	vertexShader 1.1 "sky.hlsl"
+	{
+	}
+
+	pixelShader 1.1 "sky.hlsl"
+	{
+		colorMapSampler = material.colorMap;
+	}
+}

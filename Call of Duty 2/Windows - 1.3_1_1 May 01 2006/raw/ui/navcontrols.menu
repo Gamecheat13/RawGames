@@ -1,0 +1,22 @@
+	itemDef
+	{
+		text			"@MENU_BACK"
+		type 			ITEM_TYPE_BUTTON
+		textfont		UI_FONT_NORMAL
+		textscale		.4
+		textaligny		20
+		rect			0 0 50 20
+		origin			505 440
+		visible			1
+		mouseEnter 
+		{
+			play "mouse_over";
+		}
+		action
+		{
+			play "mouse_click";
+			close VIGNETTE_CENTER; 
+//			open mission_select;
+		}
+		
+	}

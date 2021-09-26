@@ -1,0 +1,67 @@
+// Deaths
+death_run_forward_crumple
+crouchrun_death_drop
+crouchrun_death_crumple
+death_run_onfront
+death_run_onleft
+death_explosion_up10			// Flies up 10 feet in the air.
+death_explosion_back13			// Flies back 13 feet.
+death_explosion_forward13		// etc.
+death_explosion_left11
+death_explosion_right13
+
+walk_run : loopsync
+{
+	// Walking before they enter the combat area
+	soldierwalk_cower_idle
+	soldierwalk_cower_twitch
+	soldierwalk_dazed_idle
+	soldierwalk_dazed_twitch
+	soldierwalk_stiff_idle
+	soldierwalk_stiff_twitch
+
+	// Walks in combat
+	gunwalk_idle_ammoguy
+	gunwalk_twitch_ammoguy
+	gunwalk_idle_gunguy
+	gunwalk_twitch_gunguy
+	gunwalk_crouchidle_gunguy
+	gunwalk_crouchtwitch_gunguy
+	gunwalk_crouchidle_ammoguy
+	gunwalk_crouchtwitch_ammoguy
+
+	// Runs in combat - pick one of these for each guy.
+	pistol_crouchrun_loop_forward_1	// (Pistol runs are also good for unarmed)
+	pistol_crouchrun_loop_forward_2
+	pistol_crouchrun_loop_forward_3
+	crouchrun_loop_forward_1
+	crouchrun_loop_forward_2
+	crouchrun_loop_forward_3
+
+	stalingrad_flagrunner_idle
+
+	flagrun_guy_idle
+	flagrun_flag_idle
+	combatrun
+	precombatrun1
+}
+
+
+flagrun_flag_death
+flagrun_guy_deathidle
+flagrun_flag_pickup
+
+flagrun_drone_death
+flagrun_guy_death
+flagrun_guy_pickup
+
+flagrun_guy_crouchtwitch
+flagrun_guy_crouchidle
+
+// Facial animations
+facial
+{
+	facial_panic01
+	facial_fear01
+	facial_fear02
+}

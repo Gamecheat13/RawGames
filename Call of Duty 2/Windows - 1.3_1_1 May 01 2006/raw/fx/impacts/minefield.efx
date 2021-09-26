@@ -1,0 +1,102 @@
+Line
+{
+	flags				deathFx useAlpha
+
+	spawnFlags			cheapOrgCalc orgOnCylinder axisFromSphere
+
+	count				6
+
+	life				1422
+
+	delay				63
+
+	origin2				422 0 633 622 0 824
+
+	radius				44
+
+	height				12 22
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		start			32 74
+		end				442 342
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/explosion/dirtplume_model2
+		gfx/effects/explosion/dirtplume_modelf
+	]
+
+	deathfx
+	[
+		fx/impacts/fluff1
+	]
+}
+
+Particle
+{
+	life				233
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				774 544
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/cloudflash1
+	]
+}
+
+Particle
+{
+	name				Copy of Unnamed Particle 1
+
+	life				100
+
+	rotation			0 360
+
+	alpha
+	{
+		end				0
+		flags			linear
+	}
+
+	size
+	{
+		end				344
+		flags			linear
+	}
+
+	shaders
+	[
+		gfx/effects/misc/cloudflash_stalingradm
+	]
+}
+
+FxRunner
+{
+	spawnFlags			orgOnSphere randrotaroundfwd
+
+	radius				43
+
+	playfx
+	[
+		fx/impacts/dirthit_mortar
+	]
+}

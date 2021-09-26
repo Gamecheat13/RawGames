@@ -1,0 +1,127 @@
+#include "ui/menudef.h"
+
+#define ORIGIN_BUTTONS				0 0
+#define ORIGIN_MENUWINDOW			115 50
+
+{
+
+	menuDef 
+	{
+		name invert_axis2
+	    	visible 0
+   		fullscreen 0
+	   	//rect 217 200 210 85
+		rect 204 160 235 160
+		focusColor GLOBAL_FOCUSED_COLOR
+   		style 1
+   		border 1
+		popup
+		onESC 
+		{ 
+			scriptMenuResponse "accept_normal";
+			close "invert_axis2";
+		}
+	
+		itemDef 
+		{
+			name backimage2fade
+			style WINDOW_STYLE_SHADER
+			rect -150 2 535 150
+	 		background "popmenu_bg"
+//			forecolor 0 0 0 0.4
+//			backcolor 0 0 0 0.4
+			visible 1
+			decoration
+		}
+		itemDef 
+		{
+			name backimage2fade
+			style WINDOW_STYLE_SHADER
+			rect -90 20 415 24
+	 		background "popmenu_goldline"
+//			forecolor 0 0 0 0.4
+//			backcolor 0 0 0 0.4
+			visible 1
+			decoration
+		}
+		itemDef 
+		{
+			name confirm
+			text "@MOSCOW_AXIS_OPTION_MENU2_ALL" 
+			style 0
+			textscale .38 
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			rect 126 25 110 20
+			textalign 1
+			textalignx -7
+			textaligny 5
+			decoration
+			forecolor		POPMENU_HEADER_COLOR
+			visible 1
+		}
+
+		itemDef 
+		{
+			name invert_enabled
+			text "@MENU_YES"
+			type 1
+			textscale .5
+			style UI_BUTTON_STYLE
+			textfont UI_FONT_NORMAL
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 70 90 100 20
+			textalign 1
+			textalignx 50
+			textaligny 19
+			forecolor UI_BUTTON_TEXT_COLOR
+			backcolor UI_BUTTON_BACK_COLOR 
+			border UI_BUTTON_BORDER
+			bordercolor UI_BUTTON_BORDER_COLOR
+			visible 1
+			focusdvar { "1" }
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{ 
+				play "mouse_click";
+				scriptMenuResponse "accept_normal";				
+				close invert_axis2;
+			}
+		}
+		itemDef 
+		{
+			name invert_disabled
+			text "@MENU_NO"
+			type 1
+			textscale .5
+			style UI_BUTTON_STYLE
+			textfont UI_FONT_NORMAL
+			textstyle ITEM_TEXTSTYLE_NORMAL
+			rect 70 50 100 20
+			textalign 1
+			textalignx 50
+			textaligny 19
+			forecolor UI_BUTTON_TEXT_COLOR
+			backcolor UI_BUTTON_BACK_COLOR 
+			border UI_BUTTON_BORDER
+			bordercolor UI_BUTTON_BORDER_COLOR
+			visible 1
+			focusdvar { "0" }
+			mouseEnter 
+			{
+				play "mouse_over";
+			}
+			action 
+			{ 
+				play "mouse_click";
+				execnow "toggle ui_mousePitch";
+				uiScript update ui_mousePitch;
+				scriptMenuResponse "try_invert";
+				close invert_axis2;
+			}
+		}
+	
+	}
+}

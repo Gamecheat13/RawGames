@@ -1,0 +1,17 @@
+{
+	stateMap "nofog";
+
+	vertex.position = code.position;
+	vertex.color[0] = code.color;
+	vertex.texcoord[0] = code.texcoord[0];
+
+	vertexShader 2.0 "color_channel_mixer.hlsl"
+	{
+	}
+
+	pixelShader 2.0 "color_channel_mixer.hlsl"
+	{
+		colorMapSampler = sampler.feedback;
+		materialColor = constant.materialColor;
+	}
+}

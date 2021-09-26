@@ -1,0 +1,34 @@
+// Note to translators:
+// If a sentence is the same in your language then please change it to "#same"
+//
+// eg:
+// LANG_ENGLISH  "HALT"
+// LANG_GERMAN   "#same"
+//
+// (This is so we can tell which strings have been signed-off as ok to be the same words for QA
+//  and because we do not store duplicate strings, which will then get exported again next time
+//  as being untranslated.)
+//
+VERSION             "1"
+CONFIG              "C:\trees\cod2\bin\StringEd.cfg"
+FILENOTES           "Strings used in Beltot go in this file."
+
+REFERENCE           OBJECTIVE_SECURE
+LANG_ENGLISH        "Secure the village of Beltot."
+
+REFERENCE           OBJECTIVE_ELIMINATE
+LANG_ENGLISH        "Eliminate enemy mortar teams. [&&1 remaining]"
+
+REFERENCE           OBJECTIVE_JOINUP
+LANG_ENGLISH        "Join Captain Price at the back of the building."
+
+REFERENCE           OBJECTIVE_BRING_TRUCK
+LANG_ENGLISH        "Bring the German truck back to help transport the prisoners."
+
+REFERENCE           MISSIONFAIL_KILLPOW
+LANG_ENGLISH        "Harming prisoners of war will not be tolerated."
+
+
+ENDMARKER
+
+

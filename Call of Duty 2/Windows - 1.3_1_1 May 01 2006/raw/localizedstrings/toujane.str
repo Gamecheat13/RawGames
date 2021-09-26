@@ -1,0 +1,73 @@
+// Note to translators:
+// If a sentence is the same in your language then please change it to "#same"
+//
+// eg:
+// LANG_ENGLISH  "HALT"
+// LANG_GERMAN   "#same"
+//
+// (This is so we can tell which strings have been signed-off as ok to be the same words for QA
+//  and because we do not store duplicate strings, which will then get exported again next time
+//  as being untranslated.)
+//
+VERSION             "1"
+CONFIG              "C:\trees\cod2\bin\StringEd.cfg"
+FILENOTES           "Strings used in toujane go in this file."
+
+REFERENCE           ALLIED_TANK_1
+LANG_ENGLISH        "Lucky Lily"
+
+REFERENCE           ALLIED_TANK_2
+LANG_ENGLISH        "Bazza's Revenge"
+
+REFERENCE           ALLIED_TANK_TYPE
+LANG_ENGLISH        "Crusader II"
+
+REFERENCE           ALLIED_TANK_3
+LANG_ENGLISH        "Storm Crow"
+
+REFERENCE           OBJ_HARDPOINTS
+LANG_ENGLISH        "Locate the enemy observation point."
+
+REFERENCE           OBJ_OP
+LANG_ENGLISH        "Capture the enemy observation point."
+
+REFERENCE           OBJ_FLAKCREWS
+LANG_ENGLISH        "Eliminate the Flak 88 crews. [&&1 Remaining]"
+
+REFERENCE           OBJ_FLAKCREWS_DONE
+LANG_ENGLISH        "Eliminate the Flak 88 crews."
+
+REFERENCE           OBJ_MOSQUE
+LANG_ENGLISH        "Capture the Mosque."
+
+REFERENCE           OBJ_REGROUPBALCONY
+LANG_ENGLISH        "Regroup on the Mosque balcony."
+
+REFERENCE           OBJ_DEFEND
+LANG_ENGLISH        "Defend the Mosque."
+
+REFERENCE           OBJ_PANZERSCHRECK
+LANG_ENGLISH        "Pick up a Panzerschreck anti-tank weapon."
+
+REFERENCE           OBJ_TANKS
+LANG_ENGLISH        "Destroy the enemy tanks. [&&1 Remaining]"
+
+REFERENCE           OBJ_TANKS_DONE
+LANG_ENGLISH        "Destroy the enemy tanks."
+
+REFERENCE           HINT_USE_PANZERSCHRECK
+LANG_ENGLISH        "Find a Panzerchreck Anti-Tank weapon."
+
+REFERENCE           HINT_AMMO_PANZERSCHRECK
+LANG_ENGLISH        "Pick up the nearby panzerschrecks to get more ammo."
+
+REFERENCE           HINT_STAR
+LANG_ENGLISH        "The location of your current objective is \nmarked on your compass by a gold star."
+
+REFERENCE           HINT_NONLINEAR
+LANG_ENGLISH        "Multiple gold stars on the compass means you can \nchoose your path to complete these objectives."
+
+
+ENDMARKER
+
+

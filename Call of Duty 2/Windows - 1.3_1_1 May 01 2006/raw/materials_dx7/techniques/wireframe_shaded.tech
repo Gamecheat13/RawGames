@@ -1,0 +1,8 @@
+{
+	stateMap "wireframe";
+
+	texture[0] = sampler.white;
+
+	stage[0].rgb = modulate( vertex.color, constant );
+	stage[0].a = modulate( vertex.color, constant );
+}

@@ -1,0 +1,241 @@
+Particle
+{
+	name				center_volume
+
+	flags				useAlpha useRandomRotationDelta blocksSight
+
+	spawnFlags			absoluteVel evenDistribution
+
+	count				7 12
+
+	life				1e+004 1.5e+004
+
+	delay				0 5000
+
+	origin				-24 0 0
+
+	rotation			-5 5
+
+	velocity			-10 0 10 10 -80 20
+
+	sequenceFixedFpsValue	0.000000
+
+	rgb
+	{
+		curve
+		[
+			0 0.75 0.697 0.6591
+			0.06667 0.75 0.697 0.6591
+			0.1333 0.75 0.697 0.6591
+			0.2 0.75 0.697 0.6591
+			0.2667 0.75 0.697 0.6591
+			0.3333 0.75 0.697 0.6591
+			0.4 0.75 0.697 0.6591
+			0.4667 0.75 0.697 0.6591
+			0.5333 0.75 0.697 0.6591
+			0.6 0.75 0.697 0.6591
+			0.6667 0.75 0.697 0.6591
+			0.7333 0.75 0.697 0.6591
+			0.8 0.75 0.697 0.6591
+			0.8667 0.75 0.697 0.6591
+			0.9333 0.75 0.697 0.6591
+			1 0.75 0.697 0.6591
+		]
+
+		scale			1.035
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 1 0.8 1
+			0.8 1 1 0
+			1 0 3.673e-040 2.553e-038
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0 0.06686 0.2932
+			0.06686 0.2932 0.2674 0.6073
+			0.2674 0.6073 0.5233 0.8325
+			0.5233 0.8325 0.7994 0.8848
+			0.7994 0.8848 1 0.8743
+			1 0.8743 6.429e-040 2.498e-038
+		]
+
+		scale			300
+	}
+
+	sizeRand
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 1.194e-039
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 0.75 1 0.75
+			1 0.75 2.755e-040 1.194e-039
+		]
+
+		scale			1.333
+	}
+
+	rotationDelta
+	{
+		curve
+		[
+			0 -0.5 1 -0.0002856
+			1 -0.0002856 2.755e-040 1.194e-039
+		]
+
+		scale			10
+	}
+
+	rotationDeltaRand
+	{
+		curve
+		[
+			0 0.5 1 1.55e-006
+			1 1.55e-006 2.755e-040 1.194e-039
+		]
+	}
+
+	shaders
+	[
+		gfx_smokepuff_atlas
+	]
+}
+
+Particle
+{
+	name				mist_volume
+
+	flags				useAlpha useRandomColors useRandomRotationDelta blocksSight
+
+	spawnFlags			absoluteVel evenDistribution
+
+	count				22 27
+
+	life				1.5e+004 2e+004
+
+	delay				0 1.5e+004
+
+	origin				-24 0 0 -25 0 0
+
+	wind				80 100
+
+	rotation			0 -45
+
+	velocity			10 0 10 -10 -80 20
+
+	sequenceStartFrameMode	1
+
+	sequenceFixedFpsValue	0.000000
+
+	rgb
+	{
+		curve
+		[
+			0 0.75 0.75 0.75
+			1 0.75 0.75 0.75
+		]
+	}
+
+	rgbRand
+	{
+		curve
+		[
+			0 0.5412 0.5412 0.5412
+			1 0.5412 0.5412 0.5412
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 1 0.8 1
+			0.8 1 1 0
+			1 0 3.673e-040 2.553e-038
+		]
+	}
+
+	alphaRand
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 1.194e-039
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0 0.1105 0.1728
+			0.1105 0.1728 0.2587 0.3298
+			0.2587 0.3298 0.4477 0.5079
+			0.4477 0.5079 0.6744 0.6545
+			0.6744 0.6545 1 0.75
+			1 0.75 6.429e-040 2.498e-038
+		]
+
+		scale			400
+	}
+
+	sizeRand
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 1.194e-039
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 0.75 1 0.75
+			1 0.75 2.755e-040 1.194e-039
+		]
+
+		scale			1.333
+	}
+
+	rotationDelta
+	{
+		curve
+		[
+			0 -0.5 1 -1.52e-006
+			1 -1.52e-006 2.755e-040 1.194e-039
+		]
+
+		scale			12
+	}
+
+	rotationDeltaRand
+	{
+		curve
+		[
+			0 0.5 1 0
+			1 0 2.755e-040 1.194e-039
+		]
+	}
+
+	shaders
+	[
+		gfx_smokepuff_atlas
+	]
+}

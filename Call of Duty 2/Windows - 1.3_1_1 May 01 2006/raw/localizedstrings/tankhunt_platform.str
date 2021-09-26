@@ -1,0 +1,31 @@
+// Note to translators:
+// If a sentence is the same in your language then please change it to "#same"
+//
+// eg:
+// LANG_ENGLISH  "HALT"
+// LANG_GERMAN   "#same"
+//
+// (This is so we can tell which strings have been signed-off as ok to be the same words for QA
+//  and because we do not store duplicate strings, which will then get exported again next time
+//  as being untranslated.)
+//
+VERSION             "1"
+CONFIG              "C:\trees\cod2\bin\StringEd_PC.cfg"
+FILENOTES           "Strings used in Tankhunt go in this file."
+
+REFERENCE           PLANT_STICKY_BOMB
+LANG_ENGLISH        "Press USE [&&1] to plant the sticky bomb."
+
+REFERENCE           REPAIR_CABLE
+LANG_ENGLISH        "Press USE [&&1] to repair the cable."
+
+REFERENCE           USE_FIELD_PHONE
+LANG_ENGLISH        "Press USE [&&1] to use the field phone."
+
+REFERENCE           PICK_UP_STICKY_BOMBS
+LANG_ENGLISH        "Press USE [&&1] to pick up the sticky bombs."
+
+
+ENDMARKER
+
+

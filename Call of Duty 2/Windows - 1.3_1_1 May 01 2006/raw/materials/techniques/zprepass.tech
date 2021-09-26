@@ -1,0 +1,13 @@
+{
+	stateMap "nocolor";
+
+	vertex.position = code.position;
+
+	vertexShader 1.1 "zprepass.hlsl"
+	{
+	}
+
+	pixelShader 1.1 "zprepass.hlsl"
+	{
+	}
+}

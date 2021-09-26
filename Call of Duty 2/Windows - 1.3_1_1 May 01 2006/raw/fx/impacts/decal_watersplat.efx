@@ -1,0 +1,237 @@
+Decal
+{
+	name				mud_splash
+
+	flags				useRandomColors
+
+	life				8000
+
+	rotation			360 -360
+
+	rgb
+	{
+		curve
+		[
+			0 0.1608 0.1451 0.1137
+			1 0.1333 0.1216 0.102
+		]
+	}
+
+	rgbRand
+	{
+		curve
+		[
+			0 0.1255 0.1176 0.0902
+			1 0.1137 0.1059 0.08627
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0.365 0.7169 0.2847
+			0.7169 0.2847 0.8767 0.2263
+			0.8767 0.2263 0.9543 0.1022
+			0.9543 0.1022 1 0
+			1 0 5.51e-040 7.353e-040
+		]
+	}
+
+	alphaRand
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 0 0
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.75 1 0.75
+			1 0.75 0 5.828e-010
+		]
+
+		scale			36 44
+	}
+
+	sizeRand
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 0 7.274e+022
+		]
+	}
+
+	size2
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 0 9.96e-039
+		]
+	}
+
+	size2Rand
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 0 1.783e+025
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 0 0
+		]
+	}
+
+	lengthRand
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 0 0
+		]
+	}
+
+	rotationDelta
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 0 0
+		]
+	}
+
+	rotationDeltaRand
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 0 0
+		]
+	}
+
+	velocityX
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 0 0
+		]
+	}
+
+	velocityY
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 0 0
+		]
+	}
+
+	velocityZ
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 0 0
+		]
+	}
+
+	velocityXRand
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 0 0
+		]
+	}
+
+	velocityYRand
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 0 0
+		]
+	}
+
+	velocityZRand
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 0 0
+		]
+	}
+
+	velocity2X
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Y
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Z
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 0 0
+		]
+	}
+
+	velocity2XRand
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 0 0
+		]
+	}
+
+	velocity2YRand
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 0 0
+		]
+	}
+
+	velocity2ZRand
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 0 0
+		]
+	}
+
+	shaders
+	[
+		gfx_mud_splash01
+		gfx_mud_splash02
+	]
+}

@@ -1,0 +1,133 @@
+		itemDef 
+		{
+			name			vignette04_state
+			group			vignette04_items
+			text			VIGNETTE_STATE_LOCKED
+			type			ITEM_TYPE_TEXT
+			rect			405 75 100 20
+			textalign		ITEM_ALIGN_LEFT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		VIGNETTE_STATE_TEXT_SIZE
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		VIGNETTE_STATE_COLOR_LOCKED
+			textaligny		14
+			visible			0
+			decoration
+			dvarTest	"mis_04"
+			showDvar { "0" }
+		}
+		itemDef 
+		{
+			name			vignette04_state
+			group			vignette04_items
+			text			VIGNETTE_STATE_OPEN
+			type			ITEM_TYPE_TEXT
+			rect			405 75 100 20
+			textalign		ITEM_ALIGN_LEFT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		VIGNETTE_STATE_TEXT_SIZE
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		VIGNETTE_STATE_COLOR_OPEN
+			textaligny		14
+			visible			0
+			decoration
+			dvarTest	"mis_04"
+			showDvar { "1" }
+		}
+		itemDef 
+		{
+			name			vignette04_state
+			group			vignette04_items
+			text			VIGNETTE_STATE_IN_PROGRESS
+			type			ITEM_TYPE_TEXT
+			rect			405 75 100 20
+			textalign		ITEM_ALIGN_LEFT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		VIGNETTE_STATE_TEXT_SIZE
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		VIGNETTE_STATE_COLOR_IN_PROGRESS
+			textaligny		14
+			visible			0
+			decoration
+			dvarTest	"mis_04"
+			showDvar { "2"; "3"; "4"; "5"; }
+		}
+		itemDef 
+		{
+			name			vignette04_state
+			group			vignette04_items
+			text			VIGNETTE_STATE_COMPLETED_EASY
+			type			ITEM_TYPE_TEXT
+			rect			405 75 100 20
+			textalign		ITEM_ALIGN_LEFT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		VIGNETTE_STATE_TEXT_SIZE
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		VIGNETTE_STATE_COLOR_COMPLETED_EASY
+			textaligny		14
+			visible			0
+			decoration
+			dvarTest	"mis_04"
+			showDvar { VIGNETTE_DONE_EASY; }
+		}
+		itemDef 
+		{
+			name			vignette04_state
+			group			vignette04_items
+			text			VIGNETTE_STATE_COMPLETED_NORMAL
+			type			ITEM_TYPE_TEXT
+			rect			405 75 100 20
+			textalign		ITEM_ALIGN_LEFT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		VIGNETTE_STATE_TEXT_SIZE
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		VIGNETTE_STATE_COLOR_COMPLETED_NORMAL
+			textaligny		14
+			visible			0
+			decoration
+			dvarTest	"mis_04"
+			showDvar { VIGNETTE_DONE_NORMAL; }
+		}
+		itemDef 
+		{
+			name			vignette04_state
+			group			vignette04_items
+			text			VIGNETTE_STATE_COMPLETED_HARD
+			type			ITEM_TYPE_TEXT
+			rect			405 75 100 20
+			textalign		ITEM_ALIGN_LEFT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		VIGNETTE_STATE_TEXT_SIZE
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		VIGNETTE_STATE_COLOR_COMPLETED_HARD
+			textaligny		14
+			visible			0
+			decoration
+			dvarTest	"mis_04"
+			showDvar { VIGNETTE_DONE_HARD;  }
+		}
+		itemDef 
+		{
+			name			vignette04_state
+			group			vignette04_items
+			text			VIGNETTE_STATE_COMPLETED_FU
+			type			ITEM_TYPE_TEXT
+			rect			405 75 100 20
+			textalign		ITEM_ALIGN_LEFT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		VIGNETTE_STATE_TEXT_SIZE
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		VIGNETTE_STATE_COLOR_COMPLETED_FU
+			textaligny		14
+			visible			0
+			decoration
+			dvarTest	"mis_04"
+			showDvar { VIGNETTE_DONE_FU; }
+		}

@@ -1,0 +1,269 @@
+Cloud
+{
+	name				snow
+
+	flags				usePhysics impactKills useAlpha useRandomRotationDelta useRandomVelocity absoluteVel
+
+	spawnFlags			cheapOrgCalc evenDistribution
+
+	nonUniformScale		1
+
+	count				18
+
+	life				8000
+
+	delay				0 200
+
+	origin				-2600 -2600 0 2600 2600 0
+
+	radius				20 200
+
+	wind				100 75
+
+	rotation			-360 360
+
+	rgb
+	{
+		curve
+		[
+			0 1 1 1
+			1 1 1 1
+		]
+	}
+
+	rgbRand
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0 0 0
+			0.1782 0.7673 0 0
+			0.7241 0.7327 0 0
+			0.8362 0.698 0 0
+			0.9109 0.5891 0 0
+			0.9655 0.401 0 0
+			1 0 0 0
+		]
+	}
+
+	alphaRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 1 0 0
+			1 1 0 0
+		]
+
+		scale			400
+	}
+
+	sizeRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2
+	{
+		curve
+		[
+			0 0.75 0 0
+			1 0.75 0 0
+		]
+
+		scale			2
+	}
+
+	size2Rand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 0.75 0 0
+			1 0.75 0 0
+		]
+
+		scale			100
+	}
+
+	lengthRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDelta
+	{
+		curve
+		[
+			0 -0.5 0 0
+			1 -0.5 0 0
+		]
+
+		scale			5
+	}
+
+	rotationDeltaRand
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+	}
+
+	velocityX
+	{
+		curve
+		[
+			0 -0.15 0 0
+			1 -0.15 0 0
+		]
+
+		scale			75
+	}
+
+	velocityY
+	{
+		curve
+		[
+			0 -0.15 0 0
+			1 -0.15 0 0
+		]
+
+		scale			75
+	}
+
+	velocityZ
+	{
+		curve
+		[
+			0 -0.3726 0 0
+			1 -0.3726 0 0
+		]
+
+		scale			75
+	}
+
+	velocityXRand
+	{
+		curve
+		[
+			0 0.15 0 0
+			1 0.15 0 0
+		]
+	}
+
+	velocityYRand
+	{
+		curve
+		[
+			0 0.15 0 0
+			1 0.15 0 0
+		]
+	}
+
+	velocityZRand
+	{
+		curve
+		[
+			0 -0.2134 0 0
+			1 -0.2134 0 0
+		]
+	}
+
+	velocity2X
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+	}
+
+	velocity2Y
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Z
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+
+		scale			50
+	}
+
+	velocity2XRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2YRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2ZRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	shaders
+	[
+		cloud_snowflake01
+		cloud_snowflake02
+		cloud_snowflake03
+		cloud_snowflake04
+	]
+}

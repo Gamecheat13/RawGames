@@ -1,0 +1,55 @@
+// Note to translators:
+// If a sentence is the same in your language then please change it to "#same"
+//
+// eg:
+// LANG_ENGLISH  "HALT"
+// LANG_GERMAN   "#same"
+//
+// (This is so we can tell which strings have been signed-off as ok to be the same words for QA
+//  and because we do not store duplicate strings, which will then get exported again next time
+//  as being untranslated.)
+//
+VERSION             "1"
+CONFIG              "C:\trees\cod2\bin\StringEd.cfg"
+FILENOTES           "Strings used in decoytrenches go in this file."
+
+REFERENCE           OBJ_RENDEZVOUSBREN
+LANG_ENGLISH        "Rendezvous with Captain Price at the rally point."
+
+REFERENCE           OBJ_RENDEZVOUSDEPOT
+LANG_ENGLISH        "Rendezvous with Captain Price near the depot."
+
+REFERENCE           OBJ_FLAK88
+LANG_ENGLISH        "Destroy the flak gun."
+
+REFERENCE           OBJ_HARDPOINTS
+LANG_ENGLISH        "Neutralize the enemy hard points. [&&1 remaining]"
+
+REFERENCE           OBJ_HARDPOINTSDONE
+LANG_ENGLISH        "Neutralize the enemy hard points."
+
+REFERENCE           OBJ_DOCUMENTS
+LANG_ENGLISH        "Search the bunker for enemy documents. [&&1 remaining]"
+
+REFERENCE           OBJ_DOCUMENTSDONE
+LANG_ENGLISH        "Search the bunker for enemy documents."
+
+REFERENCE           OBJ_STOCKPILES
+LANG_ENGLISH        "Destroy the ammo stockpiles. [&&1 remaining]"
+
+REFERENCE           OBJ_STOCKPILESDONE
+LANG_ENGLISH        "Destroy the ammo stockpiles."
+
+REFERENCE           OBJ_FUELCACHES
+LANG_ENGLISH        "Destroy the fuel barrels. [&&1 remaining]"
+
+REFERENCE           OBJ_FUELCACHESDONE
+LANG_ENGLISH        "Destroy the fuel barrels."
+
+REFERENCE           HINT_NONLINEAR1
+LANG_ENGLISH        "Multiple gold stars on the compass means you can choose your path to complete these objectives."
+
+
+ENDMARKER
+
+

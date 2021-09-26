@@ -1,0 +1,38 @@
+itemDef 
+{
+	name main_back_top
+	style WINDOW_STYLE_SHADER
+	rect 0 120 640 240
+	background "loadscreen_american"
+	visible 1
+	decoration
+
+//	dvarTest "ui_campaign"
+//	showDvar { "american" }
+}
+		
+itemDef 
+{
+	name main_back_top
+	style WINDOW_STYLE_SHADER
+	rect 0 120 640 240
+	background "loadscreen_british"
+	visible 1
+	decoration
+
+	dvarTest "ui_campaign"
+	showDvar { "british" }
+}
+
+itemDef 
+{
+	name main_back_top
+	style WINDOW_STYLE_SHADER
+	rect 0 120 640 240
+	background "loadscreen_russian"
+	visible 1
+	decoration
+	
+	dvarTest "ui_campaign"
+	showDvar { "russian" }
+}

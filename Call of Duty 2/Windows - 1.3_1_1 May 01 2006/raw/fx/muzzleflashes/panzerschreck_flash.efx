@@ -1,0 +1,394 @@
+Particle
+{
+	name				front_flash
+
+	flags				relative
+
+	life				150 200
+
+	rotation			-360 360
+
+	velocity			0 0 0 21 0 0
+
+	rgb
+	{
+		curve
+		[
+			0 0.75 0.75 0.75
+			1 0.75 0.75 0.75
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 2.572e-038
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.09375 1 0.75
+			1 0.75 2.755e-040 2.572e-038
+		]
+
+		scale			49 51
+	}
+
+	shaders
+	[
+		gfx_fire_ball
+	]
+}
+
+Light
+{
+	name				light
+
+	life				100
+
+	origin				18 0 0 29 0 0
+
+	rgb
+	{
+		curve
+		[
+			0 1.0 0.7137 0.6196
+			1 1.0 0.7137 0.6196
+		]
+
+		scale			1.307
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.75 1 0.00375
+			1 0.00375 2.755e-040 2.498e-038
+		]
+
+		scale			266.7
+	}
+}ö
+
+Particle
+{
+	name				smoke_linger
+
+	flags				useAlpha
+
+	spawnFlags			evenDistribution
+
+	count				12
+
+	life				5000 8000
+
+	delay				0 200
+
+	origin				122 20 20 0 -20 -20
+
+	rotation			-360 360
+
+	rotationDelta		12 -12
+
+	velocity			12 0 0 45 0 0
+
+	acceleration		-12 -12 0 -8 -8 0
+
+	rgb
+	{
+		curve
+		[
+			0 0.5176 0.6078 0.6314
+			1 0.5176 0.6078 0.6314
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0.5255 0.1918 0.4234
+			0.1918 0.4234 0.4018 0.1971
+			0.4018 0.1971 0.6484 0.06569
+			0.6484 0.06569 0.8402 0.007299
+			0.8402 0.007299 1 0
+			1 0 6.429e-040 2.498e-038
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.09375 1 0.75
+			1 0.75 2.755e-040 2.572e-038
+		]
+
+		scale			148.3 150.3
+	}
+
+	shaders
+	[
+		gfx_whisp_spiral
+	]
+}
+
+Tail
+{
+	name				front_fire_center
+
+	flags				relative
+
+	life				200
+
+	velocity			-50 0 0
+
+	rgb
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0.6788 0.5799 0.6642
+			0.5799 0.6642 0.7534 0.5766
+			0.7534 0.5766 0.8813 0.4088
+			0.8813 0.4088 1 0
+			1 0 5.51e-040 2.498e-038
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 2.572e-038
+		]
+
+		scale			25
+	}
+
+	size2
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 2.572e-038
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 0 1 1
+			1 1 2.755e-040 2.572e-038
+		]
+
+		scale			100
+	}
+
+	shaders
+	[
+		gfx_fire_whisp
+	]
+}
+
+Particle
+{
+	name				smoke_Rear
+
+	flags				useAlpha
+
+	spawnFlags			evenDistribution
+
+	count				12
+
+	life				5000 8000
+
+	delay				0 300
+
+	origin				-100 0 0 -60 0 0
+
+	rotation			-360 360
+
+	rotationDelta		12 -12
+
+	velocity			-60 10 10 -45 -10 -10
+
+	acceleration		12 -12 0 8 -8 0
+
+	rgb
+	{
+		curve
+		[
+			0 0.5176 0.6078 0.6314
+			1 0.5176 0.6078 0.6314
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0.5255 0.1918 0.4234
+			0.1918 0.4234 0.4018 0.1971
+			0.4018 0.1971 0.6484 0.06569
+			0.6484 0.06569 0.8402 0.007299
+			0.8402 0.007299 1 0
+			1 0 6.429e-040 2.498e-038
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.09375 1 0.75
+			1 0.75 2.755e-040 2.572e-038
+		]
+
+		scale			148.3 150.3
+	}
+
+	shaders
+	[
+		gfx_whisp_spiral
+	]
+}
+
+Tail
+{
+	name				rear_center
+
+	flags				relative
+
+	life				200
+
+	origin				-70 0 0
+
+	velocity			50 0 0
+
+	rgb
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 1 0.3196 0.927
+			0.3196 0.927 0.589 0.781
+			0.589 0.781 0.8813 0.4088
+			0.8813 0.4088 1 0
+			1 0 5.51e-040 2.498e-038
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 2.572e-038
+		]
+
+		scale			50
+	}
+
+	size2
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 2.572e-038
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 0 1 1
+			1 1 2.755e-040 2.572e-038
+		]
+
+		scale			80 120
+	}
+
+	shaders
+	[
+		gfx_fire_whisp
+	]
+}
+
+Particle
+{
+	name				rear_flash
+
+	flags				relative
+
+	life				150 200
+
+	origin				-70 0 0
+
+	rotation			-360 360
+
+	velocity			-100 0 0
+
+	rgb
+	{
+		curve
+		[
+			0 0.75 0.75 0.75
+			1 0.75 0.75 0.75
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 1 0.2968 0.9562
+			0.2968 0.9562 0.5023 0.854
+			0.5023 0.854 0.7352 0.6642
+			0.7352 0.6642 0.8995 0.365
+			0.8995 0.365 1 0
+			1 0 6.429e-040 2.498e-038
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0 1 0.2613
+			1 0.2613 2.755e-040 2.572e-038
+		]
+
+		scale			148.3 150.3
+	}
+
+	shaders
+	[
+		gfx_fire_ball
+	]
+}

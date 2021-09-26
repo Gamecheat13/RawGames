@@ -1,0 +1,191 @@
+Particle
+{
+	name				puff
+
+	flags				useAlpha useRandomColors
+
+	spawnFlags			orgOnSphere axisFromSphere
+
+	count				6
+
+	life				5000 6000
+
+	radius				60
+
+	height				60
+
+	rotation			-45 45
+
+	velocity			12 0 0
+
+	gravity				12 0
+
+	rgb
+	{
+		curve
+		[
+			0 1 1 1
+			1 1 1 1
+		]
+	}
+
+	rgb2
+	{
+		curve
+		[
+			0 0.5412 0.5412 0.5412
+			1 0.5412 0.5412 0.5412
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 1 0.07981 0.7639
+			0.07981 0.7639 0.2582 0.4028
+			0.2582 0.4028 0.5258 0.1319
+			0.5258 0.1319 0.784 0.02778
+			0.784 0.02778 1 0
+			1 0 6.429e-040 2.498e-038
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 1 1 1
+			1 1 2.755e-040 2.498e-038
+		]
+
+		scale			100
+	}
+
+	sequenceStartFrameMode	2
+
+	sequenceFixedFpsValue	45.000000
+
+	sequenceLoopMode	1
+
+	sequenceLoopTimes	0
+
+	shaders
+	[
+		gfx_flakpuff_atlas
+	]
+}
+
+Particle
+{
+	name				flash
+
+	flags				useAlpha
+
+	life				200
+
+	rgb
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0 0.06393 0.3964
+			0.06393 0.3964 0.2466 0.7568
+			0.2466 0.7568 0.5068 0.9459
+			0.5068 0.9459 1 1
+			1 1 5.51e-040 2.572e-038
+		]
+
+		scale			150
+	}
+
+	shaders
+	[
+		gfx_explosion_flash
+	]
+}
+
+Particle
+{
+	name				whisp
+
+	flags				useAlpha
+
+	spawnFlags			orgOnSphere axisFromSphere
+
+	count				6
+
+	life				1e+004
+
+	radius				60
+
+	height				60
+
+	rotation			-45 45
+
+	rotationDelta		-24 24
+
+	velocity			12 0 0
+
+	gravity				12 0
+
+	rgb
+	{
+		curve
+		[
+			0 0.5176 0.6078 0.6314
+			1 0.2824 0.2824 0.2824
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0 0.06103 0.4931
+			0.06103 0.4931 0.1315 0.7847
+			0.1315 0.7847 0.277 0.8681
+			0.277 0.8681 0.446 0.7292
+			0.446 0.7292 0.6244 0.4444
+			0.6244 0.4444 0.8263 0.1319
+			0.8263 0.1319 1 0
+			1 0 8.272e-040 2.498e-038
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.3333 0.274 0.3964
+			0.274 0.3964 1 1
+			1 1 3.674e-040 2.498e-038
+		]
+
+		scale			200
+	}
+
+	sequenceFixedFpsValue	45.000000
+
+	shaders
+	[
+		gfx_whisp_spiral
+	]
+}

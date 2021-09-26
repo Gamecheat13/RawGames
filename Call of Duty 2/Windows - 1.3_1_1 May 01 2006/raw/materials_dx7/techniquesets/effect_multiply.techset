@@ -1,0 +1,13 @@
+"solid wireframe":
+	wireframe_solid;
+
+"fakelight normal":
+"fakelight view":
+"unlit no fog":
+"emissive no fog":
+"emissive feathered no fog":
+	vertex_color_multiply;
+
+"unlit exp fog":
+"emissive exp fog":
+	vertex_color_multiply_fogged;

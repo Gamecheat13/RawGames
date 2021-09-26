@@ -1,0 +1,22 @@
+{
+	stateMap "fogged";
+
+	vertex.position = code.position;
+	vertex.color[0] = code.color;
+	vertex.texcoord[0] = code.texcoord[0];
+	vertex.texcoord[1] = code.tangent;
+	vertex.texcoord[2] = code.binormal;
+	vertex.normal = code.normal;
+
+	vertexShader 2.0 "lprobe_sm_efog.hlsl"
+	{
+	}
+
+	pixelShader 2.0 "lprobe_sm_dtl.hlsl"
+	{
+		colorMapSampler = material.colorMap;
+		normalMapSampler = material.normalMap;
+		detailMapSampler = material.detailMap;
+		detailScale = material.detailScale;
+	}
+}

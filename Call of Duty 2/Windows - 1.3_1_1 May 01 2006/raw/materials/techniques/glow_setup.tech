@@ -1,0 +1,16 @@
+{
+	stateMap "nofog";
+
+	vertex.position = code.position;
+	vertex.texcoord[0] = code.texcoord[0];
+
+	vertexShader 2.0 "glow_setup.hlsl"
+	{
+	}
+
+	pixelShader 2.0 "glow_setup.hlsl"
+	{
+		colorMapPostSunSampler = sampler.resolvedPostSun;
+		colorMapSampler = sampler.resolvedScene;
+	}
+}

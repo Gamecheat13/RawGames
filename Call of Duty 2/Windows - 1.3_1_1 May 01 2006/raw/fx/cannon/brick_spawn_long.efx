@@ -1,0 +1,276 @@
+Emitter
+{
+	name				dirtbursts
+
+	flags				useModel impactKills useAlpha useRandomSize useRandomRotationDelta absoluteVel2 relative
+
+	spawnFlags			axisFromSphere
+
+	life				1500 2000
+
+	radius				0 20
+
+	rotation			0 120
+
+	angleDelta			-15 -15 -15 15 15 15
+
+	rgb
+	{
+		curve
+		[
+			0 0.7801 0.7539 0.7696
+			1 0.7696 0.7592 0.7749
+		]
+	}
+
+	rgbRand
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 1 0 0
+			0.9339 1 0 0
+			1 0 0 0
+		]
+	}
+
+	alphaRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 1 0 0
+			1 1 0 0
+		]
+
+		scale			3
+	}
+
+	sizeRand
+	{
+		curve
+		[
+			0 0.519 0 0
+			1 0.519 0 0
+		]
+	}
+
+	size2
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2Rand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 0.75 0 0
+			1 0.75 0 0
+		]
+
+		scale			1.333
+	}
+
+	lengthRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDelta
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+
+		scale			200
+	}
+
+	rotationDeltaRand
+	{
+		curve
+		[
+			0 -0.1739 0 0
+			0.05263 -0.1711 0 0
+			0.1053 -0.1683 0 0
+			0.1579 -0.1656 0 0
+			0.2105 -0.1629 0 0
+			0.2632 -0.1602 0 0
+			0.3158 -0.1576 0 0
+			0.3684 -0.1551 0 0
+			0.4211 -0.1525 0 0
+			0.4737 -0.1501 0 0
+			0.5263 -0.1476 0 0
+			0.5789 -0.1452 0 0
+			0.6316 -0.1429 0 0
+			0.6842 -0.1406 0 0
+			0.7368 -0.1383 0 0
+			0.7895 -0.136 0 0
+			0.8421 -0.1338 0 0
+			0.8947 -0.1316 0 0
+			0.9474 -0.1295 0 0
+			1 -0.1274 0 0
+		]
+	}
+
+	velocityX
+	{
+		curve
+		[
+			0 0.04902 0 0
+			0.3851 0.1127 0 0
+			0.7356 0.2206 0 0
+			1 0.5 0 0
+		]
+
+		scale			600
+	}
+
+	velocityY
+	{
+		curve
+		[
+			0 0 0 0
+			1 -0.03922 0 0
+		]
+
+		scale			0
+	}
+
+	velocityZ
+	{
+		curve
+		[
+			0 0 0 0
+			0.1034 -0.1912 0 0
+			0.2385 -0.3137 0 0
+			0.3678 -0.3529 0 0
+			0.5345 -0.3333 0 0
+			0.7098 -0.1225 0 0
+			1 0.5 0 0
+		]
+
+		scale			300
+	}
+
+	velocityXRand
+	{
+		curve
+		[
+			0 -0.004902 0 0
+			1 0.004902 0 0
+		]
+	}
+
+	velocityYRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityZRand
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+	}
+
+	velocity2X
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Y
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Z
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2XRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2YRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2ZRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	models
+	[
+		xmodel/prop_destroyedcrateplanks01
+		xmodel/prop_destroyedcrateplanks02
+	]
+}

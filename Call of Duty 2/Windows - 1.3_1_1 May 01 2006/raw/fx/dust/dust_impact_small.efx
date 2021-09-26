@@ -1,0 +1,63 @@
+Particle
+{
+	name				dirt_burst_L
+
+	flags				useAlpha relative
+
+	spawnFlags			axisFromSphere evenDistribution
+
+	count				10
+
+	life				1500 800
+
+	delay				0 200
+
+	origin				0 -10 -10 0 10 10
+
+	radius				60
+
+	rotation			-180 180
+
+	rotationDelta		20 -20
+
+	velocity			50 0 0 0 0 0
+
+	gravity				-12 -22
+
+	rgb
+	{
+		curve
+		[
+			0 0.6275 0.6078 0.4941
+			1 0.6275 0.6078 0.4941
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0 0.05936 0.1825
+			0.05936 0.1825 0.1963 0.2044
+			0.1963 0.2044 0.4977 0.08029
+			0.4977 0.08029 1 0
+			1 0 5.51e-040 2.498e-038
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.1081 1 0.75
+			1 0.75 2.756e-040 2.627e-038
+		]
+
+		scale			100
+	}
+
+	shaders
+	[
+		gfx_whisp_spiral
+	]
+}

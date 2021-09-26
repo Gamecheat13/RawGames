@@ -1,0 +1,141 @@
+Particle
+{
+	name				fire_flash
+
+	flags				relative
+
+	count				2
+
+	life				100
+
+	rotation			123 -321
+
+	rotationDelta		4 1
+
+	velocity			500 0 0 300 0 0
+
+	acceleration		1341 0 0 0 0 0
+
+	rgb
+	{
+		curve
+		[
+			0 0.75 0.75 0.75
+			1 0.75 0.75 0.75
+		]
+
+		scale			1.333
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0.3 1 0
+			1 0 2.755e-040 2.351e-038
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.75 1 0.1875
+			1 0.1875 2.755e-040 2.351e-038
+		]
+
+		scale			16
+	}
+
+	shaders
+	[
+		gfx_mg42b
+	]
+}
+
+Light
+{
+	name				light
+
+	life				100
+
+	origin				18 0 0 29 0 0
+
+	rgb
+	{
+		curve
+		[
+			0 1.0 0.7137 0.6196
+			1 1.0 0.7137 0.6196
+		]
+
+		scale			1.307
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.75 1 0.00375
+			1 0.00375 2.755e-040 2.498e-038
+		]
+
+		scale			266.7
+	}
+}
+Particle
+{
+	name				smoke
+
+	flags				useAlpha
+
+	life				300 350
+
+	origin				0 0 0 43 0 0
+
+	rotation			360 -360
+
+	rotationDelta		12 -12
+
+	velocity			133 132 132 133 -132 -132
+
+	rgb
+	{
+		curve
+		[
+			0 0.75 0.75 0.75
+			1 0.75 0.75 0.75
+		]
+
+		scale			1.333
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0.5 1 0
+			1 0 2.755e-040 2.351e-038
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.015 1 0.75
+			1 0.75 2.755e-040 2.351e-038
+		]
+
+		scale			66.67
+	}
+
+	sequenceStartFrameMode	1
+
+	sequencePlayRateMode	1
+
+	shaders
+	[
+		gfx_smokepuff_atlas
+	]
+}

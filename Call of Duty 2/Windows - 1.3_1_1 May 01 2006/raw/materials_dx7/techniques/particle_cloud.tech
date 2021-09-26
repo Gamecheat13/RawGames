@@ -1,0 +1,8 @@
+{
+	stateMap "nofog";
+
+	texture[0] = material.colorMap;
+
+	stage[0].rgb = select( texture[0] );
+	stage[0].a = select( texture[0] );
+}

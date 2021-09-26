@@ -1,0 +1,4191 @@
+#include "ui/menudef.h"
+#include "ui/mission_select/missiondefs.menu"
+
+#define CHOICE_ORIGIN		105 85
+#define FLAG_ORIGIN		68 80
+
+#define CHOICE_01_OFFSET	0 0
+#define CHOICE_02_OFFSET	0 24
+#define CHOICE_03_OFFSET	0 48
+#define CHOICE_04_OFFSET	0 72
+#define CHOICE_05_OFFSET	0 96
+#define CHOICE_06_OFFSET	0 120
+#define CHOICE_07_OFFSET	0 144
+#define CHOICE_08_OFFSET	0 168
+#define CHOICE_09_OFFSET	0 192
+#define CHOICE_10_OFFSET	0 216
+#define CHOICE_11_OFFSET	0 240
+#define CHOICE_12_OFFSET	0 264
+#define CHOICE_RECT		200 15
+
+#define VIGNETTE_01_TITLE	MISSION_01_TITLE
+#define VIGNETTE_02_TITLE	MISSION_02_TITLE
+#define VIGNETTE_03_TITLE	MISSION_03_TITLE
+#define VIGNETTE_04_TITLE	MISSION_04_TITLE
+#define VIGNETTE_05_TITLE	MISSION_05_TITLE
+#define VIGNETTE_06_TITLE	MISSION_06_TITLE
+#define VIGNETTE_07_TITLE	MISSION_07_TITLE
+#define VIGNETTE_08_TITLE	MISSION_08_TITLE
+#define VIGNETTE_09_TITLE	MISSION_09_TITLE
+#define VIGNETTE_10_TITLE	MISSION_10_TITLE
+
+#define VIGNETTE_01_TITLE_LOCKED	MISSION_01_TITLE_LOCKED
+#define VIGNETTE_02_TITLE_LOCKED	MISSION_02_TITLE_LOCKED
+#define VIGNETTE_03_TITLE_LOCKED	MISSION_03_TITLE_LOCKED
+#define VIGNETTE_04_TITLE_LOCKED	MISSION_04_TITLE_LOCKED
+#define VIGNETTE_05_TITLE_LOCKED	MISSION_05_TITLE_LOCKED
+#define VIGNETTE_06_TITLE_LOCKED	MISSION_06_TITLE_LOCKED
+#define VIGNETTE_07_TITLE_LOCKED	MISSION_07_TITLE_LOCKED
+#define VIGNETTE_08_TITLE_LOCKED	MISSION_08_TITLE_LOCKED
+#define VIGNETTE_09_TITLE_LOCKED	MISSION_09_TITLE_LOCKED
+#define VIGNETTE_10_TITLE_LOCKED	MISSION_10_TITLE_LOCKED
+/*
+#define VIGNETTE_01_IMAGE	"lsm_mission_training"
+#define VIGNETTE_02_IMAGE	"lsm_mission_egypt"
+#define VIGNETTE_03_IMAGE	"lsm_mission_earlygrad"
+#define VIGNETTE_04_IMAGE	"lsm_mission_lategrad"
+#define VIGNETTE_05_IMAGE	"lsm_mission_libya"
+#define VIGNETTE_06_IMAGE	"lsm_mission_tunisia"
+#define VIGNETTE_07_IMAGE	"lsm_mission_duhoc"
+#define VIGNETTE_08_IMAGE	"lsm_mission_caen"
+#define VIGNETTE_09_IMAGE	"lsm_mission_hill400"
+#define VIGNETTE_10_IMAGE	"lsm_mission_rhine"
+*/
+#define VIGNETTE_01_IMAGE	"lsm_background_sm_ussr1"
+#define VIGNETTE_02_IMAGE	"lsm_background_sm_brit_nor1"
+#define VIGNETTE_03_IMAGE	"lsm_background_sm_ussr2"
+#define VIGNETTE_04_IMAGE	"lsm_background_sm_ussr3"
+#define VIGNETTE_05_IMAGE	"lsm_background_sm_brit_aftank"
+#define VIGNETTE_06_IMAGE	"lsm_background_sm_brit_af1"
+#define VIGNETTE_07_IMAGE	"lsm_background_sm_us1"
+#define VIGNETTE_08_IMAGE	"lsm_background_sm_brit_af2"
+#define VIGNETTE_09_IMAGE	"lsm_background_sm_us2"
+#define VIGNETTE_10_IMAGE	"lsm_background_sm_us3"
+
+#define VIGNETTE_01_CAMEO	"LSL_lvl_moscow"
+#define VIGNETTE_02_CAMEO	"LSL_lvl_elalamein"
+#define VIGNETTE_03_CAMEO	"LSL_lvl_tankhunt"
+#define VIGNETTE_04_CAMEO	"LSL_lvl_downtown_assault"
+#define VIGNETTE_05_CAMEO	"LSL_lvl_libya"
+#define VIGNETTE_06_CAMEO	"LSL_lvl_toujane"
+#define VIGNETTE_07_CAMEO	"LSL_lvl_duhoc_assault"
+#define VIGNETTE_08_CAMEO	"LSL_lvl_newvillers"
+#define VIGNETTE_09_CAMEO	"LSL_lvl_hill400_assault"
+#define VIGNETTE_10_CAMEO	"LSL_lvl_rhine"
+
+#define VIGNETTE_01_DESC	MISSION_01_LOCATION
+#define VIGNETTE_02_DESC	MISSION_02_LOCATION
+#define VIGNETTE_03_DESC	MISSION_03_LOCATION
+#define VIGNETTE_04_DESC	MISSION_04_LOCATION
+#define VIGNETTE_05_DESC	MISSION_05_LOCATION
+#define VIGNETTE_06_DESC	MISSION_06_LOCATION
+#define VIGNETTE_07_DESC	MISSION_07_LOCATION
+#define VIGNETTE_08_DESC	MISSION_08_LOCATION
+#define VIGNETTE_09_DESC	MISSION_09_LOCATION
+#define VIGNETTE_10_DESC	MISSION_10_LOCATION
+
+#define MENU_LABEL_TEXT			"@MENU_SELECT_NEXT_MISSION"
+#define	MENU_BACKGROUND_TOP		"black"
+#define MENU_BACKGROUND_BOTTOM 		"black"
+
+#define VIGNETTE_CENTER		"mission_select"
+#define VIGNETTE_NAME_RECT	580 290 266 126
+#define VIGNETTE_DESC_RECT	580 305 266 126
+
+#define VIGNETTE_STATE_COLOR_LOCKED		.45 .45 .45 .9
+#define VIGNETTE_STATE_COLOR_OPEN		.24 .65 .24 1
+#define VIGNETTE_STATE_COLOR_IN_PROGRESS	.61 .81 .54 1
+#define VIGNETTE_STATE_COLOR_COMPLETED_EASY	1 1 1 1
+#define VIGNETTE_STATE_COLOR_COMPLETED_NORMAL	1 1 1 1
+#define VIGNETTE_STATE_COLOR_COMPLETED_HARD	1 1 1 1
+#define VIGNETTE_STATE_COLOR_COMPLETED_FU	1 1 1 1
+
+#define MISSION_COMPLETED_COLOR			1 1 1 1
+#define MISSION_LOCKED_COLOR			.25 .25 .25 .9
+#define MISSION_FLAG_LOCKED_OUT			0 0 0 .8
+
+#define VIGNETTE_STATE_TEXT_SIZE .4
+
+{
+	menuDef
+	{
+		name			mission_select
+		fullScreen		0				
+		rect			0 0 640 480				// Size and position of the menu
+		focusColor		GLOBAL_FOCUSED_COLOR	// Menu focus color for text and items
+		soundloop		""
+
+		fadeClamp 1.0							// sets the fadeup alpha
+		fadeCycle 100							// how often fade happens in milliseconds
+		fadeAmount 0.01							// amount to adjust alpha per cycle
+		fadeInAmount 0.01
+
+		onOpen
+		{
+//			exec "updatedvarsfromprofile";
+			close main_text;
+			hide vignette01_items;
+			hide vignette02_items;
+			hide vignette03_items;
+			hide vignette04_items;
+			hide vignette05_items;
+			hide vignette06_items;
+			hide vignette07_items;
+			hide vignette08_items;
+			hide vignette09_items;
+			hide vignette10_items;
+			hide vignettelocked_items;
+			setDvar ui_background "black"
+			setDvar ui_logo_show "0"
+			setDvar ui_separator_show "0"
+			setDvar ui_version_show "0"
+			setDvar ui_background_gradient_show "0"
+
+			hide vignette_russian;
+			hide vignette_british;
+			hide vignette_american;
+			hide mission_status;
+
+
+			setfocus vignette01_lista;
+			setfocus vignette01_listb;
+			setfocus vignette01_listc;
+			setfocus vignette01_listd;
+//			setfocus vignette02_liste;
+//			setfocusbydvar "mis_01"; // not needed mission 1 is selected by default
+			setfocusbydvar "mis_10";
+			setfocusbydvar "mis_09";
+			setfocusbydvar "mis_08";
+			setfocusbydvar "mis_07";
+			setfocusbydvar "mis_06";
+			setfocusbydvar "mis_05";
+			setfocusbydvar "mis_04";
+			setfocusbydvar "mis_03";
+			setfocusbydvar "mis_02";
+
+
+		}
+		onESC
+		{ 
+			close mission_select;
+			open main_text;
+		}
+//		#include "ui/menu_generic_background.menu"
+
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			origin			HEADER_ORIGIN
+			forecolor		1 1 1 1
+			text			MENU_LABEL_TEXT
+			textfont		UI_FONT_NORMAL
+			textscale		HEADER_SIZE
+			visible			1
+			decoration
+		}
+
+
+// timeline - 576 across (safe area) = 115.2 per year
+		itemDef 
+		{
+			name timeline_across
+			style			WINDOW_STYLE_FILLED
+			rect			0 384 640 2 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			backcolor		1 .8 .2 .8
+			visible			0
+			decoration
+		}
+		itemDef 
+		{
+			name timeline_hash_41_42
+			style			WINDOW_STYLE_FILLED
+			rect			148 400 2 16
+			backcolor		.65 .65 .65 1
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			name timeline_hash_42_43
+			style			WINDOW_STYLE_FILLED
+			rect			263 400 2 16
+			backcolor		.65 .65 .65 1
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			name timeline_hash_43_44
+			style			WINDOW_STYLE_FILLED
+			rect			379 400 2 16
+			backcolor		.65 .65 .65 1
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			name timeline_hash_43_44
+			style			WINDOW_STYLE_FILLED
+			rect			492 400 2 16
+			backcolor		.65 .65 .65 1
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			name			timeline_1941
+			text			"@MENU_1941"
+			type			ITEM_TYPE_TEXT
+			rect			90 400 100 20
+			textalign		ITEM_ALIGN_CENTER
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		.4
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		.45 .45 .45 .9
+			textaligny		14
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			name			timeline_1942
+			text			"@MENU_1942"
+			type			ITEM_TYPE_TEXT
+			rect			205 400 100 20
+			textalign		ITEM_ALIGN_CENTER
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		.4
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		.45 .45 .45 .9
+			textaligny		14
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			name			timeline_1943
+			text			"@MENU_1943"
+			type			ITEM_TYPE_TEXT
+			rect			320 400 100 20
+			textalign		ITEM_ALIGN_CENTER
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		.4
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		.45 .45 .45 .9
+			textaligny		14
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			name			timeline_1944
+			text			"@MENU_1944"
+			type			ITEM_TYPE_TEXT
+			rect			436 400 100 20
+			textalign		ITEM_ALIGN_CENTER
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		.4
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		.45 .45 .45 .9
+			textaligny		14
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			name			timeline_1945
+			text			"@MENU_1945"
+			type			ITEM_TYPE_TEXT
+			rect			551 400 100 20
+			textalign		ITEM_ALIGN_CENTER
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		.4
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		.45 .45 .45 .9
+			textaligny		14
+			visible			1
+			decoration
+		}
+
+/*
+		itemDef
+		{
+			name			ussr_flag
+			style			WINDOW_STYLE_SHADER
+//			type			ITEM_TYPE_BUTTON
+			rect			25 15 96 33
+			origin			HEADER_ORIGIN
+			background		"lsm_flag_ussr"
+			border			1
+			bordercolor		0 0 0 0
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name			brit_flag
+			style			WINDOW_STYLE_SHADER
+//			type			ITEM_TYPE_BUTTON
+			textalign		ITEM_ALIGN_LEFT
+//			text			"British"
+			rect			25 58 96 33
+			origin			HEADER_ORIGIN
+			background		"lsm_flag_brit"
+			border			1
+			bordercolor		0 0 0 0
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name			brit_flag
+			style			WINDOW_STYLE_FILLED
+//			type			ITEM_TYPE_BUTTON
+			textalign		ITEM_ALIGN_LEFT
+//			text			"British"
+			rect			25 58 96 33
+			origin			HEADER_ORIGIN
+			border			1
+			bordercolor		0 0 0 0
+			backcolor		.1 .1 .1 .6
+			visible			1
+			decoration
+			dvartest		"mission_02"
+			showdvar		{ "0" }
+		}
+		itemDef
+		{
+			name			americans_flag
+			style			WINDOW_STYLE_SHADER
+//			type			ITEM_TYPE_BUTTON
+			rect			25 101 96 33
+			origin			HEADER_ORIGIN
+			background		"lsm_flag_us"
+			border			1
+			bordercolor		0 0 0 0
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name			americans_flag
+			style			WINDOW_STYLE_FILLED
+//			type			ITEM_TYPE_BUTTON
+			rect			25 101 96 33
+			origin			HEADER_ORIGIN
+			border			1
+			bordercolor		0 0 0 0
+			backcolor		.1 .1 .1 .6
+			visible			1
+			decoration
+			dvartest		"mission_07"
+			showdvar		{ "0" }
+		}
+		itemDef 
+		{
+			name			ussr_text
+			group			ussr_text
+			text			"@MENU_SOVIETS"
+			type			ITEM_TYPE_BUTTON
+			rect			25 15 270 33
+			origin			HEADER_ORIGIN
+			textalign		ITEM_ALIGN_LEFT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		.4
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		.9 .9 .9 1
+			textaligny		28
+			textalignx		116
+			visible			1
+			onFocus	{ play "mouse_over"; setitemcolor ussr_flag bordercolor 1 .8 .1 1; }
+			action { fadein vignette_russian;  hide vignette_british; hide vignette_american; setfocus vignette01a; setfocus vignette01b; setfocus vignette01c; play "mouse_click"; }
+			leaveFocus {  setitemcolor ussr_flag bordercolor 1 1 1 0; }
+		}
+		itemDef 
+		{
+			name			brit_text
+			group			brit_text
+			text			"@MENU_BRITISH"
+			type			ITEM_TYPE_TEXT
+			rect			25 58 270 33
+			origin			HEADER_ORIGIN
+			textalign		ITEM_ALIGN_LEFT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		.4
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		.9 .9 .9 .5
+			textaligny		28
+			textalignx		116
+			visible			1
+			decoration
+			dvartest		"mis_02"
+			showdvar		{ "0" }
+		}
+		itemDef 
+		{
+			name			brit_text
+			group			brit_text
+			text			"@MENU_BRITISH"
+			type			ITEM_TYPE_BUTTON
+			rect			25 58 270 33
+			origin			HEADER_ORIGIN
+			textalign		ITEM_ALIGN_LEFT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		.4
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		.9 .9 .9 1
+			textaligny		28
+			textalignx		116
+			visible			1
+			onFocus	{ play "mouse_over"; setitemcolor brit_flag bordercolor 1 .8 .1 1; }
+			action { hide vignette_russian;  fadein vignette_british; hide vignette_american; setfocus vignette02; setfocus vignette02a; setfocus vignette02b; setfocus vignette02c; setfocus vignette02d; play "mouse_click"; }
+			leaveFocus {  setitemcolor brit_flag bordercolor 1 1 1 0; }
+			dvartest		"mis_02"
+			hidedvar		{ "0" }
+		}
+		itemDef 
+		{
+			name			americans_text
+			group			americans_text
+			text			"@MENU_AMERICANS"
+			type			ITEM_TYPE_TEXT
+			rect			25 101 270 33
+			origin			HEADER_ORIGIN
+			textalign		ITEM_ALIGN_LEFT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		.4
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		.9 .9 .9 .5
+			textaligny		28
+			textalignx		116
+			visible			1
+			decoration
+			dvartest		"mis_07"
+			showdvar		{ "0" }
+		}
+		itemDef 
+		{
+			name			americans_text
+			group			americans_text
+			text			"@MENU_AMERICANS"
+			type			ITEM_TYPE_BUTTON
+			rect			25 101 270 33
+			origin			HEADER_ORIGIN
+			textalign		ITEM_ALIGN_LEFT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		.4
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		.9 .9 .9 1
+			textaligny		28
+			textalignx		116
+			visible			1
+			onFocus	{ play "mouse_over"; setitemcolor americans_flag bordercolor 1 .8 .1 1; }
+			action { hide vignette_russian; hide vignette_british; fadein vignette_american; setfocus vignette07; setfocus vignette07a; setfocus vignette07b; setfocus vignette07c; play "mouse_click"; }
+			leaveFocus {  setitemcolor americans_flag bordercolor 1 1 1 0; }
+			dvartest		"mis_07"
+			hidedvar		{ "0" }
+		}
+*/
+
+
+
+/*
+		itemDef 
+		{
+			name			vignette_state
+			group			vignette01_items
+			text			VIGNETTE_01_TITLE
+			type			ITEM_TYPE_TEXT
+			rect			75 220 100 20
+//			origin			HEADER_ORIGIN
+			textalign		ITEM_ALIGN_LEFT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+//			textscale		VIGNETTE_STATE_TEXT_SIZE
+			textscale		.4
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		1 .8 .1 1
+			textaligny		14
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			name			vignette_state
+			group			vignette02_items
+			text			VIGNETTE_02_TITLE
+			type			ITEM_TYPE_TEXT
+			rect			75 220 100 20
+			textalign		ITEM_ALIGN_LEFT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		.4
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		1 .8 .1 1
+			textaligny		14
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			name			vignette_state
+			group			vignette03_items
+			text			VIGNETTE_03_TITLE
+			type			ITEM_TYPE_TEXT
+			rect			75 220 100 20
+			textalign		ITEM_ALIGN_LEFT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		.4
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		1 .8 .1 1
+			textaligny		14
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			name			vignette_state
+			group			vignette04_items
+			text			VIGNETTE_04_TITLE
+			type			ITEM_TYPE_TEXT
+			rect			75 220 100 20
+			textalign		ITEM_ALIGN_LEFT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		.4
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		1 .8 .1 1
+			textaligny		14
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			name			vignette_state
+			group			vignette05_items
+			text			VIGNETTE_05_TITLE
+			type			ITEM_TYPE_TEXT
+			rect			75 220 100 20
+			textalign		ITEM_ALIGN_LEFT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		.4
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		1 .8 .1 1
+			textaligny		14
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			name			vignette_state
+			group			vignette06_items
+			text			VIGNETTE_06_TITLE
+			type			ITEM_TYPE_TEXT
+			rect			75 220 100 20
+			textalign		ITEM_ALIGN_LEFT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		.4
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		1 .8 .1 1
+			textaligny		14
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			name			vignette_state
+			group			vignette07_items
+			text			VIGNETTE_07_TITLE
+			type			ITEM_TYPE_TEXT
+			rect			75 220 100 20
+			textalign		ITEM_ALIGN_LEFT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		.4
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		1 .8 .1 1
+			textaligny		14
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			name			vignette_state
+			group			vignette08_items
+			text			VIGNETTE_08_TITLE
+			type			ITEM_TYPE_TEXT
+			rect			75 220 100 20
+			textalign		ITEM_ALIGN_LEFT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		.4
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		1 .8 .1 1
+			textaligny		14
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			name			vignette_state
+			group			vignette09_items
+			text			VIGNETTE_09_TITLE
+			type			ITEM_TYPE_TEXT
+			rect			75 220 100 20
+			textalign		ITEM_ALIGN_LEFT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		.4
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		1 .8 .1 1
+			textaligny		14
+			visible			1
+			decoration
+		}
+		itemDef 
+		{
+			name			vignette_state
+			group			vignette10_items
+			text			VIGNETTE_10_TITLE
+			type			ITEM_TYPE_TEXT
+			rect			75 220 100 20
+			textalign		ITEM_ALIGN_LEFT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		.4
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		1 .8 .1 1
+			textaligny		14
+			visible			1
+			decoration
+		}
+*/
+
+
+
+		itemDef 
+		{
+			name			vignette_state
+			group			vignette01_items1
+			text			"@MENU_COMPLETED"
+			type			ITEM_TYPE_TEXT
+			rect			580 48 100 20
+//			origin			HEADER_ORIGIN
+			textalign		ITEM_ALIGN_RIGHT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+//			textscale		VIGNETTE_STATE_TEXT_SIZE
+			textscale		GLOBAL_TEXT_SIZE
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		VIGNETTE_STATE_COLOR_COMPLETED_EASY
+			textaligny		14
+			visible			0
+			decoration
+		}
+		itemDef 
+		{
+			name			mission_status
+			group			mission_status
+			text			VIGNETTE_STATE_COMPLETED_CHEAT
+			type			ITEM_TYPE_TEXT
+			rect			580 48 100 20
+			textalign		ITEM_ALIGN_RIGHT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		VIGNETTE_STATE_TEXT_SIZE
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		VIGNETTE_STATE_COLOR_OPEN
+			textaligny		14
+			visible			0
+			decoration
+			dvarTest	"ui_mission_status"
+			showDvar { "9" }
+		}
+		itemDef 
+		{
+			name			mission_status
+			group			mission_status
+			text			VIGNETTE_STATE_OPEN
+			type			ITEM_TYPE_TEXT
+			rect			580 48 100 20
+			textalign		ITEM_ALIGN_RIGHT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		VIGNETTE_STATE_TEXT_SIZE
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		VIGNETTE_STATE_COLOR_OPEN
+			textaligny		14
+			visible			0
+			decoration
+			dvarTest	"ui_mission_status"
+			showDvar { "0";"1" }
+		}
+		itemDef 
+		{
+			name			mission_status
+			group			mission_status
+			text			VIGNETTE_STATE_IN_PROGRESS
+			type			ITEM_TYPE_TEXT
+			rect			580 48 100 20
+			textalign		ITEM_ALIGN_RIGHT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		VIGNETTE_STATE_TEXT_SIZE
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		VIGNETTE_STATE_COLOR_IN_PROGRESS
+			textaligny		14
+			visible			0
+			decoration
+			dvarTest	"ui_mission_status"
+			showDvar { "2"; "3"; "4"; "5"; }
+		}
+		itemDef 
+		{
+			name			mission_status
+			group			mission_status
+			text			VIGNETTE_STATE_COMPLETED_EASY
+			type			ITEM_TYPE_TEXT
+			rect			580 48 100 20
+			textalign		ITEM_ALIGN_RIGHT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		VIGNETTE_STATE_TEXT_SIZE
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		VIGNETTE_STATE_COLOR_COMPLETED_EASY
+			textaligny		14
+			visible			0
+			decoration
+			dvarTest	"ui_mission_status"
+			showDvar { VIGNETTE_DONE_EASY; }
+		}
+		itemDef 
+		{
+			name			mission_status
+			group			mission_status
+			text			VIGNETTE_STATE_COMPLETED_NORMAL
+			type			ITEM_TYPE_TEXT
+			rect			580 48 100 20
+			textalign		ITEM_ALIGN_RIGHT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		VIGNETTE_STATE_TEXT_SIZE
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		VIGNETTE_STATE_COLOR_COMPLETED_NORMAL
+			textaligny		14
+			visible			0
+			decoration
+			dvarTest	"ui_mission_status"
+			showDvar { VIGNETTE_DONE_NORMAL; }
+		}
+		itemDef 
+		{
+			name			mission_status
+			group			mission_status
+			text			VIGNETTE_STATE_COMPLETED_HARD
+			type			ITEM_TYPE_TEXT
+			rect			580 48 100 20
+			textalign		ITEM_ALIGN_RIGHT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		VIGNETTE_STATE_TEXT_SIZE
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		VIGNETTE_STATE_COLOR_COMPLETED_HARD
+			textaligny		14
+			visible			0
+			decoration
+			dvarTest	"ui_mission_status"
+			showDvar { VIGNETTE_DONE_HARD;  }
+		}
+		itemDef 
+		{
+			name			mission_status
+			group			mission_status
+			text			VIGNETTE_STATE_COMPLETED_FU
+			type			ITEM_TYPE_TEXT
+			rect			580 48 100 20
+			textalign		ITEM_ALIGN_RIGHT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		VIGNETTE_STATE_TEXT_SIZE
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		VIGNETTE_STATE_COLOR_COMPLETED_FU
+			textaligny		14
+			visible			0
+			decoration
+			dvarTest	"ui_mission_status"
+			showDvar { VIGNETTE_DONE_FU; }
+		}
+		itemDef
+		{
+			name			vignette01_desc
+			group			vignette01_items
+			text			"@MENU_USSR_NAME"
+			textalign		ITEM_ALIGN_RIGHT
+			type			ITEM_TYPE_TEXT
+			rect			VIGNETTE_NAME_RECT
+			#include "ui/style_choicetext.menu"
+			visible			0
+			decoration
+		}
+		itemDef
+		{
+			name			vignette01_desc
+			group			vignette01_items
+			text			VIGNETTE_01_DESC
+			textalign		ITEM_ALIGN_RIGHT
+			type			ITEM_TYPE_TEXT
+//			rect			85 250 266 126
+			rect			VIGNETTE_DESC_RECT
+			#include "ui/style_choicetext.menu"
+			visible			0
+			decoration
+		}
+		itemDef
+		{
+			name			vignette02_desc
+			group			vignette02_items
+			text			"@MENU_BRIT_NAME"
+			textalign		ITEM_ALIGN_RIGHT
+			type			ITEM_TYPE_TEXT
+			rect			VIGNETTE_NAME_RECT
+			#include "ui/style_choicetext.menu"
+			visible			0
+			decoration
+		}
+		itemDef
+		{
+			name			vignette02_desc
+			group			vignette02_items
+			text			VIGNETTE_02_DESC
+			textalign		ITEM_ALIGN_RIGHT
+			type			ITEM_TYPE_TEXT
+			rect			VIGNETTE_DESC_RECT
+			#include "ui/style_choicetext.menu"
+			visible			0
+			decoration
+		}
+		itemDef
+		{
+			name			vignette03_desc
+			group			vignette03_items
+			text			"@MENU_USSR_NAME"
+			textalign		ITEM_ALIGN_RIGHT
+			type			ITEM_TYPE_TEXT
+			rect			VIGNETTE_NAME_RECT
+			#include "ui/style_choicetext.menu"
+			visible			0
+			decoration
+		}
+		itemDef
+		{
+			name			vignette03_desc
+			group			vignette03_items
+			text			VIGNETTE_03_DESC
+			textalign		ITEM_ALIGN_RIGHT
+			type			ITEM_TYPE_TEXT
+			rect			VIGNETTE_DESC_RECT
+			#include "ui/style_choicetext.menu"
+			visible			0
+			decoration
+		}
+		itemDef
+		{
+			name			vignette04_desc
+			group			vignette04_items
+			text			"@MENU_USSR_NAME"
+			textalign		ITEM_ALIGN_RIGHT
+			type			ITEM_TYPE_TEXT
+			rect			VIGNETTE_NAME_RECT
+			#include "ui/style_choicetext.menu"
+			visible			0
+			decoration
+		}
+		itemDef
+		{
+			name			vignette04_desc
+			group			vignette04_items
+			text			VIGNETTE_04_DESC
+			textalign		ITEM_ALIGN_RIGHT
+			type			ITEM_TYPE_TEXT
+			rect			VIGNETTE_DESC_RECT
+			#include "ui/style_choicetext.menu"
+			visible			0
+			decoration
+		}
+		itemDef
+		{
+			name			vignette05_desc
+			group			vignette05_items
+			text			"@MENU_BRIT_NAME_2"
+			textalign		ITEM_ALIGN_RIGHT
+			type			ITEM_TYPE_TEXT
+			rect			VIGNETTE_NAME_RECT
+			#include "ui/style_choicetext.menu"
+			visible			0
+			decoration
+		}
+		itemDef
+		{
+			name			vignette05_desc
+			group			vignette05_items
+			text			VIGNETTE_05_DESC
+			textalign		ITEM_ALIGN_RIGHT
+			type			ITEM_TYPE_TEXT
+			rect			VIGNETTE_DESC_RECT
+			#include "ui/style_choicetext.menu"
+			visible			0
+			decoration
+		}
+		itemDef
+		{
+			name			vignette06_desc
+			group			vignette06_items
+			text			"@MENU_BRIT_NAME"
+			textalign		ITEM_ALIGN_RIGHT
+			type			ITEM_TYPE_TEXT
+			rect			VIGNETTE_NAME_RECT
+			#include "ui/style_choicetext.menu"
+			visible			0
+			decoration
+		}
+		itemDef
+		{
+			name			vignette06_desc
+			group			vignette06_items
+			text			VIGNETTE_06_DESC
+			textalign		ITEM_ALIGN_RIGHT
+			type			ITEM_TYPE_TEXT
+			rect			VIGNETTE_DESC_RECT
+			#include "ui/style_choicetext.menu"
+			visible			0
+			decoration
+		}
+
+		itemDef
+		{
+			name			vignette07_desc
+			group			vignette07_items
+			text			VIGNETTE_07_DESC
+			textalign		ITEM_ALIGN_RIGHT
+			type			ITEM_TYPE_TEXT
+			rect			VIGNETTE_DESC_RECT
+			#include "ui/style_choicetext.menu"
+			visible			0
+			decoration
+		}
+		itemDef
+		{
+			name			vignette07_desc
+			group			vignette07_items
+			text			"@MENU_USA_NAME"
+			textalign		ITEM_ALIGN_RIGHT
+			type			ITEM_TYPE_TEXT
+			rect			VIGNETTE_NAME_RECT
+			#include "ui/style_choicetext.menu"
+			visible			0
+			decoration
+		}
+		itemDef
+		{
+			name			vignette08_desc
+			group			vignette08_items
+			text			"@MENU_BRIT_NAME"
+			textalign		ITEM_ALIGN_RIGHT
+			type			ITEM_TYPE_TEXT
+			rect			VIGNETTE_NAME_RECT
+			#include "ui/style_choicetext.menu"
+			visible			0
+			decoration
+		}
+		itemDef
+		{
+			name			vignette08_desc
+			group			vignette08_items
+			text			VIGNETTE_08_DESC
+			textalign		ITEM_ALIGN_RIGHT
+			type			ITEM_TYPE_TEXT
+			rect			VIGNETTE_DESC_RECT
+			#include "ui/style_choicetext.menu"
+			visible			0
+			decoration
+		}
+		
+		itemDef
+		{
+			name			vignette09_desc
+			group			vignette09_items
+			text			VIGNETTE_09_DESC
+			textalign		ITEM_ALIGN_RIGHT
+			type			ITEM_TYPE_TEXT
+			rect			VIGNETTE_DESC_RECT
+			#include "ui/style_choicetext.menu"
+			visible			0
+			decoration
+		}
+		itemDef
+		{
+			name			vignette09_desc
+			group			vignette09_items
+			text			"@MENU_USA_NAME"
+			textalign		ITEM_ALIGN_RIGHT
+			type			ITEM_TYPE_TEXT
+			rect			VIGNETTE_NAME_RECT
+			#include "ui/style_choicetext.menu"
+			visible			0
+			decoration
+		}		
+		itemDef
+		{
+			name			vignette10_desc
+			group			vignette10_items
+			text			VIGNETTE_10_DESC
+			textalign		ITEM_ALIGN_RIGHT
+			type			ITEM_TYPE_TEXT
+			rect			VIGNETTE_DESC_RECT
+			#include "ui/style_choicetext.menu"
+			visible			0
+			decoration
+		}
+		itemDef
+		{
+			name			vignette10_desc
+			group			vignette10_items
+			text			"@MENU_USA_NAME"
+			textalign		ITEM_ALIGN_RIGHT
+			type			ITEM_TYPE_TEXT
+			rect			VIGNETTE_NAME_RECT
+			#include "ui/style_choicetext.menu"
+			visible			0
+			decoration
+		}
+		itemDef 
+		{
+			name			vignettelocked_state
+			group			vignettelocked_items
+			text			VIGNETTE_STATE_LOCKED
+			type			ITEM_TYPE_TEXT
+			rect			405 75 100 20
+			textalign		ITEM_ALIGN_LEFT
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		VIGNETTE_STATE_TEXT_SIZE
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		VIGNETTE_STATE_COLOR_LOCKED
+			textaligny		14
+			visible			0
+			decoration
+		}
+
+//name			vignette01_image
+//group			vignette01_items
+//style			WINDOW_STYLE_SHADER
+//rect			0 0 640 480 4 4
+//background		VIGNETTE_01_IMAGE
+//visible			0
+//decoration
+
+
+//////////////////////// Flags
+
+		itemDef
+		{
+			name			ussr_flag_1
+			style			WINDOW_STYLE_SHADER
+//			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_01_OFFSET 32 20.25
+			origin			FLAG_ORIGIN
+			background		"lsm_flag_ussr"
+			border			1
+			bordercolor		0 0 0 0
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name			brit_flag_2
+			style			WINDOW_STYLE_SHADER
+//			type			ITEM_TYPE_BUTTON
+			textalign		ITEM_ALIGN_LEFT
+//			text			"British"
+			rect			CHOICE_04_OFFSET 32 20.25
+			origin			FLAG_ORIGIN
+			background		"lsm_flag_brit"
+			border			1
+			bordercolor		0 0 0 0
+			visible			1
+			decoration
+		}
+
+		itemDef
+		{
+			name			ussr_flag_3
+			style			WINDOW_STYLE_SHADER
+//			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_02_OFFSET 32 20.25
+			origin			FLAG_ORIGIN
+			background		"lsm_flag_ussr"
+			border			1
+			bordercolor		0 0 0 0
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name			ussr_flag_4
+			style			WINDOW_STYLE_SHADER
+//			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_03_OFFSET 32 20.25
+			origin			FLAG_ORIGIN
+			background		"lsm_flag_ussr"
+			border			1
+			bordercolor		0 0 0 0
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name			brit_flag_5
+			style			WINDOW_STYLE_SHADER
+//			type			ITEM_TYPE_BUTTON
+			textalign		ITEM_ALIGN_LEFT
+//			text			"British"
+			rect			CHOICE_05_OFFSET 32 20.25
+			origin			FLAG_ORIGIN
+			background		"lsm_flag_brit"
+			border			1
+			bordercolor		0 0 0 0
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name			brit_flag_6
+			style			WINDOW_STYLE_SHADER
+//			type			ITEM_TYPE_BUTTON
+			textalign		ITEM_ALIGN_LEFT
+//			text			"British"
+			rect			CHOICE_06_OFFSET 32 20.25
+			origin			FLAG_ORIGIN
+			background		"lsm_flag_brit"
+			border			1
+			bordercolor		0 0 0 0
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name			americans_flag_7
+			style			WINDOW_STYLE_SHADER
+//			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_08_OFFSET 32 20.25
+			origin			FLAG_ORIGIN
+			background		"lsm_flag_us"
+			border			1
+			bordercolor		0 0 0 0
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name			brit_flag_8
+			style			WINDOW_STYLE_SHADER
+//			type			ITEM_TYPE_BUTTON
+			textalign		ITEM_ALIGN_LEFT
+//			text			"British"
+			rect			CHOICE_07_OFFSET 32 20.25
+			origin			FLAG_ORIGIN
+			background		"lsm_flag_brit"
+			border			1
+			bordercolor		0 0 0 0
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name			americans_flag_9
+			style			WINDOW_STYLE_SHADER
+//			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_09_OFFSET 32 20.25
+			origin			FLAG_ORIGIN
+			background		"lsm_flag_us"
+			border			1
+			bordercolor		0 0 0 0
+			visible			1
+			decoration
+		}
+		itemDef
+		{
+			name			americans_flag_10
+			style			WINDOW_STYLE_SHADER
+//			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_10_OFFSET 32 20.25
+			origin			FLAG_ORIGIN
+			background		"lsm_flag_us"
+			border			1
+			bordercolor		0 0 0 0
+			visible			1
+			decoration
+		}
+////////////////////// grayed out flags
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			textalign		ITEM_ALIGN_LEFT
+			rect			CHOICE_01_OFFSET 32 20.25
+			origin			FLAG_ORIGIN
+			backcolor		MISSION_FLAG_LOCKED_OUT
+			border			1
+			bordercolor		0 0 0 0
+			visible			0
+			decoration
+			dvarTest	"mis_01"
+			showDvar { "0"; }
+		}
+
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			textalign		ITEM_ALIGN_LEFT
+			rect			CHOICE_02_OFFSET 32 20.25
+			origin			FLAG_ORIGIN
+			backcolor		MISSION_FLAG_LOCKED_OUT
+			border			1
+			bordercolor		0 0 0 0
+			visible			1
+			decoration
+			dvarTest	"mis_03"
+			showDvar { "0"; }
+		}
+
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			textalign		ITEM_ALIGN_LEFT
+			rect			CHOICE_03_OFFSET 32 20.25
+			origin			FLAG_ORIGIN
+			backcolor		MISSION_FLAG_LOCKED_OUT
+			border			1
+			bordercolor		0 0 0 0
+			visible			1
+			decoration
+			dvarTest	"mis_04"
+			showDvar { "0"; }
+		}
+
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			textalign		ITEM_ALIGN_LEFT
+			rect			CHOICE_04_OFFSET 32 20.25
+			origin			FLAG_ORIGIN
+			backcolor		MISSION_FLAG_LOCKED_OUT
+			border			1
+			bordercolor		0 0 0 0
+			visible			1
+			decoration
+			dvarTest	"mis_02"
+			showDvar { "0"; }
+		}
+
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			textalign		ITEM_ALIGN_LEFT
+			rect			CHOICE_05_OFFSET 32 20.25
+			origin			FLAG_ORIGIN
+			backcolor		MISSION_FLAG_LOCKED_OUT
+			border			1
+			bordercolor		0 0 0 0
+			visible			1
+			decoration
+			dvarTest	"mis_05"
+			showDvar { "0"; }
+		}
+
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			textalign		ITEM_ALIGN_LEFT
+			rect			CHOICE_06_OFFSET 32 20.25
+			origin			FLAG_ORIGIN
+			backcolor		MISSION_FLAG_LOCKED_OUT
+			border			1
+			bordercolor		0 0 0 0
+			visible			1
+			decoration
+			dvarTest	"mis_06"
+			showDvar { "0"; }
+		}
+
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			textalign		ITEM_ALIGN_LEFT
+			rect			CHOICE_07_OFFSET 32 20.25
+			origin			FLAG_ORIGIN
+			backcolor		MISSION_FLAG_LOCKED_OUT
+			border			1
+			bordercolor		0 0 0 0
+			visible			1
+			decoration
+			dvarTest	"mis_08"
+			showDvar { "0"; }
+		}
+
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			textalign		ITEM_ALIGN_LEFT
+			rect			CHOICE_08_OFFSET 32 20.25
+			origin			FLAG_ORIGIN
+			backcolor		MISSION_FLAG_LOCKED_OUT
+			border			1
+			bordercolor		0 0 0 0
+			visible			1
+			decoration
+			dvarTest	"mis_07"
+			showDvar { "0"; }
+		}
+
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			textalign		ITEM_ALIGN_LEFT
+			rect			CHOICE_09_OFFSET 32 20.25
+			origin			FLAG_ORIGIN
+			backcolor		MISSION_FLAG_LOCKED_OUT
+			border			1
+			bordercolor		0 0 0 0
+			visible			1
+			decoration
+			dvarTest	"mis_09"
+			showDvar { "0"; }
+		}
+
+		itemDef
+		{
+			style			WINDOW_STYLE_FILLED
+			textalign		ITEM_ALIGN_LEFT
+			rect			CHOICE_10_OFFSET 32 20.25
+			origin			FLAG_ORIGIN
+			backcolor		MISSION_FLAG_LOCKED_OUT
+			border			1
+			bordercolor		0 0 0 0
+			visible			1
+			decoration
+			dvarTest	"mis_10"
+			showDvar { "0"; }
+		}
+
+//////////////////////// List
+		itemDef
+		{
+			name			vignette01_lista
+			text			VIGNETTE_01_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_01_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		VIGNETTE_STATE_COLOR_OPEN
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_01";
+				play "mouse_over";
+				show vignette_russian;  
+				hide vignette_british; 
+				hide vignette_american; 
+				show vignette01_items;
+				hide vignette02_items;
+				hide vignette03_items;
+				hide vignette04_items;
+				hide vignette05_items;
+				hide vignette06_items;
+				hide vignette07_items;
+				hide vignette08_items;
+				hide vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				hide vignette01_shade;
+				show vignette03_shade;
+				show vignette04_shade;
+				setdvar ui_background VIGNETTE_01_IMAGE;
+				setitemcolor vignette01a bordercolor 1 .8 .1 1
+				setitemcolor vignette03 bordercolor 1 1 1 0
+				setitemcolor vignette04 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette01a bordercolor 1 1 1 0
+			}
+			action 
+			{
+//				setdvar ui_selected_map "set mis_01 1;map movie_eastern";
+//				open popmenu_difficulty;
+				open mission_select_01;
+				play "mouse_click";
+			}
+			dvarTest	"mis_01"
+			showDvar { "0"; }
+			focusdvar { "0"; }
+		}
+		itemDef
+		{
+			name			vignette01_listb
+			text			VIGNETTE_01_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_01_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		VIGNETTE_STATE_COLOR_OPEN
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_01";
+				play "mouse_over";
+				show vignette_russian;  
+				hide vignette_british; 
+				hide vignette_american; 
+				show vignette01_items;
+				hide vignette02_items;
+				hide vignette03_items;
+				hide vignette04_items;
+				hide vignette05_items;
+				hide vignette06_items;
+				hide vignette07_items;
+				hide vignette08_items;
+				hide vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				hide vignette01_shade;
+				show vignette03_shade;
+				show vignette04_shade;
+				setdvar ui_background VIGNETTE_01_IMAGE;
+				setitemcolor vignette01a bordercolor 1 .8 .1 1
+				setitemcolor vignette03 bordercolor 1 1 1 0
+				setitemcolor vignette04 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette01a bordercolor 1 1 1 0
+			}
+			action 
+			{
+//				setdvar ui_selected_map MISSION_01_LEVEL_01_EXEC;
+//				open load_mission_popmenu;
+				open mission_select_01;
+				play "mouse_click";
+			}
+			dvarTest	"mis_01"
+			showDvar { "1" }
+			focusdvar { "1" }
+		}
+		itemDef
+		{
+			name			vignette01_listc
+			text			VIGNETTE_01_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_01_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		VIGNETTE_STATE_COLOR_IN_PROGRESS
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_01";
+				play "mouse_over";
+				show vignette_russian;  
+				hide vignette_british; 
+				hide vignette_american; 
+				show vignette01_items;
+				hide vignette02_items;
+				hide vignette03_items;
+				hide vignette04_items;
+				hide vignette05_items;
+				hide vignette06_items;
+				hide vignette07_items;
+				hide vignette08_items;
+				hide vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				hide vignette01_shade;
+				show vignette03_shade;
+				show vignette04_shade;
+				setdvar ui_background VIGNETTE_01_IMAGE;
+				setitemcolor vignette01a bordercolor 1 .8 .1 1
+				setitemcolor vignette03 bordercolor 1 1 1 0
+				setitemcolor vignette04 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette01a bordercolor 1 1 1 0
+			}
+			action 
+			{
+//				setdvar ui_selected_map MISSION_01_LEVEL_02_EXEC;
+//				open load_mission_popmenu;
+				open mission_select_01;
+				play "mouse_click";
+			}
+			dvartest "mis_01"
+			showdvar { "2"; }
+			focusdvar { "2"; }
+		}
+		itemDef
+		{
+			name			vignette01_listd
+			text			VIGNETTE_01_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_01_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		MISSION_COMPLETED_COLOR
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_01";
+				play "mouse_over";
+				show vignette_russian;  
+				hide vignette_british; 
+				hide vignette_american; 
+				show vignette01_items;
+				hide vignette02_items;
+				hide vignette03_items;
+				hide vignette04_items;
+				hide vignette05_items;
+				hide vignette06_items;
+				hide vignette07_items;
+				hide vignette08_items;
+				hide vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				hide vignette01_shade;
+				show vignette03_shade;
+				show vignette04_shade;
+				setdvar ui_background VIGNETTE_01_IMAGE;
+				setitemcolor vignette01a bordercolor 1 .8 .1 1
+				setitemcolor vignette03 bordercolor 1 1 1 0
+				setitemcolor vignette04 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette01a bordercolor 1 1 1 0
+			}
+			action 
+			{
+				open mission_select_01;
+				play "mouse_click";
+			}
+			dvartest "mis_01"
+			showdvar { VIGNETTE_DONE_CHEAT;VIGNETTE_DONE_EASY;VIGNETTE_DONE_NORMAL;VIGNETTE_DONE_HARD;VIGNETTE_DONE_FU; }
+		}
+/////////////////////////////////////////////////////
+
+		itemDef
+		{
+			name			vignette03_list
+			text			VIGNETTE_STATE_LOCKED
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_02_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		GLOBAL_TEXT_SIZE
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		MISSION_LOCKED_COLOR
+			textaligny		14
+			visible			1
+			decoration
+			dvarTest	"mis_03"
+			showDvar { "0" }
+		}
+		itemDef
+		{
+			name			vignette03_list
+			text			VIGNETTE_03_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_02_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		VIGNETTE_STATE_COLOR_OPEN
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_03";
+				play "mouse_over";
+				show vignette_russian;  
+				hide vignette_british; 
+				hide vignette_american; 
+				hide vignette01_items;
+				hide vignette02_items;
+				show vignette03_items;
+				hide vignette04_items;
+				hide vignette05_items;
+				hide vignette06_items;
+				hide vignette07_items;
+				hide vignette08_items;
+				hide vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				show vignette01_shade;
+				hide vignette03_shade;
+				show vignette04_shade;
+				setdvar ui_background VIGNETTE_03_IMAGE;
+				setitemcolor vignette03a bordercolor 1 .8 .1 1
+				setitemcolor vignette01 bordercolor 1 1 1 0
+				setitemcolor vignette04 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette03a bordercolor 1 1 1 0
+			}
+			action 
+			{
+//				setdvar ui_selected_map MISSION_03_LEVEL_01_EXEC;
+//				open load_mission_popmenu;
+				open mission_select_03;
+				play "mouse_click";
+			}
+			dvartest "mis_03"
+			showdvar { "1"; }
+			focusDvar { "1" }
+		}
+		itemDef
+		{
+			name			vignette03_list
+			text			VIGNETTE_03_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_02_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		VIGNETTE_STATE_COLOR_IN_PROGRESS
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_03";
+				play "mouse_over";
+				show vignette_russian;  
+				hide vignette_british; 
+				hide vignette_american; 
+				hide vignette01_items;
+				hide vignette02_items;
+				show vignette03_items;
+				hide vignette04_items;
+				hide vignette05_items;
+				hide vignette06_items;
+				hide vignette07_items;
+				hide vignette08_items;
+				hide vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				show vignette01_shade;
+				hide vignette03_shade;
+				show vignette04_shade;
+				setdvar ui_background VIGNETTE_03_IMAGE;
+				setitemcolor vignette03a bordercolor 1 .8 .1 1
+				setitemcolor vignette01 bordercolor 1 1 1 0
+				setitemcolor vignette04 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette03a bordercolor 1 1 1 0
+			}
+			action 
+			{
+//				setdvar ui_selected_map MISSION_03_LEVEL_02_EXEC;
+//				open load_mission_popmenu;
+				open mission_select_03;
+				play "mouse_click";
+			}
+			dvartest "mis_03"
+			showdvar { "2"; }
+			focusDvar { "2" }
+		}
+		itemDef
+		{
+			name			vignette03_list
+			text			VIGNETTE_03_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_02_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		MISSION_COMPLETED_COLOR
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_03";
+				play "mouse_over";
+				show vignette_russian;  
+				hide vignette_british; 
+				hide vignette_american; 
+				hide vignette01_items;
+				hide vignette02_items;
+				show vignette03_items;
+				hide vignette04_items;
+				hide vignette05_items;
+				hide vignette06_items;
+				hide vignette07_items;
+				hide vignette08_items;
+				hide vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				show vignette01_shade;
+				hide vignette03_shade;
+				show vignette04_shade;
+				setdvar ui_background VIGNETTE_03_IMAGE;
+				setitemcolor vignette03a bordercolor 1 .8 .1 1
+				setitemcolor vignette01 bordercolor 1 1 1 0
+				setitemcolor vignette04 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette03a bordercolor 1 1 1 0
+			}
+			action 
+			{
+				open mission_select_03;
+				play "mouse_click";
+			}
+			dvartest "mis_03"
+			showdvar { VIGNETTE_DONE_CHEAT;VIGNETTE_DONE_EASY;VIGNETTE_DONE_NORMAL;VIGNETTE_DONE_HARD;VIGNETTE_DONE_FU; }
+		}
+///////////////////////////////////////////////////////////
+		itemDef
+		{
+			name			vignette04_list
+			text			VIGNETTE_STATE_LOCKED
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_03_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		GLOBAL_TEXT_SIZE
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		MISSION_LOCKED_COLOR
+			textaligny		14
+			visible			1
+			decoration
+			dvarTest	"mis_04"
+			showDvar { "0" }
+		}
+		itemDef
+		{
+			name			vignette04_list
+			text			VIGNETTE_04_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_03_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		VIGNETTE_STATE_COLOR_OPEN
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_04";
+				play "mouse_over";
+				show vignette_russian;  
+				hide vignette_british; 
+				hide vignette_american; 
+				hide vignette01_items;
+				hide vignette02_items;
+				hide vignette03_items;
+				show vignette04_items;
+				hide vignette05_items;
+				hide vignette06_items;
+				hide vignette07_items;
+				hide vignette08_items;
+				hide vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				show vignette01_shade;
+				show vignette03_shade;
+				hide vignette04_shade;
+				setdvar ui_background VIGNETTE_04_IMAGE;
+				setitemcolor vignette04a bordercolor 1 .8 .1 1
+				setitemcolor vignette01 bordercolor 1 1 1 0
+				setitemcolor vignette03 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette04a bordercolor 1 1 1 0
+			}
+			action 
+			{
+//				setdvar ui_selected_map MISSION_04_LEVEL_01_EXEC;
+//				open load_mission_popmenu;
+				open mission_select_04;
+				play "mouse_click";
+			}
+			dvartest "mis_04"
+			showdvar { "1"; }
+			focusDvar { "1" }
+		}
+		itemDef
+		{
+			name			vignette04_list
+			text			VIGNETTE_04_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_03_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		VIGNETTE_STATE_COLOR_IN_PROGRESS
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_04";
+				play "mouse_over";
+				show vignette_russian;  
+				hide vignette_british; 
+				hide vignette_american; 
+				hide vignette01_items;
+				hide vignette02_items;
+				hide vignette03_items;
+				show vignette04_items;
+				hide vignette05_items;
+				hide vignette06_items;
+				hide vignette07_items;
+				hide vignette08_items;
+				hide vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				show vignette01_shade;
+				show vignette03_shade;
+				hide vignette04_shade;
+				setdvar ui_background VIGNETTE_04_IMAGE;
+				setitemcolor vignette04a bordercolor 1 .8 .1 1
+				setitemcolor vignette01 bordercolor 1 1 1 0
+				setitemcolor vignette03 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette04a bordercolor 1 1 1 0
+			}
+			action 
+			{
+//				setdvar ui_selected_map MISSION_04_LEVEL_02_EXEC;
+//				open load_mission_popmenu;
+				open mission_select_04;
+				play "mouse_click";
+			}
+			dvartest "mis_04"
+			showdvar { "2"; }
+			focusDvar { "2" }
+		}
+		itemDef
+		{
+			name			vignette04_list
+			text			VIGNETTE_04_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_03_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		VIGNETTE_STATE_COLOR_IN_PROGRESS
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_04";
+				play "mouse_over";
+				show vignette_russian;  
+				hide vignette_british; 
+				hide vignette_american; 
+				hide vignette01_items;
+				hide vignette02_items;
+				hide vignette03_items;
+				show vignette04_items;
+				hide vignette05_items;
+				hide vignette06_items;
+				hide vignette07_items;
+				hide vignette08_items;
+				hide vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				show vignette01_shade;
+				show vignette03_shade;
+				hide vignette04_shade;
+				setdvar ui_background VIGNETTE_04_IMAGE;
+				setitemcolor vignette04a bordercolor 1 .8 .1 1
+				setitemcolor vignette01 bordercolor 1 1 1 0
+				setitemcolor vignette03 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette04a bordercolor 1 1 1 0
+			}
+			action 
+			{
+//				setdvar ui_selected_map MISSION_04_LEVEL_03_EXEC;
+//				open load_mission_popmenu;
+				open mission_select_04;
+				play "mouse_click";
+			}
+			dvartest "mis_04"
+			showdvar { "3"; }
+			focusDvar { "3" }
+		}
+		itemDef
+		{
+			name			vignette04_list
+			text			VIGNETTE_04_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_03_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		MISSION_COMPLETED_COLOR
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_04";
+				play "mouse_over";
+				show vignette_russian;  
+				hide vignette_british; 
+				hide vignette_american; 
+				hide vignette01_items;
+				hide vignette02_items;
+				hide vignette03_items;
+				show vignette04_items;
+				hide vignette05_items;
+				hide vignette06_items;
+				hide vignette07_items;
+				hide vignette08_items;
+				hide vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				show vignette01_shade;
+				show vignette03_shade;
+				hide vignette04_shade;
+				setdvar ui_background VIGNETTE_04_IMAGE;
+				setitemcolor vignette04a bordercolor 1 .8 .1 1
+				setitemcolor vignette01 bordercolor 1 1 1 0
+				setitemcolor vignette03 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette04a bordercolor 1 1 1 0
+			}
+			action 
+			{
+				open mission_select_04;
+				play "mouse_click";
+			}
+			dvartest "mis_04"
+			showdvar { VIGNETTE_DONE_CHEAT;VIGNETTE_DONE_EASY;VIGNETTE_DONE_NORMAL;VIGNETTE_DONE_HARD;VIGNETTE_DONE_FU; }
+		}
+//////////////////////////////////////////////////////////////////////////////////////////////
+		itemDef
+		{
+			name			vignette02_list
+			text			VIGNETTE_STATE_LOCKED
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_04_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		GLOBAL_TEXT_SIZE
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		MISSION_LOCKED_COLOR
+			textaligny		14
+			visible			1
+			decoration
+			dvarTest	"mis_02"
+			showDvar { "0" }
+		}
+		itemDef
+		{
+			name			vignette02_lista
+			text			VIGNETTE_02_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_04_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		VIGNETTE_STATE_COLOR_OPEN
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_02";
+				play "mouse_over";
+				hide vignette_russian;  
+				show vignette_british; 
+				hide vignette_american; 
+				hide vignette01_items;
+				show vignette02_items;
+				hide vignette03_items;
+				hide vignette04_items;
+				hide vignette05_items;
+				hide vignette06_items;
+				hide vignette07_items;
+				hide vignette08_items;
+				hide vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				hide vignette02_shade;
+				show vignette05_shade;
+				show vignette06_shade;
+				show vignette08_shade;
+				setdvar ui_background VIGNETTE_02_IMAGE;
+				setitemcolor vignette02a bordercolor 1 .8 .1 1
+				setitemcolor vignette05 bordercolor 1 1 1 0
+				setitemcolor vignette06 bordercolor 1 1 1 0
+				setitemcolor vignette08 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette02a bordercolor 1 1 1 0
+			}
+			action 
+			{
+//				setdvar ui_selected_map MISSION_02_LEVEL_01_EXEC;
+//				open load_mission_popmenu;
+				open mission_select_02;
+				play "mouse_click";
+			}
+			dvarTest	"mis_02"
+			showDvar { "1" }
+			focusDvar { "1" }
+		}
+		itemDef
+		{
+			name			vignette02_listb
+			text			VIGNETTE_02_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_04_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		VIGNETTE_STATE_COLOR_IN_PROGRESS
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_02";
+				play "mouse_over";
+				hide vignette_russian;  
+				show vignette_british; 
+				hide vignette_american; 
+				hide vignette01_items;
+				show vignette02_items;
+				hide vignette03_items;
+				hide vignette04_items;
+				hide vignette05_items;
+				hide vignette06_items;
+				hide vignette07_items;
+				hide vignette08_items;
+				hide vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				hide vignette02_shade;
+				show vignette05_shade;
+				show vignette06_shade;
+				show vignette08_shade;
+				setdvar ui_background VIGNETTE_02_IMAGE;
+				setitemcolor vignette02a bordercolor 1 .8 .1 1
+				setitemcolor vignette05 bordercolor 1 1 1 0
+				setitemcolor vignette06 bordercolor 1 1 1 0
+				setitemcolor vignette08 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette02a bordercolor 1 1 1 0
+			}
+			action 
+			{
+//				setdvar ui_selected_map MISSION_02_LEVEL_02_EXEC;
+//				open load_mission_popmenu;
+				open mission_select_02;
+				play "mouse_click";
+			}
+			dvartest "mis_02"
+			showdvar { "2"; }
+			focusDvar { "2" }
+		}
+		itemDef
+		{
+			name			vignette02_listc
+			text			VIGNETTE_02_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_04_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		VIGNETTE_STATE_COLOR_IN_PROGRESS
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_02";
+				play "mouse_over";
+				hide vignette_russian;  
+				show vignette_british; 
+				hide vignette_american; 
+				hide vignette01_items;
+				show vignette02_items;
+				hide vignette03_items;
+				hide vignette04_items;
+				hide vignette05_items;
+				hide vignette06_items;
+				hide vignette07_items;
+				hide vignette08_items;
+				hide vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				hide vignette02_shade;
+				show vignette05_shade;
+				show vignette06_shade;
+				show vignette08_shade;
+				setdvar ui_background VIGNETTE_02_IMAGE;
+				setitemcolor vignette02a bordercolor 1 .8 .1 1
+				setitemcolor vignette05 bordercolor 1 1 1 0
+				setitemcolor vignette06 bordercolor 1 1 1 0
+				setitemcolor vignette08 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette02a bordercolor 1 1 1 0
+			}
+			action 
+			{
+//				setdvar ui_selected_map MISSION_02_LEVEL_03_EXEC;
+//				open load_mission_popmenu;
+				open mission_select_02;
+				play "mouse_click";
+			}
+			dvartest "mis_02"
+			showdvar { "3"; }
+			focusdvar { "3"; }
+		}
+		itemDef
+		{
+			name			vignette02_listd
+			text			VIGNETTE_02_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_04_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		VIGNETTE_STATE_COLOR_IN_PROGRESS
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_02";
+				play "mouse_over";
+				hide vignette_russian;  
+				show vignette_british; 
+				hide vignette_american; 
+				hide vignette01_items;
+				show vignette02_items;
+				hide vignette03_items;
+				hide vignette04_items;
+				hide vignette05_items;
+				hide vignette06_items;
+				hide vignette07_items;
+				hide vignette08_items;
+				hide vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				hide vignette02_shade;
+				show vignette05_shade;
+				show vignette06_shade;
+				show vignette08_shade;
+				setdvar ui_background VIGNETTE_02_IMAGE;
+				setitemcolor vignette02a bordercolor 1 .8 .1 1
+				setitemcolor vignette05 bordercolor 1 1 1 0
+				setitemcolor vignette06 bordercolor 1 1 1 0
+				setitemcolor vignette08 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette02a bordercolor 1 1 1 0
+			}
+			action 
+			{
+//				setdvar ui_selected_map MISSION_02_LEVEL_04_EXEC;
+//				open load_mission_popmenu;
+				open mission_select_02;
+				play "mouse_click";
+			}
+			dvartest "mis_02"
+			showdvar { "4"; }
+			focusdvar { "4"; }
+		}
+		itemDef
+		{
+			name			vignette02_liste
+			text			VIGNETTE_02_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_04_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		MISSION_COMPLETED_COLOR
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_02";
+				play "mouse_over";
+				hide vignette_russian;  
+				show vignette_british; 
+				hide vignette_american; 
+				hide vignette01_items;
+				show vignette02_items;
+				hide vignette03_items;
+				hide vignette04_items;
+				hide vignette05_items;
+				hide vignette06_items;
+				hide vignette07_items;
+				hide vignette08_items;
+				hide vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				hide vignette02_shade;
+				show vignette05_shade;
+				show vignette06_shade;
+				show vignette08_shade;
+				setdvar ui_background VIGNETTE_02_IMAGE;
+				setitemcolor vignette02a bordercolor 1 .8 .1 1
+				setitemcolor vignette05 bordercolor 1 1 1 0
+				setitemcolor vignette06 bordercolor 1 1 1 0
+				setitemcolor vignette08 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette02a bordercolor 1 1 1 0
+			}
+			action 
+			{
+				open mission_select_02;
+				play "mouse_click";
+			}
+			dvartest "mis_02"
+			showdvar { VIGNETTE_DONE_CHEAT;VIGNETTE_DONE_EASY;VIGNETTE_DONE_NORMAL;VIGNETTE_DONE_HARD;VIGNETTE_DONE_FU; }
+		}
+/////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////
+		itemDef
+		{
+			name			vignette05_list
+			text			VIGNETTE_STATE_LOCKED
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_05_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		GLOBAL_TEXT_SIZE
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		MISSION_LOCKED_COLOR
+			textaligny		14
+			visible			1
+			decoration
+			dvarTest	"mis_05"
+			showDvar { "0" }
+		}
+		itemDef
+		{
+			name			vignette05_list
+			text			VIGNETTE_05_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_05_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		VIGNETTE_STATE_COLOR_OPEN
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_05";
+				play "mouse_over";
+				hide vignette_russian;  
+				show vignette_british; 
+				hide vignette_american; 
+				hide vignette01_items;
+				hide vignette02_items;
+				hide vignette03_items;
+				hide vignette04_items;
+				show vignette05_items;
+				hide vignette06_items;
+				hide vignette07_items;
+				hide vignette08_items;
+				hide vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				show vignette02_shade;
+				hide vignette05_shade;
+				show vignette06_shade;
+				show vignette08_shade;
+				setdvar ui_background VIGNETTE_05_IMAGE;
+				setitemcolor vignette05a bordercolor 1 .8 .1 1
+				setitemcolor vignette02 bordercolor 1 1 1 0
+				setitemcolor vignette06 bordercolor 1 1 1 0
+				setitemcolor vignette08 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette05a bordercolor 1 1 1 0
+			}
+			action 
+			{
+//				setdvar ui_selected_map MISSION_05_LEVEL_01_EXEC;
+//				open load_mission_popmenu;
+				open mission_select_05;
+				play "mouse_click";
+			}
+			dvartest "mis_05"
+			showdvar { "1"; }
+			focusDvar { "1" }
+		}
+		itemDef
+		{
+			name			vignette05_list
+			text			VIGNETTE_05_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_05_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		VIGNETTE_STATE_COLOR_IN_PROGRESS
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_05";
+				play "mouse_over";
+				hide vignette_russian;  
+				show vignette_british; 
+				hide vignette_american; 
+				hide vignette01_items;
+				hide vignette02_items;
+				hide vignette03_items;
+				hide vignette04_items;
+				show vignette05_items;
+				hide vignette06_items;
+				hide vignette07_items;
+				hide vignette08_items;
+				hide vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				show vignette02_shade;
+				hide vignette05_shade;
+				show vignette06_shade;
+				show vignette08_shade;
+				setdvar ui_background VIGNETTE_05_IMAGE;
+				setitemcolor vignette05a bordercolor 1 .8 .1 1
+				setitemcolor vignette02 bordercolor 1 1 1 0
+				setitemcolor vignette06 bordercolor 1 1 1 0
+				setitemcolor vignette08 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette05a bordercolor 1 1 1 0
+			}
+			action 
+			{
+//				setdvar ui_selected_map MISSION_05_LEVEL_02_EXEC;
+//				open load_mission_popmenu;
+				open mission_select_05;
+				play "mouse_click";
+			}
+			dvartest "mis_05"
+			showdvar { "2"; }
+			focusDvar { "2" }
+		}
+		itemDef
+		{
+			name			vignette05_list
+			text			VIGNETTE_05_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_05_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		MISSION_COMPLETED_COLOR
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_05";
+				play "mouse_over";
+				hide vignette_russian;  
+				show vignette_british; 
+				hide vignette_american; 
+				hide vignette01_items;
+				hide vignette02_items;
+				hide vignette03_items;
+				hide vignette04_items;
+				show vignette05_items;
+				hide vignette06_items;
+				hide vignette07_items;
+				hide vignette08_items;
+				hide vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				show vignette02_shade;
+				hide vignette05_shade;
+				show vignette06_shade;
+				show vignette08_shade;
+				setdvar ui_background VIGNETTE_05_IMAGE;
+				setitemcolor vignette05a bordercolor 1 .8 .1 1
+				setitemcolor vignette02 bordercolor 1 1 1 0
+				setitemcolor vignette06 bordercolor 1 1 1 0
+				setitemcolor vignette08 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette05a bordercolor 1 1 1 0
+			}
+			action 
+			{
+				open mission_select_05;
+				play "mouse_click";
+			}
+			dvartest "mis_05"
+			showdvar { VIGNETTE_DONE_CHEAT;VIGNETTE_DONE_EASY;VIGNETTE_DONE_NORMAL;VIGNETTE_DONE_HARD;VIGNETTE_DONE_FU; }
+		}
+//////////////////////////////////////////////////////////////
+		itemDef
+		{
+			name			vignette06_list
+			text			VIGNETTE_STATE_LOCKED
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_06_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		GLOBAL_TEXT_SIZE
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		MISSION_LOCKED_COLOR
+			textaligny		14
+			visible			1
+			decoration
+			dvarTest	"mis_06"
+			showDvar { "0" }
+		}
+		itemDef
+		{
+			name			vignette06_list
+			text			VIGNETTE_06_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_06_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		VIGNETTE_STATE_COLOR_OPEN
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_06";
+				play "mouse_over";
+				hide vignette_russian;  
+				show vignette_british; 
+				hide vignette_american; 
+				hide vignette01_items;
+				hide vignette02_items;
+				hide vignette03_items;
+				hide vignette04_items;
+				hide vignette05_items;
+				show vignette06_items;
+				hide vignette07_items;
+				hide vignette08_items;
+				hide vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				show vignette02_shade;
+				show vignette05_shade;
+				hide vignette06_shade;
+				show vignette08_shade;
+				setdvar ui_background VIGNETTE_06_IMAGE;
+				setitemcolor vignette06a bordercolor 1 .8 .1 1
+				setitemcolor vignette02 bordercolor 1 1 1 0
+				setitemcolor vignette05 bordercolor 1 1 1 0
+				setitemcolor vignette08 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette06a bordercolor 1 1 1 0
+			}
+			action 
+			{
+//				setdvar ui_selected_map MISSION_06_LEVEL_01_EXEC;
+//				open load_mission_popmenu;
+				open mission_select_06;
+				play "mouse_click";
+			}
+			dvartest "mis_06"
+			showdvar { "1"; }
+			focusDvar { "1" }
+		}
+		itemDef
+		{
+			name			vignette06_list
+			text			VIGNETTE_06_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_06_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		VIGNETTE_STATE_COLOR_IN_PROGRESS
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_06";
+				play "mouse_over";
+				hide vignette_russian;  
+				show vignette_british; 
+				hide vignette_american; 
+				hide vignette01_items;
+				hide vignette02_items;
+				hide vignette03_items;
+				hide vignette04_items;
+				hide vignette05_items;
+				show vignette06_items;
+				hide vignette07_items;
+				hide vignette08_items;
+				hide vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				show vignette02_shade;
+				show vignette05_shade;
+				hide vignette06_shade;
+				show vignette08_shade;
+				setdvar ui_background VIGNETTE_06_IMAGE;
+				setitemcolor vignette06a bordercolor 1 .8 .1 1
+				setitemcolor vignette02 bordercolor 1 1 1 0
+				setitemcolor vignette05 bordercolor 1 1 1 0
+				setitemcolor vignette08 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette06a bordercolor 1 1 1 0
+			}
+			action 
+			{
+//				setdvar ui_selected_map MISSION_06_LEVEL_02_EXEC;
+//				open load_mission_popmenu;
+				open mission_select_06;
+				play "mouse_click";
+			}
+			dvartest "mis_06"
+			showdvar { "2"; }
+			focusDvar { "2" }
+		}
+		itemDef
+		{
+			name			vignette06_list
+			text			VIGNETTE_06_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_06_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		VIGNETTE_STATE_COLOR_IN_PROGRESS
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_06";
+				play "mouse_over";
+				hide vignette_russian;  
+				show vignette_british; 
+				hide vignette_american; 
+				hide vignette01_items;
+				hide vignette02_items;
+				hide vignette03_items;
+				hide vignette04_items;
+				hide vignette05_items;
+				show vignette06_items;
+				hide vignette07_items;
+				hide vignette08_items;
+				hide vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				show vignette02_shade;
+				show vignette05_shade;
+				hide vignette06_shade;
+				show vignette08_shade;
+				setdvar ui_background VIGNETTE_06_IMAGE;
+				setitemcolor vignette06a bordercolor 1 .8 .1 1
+				setitemcolor vignette02 bordercolor 1 1 1 0
+				setitemcolor vignette05 bordercolor 1 1 1 0
+				setitemcolor vignette08 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette06a bordercolor 1 1 1 0
+			}
+			action 
+			{
+//				setdvar ui_selected_map MISSION_06_LEVEL_03_EXEC;
+//				open load_mission_popmenu;
+				open mission_select_06;
+				play "mouse_click";
+			}
+			dvartest "mis_06"
+			showdvar { "3"; }
+			focusDvar { "3" }
+		}
+		itemDef
+		{
+			name			vignette06_list
+			text			VIGNETTE_06_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_06_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		MISSION_COMPLETED_COLOR
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_06";
+				play "mouse_over";
+				hide vignette_russian;  
+				show vignette_british; 
+				hide vignette_american; 
+				hide vignette01_items;
+				hide vignette02_items;
+				hide vignette03_items;
+				hide vignette04_items;
+				hide vignette05_items;
+				show vignette06_items;
+				hide vignette07_items;
+				hide vignette08_items;
+				hide vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				show vignette02_shade;
+				show vignette05_shade;
+				hide vignette06_shade;
+				show vignette08_shade;
+				setdvar ui_background VIGNETTE_06_IMAGE;
+				setitemcolor vignette06a bordercolor 1 .8 .1 1
+				setitemcolor vignette02 bordercolor 1 1 1 0
+				setitemcolor vignette05 bordercolor 1 1 1 0
+				setitemcolor vignette08 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette06a bordercolor 1 1 1 0
+			}
+			action 
+			{
+				open mission_select_06;
+				play "mouse_click";
+			}
+			dvartest "mis_06"
+			showdvar { VIGNETTE_DONE_CHEAT;VIGNETTE_DONE_EASY;VIGNETTE_DONE_NORMAL;VIGNETTE_DONE_HARD;VIGNETTE_DONE_FU; }
+		}
+////////////////////////////////////////////////////////////////
+
+		itemDef
+		{
+			name			vignette08_list
+			text			VIGNETTE_STATE_LOCKED
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_07_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		GLOBAL_TEXT_SIZE
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		MISSION_LOCKED_COLOR
+			textaligny		14
+			visible			1
+			decoration
+			dvarTest	"mis_08"
+			showDvar { "0" }
+		}
+		itemDef
+		{
+			name			vignette08_list
+			text			VIGNETTE_08_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_07_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		VIGNETTE_STATE_COLOR_OPEN
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_08";
+				play "mouse_over";
+				hide vignette_russian;  
+				show vignette_british; 
+				hide vignette_american; 
+				hide vignette01_items;
+				hide vignette02_items;
+				hide vignette03_items;
+				hide vignette04_items;
+				hide vignette05_items;
+				hide vignette06_items;
+				hide vignette07_items;
+				show vignette08_items;
+				hide vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				show vignette02_shade;
+				show vignette05_shade;
+				show vignette06_shade;
+				hide vignette08_shade;
+				setdvar ui_background VIGNETTE_08_IMAGE;
+				setitemcolor vignette08a bordercolor 1 .8 .1 1
+				setitemcolor vignette02 bordercolor 1 1 1 0
+				setitemcolor vignette05 bordercolor 1 1 1 0
+				setitemcolor vignette06 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette08a bordercolor 1 1 1 0
+			}
+			action 
+			{
+//				setdvar ui_selected_map MISSION_08_LEVEL_01_EXEC;
+//				open load_mission_popmenu;
+				open mission_select_08;
+				play "mouse_click";
+			}
+			dvartest "mis_08"
+			showdvar { "1"; }
+			focusDvar { "1" }
+		}
+		itemDef
+		{
+			name			vignette08_list
+			text			VIGNETTE_08_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_07_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		VIGNETTE_STATE_COLOR_IN_PROGRESS
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_08";
+				play "mouse_over";
+				hide vignette_russian;  
+				show vignette_british; 
+				hide vignette_american; 
+				hide vignette01_items;
+				hide vignette02_items;
+				hide vignette03_items;
+				hide vignette04_items;
+				hide vignette05_items;
+				hide vignette06_items;
+				hide vignette07_items;
+				show vignette08_items;
+				hide vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				show vignette02_shade;
+				show vignette05_shade;
+				show vignette06_shade;
+				hide vignette08_shade;
+				setdvar ui_background VIGNETTE_08_IMAGE;
+				setitemcolor vignette08a bordercolor 1 .8 .1 1
+				setitemcolor vignette02 bordercolor 1 1 1 0
+				setitemcolor vignette05 bordercolor 1 1 1 0
+				setitemcolor vignette06 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette08b bordercolor 1 1 1 0
+			}
+			action 
+			{
+//				setdvar ui_selected_map MISSION_08_LEVEL_02_EXEC;
+//				open load_mission_popmenu;
+				open mission_select_08;
+				play "mouse_click";
+			}
+			dvartest "mis_08"
+			showdvar { "2"; }
+			focusDvar { "2" }
+		}
+		itemDef
+		{
+			name			vignette08_list
+			text			VIGNETTE_08_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_07_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		VIGNETTE_STATE_COLOR_IN_PROGRESS
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_08";
+				play "mouse_over";
+				hide vignette_russian;  
+				show vignette_british; 
+				hide vignette_american; 
+				hide vignette01_items;
+				hide vignette02_items;
+				hide vignette03_items;
+				hide vignette04_items;
+				hide vignette05_items;
+				hide vignette06_items;
+				hide vignette07_items;
+				show vignette08_items;
+				hide vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				show vignette02_shade;
+				show vignette05_shade;
+				show vignette06_shade;
+				hide vignette08_shade;
+				setdvar ui_background VIGNETTE_08_IMAGE;
+				setitemcolor vignette08a bordercolor 1 .8 .1 1
+				setitemcolor vignette02 bordercolor 1 1 1 0
+				setitemcolor vignette05 bordercolor 1 1 1 0
+				setitemcolor vignette06 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette08b bordercolor 1 1 1 0
+			}
+			action 
+			{
+//				setdvar ui_selected_map MISSION_08_LEVEL_03_EXEC;
+//				open load_mission_popmenu;
+				open mission_select_08;
+				play "mouse_click";
+			}
+			dvartest "mis_08"
+			showdvar { "3"; }
+			focusDvar { "3" }
+		}
+		itemDef
+		{
+			name			vignette08_list
+			text			VIGNETTE_08_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_07_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		VIGNETTE_STATE_COLOR_IN_PROGRESS
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_08";
+				play "mouse_over";
+				hide vignette_russian;  
+				show vignette_british; 
+				hide vignette_american; 
+				hide vignette01_items;
+				hide vignette02_items;
+				hide vignette03_items;
+				hide vignette04_items;
+				hide vignette05_items;
+				hide vignette06_items;
+				hide vignette07_items;
+				show vignette08_items;
+				hide vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				show vignette02_shade;
+				show vignette05_shade;
+				show vignette06_shade;
+				hide vignette08_shade;
+				setdvar ui_background VIGNETTE_08_IMAGE;
+				setitemcolor vignette08a bordercolor 1 .8 .1 1
+				setitemcolor vignette02 bordercolor 1 1 1 0
+				setitemcolor vignette05 bordercolor 1 1 1 0
+				setitemcolor vignette06 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette08b bordercolor 1 1 1 0
+			}
+			action 
+			{
+//				setdvar ui_selected_map MISSION_08_LEVEL_04_EXEC;
+//				open load_mission_popmenu;
+				open mission_select_08;
+				play "mouse_click";
+			}
+			dvartest "mis_08"
+			showdvar { "4"; }
+			focusDvar { "4" }
+		}
+		itemDef
+		{
+			name			vignette08_list
+			text			VIGNETTE_08_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_07_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		MISSION_COMPLETED_COLOR
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_08";
+				play "mouse_over";
+				hide vignette_russian;  
+				show vignette_british; 
+				hide vignette_american; 
+				hide vignette01_items;
+				hide vignette02_items;
+				hide vignette03_items;
+				hide vignette04_items;
+				hide vignette05_items;
+				hide vignette06_items;
+				hide vignette07_items;
+				show vignette08_items;
+				hide vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				show vignette02_shade;
+				show vignette05_shade;
+				show vignette06_shade;
+				hide vignette08_shade;
+				setdvar ui_background VIGNETTE_08_IMAGE;
+				setitemcolor vignette08a bordercolor 1 .8 .1 1
+				setitemcolor vignette02 bordercolor 1 1 1 0
+				setitemcolor vignette05 bordercolor 1 1 1 0
+				setitemcolor vignette06 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette08b bordercolor 1 1 1 0
+			}
+			action 
+			{
+				open mission_select_08;
+				play "mouse_click";
+			}
+			dvartest "mis_08"
+			showdvar { VIGNETTE_DONE_CHEAT;VIGNETTE_DONE_EASY;VIGNETTE_DONE_NORMAL;VIGNETTE_DONE_HARD;VIGNETTE_DONE_FU; }
+		}
+///////////////////////////////////////////////////////////
+
+
+		itemDef
+		{
+			name			vignette07_list
+			text			VIGNETTE_STATE_LOCKED
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_08_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		GLOBAL_TEXT_SIZE
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		MISSION_LOCKED_COLOR
+			textaligny		14
+			visible			1
+			decoration
+			dvarTest	"mis_07"
+			showDvar { "0" }
+		}
+		itemDef
+		{
+			name			vignette07_list
+			text			VIGNETTE_07_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_08_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		VIGNETTE_STATE_COLOR_OPEN
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_07";
+				play "mouse_over";
+				hide vignette_russian;  
+				hide vignette_british; 
+				show vignette_american; 
+				hide vignette01_items;
+				hide vignette02_items;
+				hide vignette03_items;
+				hide vignette04_items;
+				hide vignette05_items;
+				hide vignette06_items;
+				show vignette07_items;
+				hide vignette08_items;
+				hide vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				hide vignette07_shade;
+				show vignette09_shade;
+				show vignette10_shade;
+				setdvar ui_background VIGNETTE_07_IMAGE;
+				setitemcolor vignette07a bordercolor 1 .8 .1 1
+				setitemcolor vignette09 bordercolor 1 1 1 0
+				setitemcolor vignette10 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette07a bordercolor 1 1 1 0
+			}
+			action 
+			{
+//				setdvar ui_selected_map MISSION_07_LEVEL_01_EXEC;
+//				open load_mission_popmenu;
+				open mission_select_07;
+				play "mouse_click";
+			}
+			dvartest "mis_07"
+			showdvar { "1"; }
+			focusDvar { "1" }
+		}
+		itemDef
+		{
+			name			vignette07_list
+			text			VIGNETTE_07_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_08_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		VIGNETTE_STATE_COLOR_IN_PROGRESS
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_07";
+				play "mouse_over";
+				hide vignette_russian;  
+				hide vignette_british; 
+				show vignette_american; 
+				hide vignette01_items;
+				hide vignette02_items;
+				hide vignette03_items;
+				hide vignette04_items;
+				hide vignette05_items;
+				hide vignette06_items;
+				show vignette07_items;
+				hide vignette08_items;
+				hide vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				hide vignette07_shade;
+				show vignette09_shade;
+				show vignette10_shade;
+				setdvar ui_background VIGNETTE_07_IMAGE;
+				setitemcolor vignette07a bordercolor 1 .8 .1 1
+				setitemcolor vignette09 bordercolor 1 1 1 0
+				setitemcolor vignette10 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette07a bordercolor 1 1 1 0
+			}
+			action 
+			{
+//				setdvar ui_selected_map MISSION_07_LEVEL_02_EXEC;
+//				open load_mission_popmenu;
+				open mission_select_07;
+				play "mouse_click";
+			}
+			dvartest "mis_07"
+			showdvar { "2"; }
+			focusDvar { "2" }
+		}
+		itemDef
+		{
+			name			vignette07_list
+			text			VIGNETTE_07_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_08_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		VIGNETTE_STATE_COLOR_IN_PROGRESS
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_07";
+				play "mouse_over";
+				hide vignette_russian;  
+				hide vignette_british; 
+				show vignette_american; 
+				hide vignette01_items;
+				hide vignette02_items;
+				hide vignette03_items;
+				hide vignette04_items;
+				hide vignette05_items;
+				hide vignette06_items;
+				show vignette07_items;
+				hide vignette08_items;
+				hide vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				hide vignette07_shade;
+				show vignette09_shade;
+				show vignette10_shade;
+				setdvar ui_background VIGNETTE_07_IMAGE;
+				setitemcolor vignette07a bordercolor 1 .8 .1 1
+				setitemcolor vignette09 bordercolor 1 1 1 0
+				setitemcolor vignette10 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette07a bordercolor 1 1 1 0
+			}
+			action 
+			{
+//				setdvar ui_selected_map MISSION_07_LEVEL_03_EXEC;
+//				open load_mission_popmenu;
+				open mission_select_07;
+				play "mouse_click";
+			}
+			dvartest "mis_07"
+			showdvar { "3"; }
+			focusDvar { "3" }
+		}
+		itemDef
+		{
+			name			vignette07_list
+			text			VIGNETTE_07_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_08_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		MISSION_COMPLETED_COLOR
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_07";
+				play "mouse_over";
+				hide vignette_russian;  
+				hide vignette_british; 
+				show vignette_american; 
+				hide vignette01_items;
+				hide vignette02_items;
+				hide vignette03_items;
+				hide vignette04_items;
+				hide vignette05_items;
+				hide vignette06_items;
+				show vignette07_items;
+				hide vignette08_items;
+				hide vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				hide vignette07_shade;
+				show vignette09_shade;
+				show vignette10_shade;
+				setdvar ui_background VIGNETTE_07_IMAGE;
+				setitemcolor vignette07a bordercolor 1 .8 .1 1
+				setitemcolor vignette09 bordercolor 1 1 1 0
+				setitemcolor vignette10 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette07a bordercolor 1 1 1 0
+			}
+			action 
+			{
+				open mission_select_07;
+				play "mouse_click";
+			}
+			dvartest "mis_07"
+			showdvar { VIGNETTE_DONE_CHEAT;VIGNETTE_DONE_EASY;VIGNETTE_DONE_NORMAL;VIGNETTE_DONE_HARD;VIGNETTE_DONE_FU; }
+		}
+///////////////////////////////////////////////////////////////////
+
+		itemDef
+		{
+			name			vignette09_list
+			text			VIGNETTE_STATE_LOCKED
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_09_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		GLOBAL_TEXT_SIZE
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		MISSION_LOCKED_COLOR
+			textaligny		14
+			visible			1
+			decoration
+			dvarTest	"mis_09"
+			showDvar { "0" }
+		}
+		itemDef
+		{
+			name			vignette09_list
+			text			VIGNETTE_09_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_09_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		VIGNETTE_STATE_COLOR_OPEN
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_09";
+				play "mouse_over";
+				hide vignette_russian;  
+				hide vignette_british; 
+				show vignette_american; 
+				hide vignette01_items;
+				hide vignette02_items;
+				hide vignette03_items;
+				hide vignette04_items;
+				hide vignette05_items;
+				hide vignette06_items;
+				hide vignette07_items;
+				hide vignette08_items;
+				show vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				show vignette07_shade;
+				hide vignette09_shade;
+				show vignette10_shade;
+				setdvar ui_background VIGNETTE_09_IMAGE;
+				setitemcolor vignette09a bordercolor 1 .8 .1 1
+				setitemcolor vignette07 bordercolor 1 1 1 0
+				setitemcolor vignette10 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette09a bordercolor 1 1 1 0
+			}
+			action 
+			{
+//				setdvar ui_selected_map MISSION_09_LEVEL_01_EXEC;
+//				open load_mission_popmenu;
+				open mission_select_09;
+				play "mouse_click";
+			}
+			dvartest "mis_09"
+			showdvar { "1"; }
+			focusDvar { "1" }
+		}
+		itemDef
+		{
+			name			vignette09_list
+			text			VIGNETTE_09_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_09_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		VIGNETTE_STATE_COLOR_IN_PROGRESS
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_09";
+				play "mouse_over";
+				hide vignette_russian;  
+				hide vignette_british; 
+				show vignette_american; 
+				hide vignette01_items;
+				hide vignette02_items;
+				hide vignette03_items;
+				hide vignette04_items;
+				hide vignette05_items;
+				hide vignette06_items;
+				hide vignette07_items;
+				hide vignette08_items;
+				show vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				show vignette07_shade;
+				hide vignette09_shade;
+				show vignette10_shade;
+				setdvar ui_background VIGNETTE_09_IMAGE;
+				setitemcolor vignette09a bordercolor 1 .8 .1 1
+				setitemcolor vignette07 bordercolor 1 1 1 0
+				setitemcolor vignette10 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette09a bordercolor 1 1 1 0
+			}
+			action 
+			{
+//				setdvar ui_selected_map MISSION_09_LEVEL_02_EXEC;
+//				open load_mission_popmenu;
+				open mission_select_09;
+				play "mouse_click";
+			}
+			dvartest "mis_09"
+			showdvar { "2"; }
+			focusDvar { "2" }
+		}
+		itemDef
+		{
+			name			vignette09_list
+			text			VIGNETTE_09_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_09_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		VIGNETTE_STATE_COLOR_IN_PROGRESS
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_09";
+				play "mouse_over";
+				hide vignette_russian;  
+				hide vignette_british; 
+				show vignette_american; 
+				hide vignette01_items;
+				hide vignette02_items;
+				hide vignette03_items;
+				hide vignette04_items;
+				hide vignette05_items;
+				hide vignette06_items;
+				hide vignette07_items;
+				hide vignette08_items;
+				show vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				show vignette07_shade;
+				hide vignette09_shade;
+				show vignette10_shade;
+				setdvar ui_background VIGNETTE_09_IMAGE;
+				setitemcolor vignette09a bordercolor 1 .8 .1 1
+				setitemcolor vignette07 bordercolor 1 1 1 0
+				setitemcolor vignette10 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette09a bordercolor 1 1 1 0
+			}
+			action 
+			{
+//				setdvar ui_selected_map MISSION_09_LEVEL_03_EXEC;
+//				open load_mission_popmenu;
+				open mission_select_09;
+				play "mouse_click";
+			}
+			dvartest "mis_09"
+			showdvar { "3"; }
+			focusDvar { "3" }
+		}
+		itemDef
+		{
+			name			vignette09_list
+			text			VIGNETTE_09_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_09_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		MISSION_COMPLETED_COLOR
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_09";
+				play "mouse_over";
+				hide vignette_russian;  
+				hide vignette_british; 
+				show vignette_american; 
+				hide vignette01_items;
+				hide vignette02_items;
+				hide vignette03_items;
+				hide vignette04_items;
+				hide vignette05_items;
+				hide vignette06_items;
+				hide vignette07_items;
+				hide vignette08_items;
+				show vignette09_items;
+				hide vignette10_items;
+				show mission_status;
+				show vignette07_shade;
+				hide vignette09_shade;
+				show vignette10_shade;
+				setdvar ui_background VIGNETTE_09_IMAGE;
+				setitemcolor vignette09a bordercolor 1 .8 .1 1
+				setitemcolor vignette07 bordercolor 1 1 1 0
+				setitemcolor vignette10 bordercolor 1 1 1 0
+			}
+			leaveFocus
+			{
+				setitemcolor vignette09a bordercolor 1 1 1 0
+			}
+			action 
+			{
+				open mission_select_09;
+				play "mouse_click";
+			}
+			dvartest "mis_09"
+			showdvar { VIGNETTE_DONE_CHEAT;VIGNETTE_DONE_EASY;VIGNETTE_DONE_NORMAL;VIGNETTE_DONE_HARD;VIGNETTE_DONE_FU; }
+		}
+//////////////////////////////////////////////////////////
+		itemDef
+		{
+			name			vignette10_list
+			text			VIGNETTE_STATE_LOCKED
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_10_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			textfont		UI_FONT_NORMAL
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textscale		GLOBAL_TEXT_SIZE
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			forecolor		MISSION_LOCKED_COLOR
+			textaligny		14
+			visible			1
+			decoration
+			dvarTest	"mis_10"
+			showDvar { "0" }
+		}
+		itemDef
+		{
+			name			vignette10_list
+			text			VIGNETTE_10_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_10_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		VIGNETTE_STATE_COLOR_OPEN
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_10";
+				play "mouse_over";
+				hide vignette_russian;  
+				hide vignette_british; 
+				show vignette_american; 
+				hide vignette01_items;
+				hide vignette02_items;
+				hide vignette03_items;
+				hide vignette04_items;
+				hide vignette05_items;
+				hide vignette06_items;
+				hide vignette07_items;
+				hide vignette08_items;
+				hide vignette09_items;
+				show vignette10_items;
+				show mission_status;
+				show vignette07_shade;
+				show vignette09_shade;
+				hide vignette10_shade;
+				setdvar ui_background VIGNETTE_10_IMAGE;
+				setitemcolor vignette07 bordercolor 1 1 1 0
+				setitemcolor vignette09 bordercolor 1 1 1 0
+				setitemcolor vignette10a bordercolor 1 .8 .1 1
+			}
+			leaveFocus
+			{
+				setitemcolor vignette10a bordercolor 1 1 1 0
+			}
+			action 
+			{
+//				setdvar ui_selected_map MISSION_10_LEVEL_01_EXEC;
+//				open load_mission_popmenu;
+				open mission_select_10;
+				play "mouse_click";
+			}
+			dvartest "mis_10"
+			showdvar { "1"; }
+			focusDvar { "1" }
+		}
+		itemDef
+		{
+			name			vignette10_list
+			text			VIGNETTE_10_TITLE
+			type			ITEM_TYPE_BUTTON
+			rect			CHOICE_10_OFFSET CHOICE_RECT
+			origin			CHOICE_ORIGIN
+			#include "ui/style_choicetext.menu"
+			forecolor		MISSION_COMPLETED_COLOR
+			visible			1
+			onFocus
+			{
+				exec "setfromdvar ui_mission_status	mis_10";
+				play "mouse_over";
+				hide vignette_russian;  
+				hide vignette_british; 
+				show vignette_american; 
+				hide vignette01_items;
+				hide vignette02_items;
+				hide vignette03_items;
+				hide vignette04_items;
+				hide vignette05_items;
+				hide vignette06_items;
+				hide vignette07_items;
+				hide vignette08_items;
+				hide vignette09_items;
+				show vignette10_items;
+				show mission_status;
+				show vignette07_shade;
+				show vignette09_shade;
+				hide vignette10_shade;
+				setdvar ui_background VIGNETTE_10_IMAGE;
+				setitemcolor vignette07 bordercolor 1 1 1 0
+				setitemcolor vignette09 bordercolor 1 1 1 0
+				setitemcolor vignette10a bordercolor 1 .8 .1 1
+			}
+			leaveFocus
+			{
+				setitemcolor vignette10a bordercolor 1 1 1 0
+			}
+			action 
+			{
+				open mission_select_10;
+				play "mouse_click";
+			}
+			dvartest "mis_10"
+			showdvar { VIGNETTE_DONE_CHEAT;VIGNETTE_DONE_EASY;VIGNETTE_DONE_NORMAL;VIGNETTE_DONE_HARD;VIGNETTE_DONE_FU; }
+		}
+////////////////////// row 1
+		itemDef
+		{
+			name			vignette01a
+			group			vignette_russian
+			style			WINDOW_STYLE_SHADER
+			type			ITEM_TYPE_BUTTON
+			rect			90 330 80 60
+			background		VIGNETTE_01_CAMEO
+			visible			1
+			border			0
+			bordercolor		0 0 0 0
+			decoration
+		}
+		itemDef
+		{
+			name			vignette01_shade
+			group			vignette_russian
+			style			WINDOW_STYLE_FILLED
+			type			ITEM_TYPE_TEXT
+			rect			90 330 80 60
+			backcolor		.1 .1 .1 .7			
+			visible			0
+			border			0
+			bordercolor		0 0 0 0
+			decoration
+		}
+	
+		itemDef
+		{
+			name			vignette03a
+			group			vignette_russian
+			style			WINDOW_STYLE_SHADER
+			type			ITEM_TYPE_BUTTON
+			rect			200 330 80 60
+			background		VIGNETTE_03_CAMEO
+			visible			1
+			border			0
+			bordercolor		0 0 0 0
+			decoration
+
+		}
+		itemDef
+		{
+			name			vignette03_shade
+			group			vignette_russian
+			style			WINDOW_STYLE_FILLED
+			type			ITEM_TYPE_TEXT
+			rect			200 330 80 60
+			backcolor		.1 .1 .1 .7			
+			visible			0
+			border			0
+			bordercolor		0 0 0 0
+			decoration
+		}
+		itemDef
+		{
+			name			vignette04a
+			group			vignette_russian
+			style			WINDOW_STYLE_SHADER
+			type			ITEM_TYPE_BUTTON
+			rect			300 330 80 60
+			background		VIGNETTE_04_CAMEO
+			visible			1
+			border			0
+			bordercolor		0 0 0 0
+			decoration
+
+		}
+		itemDef
+		{
+			name			vignette04_shade
+			group			vignette_russian
+			style			WINDOW_STYLE_FILLED
+			type			ITEM_TYPE_TEXT
+			rect			300 330 80 60
+			backcolor		.1 .1 .1 .7			
+			visible			0
+			border			0
+			bordercolor		0 0 0 0
+			decoration
+		}
+		itemDef 
+		{
+			name			hash_russian_1
+			group			vignette_russian
+			style			WINDOW_STYLE_FILLED
+			rect			91 394 80 2
+			backcolor		.9 .9 .9 .2
+			visible			1
+			decoration
+		}
+/*
+		itemDef 
+		{
+			name			hash_russian_1
+			group			vignette_russian
+			style			WINDOW_STYLE_FILLED
+			rect			130 396 2 20
+			backcolor		.9 .9 .9 .2
+			visible			1
+			decoration
+		}
+*/
+		itemDef 
+		{
+			name			hash_russian_2
+			group			vignette_russian
+			style			WINDOW_STYLE_FILLED
+			rect			201 394 80 2
+			backcolor		.9 .9 .9 .2
+			visible			1
+			decoration
+		}
+/*
+		itemDef 
+		{
+			name			hash_russian_2
+			group			vignette_russian
+			style			WINDOW_STYLE_FILLED
+			rect			240 396 2 20
+			backcolor		.9 .9 .9 .2
+			visible			1
+			decoration
+		}
+*/
+		itemDef 
+		{
+			name			hash_russian_3
+			group			vignette_russian
+			style			WINDOW_STYLE_FILLED
+			rect			301 394 80 2
+			backcolor		.9 .9 .9 .2
+			visible			1
+			decoration
+		}
+/*
+		itemDef 
+		{
+			name			hash_russian_3
+			group			vignette_russian
+			style			WINDOW_STYLE_FILLED
+			rect			340 396 2 20
+			backcolor		.9 .9 .9 .2
+			visible			1
+			decoration
+		}
+*/
+/////////////////////////////////// Row 2
+
+		itemDef
+		{
+			name			vignette02a
+			group			vignette_british
+			style			WINDOW_STYLE_SHADER
+			type			ITEM_TYPE_BUTTON
+			rect			140 330 80 60
+			background		VIGNETTE_02_CAMEO
+			visible			0
+			border			0
+			bordercolor		0 0 0 0
+			decoration
+
+		}
+		itemDef
+		{
+			name			vignette02_shade
+			group			vignette_british
+			style			WINDOW_STYLE_FILLED
+			type			ITEM_TYPE_TEXT
+			rect			140 330 80 60
+			backcolor		.1 .1 .1 .7			
+			visible			0
+			border			0
+			bordercolor		0 0 0 0
+			decoration
+		}
+
+		itemDef
+		{
+			name			vignette05a
+			group			vignette_british
+			style			WINDOW_STYLE_SHADER
+			type			ITEM_TYPE_BUTTON
+			rect			230 330 80 60
+			background		VIGNETTE_05_CAMEO
+			visible			0
+			border			0
+			bordercolor		0 0 0 0
+			decoration
+
+		}
+		itemDef
+		{
+			name			vignette05_shade
+			group			vignette_british
+			style			WINDOW_STYLE_FILLED
+			type			ITEM_TYPE_TEXT
+			rect			230 330 80 60
+			backcolor		.1 .1 .1 .7			
+			visible			0
+			border			0
+			bordercolor		0 0 0 0
+			decoration
+		}
+		itemDef
+		{
+			name			vignette06a
+			group			vignette_british
+			style			WINDOW_STYLE_SHADER
+			type			ITEM_TYPE_BUTTON
+			rect			320 330 80 60
+			background		VIGNETTE_06_CAMEO
+			visible			0
+			border			0
+			bordercolor		0 0 0 0
+			decoration
+		}
+		itemDef
+		{
+			name			vignette06_shade
+			group			vignette_british
+			style			WINDOW_STYLE_FILLED
+			type			ITEM_TYPE_TEXT
+			rect			320 330 80 60
+			backcolor		.1 .1 .1 .7			
+			visible			0
+			border			0
+			bordercolor		0 0 0 0
+			decoration
+		}
+		itemDef
+		{
+			
+			name			vignette08a
+			group			vignette_british
+			style			WINDOW_STYLE_SHADER
+			type			ITEM_TYPE_BUTTON
+			rect			410 330 80 60
+			background		VIGNETTE_08_CAMEO
+			visible			0
+			border			0
+			bordercolor		0 0 0 0
+			decoration
+
+		}
+		itemDef
+		{
+			name			vignette08_shade
+			group			vignette_british
+			style			WINDOW_STYLE_FILLED
+			type			ITEM_TYPE_TEXT
+			rect			410 330 80 60
+			backcolor		.1 .1 .1 .7			
+			visible			0
+			border			0
+			bordercolor		0 0 0 0
+			decoration
+		}
+		itemDef 
+		{
+			name			hash_brit_1
+			group			vignette_british
+			style			WINDOW_STYLE_FILLED
+			rect			140 394 80 2
+			backcolor		.9 .9 .9 .2
+			visible			1
+			decoration
+		}
+/*
+		itemDef 
+		{
+			name			hash_brit_1
+			group			vignette_british
+			style			WINDOW_STYLE_FILLED
+			rect			180 396 2 20
+			backcolor		.9 .9 .9 .2
+			visible			1
+			decoration
+		}
+*/
+		itemDef 
+		{
+			name			hash_brit_2
+			group			vignette_british
+			style			WINDOW_STYLE_FILLED
+			rect			231 394 170 2
+			backcolor		.9 .9 .9 .2
+			visible			1
+			decoration
+		}
+/*
+		itemDef 
+		{
+			name			hash_brit_2
+			group			vignette_british
+			style			WINDOW_STYLE_FILLED
+			rect			315 396 2 20
+			backcolor		.9 .9 .9 .2
+			visible			1
+			decoration
+		}
+*/
+		itemDef 
+		{
+			name			hash_brit_3
+			group			vignette_british
+			style			WINDOW_STYLE_FILLED
+			rect			411 394 80 2
+			backcolor		.9 .9 .9 .2
+			visible			1
+			decoration
+		}
+/*
+		itemDef 
+		{
+			name			hash_brit_3
+			group			vignette_british
+			style			WINDOW_STYLE_FILLED
+			rect			450 396 2 20
+			backcolor		.9 .9 .9 .2
+			visible			1
+			decoration
+		}
+*/
+///////////////////////////////////// Row 3
+
+
+		itemDef
+		{
+			name			vignette07a
+			group			vignette_american
+			style			WINDOW_STYLE_SHADER
+			type			ITEM_TYPE_BUTTON
+			rect			330 330 80 60
+			background		VIGNETTE_07_CAMEO
+			visible			0
+			border			0
+			bordercolor		0 0 0 0
+			decoration
+		}
+		itemDef
+		{
+			name			vignette07_shade
+			group			vignette_american
+			style			WINDOW_STYLE_FILLED
+			type			ITEM_TYPE_TEXT
+			rect			330 330 80 60
+			backcolor		.1 .1 .1 .7			
+			visible			0
+			border			0
+			bordercolor		0 0 0 0
+			decoration
+		}
+		itemDef
+		{
+			name			vignette09a
+			group			vignette_american
+			style			WINDOW_STYLE_SHADER
+			type			ITEM_TYPE_BUTTON
+			rect			420 330 80 60
+			background		VIGNETTE_09_CAMEO
+			visible			0
+			border			0
+			bordercolor		0 0 0 0
+			decoration
+
+		}
+		itemDef
+		{
+			name			vignette09_shade
+			group			vignette_american
+			style			WINDOW_STYLE_FILLED
+			type			ITEM_TYPE_TEXT
+			rect			420 330 80 60
+			backcolor		.1 .1 .1 .7			
+			visible			0
+			border			0
+			bordercolor		0 0 0 0
+			decoration
+		}
+		itemDef
+		{
+			name			vignette10a
+			group			vignette_american
+			style			WINDOW_STYLE_SHADER
+			type			ITEM_TYPE_BUTTON
+			rect			510 330 80 60
+			background		VIGNETTE_10_CAMEO
+			visible			0
+			border			0
+			bordercolor		0 0 0 0
+			decoration
+
+		}
+		itemDef
+		{
+			name			vignette10_shade
+			group			vignette_american
+			style			WINDOW_STYLE_FILLED
+			type			ITEM_TYPE_TEXT
+			rect			510 330 80 60
+			backcolor		.1 .1 .1 .7			
+			visible			0
+			border			0
+			bordercolor		0 0 0 0
+			decoration
+		}
+		itemDef 
+		{
+			name			hash_american_1
+			group			vignette_american
+			style			WINDOW_STYLE_FILLED
+			rect			331 394 170 2
+			backcolor		.9 .9 .9 .2
+			visible			1
+			decoration
+		}
+/*
+		itemDef 
+		{
+			name			hash_american_1
+			group			vignette_american
+			style			WINDOW_STYLE_FILLED
+			rect			415 396 2 20
+			backcolor		.9 .9 .9 .2
+			visible			1
+			decoration
+		}
+*/
+		itemDef 
+		{
+			name			hash_american_2
+			group			vignette_american
+			style			WINDOW_STYLE_FILLED
+			rect			511 394 80 2
+			backcolor		.9 .9 .9 .2
+			visible			1
+			decoration
+		}
+/*
+		itemDef 
+		{
+			name			hash_american_2
+			group			vignette_american
+			style			WINDOW_STYLE_FILLED
+			rect			550 396 2 20
+			backcolor		.9 .9 .9 .2
+			visible			1
+			decoration
+		}
+*/
+
+
+		itemDef
+		{
+			text			"@MENU_UNLOCK"
+			type 			ITEM_TYPE_BUTTON
+			textfont		UI_FONT_NORMAL
+			textscale		.3
+			textaligny		20
+			rect			0 0 50 20
+			origin			300 45
+			visible			1
+			dvarTest	"developer"
+			showDvar { "1";"2" }
+			onfocus 
+			{
+				play "mouse_over";
+			}
+			action
+			{
+				play "mouse_click";
+				setDvar mis_01 "9"
+				setDvar mis_02 "9"
+				setDvar mis_03 "9"
+				setDvar mis_04 "9"
+				setDvar mis_05 "9"
+				setDvar mis_06 "9"
+				setDvar mis_07 "9"
+				setDvar mis_08 "9"
+				setDvar mis_09 "9"
+				setDvar mis_10 "9"
+				exec "updategamerprofile";
+			}
+			
+		}
+		itemDef
+		{
+			text			"@MENU_RESET"
+			type 			ITEM_TYPE_BUTTON
+			textfont		UI_FONT_NORMAL
+			textscale		.3
+			textaligny		20
+			rect			50 0 50 20
+			origin			300 45
+			visible			1
+			dvarTest	"developer"
+			showDvar { "1";"2" }
+			onfocus 
+			{
+				play "mouse_over";
+			}
+			action
+			{
+				play "mouse_click";
+				setDvar mis_01 "0"
+				setDvar mis_02 "0"
+				setDvar mis_03 "0"
+				setDvar mis_04 "0"
+				setDvar mis_05 "0"
+				setDvar mis_06 "0"
+				setDvar mis_07 "0"
+				setDvar mis_08 "0"
+				setDvar mis_09 "0"
+				setDvar mis_10 "0"
+				setDvar mis_difficulty "00000000000000000000000000000000000000000000000000"
+				exec "updategamerprofile";
+				close mission_select;
+				open main_text;
+			}
+			
+		}
+		#include "ui/navcontrols_mission_select.menu"
+		#include "ui/safearea.menu"
+
+	}
+	menuDef 
+	{
+		name load_mission_popmenu
+		visible 0
+		fullscreen 0
+		//rect 217 200 210 85
+		rect 204 140 235 135
+		focusColor GLOBAL_FOCUSED_COLOR
+		style 1
+		border 1
+		popup
+		onESC { close load_mission_popmenu;  }
+		onOpen { setfocus yes; }
+
+		itemDef 
+		{
+			name window
+			group grpControlbutton
+			rect 0 2 235 135
+			style WINDOW_STYLE_FILLED
+			border 1
+			bordercolor .5 .5 .5 .5
+			forecolor 1 1 1 1
+			backcolor 0 0 0 .5
+			visible 0
+			decoration
+		}
+
+		itemDef 
+		{
+			name backimage2fade
+			style WINDOW_STYLE_SHADER
+			rect -332 -162 896 484
+	 		background "white"
+			forecolor 0 0 0 0.3
+			backcolor 0 0 0 0.3
+			visible 1
+			decoration
+		}
+	
+		itemDef 
+		{
+			name window2
+			group grpControlbutton
+			rect 2 3 231 20	
+			style WINDOW_STYLE_FILLED
+			border 1
+			bordercolor .1 .1 .1 .2
+			forecolor 1 1 1 1
+			backcolor 1 1 .3 .3
+			visible 0
+			decoration
+		}
+		itemDef 
+		{
+			name backimage2fade
+			style WINDOW_STYLE_SHADER
+			rect -150 2 535 150
+	 		background "popmenu_bg"
+//			forecolor 0 0 0 0.4
+//			backcolor 0 0 0 0.4
+			visible 1
+			decoration
+		}
+		itemDef 
+		{
+			name backimage2fade
+			style WINDOW_STYLE_SHADER
+			rect -50 20 335 24
+	 		background "popmenu_goldline"
+//			forecolor 0 0 0 0.4
+//			backcolor 0 0 0 0.4
+			visible 1
+			decoration
+		}
+
+		itemDef 
+		{
+			name confirm
+			text "@MENU_LOAD_MISSION" 
+			style 0
+			textscale HEADER_SIZE 
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			rect 126 25 110 20
+			textalign 1
+			textalignx -7
+			textaligny 5
+			decoration
+			forecolor		POPMENU_HEADER_COLOR
+			visible 1
+		}
+
+		itemDef 
+		{
+			name		yes
+			text		"@MENU_YES"
+			type		1
+			textscale	.45
+			style		UI_BUTTON_STYLE
+			textfont	UI_FONT_NORMAL
+			textstyle	ITEM_TEXTSTYLE_SHADOWED
+			rect		90 45 60 30
+			textalign	1
+			textalignx	29
+			textaligny	21
+			forecolor	UI_BUTTON_TEXT_COLOR
+//			backcolor	UI_BUTTON_BACK_COLOR 
+			visible		1
+//			border		UI_BUTTON_BORDER
+//			bordercolor	UI_BUTTON_BORDER_COLOR
+
+			action
+			{ 
+				play "mouse_click";
+				close load_mission_popmenu; 
+				exec "vstr ui_selected_map";
+
+			}
+			onfocus { play "mouse_over";  } 
+//			mouseExit { setitemcolor yes backcolor UI_BUTTON_BACK_COLOR } 	
+		}
+
+		itemDef 
+		{
+			name		no
+			text		"@MENU_NO"
+			type		1
+			textscale	.45
+			style		UI_BUTTON_STYLE
+			textfont	UI_FONT_NORMAL
+			textstyle	ITEM_TEXTSTYLE_SHADOWED
+			rect		91 85 60 30
+			textalign	1
+			textalignx	29
+			textaligny	21
+			forecolor	UI_BUTTON_TEXT_COLOR
+//			backcolor	UI_BUTTON_BACK_COLOR 
+			visible		1
+//			border		UI_BUTTON_BORDER
+//			bordercolor	UI_BUTTON_BORDER_COLOR
+
+			action
+			{ 
+				play "mouse_click"; 
+				close load_mission_popmenu; 
+			}
+			onfocus { play "mouse_over";  } 
+//			mouseExit { setitemcolor no backcolor UI_BUTTON_BACK_COLOR } 		
+		}	
+	}
+}

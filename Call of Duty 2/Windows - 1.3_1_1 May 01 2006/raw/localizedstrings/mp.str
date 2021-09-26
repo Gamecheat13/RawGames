@@ -1,0 +1,838 @@
+// Note to translators:
+// If a sentence is the same in your language then please change it to "#same"
+//
+// eg:
+// LANG_ENGLISH  "HALT"
+// LANG_GERMAN   "#same"
+//
+// (This is so we can tell which strings have been signed-off as ok to be the same words for QA
+//  and because we do not store duplicate strings, which will then get exported again next time
+//  as being untranslated.)
+//
+VERSION             "1"
+CONFIG              "C:\trees\cod2\bin\StringEd.cfg"
+FILENOTES           ""
+
+REFERENCE           KILLCAM
+LANG_ENGLISH        "KILLCAM"
+
+REFERENCE           ROUNDCAM
+LANG_ENGLISH        "ROUNDCAM"
+
+REFERENCE           STARTING_NEW_ROUND
+LANG_ENGLISH        "Starting new round..."
+
+REFERENCE           PRESS_ATTACK_TO_SKIP
+LANG_ENGLISH        "Press Attack to skip"
+
+REFERENCE           PRESS_USE_TO_SKIP
+LANG_ENGLISH        "Press Use to skip"
+
+REFERENCE           AMERICAN_FORCES
+LANG_ENGLISH        "American Forces"
+
+REFERENCE           BRITISH_FORCES
+LANG_ENGLISH        "British Forces"
+
+REFERENCE           RUSSIAN_FORCES
+LANG_ENGLISH        "Russian Forces"
+
+REFERENCE           GERMAN_FORCES
+LANG_ENGLISH        "German Forces"
+
+REFERENCE           M1A1_CARBINE_IS_A_RESTRICTED
+LANG_ENGLISH        "M1A1 Carbine is a restricted weapon."
+
+REFERENCE           M1_GARAND_IS_A_RESTRICTED
+LANG_ENGLISH        "M1 Garand is a restricted weapon."
+
+REFERENCE           THOMPSON_IS_A_RESTRICTED
+LANG_ENGLISH        "Thompson is a restricted weapon."
+
+REFERENCE           BAR_IS_A_RESTRICTED_WEAPON
+LANG_ENGLISH        "BAR is a restricted weapon."
+
+REFERENCE           SPRINGFIELD_IS_A_RESTRICTED
+LANG_ENGLISH        "Springfield is a restricted weapon."
+
+REFERENCE           LEEENFIELD_IS_A_RESTRICTED
+LANG_ENGLISH        "Lee-Enfield is a restricted weapon."
+
+REFERENCE           STEN_IS_A_RESTRICTED
+LANG_ENGLISH        "Sten is a restricted weapon."
+
+REFERENCE           BREN_LMG_IS_A_RESTRICTED
+LANG_ENGLISH        "Bren LMG is a restricted weapon."
+
+REFERENCE           SPRINGFIELD_IS_A_RESTRICTED1
+LANG_ENGLISH        "Springfield is a restricted weapon."
+
+REFERENCE           MOSINNAGANT_IS_A_RESTRICTED
+LANG_ENGLISH        "Mosin-Nagant is a restricted weapon."
+
+REFERENCE           PPSH_IS_A_RESTRICTED
+LANG_ENGLISH        "PPSh is a restricted weapon."
+
+REFERENCE           SCOPED_MOSINNAGANT_IS
+LANG_ENGLISH        "Scoped Mosin-Nagant is a restricted weapon."
+
+REFERENCE           KAR98K_IS_A_RESTRICTED
+LANG_ENGLISH        "Kar98k is a restricted weapon."
+
+REFERENCE           MP40_IS_A_RESTRICTED
+LANG_ENGLISH        "MP40 is a restricted weapon."
+
+REFERENCE           MP44_IS_A_RESTRICTED
+LANG_ENGLISH        "MP44 is a restricted weapon."
+
+REFERENCE           SCOPED_KAR98K_IS_A_RESTRICTED
+LANG_ENGLISH        "Scoped Kar98k is a restricted weapon."
+
+REFERENCE           PANZERFAUST_IS_A_RESTRICTED
+LANG_ENGLISH        "Panzerfaust is a restricted weapon."
+
+REFERENCE           PANZERSCHRECK_IS_A_RESTRICTED
+LANG_ENGLISH        "Panzerschreck is a restricted weapon."
+
+REFERENCE           M9_BAZOOKA_IS_A_RESTRICTED
+LANG_ENGLISH        "M9 Bazooka is a restricted weapon."
+
+REFERENCE           30CAL_IS_A_RESTRICTED
+LANG_ENGLISH        "Browning .30 Cal is a restricted weapon."
+
+REFERENCE           SHOTGUN_IS_A_RESTRICTED
+LANG_ENGLISH        "M1897 Trenchgun is a restricted weapon."
+
+REFERENCE           GREASEGUN_IS_A_RESTRICTED
+LANG_ENGLISH        "M3 Greasegun is a restricted weapon."
+
+REFERENCE           DP28_IS_A_RESTRICTED
+LANG_ENGLISH        "DP  is a restricted weapon."
+
+REFERENCE           UNKNOWN_WEAPON_SELECTED
+LANG_ENGLISH        "Unknown weapon selected."
+
+REFERENCE           PRESS_ATTACK_TO_RESPAWN
+LANG_ENGLISH        "Press Attack to respawn"
+
+REFERENCE           PRESS_USE_TO_RESPAWN
+LANG_ENGLISH        "Press Use to respawn"
+
+REFERENCE           PRESS_ACTIVATE_TO_RESPAWN
+LANG_ENGLISH        "Press [[{+activate}]] to respawn"
+
+REFERENCE           PRESS_ACTIVATE_TO_SKIP
+LANG_ENGLISH        "Press [[{+activate}]] to skip"
+
+REFERENCE           PRESS_USERELOAD_TO_RESPAWN
+LANG_ENGLISH        "Press [[{+usereload}]] to respawn"
+
+REFERENCE           PRESS_USERELOAD_TO_SKIP
+LANG_ENGLISH        "Press [[{+usereload}]] to skip"
+
+REFERENCE           CONNECTED
+LANG_ENGLISH        "&&1 Connected"
+
+REFERENCE           DISCONNECTED
+LANG_ENGLISH        "&&1 Disconnected"
+
+REFERENCE           SCORE_LIMIT_REACHED
+LANG_ENGLISH        "Score limit reached."
+
+REFERENCE           ROUND_LIMIT_REACHED
+LANG_ENGLISH        "Round limit reached."
+
+REFERENCE           TIME_LIMIT_REACHED
+LANG_ENGLISH        "Time limit reached."
+
+REFERENCE           ALLIES_WIN
+LANG_ENGLISH        "Allies Win!"
+
+REFERENCE           AXIS_WIN
+LANG_ENGLISH        "Axis Win!"
+
+REFERENCE           WINS
+LANG_ENGLISH        "&&1 Wins!"
+
+REFERENCE           THE_GAME_IS_A_TIE
+LANG_ENGLISH        "The game is a tie!"
+
+REFERENCE           JOINED_ALLIES
+LANG_ENGLISH        "&&1 Joined Allies"
+
+REFERENCE           JOINED_AXIS
+LANG_ENGLISH        "&&1 Joined Axis"
+
+REFERENCE           FRIENDLY_FIRE_WILL_NOT
+LANG_ENGLISH        "Friendly fire will not be tolerated!"
+
+REFERENCE           YOU_WILL_SPAWN_ALLIED_WITH_A_NEXT_ROUND
+LANG_ENGLISH        "You will spawn Allied with a &&1 next round"
+
+REFERENCE           YOU_WILL_SPAWN_ALLIED_WITH_AN_NEXT_ROUND
+LANG_ENGLISH        "You will spawn Allied with an &&1 next round"
+
+REFERENCE           YOU_WILL_SPAWN_AXIS_WITH_A_NEXT_ROUND
+LANG_ENGLISH        "You will spawn Axis with a &&1 next round"
+
+REFERENCE           YOU_WILL_SPAWN_AXIS_WITH_AN_NEXT_ROUND
+LANG_ENGLISH        "You will spawn Axis with an &&1 next round"
+
+REFERENCE           YOU_WILL_RESPAWN_WITH_A
+LANG_ENGLISH        "You will respawn with a &&1"
+
+REFERENCE           YOU_WILL_RESPAWN_WITH_AN
+LANG_ENGLISH        "You will respawn with an &&1"
+
+REFERENCE           YOU_WILL_SPAWN_ALLIED_WITH_A
+LANG_ENGLISH        "You will have a &&1 next Allied respawn"
+
+REFERENCE           YOU_WILL_SPAWN_ALLIED_WITH_AN
+LANG_ENGLISH        "You will have an &&1 next Allied respawn"
+
+REFERENCE           YOU_WILL_SPAWN_AXIS_WITH_A
+LANG_ENGLISH        "You will have a &&1 next Axis respawn"
+
+REFERENCE           YOU_WILL_SPAWN_AXIS_WITH_AN
+LANG_ENGLISH        "You will have an &&1 next Axis respawn"
+
+REFERENCE           AUTOBALANCE_NEXT_ROUND
+LANG_ENGLISH        "Teams will be auto-balanced next round"
+
+REFERENCE           AUTOBALANCE_SECONDS
+LANG_ENGLISH        "Teams will be auto-balanced in &&1 seconds"
+
+REFERENCE           AUTOBALANCE_NOW
+LANG_ENGLISH        "Auto-balancing teams"
+
+REFERENCE           VOTE_CALLED
+LANG_ENGLISH        "Vote Called:  "
+
+REFERENCE           VOTE_YES
+LANG_ENGLISH        "(F1) Yes:  "
+
+REFERENCE           VOTE_NO
+LANG_ENGLISH        "(F2)  No:  "
+
+REFERENCE           NEUTRAL
+LANG_ENGLISH        "Neutral:  "
+
+REFERENCE           VOTE_MAPRESTART
+LANG_ENGLISH        "Map Restart"
+
+REFERENCE           VOTE_NEXTMAP
+LANG_ENGLISH        "Next Map"
+
+REFERENCE           PERCENT
+LANG_ENGLISH        " - &&1%"
+
+REFERENCE           CALLEDAVOTE
+LANG_ENGLISH        "&&1 called a vote."
+
+REFERENCE           VOTECAST
+LANG_ENGLISH        "Vote cast."
+
+REFERENCE           VOTEPASSED
+LANG_ENGLISH        "Vote passed."
+
+REFERENCE           VOTEFAILED
+LANG_ENGLISH        "Vote failed."
+
+REFERENCE           NOSPECTATORCALLVOTE
+LANG_ENGLISH        "Not allowed to call a vote as spectator."
+
+REFERENCE           NOSPECTATORVOTE
+LANG_ENGLISH        "Not allowed to vote as spectator."
+
+REFERENCE           NOVOTEINPROGRESS
+LANG_ENGLISH        "No vote in progress."
+
+REFERENCE           VOTEALREADYINPROGRESS
+LANG_ENGLISH        "A vote is already in progress."
+
+REFERENCE           MAXVOTESCALLED
+LANG_ENGLISH        "You have called the maximum number of votes."
+
+REFERENCE           INVALIDGAMETYPE
+LANG_ENGLISH        "Invalid gametype."
+
+REFERENCE           INVALIDVOTESTRING
+LANG_ENGLISH        "Invalid vote string."
+
+REFERENCE           VOTECOMMANDS
+LANG_ENGLISH        "Vote commands: map_restart, map_rotate, map <mapname>, g_gametype <typename>, typemap <typename> <mapname>, kick <player>, clientkick <clientnum>, tempBanUser <player>, tempBanClient <clientNum>"
+
+REFERENCE           VOTE_CHANGEMAP
+LANG_ENGLISH        "Change Map: &&1"
+
+REFERENCE           VOTE_GAMETYPE
+LANG_ENGLISH        "Game Type: &&1"
+
+REFERENCE           VOTE_KICK
+LANG_ENGLISH        "Kick Player: &&1"
+
+REFERENCE           VOTE_TEMPBAN
+LANG_ENGLISH        "Temporarily Ban Player: &&1"
+
+REFERENCE           THE_SERVER_DOES_NOT_HAVE
+LANG_ENGLISH        "The server does not have that map."
+
+REFERENCE           PRIVATE
+LANG_ENGLISH        "Private"
+
+REFERENCE           CORPORAL
+LANG_ENGLISH        "Corporal"
+
+REFERENCE           SERGEANT
+LANG_ENGLISH        "Sergeant"
+
+REFERENCE           LIEUTENANT
+LANG_ENGLISH        "Lieutenant"
+
+REFERENCE           CAPTAIN
+LANG_ENGLISH        "Captain"
+
+REFERENCE           MAJOR
+LANG_ENGLISH        "Major"
+
+REFERENCE           COLONEL
+LANG_ENGLISH        "Colonel"
+
+REFERENCE           GENERAL
+LANG_ENGLISH        "General"
+
+REFERENCE           UNKNOWN
+LANG_ENGLISH        "Unknown"
+
+REFERENCE           X2
+LANG_ENGLISH        "x2"
+
+REFERENCE           X3
+LANG_ENGLISH        "x3"
+
+REFERENCE           PLUS
+LANG_ENGLISH        "+"
+
+REFERENCE           SLASH
+LANG_ENGLISH        "/"
+
+REFERENCE           FIRSTSQUAD
+LANG_ENGLISH        "1st Squad"
+
+REFERENCE           SECONDSQUAD
+LANG_ENGLISH        "2nd Squad"
+
+REFERENCE           EMPTY
+LANG_ENGLISH        "%s"
+
+REFERENCE           HIGHLIGHT_REEL
+LANG_ENGLISH        "Highlight Reel"
+
+REFERENCE           HLR_PISTOL_KILL
+LANG_ENGLISH        "Pistol Kill"
+
+REFERENCE           HLR_MELEE_KILL
+LANG_ENGLISH        "Hand-to-Hand Kill"
+
+REFERENCE           HLR_LONG_RANGE_KILL
+LANG_ENGLISH        "Ranged Shot"
+
+REFERENCE           HLR_CRUSH_KILL
+LANG_ENGLISH        "Crush!"
+
+REFERENCE           HLR_HEADSHOT
+LANG_ENGLISH        "Head Shot"
+
+REFERENCE           HLR_FINAL_KILL
+LANG_ENGLISH        "Final Kill"
+
+REFERENCE           HLR_MULTI_KILL
+LANG_ENGLISH        "Multi Kill"
+
+REFERENCE           BEACON
+LANG_ENGLISH        "Beacon"
+
+REFERENCE           BOCAGE_OBJ_ATTACKER
+LANG_ENGLISH        "Capture the Beacon (Yellow Star) and take it to the country manor. (Blue Box)"
+
+REFERENCE           BOCAGE_OBJ_DEFENDER
+LANG_ENGLISH        "Defend the Beacon (Yellow Star) from the Axis. Keep it from the country manor. (Blue Box)"
+
+REFERENCE           BOCAGE_OBJ_SPECTATOR
+LANG_ENGLISH        "Axis: Capture the Beacon (Yellow Star) and take it to the country manor. (Blue Box)\nAllies: Defend the Beacon (Yellow Star) from the Axis. Keep it from the country manor. (Blue Box)"
+
+REFERENCE           TEAMBALANCE_NOTIFICATION_GERMAN
+LANG_ENGLISH        "You were moved to German to balance the teams"
+
+REFERENCE           TEAMBALANCE_NOTIFICATION_BRITISH
+LANG_ENGLISH        "You were moved to British to balance the teams"
+
+REFERENCE           TEAMBALANCE_NOTIFICATION_RUSSIAN
+LANG_ENGLISH        "You were moved to Russian to balance the teams"
+
+REFERENCE           TEAMBALANCE_NOTIFICATION_AMERICAN
+LANG_ENGLISH        "You were moved to American to balance the teams"
+
+REFERENCE           CANTJOINTEAM_AXIS
+LANG_ENGLISH        "Joining German would result in an unbalanced number of players on that team. Try joining &&1."
+
+REFERENCE           CANTJOINTEAM_RUSSIAN
+LANG_ENGLISH        "Joining Russian would result in an unbalanced number of players on that team. Try joining German."
+
+REFERENCE           CANTJOINTEAM_BRITISH
+LANG_ENGLISH        "Joining British would result in an unbalanced number of players on that team. Try joining German."
+
+REFERENCE           CANTJOINTEAM_AMERICAN
+LANG_ENGLISH        "Joining American would result in an unbalanced number of players on that team. Try joining German."
+
+REFERENCE           CANTJOINTEAM_AXIS2
+LANG_ENGLISH        "Joining German would result in an unbalanced number of players on that team."
+
+REFERENCE           CANTJOINTEAM_ALLIED2
+LANG_ENGLISH        "Joining &&1 would result in an unbalanced number of players on that team. Try joining German."
+
+REFERENCE           CANTJOINTEAM_ALLIED
+LANG_ENGLISH        "Joining &&1 would result in an unbalanced number of players on that team."
+
+REFERENCE           RE_OBJ_NEUVILLE_OBJ_ATTACKER
+LANG_ENGLISH        "Capture the Artillery Map (Yellow Star) and take it back to the wooden farm gate. (Blue Box)"
+
+REFERENCE           RE_OBJ_NEUVILLE_OBJ_DEFENDER
+LANG_ENGLISH        "Defend the Artillery Map (Yellow Star). Keep the Allies from taking it to the wooden farm gate. (Blue Box)"
+
+REFERENCE           RE_OBJ_NEUVILLE_OBJ_SPECTATOR
+LANG_ENGLISH        "Allies: Capture the Artillery Map (Yellow Star) and take it to the wooden farm gate. (Blue Box)\nAxis: Defend the Artillery Map (Yellow Star) and keep the Allies from taking it to the wooden farm gate. (Blue Box)"
+
+REFERENCE           RE_OBJ_NEUVILLE_SPAWN_ATTACKER
+LANG_ENGLISH        "Take the Artillery Map from the Germans.\nBring it back to the wooden farm gate.\nThe Artillery Map is the Yellow Star on your compass.\nThe wooden farm gate is the Blue Square on your compass."
+
+REFERENCE           RE_OBJ_NEUVILLE_SPAWN_DEFENDER
+LANG_ENGLISH        "Defend the Artillery Map from the Allies.\nDon't let the Allies take it to the wooden farm gate.\nThe Artillery Map is the Yellow Star on your compass.\nThe wooden farm gate is the Blue Square on your compass."
+
+REFERENCE           KILL_OTHER_PLAYERS
+LANG_ENGLISH        "Kill other players."
+
+REFERENCE           KILL_AXIS_PLAYERS
+LANG_ENGLISH        "Kill Axis players."
+
+REFERENCE           KILL_ALLIED_PLAYERS
+LANG_ENGLISH        "Kill Allied players."
+
+REFERENCE           ALLIES_KILL_AXIS_PLAYERS
+LANG_ENGLISH        "Allies: Kill axis players.\nAxis: Kill allied players."
+
+REFERENCE           SHUTDOWN_ALLIED_HQ
+LANG_ENGLISH        "Axis have shut down the Allied HQ"
+
+REFERENCE           SHUTDOWN_AXIS_HQ
+LANG_ENGLISH        "Allies have shut down the Axis HQ"
+
+REFERENCE           SETUP_HQ_ALLIED
+LANG_ENGLISH        "Allies have set up their HQ"
+
+REFERENCE           SETUP_HQ_AXIS
+LANG_ENGLISH        "Axis have set up their HQ"
+
+REFERENCE           CTF_OBJ_TEXT
+LANG_ENGLISH        "Gain points by stealing the enemy flag and then touching your flag at your base. First team with &&1 captures wins."
+
+REFERENCE           CTF_OBJ_TEXT_NOSCORE
+LANG_ENGLISH        "Gain points by stealing the enemy flag and then touching your flag at your base."
+
+REFERENCE           OBJ_TEXT
+LANG_ENGLISH        "Gain points by capturing and defending neutral HQs for 2 minutes or by destroying enemy HQs. First team to &&1 points wins."
+
+REFERENCE           OBJ_TEXT_NOSCORE
+LANG_ENGLISH        "Gain points by capturing and defending neutral HQs for 2 minutes or by destroying enemy HQs."
+
+REFERENCE           GAIN_POINTS_BY_ELIMINATING
+LANG_ENGLISH        "Gain points by eliminating other players. First player to &&1 points wins."
+
+REFERENCE           GAIN_POINTS_BY_ELIMINATING_NOSCORE
+LANG_ENGLISH        "Gain points by eliminating other players."
+
+REFERENCE           GAIN_POINTS_BY_ELIMINATING1
+LANG_ENGLISH        "Gain points by eliminating enemy players. First team to &&1 points wins."
+
+REFERENCE           GAIN_POINTS_BY_ELIMINATING1_NOSCORE
+LANG_ENGLISH        "Gain points by eliminating enemy players."
+
+REFERENCE           REINFORCEMENTS
+LANG_ENGLISH        "Reinforcements spawn in &&1 seconds"
+
+REFERENCE           REINFORCEMENTS_HUD
+LANG_ENGLISH        "Reinforcements: &&1"
+
+REFERENCE           INSTANT
+LANG_ENGLISH        "instant"
+
+REFERENCE           SCORED_ALLIES
+LANG_ENGLISH        "Allies scored &&1 points!"
+
+REFERENCE           SCORED_AXIS
+LANG_ENGLISH        "Axis scored &&1 points!"
+
+REFERENCE           ESTABLISHING_HQ
+LANG_ENGLISH        "Establishing HQ"
+
+REFERENCE           DESTROYING_HQ
+LANG_ENGLISH        "Destroying HQ"
+
+REFERENCE           LOSING_HQ
+LANG_ENGLISH        "Losing HQ!"
+
+REFERENCE           MAXHOLDTIME_MINUTESANDSECONDS
+LANG_ENGLISH        "&&1 held the radio for the maximum time of &&2 minutes &&3 seconds!"
+
+REFERENCE           MAXHOLDTIME_MINUTES
+LANG_ENGLISH        "&&1 successfully defended the HQ!"
+
+REFERENCE           MAXHOLDTIME_SECONDS
+LANG_ENGLISH        "&&1 held the radio for the maximum time of &&2 seconds!"
+
+REFERENCE           MAXHOLDTIME_ALLIES
+LANG_ENGLISH        "Allies held the radio for the maximum time of &&1 minutes!"
+
+REFERENCE           MAXHOLDTIME_AXIS
+LANG_ENGLISH        "Axis held the radio for the maximum time of &&1 minutes!"
+
+REFERENCE           TIME_TILL_SPAWN
+LANG_ENGLISH        "Spawn in "
+
+REFERENCE           RESPAWN_WHEN_RADIO_NEUTRALIZED
+LANG_ENGLISH        "Dead until HQ neutralized"
+
+REFERENCE           MATCHSTARTING
+LANG_ENGLISH        "Match starting"
+
+REFERENCE           MATCHRESUMING
+LANG_ENGLISH        "Match resuming"
+
+REFERENCE           ROUNDDRAW
+LANG_ENGLISH        "Round draw"
+
+REFERENCE           ALLIEDMISSIONACCOMPLISHED
+LANG_ENGLISH        "Allied mission accomplished"
+
+REFERENCE           AXISMISSIONACCOMPLISHED
+LANG_ENGLISH        "Axis mission accomplished"
+
+REFERENCE           ALLIESHAVEBEENELIMINATED
+LANG_ENGLISH        "Allies have been eliminated"
+
+REFERENCE           AXISHAVEBEENELIMINATED
+LANG_ENGLISH        "Axis have been eliminated"
+
+REFERENCE           TIMEHASEXPIRED
+LANG_ENGLISH        "Time has expired"
+
+REFERENCE           EXPLOSIVESPLANTED
+LANG_ENGLISH        "Explosives planted"
+
+REFERENCE           EXPLOSIVESDEFUSED
+LANG_ENGLISH        "Explosives defused"
+
+REFERENCE           OBJ_ATTACKERS
+LANG_ENGLISH        "Destroy target A or B by planting explosives at either location. First team to &&1 points wins."
+
+REFERENCE           OBJ_ATTACKERS_NOSCORE
+LANG_ENGLISH        "Destroy target A or B by planting explosives at either location."
+
+REFERENCE           OBJ_DEFENDERS
+LANG_ENGLISH        "Protect target A and B from being destroyed. If explosives are planted at either location, defuse them before they explode. First team to &&1 points wins."
+
+REFERENCE           OBJ_DEFENDERS_NOSCORE
+LANG_ENGLISH        "Protect target A and B from being destroyed. If explosives are planted at either location, defuse them before they explode."
+
+REFERENCE           OBJ_SPECTATOR_ALLIESATTACKING
+LANG_ENGLISH        "Allies: Destroy target A or B by planting explosives at either location.\n\nAxis: Protect target A and B from being destroyed. If explosives are planted at either location, defuse them before they explode."
+
+REFERENCE           OBJ_SPECTATOR_AXISATTACKING
+LANG_ENGLISH        "Allies: Protect target A and B from being destroyed. If explosives are planted at either location, defuse them before they explode.\n\nAxis: Destroy target A or B by planting explosives at either location."
+
+REFERENCE           ALLIESOBJECTIVEHELD
+LANG_ENGLISH        "Allies have held the objective"
+
+REFERENCE           AXISOBJECTIVEHELD
+LANG_ENGLISH        "Axis have held the objective."
+
+REFERENCE           ALLIESOBJECTIVECAPTURED
+LANG_ENGLISH        "Allies have captured the objective"
+
+REFERENCE           AXISOBJECTIVECAPTURED
+LANG_ENGLISH        "Axis have captured the objective."
+
+REFERENCE           ALLIESWINMATCH
+LANG_ENGLISH        "The Allies have won the match!"
+
+REFERENCE           AXISWINMATCH
+LANG_ENGLISH        "The Axis have won the match!"
+
+REFERENCE           CAPTURING_OBJECTIVE
+LANG_ENGLISH        "Capturing objective..."
+
+REFERENCE           ENEMY_CAPTURING_OBJECTIVE
+LANG_ENGLISH        "The enemy is capturing the objective!"
+
+REFERENCE           ALLIED_ATTACK
+LANG_ENGLISH        "Attack the Axis-held objective!"
+
+REFERENCE           ALLIED_DEFEND
+LANG_ENGLISH        "Defend the objective from Axis attack!"
+
+REFERENCE           AXIS_ATTACK
+LANG_ENGLISH        "Attack the Allied-held objective!"
+
+REFERENCE           AXIS_DEFEND
+LANG_ENGLISH        "Defend the objective from Allied attack!"
+
+REFERENCE           WAITING_MATCH
+LANG_ENGLISH        "Waiting for match to begin."
+
+REFERENCE           YOU_ALLIED_PLATOON_LEADER
+LANG_ENGLISH        "You are the Allied platoon leader!"
+
+REFERENCE           YOU_AXIS_PLATOON_LEADER
+LANG_ENGLISH        "You are the Axis platoon leader!"
+
+REFERENCE           IS_PLATOON_LEADER
+LANG_ENGLISH        "%s is your team's platoon leader."
+
+REFERENCE           LEFT_PLAYS
+LANG_ENGLISH        "Left Plays"
+
+REFERENCE           MIDDLE_PLAYS
+LANG_ENGLISH        "Middle Plays"
+
+REFERENCE           RIGHT_PLAYS
+LANG_ENGLISH        "Right Plays"
+
+REFERENCE           ALL_PLAYS
+LANG_ENGLISH        "All Plays"
+
+REFERENCE           PREV_PLAY
+LANG_ENGLISH        "Previous Play"
+
+REFERENCE           NEXT_PLAY
+LANG_ENGLISH        "Next Play"
+
+REFERENCE           THIS_PLAY
+LANG_ENGLISH        "Pick This Play"
+
+REFERENCE           EDIT_PLAY
+LANG_ENGLISH        "Edit Play"
+
+REFERENCE           NEW_PLAY
+LANG_ENGLISH        "New Play"
+
+REFERENCE           NEW_LEFT_PLAY
+LANG_ENGLISH        "New Left Play"
+
+REFERENCE           NEW_MIDDLE_PLAY
+LANG_ENGLISH        "New Middle Play"
+
+REFERENCE           NEW_RIGHT_PLAY
+LANG_ENGLISH        "New Right Play"
+
+REFERENCE           CANCEL_NEW_PLAY
+LANG_ENGLISH        "Cancel New Play"
+
+REFERENCE           NEXT_SQUAD
+LANG_ENGLISH        "Next Squad"
+
+REFERENCE           PREV_SQUAD
+LANG_ENGLISH        "Previous Squad"
+
+REFERENCE           ADD_SQUAD
+LANG_ENGLISH        "Add Squad"
+
+REFERENCE           DELETE_SQUAD
+LANG_ENGLISH        "Delete Squad"
+
+REFERENCE           DELETE_YES
+LANG_ENGLISH        "Confirm Delete"
+
+REFERENCE           DELETE_NO
+LANG_ENGLISH        "Cancel Delete"
+
+REFERENCE           SAVE_PLAY
+LANG_ENGLISH        "Save Play"
+
+REFERENCE           PLACE_WAYPOINTS
+LANG_ENGLISH        "Place Waypoints"
+
+REFERENCE           1_PLACE_WAYPOINT
+LANG_ENGLISH        "1. Place Move Waypoint"
+
+REFERENCE           2_PLACE_WAYPOINT_RALLY_POINT
+LANG_ENGLISH        "2. Place Rally Waypoint"
+
+REFERENCE           2_PLACE_WAYPOINT_DEFEND_POINT
+LANG_ENGLISH        "2. Place Defend Waypoint"
+
+REFERENCE           3_DELETE_LAST_WAYPOINT
+LANG_ENGLISH        "3. Delete Last Waypoint"
+
+REFERENCE           4_PREV_SQUAD
+LANG_ENGLISH        "4. Previous Squad"
+
+REFERENCE           5_NEXT_SQUAD
+LANG_ENGLISH        "5. Next Squad"
+
+REFERENCE           6_DISCARD_PLAY_CHANGES
+LANG_ENGLISH        "6. Discard Play Changes"
+
+REFERENCE           7_SAVE_PLAY_CHANGES
+LANG_ENGLISH        "7. Save Play Changes"
+
+REFERENCE           RETURN_EDITOR
+LANG_ENGLISH        "Back to Mission List"
+
+REFERENCE           PLAY_TYPE
+LANG_ENGLISH        "Choose Play Type"
+
+REFERENCE           ATTACK_PLAY
+LANG_ENGLISH        "Attack Play"
+
+REFERENCE           DEFEND_PLAY
+LANG_ENGLISH        "Defend Play"
+
+REFERENCE           TEAM_TYPE
+LANG_ENGLISH        "Choose Team Type"
+
+REFERENCE           UPTEAM
+LANG_ENGLISH        "Allies"
+
+REFERENCE           DOWNTEAM
+LANG_ENGLISH        "Axis"
+
+REFERENCE           CHOOSE_OBJ
+LANG_ENGLISH        "Choose Objective"
+
+REFERENCE           PREV_OBJ
+LANG_ENGLISH        "Previous Objective"
+
+REFERENCE           NEXT_OBJ
+LANG_ENGLISH        "Next Objective"
+
+REFERENCE           THIS_OBJ
+LANG_ENGLISH        "This Objective"
+
+REFERENCE           NO_DEFEND_PLAYS_FOUND
+LANG_ENGLISH        "No defensive plays found"
+
+REFERENCE           NO_ATTACK_PLAYS_FOUND
+LANG_ENGLISH        "No offensive plays found"
+
+REFERENCE           LEFT_SQUAD
+LANG_ENGLISH        "Left Flank"
+
+REFERENCE           MIDDLE_SQUAD
+LANG_ENGLISH        "Frontal Attack"
+
+REFERENCE           RIGHT_SQUAD
+LANG_ENGLISH        "Right Flank"
+
+REFERENCE           ONE_SQUAD
+LANG_ENGLISH        "One Squad"
+
+REFERENCE           TWO_SQUADS
+LANG_ENGLISH        "Two Squads"
+
+REFERENCE           THREE_SQUADS
+LANG_ENGLISH        "Three Squads"
+
+REFERENCE           LEFT_MIDDLE
+LANG_ENGLISH        "Left Middle"
+
+REFERENCE           PINCER
+LANG_ENGLISH        "Pincer"
+
+REFERENCE           RIGHT_MIDDLE
+LANG_ENGLISH        "Right Middle"
+
+REFERENCE           RALLY_REACHED
+LANG_ENGLISH        "Rally Point Reached"
+
+REFERENCE           DEFEND_AREA
+LANG_ENGLISH        "Defend This Area"
+
+REFERENCE           BACK
+LANG_ENGLISH        "Back"
+
+REFERENCE           CLOSE
+LANG_ENGLISH        "Close"
+
+REFERENCE           WAITING_RESUME
+LANG_ENGLISH        "Waiting for Players to Resume Match"
+
+REFERENCE           CANT_SWITCH
+LANG_ENGLISH        "Can't Switch Teams Until Round Starts"
+
+REFERENCE           JOINED_AUTO
+LANG_ENGLISH        "%s Will Be Assigned A Squad At Mission Start"
+
+REFERENCE           YOU_WILL_JOIN_SQUAD_ONE_NEXT_ROUND
+LANG_ENGLISH        "You Will Join Squad One Next Round"
+
+REFERENCE           YOU_WILL_JOIN_SQUAD_TWO_NEXT_ROUND
+LANG_ENGLISH        "You Will Join Squad Two Next Round"
+
+REFERENCE           YOU_WILL_BE_AUTOASSIGNED_NEXT_ROUND
+LANG_ENGLISH        "You Will Be Autoassigned A Squad Next Round"
+
+REFERENCE           JOINED_ONE
+LANG_ENGLISH        "%s Joined Squad One"
+
+REFERENCE           JOINED_TWO
+LANG_ENGLISH        "%s Joined Squad Two"
+
+REFERENCE           RANK_REQUIRED
+LANG_ENGLISH        "That Weapon Requires A Rank Of %s"
+
+REFERENCE           PLAYER_TOGGLE_MUTE
+LANG_ENGLISH        "Toggle Mute"
+
+REFERENCE           MUTED
+LANG_ENGLISH        "Muted"
+
+REFERENCE           ESTABLISH_AND_DEFEND
+LANG_ENGLISH        "Establish and defend your Headquarters."
+
+REFERENCE           CAPTURE_THE_ENEMY_FLAG
+LANG_ENGLISH        "Capture the enemy flag."
+
+REFERENCE           DESTROY_THE_OBJECTIVE
+LANG_ENGLISH        "Destroy the objective."
+
+REFERENCE           DEFEND_THE_OBJECTIVE
+LANG_ENGLISH        "Defend the objective."
+
+REFERENCE           ELIMINATE_ENEMIES
+LANG_ENGLISH        "Eliminate enemies."
+
+REFERENCE           ELIMINATE_THE_ENEMY
+LANG_ENGLISH        "Eliminate the enemy."
+
+REFERENCE           ENEMY_FLAG_CAPTURED
+LANG_ENGLISH        "Enemy flag captured!"
+
+REFERENCE           YOUR_FLAG_WAS_CAPTURED
+LANG_ENGLISH        "Your flag was captured"
+
+REFERENCE           YOUR_FLAG_WAS_RETURNED
+LANG_ENGLISH        "Your flag was returned"
+
+REFERENCE           YOUR_FLAG_WAS_TAKEN
+LANG_ENGLISH        "Your flag was taken!"
+
+REFERENCE           ENEMY_FLAG_TAKEN
+LANG_ENGLISH        "Enemy flag taken!"
+
+REFERENCE           RADIOS_SPAWN_IN_SECONDS
+LANG_ENGLISH        "Radios spawn in &&1 seconds"
+
+
+ENDMARKER
+
+

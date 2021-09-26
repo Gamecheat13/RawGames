@@ -1,0 +1,492 @@
+#include "ui/menudef.h"
+
+#define WEAPON_TEXTSCALE .3
+
+{
+	assetGlobalDef
+	{
+		fadeClamp 1.0					// sets the fadeup alpha
+		fadeCycle 1						// how often fade happens in milliseconds
+		fadeAmount 0.1					// amount to adjust alpha per cycle
+
+		shadowX  5						// x amount for shadow offset
+		shadowY  5						// y amount for shadow offset
+		shadowColor 0.1 0.1 0.1 0.25	// shadow color
+	}
+
+
+	menuDef 
+	{
+		name "deadscreen"
+		fullScreen MENU_FALSE				
+		rect 0 0 640 480				// Size and position of the menu
+		focusColor GLOBAL_FOCUSED_COLOR	// Menu focus color for text and items
+		soundloop ""
+		visible MENU_TRUE
+		
+		
+		// Quote from a famous dead guy    	
+		itemDef 
+		{
+			name quote
+			dvar "ui_deadquote"
+			textscale .4
+			type ITEM_TYPE_TEXT
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			rect 80 200 480 20
+			textalign ITEM_ALIGN_CENTER
+			textaligny 0 // point to center around
+			textalignx 240 // point to center around
+			ownerdraw CG_DEADQUOTE
+			forecolor 1 1 1 1
+			visible 1
+			decoration 
+		}
+		itemDef
+		{
+			name hud_grenadeicon
+			visible			1
+			rect			315 300 60 60
+			origin			0 0
+			style			WINDOW_STYLE_SHADER
+			background		"hud_grenadeicon"
+			decoration
+			dvartest "ui_grenade_death"
+			showdvar { "1" }
+		}
+		itemDef
+		{
+			name hud_grenadepointer
+			visible			1
+			rect			320 270 50 25
+			origin			0 0
+			style			WINDOW_STYLE_SHADER
+			background		"hud_grenadepointer"
+			decoration
+			dvartest "ui_grenade_death"
+			showdvar { "1" }
+		}
+	}
+
+	// Hold Breath Hint
+	menuDef 
+	{
+		name "HoldBreathHint"
+		fullScreen MENU_FALSE
+		visible MENU_TRUE
+		rect 0 -130 0 0 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_CENTER
+
+		itemDef 
+		{
+			name "chRect"
+			decoration
+			visible MENU_TRUE
+			rect 0 0 0 0
+			textscale .35
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			ownerdraw CG_HOLD_BREATH_HINT
+		}
+	}
+	
+	// Mantle Hint
+	menuDef 
+	{
+    	name "MantleHint"
+    	fullScreen MENU_FALSE
+    	visible MENU_TRUE
+    	rect 0 130 40 40 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_CENTER
+
+		itemDef 
+		{
+			name "chRect"
+			decoration
+			visible MENU_TRUE
+			rect 0 0 40 40
+			textscale .21
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			ownerdraw CG_MANTLE_HINT
+		}
+	}
+	
+	//	CURSOR HINTS
+	menuDef 
+	{
+    	name "Cursorhints"
+    	fullScreen MENU_FALSE
+    	visible MENU_TRUE
+    	rect 0 70 40 40 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_CENTER
+
+		itemDef 
+		{
+			name "chRect"
+			decoration
+			visible MENU_TRUE
+			rect 0 0 40 40 // 64x64
+			textscale .21
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			ownerdraw CG_CURSORHINT
+		}
+	}
+
+	//	STANCE
+	menuDef 
+	{
+    	name "stance"
+    	fullScreen MENU_FALSE
+    	visible MENU_TRUE
+		rect 90 -70 40 40 HORIZONTAL_ALIGN_LEFT VERTICAL_ALIGN_BOTTOM
+
+		itemDef 
+		{
+			name "chRect"
+			decoration
+			visible MENU_TRUE
+			rect 0 0 60 60 // 64x64
+			forecolor 1.0 1.0 1.0 1.0
+			textscale .21
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			ownerdraw CG_PLAYER_STANCE
+		}
+	}
+	
+	//	TANK STATUS
+	menuDef 
+	{
+    	name "tankstatus"
+    	fullScreen MENU_FALSE
+    	visible MENU_TRUE
+		rect 100 -46 40 40 HORIZONTAL_ALIGN_LEFT VERTICAL_ALIGN_BOTTOM 
+
+		itemDef 
+		{
+			name "tankbody"
+			rect 0 0 40 40 // 64x64
+			forecolor 1.0 1.0 1.0 1.0
+			background "gfx/hud/hud@tankbody.tga"
+			ownerdraw CG_TANK_BODY_DIR
+			visible MENU_TRUE
+			decoration
+		}
+		
+		itemDef 
+		{
+			name "tankbarrel"
+			rect 20 20 40 40 // 64x64
+			forecolor 1.0 1.0 1.0 1.0
+			background "gfx/hud/hud@tankbarrel.tga"
+			ownerdraw CG_TANK_BARREL_DIR
+			visible MENU_TRUE
+			decoration
+		}
+	}
+
+	// WEAPON INFO
+	menuDef
+	{
+		name "weaponinfo"
+		fullScreen MENU_FALSE
+		visible MENU_TRUE
+		rect 0 0 0 0 HORIZONTAL_ALIGN_RIGHT VERTICAL_ALIGN_BOTTOM
+		
+		// weapon name back
+	//	itemDef
+	//	{
+	//		name "weaponnameback"
+	//		rect 0 11 320 23
+	//		textscale WEAPON_TEXTSCALE
+	//		forecolor 1.0 1.0 1.0 1.0
+	//		background "gfx/hud/hud@weaponnameback.tga"
+	//		ownerdraw CG_PLAYER_WEAPON_NAME_BACK
+	//		visible MENU_TRUE
+	//		decoration
+	//	}
+
+		// weapon ammo counter back
+		itemDef
+		{
+			name "ammocounterback"
+			rect -100 -50 100 50
+			forecolor 1.0 1.0 1.0 1.0
+			background "gfx/hud/hud@ammocounterback.tga"
+			ownerdraw CG_PLAYER_AMMO_BACKDROP
+			visible MENU_TRUE
+			decoration
+		}
+
+		// weapon mode
+		itemDef
+		{
+			name "weaponfiremode"
+			rect -115 -35 20 20
+			forecolor 1.0 1.0 1.0 1.0
+			ownerdraw CG_PLAYER_WEAPON_MODE_ICON
+			visible MENU_TRUE
+			decoration
+		}
+		
+		// weapon name
+		itemDef
+		{
+			name "weapname"
+			rect -385 -15 290 40
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			//textscale WEAPON_TEXTSCALE
+			textscale .4
+			forecolor 1.0 1.0 1.0 1.0
+			ownerdraw CG_PLAYER_WEAPON_NAME
+			visible MENU_TRUE
+			decoration
+		}
+		
+		// ammo text
+		itemDef 
+		{
+ 			name "ammotex"
+			rect -85 -15 70 40
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			textscale .5
+			forecolor 1.0 1.0 1.0 1.0
+			ownerdraw CG_PLAYER_AMMO_VALUE
+			visible MENU_TRUE
+			decoration
+		}
+	}
+
+	// HEALTH BAR
+	menuDef
+	{
+		name "Health"
+		fullScreen MENU_FALSE
+		visible MENU_TRUE
+		rect -152 -20 0 0 HORIZONTAL_ALIGN_RIGHT VERTICAL_ALIGN_BOTTOM
+		
+		itemDef
+		{
+			name "healthbarback"
+			rect 13 0 130 12
+			forecolor 1.0 1.0 1.0 1.0
+			background "gfx/hud/hud@health_back.tga"
+			ownerdraw CG_PLAYER_BAR_HEALTH_BACK
+			visible MENU_TRUE
+			decoration
+		}
+		itemDef
+		{
+			name "healthbar"
+			rect 14 1 128 10
+			forecolor 0.7 0.4 0.0 1.0
+			background "gfx/hud/hud@health_bar.tga"
+			ownerdraw CG_PLAYER_BAR_HEALTH
+			visible MENU_TRUE
+			decoration
+		}
+		itemDef
+		{
+			name "healthbarcross"
+			rect 0 0 12 12
+			forecolor 1.0 1.0 1.0 1.0
+			background "gfx/hud/hud@health_cross.tga"
+			ownerdraw CG_PLAYER_BAR_HEALTH_BACK
+			visible MENU_TRUE
+			decoration
+		}
+	}
+	
+	// LOW HEALTH OVERLAY
+/*	menuDef
+	{
+		name "Low Health"
+		fullScreen MENU_FALSE
+		visible MENU_TRUE
+		rect 0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		
+		itemDef
+		{
+			name "healthoverlay"
+			rect 0 0 640 480
+			forecolor 1.0 1.0 1.0 1.0
+			background "overlay_low_health"
+			ownerdraw CG_PLAYER_LOW_HEALTH_OVERLAY
+			visible MENU_TRUE
+			decoration
+		}
+	}
+*/
+	//	COMPASS
+	menuDef
+	{
+		name "Compass"
+ 	   	fullScreen MENU_FALSE
+ 	   	visible MENU_TRUE
+ 	   	rect -20 -140 COMPASS_SIZE COMPASS_SIZE HORIZONTAL_ALIGN_LEFT VERTICAL_ALIGN_BOTTOM
+
+		itemDef
+ 	   	{
+			name "compassback"
+			rect 0 0 COMPASS_SIZE COMPASS_SIZE
+			forecolor 1.0 1.0 1.0 1.0
+			background "gfx/hud/hud@compassback.tga"
+			ownerdraw CG_PLAYER_COMPASS_BACK
+			visible MENU_TRUE
+			decoration
+ 	   	}
+		itemDef
+		{
+			name "compasshighlight"
+			rect 0 0 COMPASS_SIZE COMPASS_SIZE
+			forecolor 1.0 1.0 1.0 1.0
+			background "gfx/hud/hud@compasshighlight.tga"
+			ownerdraw CG_PLAYER_COMPASS_BACK
+			visible MENU_TRUE
+			decoration
+		}
+		itemDef
+		{
+			name "compassface"
+			rect 0 0 COMPASS_SIZE COMPASS_SIZE
+			forecolor 1.0 1.0 1.0 1.0
+			background "gfx/hud/hud@compassface.tga"
+			ownerdraw CG_PLAYER_COMPASS
+			visible MENU_TRUE
+			decoration
+		}
+		itemDef // Friendlies pointers
+		{
+			name "compassfriendlies"
+			visible MENU_TRUE
+			rect 0 0 COMPASS_SIZE COMPASS_SIZE
+			forecolor 1.0 1.0 1.0 1.0
+			background "objective_friendly"
+			ownerdraw CG_PLAYER_COMPASS_ACTORS
+		}
+		itemDef // tank pointers
+		{
+			name "compasstanks"
+			visible MENU_TRUE
+			rect 0 0 COMPASS_SIZE COMPASS_SIZE
+			forecolor 1.0 1.0 1.0 1.0
+			background "gfx/hud/hud@objective_tank.tga"
+			ownerdraw CG_PLAYER_COMPASS_TANKS
+		}
+		itemDef // Objective pointers
+		{
+			name "compasspointers"
+			decoration
+			visible MENU_TRUE
+			rect 0 0 COMPASS_SIZE COMPASS_SIZE
+			forecolor 1.0 1.0 1.0 1.0
+			ownerdraw CG_PLAYER_COMPASS_POINTERS
+		}
+	}
+	
+	
+	// OFFHAND WEAPONS
+	menuDef
+	{
+		name "offhandinfo"
+		fullScreen MENU_FALSE
+		visible MENU_TRUE
+		rect 0 0 0 0 HORIZONTAL_ALIGN_RIGHT VERTICAL_ALIGN_BOTTOM
+		
+		// offhand frag icon 
+		itemDef
+		{
+			name "offhandfragicon"
+			rect -70 -74 20 20
+			forecolor 1.0 1.0 1.0 1.0
+			ownerdraw CG_OFFHAND_WEAPON_ICON_FRAG
+			visible MENU_TRUE
+			background "gfx/icons/hud@russian_grenade.tga" // default texture
+			decoration
+		}
+		
+		// offhand frag ammo
+		itemDef
+		{
+			name "offhandfragammo"
+			rect -83 -55 25 25
+			textscale .5
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			textfont UI_FONT_DEFAULT
+			forecolor 1.0 1.0 1.0 1.0
+			ownerdraw CG_OFFHAND_WEAPON_AMMO_FRAG
+			visible MENU_TRUE
+			decoration
+		}
+		
+		// offhand frag name
+		itemDef
+		{
+			name "offhandfragname"
+			rect -48 -55 30 25
+			textscale .3
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			textfont UI_FONT_DEFAULT
+			forecolor 1.0 1.0 1.0 1.0
+			ownerdraw CG_OFFHAND_WEAPON_NAME_FRAG
+			visible MENU_TRUE
+			decoration
+		}
+		
+		
+		// offhand smoke icon
+		itemDef
+		{
+			name "offhandsmokeicon"
+			rect -70 -114 20 20
+			forecolor 1.0 1.0 1.0 1.0
+			ownerdraw CG_OFFHAND_WEAPON_ICON_SMOKE
+			background "hud_us_smokegrenade" // default texture
+			visible MENU_TRUE
+			decoration
+		}
+		
+		// offhand smoke ammo
+		itemDef
+		{
+			name "offhandsmokeammo"
+			rect -83 -95 25 25
+			textscale .5
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			textfont UI_FONT_DEFAULT
+			forecolor 1.0 1.0 1.0 1.0
+			ownerdraw CG_OFFHAND_WEAPON_AMMO_SMOKE
+			visible MENU_TRUE
+			decoration
+		}
+		
+		// offhand smoke name
+		itemDef
+		{
+			name "offhandsmokename"
+			rect -50 -95 30 25
+			textscale .3
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			textfont UI_FONT_DEFAULT
+			forecolor 1.0 1.0 1.0 1.0
+			ownerdraw CG_OFFHAND_WEAPON_NAME_SMOKE
+			visible MENU_TRUE
+			decoration
+		}
+	}		
+	
+	// Invalid Cmd Hint
+	menuDef 
+	{
+		name "InvalidCmdHint"
+		fullScreen MENU_FALSE
+		visible MENU_TRUE
+		rect 0 -130 0 0 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_CENTER
+
+		itemDef 
+		{
+			name "chRect"
+			decoration
+			visible MENU_TRUE
+			rect 0 0 0 0
+			textscale .35
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			ownerdraw CG_INVALID_CMD_HINT
+		}
+	}
+}

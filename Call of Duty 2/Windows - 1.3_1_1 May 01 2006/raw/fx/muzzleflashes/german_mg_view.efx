@@ -1,0 +1,245 @@
+Tail
+{
+	name				center_line
+
+	flags				relative
+
+	life				100
+
+	cullrange			1000
+
+	origin				29 0 0
+
+	velocity			1 0 0
+
+	rgb
+	{
+		curve
+		[
+			0 0.75 0.75 0.75
+			1 0.75 0.75 0.75
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0.5255 1 0.05
+			1 0.05 2.755e-040 2.516e-038
+		]
+
+		scale			0.95 1.05
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.375 1 0.75
+			1 0.75 2.755e-040 2.516e-038
+		]
+
+		scale			3 7
+	}
+
+	size2
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 2.516e-038
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 0.7568 1 0.75
+			1 0.75 2.755e-040 2.516e-038
+		]
+
+		scale			46
+	}
+
+	shaders
+	[
+		gfx_thompson_stage2
+	]
+}
+
+Particle
+{
+	name				smoke
+
+	flags				useAlpha
+
+	count				3 4
+
+	life				1000
+
+	cullrange			400
+
+	rotation			-360 360
+
+	rotationDelta		2 -2
+
+	velocity			42 33 33 0 -33 -33
+
+	rgb
+	{
+		curve
+		[
+			0 0.75 0.75 0.75
+			1 0.4676 0.4294 0.3882
+		]
+
+		scale			1.333
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0.3 1 0
+			1 0 2.755e-040 2.516e-038
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.0375 1 0.75
+			1 0.75 2.755e-040 2.516e-038
+		]
+
+		scale			26.67
+	}
+
+	sequenceStartFrameMode	1
+
+	sequencePlayRateMode	1
+
+	sequenceFixedFpsValue	0.000000
+
+	shaders
+	[
+		gfx_smokepuff_atlas
+	]
+}
+
+Particle
+{
+	name				fire_flash_2
+
+	flags				relative
+
+	count				4 3
+
+	life				100
+
+	cullrange			500
+
+	origin				0 0 0 18 0 0
+
+	rotation			90 -180
+
+	rotationDelta		11 -32
+
+	alpha
+	{
+		curve
+		[
+			0 0.275 0.06667 0.275
+			0.06667 0.275 0.1333 0.275
+			0.1333 0.275 0.2 0.275
+			0.2 0.275 0.2667 0.275
+			0.2667 0.275 0.3333 0.275
+			0.3333 0.275 0.4 0.275
+			0.4 0.275 0.4667 0.275
+			0.4667 0.275 0.5333 0.275
+			0.5333 0.275 0.6 0.275
+			0.6 0.275 0.6667 0.275
+			0.6667 0.275 0.7333 0.275
+			0.7333 0.275 0.8 0.275
+			0.8 0.275 0.8667 0.275
+			0.8667 0.275 0.9333 0.275
+			0.9333 0.275 1 0.275
+			1 0.275 1.561e-039 2.351e-038
+		]
+
+		scale			0.975 1.025
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.125 1 0.75
+			1 0.75 2.755e-040 2.516e-038
+		]
+
+		scale			15 17
+	}
+
+	size2
+	{
+		curve
+		[
+			0 0.0625 1 0.75
+			1 0.75 2.755e-040 2.516e-038
+		]
+
+		scale			16
+	}
+
+	length
+	{
+		curve
+		[
+			0 0.084 1 0.75
+			1 0.75 2.755e-040 2.516e-038
+		]
+
+		scale			500
+	}
+
+	shaders
+	[
+		gfx_muzflash2a
+	]
+}
+
+Light
+{
+	name				light
+
+	life				100
+
+	origin				18 0 0 29 0 0
+
+	rgb
+	{
+		curve
+		[
+			0 1.0 0.7137 0.6196
+			1 1.0 0.7137 0.6196
+		]
+
+		scale			1.307
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.75 1 0.00375
+			1 0.00375 2.755e-040 2.498e-038
+		]
+
+		scale			266.7
+	}
+}
+

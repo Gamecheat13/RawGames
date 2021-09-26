@@ -1,0 +1,105 @@
+#include "ui/menudef.h"
+{
+menuDef 
+{
+	name options_driverinfo
+	fullScreen 0				
+	rect 20 10 325 325				// Size and position of the menu
+	focusColor GLOBAL_FOCUSED_COLOR			// Menu focus color for text and items
+	soundloop ""
+	popup
+	onOpen
+	{
+//		uiScript loadControls
+	}
+	onESC 
+	{ 
+//		open main;
+		close options_driverinfo;		
+	}
+	onClose
+	{
+		open options_menu;
+		open options_look;
+	}
+
+/*
+	itemDef 
+	{
+		name keyBindStatus
+		rect 0 322 640 30 
+		ownerdraw UI_KEYBINDSTATUS
+		text "-"      
+		forecolor 1 .75 0 1
+		textscale .23
+		textalignx 221
+		textalign 1
+		textaligny 20
+		visible 1
+		decoration 
+	}
+*/
+	itemDef 
+	{
+		name di_back
+		rect 0 0 325 325	
+		style WINDOW_STYLE_FILLED
+		border 1
+		bordercolor .5 .5 .5 .5
+		forecolor 1 1 1 1
+		backcolor 0 0 0 .5
+		visible 0
+		decoration
+	}
+	itemDef 
+	{
+		name di_back
+		rect 0 60 600 400	
+		type ITEM_TYPE_BUTTON
+		style WINDOW_STYLE_FILLED
+		border 1
+		bordercolor .5 .5 .5 .5
+		forecolor 1 1 1 1
+		backcolor 0 0 0 .8
+		visible 1
+//		decoration
+		action { play "mouse_click"; close options_driverinfo; }
+	}	
+
+	itemDef
+	{
+		name driver
+		group grpSystem
+		rect 10 80 545 400
+		ownerdraw UI_GLINFO 
+		textscale .2
+		forecolor 1 1 1 1
+		visible 1
+		decoration
+	}
+	itemDef
+	{
+		name closes
+		text "@MENU_CLOSE"
+		rect 290 440 55 15
+		type ITEM_TYPE_BUTTON
+		style UI_BUTTON_STYLE
+		textstyle UI_BUTTON_TEXT_STYLE
+		textalign 1
+		textscale .3
+		textalignx 25
+		textaligny 12
+		border UI_BUTTON_BORDER
+		bordercolor	UI_BUTTON_BORDER_COLOR
+		forecolor UI_BUTTON_TEXT_COLOR
+		backcolor	UI_BUTTON_BACK_COLOR
+		visible 1
+		textfont UI_FONT_NORMAL
+		mouseEnter { play "mouse_over"; setitemcolor closes backcolor UI_BUTTON_BACK_COLOR_HOVER } 
+		mouseExit { setitemcolor closes backcolor  UI_BUTTON_BACK_COLOR  } 
+		action { play "mouse_click"; close options_driverinfo; }
+	}
+
+}
+
+}//

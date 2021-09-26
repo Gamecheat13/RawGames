@@ -1,0 +1,16 @@
+{
+	stateMap "effect_add_fogged";
+
+	vertex.position = code.position;
+	vertex.color[0] = code.color;
+	vertex.texcoord[0] = code.texcoord[0];
+
+	vertexShader 1.1 "vertcol_simple_efog.hlsl"
+	{
+	}
+
+	pixelShader 1.1 "vertcol_simple.hlsl"
+	{
+		colorMapSampler = material.colorMap;
+	}
+}

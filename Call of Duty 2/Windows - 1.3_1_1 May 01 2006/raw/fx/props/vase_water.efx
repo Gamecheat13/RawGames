@@ -1,0 +1,201 @@
+Particle
+{
+	name				splash_droplets
+
+	flags				impactKills useAlpha
+
+	count				12
+
+	life				1000 500
+
+	origin				15 -1 -1 19 1 1
+
+	rotation			360 0
+
+	rotationDelta		12 -12
+
+	velocity			200 -60 -60 130 60 60
+
+	gravity				-400
+
+	rgb
+	{
+		curve
+		[
+			0 0.7529 0.7529 0.7529
+			1 0.7529 0.7529 0.7529
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 1 0.2374 1
+			0.2374 1 0.5023 0.9343
+			0.5023 0.9343 0.7763 0.6788
+			0.7763 0.6788 0.9269 0.3139
+			0.9269 0.3139 1 0
+			1 0 6.429e-040 2.608e-038
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0 0.0411 0.4865
+			0.0411 0.4865 0.09589 0.7838
+			0.09589 0.7838 0.1507 0.9459
+			0.1507 0.9459 0.2283 1
+			0.2283 1 1 1
+			1 1 6.429e-040 2.608e-038
+		]
+
+		scale			28.5 31.5
+	}
+
+	shaders
+	[
+		gfx_rain_spray
+	]
+}
+
+Particle
+{
+	name				out_decal
+
+	flags				usePhysics impactFx useAlpha
+
+	spawnFlags			orgOnCylinder axisFromSphere
+
+	count				6
+
+	life				500
+
+	origin				15 0 0 19 0 0
+
+	radius				5
+
+	height				5
+
+	velocity			200 0 0
+
+	gravity				-500 -800
+
+	rgb
+	{
+		curve
+		[
+			0 0.7529 0.7529 0.7529
+			1 0.7529 0.7529 0.7529
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 2.627e-038
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 1 1 1
+			1 1 2.755e-040 2.627e-038
+		]
+
+		scale			5
+	}
+
+	shaders
+	[
+		gfx_water_mist
+	]
+
+	impactfx
+	[
+		/fx/impacts/decal_watersplat
+	]
+}
+
+FxRunner
+{
+	name				down_decal
+
+	playfx
+	[
+		/fx/impacts/decal_watersplat
+	]
+}
+
+Particle
+{
+	name				splash
+
+	flags				impactKills useAlpha
+
+	spawnFlags			orgOnCylinder axisFromSphere
+
+	count				5
+
+	life				800
+
+	delay				0 100
+
+	origin				15 -1 -1 19 1 1
+
+	radius				5
+
+	height				5
+
+	velocity			20 0 30 20 0 20
+
+	gravity				-100 -200
+
+	rgb
+	{
+		curve
+		[
+			0 0.7529 0.7529 0.7529
+			1 0.7529 0.7529 0.7529
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0.7591 0.2922 0.7007
+			0.2922 0.7007 0.6119 0.5328
+			0.6119 0.5328 0.8037 0.292
+			0.8037 0.292 1 0
+			1 0 5.51e-040 2.498e-038
+		]
+
+		scale			0.75 1.25
+	}
+
+	size
+	{
+		curve
+		[
+			0 0 0.0411 0.4865
+			0.0411 0.4865 0.1187 0.7477
+			0.1187 0.7477 0.2877 0.9279
+			0.2877 0.9279 1 1
+			1 1 5.51e-040 2.498e-038
+		]
+
+		scale			23.5 26.5
+	}
+
+	shaders
+	[
+		gfx_water_mist
+	]
+}

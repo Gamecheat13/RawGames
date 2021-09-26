@@ -1,0 +1,35 @@
+// Black bars
+	itemDef 
+	{
+		style			WINDOW_STYLE_FILLED
+		rect			-128 0 896 65
+		backcolor		0 0 0 1
+		visible			1
+		decoration
+	}
+	itemDef 
+	{
+		style			WINDOW_STYLE_FILLED
+		rect			-128 416 896 64
+		backcolor		0 0 0 1
+		visible			1
+		decoration
+	}
+
+// Lines
+	itemDef 
+	{
+		style			WINDOW_STYLE_FILLED
+		rect			-128 64 896 1
+		backcolor		.65 .65 .65 1
+		visible			1
+		decoration
+	}
+	itemDef 
+	{
+		style			WINDOW_STYLE_FILLED
+		rect			-128 416 896 1
+		backcolor		.65 .65 .65 1
+		visible			1
+		decoration
+	}

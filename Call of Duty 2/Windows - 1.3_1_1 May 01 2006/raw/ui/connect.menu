@@ -1,0 +1,16 @@
+#include "ui/menudef.h"
+
+// Displayed when client is initially connecting to the server.
+{
+	menuDef 
+	{
+		name "Connect"
+		rect 0 0 640 480
+		fullScreen MENU_TRUE
+		visible MENU_FALSE
+		backcolor 0 0 0 1
+		style WINDOW_STYLE_FILLED
+      	
+		#include "ui/load_screens.menu"
+	}
+}

@@ -1,0 +1,45 @@
+#include "ui/menudef.h"
+{	
+	// OBJECTIVE INFO
+	menuDef
+	{
+		name "objectiveinfo"
+		fullScreen MENU_FALSE
+		visible MENU_TRUE
+		rect -2 -2 0 0 HORIZONTAL_ALIGN_LEFT VERTICAL_ALIGN_TOP
+		onOpen
+		{ 
+			setfocus "resumegame"
+			show "pauseoptions"
+		}
+		
+		// objective check box stub
+		itemDef
+		{
+			name "objectivecheckbox"
+			rect 15 80 16 16
+			forecolor 1.0 1.0 1.0 1.0
+			textscale 0.30
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			textfont UI_FONT_DEFAULT
+			visible MENU_TRUE
+			ownerdraw CG_MISSION_OBJECTIVE_LIST
+			decoration
+		}
+		
+		// objective header 
+		// Draw after objective list to guarantee we know the lengths of the objective strings
+		itemDef
+		{
+			name "objectiveheader"
+			rect 15 55 350 40
+			forecolor 1.0 1.0 1.0 1.0
+			textscale 0.40
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			textfont UI_FONT_DEFAULT
+			visible MENU_TRUE
+			ownerdraw CG_MISSION_OBJECTIVE_HEADER
+			decoration
+		}
+	}
+}

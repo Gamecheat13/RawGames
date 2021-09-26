@@ -1,0 +1,165 @@
+Particle
+{
+	name				groundsmoke
+
+	flags				useAlpha
+
+	spawnFlags			absoluteAccel orgOnCylinder evenDistribution 
+
+	count				10 15
+
+	life				1e+004
+
+	delay				100 2500
+
+	radius				5
+
+	height				5 10
+
+	wind				1 20
+
+	rotation			360 -360
+
+	rotationDelta		-20 -10
+
+	velocity			6 0 0 0 0 0
+
+	acceleration		0 -5 12 0 -8 0
+
+	rgb
+	{
+		curve
+		[
+			0 0.5177 0.6098 0.6334
+			0.06667 0.5177 0.6098 0.6334
+			0.1333 0.5177 0.6098 0.6334
+			0.2 0.5177 0.6098 0.6334
+			0.2667 0.5177 0.6098 0.6334
+			0.3333 0.5177 0.6098 0.6334
+			0.4 0.5177 0.6098 0.6334
+			0.4667 0.5177 0.6098 0.6334
+			0.5333 0.5177 0.6098 0.6334
+			0.6 0.5177 0.6098 0.6334
+			0.6667 0.5177 0.6098 0.6334
+			0.7333 0.5177 0.6098 0.6334
+			0.8 0.5177 0.6098 0.6334
+			0.8667 0.5177 0.6098 0.6334
+			0.9333 0.5177 0.6098 0.6334
+			1 0.5177 0.6098 0.6334
+		]
+
+		scale			0.9295 1.071
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0.38 1 0
+			1 0 2.755e-040 1.103e-039
+		]
+
+		scale			1.12 0.88
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.0375 1 0.75
+			1 0.75 2.755e-040 1.103e-039
+		]
+
+		scale			133.3
+	}
+
+	shaders
+	[
+		gfx_whisp_spiral
+	]
+}
+
+Particle
+{
+	name				smoke
+
+	flags				useAlpha
+
+	spawnFlags			absoluteAccel evenDistribution 
+
+	count				5
+
+	life				1e+004
+
+	delay				100
+
+	origin				0 20 20 100 -20 -20
+
+	radius				5
+
+	rotation			360 -360
+
+	rotationDelta		-20 -10
+
+	velocity			6 0 0 0 0 0
+
+	acceleration		0 -5 12 0 -8 0
+
+	rgb
+	{
+		curve
+		[
+			0 0.5176 0.6078 0.6314
+			1 0.5176 0.6078 0.6314
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0 0.0274 0.365
+			0.0274 0.365 0.06849 0.4745
+			0.06849 0.4745 0.1689 0.5036
+			0.1689 0.5036 0.3927 0.3139
+			0.3927 0.3139 1 0
+			1 0 6.429e-040 2.572e-038
+		]
+
+		scale			0.85 1.15
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.1875 1 0.75
+			1 0.75 2.755e-040 1.103e-039
+		]
+
+		scale			133.3
+	}
+
+	size2
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 1.103e-039
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 1.103e-039
+		]
+	}
+
+	shaders
+	[
+		gfx_whisp_spiral
+	]
+}

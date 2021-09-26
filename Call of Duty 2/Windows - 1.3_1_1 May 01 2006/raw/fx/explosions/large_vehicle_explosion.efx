@@ -1,0 +1,549 @@
+Particle
+{
+	name				thin_smoke
+
+	flags				useBBox useAlpha
+
+	spawnFlags			axisFromSphere
+
+	count				20
+
+	life				5000 8000
+
+	delay				200 0
+
+	origin				300 -100 -100 200 100 100
+
+	radius				60
+
+	height				400
+
+	rotation			0 360
+
+	rotationDelta		-12 12
+
+	velocity			250 0 13 50 0 0
+
+	acceleration		0 0 65 0 0 0
+
+	rgb
+	{
+		curve
+		[
+			0 0.8392 0.7176 0.4706
+			0.1549 0.4435 0.4431 0.4431
+			1 0 0 0
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0 0.03196 0.5036
+			0.03196 0.5036 0.1005 0.9124
+			0.1005 0.9124 0.1781 0.9635
+			0.1781 0.9635 0.2968 0.9051
+			0.2968 0.9051 1 0
+			1 0 6.429e-040 2.572e-038
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.1622 1 0.991
+			1 0.991 2.755e-040 2.498e-038
+		]
+
+		scale			383 583
+	}
+
+	size2
+	{
+		curve
+		[
+			0 0.5625 1 0.75
+			1 0.75 2.755e-040 2.498e-038
+		]
+
+		scale			266.7
+	}
+
+	length
+	{
+		curve
+		[
+			0 1 1 1
+			1 1 2.755e-040 2.498e-038
+		]
+	}
+
+	sequenceStartFrameMode	1
+
+	sequenceFixedFpsValue	0.000000
+
+	sequenceLoopTimes	2
+
+	shaders
+	[
+		gfx_smokepuff_atlas
+	]
+}
+
+Particle
+{
+	name				dirt
+
+	flags				useBBox useAlpha relative
+
+	spawnFlags			axisFromSphere evenDistribution
+
+	count				20
+
+	life				1000 1750
+
+	delay				0 200
+
+	origin				-50 -30 -30 150 30 30
+
+	radius				12
+
+	rotation			360 -360
+
+	rotationDelta		12 -12
+
+	velocity			250 -200 -200 225 200 200
+
+	gravity				-350 -400
+
+	rgb
+	{
+		curve
+		[
+			0 0.2824 0.2824 0.2824
+			1 0.2824 0.2824 0.2824
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0 0.08676 0.5182
+			0.08676 0.5182 0.3379 0.7007
+			0.3379 0.7007 0.6758 0.4818
+			0.6758 0.4818 1 0
+			1 0 5.51e-040 2.571e-038
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.3874 1 0.8468
+			1 0.8468 2.755e-040 2.498e-038
+		]
+
+		scale			145 155
+	}
+
+	shaders
+	[
+		gfx_dirtchunks
+	]
+}
+
+Particle
+{
+	name				Flash1
+
+	spawnFlags			orgOnCylinder axisFromSphere
+
+	count				8
+
+	life				1000 800
+
+	origin				60 0 0
+
+	radius				0 20
+
+	height				0 60
+
+	rotation			45 0
+
+	velocity			0 0 200 0 0 0
+
+	rgb
+	{
+		curve
+		[
+			0 0.3843 0.3843 0.3843
+			1 0.3647 0.3647 0.3647
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 1 0.5342 0.9635
+			0.5342 0.9635 0.8037 0.8321
+			0.8037 0.8321 0.9315 0.3723
+			0.9315 0.3723 1 0
+			1 0 5.51e-040 2.571e-038
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.0375 0.2283 0.4414
+			0.2283 0.4414 0.5479 0.7568
+			0.5479 0.7568 0.7808 0.9189
+			0.7808 0.9189 1 1
+			1 1 5.51e-040 2.571e-038
+		]
+
+		scale			133
+	}
+
+	size2
+	{
+		curve
+		[
+			0 0.75 1 0.0123
+			1 0.0123 2.755e-040 2.498e-038
+		]
+
+		scale			140
+	}
+
+	length
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+
+		scale			581
+	}
+
+	sequencePlayRateMode	1
+
+	shaders
+	[
+		gfx_exp_fireball_atlas
+	]
+}
+
+Particle
+{
+	name				Flash2
+
+	spawnFlags			evenDistribution
+
+	count				16
+
+	life				1000 100
+
+	delay				0 200
+
+	origin				100 -100 -100 200 100 100
+
+	rotation			45
+
+	velocity			250 -90 -90 50 90 90
+
+	rgb
+	{
+		curve
+		[
+			0 0.3373 0.2196 0.1725
+			1 0.2706 0.2706 0.2706
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0.5766 0.2009 0.5985
+			0.2009 0.5985 0.6256 0.562
+			0.6256 0.562 0.8402 0.3796
+			0.8402 0.3796 1 0
+			1 0 5.51e-040 2.571e-038
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0 0.03653 0.3604
+			0.03653 0.3604 0.137 0.5766
+			0.137 0.5766 0.3242 0.7658
+			0.3242 0.7658 1 0.7838
+			1 0.7838 5.51e-040 2.571e-038
+		]
+
+		scale			100 200
+	}
+
+	size2
+	{
+		curve
+		[
+			0 0.75 1 0.0123
+			1 0.0123 2.755e-040 2.498e-038
+		]
+
+		scale			162.7
+	}
+
+	length
+	{
+		curve
+		[
+			0 1 1 1
+			1 1 2.755e-040 2.498e-038
+		]
+
+		scale			162.7
+	}
+
+	sequenceStartFrameMode	2
+
+	sequenceFixedFpsValue	12.000000
+
+	shaders
+	[
+		gfx_exp_fireball_atlas
+	]
+}
+
+Decal
+{
+	name				decal
+
+	life				4e+005
+
+	rotation			360 -360
+
+	rgb
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 1 0.9224 1
+			0.9224 1 0.9635 0.9197
+			0.9635 0.9197 0.9863 0.8102
+			0.9863 0.8102 1 0
+			1 0 5.51e-040 2.571e-038
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.75 1 0.75
+			1 0.75 2.755e-040 2.498e-038
+		]
+
+		scale			270 280
+	}
+
+	shaders
+	[
+		gfx_crater_blacktop
+	]
+}
+
+Particle
+{
+	name				light_groundsmoke
+
+	flags				usePhysics impactKills useAlpha
+
+	spawnFlags			absoluteAccel orgOnCylinder evenDistribution
+
+	count				10 15
+
+	life				1e+004
+
+	delay				100 2500
+
+	radius				25
+
+	height				25 50
+
+	wind				1 20
+
+	rotation			360 -360
+
+	rotationDelta		-20 -10
+
+	velocity			30 0 0 0 0 0
+
+	acceleration		0 -30 15 0 0 20
+
+	rgb
+	{
+		curve
+		[
+			0 0.5177 0.6098 0.6334
+			0.06667 0.5177 0.6098 0.6334
+			0.1333 0.5177 0.6098 0.6334
+			0.2 0.5177 0.6098 0.6334
+			0.2667 0.5177 0.6098 0.6334
+			0.3333 0.5177 0.6098 0.6334
+			0.4 0.5177 0.6098 0.6334
+			0.4667 0.5177 0.6098 0.6334
+			0.5333 0.5177 0.6098 0.6334
+			0.6 0.5177 0.6098 0.6334
+			0.6667 0.5177 0.6098 0.6334
+			0.7333 0.5177 0.6098 0.6334
+			0.8 0.5177 0.6098 0.6334
+			0.8667 0.5177 0.6098 0.6334
+			0.9333 0.5177 0.6098 0.6334
+			1 0.5177 0.6098 0.6334
+		]
+
+		scale			0.9295 1.071
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0.38 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+
+		scale			1.12 0.88
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.0375 1 0.75
+			1 0.75 2.755e-040 2.498e-038
+		]
+
+		scale			665.3
+	}
+
+	shaders
+	[
+		gfx_whisp_spiral
+	]
+}
+
+Particle
+{
+	name				light_smoke
+
+	flags				usePhysics impactKills useAlpha
+
+	spawnFlags			absoluteAccel evenDistribution
+
+	count				5
+
+	life				1e+004
+
+	delay				100
+
+	origin				0 100 100 500 -100 -100
+
+	radius				5
+
+	rotation			360 -360
+
+	rotationDelta		-20 -10
+
+	velocity			30 0 0 0 0 0
+
+	acceleration		0 -30 15 0 0 20
+
+	rgb
+	{
+		curve
+		[
+			0 0.5176 0.6078 0.6314
+			1 0.5176 0.6078 0.6314
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0 0.0274 0.365
+			0.0274 0.365 0.06849 0.4745
+			0.06849 0.4745 0.1689 0.5036
+			0.1689 0.5036 0.3927 0.3139
+			0.3927 0.3139 1 0
+			1 0 6.429e-040 2.572e-038
+		]
+
+		scale			0.85 1.15
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.1875 1 0.75
+			1 0.75 2.755e-040 2.498e-038
+		]
+
+		scale			665
+	}
+
+	size2
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	shaders
+	[
+		gfx_whisp_spiral
+	]
+}
+
+FxRunner
+{
+	name				grenadeFlash
+
+	playfx
+	[
+		/fx/explosions/grenade_flash
+	]
+}

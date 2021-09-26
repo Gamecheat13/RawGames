@@ -1,0 +1,15 @@
+{
+	stateMap "nofog";
+
+	vertex.position = code.position;
+	vertex.texcoord[0] = code.texcoord[0];
+
+	vertexShader 2.0 "shadowcookie_blur.hlsl"
+	{
+	}
+
+	pixelShader 2.0 "shadowcookie_blur.hlsl"
+	{
+		shadowCookieSampler = sampler.feedback;
+	}
+}

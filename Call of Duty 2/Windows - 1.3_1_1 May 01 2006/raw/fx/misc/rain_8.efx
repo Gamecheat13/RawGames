@@ -1,0 +1,276 @@
+Tail
+{
+	name				streaks
+
+	flags				usePhysics impactKills impactFx useAlpha useRandomAlpha useRandomVelocity absoluteVel
+
+	spawnFlags			cheapOrgCalc evenDistribution
+
+	nonUniformScale		1
+
+	count				155
+
+	life				1200
+
+	delay				0 200
+
+	origin				-600 -600 0 600 600 0
+
+	radius				200
+
+	wind				100 75
+
+	spawnFrustumCullRadius	100.000000
+
+	rgb
+	{
+		curve
+		[
+			0 0.7529 0.7529 0.7529
+			1 0.7529 0.7529 0.7529
+		]
+	}
+
+	rgbRand
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0.505 0.7471 0.5099
+			0.7471 0.5099 1 0
+			1 0 3.673e-040 7.351e-040
+		]
+	}
+
+	alphaRand
+	{
+		curve
+		[
+			0 0.3218 0.7615 0.3069
+			0.7615 0.3069 1 0
+			1 0 3.673e-040 7.351e-040
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.3608 1 0.3671
+			1 0.3671 2.755e-040 7.352e-040
+		]
+	}
+
+	sizeRand
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 7.352e-040
+		]
+	}
+
+	size2
+	{
+		curve
+		[
+			0 0.75 0.06667 0.75
+			0.06667 0.75 0.1333 0.75
+			0.1333 0.75 0.2 0.75
+			0.2 0.75 0.2667 0.75
+			0.2667 0.75 0.3333 0.75
+			0.3333 0.75 0.4 0.75
+			0.4 0.75 0.4667 0.75
+			0.4667 0.75 0.5333 0.75
+			0.5333 0.75 0.6 0.75
+			0.6 0.75 0.6667 0.75
+			0.6667 0.75 0.7333 0.75
+			0.7333 0.75 0.8 0.75
+			0.8 0.75 0.8667 0.75
+			0.8667 0.75 0.9333 0.75
+			0.9333 0.75 1 0.75
+			1 0.75 1.561e-039 2.572e-038
+		]
+
+		scale			133.3
+	}
+
+	size2Rand
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 7.352e-040
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 0.75 1 0.75
+			1 0.75 2.755e-040 7.352e-040
+		]
+
+		scale			100
+	}
+
+	lengthRand
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 7.352e-040
+		]
+	}
+
+	rotationDelta
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 7.352e-040
+		]
+	}
+
+	rotationDeltaRand
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 7.352e-040
+		]
+	}
+
+	velocityX
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 7.352e-040
+		]
+
+		scale			0
+	}
+
+	velocityY
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 7.352e-040
+		]
+
+		scale			0
+	}
+
+	velocityZ
+	{
+		curve
+		[
+			0 -0.5 1 -0.5
+			1 -0.5 2.755e-040 7.352e-040
+		]
+
+		scale			3000
+	}
+
+	velocityXRand
+	{
+		curve
+		[
+			0 0.055 1 0.055
+			1 0.055 2.755e-040 7.352e-040
+		]
+	}
+
+	velocityYRand
+	{
+		curve
+		[
+			0 0.055 1 0.055
+			1 0.055 2.755e-040 7.352e-040
+		]
+	}
+
+	velocityZRand
+	{
+		curve
+		[
+			0 -0.225 1 -0.225
+			1 -0.225 2.755e-040 7.352e-040
+		]
+	}
+
+	velocity2X
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 7.352e-040
+		]
+	}
+
+	velocity2Y
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 7.352e-040
+		]
+	}
+
+	velocity2Z
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 7.352e-040
+		]
+	}
+
+	velocity2XRand
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 7.352e-040
+		]
+	}
+
+	velocity2YRand
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 7.352e-040
+		]
+	}
+
+	velocity2ZRand
+	{
+		curve
+		[
+			0 0 1 0
+			1 0 2.755e-040 7.352e-040
+		]
+	}
+
+	shaders
+	[
+		gfx_rain_drop
+	]
+
+	impactfx
+	[
+		/fx/misc/rain_splash
+	]
+}

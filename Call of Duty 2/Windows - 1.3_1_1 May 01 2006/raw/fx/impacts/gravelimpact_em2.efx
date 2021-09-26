@@ -1,0 +1,46 @@
+Particle
+{
+	flags				useAlpha
+
+	life				500 600
+
+	rotation			-360 360
+
+	rotationDelta		4 -4
+
+	velocity			23 21 21 21 -21 -21
+
+	rgb
+	{
+		curve
+		[
+			0 0.4118 0.3961 0.3059
+			1 0.3529 0.3412 0.2549
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 1 1 0
+			1 0 2.755e-040 2.498e-038
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.075 1 0.75
+			1 0.75 2.755e-040 2.498e-038
+		]
+
+		scale			32.83 33.83
+	}
+
+	shaders
+	[
+		gfx_dirtchunks
+	]
+}

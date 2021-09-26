@@ -1,0 +1,77 @@
+"fakelight normal":
+	fakelight_normal;
+
+"fakelight view":
+	fakelight_view;
+
+"shaded wireframe":
+	wireframe_shaded;
+
+"solid wireframe":
+	wireframe_solid;
+
+"debug bumpmap":
+	debug_bumpmap;
+
+"depth prepass":
+	zprepass_atest;
+
+"build floatz":
+	build_floatz_atest;
+
+"unlit no fog":
+	vertcol_shaded;
+
+"unlit linear fog":
+	vertcol_shaded_lfog;
+
+"unlit exp fog":
+	vertcol_shaded_efog;
+
+"lightmap no fog":
+	lmap_a_s;
+
+"lightmap linear fog":
+	lmap_a_s_lfog;
+
+"lightmap exp fog":
+	lmap_a_s_efog;
+
+// From here down, techniques need to support the flag stuff
+"lightprobe no fog":
+	lprobe_flag_a_s;
+
+"lightprobe linear fog":
+	lprobe_flag_a_s_lfog;
+
+"lightprobe exp fog":
+	lprobe_flag_a_s_efog;
+
+"pointlight no fog":
+	l_point_flag;
+
+"pointlight linear fog":
+	l_point_lfog;
+
+"pointlight exp fog":
+	l_point_efog;
+
+// smodels don't support the flag stuff yet
+"lightprobe smodel no fog":
+	lprobe_flag_sm_a_s;	// ok this one does, but only this one.
+
+"lightprobe smodel linear fog":
+	lprobe_sm_a_s_lfog;
+
+"lightprobe smodel exp fog":
+	lprobe_sm_a_s_efog;
+
+"lightprobe smodel cached no fog":
+	lprobe_smc_a_s;
+
+"lightprobe smodel cached linear fog":
+	lprobe_smc_a_s_lfog;
+
+"lightprobe smodel cached exp fog":
+	lprobe_smc_a_s_efog;
+

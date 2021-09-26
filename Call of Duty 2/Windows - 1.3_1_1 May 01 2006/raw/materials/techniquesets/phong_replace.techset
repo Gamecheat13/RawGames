@@ -1,0 +1,80 @@
+"fakelight normal":
+	fakelight_normal;
+
+"fakelight view":
+	fakelight_view;
+
+"shaded wireframe":
+	wireframe_shaded;
+
+"solid wireframe":
+	wireframe_solid;
+
+"debug bumpmap":
+	debug_bumpmap;
+
+"depth prepass":
+	zprepass;
+
+"build floatz":
+	build_floatz;
+
+"unlit no fog":
+	vertcol_shaded;
+
+"unlit linear fog":
+	vertcol_shaded_lfog;
+
+"unlit exp fog":
+	vertcol_shaded_efog;
+
+"lightmap no fog":
+	lmap;
+
+"lightmap linear fog":
+	lmap_lfog;
+
+"lightmap exp fog":
+	lmap_efog;
+
+"lightprobe no fog":
+	lprobe;
+
+"lightprobe linear fog":
+	lprobe_lfog;
+
+"lightprobe exp fog":
+	lprobe_efog;
+
+"lightprobe smodel no fog":
+	lprobe_sm;
+
+"lightprobe smodel linear fog":
+	lprobe_sm_lfog;
+
+"lightprobe smodel exp fog":
+	lprobe_sm_efog;
+
+"lightprobe smodel cached no fog":
+	lprobe_smc;
+
+"lightprobe smodel cached linear fog":
+	lprobe_smc_lfog;
+
+"lightprobe smodel cached exp fog":
+	lprobe_smc_efog;
+
+"pointlight no fog":
+	l_point;
+
+"pointlight linear fog":
+	l_point_lfog;
+
+"pointlight exp fog":
+	l_point_efog;
+
+"shadowcookie caster":
+	shadowcookie_caster;
+
+"shadowcookie receiver":
+	shadowcookie_receiver;

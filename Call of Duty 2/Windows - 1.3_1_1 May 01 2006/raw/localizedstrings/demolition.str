@@ -1,0 +1,64 @@
+// Note to translators:
+// If a sentence is the same in your language then please change it to "#same"
+//
+// eg:
+// LANG_ENGLISH  "HALT"
+// LANG_GERMAN   "#same"
+//
+// (This is so we can tell which strings have been signed-off as ok to be the same words for QA
+//  and because we do not store duplicate strings, which will then get exported again next time
+//  as being untranslated.)
+//
+VERSION             "1"
+CONFIG              "C:\trees\cod2\bin\StringEd.cfg"
+FILENOTES           ""
+
+REFERENCE           OBJ_1
+LANG_ENGLISH        "Rendezvous with the defensive line at Solechnaya St."
+
+REFERENCE           OBJ_2
+LANG_ENGLISH        "Repulse the German attack."
+
+REFERENCE           OBJ_3
+LANG_ENGLISH        "Clear out the German hardpoint on the far side of the intersection."
+
+REFERENCE           OBJ_4
+LANG_ENGLISH        "Report to Lt. Leonov."
+
+REFERENCE           OBJ_5
+LANG_ENGLISH        "Obtain explosives from the engineer."
+
+REFERENCE           OBJ_6A
+LANG_ENGLISH        "Plant explosives throughout the building."
+
+REFERENCE           OBJ_6
+LANG_ENGLISH        "Plant explosives throughout the building. [&&1 remaining]"
+
+REFERENCE           OBJ_7
+LANG_ENGLISH        "Get to a safe distance."
+
+REFERENCE           OBJ_HINT_COMMISSAR
+LANG_ENGLISH        "Your objective is indicated by the yellow star on the compass."
+
+REFERENCE           OBJ_HINT_GET_EXPLOSIVES
+LANG_ENGLISH        "Get the explosives from an engineer, by following the yellow star on the compass."
+
+REFERENCE           OBJ_HINT_PLANT_EXPLOSIVES
+LANG_ENGLISH        "Plant the explosives at your objective, the yellow stars on the compass."
+
+REFERENCE           OBJ_HINT_PLANT_EXPLOSIVES_PLURAL
+LANG_ENGLISH        "These explosives are not your objective. The yellow stars on the compass indicate your objective."
+
+REFERENCE           OBJ_HINT_PLANT_EXPLOSIVES_SINGULAR
+LANG_ENGLISH        "These explosives are not your objective. The yellow star on the compass indicates your objective."
+
+REFERENCE           OBJ_HINT_HEIGHT_BELOW
+LANG_ENGLISH        "Sometimes your objective is located on the floor below the star."
+
+REFERENCE           OBJ_HINT_HEIGHT_ABOVE
+LANG_ENGLISH        "Sometimes your objective is located on the floor above the star."
+
+
+ENDMARKER
+
+

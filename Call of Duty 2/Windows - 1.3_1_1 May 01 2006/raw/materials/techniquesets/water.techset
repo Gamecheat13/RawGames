@@ -1,0 +1,35 @@
+"fakelight normal":
+	fakelight_normal;
+
+"fakelight view":
+	fakelight_view;
+
+"shaded wireframe":
+	wireframe_shaded;
+
+"solid wireframe":
+	wireframe_solid;
+
+"debug bumpmap":
+	debug_bumpmap;
+
+"unlit no fog":
+	vertcol_shaded;
+
+"unlit linear fog":
+	vertcol_shaded_lfog;
+
+"unlit exp fog":
+	vertcol_shaded_efog;
+
+"lightmap no fog":
+"lightprobe no fog":
+	water_l_sun;
+
+"lightmap linear fog":
+"lightprobe linear fog":
+	water_l_sun_lfog;
+
+"lightmap exp fog":
+"lightprobe exp fog":
+	water_l_sun_efog;

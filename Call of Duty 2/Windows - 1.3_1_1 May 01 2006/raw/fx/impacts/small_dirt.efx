@@ -1,0 +1,1353 @@
+Particle
+{
+	name				puff
+
+	flags				useAlpha useRandomRotationDelta
+
+	spawnFlags			orgOnCylinder axisFromSphere frustumCull
+
+	count				2
+
+	life				5000 4000
+
+	spawnRange			0 2400
+
+	origin				0 -12 -12 12 12 12
+
+	rotation			432 -123
+
+	gravity				1 2
+
+	spawnFrustumCullRadius	60.000000
+
+	rgb
+	{
+		curve
+		[
+			0 0.5098 0.4784 0.4157
+			1 0.5098 0.4784 0.4157
+		]
+	}
+
+	rgbRand
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0.75 0 0
+			0.1689 0.4453 0 0
+			0.4658 0.1752 0 0
+			0.7306 0.05109 0 0
+			1 0 0 0
+		]
+
+		scale			0.85 1.15
+	}
+
+	alphaRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0 0 0
+			0.0274 0.3514 0 0
+			0.1005 0.5225 0 0
+			0.2283 0.7117 0 0
+			0.4338 0.8288 0 0
+			1 1 0 0
+		]
+
+		scale			21.67 23.67
+	}
+
+	sizeRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2Rand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	lengthRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDelta
+	{
+		curve
+		[
+			0 -0.5 0 0
+			0.05263 -0.4187 0 0
+			0.1053 -0.3507 0 0
+			0.1579 -0.2937 0 0
+			0.2105 -0.246 0 0
+			0.2632 -0.206 0 0
+			0.3158 -0.1725 0 0
+			0.3684 -0.1445 0 0
+			0.4211 -0.121 0 0
+			0.4737 -0.1014 0 0
+			0.5263 -0.08488 0 0
+			0.5789 -0.07109 0 0
+			0.6316 -0.05954 0 0
+			0.6842 -0.04986 0 0
+			0.7368 -0.04176 0 0
+			0.7895 -0.03497 0 0
+			0.8421 -0.02929 0 0
+			0.8947 -0.02453 0 0
+			0.9474 -0.02054 0 0
+			1 -0.01721 0 0
+		]
+
+		scale			40
+	}
+
+	rotationDeltaRand
+	{
+		curve
+		[
+			0 0.5 0 0
+			0.05263 0.435 0 0
+			0.1053 0.3785 0 0
+			0.1579 0.3293 0 0
+			0.2105 0.2864 0 0
+			0.2632 0.2492 0 0
+			0.3158 0.2168 0 0
+			0.3684 0.1886 0 0
+			0.4211 0.1641 0 0
+			0.4737 0.1428 0 0
+			0.5263 0.1242 0 0
+			0.5789 0.1081 0 0
+			0.6316 0.09402 0 0
+			0.6842 0.08179 0 0
+			0.7368 0.07116 0 0
+			0.7895 0.06191 0 0
+			0.8421 0.05386 0 0
+			0.8947 0.04686 0 0
+			0.9474 0.04077 0 0
+			1 0.03547 0 0
+		]
+	}
+
+	velocityX
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityY
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityZ
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityXRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityYRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityZRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2X
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Y
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Z
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2XRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2YRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2ZRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	shaders
+	[
+		gfx_whisp_spiral
+	]
+}
+
+Particle
+{
+	name				rock debri
+
+	flags				usePhysics impactKills useAlpha useRandomRotationDelta useRandomVelocity
+
+	spawnFlags			axisFromSphere frustumCull
+
+	count				2 3
+
+	life				1000 600
+
+	spawnRange			0 600
+
+	radius				3 6
+
+	rotation			360 -360
+
+	gravity				-800
+
+	spawnFrustumCullRadius	60.000000
+
+	rgb
+	{
+		curve
+		[
+			0 0.75 0.75 0.75
+			1 0.75 0.75 0.75
+		]
+	}
+
+	rgbRand
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 1 0 0
+			1 0.25 0 0
+		]
+	}
+
+	alphaRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.75 0 0
+			1 0.075 0 0
+		]
+
+		scale			1.333
+	}
+
+	sizeRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2Rand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	lengthRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDelta
+	{
+		curve
+		[
+			0 0.2442 0 0
+			0.05263 0.2362 0 0
+			0.1053 0.2286 0 0
+			0.1579 0.2211 0 0
+			0.2105 0.214 0 0
+			0.2632 0.207 0 0
+			0.3158 0.2003 0 0
+			0.3684 0.1938 0 0
+			0.4211 0.1875 0 0
+			0.4737 0.1814 0 0
+			0.5263 0.1755 0 0
+			0.5789 0.1698 0 0
+			0.6316 0.1643 0 0
+			0.6842 0.1589 0 0
+			0.7368 0.1538 0 0
+			0.7895 0.1488 0 0
+			0.8421 0.1439 0 0
+			0.8947 0.1392 0 0
+			0.9474 0.1347 0 0
+			1 0.1303 0 0
+		]
+
+		scale			86
+	}
+
+	rotationDeltaRand
+	{
+		curve
+		[
+			0 0.5 0 0
+			0.05263 0.4902 0 0
+			0.1053 0.4807 0 0
+			0.1579 0.4713 0 0
+			0.2105 0.4621 0 0
+			0.2632 0.4531 0 0
+			0.3158 0.4443 0 0
+			0.3684 0.4356 0 0
+			0.4211 0.4271 0 0
+			0.4737 0.4188 0 0
+			0.5263 0.4106 0 0
+			0.5789 0.4026 0 0
+			0.6316 0.3948 0 0
+			0.6842 0.3871 0 0
+			0.7368 0.3795 0 0
+			0.7895 0.3721 0 0
+			0.8421 0.3649 0 0
+			0.8947 0.3577 0 0
+			0.9474 0.3508 0 0
+			1 0.3439 0 0
+		]
+	}
+
+	velocityX
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+
+		scale			466
+	}
+
+	velocityY
+	{
+		curve
+		[
+			0 -0.2854 0 0
+			1 -0.2854 0 0
+		]
+
+		scale			466
+	}
+
+	velocityZ
+	{
+		curve
+		[
+			0 -0.2854 0 0
+			1 -0.2854 0 0
+		]
+
+		scale			466
+	}
+
+	velocityXRand
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+	}
+
+	velocityYRand
+	{
+		curve
+		[
+			0 0.2854 0 0
+			1 0.2854 0 0
+		]
+	}
+
+	velocityZRand
+	{
+		curve
+		[
+			0 0.2854 0 0
+			1 0.2854 0 0
+		]
+	}
+
+	velocity2X
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Y
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Z
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2XRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2YRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2ZRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	shaders
+	[
+		gfx_rockdebri_01
+		gfx_rockdebri_02
+		gfx_rockdebri_03
+		gfx_rockdebri_04
+	]
+}
+
+Particle
+{
+	name				dirt_chunks
+
+	flags				useAlpha useRandomRotationDelta
+
+	spawnFlags			orgOnCylinder axisFromSphere frustumCull
+
+	count				4
+
+	life				300 400
+
+	spawnRange			0 2400
+
+	origin				0 0 0 23 0 0
+
+	rotation			432 -123
+
+	spawnFrustumCullRadius	60.000000
+
+	rgb
+	{
+		curve
+		[
+			0 0.5098 0.4784 0.4157
+			1 0.5098 0.4784 0.4157
+		]
+	}
+
+	rgbRand
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0.75 0 0
+			1 0 0 0
+		]
+
+		scale			0.85 1.15
+	}
+
+	alphaRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.08824 0 0
+			1 1 0 0
+		]
+
+		scale			21.67 23.67
+	}
+
+	sizeRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2Rand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	lengthRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDelta
+	{
+		curve
+		[
+			0 0 0 0
+			0.05263 0 0 0
+			0.1053 0 0 0
+			0.1579 0 0 0
+			0.2105 0 0 0
+			0.2632 0 0 0
+			0.3158 0 0 0
+			0.3684 0 0 0
+			0.4211 0 0 0
+			0.4737 0 0 0
+			0.5263 0 0 0
+			0.5789 0 0 0
+			0.6316 0 0 0
+			0.6842 0 0 0
+			0.7368 0 0 0
+			0.7895 0 0 0
+			0.8421 0 0 0
+			0.8947 0 0 0
+			0.9474 0 0 0
+			1 0 0 0
+		]
+
+		scale			6
+	}
+
+	rotationDeltaRand
+	{
+		curve
+		[
+			0 0.5 0 0
+			0.05263 0.4935 0 0
+			0.1053 0.4871 0 0
+			0.1579 0.4808 0 0
+			0.2105 0.4745 0 0
+			0.2632 0.4683 0 0
+			0.3158 0.4622 0 0
+			0.3684 0.4562 0 0
+			0.4211 0.4503 0 0
+			0.4737 0.4445 0 0
+			0.5263 0.4387 0 0
+			0.5789 0.433 0 0
+			0.6316 0.4273 0 0
+			0.6842 0.4218 0 0
+			0.7368 0.4163 0 0
+			0.7895 0.4109 0 0
+			0.8421 0.4055 0 0
+			0.8947 0.4003 0 0
+			0.9474 0.3951 0 0
+			1 0.3899 0 0
+		]
+	}
+
+	velocityX
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+
+		scale			46
+	}
+
+	velocityY
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+
+		scale			46
+	}
+
+	velocityZ
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+
+		scale			46
+	}
+
+	velocityXRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityYRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityZRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2X
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Y
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Z
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2XRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2YRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2ZRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	shaders
+	[
+		gfx_dirtchunks
+	]
+}
+
+Decal
+{
+	name				Decal
+
+	life				7000
+
+	spawnRange			0 3200
+
+	rotation			360 -360
+
+	rgb
+	{
+		curve
+		[
+			0 1 1 1
+			1 1 1 1
+		]
+	}
+
+	rgbRand
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	alphaRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.75 0 0
+			0.06667 0.75 0 0
+			0.1333 0.75 0 0
+			0.2 0.75 0 0
+			0.2667 0.75 0 0
+			0.3333 0.75 0 0
+			0.4 0.75 0 0
+			0.4667 0.75 0 0
+			0.5333 0.75 0 0
+			0.6 0.75 0 0
+			0.6667 0.75 0 0
+			0.7333 0.75 0 0
+			0.8 0.75 0 0
+			0.8667 0.75 0 0
+			0.9333 0.75 0 0
+			1 0.75 0 0
+		]
+
+		scale			5.5 6.5
+	}
+
+	sizeRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2Rand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	lengthRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDelta
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDeltaRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityX
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityY
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityZ
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityXRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityYRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityZRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2X
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Y
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Z
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2XRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2YRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2ZRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	shaders
+	[
+		gfx_bullethit_sand
+	]
+}
+
+FxRunner
+{
+	name				distant_grain
+
+	spawnFlags			frustumCull
+
+	spawnFrustumCullRadius	60.000000
+
+	rgb
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	rgbRand
+	{
+		curve
+		[
+			0 1 1 1
+			1 0 0 0
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	alphaRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	sizeRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2Rand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	lengthRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDelta
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDeltaRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityX
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityY
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityZ
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityXRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityYRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocityZRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2X
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Y
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Z
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2XRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2YRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2ZRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	playfx
+	[
+		/fx/impacts/distant_grain
+	]
+}

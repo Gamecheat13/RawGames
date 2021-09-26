@@ -1,0 +1,257 @@
+Particle
+{
+	flags				useAlpha useRandomColors useRandomRotationDelta useRandomVelocity
+
+	life				4700
+
+	origin				5 5 10
+
+	rotation			-360 360
+
+	gravity				5 0
+
+	rgb
+	{
+		curve
+		[
+			0 0.251 0.2824 0.2824
+			1 0.251 0.2824 0.2824
+		]
+	}
+
+	rgbRand
+	{
+		curve
+		[
+			0 0.2471 0.2353 0.2157
+			1 0.2471 0.2353 0.2157
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0 0 0
+			0.02011 0.2673 0 0
+			0.04598 0.4356 0 0
+			0.0977 0.5248 0 0
+			0.1983 0.5495 0 0
+			0.2874 0.4752 0 0
+			0.4425 0.3267 0 0
+			0.6437 0.1584 0 0
+			0.8174 0.05839 0 0
+			1 0 0 0
+		]
+	}
+
+	alphaRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 0.1392 0 0
+			1 0.75 0 0
+		]
+
+		scale			300
+	}
+
+	sizeRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	size2Rand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	length
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	lengthRand
+	{
+		curve
+		[
+			0 1 0 0
+			1 0 0 0
+		]
+	}
+
+	rotationDelta
+	{
+		curve
+		[
+			0 -0.5 0 0
+			0.1638 -0.3045 0 0
+			0.4799 -0.1409 0 0
+			0.7816 -0.05 0 0
+			1 -0.03636 0 0
+		]
+
+		scale			24
+	}
+
+	rotationDeltaRand
+	{
+		curve
+		[
+			0 0.5 0 0
+			0.1868 0.2773 0 0
+			0.408 0.1545 0 0
+			0.7328 0.07727 0 0
+			1 0.03182 0 0
+		]
+	}
+
+	velocityX
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+
+		scale			0
+	}
+
+	velocityY
+	{
+		curve
+		[
+			0 -0.05856 0 0
+			1 -0.05856 0 0
+		]
+
+		scale			222
+	}
+
+	velocityZ
+	{
+		curve
+		[
+			0 -0.05856 0 0
+			1 -0.05856 0 0
+		]
+
+		scale			222
+	}
+
+	velocityXRand
+	{
+		curve
+		[
+			0 0.5 0 0
+			1 0.5 0 0
+		]
+	}
+
+	velocityYRand
+	{
+		curve
+		[
+			0 0.05856 0 0
+			1 0.05856 0 0
+		]
+	}
+
+	velocityZRand
+	{
+		curve
+		[
+			0 0.05856 0 0
+			1 0.05856 0 0
+		]
+	}
+
+	velocity2X
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Y
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2Z
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2XRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2YRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	velocity2ZRand
+	{
+		curve
+		[
+			0 0 0 0
+			1 0 0 0
+		]
+	}
+
+	shaders
+	[
+		gfx_whisp_spiral
+	]
+}

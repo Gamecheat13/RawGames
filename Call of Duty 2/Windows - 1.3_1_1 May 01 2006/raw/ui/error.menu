@@ -1,0 +1,177 @@
+#include "ui/menudef.h"
+
+{
+\\ END OF GAME \\
+	menuDef 
+	{
+		name "error_popmenu"
+	    	visible 0
+   		fullscreen 0
+	   	//rect 217 200 210 85
+		rect 204 160 235 160
+		focusColor GLOBAL_FOCUSED_COLOR
+   		style 1
+   		border 1
+		popup
+		onClose { uiScript clearError }
+		onOpen { }
+		onESC { close error_popmenu ; open main }
+		itemDef 
+		{
+			name window
+			group grpControlbutton
+			rect 0 2 235 135
+			style WINDOW_STYLE_FILLED
+			border 1
+			bordercolor .5 .5 .5 .5
+			forecolor 1 1 1 1
+			backcolor 0 0 0 .5
+			visible 0
+			decoration
+		}
+
+		itemDef 
+		{
+			name backimage2fade
+			style WINDOW_STYLE_SHADER
+			rect -332 -162 896 484
+	 		background "white"
+			forecolor 0 0 0 0.3
+			backcolor 0 0 0 0.3
+			visible 1
+			decoration
+		}
+	
+		itemDef 
+		{
+			name window2
+			group grpControlbutton
+			rect 2 3 231 20	
+			style WINDOW_STYLE_FILLED
+			border 1
+			bordercolor .1 .1 .1 .2
+			forecolor 1 1 1 1
+			backcolor 1 1 .3 .3
+			visible 0
+			decoration
+		}
+		itemDef 
+		{
+			name backimage2fade
+			style WINDOW_STYLE_SHADER
+			rect -150 2 535 150
+	 		background "popmenu_bg"
+//			forecolor 0 0 0 0.4
+//			backcolor 0 0 0 0.4
+			visible 1
+			decoration
+		}
+		itemDef 
+		{
+			name backimage2fade
+			style WINDOW_STYLE_SHADER
+			rect -50 20 335 24
+	 		background "popmenu_goldline"
+//			forecolor 0 0 0 0.4
+//			backcolor 0 0 0 0.4
+			visible 1
+			decoration
+		}
+
+		itemDef 
+		{
+			name confirm
+			dvar "com_errorTitle" 
+			style 0
+			textscale HEADER_SIZE 
+			textstyle ITEM_TEXTSTYLE_SHADOWED
+			rect 126 25 110 20
+			textalign 1
+			textalignx -7
+			textaligny 5
+			decoration
+			forecolor		POPMENU_HEADER_COLOR
+			visible 1
+		}
+/*
+		itemDef 
+		{
+			name newgame_easy
+			text "@MENU_GREENHORN"
+			type 1
+			textscale .3
+			style UI_BUTTON_STYLE
+			textfont UI_FONT_NORMAL
+			textstyle UI_BUTTON_TEXT_STYLE
+			rect 70 35 100 17
+			textalign 1
+			textalignx 50
+			textaligny 13
+			forecolor UI_BUTTON_TEXT_COLOR
+			backcolor UI_BUTTON_BACK_COLOR 
+			border UI_BUTTON_BORDER
+			bordercolor UI_BUTTON_BORDER_COLOR
+			visible 1
+			dvartest "g_gameskill"
+			focusdvar { "0" }
+
+			action { 
+				play "mouse_click";
+				exec "difficultyeasy";
+				exec "vstr ui_selected_map";
+				close popmenu_difficulty;
+			}
+			mouseEnter { play "mouse_over"; setitemcolor newgame_easy backcolor UI_BUTTON_BACK_COLOR_HOVER } 
+			mouseExit { setitemcolor newgame_easy backcolor UI_BUTTON_BACK_COLOR } 
+		}
+*/
+		itemDef 
+		{
+			name errorinfo
+			rect 0 25 250 255
+			type ITEM_TYPE_TEXT
+			style 1
+			textstyle 3
+			textalign 1
+			autowrapped
+			dvar "com_errorMessage"
+			textalign ITEM_ALIGN_CENTER
+			textalignx 115
+			textaligny 23
+			textscale .25
+			forecolor 1 1 1 1
+			visible 1
+			decoration
+		}
+		itemDef 
+		{
+			name back
+			text "@MENU_EXIT"
+			type 1
+			textscale .3
+			style UI_BUTTON_STYLE
+			textfont UI_FONT_NORMAL
+			textstyle UI_BUTTON_TEXT_STYLE
+			rect 70 135 100 17
+			textalign 1
+			textalignx 50
+			textaligny 13
+			forecolor UI_BUTTON_TEXT_COLOR
+			backcolor UI_BUTTON_BACK_COLOR 
+			border UI_BUTTON_BORDER
+			bordercolor UI_BUTTON_BORDER_COLOR
+			visible 1
+			mouseEnter { play "mouse_over"; setitemcolor back backcolor UI_BUTTON_BACK_COLOR_HOVER } 
+			mouseExit { setitemcolor back backcolor UI_BUTTON_BACK_COLOR }
+			action 
+			{
+				play "mouse_click";
+				close error_popmenu;
+				open main 
+			}
+		}
+	}
+
+}
+
+

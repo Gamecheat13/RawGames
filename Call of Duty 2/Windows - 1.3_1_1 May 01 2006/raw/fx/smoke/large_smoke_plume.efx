@@ -1,0 +1,59 @@
+Particle
+{
+	name				darksmoke
+
+	flags				useAlpha
+
+	life				6800 8000
+
+	delay				120 170
+
+	height				100
+
+	wind				1 20
+
+	rotation			-12 12
+
+	rotationDelta		-2 6
+
+	velocity			30 0 0 45 0 0
+
+	acceleration		20 5 5 35 20 20
+
+	gravity				-7 -12
+
+	rgb
+	{
+		end				0.502 0.502 0.502
+		flags			clamp
+	}
+
+	alpha
+	{
+		start			0.8 0.6
+		end				0
+		parm			0 100
+		flags			linear
+	}
+
+	size
+	{
+		start			100 80
+		end				225 300
+		parm			0 80
+		flags			nonlinear
+	}
+
+	length
+	{
+		start			2
+		end				3
+	}
+
+	shaders
+	[
+		smk_p_top_wht_a
+		smk_p_top_wht_b
+		smk_p_top_wht_c
+	]
+}

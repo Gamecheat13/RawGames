@@ -1,0 +1,16 @@
+{
+	stateMap "build_shadowmap";
+
+	vertex.position = code.position;
+	vertex.color[0] = code.color;
+	vertex.texcoord[0] = code.texcoord[0];
+
+	vertexShader 2.0 "floatz_build_atest.hlsl"
+	{
+	}
+
+	pixelShader 2.0 "floatz_build_atest.hlsl"
+	{
+		colorMapSampler = material.colorMap;
+	}
+}

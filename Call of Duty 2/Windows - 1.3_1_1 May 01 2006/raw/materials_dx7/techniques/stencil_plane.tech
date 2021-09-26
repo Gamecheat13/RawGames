@@ -1,0 +1,8 @@
+{
+	stateMap "stencil_plane";
+
+	texture[0] = sampler.white;
+
+	stage[0].rgb = select( constant );
+	stage[0].a = select( constant );
+}

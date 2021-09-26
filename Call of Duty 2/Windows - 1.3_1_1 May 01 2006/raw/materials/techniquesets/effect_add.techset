@@ -1,0 +1,19 @@
+"solid wireframe":
+	wireframe_solid;
+
+"fakelight normal":
+"fakelight view":
+"unlit no fog":
+"emissive no fog":
+"emissive feathered no fog":
+	effect_add;
+
+"unlit linear fog":
+"emissive linear fog":
+"emissive feathered linear fog":
+	effect_add_lfog;
+
+"unlit exp fog":
+"emissive exp fog":
+"emissive feathered exp fog":
+	effect_add_efog;

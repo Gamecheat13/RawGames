@@ -1,0 +1,25 @@
+Light
+{
+	name				light
+
+	spawnFlags			cheapOrgCalc
+
+	life				2e+004
+
+	origin				0 0 72
+
+	rgb
+	{
+		start			0.6118 0.4549 0.3137
+		end			0.6118 0.3725 0.3137
+		flags			random
+	}
+
+	size
+	{
+		start			2400 2500
+		end			2 1
+		flags			wave
+	}
+}
+

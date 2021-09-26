@@ -1,0 +1,167 @@
+#include "ui_mp/menudef.h"
+
+#define GLOBAL_TEXTSCALE1	0.25
+
+{
+	\\ CREATE FAVORITE POPUP MENU \\
+	menuDef 
+	{
+		name				"createfavorite_popmenu"
+		visible				0
+		fullscreen			0
+		rect				120 190 404 235
+		focusColor GLOBAL_FOCUSED_COLOR
+		style				1
+		border				1
+		popup
+		onESC				{ close createfavorite_popmenu }
+
+		itemDef
+		{
+			name			window
+			group			grpControlbutton
+			rect			0 40 404 135
+			style			WINDOW_STYLE_FILLED
+			border			1
+			bordercolor		.5 .5 .5 .5
+			forecolor		1 1 1 1
+			backcolor		.1 .1 .1 1
+			visible			1
+			decoration
+		}
+
+		itemDef 
+		{
+			name			window2
+			group			grpControlbutton
+			rect			2 42 400 20 
+			style			WINDOW_STYLE_FILLED
+			border			1
+			bordercolor		.1 .1 .1 .2
+			forecolor		1 1 1 1
+			backcolor		.3 0.5 0.2 0.5
+			visible			1
+			decoration
+		}
+
+		itemDef 
+		{
+			name			window_title
+			text			"@MENU_NEW_FAVORITE"
+			style			0
+			decoration
+			textscale		.3
+			rect			85 44 110 20
+			textalign		1
+			textalignx		117
+			textaligny		14
+			forecolor		1 1 1 1
+			visible			1
+		}
+
+		// ENTER NAME AND ADDRESS	//
+		itemDef 
+		{
+			name			nameEntry
+			group			grpControls
+			TYPE			4
+			text			"@MENU_NAME1"
+			dvar			"ui_favoriteName"
+			rect			30 75 344 12
+			maxchars		30
+			textalign		ITEM_ALIGN_RIGHT
+			textalignx		89
+			textaligny		11
+			textfont		UI_FONT_NORMAL
+			textscale		.25 		 
+			forecolor		OPTIONS_CONTROL_FORECOLOR
+			style			WINDOW_STYLE_FILLED
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			visible			1
+			mouseenter		{ show keyBindStatus; play "mouse_over" }
+			mouseexit		{ hide keyBindStatus }
+		}
+
+		itemDef 
+		{
+			name			nameEntry
+			group			grpControls
+			TYPE			4
+			text			"@MENU_IP_ADDRESS"
+			dvar			"ui_favoriteAddress"
+			rect			30 90 344 12
+			textalign		ITEM_ALIGN_RIGHT
+			textalignx		89
+			textaligny		11
+			maxchars		30
+			textfont		UI_FONT_NORMAL
+			textscale		.25 		 
+			forecolor		OPTIONS_CONTROL_FORECOLOR
+			style			WINDOW_STYLE_FILLED
+			backcolor		OPTIONS_CONTROL_BACKCOLOR
+			visible			1
+			mouseenter		{ show keyBindStatus; play "mouse_over" }
+			mouseexit		{ hide keyBindStatus }
+		}
+
+		itemDef 
+		{
+			name			yes
+			text			"@MENU_OK"
+			type			ITEM_TYPE_BUTTON
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXTSCALE1
+			textstyle		UI_BUTTON_TEXT_STYLE
+			style			UI_BUTTON_STYLE
+			border			UI_BUTTON_BORDER
+			bordercolor		UI_BUTTON_BORDER_COLOR
+			rect			95 150 100 15
+			textalign		1
+			textalignx		51		// center
+			textaligny		11
+			backcolor		UI_BUTTON_BACK_COLOR
+			forecolor		UI_BUTTON_TEXT_COLOR
+			visible			1
+	
+			action 
+			{
+				play		"mouse_click" ;
+				uiScript	CreateFavorite ;
+				close		createfavorite_popmenu ;
+				open		fav_message_popmenu
+			}
+	
+			mouseEnter	{ setitemcolor yes backcolor UI_BUTTON_BACK_COLOR_HOVER; play "mouse_over" }
+			mouseExit	{ setitemcolor yes backcolor UI_BUTTON_BACK_COLOR }
+		}
+		itemDef 
+		{
+			name			cancel
+			text			"@MENU_CANCEL"
+			type			ITEM_TYPE_BUTTON
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXTSCALE1
+			textstyle		UI_BUTTON_TEXT_STYLE
+			style			UI_BUTTON_STYLE
+			border			UI_BUTTON_BORDER
+			bordercolor		UI_BUTTON_BORDER_COLOR
+			rect			210 150 100 15
+			textalign		1
+			textalignx		51		// center
+			textaligny		11
+			backcolor		UI_BUTTON_BACK_COLOR
+			forecolor		UI_BUTTON_TEXT_COLOR
+			visible			1
+	
+			action 
+			{
+				play		"mouse_click" ;
+//				uiScript	CreateFavorite ;
+				close		createfavorite_popmenu
+			}
+	
+			mouseEnter	{ setitemcolor cancel backcolor UI_BUTTON_BACK_COLOR_HOVER; play "mouse_over" }
+			mouseExit	{ setitemcolor cancel backcolor UI_BUTTON_BACK_COLOR }
+		}
+	}
+}

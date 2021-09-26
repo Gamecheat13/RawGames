@@ -1,0 +1,63 @@
+Particle
+{
+	name				dust
+
+	flags				useAlpha
+
+	spawnFlags			evenDistribution
+
+	count				1 3
+
+	life				4000
+
+	origin				0 -200 -200 0 200 200
+
+	radius				200
+
+	wind				25 75
+
+	rotation			180 -180
+
+	rotationDelta		-12 12
+
+	velocity			0 0 0 0 0 50
+
+	rgb
+	{
+		curve
+		[
+			0 1 1 1
+			1 1 1 1
+		]
+	}
+
+	alpha
+	{
+		curve
+		[
+			0 0 0.03196 1
+			0.03196 1 0.9726 1
+			0.9726 1 1 0
+			1 0 4.592e-040 2.571e-038
+		]
+	}
+
+	size
+	{
+		curve
+		[
+			0 1 1 1
+			1 1 2.756e-040 2.627e-038
+		]
+
+		scale			4
+	}
+
+	shaders
+	[
+		gfx_desert_leaf_1
+		gfx_desert_leaf_2
+		gfx_desert_leaf_3
+		gfx_desert_leaf_4
+	]
+}

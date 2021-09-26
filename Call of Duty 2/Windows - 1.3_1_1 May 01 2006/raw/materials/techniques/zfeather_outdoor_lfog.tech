@@ -1,0 +1,19 @@
+{
+	stateMap "nofog";
+
+	vertex.position = code.position;
+	vertex.color[0] = code.color;
+	vertex.texcoord[0] = code.texcoord[0];
+				
+	vertexShader 2.0 "zfeather_outdoor_lfog.hlsl"
+	{
+		featherParms = material.featherParms;
+	}
+
+	pixelShader 2.0 "zfeather_outdoor.hlsl"
+	{
+		colorMapSampler = material.colorMap;
+		featherParms = material.featherParms;
+		outdoorMapSampler = sampler.outdoor;
+	}			
+}

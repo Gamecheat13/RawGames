@@ -1,0 +1,11 @@
+{
+	stateMap "color_only";
+
+	projectToInfinity();
+
+	texture[0] = material.colorMap;
+	texcoord[0] = genEyeDirCoords();
+
+	stage[0].rgb = select( texture[0] );
+	stage[0].a = select( texture[0] );
+}

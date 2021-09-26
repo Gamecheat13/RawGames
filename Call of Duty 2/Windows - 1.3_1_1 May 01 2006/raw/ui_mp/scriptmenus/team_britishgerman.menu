@@ -1,0 +1,306 @@
+#include "ui_mp/menudef.h"
+
+#define ORIGIN_TITLE		48 64
+#define ORIGIN_CHOICE1		80 84
+#define ORIGIN_CHOICE2		80 108
+#define ORIGIN_CHOICE3		80 132
+#define ORIGIN_CHOICE4		80 156
+
+#define ORIGIN_TEAMIMAGE	300 140
+
+{
+	menuDef
+	{
+		name			"team_britishgerman"
+		rect			0 0 640 480
+		focuscolor		GLOBAL_FOCUSED_COLOR
+		style			WINDOW_STYLE_EMPTY
+		blurWorld		5.0
+		onEsc
+		{
+			scriptMenuResponse "close";
+			close team_britishgerman;
+		}
+		onOpen 
+		{
+			scriptMenuResponse "open";
+		}
+		onClose
+		{
+			scriptMenuResponse "close";
+			hide autoassign_info;
+			hide british_info;
+			hide german_info;
+			hide spectator_info;
+		}
+
+		// Gradient
+		itemDef
+		{
+			style			WINDOW_STYLE_SHADER
+			//rect			-107 0 554 480
+			rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+			background		"gradient"
+			visible			1
+			decoration
+		}
+
+		#include "ui/bars.menu"
+
+		itemDef
+		{
+			type			ITEM_TYPE_TEXT
+			visible			1
+			origin			ORIGIN_TITLE
+			forecolor		1 1 1 1
+			text			"@MPUI_TEAMS"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_HEADER_SIZE
+			decoration
+		}
+
+// MENU CHOICES
+		execKey "1" { play "mouse_click"; scriptMenuResponse "autoassign" }
+		execKey "2" { play "mouse_click"; scriptMenuResponse "allies" }
+		execKey "3" { play "mouse_click"; scriptMenuResponse "axis" }
+		execKey "4" { play "mouse_click"; scriptMenuResponse "spectator" }
+
+		itemDef 
+		{
+			name			"button_autoassign"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE1
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"@MPUI_1_AUTOASSIGN"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			dvartest		"ui_allow_joinauto"
+			showDvar		{ "1" }
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "autoassign";
+			}
+			onFocus
+			{
+				hide british_info;
+				hide german_info;
+				hide spectator_info;
+				play "mouse_over";
+				show autoassign_info;
+			}
+		}
+		itemDef 
+		{
+			name			"button_autoassign"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE1
+			forecolor		GLOBAL_DISABLED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"@MPUI_1_AUTOASSIGN"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			dvartest		"ui_allow_joinauto"
+			showDvar		{ "2" }
+			onFocus
+			{
+				hide british_info;
+				hide german_info;
+				hide spectator_info;
+				play "mouse_over";
+				show autoassign_info;
+			}
+		}
+
+		itemDef 
+		{
+			name			"button_british"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE2
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"@MPUI_2_BRITISH"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			dvartest		"ui_allow_joinallies"
+			showDvar		{ "1" }
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "allies";
+			}
+			onFocus
+			{
+				hide autoassign_info;
+				hide german_info;
+				hide spectator_info;
+				play "mouse_over";
+				show british_info;
+			}
+		}
+		itemDef 
+		{
+			name			"button_british"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE2
+			forecolor		GLOBAL_DISABLED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"@MPUI_2_BRITISH"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			dvartest		"ui_allow_joinallies"
+			showDvar		{ "2" }
+			onFocus
+			{
+				hide autoassign_info;
+				hide german_info;
+				hide spectator_info;
+				play "mouse_over";
+				show british_info;
+			}
+		}
+		
+		itemDef
+		{
+			name			"button_german"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE3
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"@MPUI_3_GERMAN"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			dvartest		"ui_allow_joinaxis"
+			showDvar		{ "1" }
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "axis";
+			}
+			onFocus
+			{
+				hide autoassign_info;
+				hide british_info;
+				hide spectator_info;
+				play "mouse_over";
+				show german_info;
+			}
+		}
+		itemDef
+		{
+			name			"button_german"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE3
+			forecolor		GLOBAL_DISABLED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"@MPUI_3_GERMAN"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			dvartest		"ui_allow_joinaxis"
+			showDvar		{ "2" }
+			onFocus
+			{
+				hide autoassign_info;
+				hide british_info;
+				hide spectator_info;
+				play "mouse_over";
+				show german_info;
+			}
+		}
+		
+		itemDef 
+		{
+			name			"button_spectate"
+			visible			1
+			rect			0 0 128 24
+			origin			ORIGIN_CHOICE4
+			forecolor		GLOBAL_UNFOCUSED_COLOR
+			type			ITEM_TYPE_BUTTON
+			text			"@MPUI_4_SPECTATE"
+			textfont		UI_FONT_NORMAL
+			textscale		GLOBAL_TEXT_SIZE
+			textstyle		ITEM_TEXTSTYLE_SHADOWED
+			textaligny		20
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "spectator";
+			}
+			onFocus
+			{
+				hide autoassign_info;
+				hide british_info;
+				hide german_info;
+				play "mouse_over";
+				show spectator_info;
+			}
+		}
+
+		itemDef 
+		{
+			#include "ui_mp/button_mainmenu.menu"
+
+			action
+			{
+				play "mouse_click";
+				close team_britishgerman;
+				open main;
+			}
+			onFocus
+			{
+				play "mouse_over";
+			}
+		}
+
+// TEAM IMAGES
+		itemDef
+		{
+			name			"autoassign_info"
+			visible 		0
+			rect			0 0 288 288
+			origin			ORIGIN_TEAMIMAGE
+	 		style			WINDOW_STYLE_SHADER
+			background		"team_autoassign"
+			decoration
+		}
+		itemDef
+		{
+			name			"british_info"
+			visible 		0
+			rect			0 0 288 288
+			origin			ORIGIN_TEAMIMAGE
+	 		style			WINDOW_STYLE_SHADER
+			background		"team_british"
+			decoration
+		}
+		itemDef
+		{
+			name			"german_info"
+			visible 		0
+			rect			0 0 288 288
+			origin			ORIGIN_TEAMIMAGE
+	 		style			WINDOW_STYLE_SHADER
+			background		"team_german_africa"
+			decoration
+		}
+	}
+}
