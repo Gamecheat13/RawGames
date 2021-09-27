@@ -1,0 +1,116 @@
+# Max number of mod groups: 128,,
+# Number of mod groups currently used: 69,,
+# name - volume mod group name,,
+# value - value to multiply volume of aliases tagged with given volmod group name,,
+
+### OLD AND TO BE DELETED ###,,
+foley,0.545,# To be DELETED
+
+### searched ready to remove ###,,
+wpnai,0.8228,# To be DELETED
+wpnplyr,0.704,# To be DELETED
+
+
+### User interface ###,,
+hud,0.7533,# MP in game feedback (level up, card slide, etc)
+interface,0.7533,# user interface sfx
+interface_music,0.7533,# user interface sfx
+
+### Music ###,,
+music,0.81,# level music (excluding title and fluff music)
+music_emitter,0.81,# point sourced music (ie portable radio)
+
+
+### Ambience ###,,
+ambience,0.678,# main ambience streams
+ambience_dist,0.904,# distant ambient element sfx
+element,0.904,# ambient element sfx
+emitter,0.755,# point emitter sfx
+physics,0.837,# physics elements
+
+
+### Character sounds ###,,
+bodyfall,0.7002,# bodyfalls
+foley_plr,0.545,# foley type sfx such as gear rattle, foliage movement etc. 
+foleymp_plr,0.7031,# player gear rattle in MP
+foley_npc,0.6582,# npc gear rattle
+foleymp_npc,0.5357,# npc gear rattle in MP
+foley_wpn_plr,0.865,# Player reload sfx
+foley_wpn_npc,0.84,# NPC reload sfx
+footstep_plr,0.6229,# Player footsteps
+footstep_npc,0.8126,# footsteps and landing sfx
+footstepmp_plr,0.6229,# Player footsteps in MP
+footstepmp_npc,0.837,#footsteps and landing sfx in MP
+melee_plr,0.7533,# Player melee sfx
+melee_npc,0.7533,# NPC melee sfx
+
+
+### Dialogue ###,,
+chatteral,0.9,# battlechatter allied/friendly
+chatterax,0.85,# battlechatter axis/enemy
+reactional,0.9492,# allied character reaction sfx
+reactionax,0.8979,# axis character reaction sfx
+voiceover,1,# mission based speech
+voiceover_radio,1,# mission based radio speech
+voiceover_critical,1,# mission based speech at FULL Volume (DO NO CHANGE)
+voiceover_amb,1,# ambient based speech (flavor burst radio)
+
+
+### Explosions and destruction ###,,
+destruct,0.7807,# destructible objects 
+explosion,0.7807,# explosion type sfx other than special moments
+explosion_grenade,0.85,# explosion sfx for grenades
+explosion_flashbang,0.7807,# explosion sfx for flashbangs
+explosion_rocket,0.85,# explosion sfx for rockets
+explosion_car,0.85,# explosion type sfx other than special moments
+
+
+### Bullet Impacts & Whizbys ###,,
+impact,0.93,# bullet impact sfx on geo
+impact_plr,0.7533,# bullet impact sfx on the player body
+impact_npc,0.65,# bullet impact sfx on the npc body
+impactmp,0.93,# bullet impact sfx on geo on the npc body
+impactmp_plr,0.7533,# bullet impact sfx on the player body
+impactmp_npc,0.7533,# bullet impact sfx
+whizby,0.8312,# bullet whizbys
+whizbymp,0.8312,# bullet whizbys in MP
+
+
+### Vehicle sounds ###,,
+vehicle_plr,0.6919,# plr vehicle movement sfx
+vehicle_npc,0.6919,# npc vehicle movement sfx
+vehicle_wpn_plr,0.704,# player controlled weapons mounted on vehicles
+vehicle_wpn_npc,0.8228,# npc vehicle mounted weapons
+vehicle,0.6919,# To be DELETED
+
+
+### Weapons ###,,
+grenadebounce,0.7533,# grenade bouncing on the ground physics sounds
+grenadebouncemp,0.7533,# grenade bouncing on the ground physics sounds
+shellcasings,0.93,# bullet shell casings hitting the ground
+shellcasingsmp,0.93,# bullet shell casings hitting the ground in MP
+wpn_plr,0.85,# player controlled weapons
+wpnmp_plr,0.85,# player controlled weapons in MP
+wpn_npc,0.87,# NPC controlled weapons
+wpnmp_npc,0.87,# NPC controlled weapons in MP
+wpn_projectile,0.9,# RPG movement Javelin movement
+wpnmp_projectile,0.93,# Maximum sfx volume headroom
+
+
+### Special use ###,,
+na,0.7533,# non-catagorized (LEGACY DO NOT USE!)
+max,0.93,# Maximum sfx volume headroom
+scripted1,0.93,# scripted in game scenes
+scripted2,0.93,# scripted in game scenes
+scripted3,0.93,# scripted in game scenes
+scripted4,0.93,# scripted in game scenes
+scripted5,0.93,# scripted in game scenes
+fullvolume,1,# HUGE sfx events only used in VERY special cases
+
+### Level specific and MP perks ###,,
+perkmp_quiet,0.0837,# MP perk for quiet footsteps
+level_ac130,0.7905,# AC130 groundfire special volmod for use in AC130 level only
+
+
+### Default if left blank ###,,
+default,1,# volmod group used by aliases who don't define volmod groups. Set to 1.0 because code assumes 1.0 if not defined

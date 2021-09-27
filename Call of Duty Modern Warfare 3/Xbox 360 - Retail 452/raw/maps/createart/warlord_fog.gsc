@@ -1,0 +1,124 @@
+// _createart generated.  modify at your own risk. 
+main()
+{
+	ent = maps\_utility::create_vision_set_fog( "warlord" );
+	ent.startDist = 836.839;
+	ent.halfwayDist = 2043.8;
+	ent.red = 0.662356;
+	ent.green = 0.550805;
+	ent.blue = 0.386992;
+	ent.maxOpacity = 0.0898371;
+	ent.transitionTime = 1;
+	ent.sunFogEnabled = 1;
+	ent.sunRed = 0.732379;
+	ent.sunGreen = 0.665536;
+	ent.sunBlue = 0.499603;
+	ent.sunDir = (0.243845, 0.8503, 0.466401);
+	ent.sunBeginFadeAngle = 0;
+	ent.sunEndFadeAngle = 40.4957;
+	ent.normalFogScale = 1.07379;
+ 
+	ent = maps\_utility::create_vision_set_fog( "warlord_sun" );
+	ent.startDist = 633.97;
+	ent.halfwayDist = 2043.8;
+	ent.red = 0.379055;
+	ent.green = 0.400219;
+	ent.blue = 0.383682;
+	ent.maxOpacity = 0.175641;
+	ent.transitionTime = 1;
+	ent.sunFogEnabled = 1;
+	ent.sunRed = 0.999999;
+	ent.sunGreen = 0.808572;
+	ent.sunBlue = 0.656697;
+	ent.sunDir = (0.26778, 0.843022, 0.466485);
+	ent.sunBeginFadeAngle = 0;
+	ent.sunEndFadeAngle = 35.3818;
+	ent.normalFogScale = 0.680853;
+ 
+	ent = maps\_utility::create_vision_set_fog( "warlord_intro" );
+	ent.startDist = 1751.84;
+	ent.halfwayDist = 2043.8;
+	ent.red = 0.379055;
+	ent.green = 0.400219;
+	ent.blue = 0.383682;
+	ent.maxOpacity = 0.110151;
+	ent.transitionTime = 1;
+	ent.sunFogEnabled = 1;
+	ent.sunRed = 0.999962;
+	ent.sunGreen = 0.828459;
+	ent.sunBlue = 0.599017;
+	ent.sunDir = (0.266555, 0.839724, 0.473087);
+	ent.sunBeginFadeAngle = 0;
+	ent.sunEndFadeAngle = 32.5956;
+	ent.normalFogScale = 0.687637;
+ 
+	ent = maps\_utility::create_vision_set_fog( "warlord_fire" );
+	ent.startDist = 490.84;
+	ent.halfwayDist = 2043.8;
+	ent.red = 0.379055;
+	ent.green = 0.400219;
+	ent.blue = 0.383682;
+	ent.maxOpacity = 0.151535;
+	ent.transitionTime = 1;
+	ent.sunFogEnabled = 1;
+	ent.sunRed = 0.999962;
+	ent.sunGreen = 0.828459;
+	ent.sunBlue = 0.599017;
+	ent.sunDir = (0.266555, 0.839724, 0.473087);
+	ent.sunBeginFadeAngle = 0;
+	ent.sunEndFadeAngle = 32.5956;
+	ent.normalFogScale = 0.687637;
+ 
+	ent = maps\_utility::create_vision_set_fog( "warlord_shanty" );
+	ent.startDist = 1236.89;
+	ent.halfwayDist = 2043.8;
+	ent.red = 0.434431;
+	ent.green = 0.458687;
+	ent.blue = 0.439734;
+	ent.maxOpacity = 0.131697;
+	ent.transitionTime = 1;
+	ent.sunFogEnabled = 1;
+	ent.sunRed = 0.999962;
+	ent.sunGreen = 0.828459;
+	ent.sunBlue = 0.599017;
+	ent.sunDir = (0.266555, 0.839724, 0.473087);
+	ent.sunBeginFadeAngle = 0;
+	ent.sunEndFadeAngle = 32.5956;
+	ent.normalFogScale = 0.687637;
+ 
+	ent = maps\_utility::create_vision_set_fog( "warlord_camp" );
+	ent.startDist = 1626.72;
+	ent.halfwayDist = 3598.21;
+	ent.red = 0.369244;
+	ent.green = 0.434417;
+	ent.blue = 0.460263;
+	ent.maxOpacity = 0.225986;
+	ent.transitionTime = 1;
+	ent.sunFogEnabled = 1;
+	ent.sunRed = 0.855178;
+	ent.sunGreen = 0.794153;
+	ent.sunBlue = 0.663402;
+	ent.sunDir = (0.287424, 0.845215, 0.450553);
+	ent.sunBeginFadeAngle = 0;
+	ent.sunEndFadeAngle = 24.02;
+	ent.normalFogScale = 1.50708;
+ 
+	ent = maps\_utility::create_vision_set_fog( "warlord_church" );
+	ent.startDist = 461.539;
+	ent.halfwayDist = 2043.8;
+	ent.red = 0.379055;
+	ent.green = 0.400219;
+	ent.blue = 0.383682;
+	ent.maxOpacity = 0.110151;
+	ent.transitionTime = 1;
+	ent.sunFogEnabled = 0;
+	ent.sunRed = 0.59862;
+	ent.sunGreen = 0.440062;
+	ent.sunBlue = 0.326117;
+	ent.sunDir = (0.309515, 0.942068, 0.129259);
+	ent.sunBeginFadeAngle = 5.62139;
+	ent.sunEndFadeAngle = 19.8651;
+	ent.normalFogScale = 5.60666;
+ 
+	maps\_utility::vision_set_fog_changes( "warlord", 0 );
+}

@@ -1,0 +1,283 @@
+// _createart generated.  modify at your own risk. 
+main()
+{
+	ent = maps\_utility::create_vision_set_fog( "prague_escape" );
+	ent.startDist = 163.504;
+	ent.halfwayDist = 30051.8;
+	ent.red = 1;
+	ent.green = 0.910448;
+	ent.blue = 0.894639;
+	ent.maxOpacity = 1;
+	ent.transitionTime = 0;
+	ent.sunFogEnabled = 1;
+	ent.sunRed = 0.99997;
+	ent.sunGreen = 0.895792;
+	ent.sunBlue = 0.78735;
+	ent.sunDir = (-0.0263704, -0.942008, 0.334552);
+	ent.sunBeginFadeAngle = 0;
+	ent.sunEndFadeAngle = 21.0671;
+	ent.normalFogScale = 4.33242;
+ 
+	ent = maps\_utility::create_vision_set_fog( "prague_escape_sniper" );
+	ent.startDist = 4159.55;
+	ent.halfwayDist = 24287.1;
+	ent.red = 1;
+	ent.green = 0.910448;
+	ent.blue = 0.894639;
+	ent.maxOpacity = 1;
+	ent.transitionTime = 0;
+	ent.sunFogEnabled = 1;
+	ent.sunRed = 0.99997;
+	ent.sunGreen = 0.895792;
+	ent.sunBlue = 0.78735;
+	ent.sunDir = (-0.0263704, -0.942008, 0.334552);
+	ent.sunBeginFadeAngle = 0;
+	ent.sunEndFadeAngle = 21.0671;
+	ent.normalFogScale = 4.33242;
+ 
+	ent = maps\_utility::create_vision_set_fog( "prague_escape_start" );
+	ent.startDist = 400.732;
+	ent.halfwayDist = 34531.7;
+	ent.red = 0.919904;
+	ent.green = 0.91039;
+	ent.blue = 0.919514;
+	ent.maxOpacity = 1;
+	ent.transitionTime = 0;
+	ent.sunFogEnabled = 1;
+	ent.sunRed = 0.99997;
+	ent.sunGreen = 0.895792;
+	ent.sunBlue = 0.78735;
+	ent.sunDir = (0.268917, -0.877107, 0.397954);
+	ent.sunBeginFadeAngle = 0;
+	ent.sunEndFadeAngle = 29.4347;
+	ent.normalFogScale = 6.6941;
+ 
+	ent = maps\_utility::create_vision_set_fog( "prague_escape_carrying_soap" );
+	ent.startDist = 163.504;
+	ent.halfwayDist = 30051.8;
+	ent.red = 1;
+	ent.green = 0.910448;
+	ent.blue = 0.894639;
+	ent.maxOpacity = 1;
+	ent.transitionTime = 0;
+	ent.sunFogEnabled = 1;
+	ent.sunRed = 0.99997;
+	ent.sunGreen = 0.895792;
+	ent.sunBlue = 0.78735;
+	ent.sunDir = (-0.0263704, -0.942008, 0.334552);
+	ent.sunBeginFadeAngle = 0;
+	ent.sunEndFadeAngle = 21.0671;
+	ent.normalFogScale = 4.33242;
+ 
+	ent = maps\_utility::create_vision_set_fog( "prague_escape_pre_soap_death" );
+	ent.startDist = 207.785;
+	ent.halfwayDist = 8853.08;
+	ent.red = 0.93611;
+	ent.green = 0.73031;
+	ent.blue = 0.417712;
+	ent.maxOpacity = 0.0330338;
+	ent.transitionTime = 0;
+	ent.sunFogEnabled = 0;
+ 
+	ent = maps\_utility::create_vision_set_fog( "prague_escape_soap_death" );
+	ent.startDist = 207.785;
+	ent.halfwayDist = 8853.08;
+	ent.red = 0.93611;
+	ent.green = 0.73031;
+	ent.blue = 0.417712;
+	ent.maxOpacity = 0.0330338;
+	ent.transitionTime = 0;
+	ent.sunFogEnabled = 0;
+ 
+	ent = maps\_utility::create_vision_set_fog( "prague_escape_post_soap_death" );
+	ent.startDist = 207.785;
+	ent.halfwayDist = 8853.08;
+	ent.red = 0.93611;
+	ent.green = 0.73031;
+	ent.blue = 0.417712;
+	ent.maxOpacity = 0.0330338;
+	ent.transitionTime = 0;
+	ent.sunFogEnabled = 0;
+ 
+	ent = maps\_utility::create_vision_set_fog( "prague_escape_cellar" );
+	ent.startDist = 17346.3;
+	ent.halfwayDist = 32487.6;
+	ent.red = 0.583682;
+	ent.green = 0.52939;
+	ent.blue = 0.302793;
+	ent.maxOpacity = 1;
+	ent.transitionTime = 0;
+	ent.sunFogEnabled = 0;
+ 
+	ent = maps\_utility::create_vision_set_fog( "prague_escape_flashback" );
+	ent.startDist = 17346.3;
+	ent.halfwayDist = 32487.6;
+	ent.red = 0.583682;
+	ent.green = 0.52939;
+	ent.blue = 0.302793;
+	ent.maxOpacity = 1;
+	ent.transitionTime = 0;
+	ent.sunFogEnabled = 0;
+ 
+	ent = maps\_utility::create_vision_set_fog( "prague_escape_sniper_outside" );
+	ent.startDist = 6468.77;
+	ent.halfwayDist = 2990.19;
+	ent.red = 0.82019;
+	ent.green = 0.839413;
+	ent.blue = 0.861878;
+	ent.maxOpacity = 0.354224;
+	ent.transitionTime = 0;
+	ent.sunFogEnabled = 0;
+ 
+	ent = maps\_utility::create_vision_set_fog( "prague_escape_airlift" );
+	ent.startDist = 163.504;
+	ent.halfwayDist = 30051.8;
+	ent.red = 0.897116;
+	ent.green = 0.751306;
+	ent.blue = 0.62751;
+	ent.maxOpacity = 1;
+	ent.transitionTime = 0;
+	ent.sunFogEnabled = 1;
+	ent.sunRed = 0.99997;
+	ent.sunGreen = 0.895792;
+	ent.sunBlue = 0.78735;
+	ent.sunDir = (-0.0263704, -0.942008, 0.334552);
+	ent.sunBeginFadeAngle = 0;
+	ent.sunEndFadeAngle = 21.0671;
+	ent.normalFogScale = 4.33242;
+ 
+	ent = maps\_utility::create_vision_set_fog( "prague_escape_nuke" );
+	ent.startDist = 17346.3;
+	ent.halfwayDist = 32487.6;
+	ent.red = 0.583682;
+	ent.green = 0.52939;
+	ent.blue = 0.302793;
+	ent.maxOpacity = 1;
+	ent.transitionTime = 0;
+	ent.sunFogEnabled = 0;
+ 
+	ent = maps\_utility::create_vision_set_fog( "prague_escape_nuke_flash" );
+	ent.startDist = 17346.3;
+	ent.halfwayDist = 32487.6;
+	ent.red = 0.583682;
+	ent.green = 0.52939;
+	ent.blue = 0.302793;
+	ent.maxOpacity = 1;
+	ent.transitionTime = 0;
+	ent.sunFogEnabled = 0;
+ 
+	ent = maps\_utility::create_vision_set_fog( "prague_escape_nuke_end" );
+	ent.startDist = 17346.3;
+	ent.halfwayDist = 32487.6;
+	ent.red = 0.583682;
+	ent.green = 0.52939;
+	ent.blue = 0.302793;
+	ent.maxOpacity = 1;
+	ent.transitionTime = 0;
+	ent.sunFogEnabled = 0;
+ 
+	ent = maps\_utility::create_vision_set_fog( "prague_escape_airport" );
+	ent.startDist = 60;//124.204;
+	ent.halfwayDist = 500;//2095.12;
+	ent.red = 0.015312;
+	ent.green = 0.0198996;
+	ent.blue = 0.0212709;
+	ent.maxOpacity = 1;
+	ent.transitionTime = 0;
+	ent.sunFogEnabled = 0;
+ 
+	ent = maps\_utility::create_vision_set_fog( "prague_escape_airport_crawl_to_elevator" );
+	ent.startDist = 124.204;
+	ent.halfwayDist = 2095.12;
+	ent.red = 0.15312;
+	ent.green = 0.198996;
+	ent.blue = 0.212709;
+	ent.maxOpacity = 1;
+	ent.transitionTime = 0;
+	ent.sunFogEnabled = 0;
+ 
+	ent = maps\_utility::create_vision_set_fog( "prague_escape_airport_crawl_hurt" );
+	ent.startDist = 17346.3;
+	ent.halfwayDist = 32487.6;
+	ent.red = 0.583682;
+	ent.green = 0.52939;
+	ent.blue = 0.302793;
+	ent.maxOpacity = 1;
+	ent.transitionTime = 0;
+	ent.sunFogEnabled = 0;
+ 
+	ent = maps\_utility::create_vision_set_fog( "prague_escape_airport_crawl_recover" );
+	ent.startDist = 17346.3;
+	ent.halfwayDist = 32487.6;
+	ent.red = 0.583682;
+	ent.green = 0.52939;
+	ent.blue = 0.302793;
+	ent.maxOpacity = 1;
+	ent.transitionTime = 0;
+	ent.sunFogEnabled = 0;
+ 
+	ent = maps\_utility::create_vision_set_fog( "prague_escape_airport_exit_elevator" );
+	ent.startDist = 984.477;
+	ent.halfwayDist = 4368.91;
+	ent.red = 0.976457;
+	ent.green = 0.970468;
+	ent.blue = 0.907861;
+	ent.maxOpacity = 1;
+	ent.transitionTime = 0;
+	ent.sunFogEnabled = 0;
+	ent.sunRed = 0.5;
+	ent.sunGreen = 0.5;
+	ent.sunBlue = 0.5;
+	ent.sunDir = (0, 0, 0);
+	ent.sunBeginFadeAngle = 0;
+	ent.sunEndFadeAngle = 1;
+	ent.normalFogScale = 1;
+ 
+	ent = maps\_utility::create_vision_set_fog( "prague_escape_airport_revive" );
+	ent.startDist = 984.477;
+	ent.halfwayDist = 4368.91;
+	ent.red = 0.976457;
+	ent.green = 0.970468;
+	ent.blue = 0.907861;
+	ent.maxOpacity = 1;
+	ent.transitionTime = 0;
+	ent.sunFogEnabled = 0;
+	ent.sunRed = 0.5;
+	ent.sunGreen = 0.5;
+	ent.sunBlue = 0.5;
+	ent.sunDir = (0, 0, 0);
+	ent.sunBeginFadeAngle = 0;
+	ent.sunEndFadeAngle = 1;
+	ent.normalFogScale = 1;
+ 
+	ent = maps\_utility::create_vision_set_fog( "prague_escape_house" );
+	ent.startDist = 193.279;
+	ent.halfwayDist = 2337.93;
+	ent.red = 0.661137;
+	ent.green = 0.554261;
+	ent.blue = 0.454014;
+	ent.maxOpacity = 0.0634331;
+	ent.transitionTime = 0;
+	ent.sunFogEnabled = 0;
+ 
+	ent = maps\_utility::create_vision_set_fog( "prague_escape_carryin_soap" );
+	ent.startDist = 3764.17;
+	ent.halfwayDist = 19391;
+	ent.red = 0.661137;
+	ent.green = 0.554261;
+	ent.blue = 0.454014;
+	ent.maxOpacity = 0.7;
+	ent.transitionTime = 0;
+ 
+	ent = maps\_utility::create_vision_set_fog( "prague_escape_store1" );
+	ent.startDist = 3764.17;
+	ent.halfwayDist = 19391;
+	ent.red = 0.661137;
+	ent.green = 0.554261;
+	ent.blue = 0.454014;
+	ent.maxOpacity = 0.7;
+	ent.transitionTime = 0;
+	ent.sunFogEnabled = 0;
+ 
+	maps\_utility::vision_set_fog_changes( "prague_escape", 0 );
+}

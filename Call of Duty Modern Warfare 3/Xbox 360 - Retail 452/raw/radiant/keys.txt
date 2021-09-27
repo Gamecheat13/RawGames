@@ -1,0 +1,5059 @@
+// syntax:
+// float	floatVar
+// int 		intVar
+// string	stringVar
+
+// Keys that show up in the Radiant shift-g menu go here
+
+
+int		script_breachgroup				// Rooms with multiple breachable doors should have each breach prefab set with the same script_breachGroup number (but unique script_slowmo_breach numbers). Doors not triggered by the player will be breached either by friendlies (if level.breachfriendlies are defined) or opened normally.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_emptyspawner"
+"Summary: int - When you go through a trigger with this on it, any spawners that have the same # will have their count set to 0."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_emptyspawner 			// When you go through a trigger with this on it, any spawners that have the same # will have their count set to 0.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_goalvolume"
+"Summary: int - groups guys so they use a goalvolume"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_goalvolume				// groups guys so they use a goalvolume
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_group"
+"Summary: another generic index"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_group					// another generic index
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_index"
+"Summary: int - can be used generically as an index for whatever reason"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_index 					// can be used generically as an index for whatever reason
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_killspawner"
+"Summary: int - When you go through a trigger with this on it, any spawners that have the same # will be deleted."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_killspawner 				// Deletes the spawners when the trigger is touched. Group spawners and triggers.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_kill_vehicle_spawner"
+"Summary: int -  Deletes the vehicle spawner when the trigger is touched. Group vehicle spawners and triggers."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_kill_vehicle_spawner		// Deletes the vehicle spawner when the trigger is touched. Group vehicle spawners and triggers.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_random_killspawner"
+"Summary: int - All but one of the script_randomspawn groups will be deleted. Group all spawners and triggers."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_random_killspawner 		// All but one of the script_randomspawn groups will be deleted. Group all spawners and triggers.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_randomspawn"
+"Summary: int - use with a script_random_killspawner - script will randomly spawn one of the groups"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_randomspawn 				// Defines the spawner sub groups for random_killspawner triggers. To spawn 1 out of 3, give each of 3 spawners a different value of this key.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_spawnsubgroup"
+"Summary: int - group of ai spawned from spawngroup_trigger"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_spawnsubgroup			// group of ai spawned from spawngroup_trigger
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_slowmo_breach"
+"Summary: int - All entities related to breaching get grouped with this key. Use prefabs/slowmo_breach.map to define the door."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_slowmo_breach			// All entities related to breaching get grouped with this key. Use prefabs/slowmo_breach.map to define the door.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_spawngroup"
+"Summary: int - one of the script_spawnsubgroups will spawn from an spawngroup_trigger."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_spawngroup				// one of the script_spawnsubgroups will spawn from an spawngroup_trigger
+
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_slowmo_breach_spawners"
+"Summary: int - Place spawners with targetname "breach_enemy_spawner" and "breach_hostage_spawner". When a breach starts, one of these groups will spawn."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_slowmo_breach_spawners	// Place spawners with targetname "breach_enemy_spawner" and "breach_hostage_spawner". When a breach starts, one of these groups will spawn.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_stealthgroup"
+"Summary: int - puts the AI into a stealth group that is seperate from the notifications and awareness of a different stealth group"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_stealthgroup				// puts the AI into a stealth group that is seperate from the notifications and awareness of a different stealth group     	
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_triggered_playerseek"
+"Summary: int - group a trigger and an ai with this and he the grouped ai will do playerseek behaviour when the trigger is hit"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_triggered_playerseek		// group a trigger and an ai with this and he the grouped ai will do playerseek behaviour when the trigger is hit
+
+// Below are keys that will not show up in the Radiant shift-g menu:
+
+vector	origin //codefields
+vector	angles //codefields
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .export"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		export
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .spawnflags"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		spawnflags
+
+
+
+int		radius 
+
+int 	speed //codefields
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .target"
+"Summary: string - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	target
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .targetname"
+"Summary: string - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	targetname
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .groupname"
+"Summary: groupname"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/	
+
+string	groupname
+string	name
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_wait"
+"Summary: float - Script will wait this long between actions"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_wait					// Script will wait this long between actions
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_wait_min"
+"Summary: float - Minimum wait time between actions"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_wait_min				// Minimum wait time between actions
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_wait_max"
+"Summary: float - Maximum wait time between actions"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_wait_max				// Maximum wait time between actions
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_wait_add"
+"Summary: float - Additive delay is the # of seconds extra added between actions"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_wait_add				// Additive delay is the # of seconds extra added between actions
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_delay"
+"Summary: float - Action will be delayed for this long before triggering"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_delay				// Action will be delayed for this long before triggering
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_delay_post"
+"Summary: float - Action will be delayed for this long before triggering...if used in conjunction with script_flag_wait, then script_delay_post will wait for the flag - THEN wait the delay time as apposed to script delay which waits first, THEN checks the flag"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_delay_post			// Action will be delayed for this long before triggering...if used in conjunction with script_flag_wait, then script_delay_post will wait for the flag - THEN wait the delay time as apposed to script delay which waits first, THEN checks the flag
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_delay_min"
+"Summary: float - Minimum delay before action is triggered"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_delay_min			// Minimum delay before action is triggered
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_delay_max"
+"Summary: float - Maximum delay before action is triggered"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_delay_max			// Maximum delay before action is triggered
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_burst"
+"Summary: float - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_burst
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_burst_min"
+"Summary: float - Put on an mg turret, min time of a burst"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_burst_min 			// Put on an mg turret, min time of a burst
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_burst_max"
+"Summary: float - Put on an mg turret, max time of a burst"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_burst_max 			// Put on an mg turret, max time of a burst
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_reuse"
+"Summary: float - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_reuse
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_reuse_min"
+"Summary: float - Minimum time before a new AI will use this turret."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_reuse_min			// Minimum time before a new AI will use this turret.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_reuse_max"
+"Summary: float - Maximum time before a new AI will use this turret."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_reuse_max			
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_faceenemydist"
+"Summary: float - override the self.maxFaceEnemyDist"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_faceenemydist		
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .delay"
+"Summary: float - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	delay
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_suppression"
+"Summary: float - Suppression wait for this AI"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_suppression		
+
+float	height //code field
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_falldirection"
+"Summary: float - Used to specify the direction a treeburst tree trunk falls towards"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_falldirection		// Used to specify the direction a treeburst tree trunk falls towards
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_timeout"
+"Summary: float - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_timeout
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_accuracy"
+"Summary: float - Set this on AI to have them spawn with a modified accuracy"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_accuracy				// Set this on AI to have them spawn with a modified accuracy 
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_attackeraccuracy"
+"Summary: float - Sets the attackeraccuracy on the ai"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_attackeraccuracy		// set .attackeraccuracy
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_startrunning"
+"Summary: float - makes an ai start off running when they spawn rather than doing an exit"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_startrunning			// makes an ai start off running when they spawn rather than doing an exit
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_cheap"
+"Summary: int - makes vehicles lose some functionality but be far fewer variables"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_cheap				// makes vehicles lose some functionality but be far fewer variables
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_pacifist"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_pacifist
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_ignoreme"
+"Summary: int - If this setting exists on a spawner this guy will have his .ignoreme set to true"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_ignoreme				// If this setting exists on a spawner this guy will have his .ignoreme set to true
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_ignore_suppression"
+"Summary: int - sets .ignoreSuppression to true if its set."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_ignore_suppression	// sets .ignoreSuppression to true if its set.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_ignoreall"
+"Summary: int - sets .ignoreall to true if its set."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_ignoreall			// sets .ignoreall to true if its set.
+int		script_laser				// set so an AI has a laser from their weapon.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_repeat"
+"Summary: int - # of times an effect in an exploder will repeat"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_repeat				// # of times an effect in an exploder will repeat
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_fxstart"
+"Summary: int - Identifies effects so they can be turned on by grouping with a trigger"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+int		script_fxstart				// Identifies effects so they can be turned on by grouping with a trigger
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_fxstop"
+"Summary: int - Identifies effects so they can be turned off by grouping with a trigger"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_fxstop				// Identifies effects so they can be turned off by grouping with a trigger
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_damage"
+"Summary: int - Damage of radius damage on an exploder"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_damage				// Damage of radius damage on an exploder
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_firefxdelay"
+"Summary: float - repetition rate on a firefx for exploders"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+float	script_firefxdelay			// repetition rate on a firefx for exploders
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_firefxtimeout"
+"Summary: float - Amount of time before a looping effect fades out"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_firefxtimeout		// Amount of time before a looping effect fades out
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_firefx"
+"Summary: string - Fx to play infinitely from a used exploder"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_firefx				// Fx to play infinitely from a used exploder
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_presound"
+"Summary: string - To play sounds on exploders before the explosion, for pathfinder only"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_presound				// To play sounds on exploders before the explosion, for pathfinder only
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_ender"
+"Summary: string - Stop a looping effect"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_ender				// Stop a looping effect
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_firefxsound"
+"Summary: string - Looping sound for an exploder firefx"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_firefxsound			// Looping sound for an exploder firefx
+
+float	script_brake				// the amount to brake from a brake trigger
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_angles"
+"Summary: vector - generic angles storage"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+vector	script_angles				// generic angles storage
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_delete"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+int		script_delete
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_increment"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_increment
+int		script_chatgroup			// used in cliffhanger to group patroller together and make conversations
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_patroller"
+"Summary: int - turns this guy into a patroller"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_patroller    		// turns this guy into a patroller
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_readystand"
+"Summary: int - sets this guy to use the readystand idle anims when standing around"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_readystand    		// turns this guy into a patroller
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_faceangles"
+"Summary: int - used for patrollers so they face they can optionally face the angles of the idle or end node. Else can be used as a generic kvp"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_faceangles    		// used for patrollers so they face they can optionally face the angles of the idle or end node
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_pet"
+"Summary: int - set on a AI and a dog to create a pet out of the dog"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_pet					// set on a AI and a dog to create a pet out of the dog
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_stealth"
+"Summary: int - turns on stealth system for this ai"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_stealth				// turns on stealth system for this ai
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_stealth_dontseek"
+"Summary: int - dont set your goalpos to the enemy's goalpos on combat"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_stealth_dontseek		// dont set your goalpos to the enemy's goalpos on combat
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_stealth_function"
+"Summary: string - key which references the main stealth function to run at spawn for this ai"
+"Module: radiant_keys"
+"NoteLine: make sure in script to use stealth_set_default_stealth_function( <key>, <func> ) to set the key to reference the function you want."
+"NoteLine: The stealth function should call stealth_basic() and any other parameters / functions specific for that ai."
+"NoteLine: You can obviously have more than one default function for the level and reference them with keys which corrispond to script_stealth_function set on the spawner"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_stealth_function		// set this to a string for the main stealth function for this ai...make sure to set the function in script with stealth_set_main_stealth_function
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_idleanim"
+"Summary: int - starts this guy in an idel anim...if script_animation isn't set, then it picks a random one."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_idleanim				// starts this guy in an idel anim...if script_animation isn't set, then it picks a random one.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_idlereach"
+"Summary: int - like idleanim, but the guy reaches his goal first...if script_animation isn't set, then it picks a random one."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_idlereach			// like idleanim, but the guy reaches his goal first...if script_animation isn't set, then it picks a random one.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_offtime"
+"Summary: int - Number of milliseconds before guys get off a flak when you hit the off-trigger, defaults to 20000"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+int		script_offtime				// Number of milliseconds before guys get off a flak when you hit the off-trigger, defaults to 20000
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_offradius"
+"Summary: int - Guys get off a flak if a player gets this close to a flak after hitting the off-trigger, default 350"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_offradius			// Guys get off a flak if a player gets this close to a flak after hitting the off-trigger, default 350
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_autosavename"
+"Summary: string - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_autosavename
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_autosave"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_autosave
+
+int		count
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_timer"
+"Summary: int - Timeout for friendly_chat"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_timer				// Timeout for friendly_chat
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_delayed_playerseek"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_delayed_playerseek
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_playerseek"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_playerseek
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_seekgoal"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_seekgoal
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_start"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_start
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_startname"
+"Summary: string - used on script_origin_start_nogame"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string		script_startname
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_radius"
+"Summary: int - Sets an AI's starting goal radius. On an exploder this sets the radius damage's radius."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_radius				// Sets an AI's starting goal radius. On an exploder this sets the radius damage's radius.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_goalheight"
+"Summary: int - Sets an AI's starting goal height."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_goalheight		// Sets an AI's starting goal height.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_followmin"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_followmin
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_followmax"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_followmax
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_startinghealth"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_startinghealth
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_fallback"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_fallback
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_grenades"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_grenades
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_fightdist"
+"Summary: int - Spawners will spawn with this pathEnemyFightDist"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_fightdist			// Spawners will spawn with this pathEnemyFightDist
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_maxdist"
+"Summary: int - Spawners will spawn with this pathEnemyLookAhead"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_maxdist				// Spawners will spawn with this pathEnemyLookAhead
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_moveoverride"
+"Summary: int - Spawners with this will not go to their (targetted) node before fighting."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_moveoverride 		// Spawners with this will go to their (targetted) node before fighting.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_combatmode"
+"Summary: string - Spawners will spawn with self.combatMode set to this value (ex. 'ambush', 'ambush_nodes_only') ."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_combatmode			// Spawners will spawn with self.combatMode set to this value (ex. "ambush", "ambush_nodes_only"
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_nosurprise"
+"Summary: int - Cant be shocked, surprised, or startled."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_nosurprise 			// disables surprise
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_percent"
+"Summary: int - for ending physics explosions."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_percent				// for ending physics explosions
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_vehiclecargo"
+"Summary: int - used for helis that have attached cargo. Example: seaknight with a scriptLinkTo a cargo net or hanging humvee will attach that cargo and carry it."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+ */
+ 
+int		script_vehiclecargo	
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_vehiclenodegroup"
+"Summary: int - used for getting an array of vehicle nodes"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_vehiclenodegroup 	// used for getting an array of vehicle nodes
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_mg42auto"
+"Summary: int - When you hit this trigger any grouped mg42s will go into auto mode and clear target."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_mg42auto				// When you hit this trigger any grouped mg42s will go into auto mode and clear target.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_requires_player"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_requires_player
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_sightrange"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_sightrange
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_fallback_group"
+"Summary: int - Makes stray spawned guys part of bigger falling back movements."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_fallback_group		// Makes stray spawned guys part of bigger falling back movements.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_vehiclegroup"
+"Summary: int - links a vehicle to its spawners"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_vehiclegroup			// links a vehicle to its spawners
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_vehicle_selfremove"
+"Summary: int - vehicle will delete itself when it reaches the end of its path"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_vehicle_selfremove	// vehicle will delete itself when it reaches the end of its path
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_exploder"
+"Summary: string - Grouping things that explode"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_exploder				// Grouping things that explode
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_exploder_delay"
+"Summary: int - makes an exploder delay before going off (for exploders triggered by vehicle paths)."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_exploder_delay		// makes an exploder delay before going off (for exploders triggered by vehicle paths).
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_prefab_exploder"
+"Summary: int - Override an exploder since exploders in prefabs get unique'd."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_prefab_exploder		// Override an exploder since exploders in prefabs get unique'd.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_balcony"
+"Summary: int - current mechanism for flagging an actor to test for balcony death"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_balcony				// current mechanism for flagging an actor to test for balcony death
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_mgturret"
+"Summary: int - Group AI with a node that targets an mg42 and the AI will keep the gun in use."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_mgturret				// Group AI with a node that targets an mg42 and the AI will keep the gun in use.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_plane"
+"Summary: int - Specifies which plane set this is, so they can all be started together."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_plane				// Specifies which plane set this is, so they can all be started together.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_explode"
+"Summary: int - Tells a plane to explode with this exploder."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_explode				// Tells a plane to explode with this exploder.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .dontdropweapon"
+"Summary: int - If set, the AI will not drop a weapon when he dies"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		dontdropweapon				// If set, the AI will not drop a weapon when he dies
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .dontdrawoncompass"
+"Summary: int - If set, the AI will not be drawn on the player's compass. Only matters for friendlies"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		dontdrawoncompass			// If set, the AI will not be drawn on the player's compass. Only matters for friendlies
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_usemg42"
+"Summary: int - If set to false, a friendly will not use be told by friendly_mg42 triggers to use an mg42."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_usemg42				// If set to false, a friendly will not use be told by friendly_mg42 triggers to use an mg42.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_stoptoshoot"
+"Summary: int - used for tanks, setting this to greater than zero will make a tank stop before firing it's main cannon"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_stoptoshoot			// used for tanks, setting this to greater than zero will make a tank stop before firing it's main cannon
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_startingposition"
+"Summary: int - used for riders of vehicles to manually designate riding postions (also used for walkers)"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_startingposition		// used for riders of vehicles to manually designate riding postions (also used for walkers)
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_turretmg"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_turretmg
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_forcegrenade"
+"Summary: int - Set to 1 to enable AI to throw as many grenades as they want rather than extremely rarely."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+int		script_forcegrenade			// Set to 1 to enable AI to throw as many grenades as they want rather than extremely rarely.
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_stack"
+"Summary: int - for walls where friendlies hang out"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_stack				// for walls where friendlies hang out
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_nofriendlywave"
+"Summary: int - disables tracking of this ai for friendly_wave's"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_nofriendlywave		// disables tracking of this ai for friendly_wave's
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_forcegoal"
+"Summary: int - forces an AI to use the goal radius of the node they target, rather than switch to 2000 (for flood_and_secure spawners)"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_forcegoal			// forces an AI to use the goal radius of the node they target, rather than switch to 2000 (for flood_and_secure spawners)
+
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_dontpeek"
+"Summary: int - forces an AI to not peek out at a cover node."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_dontpeek				// forces an AI to not peek out at a cover node
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_disconnectpaths"
+"Summary: int - makes exploder script_brushes connectpaths when hidden and disconnect when shown. could be used to disable cover nodes."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_disconnectpaths		// makes exploder script_brushes connectpaths when hidden and disconnect when shown. could be used to disable cover nodes.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_nowall"
+"Summary: int - make AI play a special set of corner animations that dont require a wall"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_nowall				// make AI play a special set of corner animations that dont require a wall
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_longdeath"
+"Summary: int - set to 0 disable long death animations like lying on the ground and shooting"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_longdeath			// set to 0 disable long death animations like lying on the ground and shooting
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_diequietly"
+"Summary: int - set to 0 disable long death animations like lying on the ground and shooting"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_diequietly			// set to 1 disable death animations with any fireing in them.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_displaceable"
+"Summary: int - makes an AI able to change his goal radius from animscript."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_displaceable			// makes an AI able to change his goal radius from animscript.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_grenadespeed"
+"Summary: int - used for setting magic grenade launch speeds on script origins"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/	
+
+int 	script_grenadespeed			// used for setting magic grenade launch speeds on script origins
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_maxspawn"
+"Summary: int - used on flood spawn trigger to regulate the max number of ai"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_maxspawn				// used on flood spawn trigger to regulate the max number of ai
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_battlechatter"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_battlechatter
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_trigger_group"
+"Summary: int - used to disable a group of triggers when one gets hit."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_trigger_group		// used to disable a group of triggers when one gets hit.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_combatbehavior"
+"Summary: string - used to force a specific combat anims (valid so far are "heat" and "cqb")."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_combatbehavior				// used to force a specific combat anims (valid so far are "heat" and "cqb")
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_breach_id"
+"Summary: int - used on a door to force a special type of breach."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_breach_id				// used on a door to force a special type of breach.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_slowmo_breach_doortype"
+"Summary: string - The kind of door that will be used in the breach sequence (metal, wood, etc)."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_slowmo_breach_doortype	// The kind of door that will be used in the breach sequence (metal, wood, etc)
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_airspeed"
+"Summary: int - used in checks for setting speed on helicopter path origins or nodes"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_airspeed				// used in checks for setting speed on helicopter path origins or nodes
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_yawspeed"
+"Summary: int - used in checks for setting yaw speed on helicopter path origins or nodes"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_yawspeed				// used in checks for setting yaw speed on helicopter path origins or nodes
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_forceyaw"
+"Summary: int - used in checks for a target or goal yaw on helicopter path origins or nodes"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_forceyaw				// used in checks for a target or goal yaw on helicopter path origins or nodes
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_cleartargetyaw"
+"Summary: int - used in checks to reset a target yaw on helicopter path origins or nodes"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_cleartargetyaw		// used in checks to reset a target yaw on helicopter path origins or nodes
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_accel"
+"Summary: int - used in checks to change the acceleration on helicopter path origins or nodes"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float 	script_accel				// used in checks to change the acceleration on helicopter path origins or nodes
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_decel"
+"Summary: int - used in checks to change the deceleration on helicopter path origins or nodes"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float 	script_decel				// used in checks to change the deceleration on helicopter path origins or nodes
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_engage"
+"Summary: int - used in checks to fire weapons on helicopter path origins or nodes"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_engage				// used in checks to fire weapons on helicopter path origins or nodes
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_engageDelay"
+"Summary: int - used in checks to delay weapons firing on helicopter path origins or nodes"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_engageDelay			// used in checks to delay weapons firing on helicopter path origins or nodes
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_hoverwait"
+"Summary: int - used in checks to set hovering times on helicopter path origins or nodes"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_hoverwait			// used in checks to set hovering times on helicopter path origins or nodes
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_pilottalk"
+"Summary: int - used in checks to trigger dialogue on helicopter path origins or nodes"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_pilottalk			// used in checks to trigger dialogue on helicopter path origins or nodes
+
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_airresistance"
+"Summary: int - makes a helicopter stay tilted forwards, set on node."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_airresistance		// makes a helicopter stay tilted forwards, set on node.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_attackPattern"
+"Summary: string - used in checks to control weapons firing on helicopter path origins or nodes"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string 	script_attackPattern		// used in checks to control weapons firing on helicopter path origins or nodes
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_firelink"
+"Summary: int - tells heli to shoot at the script_linked origin with the named fire pattern."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_firelink				// tells a heli to shoot at the script_linked script_origin with the named fire pattern
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_land"
+"Summary: int - true on a final path node makes the heli land there."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_land					// true on a final path node makes the heli land there
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_helimove"
+"Summary: int - set the helimove type on a node, makes the heli move/turn a certain way. possible values are "instant", "faster", "fast", "slow"."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_helimove				// set the helimove type on a node, makes the heli move/turn a certain way, possible values are instant, faster, fast, slow
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_objective"
+"Summary: string - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_objective
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_friendname"
+"Summary: string - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_friendname
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_noteworthy"
+"Summary: string - Used to get a string for scripted sequences mainly."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_noteworthy  			// Used to get a string for scripted sequences mainly.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_parameters"
+"Summary: string - generic string used for similar purpose as script_noteworthy"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_parameters			// generic string used for similar purpose as script_noteworthy
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_triggername"
+"Summary: string - Z: used for elevators in the dam"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_triggername			// Z: used for elevators in the dam
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_fxcommand"
+"Summary: string - What to do with the effect"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_fxcommand			// What to do with the effect
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_fxid"
+"Summary: string - The id of the effect to do"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_fxid					// The id of the effect to do
+
+
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .weaponinfo"
+"Summary: string - weaponinfo"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	weaponinfo
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_hidden"
+"Summary: string - the thing which is hidden and appears later (mortars)"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_hidden				// the thing which is hidden and appears later (mortars)
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .vehicletype"
+"Summary: string - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	vehicletype
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_personality"
+"Summary: string - This guy will use this personality type"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_personality			// This guy will use this personality type
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_squadname"
+"Summary: string - squad (spawner cluster) identifier"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string  script_squadname			// squad (spawner cluster) identifier
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_nodestate"
+"Summary: string - generic identifier for nodes"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string 	script_nodestate			// generic identifier for nodes
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_assaultnode"
+"Summary: string - generic identifier for nodes"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_assaultnode			// generic identifier for nodes
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_team"
+"Summary: string - how to know which team a tank is on (needed to free up target/targetname for radiant linkability)"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string 	script_team					// how to know which team a tank is on (needed to free up target/targetname for radiant linkability)
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_mortargroup"
+"Summary: string - to group mortars with their triggers"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string 	script_mortargroup			// to group mortars with their triggers
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .ambient"
+"Summary: string - String index of the level.ambient_track to play on this trigger."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	ambient						// String index of the level.ambient_track to play on this trigger.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_gameobjectname"
+"Summary: string - Used in multiplayer to add/remove entities based on gametype."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string  script_gameobjectname 		// Used in multiplayer to add/remove entities based on gametype.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_gametype_dm"
+"Summary: string - Preston: Used in multiplayer to add/remove entities based on gametype."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_gametype_dm			// Preston: Used in multiplayer to add/remove entities based on gametype.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_gametype_tdm"
+"Summary: string - Preston: Used in multiplayer to add/remove entities based on gametype."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_gametype_tdm			// Preston: Used in multiplayer to add/remove entities based on gametype.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_gametype_ctf"
+"Summary: string - Preston: Used in multiplayer to add/remove entities based on gametype."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_gametype_ctf			// Preston: Used in multiplayer to add/remove entities based on gametype.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_gametype_hq"
+"Summary: string - Preston: Used in multiplayer to add/remove entities based on gametype."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_gametype_hq			// Preston: Used in multiplayer to add/remove entities based on gametype.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_gametype_sd"
+"Summary: string - Preston: Used in multiplayer to add/remove entities based on gametype."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_gametype_sd			// Preston: Used in multiplayer to add/remove entities based on gametype.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_mapsize_08"
+"Summary: string - Preston: Used in multiplayer to add/remove entities based on the set mapsize."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_mapsize_08			// Preston: Used in multiplayer to add/remove entities based on the set mapsize.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_mapsize_16"
+"Summary: string - Preston: Used in multiplayer to add/remove entities based on the set mapsize."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_mapsize_16			// Preston: Used in multiplayer to add/remove entities based on the set mapsize.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_mapsize_32"
+"Summary: string - Preston: Used in multiplayer to add/remove entities based on the set mapsize."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_mapsize_32			// Preston: Used in multiplayer to add/remove entities based on the set mapsize.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_mapsize_64"
+"Summary: string - Preston: Used in multiplayer to add/remove entities based on the set mapsize."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_mapsize_64			// Preston: Used in multiplayer to add/remove entities based on the set mapsize.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_sound"
+"Summary: string - Plays level.scr_sound ["string"]"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_sound				// Plays level.scr_sound ["string"]
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_animation"
+"Summary: string - If defined, patrollers will play a random pause animation at this node."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_animation			// If defined, patrollers will play a random pause animation at this node.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_difficulty"
+"Summary: string - set to easy or hard...easy will only include spawners for easy and normal difficulty, hard will only include spawners for hardened and veteran."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_difficulty			// set to easy or hard...easy will only include spawners for easy and normal difficulty, hard will only include spawners for hardened and veteran
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_destructable_area"
+"Summary: string - used to let destructable walls block off areas of the map (affects spawning, for instance)"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_destructable_area 	// used to let destructable walls block off areas of the map (affects spawning, for instance)
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_earthquake"
+"Summary: string - References level.earthquake variables to do an earthquake"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_earthquake			// References level.earthquake variables to do an earthquake
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_followmode"
+"Summary: string - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_followmode
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_skilloverride"
+"Summary: string - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_skilloverride
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_bctrigger"
+"Summary: string - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_bctrigger
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_bcdialog"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_bcdialog				//set to 0 on a spawner/ai when you want to turn off battlechatter forever on that individual
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_aigroup"
+"Summary: string - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_aigroup
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_objective_active"
+"Summary: string - used with flood_and_Secure and "friendlychain"s to only be active if this objective"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_objective_active 	// used with flood_and_Secure and "friendlychain"s to only be active if this objective
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_objective_inactive"
+"Summary: string - is active"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_objective_inactive 	// is active
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_threatbiasgroup"
+"Summary: string - adds spawned ai to this threatbiasgroup"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_threatbiasgroup		// adds spawned ai to this threatbiasgroup
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_threatbias"
+"Summary: int - set default threatbias for this ai."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_threatbias			// set default threatbias for this ai
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_squad"
+"Summary: string - Group spawners/ai so they share enemy information"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_squad				// Group spawners/ai so they share enemy information
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_area"
+"Summary: string - used by battlechatter system"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_area					// used by battlechatter system
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_location"
+"Summary: string - used by battlechatter system"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_location				// used by battlechatter system
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_landmark"
+"Summary: string - used by battlechatter system"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_landmark				// used by battlechatter system
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_flag_true"
+"Summary: string - This entity should not activate unless at least one of the flags in this string is true"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_flag_true			// This entity should not activate unless at least one of the flags in this string is true
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_flag_false"
+"Summary: string - This entity should not activate unless all the flags in this string are false"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_flag_false			// This entity should not activate unless all the flags in this string are false
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_flag"
+"Summary: string - the flag that gets enabled/disabled by targetname flag_set and flag_unset"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_flag					// the flag that gets enabled/disabled by targetname flag_set and flag_unset
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_ent_flag_set"
+"Summary: Sets an entity flag"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_ent_flag_set			// sets the flag for this vehicle when it hits the node
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_ent_flag_wait"
+"Summary: Waits for an entity flag to be set before continuing script"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_ent_flag_wait		// waits for the entity flag
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_ent_flag_clear"
+"Summary: Clear an ent flag when a vehicle hits this node"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_ent_flag_clear		// clears the flag for this vehicle when it hits the node
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_flag_set"
+"Summary: string - helis using helipath will set this flag when they reach this point"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_flag_set				// helis using helipath will set this flag when they reach this point
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_flag_wait"
+"Summary: string - helis using helipath will wait at this point until this flag is set"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_flag_wait			// helis using helipath will wait at this point until this flag is set
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_flag_clear"
+"Summary: string - clears the flag when it hits this spot"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_flag_clear			// clears the flag when it hits this spot
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_color_allies"
+"Summary: string - groups allied AI with nodes/triggers of that color"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+string	script_color_allies			// groups allied AI with nodes/triggers of that color
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_color_axis"
+"Summary: string - groups axis AI with nodes/triggers of that color"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+string	script_color_axis			// groups axis AI with nodes/triggers of that color
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_forcecolor"
+"Summary: string - forces an AI to use all nodes of this color"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string  script_forcecolor			// forces an AI to use all nodes of this color
+
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_colorlast"
+"Summary: int - the AI will choose nodes with this defined after nodes without it."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_colorlast			// the AI will choose nodes with this defined after nodes without it
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_linkName"
+"Summary: string - Works with script_linkTo"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_linkName				// Works with script_linkTo
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_linkTo"
+"Summary: string - A compound string that is a list of script_linkname'd entities that this entity links to."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_linkTo				// A compound string that is a list of script_linkname'd entities that this entity links to.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_wtf"
+"Summary: string - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string 	script_wtf
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_type"
+"Summary: Used for MP soft landing"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_type				// Used for MP "soft landing"
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_stance"
+"Summary: string - General purpose string identifier useful for stance related scripting"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string 	script_stance				// General purpose string identifier useful for stance related scripting
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_namenumber"
+"Summary: string - General purpose string identifier that used to be in this file that I use frequently"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string 	script_namenumber			// General purpose string identifier for when noteworthy is used up
+string	script_battleplan			// General purpose string identifier used for unique AI directives on spawn
+
+////////////////////////////////////////////////////////
+// destructable stuff
+////////////////////////////////////////////////////////
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_accumulate"
+"Summary: int - damage that must accumulate for destruction to occur"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int     script_accumulate 			// damage that must accumulate for destruction to occur
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_threshold"
+"Summary: int - min damage that has any effect"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int     script_threshold  			// min damage that has any effect
+
+// vehicle stuff
+
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_AI_invulnerable"
+"Summary: int - Vehicles with script_AI_invulnerable set to 1 cannot be damaged by AI weapons"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_AI_invulnerable			//Vehicles with script_AI_invulnerable set to 1 cannot be damaged by AI weapons
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_missiles"
+"Summary: int - used to determine whether to fire missiles in _attack_heli.gsc."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_missiles				//used to determine whether to fire missiles in _attack_heli.gsc
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_spotlight"
+"Summary: int - set to 1 to enable a spotlight for a helicopter using global logic in _attack_heli.gsc"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_spotlight			//set to 1 to enable a spotlight for a helicopter using global logic in _attack_heli.gsc
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_turret"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+int		script_turret
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_gatetrigger"
+"Summary: int - vehicles will wait at vehicle nodes with this untill the trigger is hit."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_gatetrigger			// vehicles will wait at vehicle nodes with this untill the trigger is hit.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_VehicleSpawngroup"
+"Summary: int - spawns associated vehicles and their aigroups (as still designated by script_vehiclegroup on the vehicles and the ai's)"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_VehicleSpawngroup 	// spawns associated vehicles and their aigroups (as still designated by script_vehiclegroup on the vehicles and the ai's)
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_VehicleStartMove"
+"Summary: int - initiates associated vehicles movement on its path, note that if no script_vehicleStart nodes or triggers exist then the vehicle will stay and wait for the level script to initiate it's movement stacking this with script_VehicleSpawngroup will make spawn and go right away."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_VehicleStartMove 	// initiates associated vehicles movement on its path, note that if no script_vehicleStart nodes or triggers exist then the vehicle will stay and wait for the level script to initiate it's movement stacking this with script_VehicleSpawngroup will make spawn and go right away.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_vehicleGroupDelete"
+"Summary: int - Deletes associated vehicles and their aigroups (as still designated by script_vehiclegroup on the vehicles and the ai's)"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_vehicleGroupDelete 	// Deletes associated vehicles and their aigroups (as still designated by script_vehiclegroup on the vehicles and the ai's)
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_physicsjolt"
+"Summary: int - toggle tanks shaking physics as it drives by."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_physicsjolt 			// toggle tanks shaking physics as it drives by.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_unload"
+"Summary: string - tells the vehicle to unload this group of guys"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string 	script_unload 				// tells the vehicle to unload this group of guys
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_pathtype"
+"Summary: string - veh_pathtype for the physics vehicle. Constrained or follow. Set on vehicle spawners."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_pathtype				// veh_pathtype for the physics vehicle. Constrained or follow. Set on vehicle spawner
+
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_transmission"
+"Summary: string - veh_transmission for the physics vehicle. forward or reverse. Set on node."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string 	script_transmission			// veh_transmission for the physics vehicle. forward or reverse. Set on node
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_dontunloadonend"
+"Summary: string - set this on a vehicle spawner to make it not unload the guys at the end of the path."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_dontunloadonend		// set this on a vehicle spawner to make it not unload the guys at the end of the path
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_deathroll"
+"Summary: int - turns on and off deathroll for vehicles crossing paths"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_deathroll			// turns on and off deathroll for vehicles crossing paths
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_crashtype"
+"Summary: string - designates a crashpath"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_crashtype			// designates a crashpath
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_crashtypeoverride"
+"Summary: string - override the type of crash a vehicle will do when it dies values are "tank", "mobile""
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_crashtypeoverride	// override the type of crash a vehicle will do when it dies values are "tank", "mobile"
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_nomg"
+"Summary: int - makes machineguns not spawn at all on a tank. used for big tank battles where they aren't necessary on all the tanks."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_nomg					// makes machineguns not spawn at all on a tank. used for big tank battles where they aren't necessary on all the tanks.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_badplace"
+"Summary: int - no badplaces on tanks.  for tanks that won't be near ai. on big tank battles."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_badplace				// no badplaces on tanks.  for tanks that won't be near ai. on big tank battles.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_dronelag"
+"Summary: float - amount of timed space between drones following vehicle paths"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_dronelag				// amount of timed space between drones following vehicle paths
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_fireondrones"
+"Summary: int - toggles machineguns firing on drones behavior"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_fireondrones			// toggles machineguns firing on drones behavior
+float	script_moveplaybackrate		// rate to move drones at. defaults to 1.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_vehicleride"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_vehicleride
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_unloadmgguy"
+"Summary: int - set this on the halftrack to make the mg guy unload."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_unloadmgguy			// set this on the halftrack to make the mg guy unload.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_keepdriver"
+"Summary: int - set this on the vehicle to make the vehilce driver not unload."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_keepdriver			// set this on the vehicle to make the vehilce driver not unload.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_vehicledetour"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_vehicledetour
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_avoidvehicles"
+"Summary: int - setting to 0 on a tank will make it not do collision avoidance stuff"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_avoidvehicles		// setting to 0 on a tank will make it not do collision avoidance stuff
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_avoidplayer"
+"Summary: int - setting to 1 will cause the tank to perform collision avoidance on the player"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_avoidplayer 			// setting to 1 will cause the tank to perform collision avoidance on the player
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_playerconeradius"
+"Summary: float - used optionally with script_avoidplayer if you want a cone radius other than 200."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_playerconeradius 	// used optionally with script_avoidplayer if you want a cone radius other than 200.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_vehicledetourtype"
+"Summary: string - describing how a vehicledetour node works,  first non default type being "scriptswitch" which will let the script notify the path to become a switch node. Useful in situations where a tank will fight in circles and then procede on whatever script condition."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_vehicledetourtype	// describing how a vehicledetour node works,  first non default type being "scriptswitch" which will let the script notify the path to become a switch node. Useful in situations where a tank will fight in circles and then procede on whatever script condition.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_attackspeed"
+"Summary: float - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_attackspeed
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_unloaddelay"
+"Summary: int - make a vehicle delay this long before unloading at the end of a path. < 1 means never unload // nate we should remove this or make it work on all of the unloads."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_unloaddelay			// make a vehicle delay this long before unloading at the end of a path. < 1 means never unload // nate we should remove this or make it work on all of the unloads.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_cobratarget"
+"Summary: int - set to 1 to create a target for this entity on pilotcobra missions"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_cobratarget			// set to 1 to create a target for this entity on pilotcobra missions
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_targettype"
+"Summary: string - "air" or "ground" - used for helicopter pilot levels"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_targettype			// "air" or "ground" - used for helicopter pilot levels
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_targetoffset_z"
+"Summary: float - offset from model where missiles should aim - used for helicopter pilot levels"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_targetoffset_z		// offset from model where missiles should aim - used for helicopter pilot levels
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_wingman"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_wingman
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_turningdir"
+"Summary: string - set this to the direction of the anim set you want a vehicle to use.  "right","hard_right","left","hard_left","forward""
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_turningdir			// set this to the direction of the anim set you want a vehicle to use.  "right","hard_right","left","hard_left","forward"
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_bombmode_original"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_bombmode_original
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_bombmode_single"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_bombmode_single
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_bombmode_dual"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_bombmode_dual
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_label"
+"Summary: string - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_label
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_flakaicount"
+"Summary: int - for setting the amount of ai to spawn on a flak"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_flakaicount			// for setting the amount of ai to spawn on a flak
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_tankgroup"
+"Summary: string - used to add a tankgroup to vehicles."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_tankgroup			// used to add a tankgroup to vehicles.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_chance"
+"Summary: float - chance that an exploder will explode, checked every 4 seconds or whatever script_delay is on the trigger."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_chance				// chance that an exploder will explode, checked every 4 seconds or whatever script_delay is on the trigger.
+
+// Duhoc_Assault
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_forcespawn"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_forcespawn
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_deleteai"
+"Summary: string - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_deleteai
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_allowdeath"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_allowdeath
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_death"
+"Summary: float - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_death
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_death_min"
+"Summary: float - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_death_min
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_death_max"
+"Summary: float - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_death_max
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_drones_min"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_drones_min
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_drones_max"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_drones_max
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_droneStartMove"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_droneStartMove
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_looping"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_looping
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_trace"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_trace
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_smokegroup"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_smokegroup
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_minspec_level"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_minspec_level
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_minspec_hooks_level"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_minspec_hooks_level
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_spawn_here"
+"Summary: int - for camper_spawner"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_spawn_here			// for camper_spawner
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_vehicleaianim"
+"Summary: string - this will be a radiant drop down list that tells the ai on the vehicle which animations to play"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string 	script_vehicleaianim  		// this will be a radiant drop down list that tells the ai on the vehicle which animations to play
+
+// flashbang
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_immunetoflash"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_immunetoflash
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_health"
+"Summary: int - bringing it back!"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_health 				// bringing it back!
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_stopnode"
+"Summary: int - tells helicopters to stop at a node."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_stopnode 			// tells helicopters to stop at a node.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_turret_share"
+"Summary: string - shares turret spots for portable mgs"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_turret_share 		// shares turret spots for portable mgs
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_turret_ambush"
+"Summary: string - shares turret spots for portable mgs"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_turret_ambush 		// shares turret spots for portable mgs
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_dont_link_turret"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_dont_link_turret
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .ambience_inner"
+"Summary: string - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	ambience_inner
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .ambience_outer"
+"Summary: string - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	ambience_outer
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_mg_angle"
+"Summary: int - this gives option to start the machinegun at an angle"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_mg_angle				// this gives option to start the machinegun at an angle
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_deathchain"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_deathchain
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_nohealth"
+"Summary: int - makes the guy not drop health"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_nohealth				// makes the guy not drop health
+
+// destructible object
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .destructible_type"
+"Summary: string - identifier"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	destructible_type			// identifier
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_destruct_collision"
+"Summary: string - set to either pre or post, goes in a destructible prefab for destructibles that move a lot when they blow up."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_destruct_collision	// set to either pre or post, goes in a destructible prefab for destructibles that move a lot when they blow up
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_bg_offset"
+"Summary: vector - I'm using this in cobrapilot to move the background pieces into place"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+vector	script_bg_offset 			// I'm using this in cobrapilot to move the background pieces into place
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_flashbangs"
+"Summary: int - set this to > 0 to give an AI flashbangs instead of frag grenades."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_flashbangs   		// set this to > 0 to give an AI flashbangs instead of frag grenades.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_dot"
+"Summary: float - used on targetname trigger_lookat triggers to change the fov"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_dot 					// used on targetname trigger_lookat triggers to change the fov
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_drone"
+"Summary: int - setting to 1 makes the spawner a script drone"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_drone 				// setting to 1 makes the spawner a script drone
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .squadnum"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	squadnum
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_hint"
+"Summary: string - put on trigger_hint"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_hint					// put on trigger_hint
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_anglevehicle"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_anglevehicle
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_deathflag"
+"Summary: string - when all the ai and spawners with the same string die (or their count depletes to zero) a flag with this string gets set."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_deathflag	//when all the ai and spawners with the same string die (or their count depletes to zero) a flag with this string gets set.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_delay_spawn"
+"Summary: int - Delay spawning by this long, in spawn_ai"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_delay_spawn			// delay spawning by this long, in spawn_ai()
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_killspawner_group"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_killspawner_group
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_wheeldirection"
+"Summary: int - 1 goes forward 0 goes backwards."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_wheeldirection 		// 1 goes forward 0 goes backwards.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_vehicle_lights_on"
+"Summary: string - set to a group of lights to turn them on"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string 	script_vehicle_lights_on  	// set to a group of lights to turn them on
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_vehicle_lights_off"
+"Summary: string - set to a group of lights to turn them off"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string 	script_vehicle_lights_off 	// set to a group of lights to turn them off
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_fixednode"
+"Summary: int - can force .fixednode on an AI"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_fixednode			// can force .fixednode on an AI
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .fixednodesaferadius"
+"Summary: float - the safe radius"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	fixednodesaferadius			// the safe radius
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .spawner_id"
+"Summary: string - using this for jeepride, guh, grunt, blarg! -nate"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string 	spawner_id 					// using this for jeepride, guh, grunt, blarg! -nate
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_vehicledetourgroup"
+"Summary: int - use this for telling a detour node to only detour vehicles in matching groups"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_vehicledetourgroup 	// use this for telling a detour node to only detour vehicles in matching groups
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_vehicletriggergroup"
+"Summary: int - a more generic grouping.  I'm using this so that paths can be shared easier.   setting this on a node with other vehicle trigger functions will only effect vehicles in the matching group."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_vehicletriggergroup 	// a more generic grouping.  I'm using this so that paths can be shared easier.   setting this on a node with other vehicle trigger functions will only effect vehicles in the matching group.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_ghettotag"
+"Summary: string - used for truckjunk"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string 	script_ghettotag
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_growl"
+"Summary: int - makes a dog growl as he runs, instead of barking"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_growl				// makes a dog growl as he runs, instead of barking
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_nobark"
+"Summary: int - makes a dog not make a sound as he moves"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_nobark				// makes a dog not make a sound as he moves
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_attackmetype"
+"Summary: string - for jeepride.  set this on nodes to tell it to fire missiles"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string 	script_attackmetype 		// for jeepride.  set this on nodes to tell it to fire missiles
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_shotcount"
+"Summary: int - for jeepride.  how many missiles to fire at a moving point"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_shotcount 			// for jeepride.  how many missiles to fire at a moving point
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_dontshootwhilemoving"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_dontshootwhilemoving
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_goalyaw"
+"Summary: int - set to 0 to set target yaw, set to 1 to set goal yaw.  Note: true converts to a 0 int"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_goalyaw 				// set to 0 to set target yaw, set to 1 to set goal yaw.  Note: true converts to a 0 int
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_physics"
+"Summary: float - used for exploder_chunk to use physics throw"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float 	script_physics 				// used for exploder_chunk to use physics throw
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_decel_fraction"
+"Summary: float - for Jeepride platforms smoother movements"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float 	script_decel_fraction 		// for Jeepride platforms smoother movements
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_accel_fraction"
+"Summary: float - for Jeepride platforms smoother movements"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float 	script_accel_fraction 		// for Jeepride platforms smoother movements
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_force_count"
+"Summary: string - set to true on spawner - flood spawner will not increment this spawners count if the player didnt see the guy die"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_force_count 			// set to 1 on spawner - flood spawner will not increment this spawners count if the player didnt see the guy die
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_ammo_max"
+"Summary: int - weapon placed in radiant - max out all ammo counts, including altmode and left-hand (akimbo) ammo. Setting this will override any of the other ammo setting keys below."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_ammo_max				// weapon placed in radiant - max out all ammo counts, including altmode and left-hand (akimbo) ammo. Setting this will override any of the other ammo setting keys below.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_ammo_clip"
+"Summary: int - weapon placed in radiant - this many rounds in the clip - must be used with script_ammo_extra"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_ammo_clip 			// weapon placed in radiant - this many rounds in the clip - must be used with script_ammo_extra
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_ammo_extra"
+"Summary: int - weapon placed in radiant - this many rounds outside the clip - must be used with script_ammo_clip"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_ammo_extra 			// weapon placed in radiant - this many rounds outside the clip - must be used with script_ammo_clip
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_ammo_alt_clip"
+"Summary: int - weapon placed in radiant - this many rounds in the altweapon clip."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_ammo_alt_clip 		// weapon placed in radiant - this many rounds in the altweapon clip
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_ammo_alt_extra"
+"Summary: int - weapon placed in radiant - this many rounds outisde the altweapon clip."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_ammo_alt_extra 		// weapon placed in radiant - this many rounds outisde the altweapon clip
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_godmode"
+"Summary: int - makes a vehicle be god mode"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_godmode 				// makes a vehicle be god mode
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_node_pausetime"
+"Summary: int - used for attack routing, amount of time to wait at marked goalnode"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_node_pausetime		// used for attack routing, amount of time to wait at marked goalnode
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_bulletshield"
+"Summary: int - used to apply toggleable bullet shields to vehicles that have them enabled."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_bulletshield 		// used to apply toggleable bullet shields to vehicles that have them enabled.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_grenadeshield"
+"Summary: int - used to apply toggleable grenade shields to vehicles that have them enabled."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int 	script_grenadeshield // same as bullet shield
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_deathflag_longdeath"
+"Summary: int - set to on and script_deathflag guys will notify on death OR longpaindeath"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_deathflag_longdeath 	// set to on and script_deathflag guys will notify on death OR longpaindeath
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_deathtime"
+"Summary: int - Wait this long then die shortly after"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_deathtime			// after spawning, wait this long, then die shortly after.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_forcefire_delay"
+"Summary: float - how long to wait until starting forced MGs."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_forcefire_delay		// how long to wait until starting forced MGs
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_forcefire_duration"
+"Summary: float - how long the MGs are forced to fire."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_forcefire_duration	// how long the MGs are forced to fire
+
+// fog stuff
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .start_color"
+"Summary: vector - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+vector	start_color
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .end_color"
+"Summary: vector - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+vector	end_color
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .start_neardist"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+int		start_neardist
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .end_neardist"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		end_neardist
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .start_fardist"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		start_fardist
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .end_fardist"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		end_fardist
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .end_fardist"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_fogset_start			// fog transition from, fog set must be defined in script by create_vision_set_fog() or create_fog()
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_fogset_end"
+"Summary: string - fog transition to, fog set must be defined in script by create_vision_set_fog() or create_fog()"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_fogset_end			// fog transition to, fog set must be defined in script by create_vision_set_fog() or create_fog()
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_char_index"
+"Summary: int - overwrite the character index"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_char_index			// overwrite the character index
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_char_group"
+"Summary: int - indicate this guy is a member of a group of same chars"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_char_group			// indicate this guy is a member of a group of same chars
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_rumble"
+"Summary: string - rumble file to play on an exploder"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_rumble 				// rumble file to play on an exploder
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_onlyidle"
+"Summary: int - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_onlyidle
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_duration"
+"Summary: float - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float 	script_duration
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_soundalias"
+"Summary: string - play this soundalias on exploders"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string  script_soundalias  			// play this soundalias on exploders
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .animation"
+"Summary: string - Animation applied to a model in radiant to make it animate."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string animation					// Animation applied to a model in radiant to make it animate
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_savetrigger_timer"
+"Summary: float - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float 	script_savetrigger_timer	//used to set minimum required times on autosave triggers in timed missions
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_mp_style_helicopter"
+"Summary: string - "
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string  script_mp_style_helicopter  //makes SP helicopters take less damage from bullets like MP helicopters do
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_noflip"
+"Summary: int - this symmetric destructible wont have a 50% chance of flipping 180degrees when it explodes."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_noflip				// this symmetric destructible wont have a 50% chance of flipping 180degrees when it explodes
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_max_left_angle"
+"Summary: string - Max angle a shutter can swing open in this direction."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_max_left_angle		// Max angle a shutter can swing open in this direction
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_max_right_angle"
+"Summary: string - Max angle a shutter can swing open in this direction."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float	script_max_right_angle		// Max angle a shutter can swing open in this direction
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_paintergroup"
+"Summary: int - painter groups setup the _painter script"
+"Module: radiant_keys"
+"NoteLine: painter groups are setup in a subfolder in the map source as prefabs\painter\"
+"NoteLine:  "
+"NoteLine: you can build your own.  The default spacing for the group will be set to the least amount of space between the models in the group."
+"NoteLine: add more models to the group to increase the frequency of that model of being chosen for placement."
+"NoteLine: Use just one model for a single model group."
+"NoteLine: The targetname should be \"painter_setup\""
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string script_paintergroup //identifier for painter prefabs
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_painter_treeorient"
+"Summary: int - tells painter models to orient straight up rather than using the normals on the surface."
+"Module: radiant_keys"
+"NoteLine: painter groups are setup in a subfolder in the map source as prefabs\painter\"
+"NoteLine:  "
+"NoteLine: you can build your own.  The default spacing for the group will be set to the least amount of space between the models in the group."
+"NoteLine: add more models to the group to increase the frequency of that model of being chosen for placement."
+"NoteLine: Use just one model for a single model group."
+"NoteLine: The targetname should be \"painter_setup\""
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int script_painter_treeorient // turns on tree orientation for painter prefabs
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_painter_maxdist"
+"Summary: int - maximum distance for painter to paint from the users view"
+"Module: radiant_keys"
+"NoteLine: painter groups are setup in a subfolder in the map source as prefabs\painter\"
+"NoteLine:  "
+"NoteLine: you can build your own.  The default spacing for the group will be set to the least amount of space between the models in the group."
+"NoteLine: add more models to the group to increase the frequency of that model of being chosen for placement."
+"NoteLine: Use just one model for a single model group."
+"NoteLine: The targetname should be \"painter_setup\""
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int script_painter_maxdist // maximum distance for painter to plant from player view
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_nobloodpool"
+"Summary: Set to true in Radiant for no blood pool"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_nobloodpool 			// no bloodpool
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .subclass"
+"Summary: string - from aitype."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string subclass	// from aitype
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_visionset"
+"Summary: string - use with trigger_multiple_visionset to change to a vision file."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string script_visionset  //use with trigger_multiple_visionset to change to a vision file
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_visionset_start"
+"Summary: string - use with trigger_multiple_visionset to transition to a vision file."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_visionset_start	// Used with trigger_multiple_visionset to transition from this visionset
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_visionset_end"
+"Summary: string - use with trigger_multiple_visionset to transition to a vision file."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_visionset_end	// Used with trigger_multiple_visionset to transition from this visionset
+
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_speed"
+"Summary: int - override a vehicle's speed from script."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_speed				// override a vehicle's speed from script
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .civilian_walk_animation"
+"Summary: string - used to define which anime group ( defined in level _anim ) this civilian should use for walk loops"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	civilian_walk_animation		// used to define which anime group ( defined in level _anim ) this civilian should use for walk loops
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_count"
+"Summary: int - count value that you can use on non-spawners. Doesn't do anything in global scripts, just available for the LD to use if desired"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_count				// count value that you can use on non-spawners. Doesn't do anything in global scripts, just available for the LD to use if desired
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_specialops"
+"Summary: int - Setting to 1 marks this as a special op only entity. Marking as 0 marks it as a non special op entity. Upon map start, will be deleted if the game mode doesn't match."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_specialops 			// Setting to 1 marks this as a special op only entity. Marking as 0 marks it as a non special op entity. Upon map start, will be deleted if the game mode doesn't match.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_specialopsname"
+"Summary: string - Set this to match the name of your special ops specific script to keep it around in that map only. For entities that need to go in the main map, but only loaded in a SPECIFIC special op as opposed to all special ops. You can put in more than one name, separating with either : ; , or space."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+
+string	script_specialopsname		// Set this to match the name of your special ops specific script to keep it around in that map only. For entities that need to go in the main map, but only loaded in a SPECIFIC special op as opposed to all special ops. You can put in more than one name, separating with either : ; , or space.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_nodrop"
+"Summary: string - set to 1 to make this AI not drop a weapon when he dies."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_nodrop				// set to 1 to make this AI not drop a weapon when he dies
+
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_modelname"
+"Summary: script_modelname is used for sending model information to the game via script_struct, since model doesn't get passed the compiler stage on structs."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string	script_modelname			// script_modelname is used for sending model information to the game via script_struct, since model doesn't get passed the compiler stage on structs.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_allow_driver_death"
+"Summary: int - allow the driver of a vehicle to die. defaults to undefined or off."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int script_allow_driver_death // allow the driver of a vehicle to die. defaults to undefined or off.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_allow_rider_deaths"
+"Summary: int - allow the passengers of a vehicle to die. defaults to undefined or off."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int script_allow_rider_deaths // allow the passengers of a vehicle to die. defaults to undefined or off.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_audio_zones"
+"Summary: string - Used by trigger_multiple_audio_trigger.  Pair of location names to be blended."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+// "audio_zones" is deprecated... remove asap
+string audio_zones		// Used by trigger_multiple_audio_trigger.  Pair of location names to be blended.
+string script_audio_zones
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_audio_enter_msg"
+"Summary: string - Used by trigger_multiple_audio_trigger.  Message to be called when entering the trigger."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string script_audio_enter_msg		
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_audio_exit_msg"
+"Summary: string - Used by trigger_multiple_audio_trigger.  Message to be called when exiting the trigger."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string script_audio_exit_msg
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_audio_progress_msg"
+"Summary: string - Used by trigger_multiple_audio_trigger.  Message to be called while progressing through the trigger."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string script_audio_progress_msg
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_audio_blend_mode"
+"Summary: string - Used by trigger_multiple_audio_trigger.  Mode is either "blend" or "trigger"."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string script_audio_blend_mode
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_audio_enter_func"
+"Summary: string - Used by trigger_multiple_audio_trigger.  Key in an array pointing to a registered callback function when entering the trigger."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string script_audio_enter_func
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_audio_exit_func"
+"Summary: string - Used by trigger_multiple_audio_trigger.  Key in an array pointing to a registered callback function when exiting the trigger."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string script_audio_exit_func
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_audio_progress_func"
+"Summary: string - Used by trigger_multiple_audio_trigger.  Key in an array pointing to a registered callback function while progressing through the trigger."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string script_audio_progress_func
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_audio_update_rate"
+"Summary: float - Used by trigger_multiple_audio_trigger.  Time in seconds (float) that the progress will wait per loop while player is inside trigger."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float script_audio_update_rate
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_audio_point_func"
+"Summary: string - Used by trigger_multiple_audio_trigger.  Key in an array pointing to a registered callback function while progressing through the trigger."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string script_audio_point_func
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_audio_progress_map"
+"Summary: string - Used by trigger_multiple_audio_trigger.  Key in an array pointing to a mapping function for custom non-linear zone blending. Use aud_add_progress_map(name,map_array) to add mapping array."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string script_audio_progress_map
+
+// this for a subway chase. it's not something I care to have documented - nate
+vector script_origin_other // I'm using these to link a vehicle back to it's spawner, who's target/targetname might not be setup.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_sunenable"
+"Summary: int - Used by trigger_multiple_light_sunshadow.  Enables/disables the sun."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int script_sunenable
+
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_sunshadowscale"
+"Summary: float - Used by trigger_multiple_light_sunshadow.  Sets the scale of the sun shadow cascade."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float script_sunshadowscale
+
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_spotlimit"
+"Summary: int - Used by trigger_multiple_light_sunshadow.  Set a limit of spot shadows rendered at one time."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int script_spotlimit
+
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_sunsamplesizenear"
+"Summary: float - Used by trigger_multiple_light_sunshadow.  Set the size of the view frustrum for the sun shadow."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float script_sunsamplesizenear
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_qualityspotshadow"
+"Summary: float - Used by trigger_multiple_light_sunshadow.  Set the quality spot shadow flag."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+float script_qualityspotshadow
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_light_stopnotify"
+"Summary: string - Level notify used by script flicker lights to turn them off."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string script_light_stopnotify
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_light_startnotify"
+"Summary: string - Level notify used by script flicker lights to turn them on."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string script_light_startnotify
+
+int string_explosive_bullet_shield // for protecting a vehicle from damage by an explosive bullet.
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_side"
+"Summary: Generic string"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string		script_side	// Generic string
+
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_oneway"
+"Summary: set this to 1 on a color group trigger to make it never trigger again."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+int		script_oneway	// int - used to tell a colorgroup trigger to delete once it's been hit.
+
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_spawn_pool"
+"Summary: Use script_spawn_pool to associate a struct with a spawner, enable spawn pooling by setting level.spawn_pool_enabled to true."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+string		script_spawn_pool	// Generic string
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_friendly_fire_disable"
+"Summary: Use script_friendly_fire_disable to disable a drones friendly fire threads"
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+
+int script_friendly_fire_disable	// used to disable friendly fire threads on distant drones. 
+
+
+/*
+=============
+///ScriptFieldDocBegin
+"Name: .script_drone_repeat_count"
+"Summary: I use this in Hamburg to loop drone spawning."
+"Module: radiant_keys"
+"SPMP: singleplayer"
+///ScriptDocEnd
+=============
+*/
+
+
+int script_drone_repeat_count	// I use this in Hamburg to loop drone spawning.
+
+
