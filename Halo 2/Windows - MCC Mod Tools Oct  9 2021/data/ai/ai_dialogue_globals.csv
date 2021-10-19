@@ -1,0 +1,481 @@
+VOCALIZATIONS,PRIORITY,SAMPLE,WEIGHT,SKIP %,PLAYER SKIP %,MAX COMBAT STATUS,ANIMATION,PERCEPTION,S-FREEZE,L-FREEZE,SPEAKER EMOTION,LISTENER EMOTION,QUEUE DELAY,PRE DELAY,NOTIF. DELAY,POST DELAY,REPEAT DELAY,PERMUTATION REPEAT DELAY
+
+dth,scream,Aargh!,,,,,,,,,pain,,0,0,0,0,0,
+dth_mjr,scream,AAAAARGH!!!,,,,,,,,,pain,,0,0,0,0,0,
+dth_slw,scream,Erg-erg-ARRGH-uh-UH-AARGH!,,,,,,,,,pain,,0,0,0,0,0,
+dth_hdsht,scream,Oof [headshot],,,,,,,,,pain,,0,0,0,0,0,
+dth_slnt,scream,Oof,,,,,,,,,pain,,0,0,0,0,0,
+dth_drama (dep),scream,Waaargh-guh-GUH-gurgle-uh-choke-gurgle,,,,,,,,,pain,,0,0,0,0,0,
+dth_fall,scream,AAAAAAaaaaaaargh ... OOMPH!,,,,,,,,,pain,,0,0,0,0,0,
+
+pain,,ah,,,,,,,,,pain,,0,0,0,0,0,
+pain_mdm,,erg!,,,,,,,,,pain,,0,0,0,0,0,
+pain_mjr,,ERK!,,,,,,,,,pain,,0,0,0,0,0,
+pain_shld,,Uh!,,,,,,,,,pain,,0,0,0,0,0,
+pain_fall,,Oof-OW!,,,,,,,,,pain,,0,0,0,0,0,
+
+flee,scream,Yiiiiiiiiii...!,0.5,0.75,0.5,,,,,,scared,,,,,,
+cower,scream,Cowering!,0.5,0.75,0.5,,,,,,scared,,,,,,
+fall,scream,Aaaaaaargh....!,,,,,,,,,scared,,,,,,
+srprs,scream,Yikes!,2,0,0,,,listener,,,shocked,,,,,,
+
+
+/*---------------------------------------yelp*/,,,,,,,,,,,,,,,,,
+
+yelp,scream,,,,,,,,,,,,,,,,0
+.dive,,Aiieee!,,0.5,0.5,,,listener,,,shocked,,,,,,
+
+panic,scream,Waaaaaa!!!!,2,0.5,0.5,,,,,,scared,,0,,0,5,240
+panic_plsmgrnd,,Get it off! Someone get it off!,,,,,,,,,,,,,,,
+
+
+/*-------------------------------------betrayal */,,,,,,,,,,,,,,,,,
+
+betray,react,Get him! He's a traitor!,2,0,0,,point,,,,angry,,4,,,,,
+forgive,react,I'll trust you for now ...,2,0,0,,,,,,disappointed,,4,,,,,
+
+/*-------------------------------------roar*/,,,,,,,,,,,,,,,,,,
+
+roar,scream,,,,,,,,,,angry,,,,,,,
+.dodge,,Whoops!,,,,,,,,,shocked,,,,,,,
+.brsrk,,RRAAAARGH!,,,,,,,,,angry,,,,,,,
+.melee,,Hii-yah!,,,,,,,,,angry,,,,,,,
+..charge,react,Raaaaaarr!,,,,,,,,,angry,,,,,,,
+.meleeleap,,Rooowwwaaarr!!!,,,,,,,,,angry,,,,,,,
+.reanimate,,(gurgling noises of demonic possession),,,,,,,,,,,,,,,,
+/*-------------------------------react*/,,,,,,,,,,,,,,,,,,
+
+entervcl,act,Let's roll!,,0.25,0,uninspected,,,,,,,3,,,5,300,90
+.entervcl_drvr,,I'll drive!,,0.5,0.25,,,,,,,,,,,,,
+.entervcl_gnr,,I got the gun!,,0.5,0.25,,,,,,,,,,,,,
+.entervcl_psngr,,Shotgun!,,0.5,0.5,,,,,,,,,,,,,
+
+entervcl_trrt,act,I'm on the turret!,,0.5,0.5,uninspected,,,,,,,3,,,3,300,90
+
+grt_intovcl,warn,Let's roll!,,0.25,0,uninspected,,,,,,,3,,,3,300,90
+.grt_intovcl_his,,Thanks for the ride.,,0.5,0.25,,,,,,happy,,,,,,,
+.grt_intovcl_mine,,Welcome aboard.,,0.5,0.25,,,,,,,,,,,,,
+.grt_intovcl_imdvr,,Here we go.,,0.5,0.25,,,,,,,,,,,,,
+.grt_intovcl_imgnr,,Find me something to shoot!,,0.5,0.25,,,,,,happy,,,,,,,
+
+grt,warn,Hey!,,0.25,0,uninspected,wave,listener,,,,,3,,,3,300,30
+.grt_plr,,Look a Mark 6!,,0.5,0.25,,,,,,,,,,,,,90
+..grt_plr_cmbt,,The cavalry has arrived!,,,,clear_los,,,,,happy,,,,,,,
+..grt_plr_agg,,Welcome to the party!,,,,,,,,,,,,,,,,
+..grt_plr_tim,,Keep yer head down sir!,,,,,,,,,scared,,,,,,,
+..grt_plr_vcl,,Nice ride!,2,,,,,,,,happy,,,,,,,
+..grt_plr_srprs,,Woah! Don't sneak up on a guy like that!,,0,0,,,,2,,shocked,,,,,,,
+
+look,act,What're you lookin' at?,,0,0,uninspected,,,,,,,,,,2,,15
+.look_plr,,Can I HELP you?,,,,,,,,,,,,,,,,
+..look_noncmbt,,Ready for action!,,,,uninspected,,,,,,,,,,,,
+...look_plr_fllw,,Following your lead.,1.5,,,,,,,,,,,,,,,
+..look_cmbt,,Orders?,,,,,,,,,,,,,,2,15,90
+...look_cmbt_fllw,,You set em up I'll knock em down!,,,,,,,,,,,,,,,,
+...look_cmbt_agg,,Let's kick some ass!,,,,,,,,,angry,,,,,,,
+...look_cmbt_tim,,There's no place like home...,,,,,,,,,scared,,,,,,,
+..look_pstcmbt,,That was some fight huh?,2,0.5,0.25,uninspected,,,,,,,,,,2,15,90
+...look_pstcmbt_ez,,Did you see me kick that guy's ass?,3,,,,,,,,,,,,,,,
+...look_pstcmbt_hrd,,We wouldn't have stood a chance without you.,3,,,,,,,,,,,,,,,
+
+look_lngtme,act,I think we both have better things to do...,0.5,,,,,,,,annoyed,,,,,,,
+
+vehicle_eviction,act,,,0.25,0.25,active,,,,,,,3,2,,3,150,90
+.ok_plr_trdst_dvr,,How come you get to drive?,,,,,,,,,,,,,,,,
+.ok_plr_trdst_gnr,,Aw ... I was having fun!,,,,,,,,,,,,,,,,
+
+ok,act,Ok.,,0,0,active,,,1,,,,3,1,,2,,
+.ok_sir,,"Okay, sir.",,,,,,,,,,,,,,,,
+..ok_plr,,"Okay, chief.",,,,,,,,,,,,,,,,
+...ok_plr_trdwpn,,It's all yours chief.,,0.25,0.25,clear_los,,,,,,,,,,,,90
+
+thnk,act,Thanks.,,0,0,active,wave,,1,,happy,,3,1,,2,,
+.thnk_plr,,"Thanks, chief.",,,,,,,,,,,,,,,,
+..thnk_hlpme,,"Thanks for the assist, chief.",,0.5,0.5,,,,,,,,,,,,,90
+..thnk_plr_btrwpn,,NICE!,,0.25,0.25,clear_los,,,,,,,,,,,,90
+
+scrn,act,Great.,,0,0,active,,,1,,annoyed,,3,1,,5,,
+.scrn_plr,,Great chief.,,,,,,,,,,,,,,,,
+..scrn_plr_wrswpn,,You gotta be kidding me!,,0.25,0.25,clear_los,,,,,,,,,,,,90
+
+
+VOCALIZATIONS,PRIORITY,SAMPLE,WEIGHT,SKIP %,PLAYER SKIP %,MAX COMBAT STATUS,ANIMATION,PERCEPTION,S-FREEZE,L-FREEZE,SPEAKER EMOTION,LISTENER EMOTION,QUEUE DELAY,PRE DELAY,NOTIF. DELAY,POST DELAY,REPEAT DELAY,PERMUTATION REPEAT DELAY
+/*------------------------------------inform */,,,,,,,,,,,,,,,,,,
+
+
+hrdfoe,combat,Did you hear that?!,,0.5,0.25,active,,,,,inquisitive,,2,1.5,,3,210,90
+
+seefoe,warn,We've got company!,,0.5,0.25,,point,listener,,,,,1,0,,1,30,30
+.seefoe_mjr,,Scary enemy!,,0.75,0.5,,,,,,scared,,,,,,60,90
+..seefoe_mjr_drvsh,,The Dervish is here!,2,,,,,,,,,,,,,,,
+..seefoe_mjr_chief,,The demon is here!,2,,,,,,,,,,,,,,,
+.seefoe_srprs,,Whoa! Contact!,,0.25,0.25,,,,,,,,,,,,60,90
+.seefoe_agg,,It's go time!,,,,,,,,,,,,,,,60,90
+.seefoe_tim,,We're under attack!,,,,,,,,,,,,,,,60,90
+.seefoe_downthere,,Down there!,,0.5,0.25,,,,,,,,,,,,,30
+.seefoe_upthere,,Up there!,,0.5,0.25,,,,,,,,,,,,,30
+.RE:seefoe_too,peer,I see 'em!,,,,,,,,,,,,,,,,
+
+seefoe_too,warn,I see him too!,2,0.25,0.25,,,,,,,,1,0,,3,300,90
+
+morefoe,warn,There's another one!,,0.5,0.25,,point,listener,,,,,1,0,,1,30,30
+.morefoe_lots,,Here come more!,,0.75,0.5,,,,,,,,,,,,60,90
+.morefoe_agg,,These guys just don't learn!,,0.75,0.5,,,,,,,,,,,,60,90
+.morefoe_tim,,There's another bad guy coming to kill us!,,0.75,0.5,,,,,,,,,,,,60,90
+
+foundfoe,warn,Can't hide from me!,,0.5,0.25,,,listener,,,,,1,0,,2,30,45
+.foundfoe_srch,,Found 'em!,,0.75,0.5,,,,,,,,,,,,60,
+..foundfoe_prst,,He's over here!,,,,,,,,,,,,,,,60,
+...foundfoe_mjr_chief,,There you are Demon!,2,,,,,,,,,,,,,,60,
+...foundfoe_mjr_drvsh,,There you are Dervish!,2,,,,,,,,,,,,,,60,
+.RE: coming,peer,,,,,,,,,,,,,,,,,
+
+coming,warn,I'm coming!,2,0.25,0.25,,,,,,,,1,0,,3,210,90
+
+warn,warn,Look out!,,0,0,,,listener,,,,,0.25,,,2,45,15
+.warn_incmn,act,Incoming!,2,0.25,0.25,,,,,,,,,,,,,
+..warn_incmn_grnd,,Grenade!!!,3,0.25,0.25,,,,,,,,,,,,30,
+.warn_trrt,,They've got a turret!,,0.5,0.5,,point,,,,,,1.5,0.5,,3,210,30
+.warn_vcl,,,,0.25,0,,point,,,,,,1.5,0.5,,3,210,30
+..warn_vcl_ghst,,Ghosts!,,,,,,,,,,,,,,,,
+..warn_vcl_bnsh,,"Banshees, up there!",,,,,,,,,,,,,,,,
+..warn_vcl_wrth,,They're bringin in heavy armor!,2,,,,,,,,,,,,,,,
+..warn_vcl_hog,,Warthog inbound!,,,,,,,,,,,,,,,,
+..warn_vcl_scrpn,,Scorpion!,2,,,,,,,,,,,,,,,
+..warn_vcl_phntm,,Here comes a dropship!,2,,,,,,,,,,,,,,,
+..warn_vcl_plcn,,Pelican inbound!,2,,,,,,,,,,,,,,,
+..warn_vcl_spctr,,Spectre inbound!,,,,,,,,,,,,,,,,
+
+warn_weapon,warn,,3,0.25,0,,point,,,,,,1.5,1,,2,210,30
+.warn_wpn_snpr,,Sniper!,,,,,,,,,,,,,,,,
+.warn_wpn_swrd,,He's got a sword!,,,,,,,,,,,,,,,,
+
+hlpme,warn,Help!,,0.5,0.25,,,listener,,,scared,,,,,1,210,90
+.hlpme_uncovered,,He's after me!,,,,,,,,,,,,,,,,
+.TRG:help response,,,,,,,,,,,,,,,,,,
+
+hlpme_re,warn,I'll save you!,2,0,0,,,,,,,,1,0,,2,240,90
+
+rmd,warn,Still a problem!,,0.5,0.25,,,,,,annoyed,,3,,,2,90,45
+.rmd_wpn_snpr,,Somebody take out that sniper!,2,,,,,,,,,,,,,,,
+.rmd_wpn_swrd,,It's cutting us to pieces!,2,,,,,,,,,,,,,,,
+.rmd_stlth,,Take that stealth out!,2,,,,,,,,,,,,,,,
+.rmd_trrt,,Take out that damn turret!,,,,,,,,,,,,,,,,
+.rmd_vcl_ghst,,Someone kill that ghost!,,,,,,,,,,,,,,,,
+.rmd_vcl_bnsh,,Need to nail that banshee!,,,,,,,,,,,,,,,,
+.rmd_vcl_spctr,,We need to nail that spectre!,,,,,,,,,,,,,,,,
+.rmd_vcl_wrth,,Take out that wraith!,2,,,,,,,,,,,,,,,
+.rmd_vcl_hog,,Kill that warthog!,,,,,,,,,,,,,,,,
+.rmd_vcl_scrpn,,We need to kill that scorpion!,2,,,,,,,,,,,,,,,
+.rmd_vcl_phntm,,Take down that phantom!,2,,,,,,,,,,,,,,,
+.rmd_vcl_plcn,,Take out that pelican!,2,,,,,,,,,,,,,,,
+
+dwn,warn,,,0.5,0.25,,cheer,,,,happy,,3,1.5,,2,210,45
+.dwn_wpn_snpr,,Sniper down!,2,,,,,,,,,,,,,,,
+.dwn_wpn_swrd,,Sword down!,2,,,,,,,,,,,,,,,
+.dwn_stlth,,Stealth-elite down!,2,,,,,,,,,,,,,,,
+.dwn_trrt,,Turret down!,,,,,,,,,,,,,,,,
+.dwn_vcl_ghst,,Ghost is down!,,,,,,,,,,,,,,,,
+.dwn_vcl_bnsh,,Banshee down!,,,,,,,,,,,,,,,,
+.dwn_vcl_spctr,,Spectre down!,,,,,,,,,,,,,,,,
+.dwn_vcl_wrth,,Wraith is down!,2,,,,,,,,,,,,,,,
+.dwn_vcl_hog,,Warthog is down!,,,,,,,,,,,,,,,,
+.dwn_vcl_scrpn,,Scorpion is down!,2,,,,,,,,,,,,,,,
+
+
+/*------------------------------------search */,,,,,,,,,,,,,,,,,,
+
+search,status,,,0.5,0,clear_los,,,,,,,1,,,1,30,30
+.srchpresrch,,Lost contact!,,0.5,0.25,,,,,,,,,,,,60,
+..srchpresrch_agg,,Don't let him get away!,,0.5,0,,,,,,,,,,,,,90
+.srchstart,,I'm coming after you!,0.2,0.5,0,,,,,,,,,,,,60,90
+.srchpinned,,He's pinned down!,,0.5,0,,,,,,,,,,,,60,90
+
+srch_allclr,warn,He's not here!,,0.5,0,clear_los,,,,,annoyed,,1,,,5,30,45
+prst_allclr,status,All clear!,,0.5,0,,,,,,annoyed,,,,,,30,
+
+pursuit_fail,status,,,0.5,0.25,clear_los,,,,,angry,,1,,,2,30,30
+.prstfail_nopts,warn,Don't chase him too far!,,,,,hold,,,,,,,,,,60,
+..prstfail_nopts_tim,,Leave it alone man!,,,,,,,,,,,,,,,,90
+.prstfail,,I lost 'em!,,,,,,,,,,,,,,,60,
+..prstfail_notme,,He's not here anymore!,,,,,,,,,,,,,,,,90
+..prstfail_nospc,,Area secure!,,,,,,,,,,,,,,,,90
+..prstfail_tim,,Good we lost it.,,,,,,,,,,,,,,,,90
+..prstfail_agg,,Damn it got away.,,,,,,,,,,,,,,,,90
+.RE:keepwatch,peer,,,,,,,,,,,,,,,,,
+
+keepwatch,status,Keep your eyes peeled.,2,0.25,0.25,certain,,,,,annoyed,,2,0,,5,120,90
+
+
+VOCALIZATIONS,PRIORITY,SAMPLE,WEIGHT,SKIP %,PLAYER SKIP %,MAX COMBAT STATUS,ANIMATION,PERCEPTION,S-FREEZE,L-FREEZE,SPEAKER EMOTION,LISTENER EMOTION,QUEUE DELAY,PRE DELAY,NOTIF. DELAY,POST DELAY,REPEAT DELAY,PERMUTATION REPEAT DELAY
+/*-------------------------------------group */,,,,,,,,,,,,,,,,,,
+
+new_order,act,,2,0,0,clear_los,,,,,,,1,,,3,150,90
+.newordr_advance,,Move up!,,,,,advance,,,,,,,,,,,
+.newordr_charge,,Okay move out and kick ass!,,,,,advance,,,,,,,,,,,
+.newordr_fallback,,Okay move out and find those bastards!,,,,,fallback,,,,,,,,,,,
+.newordr_retreat,,Keep your heads down!,,,,,fallback,,,,,,,,,,,
+.newordr_moveon,,Reatreat! Retreat! Get outta here!,,,,,advance,,,,,,,,,,,
+.newordr_arrival,,Regroup marines!,,,,,hold,,,,,,,,,,,
+.newordr_entervcl,,Okay men smoke em if you got em!,,,,,,,,,,,,,,,,
+.newordr_exitvcl,,We've lost too many guys!,,,,,,,,,,,,,,,,
+.newordr_fllwplr,,The cavalry has arrived!,,,,,wave,,,,,,,,,,,
+.newordr_leaveplr,,We're with you chief!,,,,,wave,,,,,,,,,,,
+.newordr_support,,We're here to help!,,,,,,,,,,,,,,,,
+
+foe_orders,warn,,2,0,0,clear_los,point,,,,,,1,2,,3,150,90
+.foeordr_advance,,They're being cautious!,,,,,,,,,,,,,,,,
+.foeordr_charge,,They're advancing on us!,,,,,,,,,,,,,,,,
+.foeordr_fallback,,Here they come!,,,,,,,,,,,,,,,,
+.foeordr_retreat,,Careful they're after us!,,,,,,,,,,,,,,,,
+.foeordr_support,,They've got backup!,,,,,,,,,,,,,,,,
+
+ordrme,warn,Get to it!,2,0,0,,point,,,,angry,,1,,,1,45,30
+.ordrme_search,,,,,,,,,,,,,,,,,,
+..ordrme_prst,warn,Spread out! Find him!,,,,,,,,,,,,,,,,
+..ordrme_invsgt,,See if he's still there!,,,,,,,2,,,,,,,,,
+..ordrme_sprssfoe,,Keep him pinned down!,,,,,,,,,,,,,,,,
+..ordrme_emrg,,Get your butt out there!,,,,,,,,,,,,,,,,
+.RE:ordrme_re,listener,,,,,,,,,,,,,,,,,
+.RE:dareme_re,listener,,,,,,,,,,,,,,,,,
+
+ordrme_re,warn,Yes sir!,2,0,0,,,,,,,,1,0,,3,45,30
+dareme_re,warn,No way! You do it!,2,0.25,0.25,,,,3,1,annoyed,,1,0,,3,45,90
+
+askme (unvoc),status,,,0.25,0.25,clear_los,point,,,,inquisitive,,,1,,0,120,30
+.askme_prst,,Is he over there?,,,,,,,,,,,,,,,,
+.askme_invsgt,,Is he still there?,,,,,,,2,,,,,,,,,
+
+joinme,respond,Come on!,,0.25,0.25,clear_los,advance,,,,,,1,,,1,45,30
+.joinme_presrchend,,Let's flush him out!,,,,,,,,,,,,,,,,
+.joinme_emrg,,Ready?,,,,,,,,,,,,,,,,
+..RE:joinme_emrg_re,joint,,,,,,,,,,,,,,,,,
+.joinme_prst,warn,Let's spread out and find him.,,,,,,,,,,,,,,,,
+.RE:joinme_re,listener,,,,,,,,,,,,,,,,,
+
+joinme_re,respond,Alright!,2,0,0,clear_los,,,,,,,1,0,,3,45,30
+
+joinme_emrg_re,respond,Let's get out there!,2,0,0,clear_los,,,,,,,1,0,,3,45,30
+
+VOCALIZATIONS,PRIORITY,SAMPLE,WEIGHT,SKIP %,PLAYER SKIP %,MAX COMBAT STATUS,ANIMATION,PERCEPTION,S-FREEZE,L-FREEZE,SPEAKER EMOTION,LISTENER EMOTION,QUEUE DELAY,PRE DELAY,NOTIF. DELAY,POST DELAY,REPEAT DELAY,PERMUTATION REPEAT DELAY
+
+frbdme,respond,Yer gonna get yourself killed!,,0.25,0.25,certain,hold,,3,,scared,,1,,,0,240,45
+.frbdme_invsgt,,Don't go over there!,,,,,,,,,,,,,,,,
+.frbdme_prst,,Don't chase him!,,,,,,,,,,,,,,,,
+.frbdme_emrg,,Don't go out there!,,,,,,,,,,,,,,,,
+.RE:frbdme_re,listener,,,,,,,,,,,,,,,,,
+
+frbdme_re,respond,Leave me alone!,2,0.5,0.5,visible,shakefist,,,,annoyed,,1,0,,3,240,45
+
+cvrme,respond,Cover me!,2,0,0,,wave,,,,,,1,,,0.5,45,15
+.cvrme_invsgt,,I'm gonna get him cover me!,,,,,,,,,,,,,,,,
+.RE:cvrme_re,listener,,,,,,,,,,,,,,,,,
+
+cvrme_re,respond,I got your back!,4,0,0,,advance,,,,,,1,0,,3,45,15
+
+/*-------------------------------------respond*/,,,,,,,,,,,,,,,,,,
+
+prs,respond,Good job!,,0.25,0,,,,,,happy,,3,0.5,,1,15,15
+.prs_plr,,Well done Chief!,,0.25,0,,,,,,,,,,,,,
+..prs_plr_vclchr,,Wish I could drive like that!,,0.5,0.25,clear_los,,,,,,,,,,3,30,90
+..prs_plr_kll,,That got 'em!,,0.5,0.25,clear_los,,,,,,,,,,3,30,90
+...prs_plr_kll_blt,,Nice shot!,,,,,,,,,,,,,,,45,
+...prs_plr_kll_brn,,Burn 'em burn you bastards!,,,,,,,,,,,,,,,45,
+...prs_plr_kll_bm,,Blew the hell out of that guy!,,,,,,,,,,,,,,,45,
+...prs_plr_kll_vclbmp,,Roadkill!,,,,,,,,,,,,,,,,
+...prs_plr_kll_wmelee,,I heard THAT!,,,,,,,,,,,,,,,,
+...prs_plr_kll_mjr,,Thank god you were here to take that guy out!,2,0.25,0,,,,,,,,,,,,,
+...prs_plr_gdgrnd,,Good grenade!,2,0.25,0,,,,,,,,,,,,,
+...prs_plr_sniping,,This one's got talent!,2,0.25,0,,,,,,,,,,,,,
+
+scld,respond,Hey cut it out!,,0.5,0,clear_los,,,,,annoyed,,2,0.5,,,,
+.scld_plr,,Nice going MasterDork!,,,,,,,,,,,,,,,,
+..scld_plr_vclcrazy,,Where'd you learn to drive Tijuana?!,,0.5,0.25,,,,,,,,,,,,,
+..scld_plr_wldvcl,,You hit him!,4,0.5,0,,,,,,,,,,,,,
+..scld_plr_kllally,react,He was on our side!,4,0,0,dangerous,shakefist,,,,,,2,0,,2.5,0,15
+..scld_plr_hrtme,,Hey it's me!,4,0,0,dangerous,shakefist,,3,,,,2,0,,2.5,0,15
+...scld_plr_wldgrnd,,Clumsy bastard!,4,0.25,0.25,,,,,,,,,,,,,
+...scld_plr_hrtme_blt,,Point that thing somewhere else!,4,0.25,0.25,,,,,,,,,,,,,
+...scld_plr_hrtme_brn,,You're singing my ass hairs!,4,0.25,0.25,,,,,,,,,,,,,
+...scld_plr_hrtme_bm,,You trying to blow me up too?!,4,0.25,0.25,,,,,,,,,,,,,
+...RE:cncrn,peer,,,,,,,,,,,,,,,,,
+
+kllmytrgt,respond,Hey that one was mine!,,0.5,0.25,visible,point,,,,annoyed,,3,1.5,,5,240,90
+
+/*---------------------------important outburst*/,,,,,,,,,,,,,,,,,,
+
+
+chr,status,Alright!,,0.25,0.25,,cheer,,,,happy,,3,1.5,,2,30,30
+.chr_kllfoe,,I killed one!,,0.75,0.5,,,,,,,,,0.5,,,45,45
+..chr_kllfoe_mjrfoe,,I can't believe I killed that one!,,0.25,0,,,,,,,,,,,,,
+..chr_kllfoe_blt,,I shot one!,,,,,,,,,,,,,,,,
+..chr_kllfoe_brn,,Burn!,,,,,,,,,,,,,,,,
+..chr_kllfoe_bm,,He blowed up!,,,,,,,,,,,,,,,,
+..chr_kllfoe_wmelee,,I beat the crap out of that one!,,,,,,,,,,,,,,,,
+..chr_kllfoe_vclbmp,,Eat grill!,,,,,,,,,,,,,,,,
+..chr_kllfoe_closeup,,If you step up you better swing!,,,,,,,,,,,,,,,,
+..chr_deadchief,,So much for the Demon!,4,0.5,0.5,,,,,,,,2,0.5,,15,90,90
+..chr_deaddrvsh,,We killed the Dervish!,4,0.5,0.5,,,,,,,,2,0.5,,15,90,90
+..RE:prs,peer,,,,,,,,,,,,,,,,,
+
+
+lmnt,status,Nooo!,0.5,0.25,0.25,clear_los,,,,,disappointed,,3,2,,5,120,45
+.lmnt_deadally,,You killed him!,0.5,0.5,0.5,,,,,,,,,,,,,90
+.lmnt_deadplr,,Now what do we do?,4,0.5,0.5,clear_los,,,,,,,2,1,,5,90,90
+
+
+VOCALIZATIONS,PRIORITY,SAMPLE,WEIGHT,SKIP %,PLAYER SKIP %,MAX COMBAT STATUS,ANIMATION,PERCEPTION,S-FREEZE,L-FREEZE,SPEAKER EMOTION,LISTENER EMOTION,QUEUE DELAY,PRE DELAY,NOTIF. DELAY,POST DELAY,REPEAT DELAY,PERMUTATION REPEAT DELAY
+
+/*---------------------------------------trash talk*/,,,,,,,,,,,,,,,,,,
+
+strk,warn,Take it!,,0.5,0.25,,,,,,angry,,,0,,1,60,45
+.strk_mjrfoe,,Let's see you take this!,,,,,,,,,,,,,,,,
+..strk_mjrfoe_drvsh,,Take this Dervish!,2,,,,,,,,,,,,,,,
+..strk_mjrfoe_chief,,Eat it Demon!,2,,,,,,,,,,,,,,,
+.strk_blt (dep),,Dance!,,,,,,,,,,,,,,,,
+.strk_brn (dep),,Burn!,,,,,,,,,,,,,,,,
+.strk_bm (dep),,Boom!,,,,,,,,,,,,,,,,
+.strk_gdwpn (dep),,Say hello to my leetle friend!,,,,,,,,,,,,,,,,
+.strk_frstbrst (dep),,You snooze you lose!,,,,,,,,,,,,,,,,
+.strk_rckt (dep),,Suck it down!,,,,,,,,,,,,,,,,
+.strk_thrwstchl (dep),,Everyone stay clear!,,,,,,,,,,,,,,,,
+.strk_vcl_trrt,,Keep on comin' I got all day!,,,,,,,,,,,,,,,,
+.strk_vcl_dvr (dep),,The cavalry has arrived!,,,,,,,,,,,,,,,,
+.strk_vcl_gnr,,You set 'em up I'll knock 'em down!,,,,,,,,,,,,,,,,
+.strk_grnd,act,Frag out!,4,0,0,,,,,,,,,,,3,30,15
+..strk_grnd_uncvr,,This'll flush 'em out!,,0.5,0.25,,,,,,,,,,,3,45,45
+..strk_grnd_atvcl,,This'll stop 'em!,,0.5,0.25,,,,,,,,,,,3,45,45
+.RE:strk_re,peer,,,,,,,,,,,,,,,,,
+.TRG:taunt,,,,,,,,,,,,,,,,,,
+.TRG:curse,,,,,,,,,,,,,,,,,,
+
+strk_re,combat,Get 'em good!,,0.5,0.25,,,,,,,,2,0,,2,120,90
+
+thrtn,respond,I'm gonna kill you!,,0,0,clear_los,point,,,,angry,angry,2,1.5,,1,60,45
+.thrtn_mjrfoe,,You think you're so tought!,,0.25,0.25,,,,,,,,,,,,,
+..thrtn_mjrfoe_drvsh,,Dervish you're mine!,2,0.25,0.25,,,,,,,,,,,,,
+..thrtn_mjrfoe_chief,,I'll show you Demon!,2,0.25,0.25,,,,,,,,,,,,,
+.thrtn_hum,,Pathetic human prepare to die!,,0.25,0.25,,,,,,,,,,,,,
+.thrtn_elt,,I'm gonna kill your blue ass!,,0.25,0.25,,,,,,,,,,,,,
+.thrtn_grt,,"Yer dead, grunt boy!",,0.25,0.25,,,,,,,,,,,,,
+.thrtn_brt,,You will pay betrayer!,,0.25,0.25,,,,,,,,,,,,,
+.thrtn_hrt,,By the prophets Heretic you will die!,,0.25,0.25,,,,,,,,,,,,,
+.thrtn_fld,,You shall not take me alive!,,0.25,0.25,,,,,,,,,,,,,
+.RE:thrtn_foe_re,listener,,,,,,,,,,,,,,,,,
+.RE:thrtn_re,peer,,,,,,,,,,,,,,,,,
+.TRG:taunt,,,,,,,,,,,,,,,,,,
+
+thrtn_foe_re,respond,Is that supposed to scare me?,,0.25,0.25,clear_los,wave,,,,angry,,2,0,,2,90,90
+thrtn_re,respond,That goes for me too!,,0.5,0.5,clear_los,,,,,angry,,2,0,,2,90,90
+
+VOCALIZATIONS,PRIORITY,SAMPLE,WEIGHT,SKIP %,PLAYER SKIP %,MAX COMBAT STATUS,ANIMATION,PERCEPTION,S-FREEZE,L-FREEZE,SPEAKER EMOTION,LISTENER EMOTION,QUEUE DELAY,PRE DELAY,NOTIF. DELAY,POST DELAY,REPEAT DELAY,PERMUTATION REPEAT DELAY
+
+tnt,respond,Is that all you got?!,,0.5,0.25,clear_los,taunt,,,,angry,angry,2,,,1,60,45
+.tnt_mjrfoe,,Not so tough!,,,,,,,,,,,,,,,,
+..tnt_mjrfoe_drvsh,,The prophets chose you?!,2,,,,,,,,,,,,,,,
+..tnt_mjrfoe_chief,,You will die like all the rest!,2,,,,,,,,,,,,,,,
+.tnt_hum,,Worthless human!,,,,,,,,,,,,,,,,
+.tnt_elt,,Bring it Covey!,,,,,,,,,,,,,,,,
+.tnt_grt,,"Bring it, Grunt!",,,,,,,,,,,,,,,,
+.tnt_brt,,All brawn no brains!,,,,,,,,,,,,,,,,
+.tnt_hrt,,No mercy for you heretic!,,,,,,,,,,,,,,,,
+.tnt_fld,,Take me if you can!,,,,,,,,,,,,,,,,
+.tnt_nopts,,Come back when yer ready to fight!,,,,,,,,,,,,,,,60,
+.tnt_sprssed,,You're not goin' ANYWHERE!,,,,,,,,,,,,,,,60,
+.RE:tnt_re,peer,,,,,,,,,,,,,,,,,
+.TRG:threaten,,,,,,,,,,,,,,,,,,
+.TRG:curse,,,,,,,,,,,,,,,,,,
+
+tnt_re,combat,Don't make 'em mad!,,0.5,0.5,clear_los,,,,,,,2,0,,2,90,90
+
+
+crs,combat,Curse you!,,0.5,0.25,clear_los,shakefist,,,,angry,angry,2,0,,1,90,45
+.crs_mjrfoe,,You ain't that tought!,,,,,,,,,,,,,,,,
+..crs_mjrfoe_drvsh,,Damn you Dervish!,,,,,,,,,,,,,,,,
+..crs_mjrfoe_chief,,A curse on you Demon!,,,,,,,,,,,,,,,,
+.crs_hum,,Filthy human...!,,,,,,,,,,,,,,,,
+.crs_elt,,Damn alien!,,,,,,,,,,,,,,,,
+.crs_grt,,Tiny wussbag!,,,,,,,,,,,,,,,,
+.crs_brt,,Betrayer!,,,,,,,,,,,,,,,,
+.crs_hrt,,Heretical hereticking heretics...!,,,,,,,,,,,,,,,,
+.crs_fld,,Pus-bag!,,,,,,,,,,,,,,,,
+.crs_betrayingplr,,Damn player!,,,,,,,,,,,,,,,30,
+.TRG:threaten,,,,,,,,,,,,,,,,,,
+.TRG:gloat,,,,,,,,,,,,,,,,,,
+.RE:crs_re,peer,,,,,,,,,,,,,,,,,
+
+crs_re,combat,Took the words right out of my mouth!,,0.5,0.5,clear_los,,,,,,,2,0,,2,90,90
+
+glt,warn,Fight back coward!,,0,0,clear_los,,,,,angry,scared,2,0,,1,60,45
+.glt_mjrfoe,,,,,,,,,,,,,,,,,,
+..glt_mjrfoe_drvsh,,This is the great Dervish!,,,,,,,,,,,,,,,,
+..glt_mjrfoe_chief,,This can't be the same Demon that destroyed Halo!,,,,,,,,,,,,,,,,
+.glt_hum,,Fight with honor pathetic human!,,,,,,,,,,,,,,,,
+.glt_elt,,I knew you Elites were cowards!,,,,,,,,,,,,,,,,
+.glt_grt,,Run away little grunt!,,,,,,,,,,,,,,,,
+.glt_brt,,Big hairy scaredy cat!,,,,,,,,,,,,,,,,
+.glt_hrt,,Take your punishment heretic!,,,,,,,,,,,,,,,,
+.glt_fld,,Flood don't retreat do they?,,,,,,,,,,,,,,,,
+.glt_rtrt,,Look at 'em run!,2,0.25,0.25,,,,,,,,,,,,,
+.RE:glt_re,peer,,,,,,,,,,,,,,,,,
+.TRG:threaten,,,,,,,,,,,,,,,,,,
+
+glt_re,respond,Don't get cocky!,,0.5,0.5,clear_los,,,,,,,2,0,,2,90,90
+
+
+VOCALIZATIONS,PRIORITY,SAMPLE,WEIGHT,SKIP %,PLAYER SKIP %,MAX COMBAT STATUS,ANIMATION,PERCEPTION,S-FREEZE,L-FREEZE,SPEAKER EMOTION,LISTENER EMOTION,QUEUE DELAY,PRE DELAY,NOTIF. DELAY,POST DELAY,REPEAT DELAY,PERMUTATION REPEAT DELAY
+
+/*------------------------------------outburst */,,,,,,,,,,,,,,,,,,
+
+whn,combat,Man this sucks!,,0.75,0.5,,,,,,scared,,1,1.5,,1,120,45
+.whn_hrtblt,,I've been shot!,,,,,,,,,,,,,,,,
+.whn_hrtbrn,,It burns!,,,,,,,,,,,,,,,,
+.whn_hrtbm,,I'm blind!,,,,,,,,,,,,,,,,
+.RE:cncrn,peer,,,,,,,,,,,,,,,,,
+.RE:cllwimp,peer,,,,,,,,,,,,,,,,,
+
+fear,scream,oh man oh man oh man ...!,0.5,0.5,0.5,,,,,,scared,,,,,2,30,15
+.fear_rtrt,,I'm out of here!,,,,,,,,,,,,,,,,
+..fear_rtrt_ldrdead,,Leader dead run away!,2,0.25,0.25,,,,,,,,,1,,1,30,45
+..RE:glt_rtrt,enemy,,,,,,,,,,,,,,,,,
+.RE:feartoo,peer,,,,,,,,,,,,,,,,,
+.RE:cllcoward,friend,,,,,,,,,,,,,,,,,
+
+feartoo,respond,I'm afraid too!,,0.5,0.5,clear_los,,,,,,,,0,,3,120,45
+cllcoward,respond,Coward!,,0.5,0.5,clear_los,,,,,,,,0,,3,120,45
+
+cllwimp,respond,Stop complaining!,,0.5,1,clear_los,,,,,angry,,2,0,,3,240,90
+
+cncrn,respond,You okay?!,,0.75,1,uninspected,,,,,,,3,0,,1,240,90
+.RE:cncrn_re,listener,,,,,,,,,,,,,,,,,
+
+cncrn_re,respond,Yeah I'm good...,,0,0,uninspected,,,,,,,2,0,,3,240,90
+
+/* --------------------POSTCOMBAT AND IDLE */,,,,,,,,,,,,,,,,,,
+
+endcmbt,postcombat,Is that it?,,0.25,0.25,,,,,,inquisitive,,3,2,,3,90,90
+
+pstcmbt,postcombat,We win!,,0.25,0.25,,,,,,,,3,2,,3,120,90
+.pstcmbt_ez,,We kicked their asses!,,,,,,,,,,,,,,,,
+.pstcmbt_hrd,,They almost kicked our asses!,,,,,,,,,,,,,,,,
+.pstcmbt_agg,,They never knew what hit em!,,,,,,,,,happy,,,,,,,
+.pstcmbt_tim,,Man I thought we were screwed.,,,,,,,,,,,,,,,,
+
+postcombat_behaviors,postcombat,,2,0,0,,,,,,,,3,1,,1,120,45
+.askme_chkallybdy,,Did he make it?,,,,,,,,,inquisitive,,,,,,,
+.askme_chkallybdyf,,Did she make it?,,,,,,,,,inquisitive,,,,,,,
+.ordrme_chkallybdy,,Make sure it's dead!,,,,,,,,,,,,,,,,
+.tchallybdy,,I'll miss you buddy.,,,,,,,,,disappointed,,,,,,,
+.chckallybdy,,He's gone.,,,,,,,,,disappointed,,,,,,,
+..RE:regret,friend,,,,,,,,,,,,,,,,,
+.chckallybdyf,,She's gone...,,,,,,,,,disappointed,,,,,,,
+..RE:regret,friend,,,,,,,,,,,,,,,,,
+.shotfoebdy,,How's it feel to be dead!?,,0,0,,,,,,angry,,2,0,,,,
+.chkfoebdy,,"Yep, he's dead!",,,,,,,,,happy,,,,,,,
+..RE:approve,friend,,,,,,,,,,,,,,,,,
+.status,,How you doin'?,,,,,,,3,3,,,,,,,,
+..RE:status_re,listener,,,,,,,,,,,,,,,,,
+
+approve,idle_response,Good,4,0,0,,,,,,,,1,0,,1,20,15
+regret,idle_response,Too bad.,4,0,0,,,,,,disappointed,,1,0,,1,20,15
+status_re,idle_response,I need ammo.,4,0,0,,,,3,3,,,1,0,,1,20,15
