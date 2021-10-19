@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+type can be one of the following: ui, solo, multi.  This influences which type of scenario the game loads the map as.
+tagsLocation can be one of the following: default, dlc, test, temp.  This is where the .scenario file lives in tags builds.  Ignored for Cache builds.
+-->
+<scenario name="mainmenu" id="270735729" type="ui">
+	<pathToStringsFile>levels\ui\halo3_ui_names.txt</pathToStringsFile>
+	<imageFileBase>mainmenu</imageFileBase>
+	<scenarioPath>mainmenu</scenarioPath>
+	<presenceContextID>0</presenceContextID>
+	<sortOrder>0</sortOrder>
+</scenario>

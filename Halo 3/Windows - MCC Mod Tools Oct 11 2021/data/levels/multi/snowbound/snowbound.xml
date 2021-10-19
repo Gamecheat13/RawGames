@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+type can be one of the following: ui, solo, multi.  This influences which type of scenario the game loads the map as.
+tagsLocation can be one of the following: default, dlc, test, temp.  This is where the .scenario file lives in tags builds.  Ignored for Cache builds.
+-->
+<scenario name="snowbound" id="360" type="multi">
+	<pathToStringsFile>levels\multi\halo3_multi_names.txt</pathToStringsFile>
+	<imageFileBase>m_snowbound</imageFileBase>
+	<scenarioPath>snowbound</scenarioPath>
+	<presenceContextID>8</presenceContextID>
+	<sortOrder>0</sortOrder>
+	<multiplayerMinimumDesiredPlayers>2</multiplayerMinimumDesiredPlayers>
+	<multiplayerMaximumDesiredPlayers>8</multiplayerMaximumDesiredPlayers>
+	<maximumTeams>
+		<engineCtf>2</engineCtf>
+		<engineSlayer>8</engineSlayer>
+		<engineOddball>8</engineOddball>
+		<engineKing>8</engineKing>
+		<engineSandbox>8</engineSandbox>
+		<engineVip>8</engineVip>
+		<engineJuggernaut>8</engineJuggernaut>
+		<engineTerritories>4</engineTerritories>
+		<engineAssault>2</engineAssault>
+		<engineInfection>8</engineInfection>
+	</maximumTeams>
+</scenario>

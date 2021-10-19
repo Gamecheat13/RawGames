@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+type can be one of the following: ui, solo, multi.  This influences which type of scenario the game loads the map as.
+tagsLocation can be one of the following: default, dlc, test, temp.  This is where the .scenario file lives in tags builds.  Ignored for Cache builds.
+-->
+<scenario name="040" id="3040" type="solo">
+	<pathToStringsFile>levels\solo\halo3_solo_names.txt</pathToStringsFile>
+	<imageFileBase>c_040</imageFileBase>
+	<scenarioPath>040_voi</scenarioPath>
+	<presenceContextID>4</presenceContextID>
+	<sortOrder>0</sortOrder>
+	<insertionPoints>
+		<insertionPoint zoneSet="0" />
+		<insertionPoint zoneSet="6" />
+	</insertionPoints>
+</scenario>
