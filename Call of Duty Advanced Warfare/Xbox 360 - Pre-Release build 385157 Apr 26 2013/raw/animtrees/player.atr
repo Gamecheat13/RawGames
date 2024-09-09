@@ -1,0 +1,1304 @@
+player_directional_melee
+{
+	melee_player_upper_front
+	melee_player_upper_left
+	melee_player_upper_right
+}
+
+human_shield
+{
+human_shield_player_aim_5
+human_shield_player_aim_4
+human_shield_player_aim_6
+human_shield_player_aim_8
+human_shield_player_aim_2
+human_shield_player_idle
+human_shield_player_gun2head
+human_shield_player_gun2head_idle
+human_shield_player_gunfromhead
+
+}
+
+
+gulag_rappel_player
+
+boneyard
+{
+	boneyard_player_steer_straight
+	boneyard_player_steer_right
+	boneyard_player_steer_left
+	boneyard_player_evac
+	boneyard_player_enter_UAZ
+	boneyard_player_grab_wheel
+	boneyard_player_UAZ_stand
+	boneyard_player_UAZ_sit
+}
+
+
+
+knockdown
+{
+	player_view_dog_knockdown
+}
+knockdown_late
+{
+	player_view_dog_knockdown_late
+}
+
+
+player_view_dog_knockdown_saved
+player_view_dog_knockdown_neck_snap
+player_view_dog_knockdown_neck_miss
+player_view_dog_knockdown_laststand
+
+ISS_player_rotate
+ISS_player_float_away
+ISS_player_idle
+
+coup_opening_playerview
+coup_opening_playerview_idle
+coup_opening_playerview_idle_bumpy
+coup_opening_playerview_idle_static
+coup_opening_playerview_idle_normal
+coup_opening_playerview_idle_smooth
+coup_ending_drag_playerview
+coup_ending_player
+coup_ending_zakhaev_intro_playerview
+hunted_opening_player
+hunted_opening_player_idle
+sniper_escape_player_getup
+sniper_escape_player_putdown
+sniper_escape_player_rappel
+launchfacility_a_player_rappel
+airlift_player_getout
+airlift_player_putdown
+cargoship_ch46_rescue_load_player
+cargoship_explosion_player
+jeepride_drag_player
+jeepride_player_pickup_player
+blackout_bh_evac_player
+sniper_escape_crash_pickup_player
+player_lockerroom_fight_attack
+player_lockerroom_fight_miss
+player_lockerroom_fight_start
+oilrig_sub_A_idle_player
+oilrig_sub_A_disembark_player
+oilrig_underwater_kill_player
+cliffhanger_crash_rescue_player
+cliffhanger_capture_player
+
+player_afchase_ending_gun_drop
+player_afchase_ending_gun_kick
+player_afchase_walkoff
+player_afchase_ending_knife_moment
+player_afchase_ending_monologue
+player_afchase_ending_monologue_long
+player_afchase_ending_turnbuckle
+player_afchase_ending_turnbuckle_alt
+player_afchase_ending_wakeup
+player_afchase_ending_wakeup_no_node
+player_afchase_ending_wakeup_end
+
+player_afchase_ending_gun_crawl_00
+player_afchase_ending_gun_crawl_01
+player_afchase_ending_gun_crawl_02
+player_afchase_ending_gun_crawl_03
+player_afchase_ending_gun_crawl_04
+player_afchase_ending_gun_crawl_05
+player_afchase_ending_gun_crawl_06
+player_afchase_ending_gun_crawl_idle_00
+player_afchase_ending_gun_crawl_idle_01
+player_afchase_ending_gun_crawl_idle_02
+player_afchase_ending_gun_crawl_idle_03
+player_afchase_ending_gun_crawl_idle_04
+player_afchase_ending_gun_crawl_idle_05
+player_afchase_ending_gun_crawl_idle_06
+
+player_afchase_ending_knife_grab_01
+player_afchase_ending_knife_grab_02
+player_afchase_ending_knife_grab_03
+player_afchase_ending_knife_passout
+player_afchase_ending_knife_pull_01
+player_afchase_ending_knife_pull_02
+player_afchase_ending_knife_pull_03
+
+player_afchase_ending_knife_pullout_2_flip
+player_afchase_ending_knife_pullout_2_flip_idle
+player_afchase_ending_knife_throw
+player_afchase_ending_knife_throw_kill
+player_afchase_ending_knife_throw_soon
+
+player_pull_additive : additive
+{
+	player_afchase_ending_knife_pull_02_add
+	player_afchase_ending_knife_pull_03_add
+}
+
+afgan_caves_player_rappel_animatic
+afgan_caves_player_rappel_hookup
+afgan_caves_player_rappel_end_kill
+
+cave_rappel
+{
+	cave_rappel_close
+	{
+		afgan_caves_player_rappel_close
+	}
+	cave_rappel_far
+	{
+		afgan_caves_player_rappel_far
+	}
+}
+
+zodiac_player_idle
+
+
+
+gulag_end_animatic_player
+gulag_end_animatic_player_2
+gulag_end_evac_player
+gulag_end_evac_player_hookup
+gulag_end_evac_player_idle
+gulag_end_buried_player
+gulag_rescueA_player
+gulag_rescueB_player
+gulag_rescueB_player_idle
+gulag_rescueB_player_intro
+gulag_rescueB_player_reshoot
+gulag_rescueB_player_reshootB
+
+
+abrams_player_trans_inside
+abrams_player_trans_outside
+
+roadkill_hummer_player_getin
+
+
+dcburning_BHrescue_player_animatic
+dcburning_BHrescue_player_grabclip_animatic
+dcburning_BHrescue_player_wakeup
+dcburning_BHrescue_player_takeammo
+
+airport_ending_mid_player
+airport_ending_alt_player
+
+invasion_opening_hummer2_player
+
+favela_opening_playerview_down
+favela_opening_playerview_downidle
+favela_opening_playerview_up
+favela_opening_playerview_death
+
+player_favela_escape_bigjump
+player_favela_escape_bigjump_getup
+favela_escape_ending_player_catch_rope
+
+cliffhanger_bigjump
+{
+	slide_both_in
+	{
+		player_icepicker_bigjump_slide_both_in
+	}
+	slide_both_out
+	{
+		player_icepicker_bigjump_slide_both_out
+	}
+	slide_left
+	{
+		player_icepicker_bigjump_slide_left_in
+	}
+	slide_right
+	{
+		player_icepicker_bigjump_slide_right_in		
+	}
+}
+
+
+player_icepicker_climbup_from_left
+player_icepicker_climbup_from_right
+
+player_climb
+{
+	
+	climb_root
+	{
+
+			
+		player_icepicker_bigjump
+		player_icepicker_bigjump_end_getup
+	
+		player_icepicker_drop_down_start
+		player_icepicker_drop_down_end
+		player_icepicker_start_climb_up_left
+		player_icepicker_start_climb_up_left_early
+		player_icepicker_start_climb_up_right
+		player_icepicker_start_climb_up_right_early
+
+		player_icepicker_left_high_stab_a
+		player_icepicker_left_fall
+		player_icepicker_left_fall_small
+
+		player_icepicker_left_high_settle_a
+
+		player_icepicker_left_high_stab_fail_a
+		
+		player_icepicker_right_high_stab_fail_a
+
+		player_icepicker_right_high_stab_a
+		player_icepicker_right_fall
+		player_icepicker_right_fall_small
+
+		player_icepicker_right_high_settle_a
+
+		
+
+		
+		climb_idle : loopsync
+		{
+			player_icepicker_right_idle
+			player_icepicker_left_idle
+		}
+	}
+
+	climb_sleeve : loopsync
+	{
+		player_sleeve_flapping
+	}
+	
+	
+	climb_wrist : additive
+	{
+		player_icepicker_left_high_wrist_in
+		player_icepicker_left_high_wrist_out
+		player_icepicker_right_high_wrist_in
+		player_icepicker_right_high_wrist_out
+	}
+	
+	climb_left_additive : additive	
+	{
+		player_icepicker_left_high_stab_out 
+		player_icepicker_left_high_stab_in
+	}
+	climb_right_additive : additive	
+	{
+		player_icepicker_right_high_stab_in
+		player_icepicker_right_high_stab_out
+	}
+	
+	climb_right_vertical_corrector : additive
+	{
+	}
+	climb_left_vertical_corrector : additive
+	{
+	}
+}
+
+pres_crash_player_crash
+
+
+motorcycle_player
+{
+	motorcycle_player_pose_f
+	motorcycle_player_pose_f_fast
+	motorcycle_player_pose_lean_l
+	motorcycle_player_pose_lean_r
+	motorcycle_player_pose_turn_r
+	motorcycle_player_pose_turn_l
+}
+
+so_escort
+{
+	so_escort_heli_player_move_in
+	so_escort_heli_player_move_out
+}
+
+
+estate_drag_player
+estate_chopper_sequence_player	
+estate_body_toss_player
+DCemp_player_flare_wave
+roadkill_intro_pickup_player
+
+player_mortor60mm_enter_r
+player_mortor60mm_enter_l
+player_mortor60mm_exit_r
+player_mortor60mm_exit_l
+player_mortor60mm_fire_r
+player_mortor60mm_fire_l
+player_mortor60mm_idle_r
+player_mortor60mm_idle_l
+player_mortor60mm_turn_down_r
+player_mortor60mm_turn_left_l
+player_mortor60mm_turn_right_l
+player_mortor60mm_turn_up_r
+player_mortor60mm_finger_idle_r
+
+
+berlin_player_inverted_rappel_stop_idle
+berlin_player_inverted_rappel_stop_to_walk
+berlin_player_inverted_rappel_walk
+berlin_player_inverted_rappel_walk_to_stop
+berlin_player_inverted_rappel_hookup
+berlin_player_legs_inverted_rappel_hookup
+berlin_player_inverted_rappel_unhook
+berlin_player_rappel
+berlin_player_legs_rappel
+berlin_sgt_down_bomb_hit_player
+berlin_reverse_breach_player
+berlin_reverse_breach_player_idle
+berlin_reveres_breach_player_getup
+berlin_delta_open_sidewayselevator_viewModel
+berlin_sgt_down_recovery_VM
+berlin_100ft_rope_player_rappel
+berlin_auto_gernade_lancher_VM_getoff
+berlin_auto_gernade_lancher_VM_geton
+berlin_auto_gernade_launcher_VM_fire
+berlin_auto_gernade_launcher_VM_idle
+berlin_auto_gernade_launcher_VM_to_fire
+berlin_auto_gernade_launcher_VM_to_idle
+berlin_finale_end_player
+berlin_finale_enter_player
+berlin_nvg_takeoff_player
+berlin_nvg_puton_player
+berlin_laser_designator_on_player
+berlin_laser_designator_off_player
+
+viewmodel_lowtech_breach_arms
+viewmodel_lowtech_breach_legs
+
+player_throatstab_attack
+
+warlord_pickup_player_geton
+warlord_pickup_player_knockoff
+africa_pc_roof_fall
+africa_pc_roof_jump
+africa_pc_roof_jump_legs
+africa_finale_enter_player
+africa_finale_end_player
+africa_finale_middle_player
+africa_sliding_gate_open_player
+warlord_standoff_player_death
+warlord_standoff_player
+warlord_standoff_player_end
+warlord_standoff_player_loop
+warlord_standoff_player_start
+warlord_standoff_player_legs
+warlord_standoff_player_legs_start
+africa_player_emerge_slow
+africa_tower_throat_stab_player
+
+ny_harbor_exit_viewmodel_arms_enter
+ny_harbor_exit_viewmodel_arms_enter_2
+ny_harbor_exit_viewmodel_legs_enter
+ny_harbor_exit_viewmodel_arms_hold
+
+ny_harbor_jump_out_hind_player
+ny_harbor_hind_enter_viewmodel
+ny_harbor_hind_enter_legs
+
+ny_harbor_wetsub_player_exit
+ny_harbor_sub_surface_player
+ny_harbor_sub_surface_player_pt2
+ny_harbor_sub_exit_player
+ny_harbor_sub_exit_legs
+ny_harbor_wetsub_plantmine_player
+ny_harbor_underwater_cutting_player
+ny_harbor_underwater_cutting_player_pt2
+ny_harbor_ladder_slide_player
+ny_harbor_door_breach_player
+ny_harbor_zodiac_finale_bump_player
+ny_harbor_finale_bump_player_breach
+ny_harbor_finale_bump_player_end
+ny_harbor_finale_bump_player_start
+ny_harbor_finale_airlift_player_end
+ny_harbor_missle_key_player_turnkey
+ny_harbor_player_power_down
+ny_harbor_player_power_up
+
+ny_manhattan_player_sewer_exit
+ny_manhattan_player_wakeup
+ny_manhattan_weapon_toss_vm
+ny_manhattan_weapon_toss_vm_2
+ny_manhatten_hind_finale_player
+ny_manhatten_hind_finale_player_pt2
+ny_manhattan_intro_player
+ny_manhattan_intro_player_legs
+
+harbor_player_sdv_idle
+harbor_player_sdv_turn_down
+harbor_player_sdv_turn_up
+harbor_player_sdv_turn_right
+harbor_player_sdv_turn_left
+
+harbor_player_hind_idle
+harbor_player_hind_jump
+harbor_player_sdv_geton
+harbor_roof_breach_player
+
+
+hijack_intro_player_start
+hijack_debate_sit_down_player
+hijack_debate_begin_player
+hijack_debate_react_player
+hijack_zerog_player
+hijack_zero_g_player
+
+hijack_plane_crash_fall_out_player
+
+hijack_ending_open_door_player
+hijack_tarmac_agent_helps_player
+
+london_player_blowback
+london_player_legs_blowback
+london_player_collapse
+london_player_legs_collapse
+london_player_revive
+london_player_bail
+london_utilitytruck_player_mount
+london_truck_open_player
+
+paris_delta_van_vm_tossweapon_toss
+paris_volk_escape_player
+paris_van_player_front_to_back
+paris_van_player_back_to_front
+paris_van_player_enter_door
+paris_chase_gaz_barricade_player
+paris_chase_final_crash_player_end
+paris_chase_final_crash_player_loop
+paris_chase_final_crash_player_start
+paris_chase_final_crash_player
+paris_chase_ending_player_start
+paris_a_b_switch_player_pt1
+paris_a_b_switch_player_pt2
+paris_delta_corridor_player_b
+paris_delta_corridor_player_f
+paris_player_enter_manhole
+
+rescue_player_legs_rappel_1
+rescue_player_legs_rappel_2
+rescue_player_rappel_1
+rescue_player_rappel_2
+rescue_player_rappel_2_mirrored
+rescue_ending_player_drag_handoff_player
+rescue_ending_delta_retreat_player
+rescue_ending_player_into_bh_player
+rescue_ending_pres_heli_getin_player
+payback_interrogation_mask_on_player
+payback_interrogation_mask_off_player
+payback_breach_player
+payback_const_rappel_player
+payback_const_rappel_player_02
+payback_const_rappel_player_intro
+payback_const_rappel_player_intro02
+payback_sstorm_chopper_rescue_player_getup
+payback_exfil_slide_player
+payback_exfil_slide_player_legs
+payback_exfil_enter_jeep_player
+payback_gatecrash_dismount_player
+
+semtex_belt_deploy_player
+semtex_belt_deploy
+
+payback_interrogation_mask_puton_player
+payback_interrogation_mask_takeoff_player
+payback_intro_getup_player
+payback_intro_getup_player_legs
+payback_intro_idle_player
+payback_intro_idle_player_legs
+payback_intro_turn_player
+
+payback_end_slide_player
+payback_end_slide_player_legs
+payback_end_mount_player
+
+prague_zodiac_player_dismount
+prague_zodiac_player_dismount_leg
+prague_zodiac_player_idle
+
+p_pragueb_1_1_idle_player
+p_pragueb_1_1_intro_player
+p_pragueb_1_1_setup_player
+p_pragueb_1_1_setup_player_gun
+p_pragueb_2_2_scaffolding_fall_player
+p_pragueb_2_3_fade_in_a_player
+p_pragueb_2_3_fade_in_b_player
+p_pragueb_2_3_soap_injured_player
+p_pragueb_3_1_pickup_player
+p_pragueb_3_1_idle_player
+p_pragueb_3_1_run_player
+p_pragueb_3_1_cough_stop_player
+p_pragueb_3_2_cough_player
+p_pragueb_3_5_toss_m203_player
+p_pragueb_10_1_savingsoap_convulsion_player
+p_pragueb_10_1_savingsoap_gasp_in_player
+p_pragueb_10_1_savingsoap_gasp_out_player
+p_pragueb_10_1_savingsoap_nopressure_player
+p_pragueb_10_1_savingsoap_pressure_player
+p_pragueb_10_1_savingsoap_slowdeath_player
+p_pragueb_11_1_escape_player
+p_pragueb_12_1_punch_player
+p_pragueb_13_1_no_time_player
+p_pragueb_15_1_betray_me_player
+p_pragueb_15_4_elevator_crawl_in_hand_player
+p_pragueb_15_4_elevator_crawl_in_idle_player
+p_pragueb_15_4_elevator_crawl_in_player
+p_pragueb_15_4_elevator_crawl_out_player
+p_pragueb_16_1_emt_assist_player
+p_pragueb_16_1_gun_to_head_player
+p_pragueb_15_6_dying_inplace_player
+p_pragueb_13_3_bullet_strikes_player
+p_pragueb_14_1_shockandawe_player
+p_pragueb_14_1_shockandawe_player_relative
+p_pragueb_15_6_dying_detector_l_player
+p_pragueb_15_6_dying_detector_r_player
+
+castle_player_chute_open
+castle_player_slide
+castle_player_legs_slide
+castle_player_dentonator_idle
+castle_player_explosion
+castle_player_rappel
+castle_player_legs_rappel
+castle_prisoner_player
+castle_prisoner_walk_player
+castle_prisoner_walk_to_idle_player
+castle_prisoner_idle_player
+castle_contextual_melee_searchlight_player
+castle_player_platformcrawl_bombplant_alt
+castle_6_2_spotlight_kill_player
+
+castle_truck_escape_mount_player
+castle_truck_escape_player
+castle_truck_escape_player_deploy_chute
+castle_truck_escape_glide_player
+castle_truck_escape_glide_chute
+
+castle_player_escape_chutepull_arms
+castle_player_escape_chuterelease_arms
+
+int_castle_3_3_player_landing
+
+int_castle_9_2_player_shimmy
+int_castle_9_2_player_shimmy_bombplant
+
+castle_player_wetwall_climb_full
+castle_player_wetwall_climb_get_in
+castle_player_wetwall_climb_idle
+castle_player_wetwall_climb_righthand
+castle_player_wetwall_climb_climbing_right
+castle_player_wetwall_climb_righthand_idle
+castle_player_wetwall_climb_lefthand
+castle_player_wetwall_climb_climbing_idle
+castle_player_wetwall_climb_bothhands_idle
+castle_player_wetwall_climb_bothhands_push_up
+castle_player_wetwall_climb_slip
+castle_player_wetwall_climb_hole_peek_get_in
+castle_player_wetwall_climb_hole_peek_idle
+castle_player_wetwall_climb_hole_peek_fall
+castle_player_wetwall_climb_hole_peek_slip
+
+ch_castle_10_7_tv_monitor_camera
+
+int_castle_14_4_player_jump
+int_castle_15_7_end_vignette
+
+castle_player_paraglide_arms_flare_to_neutral
+castle_player_paraglide_arms_neutral_to_flare
+castle_player_paraglide_arms_crashdeath
+castle_player_paraglide_arms_firedeath
+castle_player_paraglide_arms_neutral_idle
+
+castle_player_paraglide_arms_sleeveflap
+
+castle_player_paraglide_altimeter_flare_to_neutral
+castle_player_paraglide_altimeter_neutral_to_flare
+castle_player_paraglide_altimeter_crashdeath
+castle_player_paraglide_altimeter_firedeath
+castle_player_paraglide_altimeter_neutral_idle
+
+castle_player_paraglide_chute_flare_to_neutral
+castle_player_paraglide_chute_neutral_to_flare
+castle_player_paraglide_chute_crashdeath
+castle_player_paraglide_chute_firedeath
+castle_player_paraglide_chute_neutral_idle
+
+castle_parachute_turning
+{
+	castle_player_paraglide_arms_l_to_r
+	castle_player_paraglide_arms_r_to_l
+		
+	castle_player_paraglide_altimeter_l_to_r
+	castle_player_paraglide_altimeter_r_to_l
+	
+	castle_player_paraglide_chute_l_to_r
+	castle_player_paraglide_chute_r_to_l
+}
+
+o_castle_3_3_player_chute_landing
+
+viewmodel_glock_NVG_puton
+viewmodel_glock_NVG_takeoff
+
+hamburg_tank_crash_player
+hamburg_tank_entry_lowerbody
+hamburg_tank_entry_upperbody
+
+dubai_finale_crawl01_idle_player
+dubai_finale_crawl01_player
+dubai_finale_fail_crawl01_player
+dubai_finale_crawl02_idle_player
+dubai_finale_crawl02_player
+dubai_finale_fail_crawl02_player
+dubai_finale_crawl03_idle_player
+dubai_finale_crawl03_player
+dubai_finale_fail_crawl03_player
+dubai_finale_draw_player
+dubai_finale_draw_fail_player
+
+dubai_finale_draw_fail_player_blends
+{
+	dubai_finale_draw_fail_blend_player
+	dubai_finale_draw_fail_blend_look_player
+}
+
+dubai_finale_showdown_player
+dubai_finale_wake_idle_player
+dubai_finale_wake_player
+dubai_finale_reflection_player
+dubai_halo_jump_chute_idle_player
+dubai_halo_jump_chute_open_player
+dubai_halo_jump_idle_player
+dubai_halo_jump_turn_left_player
+dubai_halo_jump_turn_right_player
+dubai_jump_to_elevator_player
+dubai_jump_to_elevator_player_legs
+dubai_jump_to_elevator_early_player
+dubai_jump_to_elevator_early_player_legs
+dubai_removing_grear_player
+dubai_removing_grear_player_2
+dubai_removing_grear_player_3
+dubai_intro_player
+dubai_restaurant_player_view
+dubai_restaurant_player_body
+dubai_helo_jump_player_1
+dubai_helo_jump_player_2
+dubai_helo_jump_player_3
+dubai_helo_jump_player_stab_fail
+dubai_helo_jump_player_leg_1
+dubai_helo_jump_player_leg_2
+dubai_helo_jump_player_leg_3
+dubai_helo_jump_player_kick_fail
+dubai_helo_jump_player_leg_kick_fail
+dubai_final_beatdown_player_choke
+dubai_final_beatdown_player_end
+dubai_final_beatdown_player_idle_1
+dubai_final_beatdown_player_idle_1_look
+dubai_final_beatdown_player_idle_2
+dubai_final_beatdown_player_idle_3
+dubai_final_beatdown_player_punch
+dubai_final_beatdown_player_slam
+dubai_final_beatdown_player_smoking_idle
+dubai_final_beatdown_player_tackle_start
+dubai_final_beatdown_player_tackle
+dubai_final_beatdown_player_tackle_alt
+dubai_final_beatdown_player_fail
+dubai_final_beatdown_player_fail_2
+dubai_final_beatdown_player_getup_idle
+dubai_final_beatdown_player_idle_2_getup
+dubai_helo_jump_player_idle
+dubai_final_helo_additive : additive
+{
+	dubai_helo_jump_player_middle
+	dubai_helo_jump_player_pull
+	dubai_helo_jump_player_push
+	dubai_helo_jump_player_left
+	dubai_helo_jump_player_right
+}
+dubai_final_beatdown_additive : additive
+{
+	dubai_final_beatdown_player_additive
+}
+
+intro_opening_shot01_player
+intro_opening_shot02_player
+intro_opening_shot03_player
+intro_opening_shot04_player
+intro_opening_shot05_player
+intro_opening_shot06_player
+intro_opening_shot07_player
+intro_opening_shot08_player
+intro_docdown_needle_player
+intro_docdown_breach_player
+intro_rooftop_collapse_player
+intro_rooftop_collapse_loop_player
+intro_rooftop_collapse_player_legs
+intro_rooftop_collapse_loop_player_legs
+intro_river_ride_player
+
+anim_test_player
+
+hamburg_tank_crash_exit_upperbody
+hamburg_tank_crash_exit_lowerbody
+
+paris_ac130_run_around_humvee_player
+
+prague_escape_soap_death_player
+
+//Raven
+
+
+//Neversoft
+
+
+
+//neversoft protos
+
+//Flooded
+flood_infil_player
+
+flood_heli_crash_jump_player
+flood_heli_crash_fight_03_player
+
+// thin ice
+thinice_player_break_02
+scuba_player_idle
+scuba_player_forward
+scuba_player_idle2forward
+scuba_player_forward2idle
+scuba_player_turnleft
+scuba_player_turnright
+thinice_player_enemy_03_melee
+
+
+//Interrogate Proto
+interrogate_player_melee_01_a
+interrogate_player_melee_02_a
+interrogate_player_melee_03_a
+interrogate_player_melee_04_a
+interrogate_player_melee_05_a
+interrogate_player_melee_01_b
+interrogate_player_melee_02_b
+interrogate_player_melee_03_b
+interrogate_player_melee_04_b
+interrogate_player_melee_05_b
+
+// parachute hands/chute viewmodel
+fp_viewmodel_parachute_idle
+fp_viewmodel_parachute_turn_r_idle
+fp_viewmodel_parachute_turn_l_idle
+fp_viewmodel_parachute_stop_idle
+fp_viewmodel_parachute_falling
+fp_viewmodel_parachute_landing
+fp_viewmodel_parachute_jumping
+fp_viewmodel_parachute_buffeting
+fp_viewmodel_parachute_buffeting_2
+fp_viewmodel_parachute_bump
+
+// parachute legs 
+tp_parachute_idle
+tp_parachute_turn_r_idle
+tp_parachute_turn_l_idle
+tp_parachute_stop_idle
+tp_parachute_falling
+tp_parachute_landing
+tp_parachute_jumping
+tp_parachute_buffeting
+tp_parachute_buffeting_2
+
+// halo
+halo_player_front : additive
+{
+	halo_player_jumpforward_additive_front
+}
+
+halo_player_back : additive
+{
+	halo_player_jumpforward_additive_back
+}
+
+halo_player_left : additive
+{
+	halo_player_jumpforward_additive_left
+}
+
+halo_player_right : additive
+{
+	halo_player_jumpforward_additive_right
+}
+
+halo_player_hands_front : additive
+{
+	halo_player_jumpforward_additive_hands_front
+}
+
+halo_player_hands_back : additive
+{
+	halo_player_jumpforward_additive_hands_back
+}
+
+halo_player_hands_left : additive
+{
+	halo_player_jumpforward_additive_hands_left
+}
+
+halo_player_hands_right : additive
+{
+	halo_player_jumpforward_additive_hands_right
+}
+
+//Dominator UAV Anims
+viewmodel_dominator_uav_mortar_mount_dominator_player
+viewmodel_dominator_uav_mortar_fire_dominator_player
+viewmodel_dominator_uav_mortar_cu_putaway_player
+viewmodel_dominator_uav_mortar_idle_player
+
+//flooded
+flooded_player_sweptaway
+flooded_player_climbladder
+flooded_player_sweptdown
+flooded_player_sweptleft
+flooded_player_sweptright
+
+
+
+//player deaths
+player_death_shot_2_fp_arms_01
+player_death_shot_4_fp_arms_01
+player_death_shot_6_fp_arms_01
+player_death_shot_8_fp_arms_01
+player_death_exp_2_fp_arms_01
+player_death_exp_4_fp_arms_01
+player_death_exp_6_fp_arms_01
+player_death_exp_8_fp_arms_01
+
+player_death_shot_2_tp_legs_01
+player_death_shot_4_tp_legs_01
+player_death_shot_6_tp_legs_01
+player_death_shot_8_tp_legs_01
+player_death_exp_2_tp_legs_01
+player_death_exp_4_tp_legs_01
+player_death_exp_6_tp_legs_01
+player_death_exp_8_tp_legs_01
+
+//HALO Jump Proto
+halo_player_jumpforward
+halo_player_jumpforward2
+halo_player_jumpforward3
+halo_player_jumpforward4
+halo_player_jumpforward5
+halo_player_parachute_deploy
+
+//death
+player_death_10
+player_death_15
+player_death_22
+player_death_30
+player_death_30_01
+player_death_35
+player_death_40
+player_death_45
+player_death_45_01
+player_death_60
+
+player_death_crouch_10
+player_death_crouch_15
+player_death_crouch_22
+player_death_crouch_30
+player_death_crouch_30_01
+player_death_crouch_35
+player_death_crouch_40
+player_death_crouch_45
+player_death_crouch_45_01
+player_death_crouch_60
+
+//zero G
+
+apache_crew
+{
+apache_shotgun_R_player_world
+apache_shotgun_R_player_lowerbody
+}
+
+player_zeroG_state
+{
+	player_zeroG_L_forward_in
+        player_zeroG_L_forward_idle
+	player_zeroG_L_forward_out
+        player_zeroG_L_forward_out_stop
+	player_zeroG_L_backward_in
+        player_zeroG_L_backward_idle
+	player_zeroG_L_backward_out
+        player_zeroG_L_backward_out_stop
+	player_zeroG_L_to_R_in
+	player_zeroG_L_to_R_out
+	player_zeroG_L_idle
+	
+	player_zeroG_loop
+	
+	player_zeroG_R_forward_in
+        player_zeroG_R_forward_idle
+	player_zeroG_R_forward_out
+        player_zeroG_R_forward_out_stop
+	player_zeroG_R_backward_in
+        player_zeroG_R_backward_idle
+	player_zeroG_R_backward_out
+        player_zeroG_R_backward_out_stop
+	player_zeroG_R_to_L_in
+	player_zeroG_R_to_L_out
+	player_zeroG_R_idle
+	
+	player_zeroG_T_forward_in
+	player_zeroG_T_forward_idle
+	player_zeroG_T_forward_out
+	player_zeroG_T_forward_out_stop
+	player_zeroG_T_backward_in
+	player_zeroG_T_backward_idle
+	player_zeroG_T_backward_out
+	player_zeroG_T_backward_out_stop
+	player_zeroG_T_sideway_L_in
+        player_zeroG_T_sideway_L_idle
+	player_zeroG_T_sideway_L_out
+        player_zeroG_T_sideway_L_out_stop
+	player_zeroG_T_sideway_R_in
+        player_zeroG_T_sideway_R_idle
+	player_zeroG_T_sideway_R_out
+        player_zeroG_T_sideway_R_out_stop
+	player_zeroG_T_to_D_in
+        player_zeroG_T_to_D_idle
+	player_zeroG_T_to_D_out
+        player_zeroG_T_to_D_out_stop
+	player_zeroG_T_idle
+	
+	player_zeroG_D_forward_in
+	player_zeroG_D_forward_idle
+	player_zeroG_D_forward_out
+	player_zeroG_D_forward_out_stop
+	player_zeroG_D_backward_in
+	player_zeroG_D_backward_idle
+	player_zeroG_D_backward_out
+	player_zeroG_D_backward_out_stop
+	player_zeroG_D_sideway_L_in
+	player_zeroG_D_sideway_L_idle
+	player_zeroG_D_sideway_L_out
+	player_zeroG_D_sideway_L_out_stop
+	player_zeroG_D_sideway_R_in
+	player_zeroG_D_sideway_R_idle
+	player_zeroG_D_sideway_R_out
+	player_zeroG_D_sideway_R_out_stop
+	player_zeroG_D_to_T_in
+	player_zeroG_D_to_T_idle
+	player_zeroG_D_to_T_out
+	player_zeroG_D_to_T_out_stop
+	player_zeroG_D_idle
+}
+
+player_zeroG_drift : additive
+{
+	player_zeroG_idle_additive
+}
+
+viewmodel_hand_gestures
+
+// aussie-style rappel
+nx_fp_ss_rappel_ground
+{
+	nx_fp_ss_rappel_sprint
+	nx_fp_ss_rappel_sprint_L
+	nx_fp_ss_rappel_sprint_R
+}
+nx_fp_ss_rappel_jump_in
+nx_fp_ss_rappel_jump_loop
+nx_fp_ss_rappel_jump_out
+nx_fp_ss_rappel_slide_in
+nx_fp_ss_rappel_slide_loop
+nx_fp_ss_rappel_slide_out
+nx_tp_ss_rappel_slide_in
+nx_tp_ss_rappel_slide_loop
+nx_tp_ss_rappel_slide_out
+fp_body_default
+
+//end neversoft protos
+
+//raven test anims
+
+truck_poc_corner_left
+truck_poc_corner_right
+truck_poc_crouch_corner_left
+truck_poc_crouch_corner_right
+truck_poc_crouch
+truck_poc_crouch_idle
+truck_poc_shift_left
+truck_poc_shift_right
+truck_poc_crouch_shift_right
+truck_poc_crouch_shift_left
+truck_poc_idle
+truck_poc_stand
+truck_poc_vault_in
+truck_poc_vault_out
+truck_poc_idle_r
+truck_poc_vault_in_1h
+truck_poc_vault_out_1h
+
+
+truck_poc_corner_left_legs
+truck_poc_corner_right_legs
+truck_poc_crouch_corner_left_legs
+truck_poc_crouch_corner_right_legs
+truck_poc_crouch_legs
+truck_poc_crouch_idle_legs
+truck_poc_shift_left_legs
+truck_poc_shift_right_legs
+truck_poc_crouch_shift_right_legs
+truck_poc_crouch_shift_left_legs
+truck_poc_idle_legs
+truck_poc_stand_legs
+truck_poc_vault_in_legs
+truck_poc_vault_out_legs
+truck_poc_idle_r_legs
+truck_poc_vault_in_1h_legs
+truck_poc_vault_out_1h_legs
+
+train_corner_enter_player_arms
+train_corner_enter_palyer_legs
+
+train_tanker_corner_transition_player
+train_tanker_corner_transition_player_legs
+
+train_player_fall_arms
+train_player_fall_legs
+
+train_player_pickup_arms
+train_player_pickup_legs
+
+train_tanker_enter_player_legs
+train_tanker_enter_player_arms
+
+train_tanker_knockback_player
+train_tanker_knockback_player_legs
+
+train_tanker_helpup_player_arms
+train_tanker_helpup_player_legs
+
+build_slide_player_enter
+build_slide_player_exit
+build_slide_player_slide
+
+build_fall_player
+
+// rappel movement
+rappel_movement_intro_player
+rappel_movement_intro_playerLegs
+
+
+
+//kingfish
+kingfish_kickdowndoor_player
+kingfish_kickdowndoor_player_legs
+kingfish_intro_hold_idle_player
+kingfish_intro_release_player
+kingfish_osprey_exfil_board_player
+kingfish_osprey_exfil_player
+
+// end raven protos
+
+breach_kick_stackl1_enter_vm
+breach_kick_kickerr1_enter_vm
+tandem_breach_kick_stackl1_enter_vm
+tandem_breach_kick_kickerr1_enter_vm
+tandem_breach_kick_kickerr1_enter_vmleg
+
+coop_wall_hoist_a_1st_person
+coop_wall_hoist_a_1st_person_legs
+coop_wall_hoist_b_1st_person
+coop_wall_hoist_b_1st_person_legs
+
+// IW Protos
+crib_mp5_barrel_2_clip
+crib_mp5_barrel_2_scope
+crib_mp5_barrel_idle
+crib_mp5_barrel_putaway
+crib_mp5_clip_2_barrel
+crib_mp5_clip_2_scope
+crib_mp5_clip_idle
+crib_mp5_clip_putaway
+crib_mp5_pullout_2_clip
+crib_mp5_scope_2_barrel
+crib_mp5_scope_2_clip
+crib_mp5_scope_acog_idle
+crib_mp5_scope_idle
+crib_mp5_scope_putaway
+crib_mp5_scope_reflex_idle
+
+crib_ump45_barrel_2_clip
+crib_ump45_barrel_2_scope
+crib_ump45_barrel_idle
+crib_ump45_barrel_putaway
+crib_ump45_clip_2_barrel
+crib_ump45_clip_2_scope
+crib_ump45_clip_idle
+crib_ump45_clip_putaway
+crib_ump45_pullout_2_clip
+crib_ump45_scope_2_barrel
+crib_ump45_scope_2_clip
+crib_ump45_scope_acog_idle
+crib_ump45_scope_idle
+crib_ump45_scope_putaway
+crib_ump45_scope_reflex_idle
+
+crib_ak47_barrel_2_clip
+crib_ak47_barrel_2_scope
+crib_ak47_barrel_idle
+crib_ak47_barrel_putaway
+crib_ak47_clip_2_barrel
+crib_ak47_clip_2_scope
+crib_ak47_clip_idle
+crib_ak47_clip_putaway
+crib_ak47_pullout_2_clip
+crib_ak47_scope_2_barrel
+crib_ak47_scope_2_clip
+crib_ak47_scope_acog_idle
+crib_ak47_scope_idle
+crib_ak47_scope_putaway
+crib_ak47_scope_reflex_idle
+
+crib_handshake_player
+crib_grab_player
+
+vehicle_card_test_player
+
+apache_flightstick_idle
+apache_flightstick_b
+apache_flightstick_f
+apache_flightstick_l
+apache_flightstick_r
+// End IW Protos
+
+//s1 player
+vm_rocket_jump_airbrake
+vm_rocket_jump_airbrake_legs
+vm_var_grenade_idle
+vm_var_grenade_pullout
+vm_var_grenade_switch
+vm_var_grenade_throw
+viewmodel_deploy_cover
+
+//s1_scripted events fusion
+fusion_silo_collapse_vm_pt01
+fusion_silo_collapse_vm_pt02
+fusion_silo_collapse_vm_pt03
+fusion_silo_collapse_vm_arm
+fusion_fly_in_view_model
+fusion_fly_in_intro_view_model
+fusion_fly_in_pt2_view_model
+fusion_elevator_shaft_vm
+fusion_control_room_vm
+
+//s1_scripted events san francisco
+sf_goldengate_collapse_vm
+sanfran_bridge_crash_pt1_vm
+sanfran_bridge_crash_pt2_vm
+sanfran_bridge_crash_pt3_vm
+sanfran_bridge_pitbull_intro_vm
+sanfran_bridge_pitbull_sideswipe_init_vm 
+sanfran_bridge_pitbull_sideswipe_vm
+sf_burke_boost2player_on_bridge_dialog_player
+sf_goldengate_deploy_vm
+
+//s1_scripted events san francisco b
+sanfran_b_intro_vm
+sf_b_bridge_dialog_vm
+sf_b_jammerplant_1_vm
+sf_b_jammerplant_2_vm
+
+//s1_scripted events lab
+lab_chopper_evac_end_vm
+lab_chopper_evac_enter_vm
+
+walker_viewmodel
+{
+	fw101_cockpit_idle_viewmodel
+	fw101_cockpit_walk_viewmodel
+	fw101_cockpit_transform_viewmodel
+	fw101_cockpit_transform_idle_viewmodel
+}
+
+// mobile turret
+walker_wheels_viewmodel
+{
+	x4walker_wheels_cockpit_in_l_vm
+	x4walker_wheels_cockpit_in_r_vm
+	x4walker_wheels_cockpit_in_b_vm
+	x4walker_wheels_cockpit_out_l_vm
+	x4walker_wheels_cockpit_out_r_vm
+	x4walker_wheels_cockpit_out_b_vm
+}
+
+walker_turret_viewmodel
+{
+	x4walker_turret_cockpit_in_l_vm
+	x4walker_turret_cockpit_in_r_vm
+	x4walker_turret_cockpit_in_b_vm
+	x4walker_turret_cockpit_out_l_vm
+	x4walker_turret_cockpit_out_r_vm
+	x4walker_turret_cockpit_out_b_vm
+}
+
+// fastzip
+fastzip_launcher_pullout_vm
+fastzip_launcher_ads_vm
+fastzip_launcher_putaway_vm
+fastzip_launcher_land_vm
+
+// pitbull
+pitbull
+{
+	steer_anims
+	{
+		pitbull_cockpit_static_idle_vm
+		pitbull_cockpit_turn_center_to_l_vm
+		pitbull_cockpit_turn_center_to_r_vm
+		pitbull_cockpit_turn_l_to_center_vm
+		pitbull_cockpit_turn_r_to_center_vm
+	}
+	
+	camera_anims
+	{
+		pitbull_cockpit_static_idle_vm_cam
+		pitbull_cockpit_turn_center_to_l_vm_cam
+		pitbull_cockpit_turn_center_to_r_vm_cam
+		pitbull_cockpit_turn_l_to_center_vm_cam
+		pitbull_cockpit_turn_r_to_center_vm_cam
+	}
+	
+	camera_accel_anims : additive
+	{
+		pitbull_cockpit_accelerate_vm_cam
+		pitbull_cockpit_accelerate_to_idle_vm_cam
+		pitbull_cockpit_decelerate_vm_cam
+	}
+	
+	idle_add : additive
+	{
+		pitbull_cockpit_idle_vm
+	}
+	
+	camera_shake : additive
+	{
+		pitbull_cockpit_idle_vm_cam
+	}
+	
+	speed_anims : additive
+	{
+		pitbull_cockpit_accelerate_vm
+		pitbull_cockpit_decelerate_vm
+	}
+	
+	gear_shift : additive
+	{
+		pitbull_cockpit_gear_up_vm
+		pitbull_cockpit_gear_down_vm
+	}
+}
+
+// hms
+hms_vm_hard_land

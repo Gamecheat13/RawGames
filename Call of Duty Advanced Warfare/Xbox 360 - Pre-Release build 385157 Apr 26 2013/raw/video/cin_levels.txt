@@ -1,0 +1,37 @@
+
+// You can specify particular movies to play for particular maps
+// by using a line like this per map:
+// getmapname <name_of_map> strcmp ! if <name_of_movie_to_play> play then
+
+							// Credits special cases
+							//
+getmapname sp_intro strcmp ! // push whether this is intro
+prologue_select getdvar *	// ..and it with whether prologue_select is nonzero
+if							// if so..
+	prologue_select_load play // play 'prologue_select_load'
+then						//
+
+getmapname sp_paris_b strcmp !
+if
+	paris_transition_movie getdvar
+	if
+		sp_paris_b_load play
+	then
+	sp_paris_a_load play
+then	
+
+getmapname sp_dubai strcmp ! // if credits only, then only play black
+if
+	ui_play_credits getdvar
+	if
+		black play
+	then
+	sp_dubai_load play
+then
+
+						// Default case
+						//
+getmapname				// Take the map name
+_load strcat			// append a '_load' at the end
+play					// and play it.
+

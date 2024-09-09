@@ -1,0 +1,250 @@
+# Max number of mod groups: 128,,
+# Number of mod groups currently used: 69,,
+# name - volume mod group name,,
+# value - value to multiply volume of aliases tagged with given volmod group name,,
+
+default,1.0
+
+######################### BEGIN SHG-SANCTIONED VOLMODS #########################
+
+### User interface ###
+hud,0.7533,# MP in game feedback (level up,card slide,etc)
+frontend_sfx,0.7533,# user interface sfx
+frontend_music,0.7533,# user interface sfx
+
+### Music ###,,
+music,1.0,# level music (excluding title and fluff music)
+music_big,1.0,# level big moments
+music_emitter,0.81,# point sourced music (ie portable radio)
+
+
+### Ambience ###,,
+amb_quad,0.65,# main ambience streams
+amb_dist,0.75,# distant ambient element sfx
+amb_damb,0.75,# ambient element sfx
+amb_damb_big,1.0,# BIG dynamic ambient element sfx
+amb_emitter,0.75,# point emitter sfx
+physics,0.8,# physics elements
+
+
+### Characters ###,,
+bodyfall,0.7002,# bodyfalls
+foley_plr,0.545,# foley type sfx such as gear rattle,foliage movement etc.
+mp_foley_plr,0.7031,# player gear rattle in MP
+foley_npc,0.6582,# npc gear rattle
+foleymp_npc,0.5357,# npc gear rattle in MP
+wpn_foley_plr,0.865,# Player reload sfx
+wpn_foley_npc,0.84,# NPC reload sfx
+footstep_plr,0.6229,# Player footsteps
+footstep_npc,0.8126,# footsteps and landing sfx
+mp_footstep_plr,0.6229,# Player footsteps in MP
+mp_footstep_npc,0.837,#footsteps and landing sfx in MP
+melee_plr,0.7533,# Player melee sfx
+melee_npc,0.7533,# NPC melee sfx
+plr_internal,0.8,# Player heartbeat, breathing, vocalizations, etc.
+
+
+### Dialogue ###,,
+chatter_friendly,0.9,# battlechatter allied/friendly
+chatter_enemy,0.9,# battlechatter axis/enemy
+vox_friendly,0.90,# allied character reaction sfx
+vox_enemy,0.9,# axis character reaction sfx
+dialog,1,# mission based speech
+dialog_radio,1,# mission based radio speech
+dialog_critical,1,# mission based speech at FULL Volume (DO NO CHANGE)
+dialog_amb,1,# ambient based speech (flavor burst radio)
+
+### Blacksmith Dialogue ###,,
+###s1_chatter_friendly,0.9,# battlechatter allied/friendly
+###s1_chatter_enemy,0.85,# battlechatter axis/enemy
+###s1_vox_friendly,0.9492,# allied character reaction sfx
+###s1_vox_enemy,0.8979,# axis character reaction sfx
+###s1_dialog,1,# mission based speech
+###s1_dialog_radio,1,# mission based radio speech
+###s1_dialog_critical,1,# mission based speech at FULL Volume (DO NO CHANGE)
+###s1_dialog_amb,1,# ambient based speech (flavor burst radio)
+
+
+### Explosions & Destruction ###,,
+destruct,0.7807,# destructible objects
+explosion,0.7807,# explosion type sfx other than special moments
+explosion_grenade,0.85,# explosion sfx for grenades
+explosion_flashbang,0.7807,# explosion sfx for flashbangs
+explosion_rocket,0.85,# explosion sfx for rockets
+explosion_car,0.85,# explosion type sfx other than special moments
+explosion_critical,1,# critical explosion type sfx (explosion system)
+explosion_debris,1,# debris sfx for explosions (explosion system)
+impact_critical,1,# critical impact type sfx (impact system)
+
+### Bullet Impacts & Whizbys ###,,
+bullet_impact_geo,0.93,# bullet impact sfx on geo
+bullet_impact_plr,0.7533,# bullet impact sfx on the player body
+bullet_impact_npc,0.65,# bullet impact sfx on the npc body
+mp_bullet_impact_geo,0.93,# bullet impact sfx on geo on the npc body
+mp_bullet_impact_plr,0.7533,# bullet impact sfx on the player body
+mp_bullet_impact_npc,0.7533,# bullet impact sfx
+bullet_whizby,0.3312,# bullet whizbys
+mp_bullet_whizby,0.8312,# bullet whizbys in MP
+
+
+### Vehicles ###,,
+vehicle_plr,0.6919,# plr vehicle movement sfx
+vehicle_npc,0.6919,# npc vehicle movement sfx
+wpn_vehicle_plr,0.9,# player controlled weapons mounted on vehicles
+wpn_vehicle_npc,0.85,# npc vehicle mounted weapons
+vehicle,0.6919,# To be DELETED
+vehicle_aircraft, 1.0
+vehicle_pdrone, 1.0
+vehicle_amb, 1.0
+
+
+### Weapons ###,,
+grenadebounce,0.7533,# grenade bouncing on the ground physics sounds
+mp_grenadebounce,0.7533,# grenade bouncing on the ground physics sounds
+shellcasings,0.93,# bullet shell casings hitting the ground
+mp_shellcasings,0.93,# bullet shell casings hitting the ground in MP
+wpn_plr,0.8,# player controlled weapons
+wpn_plr_special,0.9,# special player weapons (launchers etc.)
+wpn_npc_special,0.95,# special player weapons (launchers etc.)
+mp_wpn_plr,0.85,# player controlled weapons in MP
+wpn_npc,0.5,# NPC controlled weapons
+mp_wpn_npc,0.87,# NPC controlled weapons in MP
+wpn_projectile,0.9,# RPG movement Javelin movement
+mp_wpn_projectile,0.93,# Maximum sfx volume headroom
+
+### Tactical ###,,
+tactical_plr,0.7,# player controlled tactical items.
+tactical_plr_special,0.9,# special player weapons (boost jump, etc.)
+tactical_npc_special,0.95,# special player weapons (boost jump, etc.)
+
+### Special use ###,,
+big_moment,1.0,# big moment game scenes
+scripted1,0.93,# scripted in game scenes
+scripted2,0.93,# scripted in game scenes
+scripted3,0.93,# scripted in game scenes
+scripted4,0.93,# scripted in game scenes
+scripted5,0.93,# scripted in game scenes
+fullvolume,1,# HUGE sfx events only used in VERY special cases
+
+### Level specific and MP perks ###,,
+mp_perk_quiet,0.0837,# MP perk for quiet footsteps
+
+######################### END SHG-SANCTIONED VOLMODS #########################
+
+
+######################### BEGIN FARVA VOLMODS (do not use with new uncompressed/normalized content) #########################
+
+### OLD AND TO BE DELETED ###,,
+mw3_DEPRECATED_foley,0.545,# To be DELETED
+
+### searched ready to remove ###,,
+mw3_wpnai,0.25,# To be DELETED
+mw3_wpnplyr,0.25,# To be DELETED
+
+
+### User interface ###,,
+mw3_hud,0.35,# MP in game feedback (level up,card slide,etc)
+mw3_frontend_sfx,0.35,# user interface sfx
+mw3_frontend_music,0.35,# user interface sfx
+
+### Music ###,,
+mw3_music,0.3,# level music (excluding title and fluff music)
+mw3_music_emitter,0.3,# point sourced music (ie portable radio)
+
+
+### Ambience ###,,
+mw3_amb_quad,0.25,# main ambience streams
+mw3_amb_dist,0.05,# distant ambient element sfx
+mw3_amb_damb,0.03,# ambient element sfx
+mw3_amb_emitter,0.03,# point emitter sfx
+mw3_physics,0.03,# physics elements
+
+
+### Character sounds ###,,
+mw3_bodyfall,0.1,# bodyfalls
+mw3_foley_plr,0.01,# foley type sfx such as gear rattle,foliage movement etc.
+mw3_mp_foley_plr,0.1,# player gear rattle in MP
+mw3_foley_npc,0.1,# npc gear rattle
+mw3_mp_foley_npc,0.1,# npc gear rattle in MP
+mw3_wpn_foley_plr,0.3,# Player reload sfx
+mw3_wpn_foley_npc,0.2,# NPC reload sfx
+mw3_footstep_plr,0.1,# Player footsteps
+mw3_footstep_npc,0.1,# footsteps and landing sfx
+mw3_mp_footstep_plr,0.1,# Player footsteps in MP
+mw3_mp_footstep_npc,0.1,#footsteps and landing sfx in MP
+mw3_melee_plr,0.1,# Player melee sfx
+mw3_melee_npc,0.1,# NPC melee sfx
+
+
+### Dialogue ###,,
+mw3_chatter_friendly,0.45,# battlechatter allied/friendly
+mw3_chatter_enemy,0.4,# battlechatter axis/enemy
+mw3_vox_friendly,0.45,# allied character reaction sfx
+mw3_vox_enemy,0.45,# axis character reaction sfx
+mw3_dialog,0.6,# mission based speech
+mw3_dialog_radio,0.6,# mission based radio speech
+mw3_dialog_critical,0.6,# mission based speech at FULL Volume (DO NO CHANGE)
+mw3_dialog_amb,0.6,# ambient based speech (flavor burst radio)
+
+
+### Explosions and destruction ###,,
+mw3_destruct,0.35,# destructible objects
+mw3_explosion,0.4,# explosion type sfx other than special moments
+mw3_explosion_grenade,0.4,# explosion sfx for grenades
+mw3_explosion_flashbang,0.35,# explosion sfx for flashbangs
+mw3_explosion_rocket,0.4,# explosion sfx for rockets
+mw3_explosion_car,0.4,# explosion type sfx other than special moments
+
+
+### Bullet Impacts & Whizbys ###,,
+mw3_bullet_impact_geo,0.35,# bullet impact sfx on geo
+mw3_bullet_impact_plr,0.35,# bullet impact sfx on the player body
+mw3_bullet_impact_npc,0.35,# bullet impact sfx on the npc body
+mw3_mp_bullet_impact_geo,0.1,# bullet impact sfx on geo on the npc body
+mw3_mp_bullet_impact_plr,0.1,# bullet impact sfx on the player body
+mw3_mp_bullet_impact_npc,0.1,# bullet impact sfx
+mw3_bullet_whizby,0.3,# bullet whizbys
+mw3_mp_bullet_whizby,0.1,# bullet whizbys in MP
+
+
+### Vehicle sounds ###,,
+mw3_vehicle_plr,0.35,# plr vehicle movement sfx
+mw3_vehicle_npc,0.35,# npc vehicle movement sfx
+mw3_wpn_vehicle_plr,0.35,# player controlled weapons mounted on vehicles
+mw3_wpn_vehicle_npc,0.4,# npc vehicle mounted weapons
+mw3_vehicle,0.35,# To be DELETED
+
+
+### Weapons ###,,
+mw3_grenadebounce,0.35,# grenade bouncing on the ground physics sounds
+mw3_mp_grenadebounce,0.35,# grenade bouncing on the ground physics sounds
+mw3_shellcasings,0.45,# bullet shell casings hitting the ground
+mw3_mp_shellcasings,0.45,# bullet shell casings hitting the ground in MP
+mw3_wpn_plr,0.15,# player controlled weapons
+mw3_mp_wpn_plr,0.45,# player controlled weapons in MP
+mw3_wpn_npc,0.25,# NPC controlled weapons
+mw3_mp_wpn_npc,0.45,# NPC controlled weapons in MP
+mw3_wpn_projectile,0.45,# RPG movement Javelin movement
+mw3_mp_wpn_projectile,0.45,# Maximum sfx volume headroom
+
+
+### Special use ###,,
+mw3_DEPRECATED_na,0.35,# non-catagorized (LEGACY DO NOT USE!)
+mw3_DEPRECATED_MAX,0.45,# Maximum sfx volume headroom
+mw3_scripted1,0.45,# scripted in game scenes
+mw3_scripted2,0.45,# scripted in game scenes
+mw3_scripted3,0.45,# scripted in game scenes
+mw3_scripted4,0.45,# scripted in game scenes
+mw3_scripted5,0.45,# scripted in game scenes
+mw3_fullvolume,0.6,# HUGE sfx events only used in VERY special cases
+
+### Level specific and MP perks ###,,
+mw3_mp_perk_quiet,0.01,# MP perk for quiet footsteps
+mw3_DEPRECATED_level_ac130,0.4,# AC130 groundfire special volmod for use in AC130 level only
+
+
+### Default if left blank ###,,
+mw3_DEPRECATED_default,0.4,# volmod group used by aliases who don't define volmod groups. Set to 1.0 because code assumes 1.0 if not defined
+
+######################### END FARVA VOLMODS (do not use with new uncompressed/normalized content) #########################
+

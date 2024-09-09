@@ -1,0 +1,21 @@
+#include common_scripts\utility;
+#include maps\mp\_utility;
+#include maps\mp\gametypes\_gamelogic;
+#include maps\mp\bots\_bots_util;
+#include maps\mp\bots\_bots_strategy;
+
+main()
+{
+	// This is called directly from native code on game startup after the _bots::main() is executed
+	setup_callbacks();
+}
+
+setup_callbacks()
+{
+	level.bot_funcs["can_use_crate"] = ::can_use_crate;
+}
+
+can_use_crate()
+{
+	return true;
+}
